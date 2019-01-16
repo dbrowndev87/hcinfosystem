@@ -73,8 +73,6 @@ namespace GoldStarApi.Controllers
                 var allStudents = _repository.Student.GetAllStudents();
                 
                 allStudentInfo = new List<StudentInfo>();
-
-                
                 
                 foreach (Student current in allStudents)
                 {

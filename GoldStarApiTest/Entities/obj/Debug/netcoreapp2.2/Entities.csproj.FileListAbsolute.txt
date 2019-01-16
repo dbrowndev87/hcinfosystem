@@ -73,3 +73,12 @@ D:/Angular/GoldStarFinal/GoldStarApiTest/Entities/obj/Debug/netcoreapp2.2/Entiti
 /Users/Nick/goldstarfinalproject/GoldStarApiTest/Entities/obj/Debug/netcoreapp2.2/Entities.AssemblyInfo.cs
 /Users/Nick/goldstarfinalproject/GoldStarApiTest/Entities/obj/Debug/netcoreapp2.2/Entities.dll
 /Users/Nick/goldstarfinalproject/GoldStarApiTest/Entities/obj/Debug/netcoreapp2.2/Entities.pdb
+C:\Users\npeconi\Documents\goldstarcode\GoldStarApiTest\Entities\bin\Debug\netcoreapp2.2\Entities.deps.json
+C:\Users\npeconi\Documents\goldstarcode\GoldStarApiTest\Entities\bin\Debug\netcoreapp2.2\Entities.dll
+C:\Users\npeconi\Documents\goldstarcode\GoldStarApiTest\Entities\bin\Debug\netcoreapp2.2\Entities.pdb
+C:\Users\npeconi\Documents\goldstarcode\GoldStarApiTest\Entities\obj\Debug\netcoreapp2.2\Entities.csprojAssemblyReference.cache
+C:\Users\npeconi\Documents\goldstarcode\GoldStarApiTest\Entities\obj\Debug\netcoreapp2.2\Entities.csproj.CoreCompileInputs.cache
+C:\Users\npeconi\Documents\goldstarcode\GoldStarApiTest\Entities\obj\Debug\netcoreapp2.2\Entities.AssemblyInfoInputs.cache
+C:\Users\npeconi\Documents\goldstarcode\GoldStarApiTest\Entities\obj\Debug\netcoreapp2.2\Entities.AssemblyInfo.cs
+C:\Users\npeconi\Documents\goldstarcode\GoldStarApiTest\Entities\obj\Debug\netcoreapp2.2\Entities.dll
+C:\Users\npeconi\Documents\goldstarcode\GoldStarApiTest\Entities\obj\Debug\netcoreapp2.2\Entities.pdb

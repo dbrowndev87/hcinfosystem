@@ -2965,23 +2965,23 @@
     ]
   },
   "packageFolders": {
-    "/Users/Nick/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\npeconi\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/Nick/goldstarfinalproject/GoldStarApiTest/Entities/Entities.csproj",
+      "projectUniqueName": "C:\\Users\\npeconi\\Documents\\goldstarcode\\GoldStarApiTest\\Entities\\Entities.csproj",
       "projectName": "Entities",
-      "projectPath": "/Users/Nick/goldstarfinalproject/GoldStarApiTest/Entities/Entities.csproj",
-      "packagesPath": "/Users/Nick/.nuget/packages/",
-      "outputPath": "/Users/Nick/goldstarfinalproject/GoldStarApiTest/Entities/obj/",
+      "projectPath": "C:\\Users\\npeconi\\Documents\\goldstarcode\\GoldStarApiTest\\Entities\\Entities.csproj",
+      "packagesPath": "C:\\Users\\npeconi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\npeconi\\Documents\\goldstarcode\\GoldStarApiTest\\Entities\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/Nick/.config/NuGet/NuGet.Config"
+        "C:\\Users\\npeconi\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.2"

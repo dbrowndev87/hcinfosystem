@@ -96,3 +96,15 @@ D:/Angular/GoldStarFinal/GoldStarApiTest/Contracts/obj/Debug/netcoreapp2.2/Contr
 /Users/Nick/goldstarfinalproject/GoldStarApiTest/Contracts/obj/Debug/netcoreapp2.2/Contracts.csproj.CopyComplete
 /Users/Nick/goldstarfinalproject/GoldStarApiTest/Contracts/obj/Debug/netcoreapp2.2/Contracts.dll
 /Users/Nick/goldstarfinalproject/GoldStarApiTest/Contracts/obj/Debug/netcoreapp2.2/Contracts.pdb
+C:\Users\npeconi\Documents\goldstarcode\GoldStarApiTest\Contracts\bin\Debug\netcoreapp2.2\Contracts.deps.json
+C:\Users\npeconi\Documents\goldstarcode\GoldStarApiTest\Contracts\bin\Debug\netcoreapp2.2\Contracts.dll
+C:\Users\npeconi\Documents\goldstarcode\GoldStarApiTest\Contracts\bin\Debug\netcoreapp2.2\Contracts.pdb
+C:\Users\npeconi\Documents\goldstarcode\GoldStarApiTest\Contracts\bin\Debug\netcoreapp2.2\Entities.dll
+C:\Users\npeconi\Documents\goldstarcode\GoldStarApiTest\Contracts\bin\Debug\netcoreapp2.2\Entities.pdb
+C:\Users\npeconi\Documents\goldstarcode\GoldStarApiTest\Contracts\obj\Debug\netcoreapp2.2\Contracts.csprojAssemblyReference.cache
+C:\Users\npeconi\Documents\goldstarcode\GoldStarApiTest\Contracts\obj\Debug\netcoreapp2.2\Contracts.csproj.CoreCompileInputs.cache
+C:\Users\npeconi\Documents\goldstarcode\GoldStarApiTest\Contracts\obj\Debug\netcoreapp2.2\Contracts.AssemblyInfoInputs.cache
+C:\Users\npeconi\Documents\goldstarcode\GoldStarApiTest\Contracts\obj\Debug\netcoreapp2.2\Contracts.AssemblyInfo.cs
+C:\Users\npeconi\Documents\goldstarcode\GoldStarApiTest\Contracts\obj\Debug\netcoreapp2.2\Contracts.csproj.CopyComplete
+C:\Users\npeconi\Documents\goldstarcode\GoldStarApiTest\Contracts\obj\Debug\netcoreapp2.2\Contracts.dll
+C:\Users\npeconi\Documents\goldstarcode\GoldStarApiTest\Contracts\obj\Debug\netcoreapp2.2\Contracts.pdb

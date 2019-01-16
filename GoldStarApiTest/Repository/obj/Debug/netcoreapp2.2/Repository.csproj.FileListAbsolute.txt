@@ -112,3 +112,17 @@ D:/Angular/GoldStarFinal/GoldStarApiTest/Repository/obj/Debug/netcoreapp2.2/Repo
 /Users/Nick/goldstarfinalproject/GoldStarApiTest/Repository/obj/Debug/netcoreapp2.2/Repository.csproj.CopyComplete
 /Users/Nick/goldstarfinalproject/GoldStarApiTest/Repository/obj/Debug/netcoreapp2.2/Repository.dll
 /Users/Nick/goldstarfinalproject/GoldStarApiTest/Repository/obj/Debug/netcoreapp2.2/Repository.pdb
+C:\Users\npeconi\Documents\goldstarcode\GoldStarApiTest\Repository\bin\Debug\netcoreapp2.2\Repository.deps.json
+C:\Users\npeconi\Documents\goldstarcode\GoldStarApiTest\Repository\bin\Debug\netcoreapp2.2\Repository.dll
+C:\Users\npeconi\Documents\goldstarcode\GoldStarApiTest\Repository\bin\Debug\netcoreapp2.2\Repository.pdb
+C:\Users\npeconi\Documents\goldstarcode\GoldStarApiTest\Repository\bin\Debug\netcoreapp2.2\Contracts.dll
+C:\Users\npeconi\Documents\goldstarcode\GoldStarApiTest\Repository\bin\Debug\netcoreapp2.2\Entities.dll
+C:\Users\npeconi\Documents\goldstarcode\GoldStarApiTest\Repository\bin\Debug\netcoreapp2.2\Contracts.pdb
+C:\Users\npeconi\Documents\goldstarcode\GoldStarApiTest\Repository\bin\Debug\netcoreapp2.2\Entities.pdb
+C:\Users\npeconi\Documents\goldstarcode\GoldStarApiTest\Repository\obj\Debug\netcoreapp2.2\Repository.csprojAssemblyReference.cache
+C:\Users\npeconi\Documents\goldstarcode\GoldStarApiTest\Repository\obj\Debug\netcoreapp2.2\Repository.csproj.CoreCompileInputs.cache
+C:\Users\npeconi\Documents\goldstarcode\GoldStarApiTest\Repository\obj\Debug\netcoreapp2.2\Repository.AssemblyInfoInputs.cache
+C:\Users\npeconi\Documents\goldstarcode\GoldStarApiTest\Repository\obj\Debug\netcoreapp2.2\Repository.AssemblyInfo.cs
+C:\Users\npeconi\Documents\goldstarcode\GoldStarApiTest\Repository\obj\Debug\netcoreapp2.2\Repository.csproj.CopyComplete
+C:\Users\npeconi\Documents\goldstarcode\GoldStarApiTest\Repository\obj\Debug\netcoreapp2.2\Repository.dll
+C:\Users\npeconi\Documents\goldstarcode\GoldStarApiTest\Repository\obj\Debug\netcoreapp2.2\Repository.pdb
