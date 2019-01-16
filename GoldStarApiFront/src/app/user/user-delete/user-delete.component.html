@@ -1,0 +1,65 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-10 well">
+
+      <div class="row">
+        <div class="col-md-3">
+          <label for="studentId" class="control-label">User Id:</label>
+        </div>
+        <div class="col-md-7">
+          <span name="address">
+            {{user?.userid}}
+          </span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <label for="firstName" class="control-label">First Name:</label>
+        </div>
+        <div class="col-md-7">
+          <span name="firstName">
+            {{user?.firstname}}
+          </span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <label for="lastName" class="control-label">Last Name:</label>
+        </div>
+        <div class="col-md-7">
+          <span name="lastName">
+            {{user?.lastname}}
+          </span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <label for="studentId" class="control-label">Type Code:</label>
+        </div>
+        <div class="col-md-7">
+          <span name="address">
+            {{user?.typecode}}
+          </span>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-offset-8 col-md-1">
+      <button type="submit" class="btn btn-info" (click)="deleteUser()">Delete</button>
+    </div>
+    <div class="col-md-1">
+      <button type="button" class="btn btn-danger" (click)="redirectToUserList()">Cancel</button>
+    </div>
+  </div>
+  <app-success-modal [modalHeaderText]="'Success message'" [modalBodyText]="'Action completed successfully'"
+    [okButtonText]="'OK'" (redirectOnOK)="redirectToUserList()"></app-success-modal>
+
+  <app-error-modal [modalHeaderText]="'Error message'" [modalBodyText]="errorMessage" [okButtonText]="'OK'"></app-error-modal>
+</div>

@@ -1,0 +1,10 @@
+2019-01-15 09:15:10.5395 INFO Returned all students from database. System.Linq.OrderedEnumerable`2[Entities.Models.User,System.String]
+2019-01-15 10:30:03.2911 INFO Returned Student with id: 2
+2019-01-15 10:30:14.1762 INFO Returned all teachers from database. 1
+2019-01-15 10:30:16.9032 INFO Returned Faculty with id: 1
+2019-01-15 10:30:25.3064 INFO Returned Faculty with id: 0
+2019-01-15 10:31:35.8767 INFO Returned Faculty with id: 1
+2019-01-15 11:41:17.2806 ERROR Something went wrong inside GetAllCourses action: Unable to cast object of type 'System.String' to type 'System.Int32'.
+2019-01-15 11:44:40.3175 INFO Returned all teachers from database. 1
+2019-01-15 11:44:57.7503 INFO Returned Course with id: CIS-1150
+2019-01-15 12:46:13.9532 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]

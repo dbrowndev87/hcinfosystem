@@ -1,0 +1,75 @@
+C:/Users/nicholaspeconi/GameApi/GameApi/Entities/bin/Debug/netcoreapp2.2/Entities.deps.json
+C:/Users/nicholaspeconi/GameApi/GameApi/Entities/bin/Debug/netcoreapp2.2/Entities.dll
+C:/Users/nicholaspeconi/GameApi/GameApi/Entities/bin/Debug/netcoreapp2.2/Entities.pdb
+C:/Users/nicholaspeconi/GameApi/GameApi/Entities/bin/Debug/netcoreapp2.2/Microsoft.EntityFrameworkCore.dll
+C:/Users/nicholaspeconi/GameApi/GameApi/Entities/bin/Debug/netcoreapp2.2/Microsoft.EntityFrameworkCore.xml
+C:/Users/nicholaspeconi/GameApi/GameApi/Entities/obj/Debug/netcoreapp2.2/Entities.csprojAssemblyReference.cache
+C:/Users/nicholaspeconi/GameApi/GameApi/Entities/obj/Debug/netcoreapp2.2/Entities.csproj.CoreCompileInputs.cache
+C:/Users/nicholaspeconi/GameApi/GameApi/Entities/obj/Debug/netcoreapp2.2/Entities.AssemblyInfoInputs.cache
+C:/Users/nicholaspeconi/GameApi/GameApi/Entities/obj/Debug/netcoreapp2.2/Entities.AssemblyInfo.cs
+C:/Users/nicholaspeconi/GameApi/GameApi/Entities/obj/Debug/netcoreapp2.2/Entities.csproj.CopyComplete
+C:/Users/nicholaspeconi/GameApi/GameApi/Entities/obj/Debug/netcoreapp2.2/Entities.dll
+C:/Users/nicholaspeconi/GameApi/GameApi/Entities/obj/Debug/netcoreapp2.2/Entities.pdb
+C:/Users/npeconi/Documents/csharpangularsample1/GameApi/Entities/obj/Debug/netcoreapp2.2/Entities.csprojAssemblyReference.cache
+C:/Users/npeconi/Documents/csharpangularsample1/GameApi/Entities/obj/Debug/netcoreapp2.2/Entities.csproj.CoreCompileInputs.cache
+C:/Users/npeconi/Documents/csharpangularsample1/GameApi/Entities/obj/Debug/netcoreapp2.2/Entities.AssemblyInfoInputs.cache
+C:/Users/npeconi/Documents/csharpangularsample1/GameApi/Entities/obj/Debug/netcoreapp2.2/Entities.AssemblyInfo.cs
+C:/Users/npeconi/Documents/csharpangularsample1/GameApi/Entities/obj/Debug/netcoreapp2.2/Entities.dll
+C:/Users/npeconi/Documents/csharpangularsample1/GameApi/Entities/obj/Debug/netcoreapp2.2/Entities.pdb
+C:/Users/npeconi/Documents/csharpangularsample1/GameApi/Entities/bin/Debug/netcoreapp2.2/Entities.deps.json
+C:/Users/npeconi/Documents/csharpangularsample1/GameApi/Entities/bin/Debug/netcoreapp2.2/Entities.dll
+C:/Users/npeconi/Documents/csharpangularsample1/GameApi/Entities/bin/Debug/netcoreapp2.2/Entities.pdb
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/CSharpAngularSample1/GameApi/Entities/bin/Debug/netcoreapp2.2/Entities.deps.json
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/CSharpAngularSample1/GameApi/Entities/bin/Debug/netcoreapp2.2/Entities.dll
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/CSharpAngularSample1/GameApi/Entities/bin/Debug/netcoreapp2.2/Entities.pdb
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/CSharpAngularSample1/GameApi/Entities/obj/Debug/netcoreapp2.2/Entities.csprojAssemblyReference.cache
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/CSharpAngularSample1/GameApi/Entities/obj/Debug/netcoreapp2.2/Entities.csproj.CoreCompileInputs.cache
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/CSharpAngularSample1/GameApi/Entities/obj/Debug/netcoreapp2.2/Entities.AssemblyInfoInputs.cache
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/CSharpAngularSample1/GameApi/Entities/obj/Debug/netcoreapp2.2/Entities.AssemblyInfo.cs
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/CSharpAngularSample1/GameApi/Entities/obj/Debug/netcoreapp2.2/Entities.dll
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/CSharpAngularSample1/GameApi/Entities/obj/Debug/netcoreapp2.2/Entities.pdb
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/GoldStarApiTest/Entities/bin/Debug/netcoreapp2.2/Entities.deps.json
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/GoldStarApiTest/Entities/bin/Debug/netcoreapp2.2/Entities.dll
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/GoldStarApiTest/Entities/bin/Debug/netcoreapp2.2/Entities.pdb
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/GoldStarApiTest/Entities/obj/Debug/netcoreapp2.2/Entities.csprojAssemblyReference.cache
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/GoldStarApiTest/Entities/obj/Debug/netcoreapp2.2/Entities.csproj.CoreCompileInputs.cache
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/GoldStarApiTest/Entities/obj/Debug/netcoreapp2.2/Entities.AssemblyInfoInputs.cache
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/GoldStarApiTest/Entities/obj/Debug/netcoreapp2.2/Entities.AssemblyInfo.cs
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/GoldStarApiTest/Entities/obj/Debug/netcoreapp2.2/Entities.dll
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/GoldStarApiTest/Entities/obj/Debug/netcoreapp2.2/Entities.pdb
+D:/Bitbucket/GoldStarFinalProject/GoldStarApiTest/Entities/bin/Debug/netcoreapp2.2/Entities.deps.json
+D:/Bitbucket/GoldStarFinalProject/GoldStarApiTest/Entities/bin/Debug/netcoreapp2.2/Entities.dll
+D:/Bitbucket/GoldStarFinalProject/GoldStarApiTest/Entities/bin/Debug/netcoreapp2.2/Entities.pdb
+D:/Bitbucket/GoldStarFinalProject/GoldStarApiTest/Entities/obj/Debug/netcoreapp2.2/Entities.csprojAssemblyReference.cache
+D:/Bitbucket/GoldStarFinalProject/GoldStarApiTest/Entities/obj/Debug/netcoreapp2.2/Entities.csproj.CoreCompileInputs.cache
+D:/Bitbucket/GoldStarFinalProject/GoldStarApiTest/Entities/obj/Debug/netcoreapp2.2/Entities.AssemblyInfoInputs.cache
+D:/Bitbucket/GoldStarFinalProject/GoldStarApiTest/Entities/obj/Debug/netcoreapp2.2/Entities.AssemblyInfo.cs
+D:/Bitbucket/GoldStarFinalProject/GoldStarApiTest/Entities/obj/Debug/netcoreapp2.2/Entities.dll
+D:/Bitbucket/GoldStarFinalProject/GoldStarApiTest/Entities/obj/Debug/netcoreapp2.2/Entities.pdb
+C:/Users/darcy/Documents/Visual Studio 2017/Projects/GoldStarApiTest/Entities/bin/Debug/netcoreapp2.2/Entities.deps.json
+C:/Users/darcy/Documents/Visual Studio 2017/Projects/GoldStarApiTest/Entities/bin/Debug/netcoreapp2.2/Entities.dll
+C:/Users/darcy/Documents/Visual Studio 2017/Projects/GoldStarApiTest/Entities/bin/Debug/netcoreapp2.2/Entities.pdb
+C:/Users/darcy/Documents/Visual Studio 2017/Projects/GoldStarApiTest/Entities/obj/Debug/netcoreapp2.2/Entities.csprojAssemblyReference.cache
+C:/Users/darcy/Documents/Visual Studio 2017/Projects/GoldStarApiTest/Entities/obj/Debug/netcoreapp2.2/Entities.csproj.CoreCompileInputs.cache
+C:/Users/darcy/Documents/Visual Studio 2017/Projects/GoldStarApiTest/Entities/obj/Debug/netcoreapp2.2/Entities.AssemblyInfoInputs.cache
+C:/Users/darcy/Documents/Visual Studio 2017/Projects/GoldStarApiTest/Entities/obj/Debug/netcoreapp2.2/Entities.AssemblyInfo.cs
+C:/Users/darcy/Documents/Visual Studio 2017/Projects/GoldStarApiTest/Entities/obj/Debug/netcoreapp2.2/Entities.dll
+C:/Users/darcy/Documents/Visual Studio 2017/Projects/GoldStarApiTest/Entities/obj/Debug/netcoreapp2.2/Entities.pdb
+D:/Angular/GoldStarFinal/GoldStarApiTest/Entities/bin/Debug/netcoreapp2.2/Entities.deps.json
+D:/Angular/GoldStarFinal/GoldStarApiTest/Entities/bin/Debug/netcoreapp2.2/Entities.dll
+D:/Angular/GoldStarFinal/GoldStarApiTest/Entities/bin/Debug/netcoreapp2.2/Entities.pdb
+D:/Angular/GoldStarFinal/GoldStarApiTest/Entities/obj/Debug/netcoreapp2.2/Entities.csprojAssemblyReference.cache
+D:/Angular/GoldStarFinal/GoldStarApiTest/Entities/obj/Debug/netcoreapp2.2/Entities.csproj.CoreCompileInputs.cache
+D:/Angular/GoldStarFinal/GoldStarApiTest/Entities/obj/Debug/netcoreapp2.2/Entities.AssemblyInfoInputs.cache
+D:/Angular/GoldStarFinal/GoldStarApiTest/Entities/obj/Debug/netcoreapp2.2/Entities.AssemblyInfo.cs
+D:/Angular/GoldStarFinal/GoldStarApiTest/Entities/obj/Debug/netcoreapp2.2/Entities.dll
+D:/Angular/GoldStarFinal/GoldStarApiTest/Entities/obj/Debug/netcoreapp2.2/Entities.pdb
+/Users/Nick/goldstarfinalproject/GoldStarApiTest/Entities/bin/Debug/netcoreapp2.2/Entities.deps.json
+/Users/Nick/goldstarfinalproject/GoldStarApiTest/Entities/bin/Debug/netcoreapp2.2/Entities.dll
+/Users/Nick/goldstarfinalproject/GoldStarApiTest/Entities/bin/Debug/netcoreapp2.2/Entities.pdb
+/Users/Nick/goldstarfinalproject/GoldStarApiTest/Entities/obj/Debug/netcoreapp2.2/Entities.csprojAssemblyReference.cache
+/Users/Nick/goldstarfinalproject/GoldStarApiTest/Entities/obj/Debug/netcoreapp2.2/Entities.csproj.CoreCompileInputs.cache
+/Users/Nick/goldstarfinalproject/GoldStarApiTest/Entities/obj/Debug/netcoreapp2.2/Entities.AssemblyInfoInputs.cache
+/Users/Nick/goldstarfinalproject/GoldStarApiTest/Entities/obj/Debug/netcoreapp2.2/Entities.AssemblyInfo.cs
+/Users/Nick/goldstarfinalproject/GoldStarApiTest/Entities/obj/Debug/netcoreapp2.2/Entities.dll
+/Users/Nick/goldstarfinalproject/GoldStarApiTest/Entities/obj/Debug/netcoreapp2.2/Entities.pdb

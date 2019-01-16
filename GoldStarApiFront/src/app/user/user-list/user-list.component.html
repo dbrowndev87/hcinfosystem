@@ -1,0 +1,40 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-offset-10 col-md-2">
+      <a [routerLink]="['/user/create']">Create User</a>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>User ID</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>E-Mail</th>
+              <th>Address</th>
+              <th>Date of birth</th>
+              <th>Type Code</th>
+
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of users">
+              <td>{{user.userId}}</td>
+              <td>{{user.first_Name}}</td>
+              <td>{{user.last_Name}}</td>
+              <td>{{user.eMail}}</td>
+              <td>{{user.address}}</td>
+              <td>{{user.birth_date | date: 'dd/MM/yyyy'}}</td>
+              <td>{{user.type_Code}}</td>
+              <td><button type="button" id="update" class="btn btn-success" (click)='redirectToUpdatePage(user.userId)'>Update</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

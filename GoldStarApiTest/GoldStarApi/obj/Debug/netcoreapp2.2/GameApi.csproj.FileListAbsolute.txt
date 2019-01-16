@@ -1,0 +1,69 @@
+C:\Users\nicholaspeconi\GameApi\GameApi\GameApi\bin\Debug\netcoreapp2.2\GameApi.deps.json
+C:\Users\nicholaspeconi\GameApi\GameApi\GameApi\bin\Debug\netcoreapp2.2\GameApi.runtimeconfig.json
+C:\Users\nicholaspeconi\GameApi\GameApi\GameApi\bin\Debug\netcoreapp2.2\GameApi.runtimeconfig.dev.json
+C:\Users\nicholaspeconi\GameApi\GameApi\GameApi\bin\Debug\netcoreapp2.2\GameApi.dll
+C:\Users\nicholaspeconi\GameApi\GameApi\GameApi\bin\Debug\netcoreapp2.2\GameApi.pdb
+C:\Users\nicholaspeconi\GameApi\GameApi\GameApi\bin\Debug\netcoreapp2.2\Contracts.dll
+C:\Users\nicholaspeconi\GameApi\GameApi\GameApi\bin\Debug\netcoreapp2.2\LoggerService.dll
+C:\Users\nicholaspeconi\GameApi\GameApi\GameApi\bin\Debug\netcoreapp2.2\Contracts.pdb
+C:\Users\nicholaspeconi\GameApi\GameApi\GameApi\bin\Debug\netcoreapp2.2\LoggerService.pdb
+C:\Users\nicholaspeconi\GameApi\GameApi\GameApi\obj\Debug\netcoreapp2.2\GameApi.csprojAssemblyReference.cache
+C:\Users\nicholaspeconi\GameApi\GameApi\GameApi\obj\Debug\netcoreapp2.2\GameApi.csproj.CoreCompileInputs.cache
+C:\Users\nicholaspeconi\GameApi\GameApi\GameApi\obj\Debug\netcoreapp2.2\GameApi.RazorAssemblyInfo.cache
+C:\Users\nicholaspeconi\GameApi\GameApi\GameApi\obj\Debug\netcoreapp2.2\GameApi.RazorAssemblyInfo.cs
+C:\Users\nicholaspeconi\GameApi\GameApi\GameApi\obj\Debug\netcoreapp2.2\GameApi.AssemblyInfoInputs.cache
+C:\Users\nicholaspeconi\GameApi\GameApi\GameApi\obj\Debug\netcoreapp2.2\GameApi.AssemblyInfo.cs
+C:\Users\nicholaspeconi\GameApi\GameApi\GameApi\obj\Debug\netcoreapp2.2\GameApi.RazorTargetAssemblyInfo.cache
+C:\Users\nicholaspeconi\GameApi\GameApi\GameApi\obj\Debug\netcoreapp2.2\GameApi.csproj.CopyComplete
+C:\Users\nicholaspeconi\GameApi\GameApi\GameApi\obj\Debug\netcoreapp2.2\GameApi.dll
+C:\Users\nicholaspeconi\GameApi\GameApi\GameApi\obj\Debug\netcoreapp2.2\GameApi.pdb
+C:\Users\nicholaspeconi\GameApi\GameApi\GameApi\bin\Debug\netcoreapp2.2\Entities.dll
+C:\Users\nicholaspeconi\GameApi\GameApi\GameApi\bin\Debug\netcoreapp2.2\Repository.dll
+C:\Users\nicholaspeconi\GameApi\GameApi\GameApi\bin\Debug\netcoreapp2.2\Entities.pdb
+C:\Users\nicholaspeconi\GameApi\GameApi\GameApi\bin\Debug\netcoreapp2.2\Repository.pdb
+C:\Users\npeconi\Documents\csharpangularsample1\GameApi\GameApi\bin\Debug\netcoreapp2.2\GameApi.deps.json
+C:\Users\npeconi\Documents\csharpangularsample1\GameApi\GameApi\bin\Debug\netcoreapp2.2\GameApi.runtimeconfig.json
+C:\Users\npeconi\Documents\csharpangularsample1\GameApi\GameApi\bin\Debug\netcoreapp2.2\GameApi.runtimeconfig.dev.json
+C:\Users\npeconi\Documents\csharpangularsample1\GameApi\GameApi\bin\Debug\netcoreapp2.2\GameApi.dll
+C:\Users\npeconi\Documents\csharpangularsample1\GameApi\GameApi\bin\Debug\netcoreapp2.2\GameApi.pdb
+C:\Users\npeconi\Documents\csharpangularsample1\GameApi\GameApi\bin\Debug\netcoreapp2.2\Contracts.dll
+C:\Users\npeconi\Documents\csharpangularsample1\GameApi\GameApi\bin\Debug\netcoreapp2.2\Entities.dll
+C:\Users\npeconi\Documents\csharpangularsample1\GameApi\GameApi\bin\Debug\netcoreapp2.2\LoggerService.dll
+C:\Users\npeconi\Documents\csharpangularsample1\GameApi\GameApi\bin\Debug\netcoreapp2.2\Repository.dll
+C:\Users\npeconi\Documents\csharpangularsample1\GameApi\GameApi\bin\Debug\netcoreapp2.2\Contracts.pdb
+C:\Users\npeconi\Documents\csharpangularsample1\GameApi\GameApi\bin\Debug\netcoreapp2.2\Entities.pdb
+C:\Users\npeconi\Documents\csharpangularsample1\GameApi\GameApi\bin\Debug\netcoreapp2.2\LoggerService.pdb
+C:\Users\npeconi\Documents\csharpangularsample1\GameApi\GameApi\bin\Debug\netcoreapp2.2\Repository.pdb
+C:\Users\npeconi\Documents\csharpangularsample1\GameApi\GameApi\obj\Debug\netcoreapp2.2\GameApi.csprojAssemblyReference.cache
+C:\Users\npeconi\Documents\csharpangularsample1\GameApi\GameApi\obj\Debug\netcoreapp2.2\GameApi.csproj.CoreCompileInputs.cache
+C:\Users\npeconi\Documents\csharpangularsample1\GameApi\GameApi\obj\Debug\netcoreapp2.2\GameApi.RazorAssemblyInfo.cache
+C:\Users\npeconi\Documents\csharpangularsample1\GameApi\GameApi\obj\Debug\netcoreapp2.2\GameApi.RazorAssemblyInfo.cs
+C:\Users\npeconi\Documents\csharpangularsample1\GameApi\GameApi\obj\Debug\netcoreapp2.2\GameApi.AssemblyInfoInputs.cache
+C:\Users\npeconi\Documents\csharpangularsample1\GameApi\GameApi\obj\Debug\netcoreapp2.2\GameApi.AssemblyInfo.cs
+C:\Users\npeconi\Documents\csharpangularsample1\GameApi\GameApi\obj\Debug\netcoreapp2.2\GameApi.RazorTargetAssemblyInfo.cache
+C:\Users\npeconi\Documents\csharpangularsample1\GameApi\GameApi\obj\Debug\netcoreapp2.2\GameApi.csproj.CopyComplete
+C:\Users\npeconi\Documents\csharpangularsample1\GameApi\GameApi\obj\Debug\netcoreapp2.2\GameApi.dll
+C:\Users\npeconi\Documents\csharpangularsample1\GameApi\GameApi\obj\Debug\netcoreapp2.2\GameApi.pdb
+C:\Users\nicholaspeconi\Documents\2nd Year Repos\CSharpAngularSample1\GameApi\GameApi\bin\Debug\netcoreapp2.2\GameApi.deps.json
+C:\Users\nicholaspeconi\Documents\2nd Year Repos\CSharpAngularSample1\GameApi\GameApi\bin\Debug\netcoreapp2.2\GameApi.runtimeconfig.json
+C:\Users\nicholaspeconi\Documents\2nd Year Repos\CSharpAngularSample1\GameApi\GameApi\bin\Debug\netcoreapp2.2\GameApi.runtimeconfig.dev.json
+C:\Users\nicholaspeconi\Documents\2nd Year Repos\CSharpAngularSample1\GameApi\GameApi\bin\Debug\netcoreapp2.2\GameApi.dll
+C:\Users\nicholaspeconi\Documents\2nd Year Repos\CSharpAngularSample1\GameApi\GameApi\bin\Debug\netcoreapp2.2\GameApi.pdb
+C:\Users\nicholaspeconi\Documents\2nd Year Repos\CSharpAngularSample1\GameApi\GameApi\bin\Debug\netcoreapp2.2\Contracts.dll
+C:\Users\nicholaspeconi\Documents\2nd Year Repos\CSharpAngularSample1\GameApi\GameApi\bin\Debug\netcoreapp2.2\Entities.dll
+C:\Users\nicholaspeconi\Documents\2nd Year Repos\CSharpAngularSample1\GameApi\GameApi\bin\Debug\netcoreapp2.2\LoggerService.dll
+C:\Users\nicholaspeconi\Documents\2nd Year Repos\CSharpAngularSample1\GameApi\GameApi\bin\Debug\netcoreapp2.2\Repository.dll
+C:\Users\nicholaspeconi\Documents\2nd Year Repos\CSharpAngularSample1\GameApi\GameApi\bin\Debug\netcoreapp2.2\Contracts.pdb
+C:\Users\nicholaspeconi\Documents\2nd Year Repos\CSharpAngularSample1\GameApi\GameApi\bin\Debug\netcoreapp2.2\Entities.pdb
+C:\Users\nicholaspeconi\Documents\2nd Year Repos\CSharpAngularSample1\GameApi\GameApi\bin\Debug\netcoreapp2.2\LoggerService.pdb
+C:\Users\nicholaspeconi\Documents\2nd Year Repos\CSharpAngularSample1\GameApi\GameApi\bin\Debug\netcoreapp2.2\Repository.pdb
+C:\Users\nicholaspeconi\Documents\2nd Year Repos\CSharpAngularSample1\GameApi\GameApi\obj\Debug\netcoreapp2.2\GameApi.csprojAssemblyReference.cache
+C:\Users\nicholaspeconi\Documents\2nd Year Repos\CSharpAngularSample1\GameApi\GameApi\obj\Debug\netcoreapp2.2\GameApi.csproj.CoreCompileInputs.cache
+C:\Users\nicholaspeconi\Documents\2nd Year Repos\CSharpAngularSample1\GameApi\GameApi\obj\Debug\netcoreapp2.2\GameApi.RazorAssemblyInfo.cache
+C:\Users\nicholaspeconi\Documents\2nd Year Repos\CSharpAngularSample1\GameApi\GameApi\obj\Debug\netcoreapp2.2\GameApi.RazorAssemblyInfo.cs
+C:\Users\nicholaspeconi\Documents\2nd Year Repos\CSharpAngularSample1\GameApi\GameApi\obj\Debug\netcoreapp2.2\GameApi.AssemblyInfoInputs.cache
+C:\Users\nicholaspeconi\Documents\2nd Year Repos\CSharpAngularSample1\GameApi\GameApi\obj\Debug\netcoreapp2.2\GameApi.AssemblyInfo.cs
+C:\Users\nicholaspeconi\Documents\2nd Year Repos\CSharpAngularSample1\GameApi\GameApi\obj\Debug\netcoreapp2.2\GameApi.RazorTargetAssemblyInfo.cache
+C:\Users\nicholaspeconi\Documents\2nd Year Repos\CSharpAngularSample1\GameApi\GameApi\obj\Debug\netcoreapp2.2\GameApi.csproj.CopyComplete
+C:\Users\nicholaspeconi\Documents\2nd Year Repos\CSharpAngularSample1\GameApi\GameApi\obj\Debug\netcoreapp2.2\GameApi.dll
+C:\Users\nicholaspeconi\Documents\2nd Year Repos\CSharpAngularSample1\GameApi\GameApi\obj\Debug\netcoreapp2.2\GameApi.pdb

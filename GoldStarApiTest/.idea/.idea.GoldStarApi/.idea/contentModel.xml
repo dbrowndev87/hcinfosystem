@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="Contracts" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Contracts.csproj" t="IncludeRecursive" />
+        <e p="ICourseRepository.cs" t="Include" />
+        <e p="IDepartmentRepository.cs" t="Include" />
+        <e p="IFacultyRepository.cs" t="Include" />
+        <e p="ILoggerManager.cs" t="Include" />
+        <e p="IRepositoryBase.cs" t="Include" />
+        <e p="IRepositoryWrapper.cs" t="Include" />
+        <e p="IStudentRepository.cs" t="Include" />
+        <e p="ITransactionRepository.cs" t="Include" />
+        <e p="IUserLoginRepository.cs" t="Include" />
+        <e p="IUserRepository.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="Contracts.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="Entities" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Entities.csproj" t="IncludeRecursive" />
+        <e p="ExtendedModels" t="Include" />
+        <e p="Extensions" t="Include">
+          <e p="CourseExtensions.cs" t="Include" />
+          <e p="DepartmentExtensions.cs" t="Include" />
+          <e p="FacultyExtensions.cs" t="Include" />
+          <e p="IEntityExtensions.cs" t="Include" />
+          <e p="StudentExtensions.cs" t="Include" />
+          <e p="TransactionExtensions.cs" t="Include" />
+          <e p="UserExtensions.cs" t="Include" />
+          <e p="UserLoginExtensions.cs" t="Include" />
+        </e>
+        <e p="IEntity.cs" t="Include" />
+        <e p="Models" t="Include">
+          <e p="Course.cs" t="Include" />
+          <e p="Department.cs" t="Include" />
+          <e p="Faculty.cs" t="Include" />
+          <e p="Student.cs" t="Include" />
+          <e p="Transaction.cs" t="Include" />
+          <e p="User.cs" t="Include" />
+          <e p="UserLogin.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="Entities.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="RepositoryContext.cs" t="Include" />
+      </e>
+      <e p="GoldStarApi" t="IncludeRecursive">
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Controllers" t="Include">
+          <e p="CourseController.cs" t="Include" />
+          <e p="DepartmentController.cs" t="Include" />
+          <e p="FacultyController.cs" t="Include" />
+          <e p="StudentController.cs" t="Include" />
+          <e p="UserController.cs" t="Include" />
+          <e p="UserLoginController.cs" t="Include" />
+        </e>
+        <e p="Extensions" t="Include">
+          <e p="ServiceExtensions.cs" t="Include" />
+        </e>
+        <e p="GoldStarApi.csproj" t="IncludeRecursive" />
+        <e p="internal_logs" t="Include" />
+        <e p="logs" t="Include">
+          <e p="2019-01-15_logfile.txt" t="Include" />
+        </e>
+        <e p="nlog.config" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="GoldStarApi.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Startup.cs" t="Include" />
+      </e>
+      <e p="GoldStarApi.sln" t="IncludeFlat" />
+      <e p="LoggerService" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="LoggerManager.cs" t="Include" />
+        <e p="LoggerService.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="LoggerService.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Repository" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="CourseRepository.cs" t="Include" />
+        <e p="DepartmentRepository.cs" t="Include" />
+        <e p="FacultyRepository.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="Repository.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Repository.csproj" t="IncludeRecursive" />
+        <e p="RepositoryBase.cs" t="Include" />
+        <e p="RepositoryWrapper.cs" t="Include" />
+        <e p="StudentRepository.cs" t="Include" />
+        <e p="UserLoginRepository.cs" t="Include" />
+        <e p="UserRepository.cs" t="Include" />
+      </e>
+    </e>
+    <e p="$USER_HOME$/Library/Caches/Rider2018.3/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2018.3/resharper-host/local/Transient/ReSharperHost/v183/SolutionCaches/_GoldStarApi.107194761.00" t="ExcludeRecursive" />
+  </component>
+</project>

@@ -1,0 +1,114 @@
+C:/Users/nicholaspeconi/GameApi/GameApi/Repository/bin/Debug/netcoreapp2.2/Repository.deps.json
+C:/Users/nicholaspeconi/GameApi/GameApi/Repository/bin/Debug/netcoreapp2.2/Repository.dll
+C:/Users/nicholaspeconi/GameApi/GameApi/Repository/bin/Debug/netcoreapp2.2/Repository.pdb
+C:/Users/nicholaspeconi/GameApi/GameApi/Repository/bin/Debug/netcoreapp2.2/Contracts.dll
+C:/Users/nicholaspeconi/GameApi/GameApi/Repository/bin/Debug/netcoreapp2.2/Entities.dll
+C:/Users/nicholaspeconi/GameApi/GameApi/Repository/bin/Debug/netcoreapp2.2/Microsoft.EntityFrameworkCore.dll
+C:/Users/nicholaspeconi/GameApi/GameApi/Repository/bin/Debug/netcoreapp2.2/Contracts.pdb
+C:/Users/nicholaspeconi/GameApi/GameApi/Repository/bin/Debug/netcoreapp2.2/Entities.pdb
+C:/Users/nicholaspeconi/GameApi/GameApi/Repository/bin/Debug/netcoreapp2.2/Microsoft.EntityFrameworkCore.xml
+C:/Users/nicholaspeconi/GameApi/GameApi/Repository/obj/Debug/netcoreapp2.2/Repository.csprojAssemblyReference.cache
+C:/Users/nicholaspeconi/GameApi/GameApi/Repository/obj/Debug/netcoreapp2.2/Repository.csproj.CoreCompileInputs.cache
+C:/Users/nicholaspeconi/GameApi/GameApi/Repository/obj/Debug/netcoreapp2.2/Repository.AssemblyInfoInputs.cache
+C:/Users/nicholaspeconi/GameApi/GameApi/Repository/obj/Debug/netcoreapp2.2/Repository.AssemblyInfo.cs
+C:/Users/nicholaspeconi/GameApi/GameApi/Repository/obj/Debug/netcoreapp2.2/Repository.csproj.CopyComplete
+C:/Users/nicholaspeconi/GameApi/GameApi/Repository/obj/Debug/netcoreapp2.2/Repository.dll
+C:/Users/nicholaspeconi/GameApi/GameApi/Repository/obj/Debug/netcoreapp2.2/Repository.pdb
+C:/Users/npeconi/Documents/csharpangularsample1/GameApi/Repository/bin/Debug/netcoreapp2.2/Repository.deps.json
+C:/Users/npeconi/Documents/csharpangularsample1/GameApi/Repository/bin/Debug/netcoreapp2.2/Repository.dll
+C:/Users/npeconi/Documents/csharpangularsample1/GameApi/Repository/bin/Debug/netcoreapp2.2/Repository.pdb
+C:/Users/npeconi/Documents/csharpangularsample1/GameApi/Repository/bin/Debug/netcoreapp2.2/Contracts.dll
+C:/Users/npeconi/Documents/csharpangularsample1/GameApi/Repository/bin/Debug/netcoreapp2.2/Entities.dll
+C:/Users/npeconi/Documents/csharpangularsample1/GameApi/Repository/bin/Debug/netcoreapp2.2/Contracts.pdb
+C:/Users/npeconi/Documents/csharpangularsample1/GameApi/Repository/bin/Debug/netcoreapp2.2/Entities.pdb
+C:/Users/npeconi/Documents/csharpangularsample1/GameApi/Repository/obj/Debug/netcoreapp2.2/Repository.csprojAssemblyReference.cache
+C:/Users/npeconi/Documents/csharpangularsample1/GameApi/Repository/obj/Debug/netcoreapp2.2/Repository.csproj.CoreCompileInputs.cache
+C:/Users/npeconi/Documents/csharpangularsample1/GameApi/Repository/obj/Debug/netcoreapp2.2/Repository.AssemblyInfoInputs.cache
+C:/Users/npeconi/Documents/csharpangularsample1/GameApi/Repository/obj/Debug/netcoreapp2.2/Repository.AssemblyInfo.cs
+C:/Users/npeconi/Documents/csharpangularsample1/GameApi/Repository/obj/Debug/netcoreapp2.2/Repository.csproj.CopyComplete
+C:/Users/npeconi/Documents/csharpangularsample1/GameApi/Repository/obj/Debug/netcoreapp2.2/Repository.dll
+C:/Users/npeconi/Documents/csharpangularsample1/GameApi/Repository/obj/Debug/netcoreapp2.2/Repository.pdb
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/CSharpAngularSample1/GameApi/Repository/bin/Debug/netcoreapp2.2/Repository.deps.json
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/CSharpAngularSample1/GameApi/Repository/bin/Debug/netcoreapp2.2/Repository.dll
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/CSharpAngularSample1/GameApi/Repository/bin/Debug/netcoreapp2.2/Repository.pdb
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/CSharpAngularSample1/GameApi/Repository/bin/Debug/netcoreapp2.2/Contracts.dll
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/CSharpAngularSample1/GameApi/Repository/bin/Debug/netcoreapp2.2/Entities.dll
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/CSharpAngularSample1/GameApi/Repository/bin/Debug/netcoreapp2.2/Contracts.pdb
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/CSharpAngularSample1/GameApi/Repository/bin/Debug/netcoreapp2.2/Entities.pdb
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/CSharpAngularSample1/GameApi/Repository/obj/Debug/netcoreapp2.2/Repository.csprojAssemblyReference.cache
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/CSharpAngularSample1/GameApi/Repository/obj/Debug/netcoreapp2.2/Repository.csproj.CoreCompileInputs.cache
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/CSharpAngularSample1/GameApi/Repository/obj/Debug/netcoreapp2.2/Repository.AssemblyInfoInputs.cache
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/CSharpAngularSample1/GameApi/Repository/obj/Debug/netcoreapp2.2/Repository.AssemblyInfo.cs
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/CSharpAngularSample1/GameApi/Repository/obj/Debug/netcoreapp2.2/Repository.csproj.CopyComplete
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/CSharpAngularSample1/GameApi/Repository/obj/Debug/netcoreapp2.2/Repository.dll
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/CSharpAngularSample1/GameApi/Repository/obj/Debug/netcoreapp2.2/Repository.pdb
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/GoldStarApiTest/Repository/bin/Debug/netcoreapp2.2/Repository.deps.json
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/GoldStarApiTest/Repository/bin/Debug/netcoreapp2.2/Repository.dll
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/GoldStarApiTest/Repository/bin/Debug/netcoreapp2.2/Repository.pdb
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/GoldStarApiTest/Repository/bin/Debug/netcoreapp2.2/Contracts.dll
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/GoldStarApiTest/Repository/bin/Debug/netcoreapp2.2/Entities.dll
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/GoldStarApiTest/Repository/bin/Debug/netcoreapp2.2/Contracts.pdb
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/GoldStarApiTest/Repository/bin/Debug/netcoreapp2.2/Entities.pdb
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/GoldStarApiTest/Repository/obj/Debug/netcoreapp2.2/Repository.csprojAssemblyReference.cache
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/GoldStarApiTest/Repository/obj/Debug/netcoreapp2.2/Repository.csproj.CoreCompileInputs.cache
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/GoldStarApiTest/Repository/obj/Debug/netcoreapp2.2/Repository.AssemblyInfoInputs.cache
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/GoldStarApiTest/Repository/obj/Debug/netcoreapp2.2/Repository.AssemblyInfo.cs
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/GoldStarApiTest/Repository/obj/Debug/netcoreapp2.2/Repository.csproj.CopyComplete
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/GoldStarApiTest/Repository/obj/Debug/netcoreapp2.2/Repository.dll
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/GoldStarApiTest/Repository/obj/Debug/netcoreapp2.2/Repository.pdb
+D:/Bitbucket/GoldStarFinalProject/GoldStarApiTest/Repository/bin/Debug/netcoreapp2.2/Repository.deps.json
+D:/Bitbucket/GoldStarFinalProject/GoldStarApiTest/Repository/bin/Debug/netcoreapp2.2/Repository.dll
+D:/Bitbucket/GoldStarFinalProject/GoldStarApiTest/Repository/bin/Debug/netcoreapp2.2/Repository.pdb
+D:/Bitbucket/GoldStarFinalProject/GoldStarApiTest/Repository/bin/Debug/netcoreapp2.2/Contracts.dll
+D:/Bitbucket/GoldStarFinalProject/GoldStarApiTest/Repository/bin/Debug/netcoreapp2.2/Entities.dll
+D:/Bitbucket/GoldStarFinalProject/GoldStarApiTest/Repository/bin/Debug/netcoreapp2.2/Contracts.pdb
+D:/Bitbucket/GoldStarFinalProject/GoldStarApiTest/Repository/bin/Debug/netcoreapp2.2/Entities.pdb
+D:/Bitbucket/GoldStarFinalProject/GoldStarApiTest/Repository/obj/Debug/netcoreapp2.2/Repository.csprojAssemblyReference.cache
+D:/Bitbucket/GoldStarFinalProject/GoldStarApiTest/Repository/obj/Debug/netcoreapp2.2/Repository.csproj.CoreCompileInputs.cache
+D:/Bitbucket/GoldStarFinalProject/GoldStarApiTest/Repository/obj/Debug/netcoreapp2.2/Repository.AssemblyInfoInputs.cache
+D:/Bitbucket/GoldStarFinalProject/GoldStarApiTest/Repository/obj/Debug/netcoreapp2.2/Repository.AssemblyInfo.cs
+D:/Bitbucket/GoldStarFinalProject/GoldStarApiTest/Repository/obj/Debug/netcoreapp2.2/Repository.csproj.CopyComplete
+D:/Bitbucket/GoldStarFinalProject/GoldStarApiTest/Repository/obj/Debug/netcoreapp2.2/Repository.dll
+D:/Bitbucket/GoldStarFinalProject/GoldStarApiTest/Repository/obj/Debug/netcoreapp2.2/Repository.pdb
+C:/Users/darcy/Documents/Visual Studio 2017/Projects/GoldStarApiTest/Repository/bin/Debug/netcoreapp2.2/Repository.deps.json
+C:/Users/darcy/Documents/Visual Studio 2017/Projects/GoldStarApiTest/Repository/bin/Debug/netcoreapp2.2/Repository.dll
+C:/Users/darcy/Documents/Visual Studio 2017/Projects/GoldStarApiTest/Repository/bin/Debug/netcoreapp2.2/Repository.pdb
+C:/Users/darcy/Documents/Visual Studio 2017/Projects/GoldStarApiTest/Repository/bin/Debug/netcoreapp2.2/Contracts.dll
+C:/Users/darcy/Documents/Visual Studio 2017/Projects/GoldStarApiTest/Repository/bin/Debug/netcoreapp2.2/Entities.dll
+C:/Users/darcy/Documents/Visual Studio 2017/Projects/GoldStarApiTest/Repository/bin/Debug/netcoreapp2.2/Contracts.pdb
+C:/Users/darcy/Documents/Visual Studio 2017/Projects/GoldStarApiTest/Repository/bin/Debug/netcoreapp2.2/Entities.pdb
+C:/Users/darcy/Documents/Visual Studio 2017/Projects/GoldStarApiTest/Repository/obj/Debug/netcoreapp2.2/Repository.csprojAssemblyReference.cache
+C:/Users/darcy/Documents/Visual Studio 2017/Projects/GoldStarApiTest/Repository/obj/Debug/netcoreapp2.2/Repository.csproj.CoreCompileInputs.cache
+C:/Users/darcy/Documents/Visual Studio 2017/Projects/GoldStarApiTest/Repository/obj/Debug/netcoreapp2.2/Repository.AssemblyInfoInputs.cache
+C:/Users/darcy/Documents/Visual Studio 2017/Projects/GoldStarApiTest/Repository/obj/Debug/netcoreapp2.2/Repository.AssemblyInfo.cs
+C:/Users/darcy/Documents/Visual Studio 2017/Projects/GoldStarApiTest/Repository/obj/Debug/netcoreapp2.2/Repository.csproj.CopyComplete
+C:/Users/darcy/Documents/Visual Studio 2017/Projects/GoldStarApiTest/Repository/obj/Debug/netcoreapp2.2/Repository.dll
+C:/Users/darcy/Documents/Visual Studio 2017/Projects/GoldStarApiTest/Repository/obj/Debug/netcoreapp2.2/Repository.pdb
+D:/Angular/GoldStarFinal/GoldStarApiTest/Repository/bin/Debug/netcoreapp2.2/Repository.deps.json
+D:/Angular/GoldStarFinal/GoldStarApiTest/Repository/bin/Debug/netcoreapp2.2/Repository.dll
+D:/Angular/GoldStarFinal/GoldStarApiTest/Repository/bin/Debug/netcoreapp2.2/Repository.pdb
+D:/Angular/GoldStarFinal/GoldStarApiTest/Repository/bin/Debug/netcoreapp2.2/Contracts.dll
+D:/Angular/GoldStarFinal/GoldStarApiTest/Repository/bin/Debug/netcoreapp2.2/Entities.dll
+D:/Angular/GoldStarFinal/GoldStarApiTest/Repository/bin/Debug/netcoreapp2.2/Contracts.pdb
+D:/Angular/GoldStarFinal/GoldStarApiTest/Repository/bin/Debug/netcoreapp2.2/Entities.pdb
+D:/Angular/GoldStarFinal/GoldStarApiTest/Repository/obj/Debug/netcoreapp2.2/Repository.csprojAssemblyReference.cache
+D:/Angular/GoldStarFinal/GoldStarApiTest/Repository/obj/Debug/netcoreapp2.2/Repository.csproj.CoreCompileInputs.cache
+D:/Angular/GoldStarFinal/GoldStarApiTest/Repository/obj/Debug/netcoreapp2.2/Repository.AssemblyInfoInputs.cache
+D:/Angular/GoldStarFinal/GoldStarApiTest/Repository/obj/Debug/netcoreapp2.2/Repository.AssemblyInfo.cs
+D:/Angular/GoldStarFinal/GoldStarApiTest/Repository/obj/Debug/netcoreapp2.2/Repository.csproj.CopyComplete
+D:/Angular/GoldStarFinal/GoldStarApiTest/Repository/obj/Debug/netcoreapp2.2/Repository.dll
+D:/Angular/GoldStarFinal/GoldStarApiTest/Repository/obj/Debug/netcoreapp2.2/Repository.pdb
+/Users/Nick/goldstarfinalproject/GoldStarApiTest/Repository/bin/Debug/netcoreapp2.2/Repository.deps.json
+/Users/Nick/goldstarfinalproject/GoldStarApiTest/Repository/bin/Debug/netcoreapp2.2/Repository.dll
+/Users/Nick/goldstarfinalproject/GoldStarApiTest/Repository/bin/Debug/netcoreapp2.2/Repository.pdb
+/Users/Nick/goldstarfinalproject/GoldStarApiTest/Repository/bin/Debug/netcoreapp2.2/Contracts.dll
+/Users/Nick/goldstarfinalproject/GoldStarApiTest/Repository/bin/Debug/netcoreapp2.2/Entities.dll
+/Users/Nick/goldstarfinalproject/GoldStarApiTest/Repository/bin/Debug/netcoreapp2.2/Contracts.pdb
+/Users/Nick/goldstarfinalproject/GoldStarApiTest/Repository/bin/Debug/netcoreapp2.2/Entities.pdb
+/Users/Nick/goldstarfinalproject/GoldStarApiTest/Repository/obj/Debug/netcoreapp2.2/Repository.csprojAssemblyReference.cache
+/Users/Nick/goldstarfinalproject/GoldStarApiTest/Repository/obj/Debug/netcoreapp2.2/Repository.csproj.CoreCompileInputs.cache
+/Users/Nick/goldstarfinalproject/GoldStarApiTest/Repository/obj/Debug/netcoreapp2.2/Repository.AssemblyInfoInputs.cache
+/Users/Nick/goldstarfinalproject/GoldStarApiTest/Repository/obj/Debug/netcoreapp2.2/Repository.AssemblyInfo.cs
+/Users/Nick/goldstarfinalproject/GoldStarApiTest/Repository/obj/Debug/netcoreapp2.2/Repository.csproj.CopyComplete
+/Users/Nick/goldstarfinalproject/GoldStarApiTest/Repository/obj/Debug/netcoreapp2.2/Repository.dll
+/Users/Nick/goldstarfinalproject/GoldStarApiTest/Repository/obj/Debug/netcoreapp2.2/Repository.pdb

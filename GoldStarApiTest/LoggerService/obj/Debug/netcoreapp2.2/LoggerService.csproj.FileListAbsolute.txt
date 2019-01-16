@@ -1,0 +1,114 @@
+C:/Users/nicholaspeconi/GameApi/GameApi/LoggerService/bin/Debug/netcoreapp2.2/LoggerService.deps.json
+C:/Users/nicholaspeconi/GameApi/GameApi/LoggerService/bin/Debug/netcoreapp2.2/LoggerService.dll
+C:/Users/nicholaspeconi/GameApi/GameApi/LoggerService/bin/Debug/netcoreapp2.2/LoggerService.pdb
+C:/Users/nicholaspeconi/GameApi/GameApi/LoggerService/bin/Debug/netcoreapp2.2/Contracts.dll
+C:/Users/nicholaspeconi/GameApi/GameApi/LoggerService/bin/Debug/netcoreapp2.2/Contracts.pdb
+C:/Users/nicholaspeconi/GameApi/GameApi/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.csprojAssemblyReference.cache
+C:/Users/nicholaspeconi/GameApi/GameApi/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.csproj.CoreCompileInputs.cache
+C:/Users/nicholaspeconi/GameApi/GameApi/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.AssemblyInfoInputs.cache
+C:/Users/nicholaspeconi/GameApi/GameApi/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.AssemblyInfo.cs
+C:/Users/nicholaspeconi/GameApi/GameApi/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.csproj.CopyComplete
+C:/Users/nicholaspeconi/GameApi/GameApi/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.dll
+C:/Users/nicholaspeconi/GameApi/GameApi/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.pdb
+C:/Users/nicholaspeconi/GameApi/GameApi/LoggerService/bin/Debug/netcoreapp2.2/Entities.dll
+C:/Users/nicholaspeconi/GameApi/GameApi/LoggerService/bin/Debug/netcoreapp2.2/Microsoft.EntityFrameworkCore.dll
+C:/Users/nicholaspeconi/GameApi/GameApi/LoggerService/bin/Debug/netcoreapp2.2/Entities.pdb
+C:/Users/nicholaspeconi/GameApi/GameApi/LoggerService/bin/Debug/netcoreapp2.2/Microsoft.EntityFrameworkCore.xml
+C:/Users/npeconi/Documents/csharpangularsample1/GameApi/LoggerService/bin/Debug/netcoreapp2.2/LoggerService.deps.json
+C:/Users/npeconi/Documents/csharpangularsample1/GameApi/LoggerService/bin/Debug/netcoreapp2.2/LoggerService.dll
+C:/Users/npeconi/Documents/csharpangularsample1/GameApi/LoggerService/bin/Debug/netcoreapp2.2/LoggerService.pdb
+C:/Users/npeconi/Documents/csharpangularsample1/GameApi/LoggerService/bin/Debug/netcoreapp2.2/Contracts.dll
+C:/Users/npeconi/Documents/csharpangularsample1/GameApi/LoggerService/bin/Debug/netcoreapp2.2/Entities.dll
+C:/Users/npeconi/Documents/csharpangularsample1/GameApi/LoggerService/bin/Debug/netcoreapp2.2/Contracts.pdb
+C:/Users/npeconi/Documents/csharpangularsample1/GameApi/LoggerService/bin/Debug/netcoreapp2.2/Entities.pdb
+C:/Users/npeconi/Documents/csharpangularsample1/GameApi/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.csprojAssemblyReference.cache
+C:/Users/npeconi/Documents/csharpangularsample1/GameApi/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.csproj.CoreCompileInputs.cache
+C:/Users/npeconi/Documents/csharpangularsample1/GameApi/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.AssemblyInfoInputs.cache
+C:/Users/npeconi/Documents/csharpangularsample1/GameApi/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.AssemblyInfo.cs
+C:/Users/npeconi/Documents/csharpangularsample1/GameApi/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.csproj.CopyComplete
+C:/Users/npeconi/Documents/csharpangularsample1/GameApi/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.dll
+C:/Users/npeconi/Documents/csharpangularsample1/GameApi/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.pdb
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/CSharpAngularSample1/GameApi/LoggerService/bin/Debug/netcoreapp2.2/LoggerService.deps.json
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/CSharpAngularSample1/GameApi/LoggerService/bin/Debug/netcoreapp2.2/LoggerService.dll
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/CSharpAngularSample1/GameApi/LoggerService/bin/Debug/netcoreapp2.2/LoggerService.pdb
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/CSharpAngularSample1/GameApi/LoggerService/bin/Debug/netcoreapp2.2/Contracts.dll
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/CSharpAngularSample1/GameApi/LoggerService/bin/Debug/netcoreapp2.2/Entities.dll
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/CSharpAngularSample1/GameApi/LoggerService/bin/Debug/netcoreapp2.2/Contracts.pdb
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/CSharpAngularSample1/GameApi/LoggerService/bin/Debug/netcoreapp2.2/Entities.pdb
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/CSharpAngularSample1/GameApi/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.csprojAssemblyReference.cache
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/CSharpAngularSample1/GameApi/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.csproj.CoreCompileInputs.cache
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/CSharpAngularSample1/GameApi/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.AssemblyInfoInputs.cache
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/CSharpAngularSample1/GameApi/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.AssemblyInfo.cs
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/CSharpAngularSample1/GameApi/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.csproj.CopyComplete
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/CSharpAngularSample1/GameApi/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.dll
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/CSharpAngularSample1/GameApi/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.pdb
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/GoldStarApiTest/LoggerService/bin/Debug/netcoreapp2.2/LoggerService.deps.json
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/GoldStarApiTest/LoggerService/bin/Debug/netcoreapp2.2/LoggerService.dll
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/GoldStarApiTest/LoggerService/bin/Debug/netcoreapp2.2/LoggerService.pdb
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/GoldStarApiTest/LoggerService/bin/Debug/netcoreapp2.2/Contracts.dll
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/GoldStarApiTest/LoggerService/bin/Debug/netcoreapp2.2/Entities.dll
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/GoldStarApiTest/LoggerService/bin/Debug/netcoreapp2.2/Contracts.pdb
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/GoldStarApiTest/LoggerService/bin/Debug/netcoreapp2.2/Entities.pdb
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/GoldStarApiTest/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.csprojAssemblyReference.cache
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/GoldStarApiTest/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.csproj.CoreCompileInputs.cache
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/GoldStarApiTest/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.AssemblyInfoInputs.cache
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/GoldStarApiTest/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.AssemblyInfo.cs
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/GoldStarApiTest/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.csproj.CopyComplete
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/GoldStarApiTest/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.dll
+C:/Users/nicholaspeconi/Documents/2nd Year Repos/GoldStarApiTest/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.pdb
+D:/Bitbucket/GoldStarFinalProject/GoldStarApiTest/LoggerService/bin/Debug/netcoreapp2.2/LoggerService.deps.json
+D:/Bitbucket/GoldStarFinalProject/GoldStarApiTest/LoggerService/bin/Debug/netcoreapp2.2/LoggerService.dll
+D:/Bitbucket/GoldStarFinalProject/GoldStarApiTest/LoggerService/bin/Debug/netcoreapp2.2/LoggerService.pdb
+D:/Bitbucket/GoldStarFinalProject/GoldStarApiTest/LoggerService/bin/Debug/netcoreapp2.2/Contracts.dll
+D:/Bitbucket/GoldStarFinalProject/GoldStarApiTest/LoggerService/bin/Debug/netcoreapp2.2/Entities.dll
+D:/Bitbucket/GoldStarFinalProject/GoldStarApiTest/LoggerService/bin/Debug/netcoreapp2.2/Contracts.pdb
+D:/Bitbucket/GoldStarFinalProject/GoldStarApiTest/LoggerService/bin/Debug/netcoreapp2.2/Entities.pdb
+D:/Bitbucket/GoldStarFinalProject/GoldStarApiTest/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.csprojAssemblyReference.cache
+D:/Bitbucket/GoldStarFinalProject/GoldStarApiTest/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.csproj.CoreCompileInputs.cache
+D:/Bitbucket/GoldStarFinalProject/GoldStarApiTest/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.AssemblyInfoInputs.cache
+D:/Bitbucket/GoldStarFinalProject/GoldStarApiTest/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.AssemblyInfo.cs
+D:/Bitbucket/GoldStarFinalProject/GoldStarApiTest/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.csproj.CopyComplete
+D:/Bitbucket/GoldStarFinalProject/GoldStarApiTest/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.dll
+D:/Bitbucket/GoldStarFinalProject/GoldStarApiTest/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.pdb
+C:/Users/darcy/Documents/Visual Studio 2017/Projects/GoldStarApiTest/LoggerService/bin/Debug/netcoreapp2.2/LoggerService.deps.json
+C:/Users/darcy/Documents/Visual Studio 2017/Projects/GoldStarApiTest/LoggerService/bin/Debug/netcoreapp2.2/LoggerService.dll
+C:/Users/darcy/Documents/Visual Studio 2017/Projects/GoldStarApiTest/LoggerService/bin/Debug/netcoreapp2.2/LoggerService.pdb
+C:/Users/darcy/Documents/Visual Studio 2017/Projects/GoldStarApiTest/LoggerService/bin/Debug/netcoreapp2.2/Contracts.dll
+C:/Users/darcy/Documents/Visual Studio 2017/Projects/GoldStarApiTest/LoggerService/bin/Debug/netcoreapp2.2/Entities.dll
+C:/Users/darcy/Documents/Visual Studio 2017/Projects/GoldStarApiTest/LoggerService/bin/Debug/netcoreapp2.2/Contracts.pdb
+C:/Users/darcy/Documents/Visual Studio 2017/Projects/GoldStarApiTest/LoggerService/bin/Debug/netcoreapp2.2/Entities.pdb
+C:/Users/darcy/Documents/Visual Studio 2017/Projects/GoldStarApiTest/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.csprojAssemblyReference.cache
+C:/Users/darcy/Documents/Visual Studio 2017/Projects/GoldStarApiTest/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.csproj.CoreCompileInputs.cache
+C:/Users/darcy/Documents/Visual Studio 2017/Projects/GoldStarApiTest/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.AssemblyInfoInputs.cache
+C:/Users/darcy/Documents/Visual Studio 2017/Projects/GoldStarApiTest/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.AssemblyInfo.cs
+C:/Users/darcy/Documents/Visual Studio 2017/Projects/GoldStarApiTest/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.csproj.CopyComplete
+C:/Users/darcy/Documents/Visual Studio 2017/Projects/GoldStarApiTest/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.dll
+C:/Users/darcy/Documents/Visual Studio 2017/Projects/GoldStarApiTest/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.pdb
+D:/Angular/GoldStarFinal/GoldStarApiTest/LoggerService/bin/Debug/netcoreapp2.2/LoggerService.deps.json
+D:/Angular/GoldStarFinal/GoldStarApiTest/LoggerService/bin/Debug/netcoreapp2.2/LoggerService.dll
+D:/Angular/GoldStarFinal/GoldStarApiTest/LoggerService/bin/Debug/netcoreapp2.2/LoggerService.pdb
+D:/Angular/GoldStarFinal/GoldStarApiTest/LoggerService/bin/Debug/netcoreapp2.2/Contracts.dll
+D:/Angular/GoldStarFinal/GoldStarApiTest/LoggerService/bin/Debug/netcoreapp2.2/Entities.dll
+D:/Angular/GoldStarFinal/GoldStarApiTest/LoggerService/bin/Debug/netcoreapp2.2/Contracts.pdb
+D:/Angular/GoldStarFinal/GoldStarApiTest/LoggerService/bin/Debug/netcoreapp2.2/Entities.pdb
+D:/Angular/GoldStarFinal/GoldStarApiTest/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.csprojAssemblyReference.cache
+D:/Angular/GoldStarFinal/GoldStarApiTest/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.csproj.CoreCompileInputs.cache
+D:/Angular/GoldStarFinal/GoldStarApiTest/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.AssemblyInfoInputs.cache
+D:/Angular/GoldStarFinal/GoldStarApiTest/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.AssemblyInfo.cs
+D:/Angular/GoldStarFinal/GoldStarApiTest/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.csproj.CopyComplete
+D:/Angular/GoldStarFinal/GoldStarApiTest/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.dll
+D:/Angular/GoldStarFinal/GoldStarApiTest/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.pdb
+/Users/Nick/goldstarfinalproject/GoldStarApiTest/LoggerService/bin/Debug/netcoreapp2.2/LoggerService.deps.json
+/Users/Nick/goldstarfinalproject/GoldStarApiTest/LoggerService/bin/Debug/netcoreapp2.2/LoggerService.dll
+/Users/Nick/goldstarfinalproject/GoldStarApiTest/LoggerService/bin/Debug/netcoreapp2.2/LoggerService.pdb
+/Users/Nick/goldstarfinalproject/GoldStarApiTest/LoggerService/bin/Debug/netcoreapp2.2/Contracts.dll
+/Users/Nick/goldstarfinalproject/GoldStarApiTest/LoggerService/bin/Debug/netcoreapp2.2/Entities.dll
+/Users/Nick/goldstarfinalproject/GoldStarApiTest/LoggerService/bin/Debug/netcoreapp2.2/Contracts.pdb
+/Users/Nick/goldstarfinalproject/GoldStarApiTest/LoggerService/bin/Debug/netcoreapp2.2/Entities.pdb
+/Users/Nick/goldstarfinalproject/GoldStarApiTest/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.csprojAssemblyReference.cache
+/Users/Nick/goldstarfinalproject/GoldStarApiTest/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.csproj.CoreCompileInputs.cache
+/Users/Nick/goldstarfinalproject/GoldStarApiTest/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.AssemblyInfoInputs.cache
+/Users/Nick/goldstarfinalproject/GoldStarApiTest/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.AssemblyInfo.cs
+/Users/Nick/goldstarfinalproject/GoldStarApiTest/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.csproj.CopyComplete
+/Users/Nick/goldstarfinalproject/GoldStarApiTest/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.dll
+/Users/Nick/goldstarfinalproject/GoldStarApiTest/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.pdb
