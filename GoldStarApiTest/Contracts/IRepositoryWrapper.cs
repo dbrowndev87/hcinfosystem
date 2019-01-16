@@ -13,5 +13,9 @@ namespace Contracts
         ICourseRepository Course { get; }
         
         IDepartmentRepository Department { get; }
+        ITransactionRepository Transaction { get; }
+        IUserTypeCodeRepository TypeCode { get; }
+        IEnrollmentRepository Enrollment { get; }
+        ISectionRepository Section { get; }
     }
 }

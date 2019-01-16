@@ -35,7 +35,7 @@ namespace GoldStarApi.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Something went wrong inside GetAllGames action: {ex.Message}");
+                _logger.LogError($"Something went wrong inside GetAllUsers action: {ex.Message}");
                 return StatusCode(500, "Internal server error");
             }
         }

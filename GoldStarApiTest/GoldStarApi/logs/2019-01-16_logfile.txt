@@ -1,0 +1,61 @@
+2019-01-16 12:34:38.7556 ERROR Something went wrong inside GetAllStudentInfo action: Object reference not set to an instance of an object.
+2019-01-16 12:35:36.7428 INFO Returned Student with id: 5
+2019-01-16 12:36:32.5219 INFO Returned Student with id: 5
+2019-01-16 12:36:34.4018 INFO Hello
+2019-01-16 12:36:34.4121 ERROR Something went wrong inside GetAllStudentInfo action: Object reference not set to an instance of an object.
+2019-01-16 12:38:39.5542 INFO Hello
+2019-01-16 12:38:39.6039 INFO 0
+2019-01-16 12:38:39.7569 ERROR Something went wrong inside GetAllStudentInfo action: Object reference not set to an instance of an object.
+2019-01-16 12:39:24.8075 INFO Hello
+2019-01-16 12:39:24.8583 INFO 0
+2019-01-16 12:39:25.0072 ERROR Something went wrong inside GetAllStudentInfo action: Object reference not set to an instance of an object.
+2019-01-16 12:39:39.8654 INFO Hello
+2019-01-16 12:39:39.8672 INFO 0
+2019-01-16 12:39:39.8954 ERROR Something went wrong inside GetAllStudentInfo action: Object reference not set to an instance of an object.
+2019-01-16 12:41:23.6695 INFO Hello
+2019-01-16 12:41:23.7174 INFO 
+2019-01-16 12:41:23.8684 ERROR Something went wrong inside GetAllStudentInfo action: Object reference not set to an instance of an object.
+2019-01-16 12:42:14.9597 INFO Hello
+2019-01-16 12:42:15.0066 INFO 
+2019-01-16 12:42:15.1561 ERROR Something went wrong inside GetAllStudentInfo action: Object reference not set to an instance of an object.
+2019-01-16 12:42:16.2215 INFO Hello
+2019-01-16 12:42:16.2283 INFO 
+2019-01-16 12:42:16.2309 ERROR Something went wrong inside GetAllStudentInfo action: Object reference not set to an instance of an object.
+2019-01-16 12:44:57.0454 INFO current
+2019-01-16 12:44:57.2507 ERROR Something went wrong inside GetAllStudentInfo action: Object reference not set to an instance of an object.
+2019-01-16 12:47:00.7569 INFO current
+2019-01-16 12:47:00.9514 ERROR Something went wrong inside GetAllStudentInfo action: Object reference not set to an instance of an object.
+2019-01-16 12:49:09.1317 INFO Returned Student with id: 5
+2019-01-16 12:49:13.0377 INFO current
+2019-01-16 12:49:13.0576 INFO Entities.Models.StudentInfo
+2019-01-16 12:49:13.0584 INFO current
+2019-01-16 12:49:13.0627 INFO Entities.Models.StudentInfo
+2019-01-16 12:49:13.0771 INFO Returned all students from database. 2
+2019-01-16 12:49:48.5259 INFO current
+2019-01-16 12:49:48.5295 INFO Entities.Models.StudentInfo
+2019-01-16 12:49:48.5295 INFO current
+2019-01-16 12:49:48.5311 INFO Entities.Models.StudentInfo
+2019-01-16 12:49:48.5336 INFO Returned all students from database. 2
+2019-01-16 12:49:56.5072 INFO Returned all students from database. 2
+2019-01-16 12:54:37.0296 INFO Returned all students from database. 2
+2019-01-16 12:54:47.3565 INFO Returned all students from database. 2
+2019-01-16 12:56:35.5964 INFO Returned all students from database. 2
+2019-01-16 12:56:38.6047 INFO current
+2019-01-16 12:56:38.7850 INFO Murchison
+2019-01-16 12:56:38.7858 INFO Entities.Models.StudentInfo
+2019-01-16 12:56:38.7858 INFO current
+2019-01-16 12:56:38.7882 INFO Stew
+2019-01-16 12:56:38.7888 INFO Entities.Models.StudentInfo
+2019-01-16 12:56:38.7898 INFO Returned all students from database. 2
+2019-01-16 12:57:32.9556 INFO current
+2019-01-16 12:57:33.1476 INFO Murchison
+2019-01-16 12:57:33.1486 INFO Entities.Models.StudentInfo
+2019-01-16 12:57:33.1486 INFO current
+2019-01-16 12:57:33.1507 INFO Stew
+2019-01-16 12:57:33.1513 INFO Entities.Models.StudentInfo
+2019-01-16 12:57:33.1527 INFO Returned all students from database. 2
+2019-01-16 13:05:57.8367 INFO current
+2019-01-16 13:05:58.0281 INFO Entities.Models.StudentInfo
+2019-01-16 13:05:58.0281 INFO current
+2019-01-16 13:05:58.0310 INFO Entities.Models.StudentInfo
+2019-01-16 13:05:58.0324 INFO Returned all students from database. 2

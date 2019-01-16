@@ -10,7 +10,7 @@ namespace Contracts
         bool Equals(object obj);
         IEnumerable<Transaction> GetAllTransactions();
         int GetHashCode();
-        Student GetTransactionById(int transactionId);
+        Transaction GetTransactionById(int transactionId);
         string ToString();
         void UpdateTransaction(Transaction dbStudent, Transaction transaction);
     }

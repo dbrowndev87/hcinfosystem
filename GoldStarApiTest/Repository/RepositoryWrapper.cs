@@ -12,6 +12,10 @@ namespace Repository
         private IFacultyRepository _faculty;
         private ICourseRepository _course;
         private IDepartmentRepository _department;
+        private ITransactionRepository _transaction;
+        private IUserTypeCodeRepository _typecode;
+        private IEnrollmentRepository _enrollment;
+        private ISectionRepository _section;
 
         public IUserRepository Users
         {
@@ -22,6 +26,18 @@ namespace Repository
                 }
  
                 return _user;
+            }
+        }
+        
+        public ISectionRepository Section
+        {
+            get {
+                if(_section == null)
+                {
+                    _section= new SectionRepository(_repoContext);
+                }
+ 
+                return _section;
             }
         }
 
@@ -87,6 +103,44 @@ namespace Repository
                 }
 
                 return _course;
+            }
+        }
+        
+        public ITransactionRepository Transaction
+        {
+            get
+            {
+                if (_transaction == null)
+                {
+                    _transaction = new TransactionRepository(_repoContext);
+                }
+
+                return _transaction;
+            }
+        }
+        public IUserTypeCodeRepository TypeCode
+        {
+            get
+            {
+                if (_typecode == null)
+                {
+                    _typecode = new UserTypeCodeRepository(_repoContext);
+                }
+
+                return _typecode;
+            }
+        }
+        
+        public IEnrollmentRepository Enrollment
+        {
+            get
+            {
+                if (_enrollment == null)
+                {
+                    _enrollment = new EnrollmentRepository(_repoContext);
+                }
+
+                return _enrollment;
             }
         }
 

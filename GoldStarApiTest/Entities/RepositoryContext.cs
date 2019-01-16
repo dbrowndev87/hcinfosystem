@@ -16,5 +16,10 @@ namespace Entities
         public DbSet<UserLogin> UserLogins { get; set; }
         public DbSet<Department> Departments { get; set; }
         public DbSet<Transaction> Transactions { get; set; }
+        public DbSet<UserTypeCode> UserTypeCodes { get; set; }
+        public DbSet<Enrollment> Enrollments { get; set; }
+        public DbSet<Section> Sections { get; set; }
+        
+   
     }
 }

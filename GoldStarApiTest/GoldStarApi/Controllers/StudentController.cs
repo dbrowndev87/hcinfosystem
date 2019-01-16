@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using Contracts;
 using Entities.Extensions;
@@ -34,10 +35,12 @@ namespace GoldStarApi.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Something went wrong inside GetAllGames action: {ex.Message}");
+                _logger.LogError($"Something went wrong inside GetAllStudents action: {ex.Message}");
                 return StatusCode(500, "Internal server error");
             }
         }
+        
+      
         
         [HttpGet("{id}", Name ="StudentById")]
         public IActionResult GetStudentById(int id)
@@ -60,11 +63,12 @@ namespace GoldStarApi.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Something went wrong inside GetGameById action: {ex.Message}");
+                _logger.LogError($"Something went wrong inside GetStudentById action: {ex.Message}");
                 return StatusCode(500, "Internal server error");
             }
         }
-
+       
+      
 
         [HttpPost]
         public IActionResult CreateStudent([FromBody]Student student)
@@ -83,7 +87,7 @@ namespace GoldStarApi.Controllers
                     return BadRequest("Invalid model object");
                 }
  
-                _logger.LogError("Look Here"+student.StudentId);
+                _logger.LogError("Look Here"+student.Student_Id);
                 
                 _repository.Student.CreateStudent(student);
 

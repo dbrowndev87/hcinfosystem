@@ -17,12 +17,12 @@ namespace Repository
         public IEnumerable<Student> GetAllStudents()
         {
             return FindAll()
-                .OrderBy(ow => ow.StudentId);
+                .OrderBy(ow => ow.Student_Id);
         }
 
         public Student GetStudentById(int studentId)
         {
-            return FindByCondition(student => student.StudentId.Equals(studentId))
+            return FindByCondition(student => student.Student_Id.Equals(studentId))
                 .DefaultIfEmpty(new Student())
                 .FirstOrDefault();
         }

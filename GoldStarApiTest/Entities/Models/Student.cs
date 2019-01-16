@@ -10,10 +10,10 @@ namespace Entities.Models
       
         [Key]
         [Column("student_id")]
-        public int StudentId { get; set; }
+        public int Student_Id { get; set; }
  
         [Required(ErrorMessage = "Birth Date is required")]
-        public String Student_Status { get; set; }
+        public string Student_Status { get; set; }
         
         [Required(ErrorMessage = "E-Mail is required")]
         [StringLength(50, ErrorMessage = "E-Mail can't be longer than 50 characters")]
@@ -24,7 +24,6 @@ namespace Entities.Models
         public int User_id { get; set; }
         
         [Required(ErrorMessage = "Status is required")]
-   
         public double Amount_Owing { get; set; }
         
       

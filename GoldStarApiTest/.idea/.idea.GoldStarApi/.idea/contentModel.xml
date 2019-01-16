@@ -7,14 +7,17 @@
         <e p="Contracts.csproj" t="IncludeRecursive" />
         <e p="ICourseRepository.cs" t="Include" />
         <e p="IDepartmentRepository.cs" t="Include" />
+        <e p="IEnrollmentRepository.cs" t="Include" />
         <e p="IFacultyRepository.cs" t="Include" />
         <e p="ILoggerManager.cs" t="Include" />
         <e p="IRepositoryBase.cs" t="Include" />
         <e p="IRepositoryWrapper.cs" t="Include" />
+        <e p="ISectionRepository.cs" t="Include" />
         <e p="IStudentRepository.cs" t="Include" />
         <e p="ITransactionRepository.cs" t="Include" />
         <e p="IUserLoginRepository.cs" t="Include" />
         <e p="IUserRepository.cs" t="Include" />
+        <e p="IUserTypeCodeRepository.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.2" t="Include">
@@ -30,22 +33,29 @@
         <e p="Extensions" t="Include">
           <e p="CourseExtensions.cs" t="Include" />
           <e p="DepartmentExtensions.cs" t="Include" />
+          <e p="EnrollmentExtensions.cs" t="Include" />
           <e p="FacultyExtensions.cs" t="Include" />
           <e p="IEntityExtensions.cs" t="Include" />
+          <e p="SectionExtensions.cs" t="Include" />
           <e p="StudentExtensions.cs" t="Include" />
           <e p="TransactionExtensions.cs" t="Include" />
           <e p="UserExtensions.cs" t="Include" />
           <e p="UserLoginExtensions.cs" t="Include" />
+          <e p="UserTypeCodeExtensions.cs" t="Include" />
         </e>
         <e p="IEntity.cs" t="Include" />
         <e p="Models" t="Include">
           <e p="Course.cs" t="Include" />
           <e p="Department.cs" t="Include" />
+          <e p="Enrollment.cs" t="Include" />
           <e p="Faculty.cs" t="Include" />
+          <e p="Section.cs" t="Include" />
           <e p="Student.cs" t="Include" />
+          <e p="StudentInfo.cs" t="Include" />
           <e p="Transaction.cs" t="Include" />
           <e p="User.cs" t="Include" />
           <e p="UserLogin.cs" t="Include" />
+          <e p="UserTypeCode.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -63,18 +73,26 @@
         <e p="Controllers" t="Include">
           <e p="CourseController.cs" t="Include" />
           <e p="DepartmentController.cs" t="Include" />
+          <e p="EnrollmentController.cs" t="Include" />
           <e p="FacultyController.cs" t="Include" />
+          <e p="SectionController.cs" t="Include" />
           <e p="StudentController.cs" t="Include" />
+          <e p="StudentInfoController.cs" t="Include" />
+          <e p="TransactionController.cs" t="Include" />
           <e p="UserController.cs" t="Include" />
           <e p="UserLoginController.cs" t="Include" />
+          <e p="UserTypeCodeController.cs" t="Include" />
         </e>
         <e p="Extensions" t="Include">
           <e p="ServiceExtensions.cs" t="Include" />
         </e>
         <e p="GoldStarApi.csproj" t="IncludeRecursive" />
-        <e p="internal_logs" t="Include" />
+        <e p="internal_logs" t="Include">
+          <e p="internallog.txt" t="Include" />
+        </e>
         <e p="logs" t="Include">
           <e p="2019-01-15_logfile.txt" t="Include" />
+          <e p="2019-01-16_logfile.txt" t="Include" />
         </e>
         <e p="nlog.config" t="Include" />
         <e p="obj" t="ExcludeRecursive">
@@ -108,6 +126,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="CourseRepository.cs" t="Include" />
         <e p="DepartmentRepository.cs" t="Include" />
+        <e p="EnrollmentRepository.cs" t="Include" />
         <e p="FacultyRepository.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -119,9 +138,12 @@
         <e p="Repository.csproj" t="IncludeRecursive" />
         <e p="RepositoryBase.cs" t="Include" />
         <e p="RepositoryWrapper.cs" t="Include" />
+        <e p="SectionRepository.cs" t="Include" />
         <e p="StudentRepository.cs" t="Include" />
+        <e p="TransactionRepository.cs" t="Include" />
         <e p="UserLoginRepository.cs" t="Include" />
         <e p="UserRepository.cs" t="Include" />
+        <e p="UserTypeCodeRepository.cs" t="Include" />
       </e>
     </e>
     <e p="$USER_HOME$/Library/Caches/Rider2018.3/extResources" t="IncludeRecursive" />

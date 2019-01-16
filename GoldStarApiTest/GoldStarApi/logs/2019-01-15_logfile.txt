@@ -8,3 +8,12 @@
 2019-01-15 11:44:40.3175 INFO Returned all teachers from database. 1
 2019-01-15 11:44:57.7503 INFO Returned Course with id: CIS-1150
 2019-01-15 12:46:13.9532 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-15 19:44:22.6880 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Transaction,System.Int32]
+2019-01-15 20:26:33.6610 INFO Returned all students from database. System.Linq.OrderedEnumerable`2[Entities.Models.UserTypeCode,System.Int32]
+2019-01-15 21:08:21.2175 ERROR Something went wrong inside GetAllEnrollments action: Entity type 'Enrollment' has composite primary key defined with data annotations. To set composite primary key, use fluent API.
+2019-01-15 21:20:18.1475 INFO Returned all teachers from database. 1
+2019-01-15 21:20:24.1791 INFO Returned all Enrollments from database. 1
+2019-01-15 21:20:41.1489 INFO Returned Enrollment with id: 3
+2019-01-15 21:20:44.9005 INFO Returned Enrollment with id: 1
+2019-01-15 21:24:58.0635 INFO Returned all Enrollments from database. 2
+2019-01-15 21:25:02.7941 INFO Returned Enrollment with id: 1
