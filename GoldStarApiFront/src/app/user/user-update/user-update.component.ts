@@ -87,9 +87,9 @@ export class UserUpdateComponent implements OnInit {
     this.user.birth_date = userFormValue.birth_date.slice(0, 10);
     this.user.type_Code = parseInt(userFormValue.type_Code, 0);
     this.user.eMail = userFormValue.eMail;
-    this.user.userId = this.user.userId;
+    this.user.user_Id = this.user.user_Id;
 
-    let apiUrl = `api/user/${this.user.userId}`;
+    let apiUrl = `api/user/${this.user.user_Id}`;
     this.repository.update(apiUrl, this.user)
       .subscribe(res => {
         $('#successModal').modal();

@@ -126,3 +126,17 @@ C:\Users\npeconi\Documents\goldstarcode\GoldStarApiTest\LoggerService\obj\Debug\
 C:\Users\npeconi\Documents\goldstarcode\GoldStarApiTest\LoggerService\obj\Debug\netcoreapp2.2\LoggerService.csproj.CopyComplete
 C:\Users\npeconi\Documents\goldstarcode\GoldStarApiTest\LoggerService\obj\Debug\netcoreapp2.2\LoggerService.dll
 C:\Users\npeconi\Documents\goldstarcode\GoldStarApiTest\LoggerService\obj\Debug\netcoreapp2.2\LoggerService.pdb
+D:\Bitbucket\goldstarcode\GoldStarApiTest\LoggerService\bin\Debug\netcoreapp2.2\LoggerService.deps.json
+D:\Bitbucket\goldstarcode\GoldStarApiTest\LoggerService\bin\Debug\netcoreapp2.2\LoggerService.dll
+D:\Bitbucket\goldstarcode\GoldStarApiTest\LoggerService\bin\Debug\netcoreapp2.2\LoggerService.pdb
+D:\Bitbucket\goldstarcode\GoldStarApiTest\LoggerService\bin\Debug\netcoreapp2.2\Contracts.dll
+D:\Bitbucket\goldstarcode\GoldStarApiTest\LoggerService\bin\Debug\netcoreapp2.2\Entities.dll
+D:\Bitbucket\goldstarcode\GoldStarApiTest\LoggerService\bin\Debug\netcoreapp2.2\Contracts.pdb
+D:\Bitbucket\goldstarcode\GoldStarApiTest\LoggerService\bin\Debug\netcoreapp2.2\Entities.pdb
+D:\Bitbucket\goldstarcode\GoldStarApiTest\LoggerService\obj\Debug\netcoreapp2.2\LoggerService.csprojAssemblyReference.cache
+D:\Bitbucket\goldstarcode\GoldStarApiTest\LoggerService\obj\Debug\netcoreapp2.2\LoggerService.csproj.CoreCompileInputs.cache
+D:\Bitbucket\goldstarcode\GoldStarApiTest\LoggerService\obj\Debug\netcoreapp2.2\LoggerService.AssemblyInfoInputs.cache
+D:\Bitbucket\goldstarcode\GoldStarApiTest\LoggerService\obj\Debug\netcoreapp2.2\LoggerService.AssemblyInfo.cs
+D:\Bitbucket\goldstarcode\GoldStarApiTest\LoggerService\obj\Debug\netcoreapp2.2\LoggerService.csproj.CopyComplete
+D:\Bitbucket\goldstarcode\GoldStarApiTest\LoggerService\obj\Debug\netcoreapp2.2\LoggerService.dll
+D:\Bitbucket\goldstarcode\GoldStarApiTest\LoggerService\obj\Debug\netcoreapp2.2\LoggerService.pdb

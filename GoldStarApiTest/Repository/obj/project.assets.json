@@ -941,7 +941,7 @@
       ]
     },
     "Microsoft.Extensions.Primitives/2.2.0": {
-      "sha512": "Sv8EDHvN2852bE5G1yosKCa7sUw/x0Z/rCaI5LIWHseAXprG1h9oberAh3NRBO7w2zTZq79WPeQDMsPBVSf99w==",
+      "sha512": "vpH+o7f8obVx65PiEtBXxTwL5RosK60fNIMy/y8WGE4/r4IvAqQGukOzMhxsp//Accvd7kmukyQTVkqVYdaDyA==",
       "type": "package",
       "path": "microsoft.extensions.primitives/2.2.0",
       "files": [
@@ -1219,7 +1219,7 @@
       ]
     },
     "Microsoft.NETCore.DotNetAppHost/2.2.0": {
-      "sha512": "qIrVLupwT2NYTrf7KM7Nh+mJr36V5MITVRjyGOByVVCwGmQgQmI/6bjZYQv+QdExi4Cm87eCKJX9FdT6nc00Xg==",
+      "sha512": "OK/H8p9Ig6mLMITjXJ4VOewrJg/TU+dAPHE4BdMWMv+8COzBehf7XF1+DofKkmqdHpO2cJoS5Sc9PEZ6PKCbsg==",
       "type": "package",
       "path": "microsoft.netcore.dotnetapphost/2.2.0",
       "files": [
@@ -3002,38 +3002,40 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\npeconi\\.nuget\\packages\\": {},
+    "C:\\Users\\darcy\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\npeconi\\Documents\\goldstarcode\\GoldStarApiTest\\Repository\\Repository.csproj",
+      "projectUniqueName": "D:\\Bitbucket\\goldstarcode\\GoldStarApiTest\\Repository\\Repository.csproj",
       "projectName": "Repository",
-      "projectPath": "C:\\Users\\npeconi\\Documents\\goldstarcode\\GoldStarApiTest\\Repository\\Repository.csproj",
-      "packagesPath": "C:\\Users\\npeconi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\npeconi\\Documents\\goldstarcode\\GoldStarApiTest\\Repository\\obj\\",
+      "projectPath": "D:\\Bitbucket\\goldstarcode\\GoldStarApiTest\\Repository\\Repository.csproj",
+      "packagesPath": "C:\\Users\\darcy\\.nuget\\packages\\",
+      "outputPath": "D:\\Bitbucket\\goldstarcode\\GoldStarApiTest\\Repository\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\npeconi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\darcy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.2"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Users\\npeconi\\Documents\\goldstarcode\\GoldStarApiTest\\Contracts\\Contracts.csproj": {
-              "projectPath": "C:\\Users\\npeconi\\Documents\\goldstarcode\\GoldStarApiTest\\Contracts\\Contracts.csproj"
+            "D:\\Bitbucket\\goldstarcode\\GoldStarApiTest\\Contracts\\Contracts.csproj": {
+              "projectPath": "D:\\Bitbucket\\goldstarcode\\GoldStarApiTest\\Contracts\\Contracts.csproj"
             },
-            "C:\\Users\\npeconi\\Documents\\goldstarcode\\GoldStarApiTest\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\npeconi\\Documents\\goldstarcode\\GoldStarApiTest\\Entities\\Entities.csproj"
+            "D:\\Bitbucket\\goldstarcode\\GoldStarApiTest\\Entities\\Entities.csproj": {
+              "projectPath": "D:\\Bitbucket\\goldstarcode\\GoldStarApiTest\\Entities\\Entities.csproj"
             }
           }
         }

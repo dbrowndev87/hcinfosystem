@@ -41,39 +41,23 @@ export class RandomUserPassGen {
         // If the username is less than 8 characters use this method.
         if (tempUsername.length < 8) {
             let numToGenerate;
-            while (!this.unique) {
 
-                numToGenerate = (8 - tempUsername.length) + 2;
 
-                // generate that many random numbers
-                for (let i = 0; i < numToGenerate; i++) {
-                    const tempNum = (Math.floor(Math.random() * (9 - 0 + 1)) + 0);
-                    tempUsername += tempNum.toString();
-                }
+            numToGenerate = (8 - tempUsername.length) + 2;
 
-                // Check for Uniqueness
-                this.unique = this.uniqueCheck(tempUsername);
-
-            }
-            // concatinate to username and return
-            return tempUsername;
-        }
-
-        // This is the loop to make sure the username is unique
-        while (!this.uniqueCheck(tempUsername)) {
-            // Reaccuring unique check for every re-accuring generation
-
-            // If the name is unique and is not to long of a username
-            // there is no need to continue, so return.
-            if (this.uniqueCheck(tempUsername) && (tempUsername.length < 10)) {
-                return tempUsername;
+            // generate that many random numbers
+            for (let i = 0; i < numToGenerate; i++) {
+                const tempNum = (Math.floor(Math.random() * (9 - 0 + 1)) + 0);
+                tempUsername += tempNum.toString();
             }
 
-            // if not
+
+        } else {
+
             const numToGenerate = 4;
 
             // slice the last 3 off
-            tempUsername = tempUsername.slice(0, ((tempUsername.length + 8) - tempUsername.length));
+            tempUsername = tempUsername.slice(0, ((tempUsername.length + 6) - tempUsername.length));
 
             // generate that many random numbers
             for (let i = 0; i < numToGenerate; i++) {
@@ -81,6 +65,7 @@ export class RandomUserPassGen {
                 tempUsername += tempNum.toString();
             }
         }
+
         return tempUsername;
     }
 

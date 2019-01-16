@@ -6,7 +6,8 @@ import { RepositoryService } from './../../shared/services/repository.service';
 import { Router } from '@angular/router';
 import { UserLogin } from 'src/app/_interfaces/userlogin.model';
 import { RandomUserPassGen } from 'src/app/shared/tools/rupg';
-import { mapChildrenIntoArray } from '@angular/router/src/url_tree';
+import { Student } from 'src/app/_interfaces/student.model';
+import { StudentIdGenerator } from 'src/app/shared/tools/sidg';
 
 
 @Component({
@@ -14,6 +15,7 @@ import { mapChildrenIntoArray } from '@angular/router/src/url_tree';
   templateUrl: './user-create.component.html',
   styleUrls: ['./user-create.component.css']
 })
+
 export class UserCreateComponent implements OnInit {
 
   public errorMessage = "";
@@ -22,17 +24,22 @@ export class UserCreateComponent implements OnInit {
   @ViewChild('tCode') tCode: ElementRef;
 
 
-  constructor(private repository: RepositoryService, private errorHandler: ErrorHandlerService, private router: Router,
-    private rupg: RandomUserPassGen) { }
+  constructor(
+    private repository: RepositoryService,
+    private errorHandler: ErrorHandlerService,
+    private router: Router,
+    private rupg: RandomUserPassGen,
+    private sidg: StudentIdGenerator
+  ) { }
 
   ngOnInit() {
     this.userForm = new FormGroup({
-      firstname: new FormControl('', [Validators.required, Validators.maxLength(20)]),
-      lastname: new FormControl('', [Validators.required, Validators.maxLength(30)]),
+      first_Name: new FormControl('', [Validators.required, Validators.maxLength(20)]),
+      last_Name: new FormControl('', [Validators.required, Validators.maxLength(30)]),
       address: new FormControl('', [Validators.required, Validators.maxLength(140)]),
-      birthdate: new FormControl('', [Validators.required]),
-      email: new FormControl('', [Validators.required, Validators.maxLength(50)]),
-      typecode: new FormControl('', [Validators.required, Validators.maxLength(20)]),
+      birth_date: new FormControl('', [Validators.required]),
+      eMail: new FormControl('', [Validators.required, Validators.maxLength(50)]),
+      type_Code: new FormControl('', [Validators.required, Validators.maxLength(20)]),
     });
 
     // Get the next user ID.
@@ -63,7 +70,7 @@ export class UserCreateComponent implements OnInit {
   }
 
   public executeDatePicker(event) {
-    this.userForm.patchValue({ 'birthdate': event });
+    this.userForm.patchValue({ 'birth_date': event });
   }
 
   public createUser(userFormValue) {
@@ -82,13 +89,13 @@ export class UserCreateComponent implements OnInit {
 
     // Make a user interface.
     let user: User = {
-      first_Name: userFormValue.firstname,
-      last_Name: userFormValue.lastname,
+      first_Name: userFormValue.first_Name,
+      last_Name: userFormValue.last_Name,
       address: userFormValue.address,
-      birth_date: userFormValue.birthdate.slice(0, 10).toString(),
-      type_Code: parseInt(userFormValue.typecode, 0),
-      eMail: userFormValue.email,
-      userId: this.userId
+      birth_date: userFormValue.birth_date.slice(0, 10).toString(),
+      type_Code: parseInt(userFormValue.type_Code, 0),
+      eMail: userFormValue.eMail,
+      user_Id: this.userId
     };
 
     // Create user
@@ -98,6 +105,9 @@ export class UserCreateComponent implements OnInit {
 
         // Generate User Login
         this.generateUserLogin(user);
+        // Generate Student Table
+        this.generateStudent(user);
+        // Success modal.
         $('#successModal').modal();
 
       },
@@ -120,15 +130,17 @@ export class UserCreateComponent implements OnInit {
    */
   private generateUserLogin(user: User) {
 
-    let username = this.rupg.generateUser(user.first_Name, user.last_Name);
+    // Generate a user and password
+    let username: string = this.rupg.generateUser(user.first_Name, user.last_Name);
     let password = this.rupg.generatePass();
 
     // Generate user login info
+
     let userLogin: UserLogin = {
       username: username,
       password: password,
       user_Id: this.userId,
-      active: 1
+      active: true
     };
 
     // Create User Login
@@ -144,7 +156,41 @@ export class UserCreateComponent implements OnInit {
           this.errorMessage = this.errorHandler.errorMessage;
         })
       );
+
   }
 
+  /**
+  * This method generates the Student from the User information
+  * that is passed in.
+  * @param user 
+  */
+  private generateStudent(user: User) {
 
+    // generate a student ID.
+    let studentId: number = this.sidg.generateId();
+
+    // Generate Student login info
+    let student: Student = {
+      Student_Id: studentId,
+      Student_Status: "Enrolled",
+      User_id: user.user_Id,
+      Amount_Owing: 0.0,
+      Gpa: 0.0
+    };
+
+    // Create User Login
+    let apiUrlStudent = 'api/student';
+    this.repository.create(apiUrlStudent, student)
+      // tslint:disable-next-line: no-shadowed-variable
+      .subscribe(res => {
+        return;
+      },
+        // UserLogin create error
+        (error => {
+          this.errorHandler.handleError(error);
+          this.errorMessage = this.errorHandler.errorMessage;
+        })
+      );
+
+  }
 }

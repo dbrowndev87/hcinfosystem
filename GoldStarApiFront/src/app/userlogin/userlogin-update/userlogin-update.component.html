@@ -1,72 +1,46 @@
 <div class="container-fluid">
-  <form [formGroup]="userForm" autocomplete="off" novalidate (ngSubmit)="createUser(userForm.value)">
+  <h2 *ngIf="isLoaded">Username: {{userLogin.username}}</h2>
+  <form [formGroup]="userLoginForm" autocomplete="off" novalidate (ngSubmit)="updateUserLogin(userLoginForm.value)">
     <div class="form-horizontal well">
-
+      <br>
       <div class="form-group">
-        <label for="firstName" class="control-label col-md-2">First Name: </label>
-        <div class="col-md-5">
-          <input type="text" formControlName="firstName" id="firstName" class="form-control" />
+        <label for="password" class="control-label">Password: </label>
+        <div class="col-md-auto">
+          <input type="password" formControlName="password" id="password" class="form-control" />
         </div>
         <div class="col-md-5">
-          <em *ngIf="validateControl('firstName') && hasError('firstName', 'required')">Name is required</em>
-          <em *ngIf="validateControl('firstName') && hasError('firstName', 'maxlength')">Maximum allowed length is 60
+          <em *ngIf="validateControl('password') && hasError('password', 'required')">Password is required</em>
+          <em *ngIf="validateControl('password') && hasError('password', 'maxlength')">Maximum allowed length is 45
             characters.</em>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="lastName" class="control-label col-md-2">Last Name: </label>
-        <div class="col-md-5">
-          <input type="text" formControlName="lastName" id="lastName" class="form-control" />
-        </div>
-        <div class="col-md-5">
-          <em *ngIf="validateControl('lastName') && hasError('lastName', 'required')">Name is required</em>
-          <em *ngIf="validateControl('lastName') && hasError('lastName', 'maxlength')">Maximum allowed length is 60
+          <em *ngIf="validateControl('password') && hasError('password', 'minlength')">Maximum allowed length is 8
             characters.</em>
         </div>
       </div>
 
       <div class="form-group">
-        <label for="dateOfBirth" class="control-label col-md-2">Date of birth: </label>
-        <div class="col-md-5">
-          <input type="text" formControlName="dateOfBirth" id="dateOfBirth" class="form-control" appDatepicker (change)="executeDatePicker($event)"
-            readonly />
+        <label for="confirmPassword" class="control-label">Confirm Password:</label>
+        <div class="col-md-auto">
+          <input type="password" confirmEqualsValidator formControlName="confirmPassword" id="confirmPassword" class="form-control" />
         </div>
         <div class="col-md-5">
-          <em *ngIf="validateControl('dateOfBirth') && hasError('dateOfBirth', 'required')">Date of birth is required</em>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label for="address" class="control-label col-md-2">Address: </label>
-        <div class="col-md-5">
-          <input type="text" formControlName="address" id="address" class="form-control" />
-        </div>
-        <div class="col-md-5">
-          <em *ngIf="validateControl('address') && hasError('address', 'required')">Address is required</em>
-          <em *ngIf="validateControl('address') && hasError('address', 'maxlength')">Maximum allowed length is 140
+          <em *ngIf="validateControl('confirmPassword') && hasError('confirmPassword', 'required')">Password
+            Confirmation Required</em>
+          <em *ngIf="validateControl('confirmPassword') && hasError('confirmPassword', 'maxlength')">Maximum allowed
+            length is 45
             characters.</em>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label for="email" class="control-label col-md-2">E-Mail: </label>
-        <div class="col-md-5">
-          <input type="text" formControlName="email" id="email" class="form-control" />
-        </div>
-        <div class="col-md-5">
-          <em *ngIf="validateControl('email') && hasError('email', 'required')">E-Mail is required</em>
-          <em *ngIf="validateControl('email') && hasError('email', 'maxlength')">Maximum allowed length is 50
+          <em *ngIf="validateControl('confirmPassword') && hasError('confirmPassword', 'minlength')">Mimunum allowed
+            length is 8
             characters.</em>
+          <em *ngIf="validateControl('confirmPassword') && hasError('confirmPassword', 'isEqual')">Passwords Missmatch</em>
         </div>
       </div>
 
       <div class="form-group">
-        <label for="typeCode" class="control-label col-md-2">Type Code: </label>
-        <div class="col-md-5">
-          <select #tCode name="typeCode" id="typeCode" formControlName="typeCode">
-            <option value="1" selected="selected">1 - Admin</option>
-            <option value="2">2 - Faculty</option>
-            <option value="3">3 - Student</option>
+        <label for="active" class="control-label">Active: </label>
+        <div class="col-md-auto">
+          <select #tCode name="active" id="active" formControlName="active">
+            <option value="true" selected="selected">True</option>
+            <option value="false">False</option>
           </select>
         </div>
       </div>
@@ -74,19 +48,17 @@
       <br><br>
 
       <div class="form-group">
-        <div class="col-md-offset-5 col-md-1">
-          <button type="submit" class="btn btn-info" [disabled]="!userForm.valid">Save</button>
-        </div>
-        <div class="col-md-1">
-          <button type="button" class="btn btn-danger" (click)="redirectToUserList()">Cancel</button>
+        <div class="col-md-auto">
+          <button type="submit" class="btn btn-info" [disabled]="!userLoginForm.valid">Save</button>
+          <button type="button" class="btn btn-danger" (click)="redirectToUserLoginList()">Cancel</button>
         </div>
       </div>
 
     </div>
   </form>
 
-  <app-success-modal [modalHeaderText]="'Success message'" [modalBodyText]="'Action completed successfully'"
-    [okButtonText]="'OK'" (redirectOnOK)="redirectToStudentList()"></app-success-modal>
+  <app-success-modal [modalHeaderText]="'Update Successful'" [modalBodyText]="'User login information upddated successfully'"
+    [okButtonText]="'OK'" (redirectOnOK)="redirectToUserLoginList()"></app-success-modal>
 
   <app-error-modal [modalHeaderText]="'Error message'" [modalBodyText]="errorMessage" [okButtonText]="'OK'"></app-error-modal>
 

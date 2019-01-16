@@ -5,12 +5,14 @@
                                 [routerLinkActiveOptions]="{exact: true}">Project GoldStar</a>
                 </div>
                 <ul class="nav navbar-nav">
-                        <li *ngIf="loggedIn && typeCode === 1"><a [routerLink]="['/student/list']" routerLinkActive="active"
-                                        [routerLinkActiveOptions]="{exact: true}">Student
-                                        Actions</a></li>
+                        <li *ngIf="loggedIn && typeCode === 1"><a [routerLink]="['/userlogin/list']" routerLinkActive="active"
+                                        [routerLinkActiveOptions]="{exact: true}">User Login List</a></li>
                         <li *ngIf="loggedIn && typeCode === 1"><a [routerLink]="['/user/list']" routerLinkActive="active"
                                         [routerLinkActiveOptions]="{exact: true}">User
-                                        Actions</a></li>
+                                        List</a></li>
+                        <li *ngIf="loggedIn && typeCode === 1"><a [routerLink]="['/student/list']" routerLinkActive="active"
+                                        [routerLinkActiveOptions]="{exact: true}">Student
+                                        List</a></li>
                         <li *ngIf="!loggedIn"><a [routerLink]="['/login']" routerLinkActive="active"
                                         [routerLinkActiveOptions]="{exact: true}">Log
                                         In</a></li>

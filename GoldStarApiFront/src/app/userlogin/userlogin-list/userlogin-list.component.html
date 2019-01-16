@@ -1,3 +1,28 @@
-<p>
-  userlogin-list works!
-</p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Username</th>
+              <th>Password</th>
+              <th>Associated User ID</th>
+              <th>Active</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let userLogin of userLogins">
+              <td>{{userLogin.username}}</td>
+              <td>{{userLogin.password}}</td>
+              <td>{{userLogin.user_Id}}</td>
+              <td *ngIf="userLogin.active === true">Active</td>
+              <td *ngIf="userLogin.active === false">Inactive</td>
+              <td><button type="button" id="update" class="btn btn-success" (click)='redirectToUpdatePage(userLogin.username)'>Update</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

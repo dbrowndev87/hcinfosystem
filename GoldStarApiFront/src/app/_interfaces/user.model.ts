@@ -5,5 +5,5 @@ export interface User {
     birth_date: Date;
     eMail: string;
     type_Code: number;
-    userId: number;
+    user_Id: number;
 }

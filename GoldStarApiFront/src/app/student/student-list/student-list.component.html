@@ -11,26 +11,22 @@
         <table class="table table-striped">
           <thead>
             <tr>
-              <th>ID</th>
-              <th>First Name</th>
-              <th>Last Name</th>
-              <th>Date of birth</th>
-              <th>Address</th>
-              <th>Status</th>
-              <th>E-Mail</th>
+              <th>Student ID</th>
+              <th>Student Status</th>
+              <th>GPA</th>
+              <th>Ammount Owing</th>
+              <th>Associated User ID</th>
             </tr>
           </thead>
           <tbody>
             <tr *ngFor="let student of students">
-              <td>{{student.studentId}}</td>
-              <td>{{student.studentFirstName}}</td>
-              <td>{{student.studentLastName}}</td>
-              <td>{{student.studentBirthDate | date: 'dd/MM/yyyy'}}</td>
-              <td>{{student.studentAddress}}</td>
-              <td>{{student.studentStatus}}</td>
-              <td>{{student.studentEmail}}</td>
-              <td><button type="button" id="update" class="btn btn-success" (click)='redirectToUpdatePage(student.studentId)'>Update</button></td>
-              <td><button type="button" id="delete" class="btn btn-danger" (click)='redirectToDeletePage(student.studentId)'>Delete</button></td>
+              <td>{{student.student_Id}}</td>
+              <td>{{student.student_Status}}</td>
+              <td>{{student.gpa}}</td>
+              <td>{{student.amount_Owing}}</td>
+              <td>{{student.user_id}}</td>
+              <td><button type="button" id="update" class="btn btn-success" (click)='redirectToUpdatePage(student.student_Id)'>Update
+                  Student Info</button></td>
             </tr>
           </tbody>
         </table>

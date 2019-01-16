@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ErrorModalComponent } from './modals/error-modal/error-modal.component';
 import { SuccessModalComponent } from './modals/success-modal/success-modal.component';
 import { RandomUserPassGen } from './tools/rupg';
-import { UserloginModule } from '../userlogin/userlogin.module';
+import { StudentIdGenerator } from './tools/sidg';
 
 @NgModule({
   imports: [
@@ -20,7 +20,10 @@ import { UserloginModule } from '../userlogin/userlogin.module';
     SuccessModalComponent,
     DatepickerDirective
   ],
-  providers: [RandomUserPassGen]
+  providers: [
+    RandomUserPassGen,
+    StudentIdGenerator
+  ]
 
 })
 export class SharedModule { }

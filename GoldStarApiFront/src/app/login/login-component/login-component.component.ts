@@ -6,7 +6,6 @@ import { Router } from '@angular/router';
 import { UserLogin } from 'src/app/_interfaces/userlogin.model';
 import { Globals } from 'src/app/globals';
 import { User } from 'src/app/_interfaces/user.model';
-import { UserloginDeleteComponent } from 'src/app/userlogin/userlogin-delete/userlogin-delete.component';
 
 @Component({
   selector: 'app-login-component',
@@ -73,24 +72,22 @@ export class LoginComponent implements OnInit {
         // Set userLogin and if the passwords match set session.
         this.userLogin = userLogin as UserLogin;
 
-        console.log(this.userLogin);
+        // If the password match, check inactivity
         if (this.userLogin.password === password) {
-          sessionStorage.setItem("isLoggedIn", "true");
 
-          if (this.userLogin.active === 1) {
+          // check inactivity
+          if (this.userLogin.active === true) {
+
             // Get the TypeCode from Users table
             let apiUrlUser = 'api/user/' + this.userLogin.user_Id;
             this.repository.getData(apiUrlUser)
               .subscribe(user => {
 
-
-
                 // get user inform and set the typecode
                 this.user = user as User;
 
-                console.log(this.user);
-
-
+                // If everyting passes set sessions
+                sessionStorage.setItem("isLoggedIn", "true");
                 sessionStorage.setItem('typeCode', this.user.type_Code.toString());
 
                 // Do a page reload to fix the menu bar.
@@ -102,6 +99,7 @@ export class LoginComponent implements OnInit {
                 })
               );
           } else {
+            // If account is inactive
             this.loading = false;
             this.errorMessage = "Account is Inactive! Talk to Administration";
             $('#errorModal').modal();
@@ -119,8 +117,6 @@ export class LoginComponent implements OnInit {
           this.errorMessage = this.errorHandler.errorMessage;
         })
       );
-
-
   }
 
   public redirectToHome() {

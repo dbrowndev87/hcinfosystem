@@ -4,8 +4,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
-import { StudentCreateComponent } from './student-create/student-create.component';
-import { StudentDeleteComponent } from './student-delete/student-delete.component';
 import { StudentUpdateComponent } from './student-update/student-update.component';
 import { StudentRoutingModule } from './student.routing';
 
@@ -21,8 +19,6 @@ import { StudentRoutingModule } from './student.routing';
   ],
   declarations: [
     StudentListComponent,
-    StudentCreateComponent,
-    StudentDeleteComponent,
     StudentUpdateComponent
   ]
 })

@@ -15,7 +15,8 @@ export class UserloginUpdateComponent implements OnInit {
 
   public errorMessage = '';
   public userLogin: UserLogin;
-  public userForm: FormGroup;
+  public userLoginForm: FormGroup;
+  public isLoaded = false;
 
   constructor(
     private repository: RepositoryService,
@@ -25,26 +26,27 @@ export class UserloginUpdateComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.userForm = new FormGroup({
-      username: new FormControl('', [Validators.required, Validators.minLength(8), Validators.maxLength(45)]),
+    this.userLoginForm = new FormGroup({
       password: new FormControl('', [Validators.required, Validators.minLength(8), Validators.maxLength(45)]),
       confirmPassword: new FormControl('', [Validators.required, Validators.minLength(8), Validators.maxLength(45)]),
-      userId: new FormControl('', [Validators.required, Validators.maxLength(6)])
+      active: new FormControl(''),
     });
 
-    this.getStudentById();
+    this.getUserLoginByUsername();
   }
-  private getStudentById() {
-    let id: string = this.activeRoute.snapshot.params['id'];
 
-    let userByIdUrl = `api/user/${id}`;
-    let confirmPassword = this.userForm.get('confirmPassword');
+  private getUserLoginByUsername() {
+    let username: string = this.activeRoute.snapshot.params['username'];
 
-    this.repository.getData(userByIdUrl)
-      .subscribe(res => {
-        this.userLogin = res as UserLogin;
-        this.userForm.patchValue(this.userLogin);
+    let userLoginByUsernameUrl = `api/userlogin/username/${username}`;
+    let confirmPassword = this.userLoginForm.get('confirmPassword');
+
+    this.repository.getData(userLoginByUsernameUrl)
+      .subscribe((userLogin: UserLogin) => {
+        this.userLogin = userLogin as UserLogin;
+        this.userLoginForm.patchValue(this.userLogin);
         confirmPassword.setValue(this.userLogin.password);
+        this.isLoaded = true;
       },
         (error) => {
           this.errorHandler.handleError(error);
@@ -53,41 +55,38 @@ export class UserloginUpdateComponent implements OnInit {
   }
 
   public validateControl(controlName: string) {
-    if (this.userForm.controls[controlName].invalid && this.userForm.controls[controlName].touched) {
+    if (this.userLoginForm.controls[controlName].invalid && this.userLoginForm.controls[controlName].touched) {
       return true;
     }
     return false;
   }
 
   public hasError(controlName: string, errorName: string) {
-    if (this.userForm.controls[controlName].hasError(errorName)) {
+    if (this.userLoginForm.controls[controlName].hasError(errorName)) {
       return true;
     }
 
     return false;
   }
-  public redirectToUserList() {
+  public redirectToUserLoginList() {
     this.router.navigate(['/userlogin/list']);
   }
 
-  public updateUser(userFormValue) {
-    if (this.userForm.valid) {
-      this.executeUserUpdate(userFormValue);
+  public updateUserLogin(userLoginFormValue) {
+    if (this.userLoginForm.valid) {
+      this.executeUserLoginUpdate(userLoginFormValue);
     }
   }
 
-  private executeUserUpdate(userFormValue) {
-    this.userLogin.username = userFormValue.username;
-    this.userLogin.password = userFormValue.password;
-    this.userLogin.user_Id = userFormValue.userId;
+  private executeUserLoginUpdate(userLoginFormValue) {
 
+    this.userLogin.password = userLoginFormValue.password;
+    this.userLogin.active = userLoginFormValue.active;
 
-    console.log(this.userLogin);
     let apiUrl = `api/userlogin/${this.userLogin.username}`;
     this.repository.update(apiUrl, this.userLogin)
-      .subscribe(res => {
+      .subscribe(userLogin => {
         $('#successModal').modal();
-
       },
         (error => {
           this.errorHandler.handleError(error);

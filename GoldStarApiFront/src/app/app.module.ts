@@ -22,6 +22,9 @@ import { AuthGuardFaculty } from './login/authGuard/auth-faculty.guard';
 import { AuthGuardStudent } from './login/authGuard/auth-student.guard';
 import { StudentModule } from './student/student.module';
 import { AppRoutingModule } from './app-routing.module';
+import { UserLoginRoutingModule } from './userlogin/userlogin.routing';
+import { UserLoginModule } from './userlogin/userlogin.module';
+
 
 
 
@@ -42,6 +45,8 @@ import { AppRoutingModule } from './app-routing.module';
     LoginModule,
     LoginRoutingModule,
     StudentModule,
+    UserLoginModule,
+    UserLoginRoutingModule,
     RouterModule,
     AppRoutingModule
   ],

@@ -108,3 +108,15 @@ C:\Users\npeconi\Documents\goldstarcode\GoldStarApiTest\Contracts\obj\Debug\netc
 C:\Users\npeconi\Documents\goldstarcode\GoldStarApiTest\Contracts\obj\Debug\netcoreapp2.2\Contracts.csproj.CopyComplete
 C:\Users\npeconi\Documents\goldstarcode\GoldStarApiTest\Contracts\obj\Debug\netcoreapp2.2\Contracts.dll
 C:\Users\npeconi\Documents\goldstarcode\GoldStarApiTest\Contracts\obj\Debug\netcoreapp2.2\Contracts.pdb
+D:\Bitbucket\goldstarcode\GoldStarApiTest\Contracts\bin\Debug\netcoreapp2.2\Contracts.deps.json
+D:\Bitbucket\goldstarcode\GoldStarApiTest\Contracts\bin\Debug\netcoreapp2.2\Contracts.dll
+D:\Bitbucket\goldstarcode\GoldStarApiTest\Contracts\bin\Debug\netcoreapp2.2\Contracts.pdb
+D:\Bitbucket\goldstarcode\GoldStarApiTest\Contracts\bin\Debug\netcoreapp2.2\Entities.dll
+D:\Bitbucket\goldstarcode\GoldStarApiTest\Contracts\bin\Debug\netcoreapp2.2\Entities.pdb
+D:\Bitbucket\goldstarcode\GoldStarApiTest\Contracts\obj\Debug\netcoreapp2.2\Contracts.csprojAssemblyReference.cache
+D:\Bitbucket\goldstarcode\GoldStarApiTest\Contracts\obj\Debug\netcoreapp2.2\Contracts.csproj.CoreCompileInputs.cache
+D:\Bitbucket\goldstarcode\GoldStarApiTest\Contracts\obj\Debug\netcoreapp2.2\Contracts.AssemblyInfoInputs.cache
+D:\Bitbucket\goldstarcode\GoldStarApiTest\Contracts\obj\Debug\netcoreapp2.2\Contracts.AssemblyInfo.cs
+D:\Bitbucket\goldstarcode\GoldStarApiTest\Contracts\obj\Debug\netcoreapp2.2\Contracts.csproj.CopyComplete
+D:\Bitbucket\goldstarcode\GoldStarApiTest\Contracts\obj\Debug\netcoreapp2.2\Contracts.dll
+D:\Bitbucket\goldstarcode\GoldStarApiTest\Contracts\obj\Debug\netcoreapp2.2\Contracts.pdb

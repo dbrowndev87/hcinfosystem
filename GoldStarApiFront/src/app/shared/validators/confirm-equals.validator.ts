@@ -23,7 +23,7 @@ export class ConfirmEqualsValidator implements Validator {
 
         // if they are not equal return that it failed, else return null means is passed.
         if (controlToCompare && controlToCompare.value !== control.value) {
-            return { 'notEqual': true }
+            return { 'notEqual': true };
         } else {
             return null;
         }
