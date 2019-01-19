@@ -39,39 +39,67 @@ namespace GoldStarApi.Controllers
             }
         }
         
-        [HttpGet("{id}", Name ="EnrollmentByIds")]
-        public IActionResult GetEnrollmentById(int enrollmentId)
+        [HttpGet("{id}", Name ="EnrollmentById")]
+        public IActionResult GetEnrollmentById(int id)
         {
             
             try
             {
-                var enrollment = _repository.Enrollment.GetEnrollmentById(enrollmentId);
+                _logger.LogInfo($"Look Enrollment with id: {id}");   
+                var enrollment = _repository.Enrollment.GetEnrollmentById(id);
  
                 if (enrollment.Equals(null))
                 {
-                    _logger.LogError($"Enrollment with id: , hasn't been found in db.");
+                    _logger.LogError($"Enrollment with id: {id}, hasn't been found in db.");
                     return NotFound();
                 }
                 else
                 {
-                    _logger.LogInfo($"Returned Enrollment with id: ");
+                    _logger.LogInfo($"Returned Enrollment with id: {id}");
                     return Ok(enrollment);
                 }
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Something went wrong inside GetEnrollmentById action: {ex.Message}");
+                _logger.LogError($"Something went wrong inside GetEnrollment ById action: {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
+        }
+        
+        [HttpGet("student/{id}", Name ="EnrollmentByStudentId")]
+        public IActionResult GetEnrollmentByStudentId(int id)
+        {
+            
+            try
+            {
+                _logger.LogInfo($"Look Enrollment with id: {id}");   
+                var enrollments = _repository.Enrollment.GetEnrollmentsByStudentId(id);
+ 
+                if (enrollments.Equals(null))
+                {
+                    _logger.LogError($"Enrollment with id: {id}, hasn't been found in db.");
+                    return NotFound();
+                }
+                else
+                {
+                    _logger.LogInfo($"Returned Enrollment with id: {id}");
+                    return Ok(enrollments);
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Something went wrong inside GetEnrollment ById action: {ex.Message}");
                 return StatusCode(500, "Internal server error");
             }
         }
 
 
         [HttpPost]
-        public IActionResult CreateFaculty([FromBody]Faculty faculty)
+        public IActionResult CreateEnrollment([FromBody]Enrollment enrollment)
         {
             try
             {
-                if(faculty.Equals(null))
+                if(enrollment.Equals(null))
                 {
                     _logger.LogError("faculty object sent from client is null.");
                     return BadRequest("faculty object is null");
@@ -83,11 +111,11 @@ namespace GoldStarApi.Controllers
                     return BadRequest("Invalid model object");
                 }
  
-                _logger.LogError("Look Here"+faculty.Faculty_Id);
                 
-                _repository.Faculty.CreateFaculty(faculty);
+                
+                _repository.Enrollment.CreateEnrollment(enrollment);
 
-                return Ok(faculty);
+                return Ok(enrollment);
             }
             catch (Exception ex)
             {

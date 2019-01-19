@@ -22,9 +22,15 @@ namespace Repository
 
         public Enrollment GetEnrollmentById(int enrollmentId)
         {
-            return FindByCondition(enrollment => enrollment.Equals(enrollmentId))
+            return FindByCondition(enrollment => enrollment.Enrollment_Id.Equals(enrollmentId))
                 .DefaultIfEmpty(new Enrollment())
                 .FirstOrDefault();
+        }
+        
+        public IEnumerable<Enrollment> GetEnrollmentsByStudentId(int id)
+        {
+            return FindAll().Where(enrollment => enrollment.Student_Id.Equals(id));
+
         }
 
         public void CreateEnrollment(Enrollment enrollment)

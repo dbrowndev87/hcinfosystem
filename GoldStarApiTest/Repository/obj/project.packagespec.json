@@ -1,13 +1,13 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "C:\\Users\\npeconi\\Documents\\goldstarcode\\GoldStarApiTest\\Repository\\Repository.csproj",
+    "projectUniqueName": "/Users/Nick/goldstarcode/GoldStarApiTest/Repository/Repository.csproj",
     "projectName": "Repository",
-    "projectPath": "C:\\Users\\npeconi\\Documents\\goldstarcode\\GoldStarApiTest\\Repository\\Repository.csproj",
-    "outputPath": "C:\\Users\\npeconi\\Documents\\goldstarcode\\GoldStarApiTest\\Repository\\obj\\",
+    "projectPath": "/Users/Nick/goldstarcode/GoldStarApiTest/Repository/Repository.csproj",
+    "outputPath": "/Users/Nick/goldstarcode/GoldStarApiTest/Repository/obj/",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
-      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
     ],
     "originalTargetFrameworks": [
       "netcoreapp2.2"
@@ -15,11 +15,11 @@
     "frameworks": {
       "netcoreapp2.2": {
         "projectReferences": {
-          "C:\\Users\\npeconi\\Documents\\goldstarcode\\GoldStarApiTest\\Contracts\\Contracts.csproj": {
-            "projectPath": "C:\\Users\\npeconi\\Documents\\goldstarcode\\GoldStarApiTest\\Contracts\\Contracts.csproj"
+          "/Users/Nick/goldstarcode/GoldStarApiTest/Contracts/Contracts.csproj": {
+            "projectPath": "/Users/Nick/goldstarcode/GoldStarApiTest/Contracts/Contracts.csproj"
           },
-          "C:\\Users\\npeconi\\Documents\\goldstarcode\\GoldStarApiTest\\Entities\\Entities.csproj": {
-            "projectPath": "C:\\Users\\npeconi\\Documents\\goldstarcode\\GoldStarApiTest\\Entities\\Entities.csproj"
+          "/Users/Nick/goldstarcode/GoldStarApiTest/Entities/Entities.csproj": {
+            "projectPath": "/Users/Nick/goldstarcode/GoldStarApiTest/Entities/Entities.csproj"
           }
         }
       }

@@ -1,13 +1,13 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "C:\\Users\\npeconi\\Documents\\goldstarcode\\GoldStarApiTest\\Entities\\Entities.csproj",
+    "projectUniqueName": "/Users/Nick/goldstarcode/GoldStarApiTest/Entities/Entities.csproj",
     "projectName": "Entities",
-    "projectPath": "C:\\Users\\npeconi\\Documents\\goldstarcode\\GoldStarApiTest\\Entities\\Entities.csproj",
-    "outputPath": "C:\\Users\\npeconi\\Documents\\goldstarcode\\GoldStarApiTest\\Entities\\obj\\",
+    "projectPath": "/Users/Nick/goldstarcode/GoldStarApiTest/Entities/Entities.csproj",
+    "outputPath": "/Users/Nick/goldstarcode/GoldStarApiTest/Entities/obj/",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
-      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
     ],
     "originalTargetFrameworks": [
       "netcoreapp2.2"

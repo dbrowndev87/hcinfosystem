@@ -48,6 +48,7 @@ namespace GoldStarApi.Controllers
             
             try
             {
+                _logger.LogInfo($"Look STUDENT with id: {id}");   
                 var student = _repository.Student.GetStudentById(id);
  
                 if (student.Equals(null))

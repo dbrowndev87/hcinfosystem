@@ -1,0 +1,8 @@
+2019-01-18 21:06:38.6311 INFO Returned all students from database. 2
+2019-01-18 21:06:48.7676 INFO Returned Student with id: 3
+2019-01-18 21:07:50.9586 INFO current
+2019-01-18 21:07:51.0220 INFO Entities.Models.StudentInfo
+2019-01-18 21:07:51.0220 INFO current
+2019-01-18 21:07:51.0263 INFO Entities.Models.StudentInfo
+2019-01-18 21:07:51.0344 INFO Returned all students from database. 2
+2019-01-18 21:08:31.3007 INFO Returned Student with id: 3

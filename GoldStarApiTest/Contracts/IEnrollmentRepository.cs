@@ -9,8 +9,9 @@ namespace Contracts
         void DeleteEnrollment(Enrollment enrollment);
         bool Equals(object obj);
         IEnumerable<Enrollment> GetAllEnrollments();
+        IEnumerable<Enrollment> GetEnrollmentsByStudentId(int id);
         int GetHashCode();
-        Enrollment GetEnrollmentById(int enrollmentId);
+        Enrollment GetEnrollmentById(int id);
         string ToString();
         void UpdateEnrollment(Enrollment dbEnrollment, Enrollment enrollment);
     }
