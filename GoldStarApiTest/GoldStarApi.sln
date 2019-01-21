@@ -1,14 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoldStarApi", "GoldStarApi\GoldStarApi.csproj", "{F08CDA9D-3458-406D-96F6-253DE5B74A24}"
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.271
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoldStarApi", "GoldStarApi\GoldStarApi.csproj", "{F08CDA9D-3458-406D-96F6-253DE5B74A24}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "Contracts\Contracts.csproj", "{92AF5E8D-1C77-4F6C-BC0F-551B9A9484A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contracts", "Contracts\Contracts.csproj", "{92AF5E8D-1C77-4F6C-BC0F-551B9A9484A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggerService", "LoggerService\LoggerService.csproj", "{C0DC3A41-9741-4E05-8A71-2045E3491118}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoggerService", "LoggerService\LoggerService.csproj", "{C0DC3A41-9741-4E05-8A71-2045E3491118}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{3E7D2165-A76F-43D5-AEEF-26A37F2D2261}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities", "Entities\Entities.csproj", "{3E7D2165-A76F-43D5-AEEF-26A37F2D2261}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{88BFC9B6-A437-40F7-B5E9-DE712B5323EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repository", "Repository\Repository.csproj", "{88BFC9B6-A437-40F7-B5E9-DE712B5323EA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,5 +39,11 @@ Global
 		{88BFC9B6-A437-40F7-B5E9-DE712B5323EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88BFC9B6-A437-40F7-B5E9-DE712B5323EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88BFC9B6-A437-40F7-B5E9-DE712B5323EA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D4AEFFD5-1626-4291-9680-C6C160B8AD06}
 	EndGlobalSection
 EndGlobal

@@ -46,6 +46,7 @@ export class UserUpdateComponent implements OnInit {
       .subscribe(res => {
         this.user = res as User;
         this.userForm.patchValue(this.user);
+
       },
         (error) => {
           this.errorHandler.handleError(error);

@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
 import { RouterModule } from '@angular/router';
-import { NotFoundComponent } from './error-pages/not-found/not-found.component'
+import { NotFoundComponent } from './error-pages/not-found/not-found.component';
 import { EnvironmentUrlService } from './shared/services/environment-url.service';
 import { HttpClientModule } from '@angular/common/http';
 import { InternalServerComponent } from './error-pages/internal-server/internal-server.component';
@@ -24,6 +24,8 @@ import { StudentModule } from './student/student.module';
 import { AppRoutingModule } from './app-routing.module';
 import { UserLoginRoutingModule } from './userlogin/userlogin.routing';
 import { UserLoginModule } from './userlogin/userlogin.module';
+import { CourseModule } from './courses/course.module';
+import { CourseRoutingModule } from './courses/course.routing';
 
 
 
@@ -40,6 +42,7 @@ import { UserLoginModule } from './userlogin/userlogin.module';
     CommonModule,
     BrowserModule,
     HttpClientModule,
+    // Modules Start Here
     UserModule,
     UserRoutingModule,
     LoginModule,
@@ -47,8 +50,12 @@ import { UserLoginModule } from './userlogin/userlogin.module';
     StudentModule,
     UserLoginModule,
     UserLoginRoutingModule,
+    CourseModule,
+    CourseRoutingModule,
+
+    // These Must Go Last.
     RouterModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [
     EnvironmentUrlService,

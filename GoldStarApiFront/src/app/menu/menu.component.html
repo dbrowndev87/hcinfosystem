@@ -13,6 +13,8 @@
                         <li *ngIf="loggedIn && typeCode === 1"><a [routerLink]="['/student/list']" routerLinkActive="active"
                                         [routerLinkActiveOptions]="{exact: true}">Student
                                         List</a></li>
+                        <li *ngIf="loggedIn && typeCode === 1"><a [routerLink]="['/course/list']" routerLinkActive="active"
+                                        [routerLinkActiveOptions]="{exact: true}">Course List</a></li>
                         <li *ngIf="!loggedIn"><a [routerLink]="['/login']" routerLinkActive="active"
                                         [routerLinkActiveOptions]="{exact: true}">Log
                                         In</a></li>

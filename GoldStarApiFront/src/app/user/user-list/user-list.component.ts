@@ -16,10 +16,10 @@ export class UserListComponent implements OnInit {
   constructor(private repository: RepositoryService, private errorHandler: ErrorHandlerService, private router: Router) { }
 
   ngOnInit() {
-    this.getAllStudents();
+    this.getAllUsers();
   }
 
-  public getAllStudents() {
+  public getAllUsers() {
     let apiAddress = "api/user";
     this.repository.getData(apiAddress)
       .subscribe(res => {
