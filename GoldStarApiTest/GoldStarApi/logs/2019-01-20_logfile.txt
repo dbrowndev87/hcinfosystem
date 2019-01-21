@@ -1,0 +1,7 @@
+2019-01-20 09:49:03.2903 INFO Look Enrollment with id: 15
+2019-01-20 09:49:03.3109 INFO Returned Enrollment with id: 15
+2019-01-20 10:07:26.4085 INFO Returned all Enrollments from database. 7
+2019-01-20 10:07:33.7206 INFO Look Enrollment with id: 15
+2019-01-20 10:07:33.9365 ERROR Something went wrong inside GetEnrollment ById action: Object reference not set to an instance of an object.
+2019-01-20 10:09:00.0436 INFO Look Enrollment with id: 15
+2019-01-20 10:09:00.8818 INFO Returned Enrollment with id: 15

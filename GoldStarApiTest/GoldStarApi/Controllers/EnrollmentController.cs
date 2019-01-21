@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using Contracts;
 using Entities.Extensions;
@@ -13,6 +14,7 @@ namespace GoldStarApi.Controllers
     {
         private ILoggerManager _logger;
         private IRepositoryWrapper _repository;
+        private List<CourseInformation> allCourseInfo;
         
         public EnrollmentController(ILoggerManager logger, IRepositoryWrapper repository)
         {
@@ -74,6 +76,22 @@ namespace GoldStarApi.Controllers
             {
                 _logger.LogInfo($"Look Enrollment with id: {id}");   
                 var enrollments = _repository.Enrollment.GetEnrollmentsByStudentId(id);
+                allCourseInfo = new List<CourseInformation>();
+                
+                foreach (Enrollment current in enrollments)
+                {
+                    CourseInformation currentCourse = new CourseInformation();
+                    
+                    var sectionId = current.Section_Id;
+                    var currentSectionInfo = _repository.Section.GetSectionById(sectionId);
+                    
+                    currentCourse.Course_Id = currentSectionInfo.Course_id;
+                    currentCourse.Semester = currentSectionInfo.Semester;
+                    currentCourse.Designation = currentSectionInfo.Designation;
+                    
+                    allCourseInfo.Add(currentCourse);
+                    
+                }
  
                 if (enrollments.Equals(null))
                 {
@@ -83,7 +101,7 @@ namespace GoldStarApi.Controllers
                 else
                 {
                     _logger.LogInfo($"Returned Enrollment with id: {id}");
-                    return Ok(enrollments);
+                    return Ok(allCourseInfo);
                 }
             }
             catch (Exception ex)

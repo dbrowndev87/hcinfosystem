@@ -46,6 +46,7 @@
         <e p="IEntity.cs" t="Include" />
         <e p="Models" t="Include">
           <e p="Course.cs" t="Include" />
+          <e p="CourseInformation.cs" t="Include" />
           <e p="Department.cs" t="Include" />
           <e p="Enrollment.cs" t="Include" />
           <e p="Faculty.cs" t="Include" />
@@ -95,6 +96,7 @@
           <e p="2019-01-16_logfile.txt" t="Include" />
           <e p="2019-01-18_logfile.txt" t="Include" />
           <e p="2019-01-19_logfile.txt" t="Include" />
+          <e p="2019-01-20_logfile.txt" t="Include" />
         </e>
         <e p="nlog.config" t="Include" />
         <e p="obj" t="ExcludeRecursive">

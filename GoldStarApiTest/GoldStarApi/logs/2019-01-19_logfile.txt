@@ -83,3 +83,5 @@
 2019-01-19 10:25:44.1953 INFO Returned Enrollment with id: 17
 2019-01-19 10:25:49.7262 INFO Look Enrollment with id: 15
 2019-01-19 10:25:49.7270 INFO Returned Enrollment with id: 15
+2019-01-19 10:30:42.1715 INFO Look Enrollment with id: 15
+2019-01-19 10:30:42.1733 INFO Returned Enrollment with id: 15
