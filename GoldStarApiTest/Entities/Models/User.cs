@@ -28,6 +28,9 @@ namespace Entities.Models
         
         [Required(ErrorMessage = "Type Code is required")]
         public int Type_Code { get; set; }
+        
+        [Required(ErrorMessage = "Type Code is required")]
+        public int Dept_Id { get; set; }
 
         [Required(ErrorMessage = "Address is required")]
         [StringLength(140, ErrorMessage = "Address can't be longer than 140 characters")]

@@ -5,3 +5,5 @@
 2019-01-20 10:07:33.9365 ERROR Something went wrong inside GetEnrollment ById action: Object reference not set to an instance of an object.
 2019-01-20 10:09:00.0436 INFO Look Enrollment with id: 15
 2019-01-20 10:09:00.8818 INFO Returned Enrollment with id: 15
+2019-01-20 23:18:41.7067 INFO Look Enrollment with id: 15
+2019-01-20 23:18:41.7508 INFO Returned Enrollment with id: 15

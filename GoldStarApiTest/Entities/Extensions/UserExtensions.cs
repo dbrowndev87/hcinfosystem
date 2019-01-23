@@ -11,6 +11,7 @@ namespace Entities.Extensions
             dbuser.EMail = user.EMail;
             dbuser.Type_Code = user.Type_Code;
             dbuser.Address = user.Address;
+            dbuser.Dept_Id = user.Dept_Id;
             dbuser.First_Name = user.First_Name;
             dbuser.Birth_date = user.Birth_date;
             
