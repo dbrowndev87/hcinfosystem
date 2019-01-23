@@ -8,11 +8,11 @@ namespace Entities.Models
     {
       
         [Key]
-        [Required(ErrorMessage = "Username is required")]
+        [Required(ErrorMessage = "Type Code is required")]
         public int Type_Code{ get; set; }
         
-        [Required(ErrorMessage = "Password is required")]
-        [StringLength(140, ErrorMessage = "Password can't be longer than 45 characters")]
+        [Required(ErrorMessage = "User description is required")]
+        [StringLength(20, ErrorMessage = "User Description can't be longer than 20 characters")]
         public string User_Description { get; set; }
  
     }

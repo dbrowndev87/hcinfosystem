@@ -45,6 +45,7 @@ namespace GoldStarApi.Controllers
                 studentInfoObject.Birth_date = userFromDb.Birth_date;
                 studentInfoObject.Address = userFromDb.Address;
                 
+                
  
                 if (studentFromDb.Equals(null))
                 {
