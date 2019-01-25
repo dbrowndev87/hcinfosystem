@@ -1,0 +1,10 @@
+2019-01-25 15:58:51.2334 INFO Returned all students from database. 0
+2019-01-25 16:01:25.9897 INFO Returned all students from database. 0
+2019-01-25 16:01:44.1322 INFO Returned all students from database. 0
+2019-01-25 16:02:11.6907 INFO Returned all students from database. 0
+2019-01-25 16:02:23.0908 INFO Returned all students from database. System.Linq.OrderedEnumerable`2[Entities.Models.User,System.String]
+2019-01-25 16:03:28.2812 INFO Returned all students from database. 1
+2019-01-25 16:09:48.0950 INFO Look STUDENT with Userid: 1
+2019-01-25 16:09:48.8874 INFO Returned Student with id: 1
+2019-01-25 16:10:46.4168 INFO Look STUDENT with Userid: 1
+2019-01-25 16:10:47.1606 INFO Returned Student with id: 1

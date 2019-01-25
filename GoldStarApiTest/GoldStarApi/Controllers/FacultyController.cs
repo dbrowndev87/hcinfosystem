@@ -39,6 +39,43 @@ namespace GoldStarApi.Controllers
             }
         }
         
+        
+        [HttpGet("user/{id}", Name ="FacultyByUserId")]
+        public IActionResult GetFacultyByUserId(int id)
+        {
+            
+            try
+            {
+                _logger.LogInfo($"Look Faculty with Userid: {id}");
+
+                var facultys = _repository.Faculty.GetAllFaculty();
+                Faculty facultyById = new Faculty();
+                foreach (Faculty current in facultys)
+                {
+                    if (current.User_Id == id)
+                    {
+                        facultyById = current;
+                    }
+                }
+ 
+                if (facultys.Equals(null))
+                {
+                    _logger.LogError($"No students found");
+                    return NotFound();
+                }
+                else
+                {
+                    _logger.LogInfo($"Returned Student with id: {id}");
+                    return Ok(facultyById);
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Something went wrong inside GetStudentById action: {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
+        }
+        
         [HttpGet("{id}", Name ="FacultyById")]
         public IActionResult GetFacultyById(int id)
         {
