@@ -1,4 +1,12 @@
-import { Component, OnInit, ɵConsole } from '@angular/core';
+/**
+ * Name: Login Component
+ * Description: This is the Login component which has all the code and attributes
+ * which pertain to the login view, and process.
+ * 
+ * Author: Darcy Brown
+ * Date: January 24th, 2019
+ */
+import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { RepositoryService } from 'src/app/shared/services/repository.service';
 import { ErrorHandlerService } from 'src/app/shared/services/error-handler.service';
@@ -6,20 +14,22 @@ import { Router } from '@angular/router';
 import { UserLogin } from 'src/app/_interfaces/userlogin.model';
 import { Globals } from 'src/app/globals';
 import { User } from 'src/app/_interfaces/user.model';
+import { Md5 } from 'ts-md5/dist/md5';
 
 @Component({
   selector: 'app-login-component',
   templateUrl: './login-component.component.html',
   styleUrls: ['./login-component.component.css']
 })
+
 export class LoginComponent implements OnInit {
 
   public errorMessage: String = "";
   public userForm: FormGroup;
-  private loggedin = false;
   private loading = false;
   private userLogin: UserLogin;
   private user: User;
+
 
   constructor(
     private repository: RepositoryService,
@@ -60,12 +70,17 @@ export class LoginComponent implements OnInit {
   }
 
   private executeLogin(userFormValue) {
+    // Set loading and make MD5 object
     this.loading = true;
+    let md5 = new Md5();
+
+    // Get input information and hash the password.
     let username = userFormValue.username;
-    let password = userFormValue.password;
+    let password = md5.appendStr(userFormValue.password).end();
 
     // Get user Login Stuff
     let apiUrlUserLogin = 'api/userLogin/username/' + username;
+
     this.repository.getData(apiUrlUserLogin)
       .subscribe((userLogin: UserLogin) => {
 
@@ -90,6 +105,11 @@ export class LoginComponent implements OnInit {
                 sessionStorage.setItem("isLoggedIn", "true");
                 sessionStorage.setItem('typeCode', this.user.type_Code.toString());
 
+                // If they are faculty or a student store their ID
+                if (this.user.type_Code > 1) {
+                  sessionStorage.setItem('userId', this.user.user_Id.toString());
+                }
+
                 // Do a page reload to fix the menu bar.
                 this.globals.reloadPage();
               },
@@ -98,6 +118,8 @@ export class LoginComponent implements OnInit {
                   this.errorMessage = this.errorHandler.errorMessage;
                 })
               );
+
+
           } else {
             // If account is inactive
             this.loading = false;
@@ -108,6 +130,7 @@ export class LoginComponent implements OnInit {
         } else {
           this.loading = false;
           this.errorMessage = "Invalid login information.";
+          this.userLogin = null;
           $('#errorModal').modal();
         }
       },

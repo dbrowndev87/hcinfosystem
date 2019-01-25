@@ -1,7 +1,8 @@
+
 export interface Student {
-    Student_Id: number;
-    Student_Status: string;
+    student_Id: number;
+    student_Status: string;
     Gpa: number;
-    User_id: number;
-    Amount_Owing: number;
+    user_id: number;
+    amount_Owing: number;
 }

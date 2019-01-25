@@ -1,9 +1,4 @@
 <div class="container-fluid">
-  <div class="row">
-    <div class="col-md-offset-10 col-md-2">
-      <a [routerLink]="['/user/create']">Create User</a>
-    </div>
-  </div>
   <br>
   <div class="row">
     <div class="col-md-12">
@@ -18,6 +13,7 @@
               <th>Address</th>
               <th>Date of birth</th>
               <th>Type Code</th>
+              <th>Program</th>
             </tr>
           </thead>
           <tbody>
@@ -28,7 +24,12 @@
               <td>{{user.eMail}}</td>
               <td>{{user.address}}</td>
               <td>{{user.birth_date | date: 'dd/MM/yyyy'}}</td>
-              <td>{{user.type_Code}}</td>
+              <td>{{user.type_Code}}
+                <span *ngIf="user.type_Code === 1"> - Admin</span>
+                <span *ngIf="user.type_Code === 2"> - Faculty</span>
+                <span *ngIf="user.type_Code === 3"> - Student</span>
+              </td>
+              <td *ngIf="isLoaded">{{user.dept_Id}} - {{depts[(user.dept_Id - 1)].dept_Name}}</td>
               <td><button type="button" id="update" class="btn btn-success" (click)='redirectToUpdatePage(user.user_Id)'>Update</button></td>
             </tr>
           </tbody>

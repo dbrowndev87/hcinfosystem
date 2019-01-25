@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { StudentUpdateComponent } from './student-update/student-update.component';
 import { StudentRoutingModule } from './student.routing';
+import { StudentPaymentComponent } from './student-payment/student-payment.component';
 
 
 
@@ -19,7 +20,8 @@ import { StudentRoutingModule } from './student.routing';
   ],
   declarations: [
     StudentListComponent,
-    StudentUpdateComponent
+    StudentUpdateComponent,
+    StudentPaymentComponent
   ]
 })
 export class StudentModule { }

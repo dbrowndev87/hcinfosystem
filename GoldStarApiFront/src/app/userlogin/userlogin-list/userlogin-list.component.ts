@@ -1,3 +1,11 @@
+/**
+ * Name: UserLogin-List Component
+ * Description: This is the user create component which has all the code and attributes
+ * which pertain to the UserLogin List view
+ * 
+ * Author: Darcy Brown
+ * Date: January 24th, 2019
+ */
 import { Component, OnInit } from '@angular/core';
 import { UserLogin } from 'src/app/_interfaces/userlogin.model';
 import { RepositoryService } from 'src/app/shared/services/repository.service';

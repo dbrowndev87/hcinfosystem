@@ -52,7 +52,6 @@ import { CourseRoutingModule } from './courses/course.routing';
     UserLoginRoutingModule,
     CourseModule,
     CourseRoutingModule,
-
     // These Must Go Last.
     RouterModule,
     AppRoutingModule,
@@ -65,7 +64,7 @@ import { CourseRoutingModule } from './courses/course.routing';
     Globals,
     AuthGuardAdmin,
     AuthGuardFaculty,
-    AuthGuardStudent
+    AuthGuardStudent,
   ],
   bootstrap: [AppComponent],
   exports: [MenuComponent]

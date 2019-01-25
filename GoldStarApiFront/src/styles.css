@@ -17,3 +17,12 @@ em{
 .backLightGrey{
     background: #e2e2e2;
 }
+
+.homeText{
+    font-size: 35px;
+    color: red;
+    text-align: center;
+    position: relative;
+    top:30px;
+    text-shadow: 2px 2px 2px gray;
+}

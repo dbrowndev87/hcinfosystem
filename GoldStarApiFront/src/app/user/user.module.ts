@@ -1,3 +1,10 @@
+/**
+ * This is the user module which is used to link all the components
+ * and modules which are used in this user set of components.
+ * 
+ * Author: Darcy Brown
+ * Date: January 24th, 2019
+ */
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UserCreateComponent } from './user-create/user-create.component';

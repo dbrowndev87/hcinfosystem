@@ -13,6 +13,7 @@
             characters.</em>
         </div>
       </div>
+
       <div class="form-group">
         <label for="last_Name" class="control-label col-md-2">Last Name: </label>
         <div class="col-md-5">
@@ -61,12 +62,10 @@
       </div>
 
       <div class="form-group">
-        <label for="type_Code" class="control-label col-md-2">Type Code: </label>
+        <label for="dept_Id" class="control-label col-md-2">Program: </label>
         <div class="col-md-5">
-          <select #tCode name="type_Code" id="type_Code" formControlName="type_Code">
-            <option value="1" selected="selected">1 - Admin</option>
-            <option value="2">2 - Faculty</option>
-            <option value="3">3 - Student</option>
+          <select name="dept_Id" id="dept_Id" formControlName="dept_Id" #dCode>
+            <option *ngFor="let dept of depts;" value="{{dept.dept_Id}}">{{dept.dept_Id}} - {{dept.dept_Name}}</option>
           </select>
         </div>
       </div>

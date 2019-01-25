@@ -1,4 +1,12 @@
-﻿import { Injectable } from '@angular/core';
+﻿/**
+ * Name: Admin Auth Guard
+ * Description: This is the auth guard file which locks out links that only admin
+ * users can access.
+ * 
+ * Author: Darcy Brown
+ * Date: January 24th, 2019
+ */
+import { Injectable } from '@angular/core';
 import { Router, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 
 import { Globals } from 'src/app/globals';

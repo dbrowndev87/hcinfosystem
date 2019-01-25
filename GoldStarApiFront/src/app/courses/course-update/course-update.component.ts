@@ -20,7 +20,7 @@ export class CourseUpdateComponent implements OnInit {
   private depts: Department[];
   private course: Course;
   private isLoaded = false;
-  @ViewChild('dCode') dCode: ElementRef;
+  @ViewChild('dCode') private dCode: ElementRef;
 
 
   constructor(
@@ -41,7 +41,6 @@ export class CourseUpdateComponent implements OnInit {
     // get all departments.
     this.getAllDepartments();
     this.getCourseById();
-
   }
 
   // Patch course to form.
