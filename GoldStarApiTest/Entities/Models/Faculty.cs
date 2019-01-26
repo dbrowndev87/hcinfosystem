@@ -16,7 +16,7 @@ namespace Entities.Models
         public string Faculty_Status { get; set; }
         
         [Required(ErrorMessage = "User ID is required")]
-        [Range(1,6, ErrorMessage = "User id length must be between 1 and 6")]
+        [Range(1,999999, ErrorMessage = "User id length must be between 1 and 6")]
         public int User_Id { get; set; }
     }
 }

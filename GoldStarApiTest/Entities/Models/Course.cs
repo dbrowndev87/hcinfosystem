@@ -16,11 +16,11 @@ namespace Entities.Models
         public string Course_Name { get; set; }
         
         [Required(ErrorMessage = "Dept id is required")]
-        [Range(1,6, ErrorMessage = "Dept id length must be between 1 and 6")]
+        [Range(1,999999, ErrorMessage = "Dept id length must be between 1 and 6")]
         public int Dept_Id { get; set; }
         
         [Required(ErrorMessage = "Credits is required")]
-        [Range(1,99, ErrorMessage = "Credits length must be between 1 and 99")]
+        [Range(1,999999, ErrorMessage = "Credits length must be between 1 and 99")]
         public int Credits { get; set; }
     }
 }

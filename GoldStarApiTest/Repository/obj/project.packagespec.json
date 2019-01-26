@@ -1,13 +1,13 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "/Users/Nick/goldstarcode/GoldStarApiTest/Repository/Repository.csproj",
+    "projectUniqueName": "C:\\Users\\nicholaspeconi\\Documents\\2nd Year Repos\\goldstarcode\\GoldStarApiTest\\Repository\\Repository.csproj",
     "projectName": "Repository",
-    "projectPath": "/Users/Nick/goldstarcode/GoldStarApiTest/Repository/Repository.csproj",
-    "outputPath": "/Users/Nick/goldstarcode/GoldStarApiTest/Repository/obj/",
+    "projectPath": "C:\\Users\\nicholaspeconi\\Documents\\2nd Year Repos\\goldstarcode\\GoldStarApiTest\\Repository\\Repository.csproj",
+    "outputPath": "C:\\Users\\nicholaspeconi\\Documents\\2nd Year Repos\\goldstarcode\\GoldStarApiTest\\Repository\\obj\\",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
-      "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
     ],
     "originalTargetFrameworks": [
       "netcoreapp2.2"
@@ -15,11 +15,11 @@
     "frameworks": {
       "netcoreapp2.2": {
         "projectReferences": {
-          "/Users/Nick/goldstarcode/GoldStarApiTest/Contracts/Contracts.csproj": {
-            "projectPath": "/Users/Nick/goldstarcode/GoldStarApiTest/Contracts/Contracts.csproj"
+          "C:\\Users\\nicholaspeconi\\Documents\\2nd Year Repos\\goldstarcode\\GoldStarApiTest\\Contracts\\Contracts.csproj": {
+            "projectPath": "C:\\Users\\nicholaspeconi\\Documents\\2nd Year Repos\\goldstarcode\\GoldStarApiTest\\Contracts\\Contracts.csproj"
           },
-          "/Users/Nick/goldstarcode/GoldStarApiTest/Entities/Entities.csproj": {
-            "projectPath": "/Users/Nick/goldstarcode/GoldStarApiTest/Entities/Entities.csproj"
+          "C:\\Users\\nicholaspeconi\\Documents\\2nd Year Repos\\goldstarcode\\GoldStarApiTest\\Entities\\Entities.csproj": {
+            "projectPath": "C:\\Users\\nicholaspeconi\\Documents\\2nd Year Repos\\goldstarcode\\GoldStarApiTest\\Entities\\Entities.csproj"
           }
         }
       }

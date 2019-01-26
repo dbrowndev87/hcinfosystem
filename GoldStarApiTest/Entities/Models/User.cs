@@ -31,7 +31,7 @@ namespace Entities.Models
         [Range(1,9,ErrorMessage = "Type Code must be 1 and 9")]
         public int Type_Code { get; set; }
         
-        [Range(1,6,ErrorMessage = "Dept Id must be 1 and 9")]
+        [Range(1,999999,ErrorMessage = "Dept Id must be 1 and 9")]
         public int Dept_Id { get; set; }
 
         [Required(ErrorMessage = "Address is required")]

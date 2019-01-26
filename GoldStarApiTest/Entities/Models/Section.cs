@@ -13,7 +13,7 @@ namespace Entities.Models
         public int Section_Id { get; set; }
  
         [Required(ErrorMessage = "Faculty Id is required")]
-        [Range(1,6, ErrorMessage = "Faculty Id length must be between 1 and 6")]
+        [Range(1,999999, ErrorMessage = "Faculty Id length must be between 1 and 6")]
         public int Faculty_id { get; set; }
         
         [Required(ErrorMessage = "Semester is required")]
@@ -21,7 +21,7 @@ namespace Entities.Models
         public string Semester { get; set; }
         
         [Required(ErrorMessage = "Status is required")]
-        [Range(0,999, ErrorMessage = "Vacancy length must be between 0 and 1000")]
+        [Range(0,999999, ErrorMessage = "Vacancy length must be between 0 and 1000")]
         public int Vacancy { get; set; }
         
         [Required(ErrorMessage = "Course Id is required")]

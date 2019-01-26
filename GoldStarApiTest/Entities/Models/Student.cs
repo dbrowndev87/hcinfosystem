@@ -21,7 +21,7 @@ namespace Entities.Models
         public double Gpa { get; set; }
  
         [Required(ErrorMessage = "User Id is required")]
-        [Range(1,6, ErrorMessage = "User id length must be between 1 and 6")]
+        [Range(1,999999, ErrorMessage = "User id length must be between 1 and 6")]
         public int User_id { get; set; }
         
         [Required(ErrorMessage = "Status is required")]

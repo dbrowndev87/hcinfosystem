@@ -20,7 +20,7 @@ namespace Entities.Models
             public DateTime Trans_Date { get; set; }
             
             [Required(ErrorMessage = "Student Id is required")]
-            [Range(1,6, ErrorMessage = "Student Id must be between 1 and 6")]
+            [Range(1,999999, ErrorMessage = "Student Id must be between 1 and 6")]
             public int Student_Id { get; set; }
         
         

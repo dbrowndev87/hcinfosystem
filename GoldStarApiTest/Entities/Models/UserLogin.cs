@@ -17,7 +17,7 @@ namespace Entities.Models
         public string Password { get; set; }
  
         [Required(ErrorMessage = "User ID is required!")]
-        [Range(1,6,ErrorMessage = "User Id must be 1 and 6")]
+        [Range(1,999999,ErrorMessage = "User Id must be 1 and 6")]
         public int User_Id{ get; set; }
 
         [Required(ErrorMessage = "Active 0, Inactive 1")]
