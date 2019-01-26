@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 26, 2019 at 02:20 AM
+-- Generation Time: Jan 26, 2019 at 02:36 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.2.13
 
@@ -21,9 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `goldstar`
 --
-DROP DATABASE `goldstar`;
-CREATE DATABASE `goldstar`;
-USE `goldstar`;
 
 DELIMITER $$
 --
@@ -74,7 +71,7 @@ INSERT INTO `department` (`dept_id`, `dept_name`) VALUES
 --
 
 CREATE TABLE `enrollment` (
-  `enrollment_id` int(6) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `enrollment_id` int(6) NOT NULL,
   `student_id` int(6) NOT NULL,
   `section_id` int(6) NOT NULL,
   `course_status` varchar(20) NOT NULL,
@@ -88,10 +85,17 @@ CREATE TABLE `enrollment` (
 --
 
 CREATE TABLE `faculty` (
-  `faculty_id` int(6) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `faculty_id` int(6) NOT NULL,
   `faculty_status` varchar(20) NOT NULL,
   `user_id` int(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `faculty`
+--
+
+INSERT INTO `faculty` (`faculty_id`, `faculty_status`, `user_id`) VALUES
+(1, 'Full Time', 3);
 
 -- --------------------------------------------------------
 
@@ -100,8 +104,8 @@ CREATE TABLE `faculty` (
 --
 
 CREATE TABLE `section` (
-  `section_id` int(6) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-  `faculty_id` int(6) NOT NULL, 
+  `section_id` int(6) NOT NULL,
+  `faculty_id` int(6) NOT NULL,
   `start_date` date NOT NULL,
   `end_date` date NOT NULL,
   `designation` char(1) NOT NULL,
@@ -124,6 +128,13 @@ CREATE TABLE `student` (
   `amount_owing` double(8,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `student`
+--
+
+INSERT INTO `student` (`student_id`, `student_status`, `gpa`, `user_id`, `amount_owing`) VALUES
+(193820, 'Enrolled', 0.00, 2, 10000.00);
+
 -- --------------------------------------------------------
 
 --
@@ -143,7 +154,6 @@ CREATE TABLE `transaction` (
 DELIMITER $$
 CREATE TRIGGER `update_amount_owing` AFTER INSERT ON `transaction` FOR EACH ROW UPDATE student
 SET student.amount_owing = student.amount_owing - new.trans_amount
-WHERE student.student_id = new.student_id
 $$
 DELIMITER ;
 
@@ -154,7 +164,7 @@ DELIMITER ;
 --
 
 CREATE TABLE `user` (
-  `user_id` int(6) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `user_id` int(6) NOT NULL,
   `first_name` varchar(30) NOT NULL,
   `last_name` varchar(30) NOT NULL,
   `email` varchar(50) NOT NULL,
@@ -195,7 +205,9 @@ CREATE TABLE `user_login` (
 INSERT INTO `user_login` (`username`, `password`, `active`, `user_id`) VALUES
 ('dbrown32066', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 1),
 ('kmerchison', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 5),
-('npeconi', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 4);
+('npeconi', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 4),
+('testfaculty', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 3),
+('teststudent', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 2);
 
 -- --------------------------------------------------------
 
@@ -238,6 +250,7 @@ ALTER TABLE `department`
 -- Indexes for table `enrollment`
 --
 ALTER TABLE `enrollment`
+  ADD PRIMARY KEY (`enrollment_id`),
   ADD KEY `student_id` (`student_id`),
   ADD KEY `section_id` (`section_id`);
 
@@ -245,12 +258,14 @@ ALTER TABLE `enrollment`
 -- Indexes for table `faculty`
 --
 ALTER TABLE `faculty`
+  ADD PRIMARY KEY (`faculty_id`),
   ADD KEY `user_id` (`user_id`);
 
 --
 -- Indexes for table `section`
 --
 ALTER TABLE `section`
+  ADD PRIMARY KEY (`section_id`),
   ADD KEY `faculty_id` (`faculty_id`),
   ADD KEY `course_id` (`course_id`);
 
@@ -272,6 +287,7 @@ ALTER TABLE `transaction`
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
+  ADD PRIMARY KEY (`user_id`),
   ADD KEY `type_code` (`type_code`),
   ADD KEY `dept_id` (`dept_id`);
 
@@ -297,6 +313,24 @@ ALTER TABLE `user_type_code`
 --
 ALTER TABLE `enrollment`
   MODIFY `enrollment_id` int(6) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `faculty`
+--
+ALTER TABLE `faculty`
+  MODIFY `faculty_id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `section`
+--
+ALTER TABLE `section`
+  MODIFY `section_id` int(6) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `user_id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Constraints for dumped tables
