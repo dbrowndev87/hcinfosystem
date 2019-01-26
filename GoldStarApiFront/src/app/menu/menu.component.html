@@ -26,15 +26,15 @@
                                 </ul>
                         </li>
                         <li *ngIf="loggedIn && typeCode === 1"><a [routerLink]="['/student/list']" routerLinkActive="active"
-                                        [routerLinkActiveOptions]="{exact: true}">Student
-                                        List</a></li>
+                                        [routerLinkActiveOptions]="{exact: true}">Student List</a></li>
+
                         <li *ngIf="loggedIn && typeCode === 1"><a [routerLink]="['/course/list']" routerLinkActive="active"
                                         [routerLinkActiveOptions]="{exact: true}">Course List</a></li>
 
                         <!-- Student Links -->
-                        <li *ngIf="loggedIn && typeCode === 3"><a [routerLink]="['/student/payment/'+{{userId}}]"
+                        <li *ngIf="loggedIn && typeCode === 3"><a [routerLink]="['/student/payment/'+userId]"
                                         routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Student
-                                        List</a></li>
+                                        Payment</a></li>
 
                         <li *ngIf="!loggedIn"><a [routerLink]="['/login']" routerLinkActive="active"
                                         [routerLinkActiveOptions]="{exact: true}">Log

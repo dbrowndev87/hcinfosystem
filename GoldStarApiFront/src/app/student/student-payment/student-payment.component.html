@@ -1,14 +1,28 @@
 <div class="container-fluid">
-  <form [formGroup]="studentPaymentForm" autocomplete="off" novalidate (ngSubmit)="updatePayment(studentPaymentForm.value)">
+  <div class="centerDiv" *ngIf="!isLoaded">
+    <img src="../../../assets/loading.gif" class="center-block imgLoading" />
+  </div>
+  <div *ngIf="isLoaded">
+    <h2>{{studentInfo.first_Name}} {{studentInfo.last_Name}}</h2>
+    <h5>Student ID: {{studentInfo.studentId}}</h5>
+    <h5>Student Status: {{studentInfo.student_Status}}</h5>
+    <h5>Amount Owing:
+      <span *ngIf="studentInfo.amount_Owing > 0">{{student.amount_Owing | currency}}</span>
+      <span *ngIf="student.amount_Owing === 0">Payed In Full</span>
+    </h5>
+  </div>
+  <br>
+  <form *ngIf="isLoaded && studentInfo.amount_Owing > 0" [formGroup]="studentPaymentForm" autocomplete="off" novalidate
+    (ngSubmit)="makePayment(studentPaymentForm.value)">
     <div class="form-horizontal well">
 
       <div class="form-group">
-        <label for="amount" class="control-label col-md-2">Ammount $: </label>
+        <label for="amount" class="control-label col-md-2">Payment Amount: </label>
         <div class="col-md-5">
-          <input type="text" formControlName="amount" id="amount" class="form-control" />
+          <input type="number" formControlName="amount" id="amount" class="form-control" />
         </div>
         <div class="col-md-5">
-          <em *ngIf="validateControl('amount') && hasError('amount', 'required')">Name is required</em>
+          <em *ngIf="validateControl('amount') && hasError('amount', 'required')">Amount is required</em>
           <em *ngIf="validateControl('amount') && hasError('amount', 'maxlength')">Maximum allowed length is 60
             characters.</em>
         </div>
@@ -17,8 +31,8 @@
       <br><br>
 
       <div class="form-group">
-        <div class="col-md-offset-5 col-md-1">
-          <button type="submit" class="btn btn-info" [disabled]="!userForm.valid">Save</button>
+        <div class="col-md-offset-1 col-md-1">
+          <button type="submit" class="btn btn-info" [disabled]="!studentPaymentForm.valid">Save</button>
         </div>
         <div class="col-md-1">
           <button type="button" class="btn btn-danger" (click)="redirectToHome()">Cancel</button>
@@ -29,7 +43,7 @@
   </form>
 
   <app-success-modal [modalHeaderText]="'Success message'" [modalBodyText]="'Payment completed successfully'"
-    [okButtonText]="'OK'" (redirectOnOK)="updatePaymentInformation()"></app-success-modal>
+    [okButtonText]="'OK'" (redirectOnOK)="updateViewInformation(studentInfo.studentId)"></app-success-modal>
 
   <app-error-modal [modalHeaderText]="'Error message'" [modalBodyText]="errorMessage" [okButtonText]="'OK'"></app-error-modal>
 

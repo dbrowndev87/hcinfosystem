@@ -3,8 +3,6 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { RepositoryService } from 'src/app/shared/services/repository.service';
 import { ErrorHandlerService } from 'src/app/shared/services/error-handler.service';
 import { Router } from '@angular/router';
-import { RandomUserPassGen } from 'src/app/shared/tools/rupg';
-import { StudentIdGenerator } from 'src/app/shared/tools/sidg';
 import { Course } from 'src/app/_interfaces/course.model';
 import { Department } from 'src/app/_interfaces/department.model';
 

@@ -152,7 +152,7 @@ export class UserCreateComponent implements OnInit {
   private executeUserCreation(userFormValue) {
     // Get the NExt ID
     this.userId = (this.userId + 1);
-    let deptId;
+
 
     // Make a user interface.
     let user: User = {
@@ -163,8 +163,9 @@ export class UserCreateComponent implements OnInit {
       type_Code: this.userType,
       eMail: userFormValue.eMail,
       user_Id: this.userId,
-      dept_Id: deptId
+      dept_Id: userFormValue.dept_Id
     };
+
 
     // Create user
     let apiUrl = 'api/user';
@@ -265,12 +266,13 @@ export class UserCreateComponent implements OnInit {
 
     // Generate Student login info
     let student: Student = {
-      Student_Id: studentId,
-      Student_Status: "Enrolled",
-      User_id: user.user_Id,
-      Amount_Owing: 0.0,
-      Gpa: 0.0
+      student_Id: studentId,
+      student_Status: "Enrolled",
+      user_id: user.user_Id,
+      amount_Owing: 0.0,
+      gpa: 0.0
     };
+
 
     // Create User Login
     let apiUrlStudent = 'api/student';

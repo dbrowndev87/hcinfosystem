@@ -26,3 +26,7 @@ em{
     top:30px;
     text-shadow: 2px 2px 2px gray;
 }
+
+.imgLoading{
+    width: 100px;
+}

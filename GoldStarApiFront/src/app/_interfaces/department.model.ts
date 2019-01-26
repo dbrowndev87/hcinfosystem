@@ -3,7 +3,7 @@
  * which pertain to a department object.
  * 
  * Author: Darcy Brown
- * Date: Jan 24th, 2018
+ * Date: Jan 24th, 2019
  */
 export interface Department {
     dept_Id: number;
