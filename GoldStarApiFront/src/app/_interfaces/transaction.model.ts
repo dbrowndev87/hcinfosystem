@@ -6,6 +6,7 @@
  * Date: Jan 25th, 2019
  */
 export interface Transaction {
+    trans_Id: number;
     trans_Amount: number;
     trans_Date: Date;
     student_Id: number;

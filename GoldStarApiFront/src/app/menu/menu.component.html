@@ -32,8 +32,8 @@
                                         [routerLinkActiveOptions]="{exact: true}">Course List</a></li>
 
                         <!-- Student Links -->
-                        <li *ngIf="loggedIn && typeCode === 3"><a [routerLink]="['/student/payment/'+userId]"
-                                        routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Student
+                        <li *ngIf="loggedIn && typeCode === 3"><a [routerLink]="['/student/payment']" routerLinkActive="active"
+                                        [routerLinkActiveOptions]="{exact: true}">Student
                                         Payment</a></li>
 
                         <li *ngIf="!loggedIn"><a [routerLink]="['/login']" routerLinkActive="active"

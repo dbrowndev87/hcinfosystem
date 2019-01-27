@@ -26,8 +26,14 @@ export class LogoutComponent implements OnInit {
       sessionStorage.removeItem('isLoggedIn');
       sessionStorage.removeItem('typeCode');
 
-      // If there is a user ID remove it.
-      if ((sessionStorage.getItem('userId'))) {
+      // If there is a Type of ID stored remove it.
+      if (sessionStorage.getItem('studentId')) {
+        sessionStorage.removeItem('studentId');
+
+      } else if (sessionStorage.getItem('facultyId')) {
+        sessionStorage.removeItem('facultyId');
+
+      } else if (sessionStorage.getItem('userId')) {
         sessionStorage.removeItem('userId');
       }
 

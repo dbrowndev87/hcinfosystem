@@ -20,7 +20,7 @@
         <label for="dept_Id" class="control-label col-md-2">Department ID: </label>
         <div class="col-md-5">
           <select name="dept_Id" id="dept_Id" formControlName="dept_Id" #dCode>
-            <option *ngFor="let dept of depts" value="{{dept.dept_Id}}">{{dept.dept_Id}} - {{dept.dept_Name}}</option>
+            <option *ngFor="let dept of depts" value="{{dept.dept_Id}}">{{dept.dept_Name}}</option>
           </select>
         </div>
         <div class="col-md-5">

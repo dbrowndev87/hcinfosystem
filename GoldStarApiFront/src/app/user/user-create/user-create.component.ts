@@ -8,7 +8,7 @@
  */
 
 import { User } from '../../_interfaces/user.model';
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ErrorHandlerService } from './../../shared/services/error-handler.service';
 import { RepositoryService } from './../../shared/services/repository.service';
@@ -21,6 +21,7 @@ import { Department } from 'src/app/_interfaces/department.model';
 import { Md5 } from 'ts-md5/dist/md5';
 import { Globals } from 'src/app/globals';
 import { Faculty } from 'src/app/_interfaces/faculty.model';
+import { Subscription } from 'rxjs';
 
 
 @Component({
@@ -58,15 +59,8 @@ export class UserCreateComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.userForm = new FormGroup({
-      first_Name: new FormControl('', [Validators.required, Validators.maxLength(50)]),
-      last_Name: new FormControl('', [Validators.required, Validators.maxLength(50)]),
-      address: new FormControl('', [Validators.required, Validators.maxLength(140)]),
-      birth_date: new FormControl('', [Validators.required]),
-      eMail: new FormControl('', [Validators.required, Validators.maxLength(50)]),
-      // type_Code: new FormControl('', [Validators.required, Validators.maxLength(20)]),
-      dept_Id: new FormControl('', Validators.required),
-    });
+    // Declare which form to use
+    this.declareFormType();
 
     // Get the next user ID.
     let apiAddress = "api/user/0";
@@ -77,10 +71,10 @@ export class UserCreateComponent implements OnInit {
       // tslint:disable-next-line: no-unused-expression
       (error) => {
         this.errorHandler.handleError(error);
-        this.errorMessage = this.errorHandler.errorMessage;
+        this.errorMessage = "Unable to access API";
       };
 
-    // het the departments
+    // get the departments
     this.getAllDepartments();
   }
 
@@ -99,7 +93,7 @@ export class UserCreateComponent implements OnInit {
 
         if (this.userType > 1 && this.userType <= 3) {
           for (let x = 0; x < this.depts.length; x++) {
-            if (this.depts[x].dept_Name === "Administrator") {
+            if (this.depts[x].dept_Name === "Administration") {
               this.depts.splice(x, 1);
             }
           }
@@ -110,7 +104,7 @@ export class UserCreateComponent implements OnInit {
       // tslint:disable-next-line: no-unused-expression
       (error) => {
         this.errorHandler.handleError(error);
-        this.errorMessage = this.errorHandler.errorMessage;
+        this.errorMessage = "Unable to access API";
       };
   }
 
@@ -150,9 +144,18 @@ export class UserCreateComponent implements OnInit {
    * @param userFormValue 
    */
   private executeUserCreation(userFormValue) {
-    // Get the NExt ID
-    this.userId = (this.userId + 1);
 
+    // Increment the ID
+    this.userId = (this.userId + 1);
+    // set up user information
+    let deptId: number;
+
+    // Department ID Based on user type.
+    if (this.userType === 1) {
+      deptId = 1;
+    } else {
+      deptId = userFormValue.dept_Id;
+    }
 
     // Make a user interface.
     let user: User = {
@@ -163,7 +166,7 @@ export class UserCreateComponent implements OnInit {
       type_Code: this.userType,
       eMail: userFormValue.eMail,
       user_Id: this.userId,
-      dept_Id: userFormValue.dept_Id
+      dept_Id: deptId
     };
 
 
@@ -172,15 +175,15 @@ export class UserCreateComponent implements OnInit {
     this.repository.create(apiUrl, user)
       .subscribe(res => {
 
-        // Generate User Login
-        this.generateUserLogin(user);
+        // Start the userLogin process.
+        this.getValidUsername(user);
 
         if (this.userType === 3) {
-          // Generate Student Table
-          this.generateStudent(user);
+          // Start Student Process
+          this.getValidStudentID(user);
 
         } else if (this.userType === 2) {
-          // Generate faculty table.
+          // Start Faculty Process
           this.generateFaculty(user);
 
         }
@@ -201,10 +204,112 @@ export class UserCreateComponent implements OnInit {
         // User create error
         (error => {
           this.errorHandler.handleError(error);
-          this.errorMessage = this.errorHandler.errorMessage;
+          this.errorMessage = "Unable to access API";
         })
       );
   }
+
+  /**
+ * This is a loop method which generates a Username and makes sure it does not
+ * exist in the Database before using it.
+ * 
+ * Author: Darcy Brown
+ * Date: January 27th, 2019
+ */
+  private getValidUsername(user: User) {
+
+    // declare id and subsrciption
+    let subscription: Subscription;
+    let tempUsername: string;
+
+    // Delcare a loop function
+    let loop = (username: string) => {
+
+      // Get a subsctiption to the API
+      let apiAddress = "api/userlogin/";
+      subscription = this.repository.getData(apiAddress + username)
+        .subscribe(res => {
+
+          // Assign Temporary Trasnaction
+          let userLogin = res as UserLogin;
+
+          // Check the transaction returning from API
+          if (userLogin.user_Id === 0) {
+
+            // If the transaction returns a 0 id value.
+            tempUsername = username;
+            // Unsubscribe to clear memory
+            subscription.unsubscribe();
+
+            // Execute the rest of the student creation
+            this.generateUserLogin(username);
+
+          } else {
+            // If the student comes back populated
+            // re-loop
+            loop(this.rupg.generateUser(user.first_Name, user.last_Name));
+          }
+        });
+      // tslint:disable-next-line: no-unused-expression
+      (error) => {
+        this.errorHandler.handleError(error);
+        this.errorMessage = "Unable to access API";
+      };
+    };
+  }
+
+  /**
+  * This is a loop method which geenrates a Student ID and makes sure it does not
+  * exist in the Database before using it.
+  * 
+  * Author: Darcy Brown
+  * Date: January 27th, 2019
+  */
+  private getValidStudentID(user: User) {
+
+    // declare id and subsrciption
+    let subscription: Subscription;
+    let studentId: number;
+
+    // Delcare a loop function
+    let loop = (student_Id: number) => {
+
+      // Get a subsctiption to the API
+      let apiAddress = "api/student/";
+      subscription = this.repository.getData(apiAddress + student_Id)
+        .subscribe(res => {
+
+          // Assign Temporary Trasnaction
+          let tempStudent = res as Student;
+
+          // Check the transaction returning from API
+          if (tempStudent.student_Id === 0) {
+
+            // If the transaction returns a 0 id value.
+            studentId = student_Id;
+            // Unsubscribe to clear memory
+            subscription.unsubscribe();
+
+            // Execute the rest of the student creation
+            this.generateStudent(user, studentId);
+
+          } else {
+            // If the student comes back populated
+            // re-loop
+            loop(this.sidg.generateId());
+          }
+        });
+      // tslint:disable-next-line: no-unused-expression
+      (error) => {
+        this.errorHandler.handleError(error);
+        this.errorMessage = "Unable to access API";
+      };
+    };
+
+    // Start the initial loop.
+    loop(this.sidg.generateId());
+  }
+
 
   // Redicrect to User List.
   public redirectToUserList() {
@@ -219,15 +324,12 @@ export class UserCreateComponent implements OnInit {
    * Date: January 24th
    * @param user 
    */
-  private generateUserLogin(user: User) {
+  private generateUserLogin(username: string) {
 
-    // Generate a user and password
-    let username: string = this.rupg.generateUser(user.first_Name, user.last_Name);
     let password = this.md5.appendStr('password').end();
-    // this.rupg.generatePass();
+    // this.rupg.generatePass(); Password Generator implementation.
 
     // Generate user login info
-
     let userLogin: UserLogin = {
       username: username,
       password: password.toString(),
@@ -245,7 +347,7 @@ export class UserCreateComponent implements OnInit {
         // UserLogin create error
         (error => {
           this.errorHandler.handleError(error);
-          this.errorMessage = this.errorHandler.errorMessage;
+          this.errorMessage = "Unable to access API";
         })
       );
 
@@ -259,10 +361,7 @@ export class UserCreateComponent implements OnInit {
   * Date: January 24th
   * @param user 
   */
-  private generateStudent(user: User) {
-
-    // generate a student ID.
-    let studentId: number = this.sidg.generateId();
+  private generateStudent(user: User, studentId: number) {
 
     // Generate Student login info
     let student: Student = {
@@ -273,6 +372,7 @@ export class UserCreateComponent implements OnInit {
       gpa: 0.0
     };
 
+    console.log(student);
 
     // Create User Login
     let apiUrlStudent = 'api/student';
@@ -284,7 +384,7 @@ export class UserCreateComponent implements OnInit {
         // UserLogin create error
         (error => {
           this.errorHandler.handleError(error);
-          this.errorMessage = this.errorHandler.errorMessage;
+          this.errorMessage = "Unable to access API";
         })
       );
 
@@ -317,8 +417,39 @@ export class UserCreateComponent implements OnInit {
         // UserLogin create error
         (error => {
           this.errorHandler.handleError(error);
-          this.errorMessage = this.errorHandler.errorMessage;
+          this.errorMessage = "Unable to access API";
         })
       );
+  }
+
+  /**
+   * This is seperate form formats one for student and faculty which
+   * has the dropdown with requirements validators and then the one with
+   * no dropdown and validators for admin
+   * 
+   * Author: Darcy Brown
+   * Date: January 25th, 2019
+   */
+  declareFormType() {
+    // Admin form (No department ID selection)
+    if (this.userType === 1) {
+      this.userForm = new FormGroup({
+        first_Name: new FormControl('', [Validators.required, Validators.maxLength(50)]),
+        last_Name: new FormControl('', [Validators.required, Validators.maxLength(50)]),
+        address: new FormControl('', [Validators.required, Validators.maxLength(140)]),
+        birth_date: new FormControl('', [Validators.required]),
+        eMail: new FormControl('', [Validators.required, Validators.maxLength(50)]),
+      });
+    } else {
+      // Student and Faculty form
+      this.userForm = new FormGroup({
+        first_Name: new FormControl('', [Validators.required, Validators.maxLength(50)]),
+        last_Name: new FormControl('', [Validators.required, Validators.maxLength(50)]),
+        address: new FormControl('', [Validators.required, Validators.maxLength(140)]),
+        birth_date: new FormControl('', [Validators.required]),
+        eMail: new FormControl('', [Validators.required, Validators.maxLength(50)]),
+        dept_Id: new FormControl('', Validators.required),
+      });
+    }
   }
 }

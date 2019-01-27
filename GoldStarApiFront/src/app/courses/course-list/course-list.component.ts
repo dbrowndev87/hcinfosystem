@@ -35,7 +35,7 @@ export class CourseListComponent implements OnInit {
       // tslint:disable-next-line: no-unused-expression
       (error) => {
         this.errorHandler.handleError(error);
-        this.errorMessage = this.errorHandler.errorMessage;
+        this.errorMessage = "Unable to access API";
       };
   }
 
@@ -48,7 +48,7 @@ export class CourseListComponent implements OnInit {
       // tslint:disable-next-line: no-unused-expression
       (error) => {
         this.errorHandler.handleError(error);
-        this.errorMessage = this.errorHandler.errorMessage;
+        this.errorMessage = "Unable to access API";
       };
   }
 

@@ -8,7 +8,7 @@ import { StudentPaymentComponent } from './student-payment/student-payment.compo
 const routes: Routes = [
     { path: 'student/list', component: StudentListComponent, canActivate: [AuthGuardAdmin] },
     { path: 'student/update/:id', component: StudentUpdateComponent, canActivate: [AuthGuardAdmin] },
-    { path: 'student/payment/:id', component: StudentPaymentComponent, canActivate: [AuthGuardStudent] }
+    { path: 'student/payment', component: StudentPaymentComponent, canActivate: [AuthGuardStudent] }
 ];
 
 @NgModule({

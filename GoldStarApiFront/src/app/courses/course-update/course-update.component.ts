@@ -5,6 +5,7 @@ import { RepositoryService } from 'src/app/shared/services/repository.service';
 import { ErrorHandlerService } from 'src/app/shared/services/error-handler.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Course } from 'src/app/_interfaces/course.model';
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 
 
 @Component({
@@ -19,6 +20,7 @@ export class CourseUpdateComponent implements OnInit {
   public courseForm: FormGroup;
   private depts: Department[];
   private course: Course;
+  private userType: number;
   private isLoaded = false;
   @ViewChild('dCode') private dCode: ElementRef;
 
@@ -38,6 +40,7 @@ export class CourseUpdateComponent implements OnInit {
       credits: new FormControl('', [Validators.required, Validators.minLength(1), Validators.maxLength(1)]),
     });
 
+    this.userType = parseInt(sessionStorage.getItem('typeCode'), 0);
     // get all departments.
     this.getAllDepartments();
     this.getCourseById();
@@ -65,7 +68,7 @@ export class CourseUpdateComponent implements OnInit {
       },
         (error) => {
           this.errorHandler.handleError(error);
-          this.errorMessage = this.errorHandler.errorMessage;
+          this.errorMessage = "Unable to access API";
         });
   }
 
@@ -75,11 +78,16 @@ export class CourseUpdateComponent implements OnInit {
     this.repository.getData(apiAddress)
       .subscribe(res => {
         this.depts = res as Department[];
+        for (let x = 0; x < this.depts.length; x++) {
+          if (this.depts[x].dept_Name === "Administration") {
+            this.depts.splice(x, 1);
+          }
+        }
       }),
       // tslint:disable-next-line: no-unused-expression
       (error) => {
         this.errorHandler.handleError(error);
-        this.errorMessage = this.errorHandler.errorMessage;
+        this.errorMessage = "Unable to access API";
       };
   }
 
@@ -119,7 +127,7 @@ export class CourseUpdateComponent implements OnInit {
       },
         (error => {
           this.errorHandler.handleError(error);
-          this.errorMessage = this.errorHandler.errorMessage;
+          this.errorMessage = "Unable to access API";
         })
       );
   }

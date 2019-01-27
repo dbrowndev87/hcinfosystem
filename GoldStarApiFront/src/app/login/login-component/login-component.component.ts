@@ -15,6 +15,9 @@ import { UserLogin } from 'src/app/_interfaces/userlogin.model';
 import { Globals } from 'src/app/globals';
 import { User } from 'src/app/_interfaces/user.model';
 import { Md5 } from 'ts-md5/dist/md5';
+import { Student } from 'src/app/_interfaces/student.model';
+import { Subscription } from 'rxjs';
+import { Faculty } from 'src/app/_interfaces/faculty.model';
 
 @Component({
   selector: 'app-login-component',
@@ -101,25 +104,28 @@ export class LoginComponent implements OnInit {
                 // get user inform and set the typecode
                 this.user = user as User;
 
+
+                // Depending on the type code perform actions.
+                if (this.user.type_Code === 2) {
+                  this.getFacultyId();
+                } else if (this.user.type_Code === 3) {
+                  this.getStudentId();
+                } else {
+                  sessionStorage.setItem('userId', this.user.user_Id.toString());
+                  this.reload();
+                }
+
                 // If everyting passes set sessions
                 sessionStorage.setItem("isLoggedIn", "true");
                 sessionStorage.setItem('typeCode', this.user.type_Code.toString());
 
-                // If they are faculty or a student store their ID
-                if (this.user.type_Code > 1) {
-                  sessionStorage.setItem('userId', this.user.user_Id.toString());
-                }
-
-                // Do a page reload to fix the menu bar.
-                this.globals.reloadPage();
               },
                 (error => {
                   this.errorHandler.handleError(error);
-                  this.errorMessage = this.errorHandler.errorMessage;
+                  this.errorMessage = "Unable to access API";
+                  this.loading = false;
                 })
               );
-
-
           } else {
             // If account is inactive
             this.loading = false;
@@ -137,13 +143,59 @@ export class LoginComponent implements OnInit {
         // GetData error.
         (error => {
           this.errorHandler.handleError(error);
-          this.errorMessage = this.errorHandler.errorMessage;
+          this.loading = false;
+          this.errorMessage = "Unable to access API";
         })
       );
   }
 
   public redirectToHome() {
     this.router.navigate(['/home']);
+  }
+
+  private getStudentId() {
+    // Assign subscription
+    let subscription: Subscription;
+    let apiAddress = "api/student/user/";
+
+    // Get Student ID with the user ID and store it.
+    subscription = this.repository.getData(apiAddress + this.user.user_Id)
+      .subscribe(res => {
+        let student = res as Student;
+        sessionStorage.setItem('studentId', student.student_Id.toString());
+        subscription.unsubscribe();
+        this.reload();
+      }),
+      // tslint:disable-next-line: no-unused-expression
+      (error) => {
+        this.errorHandler.handleError(error);
+        this.errorMessage = this.errorHandler.errorMessage;
+      };
+  }
+
+  private getFacultyId() {
+
+    // Assign subscription
+    let subscription: Subscription;
+    let apiAddress = "api/faculty/user/";
+
+    // Get Student ID with the user ID and store it.
+    subscription = this.repository.getData(apiAddress + this.user.user_Id)
+      .subscribe(res => {
+        let faculty = res as Faculty;
+        sessionStorage.setItem('facultyId', faculty.faculty_Id.toString());
+        subscription.unsubscribe();
+        this.reload();
+      }),
+      // tslint:disable-next-line: no-unused-expression
+      (error) => {
+        this.errorHandler.handleError(error);
+        this.errorMessage = this.errorHandler.errorMessage;
+      };
+  }
+
+  private reload() {
+    this.globals.reloadPage();
   }
 
 }

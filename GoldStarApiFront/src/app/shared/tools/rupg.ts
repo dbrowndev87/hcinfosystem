@@ -10,6 +10,9 @@ import { RepositoryService } from '../services/repository.service';
  * I wrote this random Password and Username generator so we cna assign a username and password
  * upon student/faculty creation in the system allowing us to easier link the account to the
  * user information
+ * 
+ * Author: Darcy Brown
+ * Date: January 25th, 2019
  */
 
 @Injectable()

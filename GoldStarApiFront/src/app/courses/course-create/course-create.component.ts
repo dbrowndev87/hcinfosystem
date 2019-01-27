@@ -14,6 +14,7 @@ import { Department } from 'src/app/_interfaces/department.model';
 export class CourseCreateComponent implements OnInit {
 
   public errorMessage = "";
+  private userType: number;
   public courseForm: FormGroup;
   private depts: Department[];
   @ViewChild('dCode') dCode: ElementRef;
@@ -33,6 +34,7 @@ export class CourseCreateComponent implements OnInit {
       credits: new FormControl('', [Validators.required, Validators.minLength(1), Validators.maxLength(1)]),
     });
 
+    this.userType = parseInt(sessionStorage.getItem('typeCode'), 0);
     // get all departments.
     this.getAllDepartments();
 
@@ -43,11 +45,16 @@ export class CourseCreateComponent implements OnInit {
     this.repository.getData(apiAddress)
       .subscribe(res => {
         this.depts = res as Department[];
+        for (let x = 0; x < this.depts.length; x++) {
+          if (this.depts[x].dept_Name === "Administration") {
+            this.depts.splice(x, 1);
+          }
+        }
       }),
       // tslint:disable-next-line: no-unused-expression
       (error) => {
         this.errorHandler.handleError(error);
-        this.errorMessage = this.errorHandler.errorMessage;
+        this.errorMessage = "Unable to access API";
       };
   }
 
@@ -91,13 +98,13 @@ export class CourseCreateComponent implements OnInit {
         // User create error
         (error => {
           this.errorHandler.handleError(error);
-          this.errorMessage = this.errorHandler.errorMessage;
+          this.errorMessage = "Unable to access API";
         })
       );
   }
 
-  public redirectToUserList() {
-    this.router.navigate(['/courses/list']);
+  public redirectToCourseList() {
+    this.router.navigate(['/course/list']);
   }
 
 }

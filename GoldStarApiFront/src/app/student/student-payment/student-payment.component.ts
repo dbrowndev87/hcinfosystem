@@ -14,6 +14,9 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Student } from 'src/app/_interfaces/student.model';
 import { StudentInfo } from 'src/app/_interfaces/studentInfo.model';
 import { Transaction } from 'src/app/_interfaces/transaction.model';
+import { TransactionIdGenerator } from 'src/app/shared/tools/tidg';
+import { Observable, Subscription, generate } from 'rxjs';
+import { CompileTemplateMetadata } from '@angular/compiler';
 
 @Component({
   selector: 'app-student-payment',
@@ -27,13 +30,14 @@ export class StudentPaymentComponent implements OnInit {
   public studentInfo: StudentInfo;
   public student: Student;
   public studentPaymentForm: FormGroup;
+  private transId: number;
   private isLoaded = false;
 
   constructor(
     private repository: RepositoryService,
     private router: Router,
     private errorHandler: ErrorHandlerService,
-    private activeRoute: ActivatedRoute
+    private tidg: TransactionIdGenerator
   ) { }
 
   ngOnInit() {
@@ -41,23 +45,21 @@ export class StudentPaymentComponent implements OnInit {
       amount: new FormControl('', [Validators.required, Validators.minLength(1)]),
     });
 
+    this.transId = this.tidg.generateId();
     // This is gets the students information and student
     // table object.
     this.getStudent();
-    console.log(this.formatDate());
-
   }
 
   /**
-   * This method gets the Student table info by User id
-   * 
-   * Author: Darcy Brown
-   * Date: January 25th, 2019
-   */
+     * This method gets the Student table info by User id
+     * 
+     * Author: Darcy Brown
+     * Date: January 25th, 2019
+     */
   private getStudent() {
-    let id: string = this.activeRoute.snapshot.params['id'];
-    let apiAddress = "api/student/user/";
-    this.repository.getData(apiAddress + parseInt(sessionStorage.getItem('userId'), 0))
+    let apiAddress = "api/student/";
+    this.repository.getData(apiAddress + parseInt(sessionStorage.getItem('studentId'), 0))
       .subscribe(student => {
 
         // get student table info
@@ -68,31 +70,32 @@ export class StudentPaymentComponent implements OnInit {
       },
         (error) => {
           this.errorHandler.handleError(error);
-          this.errorMessage = this.errorHandler.errorMessage;
+          this.errorMessage = "Unable to access API";
+          this.isLoaded = true;
         });
   }
 
   /**
-   * This method gets student information pack and puts then into the
-   * for display in view.
-   * 
-   * Author: Darcy Brown
-   * Date: January 25th, 2019
-   */
+     * This method gets student information pack and puts then into the
+     * for display in view.
+     * 
+     * Author: Darcy Brown
+     * Date: January 25th, 2019
+     */
   public getStudentInfo(studentId: number) {
     let apiAddress = "api/studentinfo/";
     this.repository.getData(apiAddress + studentId)
       .subscribe(res => {
 
         this.studentInfo = res as StudentInfo;
-
         // set laoded to true
         this.isLoaded = true;
       }),
       // tslint:disable-next-line: no-unused-expression
       (error) => {
         this.errorHandler.handleError(error);
-        this.errorMessage = this.errorHandler.errorMessage;
+        this.errorMessage = "Unable to access API";
+        this.isLoaded = true;
       };
   }
 
@@ -122,13 +125,13 @@ export class StudentPaymentComponent implements OnInit {
   }
 
   /**
-   * This is the payment ammound validation method that is accomplished
-   * when checking if the form is valid.
-   * 
-   * Author: Darcy Brown
-   * Date: January 25th, 2019
-   * @param studentPaymentFormValue 
-   */
+     * This is the payment ammound validation method that is accomplished
+     * when checking if the form is valid.
+     * 
+     * Author: Darcy Brown
+     * Date: January 25th, 2019
+     * @param studentPaymentFormValue 
+     */
   public makePayment(studentPaymentFormValue) {
     if (this.studentPaymentForm.valid) {
 
@@ -147,20 +150,76 @@ export class StudentPaymentComponent implements OnInit {
         $('#errorModal').modal();
 
       } else {
-        this.executeStudentUpdate(studentPaymentFormValue);
-      }
 
+        // Get Vaid trans ID and initialize payment process.
+        this.getValidTransID(studentPaymentFormValue);
+
+        // success after a completed payment.
+        $('#successModal').modal();
+      }
     }
   }
 
   /**
-   * This method performs the update.
+   * This is a loop method which geenrates a TransID and makes sure it doesn not
+   * exist in the Database before using it.
    * 
    * Author: Darcy Brown
-   * Date: January 25th, 2019
-   *
-   * @param studentPaymentFormValue 
+   * Date: January 27th, 2019
    */
+  private getValidTransID(studentPaymentFormValue) {
+
+    // Store
+    let subscription: Subscription;
+
+    // Delcare a loop function
+    let loop = (transId: number) => {
+
+      // Get a subsctiption to the API
+      let apiAddress = "api/transaction/";
+      subscription = this.repository.getData(apiAddress + transId)
+        .subscribe(res => {
+
+          // Assign Temporary Trasnaction
+          let tempTransaction = res as Transaction;
+
+          // Check the transaction returning from API
+          if (tempTransaction.student_Id === 0) {
+
+            // If the transaction returns a 0 id value.
+            this.transId = transId;
+            // Unsubscribe to clear memory
+            subscription.unsubscribe();
+
+            // Execute the rest of the payment.
+            this.executeStudentUpdate(studentPaymentFormValue);
+
+          } else {
+            // If the Transaction comes back populated.
+            // re-loop
+            loop(this.tidg.generateId());
+          }
+        });
+      // tslint:disable-next-line: no-unused-expression
+      (error) => {
+        this.errorHandler.handleError(error);
+        this.errorMessage = "Unable to access API";
+        this.isLoaded = true;
+      };
+    };
+
+    // Start the initial loop.
+    loop(this.tidg.generateId());
+  }
+
+  /**
+     * This method performs the update.
+     * 
+     * Author: Darcy Brown
+     * Date: January 25th, 2019
+     *
+     * @param studentPaymentFormValue 
+     */
   private executeStudentUpdate(studentPaymentFormValue) {
 
     let apiUrl = `api/student/${this.student.student_Id}`;
@@ -175,28 +234,31 @@ export class StudentPaymentComponent implements OnInit {
       },
         (error => {
           this.errorHandler.handleError(error);
-          this.errorMessage = this.errorHandler.errorMessage;
+          this.errorMessage = "Unable to access API";
+          this.isLoaded = true;
         })
       );
   }
 
 
   /**
- * This method performs the update.
- * 
- * Author: Darcy Brown
- * Date: January 25th, 2019
- *
- * @param studentPaymentFormValue 
- */
+     * This method performs the update.
+     * 
+     * Author: Darcy Brown
+     * Date: January 25th, 2019
+     *
+     * @param studentPaymentFormValue 
+     */
   createTransaction(amount: number) {
 
     // Generate Transaction 
     let transaction: Transaction = {
+      trans_Id: this.transId,
       trans_Amount: amount,
       trans_Date: new Date(),
       student_Id: this.student.student_Id
     };
+
 
     // Create User Login
     let apiUrlTransaction = 'api/transaction';
@@ -208,16 +270,9 @@ export class StudentPaymentComponent implements OnInit {
         // UserLogin create error
         (error => {
           this.errorHandler.handleError(error);
-          this.errorMessage = this.errorHandler.errorMessage;
+          this.errorMessage = "Unable to access API";
+          this.isLoaded = true;
         })
       );
   }
-
-  formatDate() {
-    return new Date().toISOString().slice(0, 10);
-  }
 }
-
-
-
-

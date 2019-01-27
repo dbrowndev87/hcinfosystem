@@ -5,6 +5,7 @@ import { ErrorModalComponent } from './modals/error-modal/error-modal.component'
 import { SuccessModalComponent } from './modals/success-modal/success-modal.component';
 import { RandomUserPassGen } from './tools/rupg';
 import { StudentIdGenerator } from './tools/sidg';
+import { TransactionIdGenerator } from './tools/tidg';
 
 @NgModule({
   imports: [
@@ -22,7 +23,8 @@ import { StudentIdGenerator } from './tools/sidg';
   ],
   providers: [
     RandomUserPassGen,
-    StudentIdGenerator
+    StudentIdGenerator,
+    TransactionIdGenerator
   ]
 
 })
