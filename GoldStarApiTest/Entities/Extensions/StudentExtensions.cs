@@ -9,7 +9,7 @@ namespace Entities.Extensions
             dbStudent.Student_Id = student.Student_Id;
             dbStudent.Student_Status = student.Student_Status;
             dbStudent.Gpa= student.Gpa;
-            dbStudent.User_id = student.User_id;
+            dbStudent.User_Id = student.User_Id;
             dbStudent.Amount_Owing = student.Amount_Owing;
 
         }

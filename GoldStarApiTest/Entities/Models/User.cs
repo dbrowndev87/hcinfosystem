@@ -25,7 +25,7 @@ namespace Entities.Models
 
         [Required(ErrorMessage = "Birth Date is required")]
         [DataType(DataType.DateTime)]
-        public DateTime Birth_date { get; set; }
+        public DateTime Birth_Date { get; set; }
         
         [Required(ErrorMessage = "Type Code is required")]
         [Range(1,9,ErrorMessage = "Type Code must be 1 and 9")]

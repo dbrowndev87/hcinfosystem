@@ -22,7 +22,7 @@ namespace Entities.Models
  
         [Required(ErrorMessage = "User Id is required")]
         [Range(1,999999, ErrorMessage = "User id length must be between 1 and 6")]
-        public int User_id { get; set; }
+        public int User_Id { get; set; }
         
         [Required(ErrorMessage = "Status is required")]
         [Range(0,999999, ErrorMessage = "Amount owing must be between 0 and 100000")]

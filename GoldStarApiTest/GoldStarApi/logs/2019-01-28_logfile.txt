@@ -1,0 +1,13 @@
+2019-01-28 12:58:05.4795 ERROR Something went wrong inside CreateUser action: Object reference not set to an instance of an object.
+2019-01-28 13:06:56.6367 ERROR Something went wrong inside CreateUser action: Object reference not set to an instance of an object.
+2019-01-28 13:07:15.6719 ERROR Something went wrong inside CreateOwner action: Object reference not set to an instance of an object.
+2019-01-28 13:08:24.7449 ERROR Something went wrong inside CreateOwner action: Object reference not set to an instance of an object.
+2019-01-28 13:09:26.9794 ERROR Something went wrong inside CreateFaculty action: Object reference not set to an instance of an object.
+2019-01-28 13:10:02.4363 INFO Returned all teachers from database. 2
+2019-01-28 13:10:16.8918 INFO Enrolled
+2019-01-28 13:10:17.0479 INFO Entities.Models.StudentInfo
+2019-01-28 13:10:17.0479 INFO Enrolled
+2019-01-28 13:10:17.0511 INFO Entities.Models.StudentInfo
+2019-01-28 13:10:17.0520 INFO Enrolled
+2019-01-28 13:10:17.0530 INFO Entities.Models.StudentInfo
+2019-01-28 13:10:17.0544 INFO Returned all students from database. 3

@@ -53,7 +53,7 @@ namespace GoldStarApi.Controllers
                 Student studentById = new Student();
                 foreach (Student current in students)
                 {
-                    if (current.User_id == id)
+                    if (current.User_Id == id)
                     {
                         studentById = current;
                     }

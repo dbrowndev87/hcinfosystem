@@ -5,8 +5,14 @@ namespace Entities.Models
     public class StudentInfo
     {
         //from Student Object
-        public int StudentId { get; set; }
+        public int Student_Id { get; set; }
+
+        public int Type_Code { get; set; }
+
+        public int User_Id { get; set; }
         public string Student_Status { get; set; }
+        
+        public int Dept_Id { get; set; }
         public double Gpa { get; set; }
         public double Amount_Owing { get; set; }
         //From User Object

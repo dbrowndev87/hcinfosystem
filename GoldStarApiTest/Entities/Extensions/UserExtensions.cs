@@ -13,7 +13,7 @@ namespace Entities.Extensions
             dbuser.Address = user.Address;
             dbuser.Dept_Id = user.Dept_Id;
             dbuser.First_Name = user.First_Name;
-            dbuser.Birth_date = user.Birth_date;
+            dbuser.Birth_Date = user.Birth_Date;
             
         }
     }
