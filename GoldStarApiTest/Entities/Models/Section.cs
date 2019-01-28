@@ -14,7 +14,7 @@ namespace Entities.Models
  
         [Required(ErrorMessage = "Faculty Id is required")]
         [Range(1,999999, ErrorMessage = "Faculty Id length must be between 1 and 6")]
-        public int Faculty_id { get; set; }
+        public int Faculty_Id { get; set; }
         
         [Required(ErrorMessage = "Semester is required")]
         [StringLength(10, ErrorMessage = "Semester length must be less than 10")]
@@ -26,7 +26,7 @@ namespace Entities.Models
         
         [Required(ErrorMessage = "Course Id is required")]
         [StringLength(12, ErrorMessage = "Semester length must be less than 12")]
-        public string Course_id { get; set; }
+        public string Course_Id { get; set; }
  
         [Required(ErrorMessage = "Start Date is required")]
         [DataType(DataType.DateTime)]

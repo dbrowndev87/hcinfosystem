@@ -85,7 +85,7 @@ namespace GoldStarApi.Controllers
                     var sectionId = current.Section_Id;
                     var currentSectionInfo = _repository.Section.GetSectionById(sectionId);
                     
-                    currentCourse.Course_Id = currentSectionInfo.Course_id;
+                    currentCourse.Course_Id = currentSectionInfo.Course_Id;
                     currentCourse.Semester = currentSectionInfo.Semester;
                     currentCourse.Designation = currentSectionInfo.Designation;
                     
