@@ -44,7 +44,10 @@ namespace GoldStarApi.Controllers
                 studentInfoObject.First_Name = userFromDb.First_Name;
                 studentInfoObject.Birth_date = userFromDb.Birth_Date;
                 studentInfoObject.Address = userFromDb.Address;
-                
+                studentInfoObject.EMail = userFromDb.EMail;
+                studentInfoObject.Dept_Id = userFromDb.Dept_Id;
+                studentInfoObject.Type_Code = userFromDb.Type_Code;
+                studentInfoObject.User_Id = userFromDb.User_Id;
                 
  
                 if (studentFromDb.Equals(null))

@@ -13573,3 +13573,234 @@ File name: 'NLog.Extended, Culture=neutral, PublicKeyToken=null'
 2019-01-28 13:10:17.0520 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
 2019-01-28 13:10:17.0530 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
 2019-01-28 13:10:17.0544 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 13:23:07.0990 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 13:23:07.2245 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 13:23:13.2196 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 13:23:14.2132 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 13:23:25.1166 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 13:23:55.2638 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 13:24:51.0278 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 13:24:51.6401 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 13:24:51.6502 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 13:24:55.3045 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 13:24:55.3095 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 13:25:00.7249 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 13:25:00.7267 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 13:25:01.5303 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 13:25:02.3900 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 13:25:02.3956 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 13:25:03.2949 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 13:25:47.1756 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 13:25:48.5392 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 13:25:48.5476 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 13:26:19.4610 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 13:26:19.4756 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 13:26:23.7080 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 13:26:23.7129 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 13:33:21.8796 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 13:34:34.0623 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 13:34:35.3984 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 13:34:35.4002 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 13:34:37.1285 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 13:36:26.7260 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 13:36:28.3965 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 13:36:28.3988 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 13:41:26.4837 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 13:41:43.5348 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 13:41:44.8342 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 13:41:44.8388 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 13:41:46.2657 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 13:42:08.1596 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 13:42:08.2087 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 13:44:20.9210 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 13:44:20.9256 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 13:45:25.9054 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 13:45:28.1044 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 13:45:28.1086 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 13:45:29.2216 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 13:45:55.7723 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 13:46:02.8996 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 13:46:02.9207 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 13:46:02.9338 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 13:46:03.0044 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 13:46:08.0872 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 13:46:08.1969 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 13:46:08.2137 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 14:41:20.0046 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2019-01-28 14:41:20.1546 Debug Found assembly location directory: '/Users/Nick/.nuget/packages/nlog/4.5.10/lib/netstandard2.0' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2019-01-28 14:41:20.1591 Debug Search for auto loading files in location: /Users/Nick/.nuget/packages/nlog/4.5.10/lib/netstandard2.0
+2019-01-28 14:41:20.1687 Debug Found assembly location directory: '/Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2' (GoldStarApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)
+2019-01-28 14:41:20.1690 Debug Search for auto loading files in location: /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2
+2019-01-28 14:41:20.1702 Debug Auto loading based on AppDomain-BaseDirectory found location: /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2
+2019-01-28 14:41:20.1702 Debug Search for auto loading files in location: /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2
+2019-01-28 14:41:20.1702 Debug Start auto loading, location: /Users/Nick/.nuget/packages/nlog/4.5.10/lib/netstandard2.0
+2019-01-28 14:41:20.1749 Trace Assembly 'Microsoft.Extensions.Logging, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2019-01-28 14:41:20.1749 Trace Assembly 'Microsoft.Extensions.Logging.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2019-01-28 14:41:20.1762 Debug Auto loading done
+2019-01-28 14:41:20.1851 Info Message Template Auto Format enabled
+2019-01-28 14:41:20.2020 Info Loading assembly: NLog.Extended
+2019-01-28 14:41:20.2553 Error Error loading extensions. Exception: System.IO.FileNotFoundException: Could not load file or assembly 'NLog.Extended, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+
+File name: 'NLog.Extended, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, IntPtr ptrLoadContextBinder)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, IntPtr ptrLoadContextBinder)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, StackCrawlMark& stackMark, IntPtr pPrivHostBinder)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, StackCrawlMark& stackMark)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at NLog.Internal.AssemblyHelpers.LoadFromName(String assemblyName)
+   at NLog.Config.XmlLoggingConfiguration.ParseExtensionWithAssembly(String assemblyName, String prefix)
+
+
+2019-01-28 14:41:20.2630 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Error loading extensions: NLog.Extended ---> System.IO.FileNotFoundException: Could not load file or assembly 'NLog.Extended, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, IntPtr ptrLoadContextBinder)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, IntPtr ptrLoadContextBinder)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, StackCrawlMark& stackMark, IntPtr pPrivHostBinder)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, StackCrawlMark& stackMark)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at NLog.Internal.AssemblyHelpers.LoadFromName(String assemblyName)
+   at NLog.Config.XmlLoggingConfiguration.ParseExtensionWithAssembly(String assemblyName, String prefix)
+   --- End of inner exception stack trace ---
+2019-01-28 14:41:20.2972 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2019-01-28 14:41:20.3056 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2019-01-28 14:41:20.3144 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2019-01-28 14:41:20.3471 Trace Wrapping LevelLayoutRenderer with UppercaseLayoutRendererWrapper
+2019-01-28 14:41:20.3471 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2019-01-28 14:41:20.3471 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2019-01-28 14:41:20.3489 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2019-01-28 14:41:20.3513 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2019-01-28 14:41:20.3533 Trace  Scanning Property Culture '' System.Globalization
+2019-01-28 14:41:20.3576 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2019-01-28 14:41:20.3580 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2019-01-28 14:41:20.3580 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2019-01-28 14:41:20.3616 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2019-01-28 14:41:20.3625 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2019-01-28 14:41:20.3634 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2019-01-28 14:41:20.3642 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2019-01-28 14:41:20.3642 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2019-01-28 14:41:20.3802 Debug Setting 'FileTarget.name' to 'logfile'
+2019-01-28 14:41:20.3810 Debug Setting 'FileTarget.fileName' to '../../../logs/${shortdate}_logfile.txt'
+2019-01-28 14:41:20.3810 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2019-01-28 14:41:20.3819 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2019-01-28 14:41:20.3833 Debug Setting 'FileTarget.layout' to '${longdate} ${level:uppercase=true} ${message}'
+2019-01-28 14:41:20.3844 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2019-01-28 14:41:20.3951 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2019-01-28 14:41:20.3951 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2019-01-28 14:41:20.3964 Trace Wrapping LevelLayoutRenderer with UppercaseLayoutRendererWrapper
+2019-01-28 14:41:20.3964 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2019-01-28 14:41:20.3970 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2019-01-28 14:41:20.3970 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2019-01-28 14:41:20.3970 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2019-01-28 14:41:20.3970 Trace  Scanning Property Culture '' System.Globalization
+2019-01-28 14:41:20.3970 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2019-01-28 14:41:20.3970 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2019-01-28 14:41:20.3980 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2019-01-28 14:41:20.3980 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2019-01-28 14:41:20.3980 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2019-01-28 14:41:20.3980 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2019-01-28 14:41:20.3993 Info Adding target File Target[logfile]
+2019-01-28 14:41:20.4027 Debug Registered target logfile: NLog.Targets.FileTarget
+2019-01-28 14:41:20.4039 Trace ParseRulesElement
+2019-01-28 14:41:20.4212 Info Configured from an XML element in /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../nlog.config...
+2019-01-28 14:41:20.4353 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2019-01-28 14:41:20.4521 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2019-01-28 14:41:20.4664 Debug --- NLog configuration dump ---
+2019-01-28 14:41:20.4664 Debug Targets:
+2019-01-28 14:41:20.4664 Debug File Target[logfile]
+2019-01-28 14:41:20.4669 Debug Rules:
+2019-01-28 14:41:20.4733 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2019-01-28 14:41:20.4733 Debug --- End of NLog configuration dump ---
+2019-01-28 14:41:20.4770 Trace FindReachableObject<System.Object>:
+2019-01-28 14:41:20.4770 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]'
+2019-01-28 14:41:20.4811 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2019-01-28 14:41:20.4811 Trace  Scanning FileTarget 'File Target[logfile]'
+2019-01-28 14:41:20.4832 Trace   Scanning Property FileName ''../../../logs/${shortdate}_logfile.txt'' NLog.Layouts
+2019-01-28 14:41:20.4840 Trace   Scanning SimpleLayout ''../../../logs/${shortdate}_logfile.txt''
+2019-01-28 14:41:20.4840 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2019-01-28 14:41:20.4849 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2019-01-28 14:41:20.4849 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2019-01-28 14:41:20.4849 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2019-01-28 14:41:20.4864 Trace   Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2019-01-28 14:41:20.4864 Trace   Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2019-01-28 14:41:20.4864 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2019-01-28 14:41:20.4870 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2019-01-28 14:41:20.4870 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2019-01-28 14:41:20.4870 Trace    Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2019-01-28 14:41:20.4870 Trace     Scanning Property Culture '' System.Globalization
+2019-01-28 14:41:20.4870 Trace     Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2019-01-28 14:41:20.4870 Trace     Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2019-01-28 14:41:20.4879 Trace      Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2019-01-28 14:41:20.4879 Trace      Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2019-01-28 14:41:20.4879 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2019-01-28 14:41:20.4879 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2019-01-28 14:41:20.4879 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2019-01-28 14:41:20.4897 Trace   Scanning Property Encoding 'System.Text.UTF8Encoding+UTF8EncodingSealed' System.Text
+2019-01-28 14:41:20.4909 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2019-01-28 14:41:20.4909 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2019-01-28 14:41:20.4939 Trace  Scanning Property Levels 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LogLevel]' System.Collections.ObjectModel
+2019-01-28 14:41:20.4950 Info Found 14 configuration items
+2019-01-28 14:41:20.4964 Trace Initializing Layout Renderer: ${message}
+2019-01-28 14:41:20.4971 Trace Initializing Layout Renderer: ${literal}
+2019-01-28 14:41:20.4971 Trace Initializing Layout Renderer: ${level}
+2019-01-28 14:41:20.4971 Trace Initializing SimpleLayout=Layout Renderer: ${level}
+2019-01-28 14:41:20.5032 Trace FindReachableObject<System.Object>:
+2019-01-28 14:41:20.5032 Trace Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2019-01-28 14:41:20.5032 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2019-01-28 14:41:20.5039 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2019-01-28 14:41:20.5082 Trace Initializing Layout Renderer: ${uppercase}
+2019-01-28 14:41:20.5082 Trace Initializing Layout Renderer: ${literal}
+2019-01-28 14:41:20.5082 Trace Initializing Layout Renderer: ${longdate}
+2019-01-28 14:41:20.5082 Trace Initializing '${longdate} ${level:uppercase=true} ${message}'
+2019-01-28 14:41:20.5090 Trace FindReachableObject<System.Object>:
+2019-01-28 14:41:20.5090 Trace Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2019-01-28 14:41:20.5090 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2019-01-28 14:41:20.5090 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2019-01-28 14:41:20.5090 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2019-01-28 14:41:20.5090 Trace  Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2019-01-28 14:41:20.5099 Trace   Scanning Property Culture '' System.Globalization
+2019-01-28 14:41:20.5099 Trace   Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2019-01-28 14:41:20.5099 Trace   Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2019-01-28 14:41:20.5111 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2019-01-28 14:41:20.5111 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2019-01-28 14:41:20.5111 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2019-01-28 14:41:20.5111 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2019-01-28 14:41:20.5123 Trace Initializing Layout Renderer: ${literal}
+2019-01-28 14:41:20.5123 Trace Initializing Layout Renderer: ${shortdate}
+2019-01-28 14:41:20.5123 Trace Initializing Layout Renderer: ${literal}
+2019-01-28 14:41:20.5129 Trace Initializing '../../../logs/${shortdate}_logfile.txt'
+2019-01-28 14:41:20.5129 Trace FindReachableObject<System.Object>:
+2019-01-28 14:41:20.5129 Trace Scanning SimpleLayout ''../../../logs/${shortdate}_logfile.txt''
+2019-01-28 14:41:20.5129 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2019-01-28 14:41:20.5129 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2019-01-28 14:41:20.5129 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2019-01-28 14:41:20.5139 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2019-01-28 14:41:20.5139 Trace Initializing File Target[logfile]
+2019-01-28 14:41:20.5228 Trace FindReachableObject<NLog.Layouts.Layout>:
+2019-01-28 14:41:20.5233 Trace Scanning FileTarget 'File Target[logfile]'
+2019-01-28 14:41:20.5250 Trace  Scanning Property FileName ''../../../logs/${shortdate}_logfile.txt'' NLog.Layouts
+2019-01-28 14:41:20.5267 Trace  Scanning SimpleLayout ''../../../logs/${shortdate}_logfile.txt''
+2019-01-28 14:41:20.5269 Trace  Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2019-01-28 14:41:20.5269 Trace  Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2019-01-28 14:41:20.5269 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2019-01-28 14:41:20.5269 Trace  Scanning Property Encoding 'System.Text.UTF8Encoding+UTF8EncodingSealed' System.Text
+2019-01-28 14:41:20.5282 Trace File Target[logfile] has 2 layouts
+2019-01-28 14:41:20.5297 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.RetryingMultiProcessFileAppender+Factory
+2019-01-28 14:41:20.6137 Debug Watching path '/Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi' filter 'nlog.config' for changes.
+2019-01-28 14:41:28.5696 Debug Targets for LoggerService.LoggerManager by level:
+2019-01-28 14:41:28.5702 Debug Trace =>
+2019-01-28 14:41:28.5702 Debug Debug => logfile
+2019-01-28 14:41:28.5702 Debug Info => logfile
+2019-01-28 14:41:28.5702 Debug Warn => logfile
+2019-01-28 14:41:28.5702 Debug Error => logfile
+2019-01-28 14:41:28.5707 Debug Fatal => logfile
+2019-01-28 14:41:28.6032 Debug FileTarget(Name=logfile): Process file '/Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt' on startup
+2019-01-28 14:41:28.6133 Debug Creating file appender: /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt
+2019-01-28 14:41:28.6187 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 14:41:33.7777 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 14:41:33.7948 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 14:41:33.7959 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 14:41:33.7975 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 14:41:33.7975 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 14:41:33.8001 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 14:41:33.8062 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
+2019-01-28 14:42:45.7689 Trace Opening /Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/bin/Debug/netcoreapp2.2/../../../logs/2019-01-28_logfile.txt with allowFileSharedWriting=False
