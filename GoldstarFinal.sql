@@ -21,6 +21,9 @@ SET time_zone = "+00:00";
 --
 -- Database: `goldstar`
 --
+DROP DATABASE IF EXISTS `goldstar`;
+CREATE DATABASE `goldstar`;
+USE `goldstar`;
 
 DELIMITER $$
 --
@@ -154,6 +157,7 @@ CREATE TABLE `transaction` (
 DELIMITER $$
 CREATE TRIGGER `update_amount_owing` AFTER INSERT ON `transaction` FOR EACH ROW UPDATE student
 SET student.amount_owing = student.amount_owing - new.trans_amount
+WHERE student.student_id = new.student_id
 $$
 DELIMITER ;
 

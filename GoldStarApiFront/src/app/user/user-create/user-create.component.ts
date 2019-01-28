@@ -185,7 +185,6 @@ export class UserCreateComponent implements OnInit {
         } else if (this.userType === 2) {
           // Start Faculty Process
           this.generateFaculty(user);
-
         }
 
         // User Type Success Modal Mesasge
@@ -226,23 +225,24 @@ export class UserCreateComponent implements OnInit {
     let loop = (username: string) => {
 
       // Get a subsctiption to the API
-      let apiAddress = "api/userlogin/";
+      let apiAddress = "api/userlogin/username/";
       subscription = this.repository.getData(apiAddress + username)
         .subscribe(res => {
 
           // Assign Temporary Trasnaction
           let userLogin = res as UserLogin;
-
+          console.log(userLogin);
           // Check the transaction returning from API
           if (userLogin.user_Id === 0) {
 
             // If the transaction returns a 0 id value.
             tempUsername = username;
-            // Unsubscribe to clear memory
-            subscription.unsubscribe();
 
             // Execute the rest of the student creation
             this.generateUserLogin(username);
+
+            // Unsubscribe to clear memory
+            subscription.unsubscribe();
 
           } else {
             // If the student comes back populated
@@ -256,6 +256,9 @@ export class UserCreateComponent implements OnInit {
         this.errorMessage = "Unable to access API";
       };
     };
+
+    // Start the initial loop.
+    loop(this.rupg.generateUser(user.first_Name, user.last_Name));
   }
 
   /**
@@ -371,8 +374,6 @@ export class UserCreateComponent implements OnInit {
       amount_Owing: 0.0,
       gpa: 0.0
     };
-
-    console.log(student);
 
     // Create User Login
     let apiUrlStudent = 'api/student';
