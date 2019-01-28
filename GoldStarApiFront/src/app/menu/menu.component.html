@@ -1,8 +1,8 @@
-<nav class="navbar navbar-inverse">
+<nav class="navbar">
         <div class="container-fluid">
                 <div class="navbar-header">
                         <a class="navbar-brand" [routerLink]="['/home']" routerLinkActive="active"
-                                [routerLinkActiveOptions]="{exact: true}">Project GoldStar</a>
+                                [routerLinkActiveOptions]="{exact: true}">Gold Star Student Records</a>
                 </div>
                 <ul class="nav navbar-nav">
                         <!-- Administrator Links -->
@@ -36,9 +36,9 @@
                                         [routerLinkActiveOptions]="{exact: true}">Student
                                         Payment</a></li>
 
-                        <li *ngIf="!loggedIn"><a [routerLink]="['/login']" routerLinkActive="active"
+                        <!-- <li *ngIf="!loggedIn"><a [routerLink]="['/login']" routerLinkActive="active"
                                         [routerLinkActiveOptions]="{exact: true}">Log
-                                        In</a></li>
+                                        In</a></li> -->
                         <li *ngIf="loggedIn"><a [routerLink]="['/logout']" routerLinkActive="active"
                                         [routerLinkActiveOptions]="{exact: true}">Log
                                         Out</a></li>
