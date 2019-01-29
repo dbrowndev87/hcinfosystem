@@ -1,0 +1,174 @@
+2019-01-29 08:34:29.2742 INFO Returned user with username: dbrown32066
+2019-01-29 08:34:29.5921 INFO Returned Student with id: 1
+2019-01-29 08:34:34.5405 INFO Returned all sections from database. 1
+2019-01-29 08:37:16.8656 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 08:37:16.9095 INFO Returned all teachers from database. 4
+2019-01-29 08:37:18.0645 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 08:37:25.7166 INFO Returned all students from database. 3
+2019-01-29 08:37:27.2509 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 08:37:27.2536 INFO Returned all teachers from database. 4
+2019-01-29 08:37:27.9554 INFO Returned all sections from database. 1
+2019-01-29 08:41:26.3946 INFO Returned all teachers from database. 4
+2019-01-29 08:41:26.3990 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 08:41:27.2441 INFO Returned all sections from database. 1
+2019-01-29 08:41:30.3184 INFO Returned all teachers from database. 4
+2019-01-29 08:41:30.3216 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 08:41:32.3004 INFO Returned all sections from database. 1
+2019-01-29 08:45:16.7249 INFO Returned all teachers from database. 4
+2019-01-29 08:45:16.7328 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 08:45:25.1901 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 08:45:26.3935 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 08:45:38.8616 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 08:45:38.8655 INFO Returned all students from database. System.Linq.OrderedEnumerable`2[Entities.Models.User,System.String]
+2019-01-29 08:46:06.6653 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 08:46:07.8999 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 08:46:19.3859 INFO Returned all students from database. System.Linq.OrderedEnumerable`2[Entities.Models.User,System.String]
+2019-01-29 08:46:19.3940 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 08:46:28.5977 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 08:46:29.6885 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 08:46:39.8058 INFO Returned all students from database. System.Linq.OrderedEnumerable`2[Entities.Models.User,System.String]
+2019-01-29 08:46:39.8145 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 08:46:45.9425 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 08:46:47.1104 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 08:47:09.6025 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 08:47:09.6032 INFO Returned all students from database. System.Linq.OrderedEnumerable`2[Entities.Models.User,System.String]
+2019-01-29 08:47:15.3997 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 08:47:15.4021 INFO Returned all teachers from database. 4
+2019-01-29 08:47:17.1384 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 08:47:44.0010 ERROR Look HereCIS-1116
+2019-01-29 08:47:45.8300 INFO Returned all teachers from database. 5
+2019-01-29 08:47:45.8329 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 08:47:50.1361 INFO Returned all students from database. System.Linq.OrderedEnumerable`2[Entities.Models.User,System.String]
+2019-01-29 08:47:50.1422 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 08:47:51.4823 INFO Returned all users from database. 6
+2019-01-29 08:47:54.3147 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 08:47:55.6766 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 08:48:02.6843 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 08:48:02.6861 INFO Returned all teachers from database. 5
+2019-01-29 08:48:04.1674 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 08:48:06.4601 INFO Returned all sections from database. 1
+2019-01-29 08:48:14.8397 INFO Returned all teachers from database. 5
+2019-01-29 08:48:14.8414 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 08:48:16.7104 INFO Returned all sections from database. 1
+2019-01-29 08:50:18.0683 INFO Returned all students from database. System.Linq.OrderedEnumerable`2[Entities.Models.User,System.String]
+2019-01-29 08:50:18.0701 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 08:50:20.3572 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 08:50:21.3437 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 08:50:25.0982 INFO Returned all students from database. 3
+2019-01-29 08:50:26.1970 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 08:50:28.3847 INFO Returned all teachers from database. 5
+2019-01-29 08:50:28.3879 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 08:50:29.5607 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 08:50:32.2330 INFO Returned all students from database. 3
+2019-01-29 08:50:35.1278 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 08:50:36.9140 INFO Returned all teachers from database. 5
+2019-01-29 08:50:36.9173 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 08:50:38.3501 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 08:50:39.9292 INFO Returned all sections from database. 1
+2019-01-29 08:51:21.6239 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 08:51:21.6259 INFO Returned all teachers from database. 5
+2019-01-29 08:51:22.6733 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 08:51:24.2184 INFO Returned all sections from database. 1
+2019-01-29 08:52:27.7650 INFO Returned all teachers from database. 5
+2019-01-29 08:52:27.7681 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 08:52:28.4337 INFO Returned all sections from database. 1
+2019-01-29 08:52:55.8758 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 08:52:55.8836 INFO Returned all teachers from database. 5
+2019-01-29 08:53:04.7599 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 08:53:04.7634 INFO Returned all teachers from database. 5
+2019-01-29 08:53:13.1157 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 08:53:15.1927 INFO Returned all sections from database. 1
+2019-01-29 08:53:46.8747 INFO Returned all teachers from database. 5
+2019-01-29 08:53:46.8758 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 08:53:52.1620 INFO Returned all teachers from database. 5
+2019-01-29 08:53:52.1690 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 08:54:00.1071 INFO Returned all students from database. 3
+2019-01-29 08:54:00.7721 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 08:54:00.7766 INFO Returned all teachers from database. 5
+2019-01-29 08:54:05.0952 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 08:54:05.0988 INFO Returned all teachers from database. 5
+2019-01-29 08:54:07.4752 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 08:54:09.5426 INFO Returned all sections from database. 1
+2019-01-29 09:00:07.3827 INFO Returned all sections from database. 1
+2019-01-29 09:01:19.1374 INFO Returned all sections from database. 2
+2019-01-29 09:02:05.2751 ERROR Something went wrong inside CreateSection action: An error occurred while updating the entries. See the inner exception for details.
+2019-01-29 09:02:09.6404 INFO Returned all sections from database. 2
+2019-01-29 09:02:28.7626 INFO Returned all students from database. 3
+2019-01-29 09:02:30.3215 INFO Returned all sections from database. 2
+2019-01-29 09:02:40.6330 INFO Returned all students from database. System.Linq.OrderedEnumerable`2[Entities.Models.User,System.String]
+2019-01-29 09:02:40.6342 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 09:02:44.0424 INFO Returned all users from database. 6
+2019-01-29 09:02:50.8980 INFO Returned all sections from database. 2
+2019-01-29 09:05:50.0661 INFO Returned user with username: npeconi
+2019-01-29 09:05:50.0829 INFO Returned Student with id: 4
+2019-01-29 09:05:57.5076 INFO Returned all sections from database. 2
+2019-01-29 09:06:00.4977 INFO Returned all teachers from database. 5
+2019-01-29 09:06:00.5006 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 09:06:03.7778 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 09:06:03.7981 INFO Returned Course with id: CIS-1116
+2019-01-29 09:06:17.9019 INFO Returned all teachers from database. 5
+2019-01-29 09:06:17.9028 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 09:06:27.1068 INFO Returned all sections from database. 2
+2019-01-29 09:06:37.4027 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 09:06:37.4053 INFO Returned all teachers from database. 5
+2019-01-29 09:06:38.9469 INFO Returned all sections from database. 2
+2019-01-29 09:30:21.1060 INFO Returned all sections from database. 2
+2019-01-29 09:30:23.8940 INFO Returned all sections from database. 2
+2019-01-29 09:39:30.8333 INFO Returned Section with id: 1
+2019-01-29 09:40:18.9093 INFO Returned Section with id: 1
+2019-01-29 09:40:26.9667 INFO Returned all students from database. 3
+2019-01-29 09:40:27.4648 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 09:40:27.4746 INFO Returned all teachers from database. 5
+2019-01-29 09:40:28.4985 INFO Returned all sections from database. 2
+2019-01-29 09:40:30.2001 INFO Returned all teachers from database. 5
+2019-01-29 09:40:30.2040 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 09:40:31.6740 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 09:40:31.6826 INFO Returned Course with id: CIS-1116
+2019-01-29 09:40:33.1081 INFO Returned all sections from database. 2
+2019-01-29 09:40:35.4271 INFO Returned Section with id: 1
+2019-01-29 09:40:57.6133 ERROR Something went wrong inside UpdateSection action: Object reference not set to an instance of an object.
+2019-01-29 09:41:12.3504 INFO Returned all sections from database. 2
+2019-01-29 09:41:14.0619 INFO Returned Section with id: 1
+2019-01-29 09:41:16.6058 INFO Returned all sections from database. 2
+2019-01-29 09:41:18.0364 INFO Returned Section with id: 12223
+2019-01-29 09:41:43.7844 INFO Returned Section with id: 12223
+2019-01-29 09:41:56.3061 INFO Returned all sections from database. 2
+2019-01-29 09:41:59.0657 INFO Returned Section with id: 1
+2019-01-29 09:42:03.1939 INFO Returned Section with id: 1
+2019-01-29 09:43:21.6596 INFO Returned Section with id: 1
+2019-01-29 09:43:41.4659 INFO Returned Section with id: 1
+2019-01-29 09:46:03.6045 INFO Returned Section with id: 1
+2019-01-29 09:46:14.8709 ERROR Something went wrong inside UpdateSection action: Object reference not set to an instance of an object.
+2019-01-29 09:49:13.1784 INFO Returned all sections from database. 2
+2019-01-29 09:49:14.2343 INFO Returned Section with id: 1
+2019-01-29 09:49:20.4446 ERROR Something went wrong inside UpdateSection action: Object reference not set to an instance of an object.
+2019-01-29 09:51:17.6741 INFO Returned all sections from database. 2
+2019-01-29 09:51:18.5203 INFO Returned Section with id: 1
+2019-01-29 09:51:21.9448 INFO Returned all sections from database. 2
+2019-01-29 09:51:23.5828 INFO Returned Section with id: 12223
+2019-01-29 09:51:27.0549 ERROR Something went wrong inside UpdateSection action: An error occurred while updating the entries. See the inner exception for details.
+2019-01-29 09:57:30.5829 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 09:57:30.5873 INFO Returned all teachers from database. 5
+2019-01-29 09:57:31.8989 INFO Returned all sections from database. 2
+2019-01-29 09:57:34.2088 INFO Returned Section with id: 1
+2019-01-29 09:57:41.0024 ERROR Something went wrong inside UpdateSection action: An error occurred while updating the entries. See the inner exception for details.
+2019-01-29 10:00:17.2465 INFO Returned all sections from database. 2
+2019-01-29 10:00:19.7872 INFO Returned Section with id: 1
+2019-01-29 10:00:29.9755 INFO Returned all sections from database. 2
+2019-01-29 10:00:58.9985 INFO Returned all sections from database. 2
+2019-01-29 10:01:05.4863 INFO Returned all students from database. System.Linq.OrderedEnumerable`2[Entities.Models.User,System.String]
+2019-01-29 10:01:05.4945 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 10:01:11.2309 INFO Returned all sections from database. 2
+2019-01-29 10:01:47.2149 ERROR Something went wrong inside CreateSection action: An error occurred while updating the entries. See the inner exception for details.
+2019-01-29 10:01:51.1015 INFO Returned all sections from database. 2
+2019-01-29 10:02:24.1933 ERROR Something went wrong inside CreateSection action: An error occurred while updating the entries. See the inner exception for details.
+2019-01-29 10:04:28.1317 INFO Returned all sections from database. 2
+2019-01-29 10:06:15.8864 ERROR Something went wrong inside CreateSection action: An error occurred while updating the entries. See the inner exception for details.
+2019-01-29 10:06:43.7260 INFO Returned all sections from database. 2
+2019-01-29 10:07:18.0685 INFO Returned all sections from database. 3
+2019-01-29 10:07:30.4928 INFO Returned all students from database. System.Linq.OrderedEnumerable`2[Entities.Models.User,System.String]
+2019-01-29 10:07:30.5053 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-29 10:21:11.1971 INFO Returned all teachers from database. 2
+2019-01-29 10:21:37.5321 INFO Entities.Models.FacultyInfo
+2019-01-29 10:21:37.5902 INFO Entities.Models.FacultyInfo
+2019-01-29 10:21:37.5926 INFO Returned all students from database. 2

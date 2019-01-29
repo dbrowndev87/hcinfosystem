@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\nicholaspeconi\.Rider2018.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\nicholaspeconi\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_GoldStarApi.-1861520889.00" t="ExcludeRecursive" />
-    <e p="C:\Users\nicholaspeconi\Documents\2nd Year Repos\goldstarcode\GoldStarApiTest" t="IncludeFlat">
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="Contracts" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="Contracts.csproj" t="IncludeRecursive" />
@@ -52,6 +50,7 @@
           <e p="Department.cs" t="Include" />
           <e p="Enrollment.cs" t="Include" />
           <e p="Faculty.cs" t="Include" />
+          <e p="FacultyInfo.cs" t="Include" />
           <e p="Section.cs" t="Include" />
           <e p="Student.cs" t="Include" />
           <e p="StudentInfo.cs" t="Include" />
@@ -78,6 +77,7 @@
           <e p="DepartmentController.cs" t="Include" />
           <e p="EnrollmentController.cs" t="Include" />
           <e p="FacultyController.cs" t="Include" />
+          <e p="FacultyInfoController.cs" t="Include" />
           <e p="SectionController.cs" t="Include" />
           <e p="StudentController.cs" t="Include" />
           <e p="StudentInfoController.cs" t="Include" />
@@ -102,6 +102,7 @@
           <e p="2019-01-21_logfile.txt" t="Include" />
           <e p="2019-01-25_logfile.txt" t="Include" />
           <e p="2019-01-28_logfile.txt" t="Include" />
+          <e p="2019-01-29_logfile.txt" t="Include" />
         </e>
         <e p="nlog.config" t="Include" />
         <e p="obj" t="ExcludeRecursive">
@@ -155,5 +156,7 @@
         <e p="UserTypeCodeRepository.cs" t="Include" />
       </e>
     </e>
+    <e p="$USER_HOME$/Library/Caches/Rider2018.3/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2018.3/resharper-host/local/Transient/ReSharperHost/v183/SolutionCaches/_GoldStarApi.1119969683.00" t="ExcludeRecursive" />
   </component>
 </project>
