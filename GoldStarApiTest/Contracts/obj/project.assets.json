@@ -2662,7 +2662,7 @@
       ]
     },
     "System.Runtime.CompilerServices.Unsafe/4.5.1": {
-      "sha512": "qUJMNWhbm9oZ3XaMFiEMiYmRPszbnXIkRIi7+4b2Md2xZ6JUOepf0/kY3S85qistRohl9OdMe4PsO+RdG2kTIQ==",
+      "sha512": "x/3d5xb+mc9e4I2GOOT+HPRWMZLbYjNN/kYKsb0fyUKcWizn/t1CIrGRLIBhv7H0ptYEt+WTTztdPmwSUMyKig==",
       "type": "package",
       "path": "system.runtime.compilerservices.unsafe/4.5.1",
       "files": [
@@ -2983,35 +2983,37 @@
     ]
   },
   "packageFolders": {
-    "/Users/Nick/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\nicholaspeconi\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/Nick/goldstarcode/GoldStarApiTest/Contracts/Contracts.csproj",
+      "projectUniqueName": "C:\\Users\\nicholaspeconi\\Documents\\2nd Year Repos\\goldstarcode\\GoldStarApiTest\\Contracts\\Contracts.csproj",
       "projectName": "Contracts",
-      "projectPath": "/Users/Nick/goldstarcode/GoldStarApiTest/Contracts/Contracts.csproj",
-      "packagesPath": "/Users/Nick/.nuget/packages/",
-      "outputPath": "/Users/Nick/goldstarcode/GoldStarApiTest/Contracts/obj/",
+      "projectPath": "C:\\Users\\nicholaspeconi\\Documents\\2nd Year Repos\\goldstarcode\\GoldStarApiTest\\Contracts\\Contracts.csproj",
+      "packagesPath": "C:\\Users\\nicholaspeconi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\nicholaspeconi\\Documents\\2nd Year Repos\\goldstarcode\\GoldStarApiTest\\Contracts\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/Nick/.config/NuGet/NuGet.Config"
+        "C:\\Users\\nicholaspeconi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.2"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "/Users/Nick/goldstarcode/GoldStarApiTest/Entities/Entities.csproj": {
-              "projectPath": "/Users/Nick/goldstarcode/GoldStarApiTest/Entities/Entities.csproj"
+            "C:\\Users\\nicholaspeconi\\Documents\\2nd Year Repos\\goldstarcode\\GoldStarApiTest\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\nicholaspeconi\\Documents\\2nd Year Repos\\goldstarcode\\GoldStarApiTest\\Entities\\Entities.csproj"
             }
           }
         }

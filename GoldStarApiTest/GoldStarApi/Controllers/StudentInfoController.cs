@@ -42,7 +42,7 @@ namespace GoldStarApi.Controllers
                 var userFromDb = _repository.Users.GetUserById(studentFromDb.User_Id);
                 studentInfoObject.Last_Name = userFromDb.Last_Name;
                 studentInfoObject.First_Name = userFromDb.First_Name;
-                studentInfoObject.Birth_date = userFromDb.Birth_Date;
+                studentInfoObject.Birth_Date = userFromDb.Birth_Date;
                 studentInfoObject.Address = userFromDb.Address;
                 studentInfoObject.EMail = userFromDb.EMail;
                 studentInfoObject.Dept_Id = userFromDb.Dept_Id;
@@ -93,7 +93,7 @@ namespace GoldStarApi.Controllers
                     
                     studentInfoObject.Last_Name= user.Last_Name;
                     studentInfoObject.First_Name = user.First_Name;
-                    studentInfoObject.Birth_date = user.Birth_Date;
+                    studentInfoObject.Birth_Date = user.Birth_Date;
                     studentInfoObject.Address = user.Address;
                     studentInfoObject.EMail = user.EMail;
                     studentInfoObject.Dept_Id = user.Dept_Id;

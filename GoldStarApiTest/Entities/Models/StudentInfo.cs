@@ -18,7 +18,7 @@ namespace Entities.Models
         //From User Object
         public string First_Name { get; set; }
         public string Last_Name { get; set; }
-        public DateTime Birth_date { get; set; }
+        public DateTime Birth_Date { get; set; }
         public string Address { get; set; }
         public string EMail { get; set; }
     }
