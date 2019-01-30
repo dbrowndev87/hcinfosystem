@@ -5,6 +5,7 @@ using Contracts;
 using Entities.Extensions;
 using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.EntityFrameworkCore.Internal;
 
 namespace GoldStarApi.Controllers
@@ -115,6 +116,7 @@ namespace GoldStarApi.Controllers
         [HttpPost]
         public IActionResult CreateEnrollment([FromBody]Enrollment enrollment)
         {
+            double costPerCourse = 4000;
             try
             {
                 if(enrollment.Equals(null))
@@ -129,9 +131,9 @@ namespace GoldStarApi.Controllers
                     return BadRequest("Invalid model object");
                 }
  
-                
-                
                 _repository.Enrollment.CreateEnrollment(enrollment);
+                var student = _repository.Student.GetStudentById(enrollment.Student_Id);
+                student.Amount_Owing += costPerCourse;
 
                 return Ok(enrollment);
             }
