@@ -6,7 +6,7 @@
 
   <div *ngIf="isLoaded" class="well">
     <h2>{{studentInfo.first_Name}} {{studentInfo.last_Name}}</h2>
-    <h5>Student ID: {{studentInfo.studentId}}</h5>
+    <h5>Student ID: {{studentInfo.student_Id}}</h5>
     <h5>Student Status: {{studentInfo.student_Status}}</h5>
     <h5>Amount Owing:
       <span *ngIf="studentInfo.amount_Owing > 0">{{student.amount_Owing | currency}}</span>

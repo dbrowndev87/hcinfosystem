@@ -17,11 +17,11 @@ export class RepositoryService {
     return this.http.post(this.createCompleteRoute(route, this.envUrl.urlAddress), body, this.generateHeaders());
   }
  
-  public update(route: string, body) {
+  public update(route: string, body){
     return this.http.put(this.createCompleteRoute(route, this.envUrl.urlAddress), body, this.generateHeaders());
   }
  
-  public delete(route: string) {
+  public delete(route: string){
     return this.http.delete(this.createCompleteRoute(route, this.envUrl.urlAddress));
   }
  

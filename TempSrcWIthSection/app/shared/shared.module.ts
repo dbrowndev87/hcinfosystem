@@ -7,9 +7,10 @@ import { RandomUserPassGen } from './tools/rupg';
 import { StudentIdGenerator } from './tools/sidg';
 import { TransactionIdGenerator } from './tools/tidg';
 
+
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
   ],
   declarations: [
     ErrorModalComponent,
@@ -19,12 +20,13 @@ import { TransactionIdGenerator } from './tools/tidg';
   exports: [
     ErrorModalComponent,
     SuccessModalComponent,
-    DatepickerDirective
+    DatepickerDirective,
   ],
   providers: [
     RandomUserPassGen,
     StudentIdGenerator,
-    TransactionIdGenerator
+    TransactionIdGenerator,
+
   ]
 
 })

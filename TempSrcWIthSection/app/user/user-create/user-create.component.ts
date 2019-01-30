@@ -8,11 +8,11 @@
  */
 
 import { User } from '../../_interfaces/user.model';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ErrorHandlerService } from './../../shared/services/error-handler.service';
 import { RepositoryService } from './../../shared/services/repository.service';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute, NavigationEnd, Params } from '@angular/router';
 import { UserLogin } from 'src/app/_interfaces/userlogin.model';
 import { RandomUserPassGen } from 'src/app/shared/tools/rupg';
 import { Student } from 'src/app/_interfaces/student.model';
@@ -22,6 +22,8 @@ import { Md5 } from 'ts-md5/dist/md5';
 import { Globals } from 'src/app/globals';
 import { Faculty } from 'src/app/_interfaces/faculty.model';
 import { Subscription } from 'rxjs';
+import { PreviousRouteService } from 'src/app/shared/services/previous-route.service';
+
 
 
 @Component({
@@ -38,6 +40,7 @@ export class UserCreateComponent implements OnInit {
   private depts: Department[];
   private userType;
   private md5 = new Md5();
+  private param;
   private successMessage = "";
 
   constructor(
@@ -47,18 +50,27 @@ export class UserCreateComponent implements OnInit {
     private activeRoute: ActivatedRoute,
     private rupg: RandomUserPassGen,
     private sidg: StudentIdGenerator,
+    private previousRouteService: PreviousRouteService,
     private globals: Globals
   ) {
-    // get the user type form the URL
-    this.userType = parseInt(this.activeRoute.snapshot.params['id'], 0);
+  }
 
+  ngOnInit() {
+    this.activeRoute.params.subscribe(params => {
+      this.param = params['id'];
+      this.initialiseState(); // reset and set based on new parameter this time
+    });
+  }
+
+
+  private initialiseState() {
     // If the usertype is not any of the type codes go to 404
     if (this.userType > 3 || this.userType < 1) {
       this.router.navigate(['/404']);
     }
-  }
 
-  ngOnInit() {
+    // get the user type form the URL
+    this.userType = parseInt(this.activeRoute.snapshot.params['id'], 0);
     // Declare which form to use
     this.declareFormType();
 
@@ -126,7 +138,7 @@ export class UserCreateComponent implements OnInit {
 
   // Execute the Date Picker object.
   public executeDatePicker(event) {
-    this.userForm.patchValue({ 'birth_date': event });
+    this.userForm.patchValue({ 'birth_Date': event });
   }
 
   // Create user if form is valid.
@@ -162,7 +174,7 @@ export class UserCreateComponent implements OnInit {
       first_Name: userFormValue.first_Name,
       last_Name: userFormValue.last_Name,
       address: userFormValue.address,
-      birth_date: userFormValue.birth_date.slice(0, 10).toString(),
+      birth_Date: userFormValue.birth_Date,
       type_Code: this.userType,
       eMail: userFormValue.eMail,
       user_Id: this.userId,
@@ -231,7 +243,6 @@ export class UserCreateComponent implements OnInit {
 
           // Assign Temporary Trasnaction
           let userLogin = res as UserLogin;
-          console.log(userLogin);
           // Check the transaction returning from API
           if (userLogin.user_Id === 0) {
 
@@ -314,9 +325,30 @@ export class UserCreateComponent implements OnInit {
   }
 
 
-  // Redicrect to User List.
-  public redirectToUserList() {
-    this.router.navigate(['/user/list']);
+  // Clear user List.
+  public clearUserForm() {
+
+    // Clear the Form
+    this.userForm.get('first_Name').setValue('');
+    this.userForm.get('first_Name').markAsUntouched();
+    this.userForm.get('last_Name').setValue('');
+    this.userForm.get('last_Name').markAsUntouched();
+    this.userForm.get('eMail').setValue('');
+    this.userForm.get('eMail').markAsUntouched();
+    this.userForm.get('birth_Date').setValue('');
+    this.userForm.get('birth_Date').markAsUntouched();
+    this.userForm.get('address').setValue('');
+    this.userForm.get('address').markAsUntouched();
+
+    if (this.userType > 1) {
+      this.userForm.get('dept_Id').setValue('');
+      this.userForm.get('dept_Id').markAsUntouched();
+    }
+  }
+
+  public redirectToLastPage() {
+    // tslint:disable-next-line: no-unused-expression
+    this.router.navigate([sessionStorage.getItem('previousUrl')]);
   }
 
   /**

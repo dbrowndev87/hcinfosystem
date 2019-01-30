@@ -26,13 +26,13 @@
       </div>
 
       <div class="form-group">
-        <label for="birth_date" class="control-label col-md-2">Date of birth: </label>
+        <label for="birth_Date" class="control-label col-md-2">Date of birth: </label>
         <div class="col-md-5">
-          <input type="text" formControlName="birth_date" id="birth_date" class="form-control" appDatepicker (change)="executeDatePicker($event)"
+          <input type="text" formControlName="birth_Date" id="birth_Date" class="form-control" appDatepicker (change)="executeDatePicker($event)"
             readonly />
         </div>
         <div class="col-md-5">
-          <em *ngIf="validateControl('birth_date') && hasError('birth_date', 'required')">Date of birth is required</em>
+          <em *ngIf="validateControl('birth_Date') && hasError('birth_Date', 'required')">Date of birth is required</em>
         </div>
       </div>
 
@@ -72,12 +72,13 @@
 
       <br><br>
 
+
       <div class="form-group">
         <div class="col-md-offset-5 col-md-1">
           <button type="submit" class="btn btn-info" [disabled]="!userForm.valid">Save</button>
         </div>
         <div class="col-md-1">
-          <button type="button" class="btn btn-danger" (click)="redirectToUserList()">Cancel</button>
+          <button type="button" class="btn btn-danger" (click)="redirectToLastPage()">Cancel</button>
         </div>
       </div>
 
@@ -85,7 +86,7 @@
   </form>
 
   <app-success-modal [modalHeaderText]="'Success message'" [modalBodyText]="successMessage" [okButtonText]="'OK'"
-    (redirectOnOK)="redirectToUserList()"></app-success-modal>
+    (redirectOnOK)="clearUserForm()"></app-success-modal>
 
   <app-error-modal [modalHeaderText]="'Error message'" [modalBodyText]="errorMessage" [okButtonText]="'OK'"></app-error-modal>
 

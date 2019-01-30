@@ -15,18 +15,28 @@
               <th>Student Status</th>
               <th>GPA</th>
               <th>Ammount Owing</th>
-              <th>Associated User ID</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>E-Mail</th>
+              <th>Address</th>
+              <th>Program</th>
+              <th>Option</th>
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let student of students">
+            <tr *ngFor="let student of studentsInfo">
               <td>{{student.student_Id}}</td>
               <td>{{student.student_Status}}</td>
               <td>{{student.gpa}}</td>
               <td>{{student.amount_Owing}}</td>
-              <td>{{student.user_id}}</td>
-              <td><button type="button" id="update" class="btn btn-success" (click)='redirectToUpdatePage(student.student_Id)'>Update
-                  Student Info</button></td>
+              <td>{{student.first_Name}}</td>
+              <td>{{student.last_Name}}</td>
+              <td>{{student.eMail}}</td>
+              <td>{{student.address}}</td>
+              <td *ngIf="isLoaded">{{student.dept_Id}} - {{depts[(student.dept_Id - 1)].dept_Name}}</td>
+              <td>
+                <button type="button" id="update" class="btn btn-success" (click)='redirectToUpdatePage(student.student_Id)'>Update</button>
+              </td>
             </tr>
           </tbody>
         </table>

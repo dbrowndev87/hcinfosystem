@@ -1,0 +1,42 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-offset-10 col-md-2">
+      <a [routerLink]="['/user/create/2']">Create Faculty</a>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Faculty ID</th>
+              <th>Faculty Status</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>E-Mail</th>
+              <th>Address</th>
+              <th>Department</th>
+              <th>Option</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let faculty of facultysInfo">
+              <td>{{faculty.faculty_Id}}</td>
+              <td>{{faculty.faculty_Status}}</td>
+              <td>{{faculty.first_Name}}</td>
+              <td>{{faculty.last_Name}}</td>
+              <td>{{faculty.eMail}}</td>
+              <td>{{faculty.address}}</td>
+              <td *ngIf="isLoaded">{{depts[(faculty.dept_Id - 1)].dept_Name}}</td>
+              <td>
+                <button type="button" id="update" class="btn btn-success" (click)='redirectToUpdatePage(faculty.faculty_Id)'>Update</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

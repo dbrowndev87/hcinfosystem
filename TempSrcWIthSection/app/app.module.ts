@@ -26,8 +26,17 @@ import { UserLoginRoutingModule } from './userlogin/userlogin.routing';
 import { UserLoginModule } from './userlogin/userlogin.module';
 import { CourseModule } from './courses/course.module';
 import { CourseRoutingModule } from './courses/course.routing';
+import { AdminModule } from './admin/admin.module';
+import { AdminRoutingModule } from './admin/admin.routing';
+import { PreviousRouteService } from './shared/services/previous-route.service';
+import { FacultyModule } from './faculty/faculty.module';
+import { FacultyRoutingModule } from './faculty/faculty.routing';
+import { EnrollmentModule } from './enrollment/enrollment.module';
+import { EnrollmentRoutingModule } from './enrollment/enrollment.routing';
 import { SectionModule } from './section/section.module';
 import { SectionRoutingModule } from './section/section.routing';
+
+
 
 
 @NgModule({
@@ -36,8 +45,7 @@ import { SectionRoutingModule } from './section/section.routing';
     NotFoundComponent,
     MenuComponent,
     HomeComponent,
-    InternalServerComponent,
-   
+    InternalServerComponent
   ],
   imports: [
     CommonModule,
@@ -53,6 +61,12 @@ import { SectionRoutingModule } from './section/section.routing';
     UserLoginRoutingModule,
     CourseModule,
     CourseRoutingModule,
+    AdminModule,
+    AdminRoutingModule,
+    FacultyModule,
+    FacultyRoutingModule,
+    EnrollmentModule,
+    EnrollmentRoutingModule,
     SectionModule,
     SectionRoutingModule,
     // These Must Go Last.
@@ -68,6 +82,7 @@ import { SectionRoutingModule } from './section/section.routing';
     AuthGuardAdmin,
     AuthGuardFaculty,
     AuthGuardStudent,
+    PreviousRouteService
   ],
   bootstrap: [AppComponent],
   exports: [MenuComponent]

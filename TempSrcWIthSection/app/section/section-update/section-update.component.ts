@@ -35,14 +35,14 @@ export class SectionUpdateComponent implements OnInit {
 
   ngOnInit() {
     this.sectionForm = new FormGroup({
-        section_Id: new FormControl('', [Validators.required]),
-        faculty_Id: new FormControl('', [Validators.required, Validators.maxLength(6)]),
-        start_Date: new FormControl('', [Validators.required]),
-        end_Date: new FormControl('', [Validators.required]),
-        designation: new FormControl('', [Validators.required, Validators.maxLength(1)]),
-        semester: new FormControl('', [Validators.required, Validators.maxLength(10)]),
-        course_Id: new FormControl('', [Validators.required]),
-        vacancy: new FormControl('', [Validators.required, Validators.maxLength(3)]),
+      section_Id: new FormControl('', [Validators.required]),
+      faculty_Id: new FormControl('', [Validators.required, Validators.maxLength(6)]),
+      start_Date: new FormControl('', [Validators.required]),
+      end_Date: new FormControl('', [Validators.required]),
+      designation: new FormControl('', [Validators.required, Validators.maxLength(1)]),
+      semester: new FormControl('', [Validators.required, Validators.maxLength(10)]),
+      course_Id: new FormControl('', [Validators.required]),
+      vacancy: new FormControl('', [Validators.required, Validators.maxLength(3)]),
     });
 
     this.userType = parseInt(sessionStorage.getItem('typeCode'), 0);
@@ -110,7 +110,7 @@ export class SectionUpdateComponent implements OnInit {
 
   private executeSectionUpdate(sectionFormValue) {
 
-    this.section.section_Id = parseInt(sectionFormValue.section_Id, 0);
+    this.section.section_Id = this.section.section_Id;
     this.section.course_Id = sectionFormValue.course_Id;
     this.section.designation = sectionFormValue.designation;
     this.section.end_Date = sectionFormValue.end_Date;

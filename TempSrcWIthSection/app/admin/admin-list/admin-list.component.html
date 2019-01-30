@@ -1,0 +1,33 @@
+<div class="container-fluid">
+  <br>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="table-responsive">
+        <table *ngIf="isLoaded" class="table table-striped">
+          <thead>
+            <tr>
+              <th>User ID</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>E-Mail</th>
+              <th>Address</th>
+              <th>Date of birth</th>
+              <th>Option</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of users">
+              <td>{{user.user_Id}}</td>
+              <td>{{user.first_Name}}</td>
+              <td>{{user.last_Name}}</td>
+              <td>{{user.eMail}}</td>
+              <td>{{user.address}}</td>
+              <td>{{user.birth_Date | date: 'yyyy-MM-dd'}}</td>
+              <td><button type="button" id="update" class="btn btn-success" (click)='redirectToUpdatePage(user.user_Id)'>Update</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

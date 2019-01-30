@@ -26,6 +26,9 @@ export class AuthGuardAdmin implements CanActivate {
             if (currentUser && typeCode === 1) {
                 // authorised so return true
                 return true;
+            } else {
+                this.router.navigate(['/404'], { queryParams: { returnUrl: state.url } });
+                return false;
             }
         }
 
