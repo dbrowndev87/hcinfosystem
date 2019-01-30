@@ -28,7 +28,7 @@ namespace GoldStarApi.Controllers
                 var transactions = _repository.Transaction.GetAllTransactions();
                
  
-                _logger.LogInfo($"Returned all departments from database. " + transactions);
+                _logger.LogInfo($"Returned all transactions from database. " + transactions);
                 
  
                 return Ok(transactions);

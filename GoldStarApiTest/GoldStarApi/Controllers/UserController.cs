@@ -28,7 +28,7 @@ namespace GoldStarApi.Controllers
                 var users = _repository.Users.GetAllUsers();
                
  
-                _logger.LogInfo($"Returned all students from database. " + users);
+                _logger.LogInfo($"Returned all users from database. " + users);
                 
  
                 return Ok(users);
@@ -53,12 +53,12 @@ namespace GoldStarApi.Controllers
 
                     if (user.Equals(null))
                     {
-                        _logger.LogError($"Student with id: {id}, hasn't been found in db.");
+                        _logger.LogError($"User with id: {id}, hasn't been found in db.");
                         return NotFound();
                     }
                     else
                     {
-                        _logger.LogInfo($"Returned Student with id: {id}");
+                        _logger.LogInfo($"Returned User with id: {id}");
                         return Ok(user);
                     }
                 } else
@@ -79,7 +79,7 @@ namespace GoldStarApi.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Something went wrong inside GetGameById action: {ex.Message}");
+                _logger.LogError($"Something went wrong inside GetUserById action: {ex.Message}");
                 return StatusCode(500, "Internal server error");
             }
         }
@@ -92,17 +92,16 @@ namespace GoldStarApi.Controllers
             {
                 if(user.Equals(null))
                 {
-                    _logger.LogError("Student object sent from client is null.");
-                    return BadRequest("Student object is null");
+                    _logger.LogError("User object sent from client is null.");
+                    return BadRequest("User object is null");
                 }
  
                 if(!ModelState.IsValid)
                 {
-                    _logger.LogError("Invalid Student object sent from client.");
+                    _logger.LogError("Invalid User object sent from client.");
                     return BadRequest("Invalid model object");
                 }
  
-                _logger.LogError("Look Here"+user.User_Id);
                 
                 _repository.Users.CreateUser(user);
 
@@ -110,7 +109,7 @@ namespace GoldStarApi.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Something went wrong inside CreateOwner action: {ex.Message}");
+                _logger.LogError($"Something went wrong inside CreateUser action: {ex.Message}");
                 return StatusCode(500, "Internal server error");
             }
         }
@@ -122,20 +121,20 @@ namespace GoldStarApi.Controllers
             {
                 if (user.Equals(null))
                 {
-                    _logger.LogError("Student object sent from client is null.");
-                    return BadRequest("Student object is null");
+                    _logger.LogError("User object sent from client is null.");
+                    return BadRequest("User object is null");
                 }
  
                 if (!ModelState.IsValid)
                 {
-                    _logger.LogError("Invalid Student object sent from client.");
+                    _logger.LogError("Invalid User object sent from client.");
                     return BadRequest("Invalid model object");
                 }
  
                 var dbuser = _repository.Users.GetUserById(id);
                 if (dbuser.Equals(null))
                 {
-                    _logger.LogError($"Student with id: {id}, hasn't been found in db.");
+                    _logger.LogError($"User with id: {id}, hasn't been found in db.");
                     return NotFound();
                 }
  
@@ -145,7 +144,7 @@ namespace GoldStarApi.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Something went wrong inside UpdateGame action: {ex.Message}");
+                _logger.LogError($"Something went wrong inside UpdateUser action: {ex.Message}");
                 return StatusCode(500, "Internal server error");
             }
         }
@@ -158,7 +157,7 @@ namespace GoldStarApi.Controllers
                 var user = _repository.Users.GetUserById(id);
                 if(user.Equals(null))
                 {
-                    _logger.LogError($"Student with id: {id}, hasn't been found in db.");
+                    _logger.LogError($"User with id: {id}, hasn't been found in db.");
                     return NotFound();
                 }
               
@@ -168,7 +167,7 @@ namespace GoldStarApi.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Something went wrong inside DeleteGame action: {ex.Message}");
+                _logger.LogError($"Something went wrong inside DeleteUser action: {ex.Message}");
                 return StatusCode(500, "Internal server error");
             }
         }

@@ -63,7 +63,7 @@ namespace GoldStarApi.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Something went wrong inside GetGameById action: {ex.Message}");
+                _logger.LogError($"Something went wrong inside GetDepartmentById action: {ex.Message}");
                 return StatusCode(500, "Internal server error");
             }
         }
@@ -140,7 +140,7 @@ namespace GoldStarApi.Controllers
                 var department = _repository.Department.GetDepartmentById(id);
                 if(department.Equals(null))
                 {
-                    _logger.LogError($"Student with id: {id}, hasn't been found in db.");
+                    _logger.LogError($"Department with id: {id}, hasn't been found in db.");
                     return NotFound();
                 }
               

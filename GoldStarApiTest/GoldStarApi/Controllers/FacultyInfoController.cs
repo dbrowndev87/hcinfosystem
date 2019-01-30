@@ -31,38 +31,37 @@ namespace GoldStarApi.Controllers
                 
                 var facultyFromDb = _repository.Faculty.GetFacultyById(id);
                 
-                facultyInfoObject = new FacultyInfo();
-                
-
-                facultyInfoObject.Faculty_Status = facultyFromDb.Faculty_Status ;
-                facultyInfoObject.Faculty_Id = facultyFromDb.Faculty_Id;
-                facultyInfoObject.User_Id = facultyFromDb.User_Id;
-                
-                var userFromDb = _repository.Users.GetUserById(facultyFromDb.User_Id);
-                facultyInfoObject.Last_Name = userFromDb.Last_Name;
-                facultyInfoObject.First_Name = userFromDb.First_Name;
-                facultyInfoObject.Birth_Date = userFromDb.Birth_Date;
-                facultyInfoObject.Address = userFromDb.Address;
-                facultyInfoObject.EMail = userFromDb.EMail;
-                facultyInfoObject.Dept_Id = userFromDb.Dept_Id;
-                facultyInfoObject.Type_Code = userFromDb.Type_Code;
-                facultyInfoObject.User_Id = userFromDb.User_Id;
-                
  
                 if (facultyFromDb.Equals(null))
                 {
-                    _logger.LogError($"Student with id: {id}, hasn't been found in db.");
+                    _logger.LogError($"Faculty with id: {id}, hasn't been found in db.");
                     return NotFound();
                 }
-                else
-                {
-                    _logger.LogInfo($"Returned Student with id: {id}");
+              
+                
+                    _logger.LogInfo($"Returned Faculty with id: {id}");
+                    facultyInfoObject = new FacultyInfo();
+                
+
+                    facultyInfoObject.Faculty_Status = facultyFromDb.Faculty_Status ;
+                    facultyInfoObject.Faculty_Id = facultyFromDb.Faculty_Id;
+                    facultyInfoObject.User_Id = facultyFromDb.User_Id;
+                
+                    var userFromDb = _repository.Users.GetUserById(facultyFromDb.User_Id);
+                    facultyInfoObject.Last_Name = userFromDb.Last_Name;
+                    facultyInfoObject.First_Name = userFromDb.First_Name;
+                    facultyInfoObject.Birth_Date = userFromDb.Birth_Date;
+                    facultyInfoObject.Address = userFromDb.Address;
+                    facultyInfoObject.EMail = userFromDb.EMail;
+                    facultyInfoObject.Dept_Id = userFromDb.Dept_Id;
+                    facultyInfoObject.Type_Code = userFromDb.Type_Code;
+                    facultyInfoObject.User_Id = userFromDb.User_Id;
                     return Ok(facultyInfoObject);
-                }
+                
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Something went wrong inside GetStudentInfoById action: {ex.Message}");
+                _logger.LogError($"Something went wrong inside GetFacultyInfoById action: {ex.Message}");
                 return StatusCode(500, "Internal server error");
             }
         }
@@ -103,14 +102,14 @@ namespace GoldStarApi.Controllers
                 }
 
 
-                _logger.LogInfo($"Returned all students from database. " + Enumerable.Count(allFaculty));
+                _logger.LogInfo($"Returned all faculty from database. " + Enumerable.Count(allFaculty));
 
 
                 return Ok(allFacultyInfo);
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Something went wrong inside GetAllStudentInfo action: {ex.Message}");
+                _logger.LogError($"Something went wrong inside GetAllFacultyInfo action: {ex.Message}");
                 return StatusCode(500, "Internal server error");
             }
         }

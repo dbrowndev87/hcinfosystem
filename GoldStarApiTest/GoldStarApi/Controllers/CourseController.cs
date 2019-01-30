@@ -27,7 +27,7 @@ namespace GoldStarApi.Controllers
             {
                 var courses = _repository.Course.GetAllCourses();
  
-                _logger.LogInfo($"Returned all teachers from database. "+Enumerable.Count(courses));
+                _logger.LogInfo($"Returned all courses from database. "+Enumerable.Count(courses));
                 
  
                 return Ok(courses);
@@ -79,7 +79,7 @@ namespace GoldStarApi.Controllers
  
                 if(!ModelState.IsValid)
                 {
-                    _logger.LogError("Invalid Faculty object sent from client.");
+                    _logger.LogError("Invalid Course object sent from client.");
                     return BadRequest("Invalid model object");
                 }
  
@@ -138,7 +138,7 @@ namespace GoldStarApi.Controllers
                 var course = _repository.Course.GetCourseById(id);
                 if(course.Equals(null))
                 {
-                    _logger.LogError($"Faculty with id: {id}, hasn't been found in db.");
+                    _logger.LogError($"Course with id: {id}, hasn't been found in db.");
                     return NotFound();
                 }
               

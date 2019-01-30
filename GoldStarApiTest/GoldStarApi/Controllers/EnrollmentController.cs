@@ -47,7 +47,7 @@ namespace GoldStarApi.Controllers
             
             try
             {
-                _logger.LogInfo($"Look Enrollment with id: {id}");   
+             
                 var enrollment = _repository.Enrollment.GetEnrollmentById(id);
  
                 if (enrollment.Equals(null))
@@ -119,13 +119,13 @@ namespace GoldStarApi.Controllers
             {
                 if(enrollment.Equals(null))
                 {
-                    _logger.LogError("faculty object sent from client is null.");
-                    return BadRequest("faculty object is null");
+                    _logger.LogError("Enrollment object sent from client is null.");
+                    return BadRequest("Enrollment object is null");
                 }
  
                 if(!ModelState.IsValid)
                 {
-                    _logger.LogError("Invalid Faculty object sent from client.");
+                    _logger.LogError("Invalid Enrollment object sent from client.");
                     return BadRequest("Invalid model object");
                 }
  
@@ -137,7 +137,7 @@ namespace GoldStarApi.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Something went wrong inside CreateFaculty action: {ex.Message}");
+                _logger.LogError($"Something went wrong inside CreateEnrollment action: {ex.Message}");
                 return StatusCode(500, "Internal server error");
             }
         }
@@ -150,7 +150,7 @@ namespace GoldStarApi.Controllers
                 if (enrollment.Equals(null))
                 {
                     _logger.LogError("Enrollment object sent from client is null.");
-                    return BadRequest("Student object is null");
+                    return BadRequest("Enrollment object is null");
                 }
  
                 if (!ModelState.IsValid)

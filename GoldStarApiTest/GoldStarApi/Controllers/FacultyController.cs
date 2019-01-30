@@ -46,7 +46,6 @@ namespace GoldStarApi.Controllers
             
             try
             {
-                _logger.LogInfo($"Look Faculty with Userid: {id}");
 
                 var facultys = _repository.Faculty.GetAllFaculty();
                 Faculty facultyById = new Faculty();
@@ -60,18 +59,18 @@ namespace GoldStarApi.Controllers
  
                 if (facultys.Equals(null))
                 {
-                    _logger.LogError($"No students found");
+                    _logger.LogError($"No teachers found");
                     return NotFound();
                 }
                 else
                 {
-                    _logger.LogInfo($"Returned Student with id: {id}");
+                    _logger.LogInfo($"Returned Faculty with id: {id}");
                     return Ok(facultyById);
                 }
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Something went wrong inside GetStudentById action: {ex.Message}");
+                _logger.LogError($"Something went wrong inside GetFacultyById action: {ex.Message}");
                 return StatusCode(500, "Internal server error");
             }
         }
@@ -97,7 +96,7 @@ namespace GoldStarApi.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Something went wrong inside GetGameById action: {ex.Message}");
+                _logger.LogError($"Something went wrong inside GetFacultyById action: {ex.Message}");
                 return StatusCode(500, "Internal server error");
             }
         }
@@ -119,8 +118,6 @@ namespace GoldStarApi.Controllers
                     _logger.LogError("Invalid Faculty object sent from client.");
                     return BadRequest("Invalid model object");
                 }
- 
-                _logger.LogError("Look Here"+faculty.Faculty_Id);
                 
                 _repository.Faculty.CreateFaculty(faculty);
 
@@ -140,13 +137,13 @@ namespace GoldStarApi.Controllers
             {
                 if (faculty.Equals(null))
                 {
-                    _logger.LogError("Student object sent from client is null.");
-                    return BadRequest("Student object is null");
+                    _logger.LogError("Faculty object sent from client is null.");
+                    return BadRequest("Faculty object is null");
                 }
  
                 if (!ModelState.IsValid)
                 {
-                    _logger.LogError("Invalid Student object sent from client.");
+                    _logger.LogError("Invalid Faculty object sent from client.");
                     return BadRequest("Invalid model object");
                 }
  

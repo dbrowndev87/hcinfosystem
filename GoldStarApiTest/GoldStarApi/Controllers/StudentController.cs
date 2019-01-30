@@ -47,7 +47,6 @@ namespace GoldStarApi.Controllers
             
             try
             {
-                _logger.LogInfo($"Look STUDENT with Userid: {id}");  
                 
                 var students = _repository.Student.GetAllStudents();
                 Student studentById = new Student();
@@ -83,7 +82,7 @@ namespace GoldStarApi.Controllers
             
             try
             {
-                _logger.LogInfo($"Look STUDENT with id: {id}");   
+           
                 var student = _repository.Student.GetStudentById(id);
  
                 if (student.Equals(null))
@@ -131,7 +130,7 @@ namespace GoldStarApi.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Something went wrong inside CreateOwner action: {ex.Message}");
+                _logger.LogError($"Something went wrong inside CreateStudent action: {ex.Message}");
                 return StatusCode(500, "Internal server error");
             }
         }
@@ -188,7 +187,7 @@ namespace GoldStarApi.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Something went wrong inside DeleteFaculty action: {ex.Message}");
+                _logger.LogError($"Something went wrong inside DeleteStudent action: {ex.Message}");
                 return StatusCode(500, "Internal server error");
             }
         }

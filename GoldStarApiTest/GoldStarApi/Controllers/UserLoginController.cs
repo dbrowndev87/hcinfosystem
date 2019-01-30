@@ -27,14 +27,14 @@ namespace GoldStarApi.Controllers
             {
                 var userLogins = _repository.UserLogin.GetAllUserLogins();
  
-                _logger.LogInfo($"Returned all users from database. "+Enumerable.Count(userLogins));
+                _logger.LogInfo($"Returned all userlogins from database. "+Enumerable.Count(userLogins));
                 
  
                 return Ok(userLogins);
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Something went wrong inside Users action: {ex.Message}");
+                _logger.LogError($"Something went wrong inside UserLogin action: {ex.Message}");
                 return StatusCode(500, "Internal server error");
             }
         }
@@ -72,17 +72,16 @@ namespace GoldStarApi.Controllers
             {
                 if(userLogin.Equals(null))
                 {
-                    _logger.LogError("User object sent from client is null.");
-                    return BadRequest("User object is null");
+                    _logger.LogError("UserLogin object sent from client is null.");
+                    return BadRequest("UserLogin object is null");
                 }
  
                 if(!ModelState.IsValid)
                 {
-                    _logger.LogError("Invalid User object sent from client.");
+                    _logger.LogError("Invalid UserLogin object sent from client.");
                     return BadRequest("Invalid model object");
                 }
- 
-                _logger.LogError("Look Here"+userLogin.Username);
+
                 
                 _repository.UserLogin.CreateUserLogin(userLogin);
 
@@ -90,7 +89,7 @@ namespace GoldStarApi.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Something went wrong inside CreateUser action: {ex.Message}");
+                _logger.LogError($"Something went wrong inside CreateUserLogin action: {ex.Message}");
                 return StatusCode(500, "Internal server error");
             }
         }
@@ -102,13 +101,13 @@ namespace GoldStarApi.Controllers
             {
                 if (userLogin.Equals(null))
                 {
-                    _logger.LogError("User object sent from client is null.");
-                    return BadRequest("User object is null");
+                    _logger.LogError("UserLogin object sent from client is null.");
+                    return BadRequest("UserLogin object is null");
                 }
  
                 if (!ModelState.IsValid)
                 {
-                    _logger.LogError("Invalid User object sent from client.");
+                    _logger.LogError("Invalid UserLogin object sent from client.");
                     return BadRequest("Invalid model object");
                 }
  
@@ -125,7 +124,7 @@ namespace GoldStarApi.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Something went wrong inside UpdateUser action: {ex.Message}");
+                _logger.LogError($"Something went wrong inside UpdateUserLogin action: {ex.Message}");
                 return StatusCode(500, "Internal server error");
             }
         }
@@ -148,7 +147,7 @@ namespace GoldStarApi.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Something went wrong inside DeleteUser action: {ex.Message}");
+                _logger.LogError($"Something went wrong inside DeleteUserLogin action: {ex.Message}");
                 return StatusCode(500, "Internal server error");
             }
         }

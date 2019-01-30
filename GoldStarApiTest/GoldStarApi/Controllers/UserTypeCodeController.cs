@@ -28,7 +28,7 @@ namespace GoldStarApi.Controllers
                 var typecodes = _repository.TypeCode.GetAllTypeCodes();
                
  
-                _logger.LogInfo($"Returned all students from database. " + typecodes);
+                _logger.LogInfo($"Returned all typecodes from database. " + typecodes);
                 
  
                 return Ok(typecodes);
@@ -56,7 +56,7 @@ namespace GoldStarApi.Controllers
                     }
                     else
                     {
-                        _logger.LogInfo($"Returned Student with id: {id}");
+                        _logger.LogInfo($"Returned typecode with id: {id}");
                         return Ok(typeCode);
                     }
        
@@ -87,7 +87,6 @@ namespace GoldStarApi.Controllers
                     return BadRequest("Invalid model object");
                 }
  
-                _logger.LogError("Look Here"+typeCode.Type_Code);
                 
                 _repository.TypeCode.CreateUserTypeCode(typeCode);
 

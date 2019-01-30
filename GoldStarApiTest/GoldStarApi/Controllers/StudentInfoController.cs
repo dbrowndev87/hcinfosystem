@@ -31,35 +31,37 @@ namespace GoldStarApi.Controllers
                 
                 var studentFromDb = _repository.Student.GetStudentById(id);
                 
-                studentInfoObject = new StudentInfo();
-                
-
-                studentInfoObject.Gpa = studentFromDb.Gpa ;
-                studentInfoObject.Student_Id = studentFromDb.Student_Id;
-                studentInfoObject.Amount_Owing = studentFromDb.Amount_Owing;
-                studentInfoObject.Student_Status = studentFromDb.Student_Status;
-                
-                var userFromDb = _repository.Users.GetUserById(studentFromDb.User_Id);
-                studentInfoObject.Last_Name = userFromDb.Last_Name;
-                studentInfoObject.First_Name = userFromDb.First_Name;
-                studentInfoObject.Birth_Date = userFromDb.Birth_Date;
-                studentInfoObject.Address = userFromDb.Address;
-                studentInfoObject.EMail = userFromDb.EMail;
-                studentInfoObject.Dept_Id = userFromDb.Dept_Id;
-                studentInfoObject.Type_Code = userFromDb.Type_Code;
-                studentInfoObject.User_Id = userFromDb.User_Id;
-                
  
                 if (studentFromDb.Equals(null))
                 {
                     _logger.LogError($"Student with id: {id}, hasn't been found in db.");
                     return NotFound();
                 }
-                else
-                {
+             
                     _logger.LogInfo($"Returned Student with id: {id}");
+
+
+                    studentInfoObject = new StudentInfo
+                    {
+                        Gpa = studentFromDb.Gpa,
+                        Student_Id = studentFromDb.Student_Id,
+                        Amount_Owing = studentFromDb.Amount_Owing,
+                        Student_Status = studentFromDb.Student_Status
+                    };
+
+
+
+                    var userFromDb = _repository.Users.GetUserById(studentFromDb.User_Id);
+                    studentInfoObject.Last_Name = userFromDb.Last_Name;
+                    studentInfoObject.First_Name = userFromDb.First_Name;
+                    studentInfoObject.Birth_Date = userFromDb.Birth_Date;
+                    studentInfoObject.Address = userFromDb.Address;
+                    studentInfoObject.EMail = userFromDb.EMail;
+                    studentInfoObject.Dept_Id = userFromDb.Dept_Id;
+                    studentInfoObject.Type_Code = userFromDb.Type_Code;
+                    studentInfoObject.User_Id = userFromDb.User_Id;
                     return Ok(studentInfoObject);
-                }
+                
             }
             catch (Exception ex)
             {
