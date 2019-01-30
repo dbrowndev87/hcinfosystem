@@ -33,9 +33,4 @@ export class MenuComponent implements OnInit {
       this.loggedIn = true;
     }
   }
-
-  loadCreateUser(typeCode: number) {
-    this.router.navigate(['/user/create/' + typeCode]);
-    this.globals.reloadPage();
-  }
 }

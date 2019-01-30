@@ -26,6 +26,7 @@ export class LogoutComponent implements OnInit {
       sessionStorage.removeItem('isLoggedIn');
       sessionStorage.removeItem('typeCode');
 
+
       // If there is a Type of ID stored remove it.
       if (sessionStorage.getItem('studentId')) {
         sessionStorage.removeItem('studentId');
@@ -35,6 +36,11 @@ export class LogoutComponent implements OnInit {
 
       } else if (sessionStorage.getItem('userId')) {
         sessionStorage.removeItem('userId');
+
+      }
+
+      if (sessionStorage.getItem('previousUrl')) {
+        sessionStorage.removeItem('previousUrl');
       }
 
       // reload page.

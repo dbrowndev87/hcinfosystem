@@ -18,7 +18,7 @@ export class SectionCreateComponent implements OnInit {
   public sectionForm: FormGroup;
   public designations = new Array("A", "B", "C", "L");
   public courses: Course[];
-  
+
   @ViewChild('dCode') dCode: ElementRef;
 
 
@@ -51,8 +51,8 @@ export class SectionCreateComponent implements OnInit {
     return false;
   }
 
-   // Execute the Date Picker object.
-   public executeStartDatePicker(event) {
+  // Execute the Date Picker object.
+  public executeStartDatePicker(event) {
     this.sectionForm.patchValue({ 'start_Date': event });
   }
 
@@ -92,6 +92,7 @@ export class SectionCreateComponent implements OnInit {
 
     // Make a section interface.
     let section: Section = {
+      section_Id: 0,
       faculty_Id: parseInt(sectionFormValue.faculty_Id, 0),
       start_Date: sectionFormValue.start_Date,
       end_Date: sectionFormValue.end_Date,

@@ -8,15 +8,15 @@
  */
 import { Component, OnInit } from '@angular/core';
 import { RepositoryService } from 'src/app/shared/services/repository.service';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 import { ErrorHandlerService } from 'src/app/shared/services/error-handler.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Student } from 'src/app/_interfaces/student.model';
 import { StudentInfo } from 'src/app/_interfaces/studentInfo.model';
 import { Transaction } from 'src/app/_interfaces/transaction.model';
 import { TransactionIdGenerator } from 'src/app/shared/tools/tidg';
-import { Observable, Subscription, generate } from 'rxjs';
-import { CompileTemplateMetadata } from '@angular/compiler';
+import { Subscription } from 'rxjs';
+
 
 @Component({
   selector: 'app-student-payment',
@@ -228,6 +228,9 @@ export class StudentPaymentComponent implements OnInit {
 
         // Make transaction
         this.createTransaction(studentPaymentFormValue.amount);
+
+        this.studentPaymentForm.get('amount').setValue('');
+        this.studentPaymentForm.get('amount').markAsUntouched();
 
         // success.
         $('#successModal').modal();
