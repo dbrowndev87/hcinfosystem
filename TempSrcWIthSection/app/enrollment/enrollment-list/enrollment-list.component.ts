@@ -1,12 +1,19 @@
+/**
+ * Name: Enrollement List Component
+ * Description: This is the Enrollement List component which has all the attributes
+ * and methods pertain to the component.
+ * 
+ * Author: Darcy Brown
+ * Date: January 30th, 2019
+ */
 import { Component, OnInit } from '@angular/core';
 import { Enrollment } from 'src/app/_interfaces/enrollment.model';
 import { RepositoryService } from 'src/app/shared/services/repository.service';
 import { ErrorHandlerService } from 'src/app/shared/services/error-handler.service';
 import { Router } from '@angular/router';
-import { Course } from 'src/app/_interfaces/course.model';
-import { Department } from 'src/app/_interfaces/department.model';
 import { StudentInfo } from 'src/app/_interfaces/studentInfo.model';
 import { EnrollmentInfo } from 'src/app/_interfaces/enrollmentInfo.model';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-enrollment-list',
@@ -17,78 +24,83 @@ export class EnrollmentListComponent implements OnInit {
 
   private studentInfo: StudentInfo[];
   private enrollments: Enrollment[];
-  private enrollmentInfo: EnrollmentInfo[];
+  private enrollmentInfo: EnrollmentInfo[] = [];
   public errorMessage: String = "";
   private isLoaded = false;
   constructor(private repository: RepositoryService, private errorHandler: ErrorHandlerService, private router: Router) { }
 
   ngOnInit() {
     this.getAllenrollments();
-    this.getAllStudentInfo();
-    this.isLoaded = true;
-  }
-
-  public getAllenrollments() {
-    let apiAddress = "api/";
-    this.repository.getData(apiAddress)
-      .subscribe(enrollments => {
-        this.enrollments = enrollments as Enrollment[];
-      }),
-      // tslint:disable-next-line: no-unused-expression
-      (error) => {
-        this.errorHandler.handleError(error);
-        this.errorMessage = "Unable to access API";
-      };
   }
 
   /**
-   * This is the get all student info function which uses the
-   * array of enrollements from up above and the students gathered
-   * below to create Enrollement Info array which is a small
-   * mix of both for the view.
+   * This is a method which kills two birds with one stone. I tried using
+   * map here to accomplish both tasks at the same time and built an enrollement
+   * info object for each enrollement, using the students name as well for easier search
+   * in the view.
    * 
    * Author: Darcy Brown
-   * Date: January 30th, 2018
+   * Date: January 30th, 2019
    */
-  public getAllStudentInfo() {
-    let apiAddress = "api/studentinfo";
-    this.repository.getData(apiAddress)
-      .subscribe(res => {
-        this.studentInfo = res as StudentInfo[];
+  public getAllenrollments() {
 
-        // Create enrollement info array for view.
-        for (let x = 0; x < this.studentInfo.length; x++) {
+    let apiAddress = "api/enrollment";
+    this.repository.getData(apiAddress).pipe(
+      map(enrollments => {
+        // Assign the enrollements
+        this.enrollments = enrollments as Enrollment[];
 
-          // Student ID for Check
-          let Id = this.studentInfo[x].student_Id;
+        // Get the student info
+        let apiAddressStudents = "api/studentinfo";
+        this.repository.getData(apiAddressStudents).pipe(
+          map(studentinfo => {
 
-          // For each enrollement
-          for (let y = 0; y < this.enrollments.length; y++) {
+            // assign the student info
+            this.studentInfo = studentinfo as StudentInfo[];
 
-            // If the IDs match create an enrollement info
-            // Interface and push it to the Array.
-            if (this.enrollments[x].student_Id === Id) {
+            // Create enrollement info array for view.
+            for (let x = 0; x < this.studentInfo.length; x++) {
 
-              let tempEnrollment: EnrollmentInfo = {
-                student_Id: this.enrollments[x].student_Id,
-                first_Name: this.studentInfo[x].first_Name,
-                last_Name: this.studentInfo[x].last_Name,
-                course_Status: this.enrollments[x].course_Status,
-                grade: this.enrollments[x].grade,
-                section_Id: this.enrollments[x].section_Id
-              };
+              // Student ID for Check
+              let Id = this.studentInfo[x].student_Id;
 
-              this.enrollmentInfo.push(tempEnrollment);
+              // For each enrollement
+              for (let y = 0; y < this.enrollments.length; y++) {
+
+                // If the IDs match create an enrollement info
+                // Interface and push it to the Array.
+                if (this.enrollments[x].student_Id === Id) {
+
+                  let tempEnrollment: EnrollmentInfo = {
+                    student_Id: this.enrollments[x].student_Id,
+                    first_Name: this.studentInfo[x].first_Name,
+                    last_Name: this.studentInfo[x].last_Name,
+                    course_Status: this.enrollments[x].course_Status,
+                    grade: this.enrollments[x].grade,
+                    section_Id: this.enrollments[x].section_Id
+                  };
+
+                  // Push the Enrollment Info item to the array
+                  this.enrollmentInfo.push(tempEnrollment);
+                }
+              }
             }
-          }
-        }
-
-      }),
-      // tslint:disable-next-line: no-unused-expression
+            // Set the data is loaded flag.
+            this.isLoaded = true;
+          })
+        ).subscribe(e => { },
+          (error) => {
+            this.errorHandler.handleError(error);
+            this.errorMessage = "Unable to access API";
+            this.isLoaded = true;
+          });
+      })
+    ).subscribe(e => { },
       (error) => {
         this.errorHandler.handleError(error);
         this.errorMessage = "Unable to access API";
-      };
+        this.isLoaded = true;
+      });
   }
 
   public redirectToUpdatePage(id) {

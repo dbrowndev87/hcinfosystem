@@ -1,3 +1,11 @@
+/**
+ * Name: Admin List Component
+ * Description: This is the Admin List component which has all the attributes
+ * and methods pertain to the component.
+ * 
+ * Author: Darcy Brown
+ * Date: January 26th, 2019
+ */
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/_interfaces/user.model';
 import { Department } from 'src/app/_interfaces/department.model';

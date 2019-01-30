@@ -1,3 +1,11 @@
+/**
+ * Name: Admin Update Component
+ * Description: This is the  Admin Update component which has all the attributes
+ * and methods pertain to the component.
+ * 
+ * Author: Darcy Brown
+ * Date: January 26th, 2019
+ */
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { User } from 'src/app/_interfaces/user.model';
 import { FormGroup, FormControl, Validators } from '@angular/forms';

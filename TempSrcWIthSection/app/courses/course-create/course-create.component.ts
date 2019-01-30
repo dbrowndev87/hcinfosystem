@@ -1,3 +1,11 @@
+/**
+ * Name: Course Create Component
+ * Description: This is the Course Create component which has all the attributes
+ * and methods pertain to the component.
+ * 
+ * Author: Darcy Brown
+ * Date: January 26th, 2019
+ */
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { RepositoryService } from 'src/app/shared/services/repository.service';

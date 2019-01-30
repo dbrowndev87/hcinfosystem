@@ -1,3 +1,11 @@
+/**
+ * Name: Course List Component
+ * Description: This is the Course List component which has all the attributes
+ * and methods pertain to the component.
+ * 
+ * Author: Darcy Brown
+ * Date: January 26th, 2019
+ */
 import { Component, OnInit } from '@angular/core';
 import { Course } from 'src/app/_interfaces/course.model';
 import { RepositoryService } from 'src/app/shared/services/repository.service';

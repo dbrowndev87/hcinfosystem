@@ -13,7 +13,16 @@
               <th>Grade:</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody *ngIf="!isLoaded">
+            <tr>
+              <td colspan="4">
+                <div class="centerDiv" *ngIf="!isLoaded">
+                  <img src="../../../assets/loading.gif" class="center-block imgLoading" />
+                </div>
+              </td>
+            </tr>
+          </tbody>
+          <tbody *ngIf="isLoaded">
             <tr *ngFor="let enrollment of enrollmentInfo">
               <td>{{enrollment.student_Id}} - {{enrollment.first_Name}} {{enrollment.last_Name}}</td>
               <td>{{enrollment.section_Id}}</td>
