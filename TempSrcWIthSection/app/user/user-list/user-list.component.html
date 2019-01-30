@@ -1,0 +1,40 @@
+<div class="container-fluid">
+  <br>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>User ID</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>E-Mail</th>
+              <th>Address</th>
+              <th>Date of birth</th>
+              <th>Type Code</th>
+              <th>Program</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of users">
+              <td>{{user.user_Id}}</td>
+              <td>{{user.first_Name}}</td>
+              <td>{{user.last_Name}}</td>
+              <td>{{user.eMail}}</td>
+              <td>{{user.address}}</td>
+              <td>{{user.birth_date | date: 'dd/MM/yyyy'}}</td>
+              <td>{{user.type_Code}}
+                <span *ngIf="user.type_Code === 1"> - Admin</span>
+                <span *ngIf="user.type_Code === 2"> - Faculty</span>
+                <span *ngIf="user.type_Code === 3"> - Student</span>
+              </td>
+              <td *ngIf="isLoaded">{{user.dept_Id}} - {{depts[(user.dept_Id - 1)].dept_Name}}</td>
+              <td><button type="button" id="update" class="btn btn-success" (click)='redirectToUpdatePage(user.user_Id)'>Update</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

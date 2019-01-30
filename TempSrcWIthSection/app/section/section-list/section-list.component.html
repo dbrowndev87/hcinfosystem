@@ -1,0 +1,41 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-offset-10 col-md-2">
+      <a [routerLink]="['/section/create']">Create Section</a>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Course Id:</th>
+              <th>Designation:</th>
+              <th>Semester:</th>
+              <th>Faculty Id:</th>
+              <th>Start Date:</th>
+              <th>End Date:</th>
+              <th>Vacancy:</th>
+             
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let section of sections">
+              <td>{{section.course_Id}}</td>
+              <td>{{section.designation}}</td>
+              <td>{{section.semester}}</td>
+              <td>{{section.faculty_Id}}</td>
+              <td>{{section.start_Date}}</td>
+              <td>{{section.end_Date}}</td>
+              <td>{{section.vacancy}}</td>
+           
+              <td><button type="button" id="update" class="btn btn-success" (click)='redirectToUpdatePage(section.section_Id)'>Update</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

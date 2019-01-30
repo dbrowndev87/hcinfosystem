@@ -1,0 +1,43 @@
+<div class="container-fluid">
+
+  <div *ngIf="isLoaded" class="well">
+    <!-- Display student info here -->
+    <h2>Update Student</h2>
+    Student ID: {{studentInfo.studentId}}<br>
+    Student Name: {{studentInfo.first_Name}} {{studentInfo.last_Name}}
+  </div>
+  <div class="centerDiv" *ngIf="!isLoaded">
+    <img src="../../../assets/loading.gif" class="center-block imgLoading" />
+  </div>
+
+  <form [formGroup]="studentUpdateForm" autocomplete="off" novalidate (ngSubmit)="updateStudent(studentUpdateForm.value)">
+    <div class="form-horizontal well">
+
+      <div class="form-group">
+        <label for="student_Status" class="control-label">Student Status: </label>
+        <div class="col-md-auto">
+          <select #sStatus name="student_Status" id="student_Status" formControlName="student_Status">
+            <option value="Enrolled" selected="selected">Enrolled</option>
+            <option value="Alumni">Alumni</option>
+            <option value="Drop Out">Drop Out</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-md-offset-5 col-md-1">
+          <button type="submit" class="btn btn-info" [disabled]="!studentUpdateForm.valid">Update</button>
+        </div>
+        <div class="col-md-1">
+          <button type="button" class="btn btn-danger" (click)="redirectToStudentList()">Cancel</button>
+        </div>
+      </div>
+
+    </div>
+  </form>
+
+  <app-success-modal [modalHeaderText]="'Success message'" [modalBodyText]="'Update completed successfully'"
+    [okButtonText]="'OK'" (redirectOnOK)="redirectToStudentList()"></app-success-modal>
+
+  <app-error-modal [modalHeaderText]="'Error message'" [modalBodyText]="errorMessage" [okButtonText]="'OK'"></app-error-modal>
+</div>

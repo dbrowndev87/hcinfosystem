@@ -1,0 +1,35 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-offset-10 col-md-2">
+      <a [routerLink]="['/course/create']">Create Course</a>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Course ID:</th>
+              <th>Course Name:</th>
+              <th>Department:</th>
+              <th>Credits:</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let course of courses">
+              <td>{{course.course_Id}}</td>
+              <td>{{course.course_Name}}</td>
+              <td *ngIf="isLoaded">
+                {{depts[(course.dept_Id - 1)].dept_Id}} - {{depts[(course.dept_Id - 1)].dept_Name}}
+              </td>
+              <td>{{course.credits}}</td>
+              <td><button type="button" id="update" class="btn btn-success" (click)='redirectToUpdatePage(course.course_Id)'>Update</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
