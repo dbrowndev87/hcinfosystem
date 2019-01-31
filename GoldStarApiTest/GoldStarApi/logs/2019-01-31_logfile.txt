@@ -1,0 +1,29 @@
+2019-01-31 08:37:36.0400 INFO Returned user with username: dbrown32066
+2019-01-31 08:37:36.3712 INFO Returned User with id: 1
+2019-01-31 08:40:26.6059 INFO Returned user with username: dbrown32066
+2019-01-31 08:40:26.6808 INFO Returned User with id: 1
+2019-01-31 11:14:35.6615 INFO Returned user with username: dbrown32066
+2019-01-31 11:14:35.9396 INFO Returned User with id: 1
+2019-01-31 11:14:41.4308 INFO Returned all userlogins from database. 6
+2019-01-31 11:15:02.9033 INFO Returned all sections from database. 1
+2019-01-31 11:15:13.7153 INFO Returned all courses from database. 1
+2019-01-31 11:15:30.0704 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-31 11:15:31.7273 INFO Returned all users from database. System.Linq.OrderedEnumerable`2[Entities.Models.User,System.String]
+2019-01-31 11:15:38.0741 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-31 11:15:38.1433 INFO Entities.Models.FacultyInfo
+2019-01-31 11:15:38.1479 INFO Returned all faculty from database. 1
+2019-01-31 11:16:11.9192 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-31 11:16:11.9356 INFO Entities.Models.FacultyInfo
+2019-01-31 11:16:11.9583 INFO Returned all faculty from database. 1
+2019-01-31 11:16:46.5202 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-31 11:16:46.5420 INFO Entities.Models.FacultyInfo
+2019-01-31 11:16:46.5625 INFO Returned all faculty from database. 1
+2019-01-31 11:17:23.5203 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-31 11:17:23.5203 INFO Entities.Models.FacultyInfo
+2019-01-31 11:17:23.5400 INFO Returned all faculty from database. 1
+2019-01-31 11:17:49.7601 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-31 11:17:49.7730 INFO Entities.Models.FacultyInfo
+2019-01-31 11:17:49.7949 INFO Returned all faculty from database. 1
+2019-01-31 11:18:24.6490 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-01-31 11:18:24.6490 INFO Entities.Models.FacultyInfo
+2019-01-31 11:18:24.6806 INFO Returned all faculty from database. 1

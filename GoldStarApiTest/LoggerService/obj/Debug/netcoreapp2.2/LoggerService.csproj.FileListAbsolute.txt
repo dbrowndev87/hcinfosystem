@@ -153,3 +153,4 @@ D:\Bitbucket\goldstarcode\GoldStarApiTest\LoggerService\bin\Debug\netcoreapp2.2\
 D:\Bitbucket\goldstarcode\GoldStarApiTest\LoggerService\bin\Debug\netcoreapp2.2\Contracts.pdb
 D:\Bitbucket\goldstarcode\GoldStarApiTest\LoggerService\bin\Debug\netcoreapp2.2\Entities.pdb
 D:\Bitbucket\goldstarcode\GoldStarApiTest\LoggerService\obj\Debug\netcoreapp2.2\LoggerService.csproj.CopyComplete
+D:\Bitbucket\goldstarcode\GoldStarApiTest\LoggerService\obj\Debug\netcoreapp2.2\LoggerService.csprojAssemblyReference.cache

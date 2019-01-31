@@ -131,3 +131,4 @@ D:\Bitbucket\goldstarcode\GoldStarApiTest\Contracts\bin\Debug\netcoreapp2.2\Cont
 D:\Bitbucket\goldstarcode\GoldStarApiTest\Contracts\bin\Debug\netcoreapp2.2\Entities.dll
 D:\Bitbucket\goldstarcode\GoldStarApiTest\Contracts\bin\Debug\netcoreapp2.2\Entities.pdb
 D:\Bitbucket\goldstarcode\GoldStarApiTest\Contracts\obj\Debug\netcoreapp2.2\Contracts.csproj.CopyComplete
+D:\Bitbucket\goldstarcode\GoldStarApiTest\Contracts\obj\Debug\netcoreapp2.2\Contracts.csprojAssemblyReference.cache
