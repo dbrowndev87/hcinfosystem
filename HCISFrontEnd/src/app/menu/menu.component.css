@@ -1,0 +1,53 @@
+
+a:link{
+    color: black !important;
+    text-shadow: 1px 0px 1px silver;
+}
+
+a:visited{
+    background: url('../../assets/topbar.jpg') !important;
+    background-size: contain !important;
+    color: black !important;
+}
+
+a:hover{
+    color: black !important;
+}
+
+a:active{
+    background-size: contain !important;
+    color: black !important;
+}
+
+.navbar{
+    box-shadow: 1px 0px 1px black;
+}
+.navbar .navbar-nav > li.open > a {
+    background: url('../../assets/topbar.jpg') !important;
+    background-size: contain !important;
+}
+
+.navbar .navbar-nav > li.open > a:hover,
+.navbar .navbar-nav > li.open > a:focus {
+    background: url('../../assets/topbar.jpg') !important;
+    background-size: contain !important;
+}
+
+.active{
+    font-weight: bold;
+    font-style: italic;
+    color: #fff;
+}
+
+#topBar{
+    background: url('../../assets/topbar.jpg');
+    background-size: contain;
+}
+
+.dropdown-menu{
+    background-color: #dfe0e2;
+    border-left-color: black;
+    border-right-color: black;
+    border-bottom-color: black;
+    
+}

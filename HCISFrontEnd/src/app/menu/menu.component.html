@@ -1,0 +1,64 @@
+<nav class="navbar navbar-inverse" id="topBar">
+        <div class="container-fluid">
+                <div class="navbar-header">
+                        <a class="navbar-brand" [routerLink]="['/home']" routerLinkActive="active"
+                                [routerLinkActiveOptions]="{exact: true}">H.C.Information System</a>
+                </div>
+                <ul class="nav navbar-nav">
+                        <!-- Administrator Links -->
+                        <li class="dropdown" *ngIf="loggedIn && typeCode === 1">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                        aria-expanded="false">Create User<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                        <li *ngIf="loggedIn && typeCode === 1"><a [routerLink]="['/user/create/3']"
+                                                        routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Create
+                                                        Student</a></li>
+                                        <li *ngIf="loggedIn && typeCode === 1"><a [routerLink]="['/user/create/2']"
+                                                        routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Create
+                                                        Faculty</a></li>
+                                        <li *ngIf="loggedIn && typeCode === 1"><a [routerLink]="['/user/create/1']"
+                                                        routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Create
+                                                        Admin</a></li>
+                                </ul>
+                        </li>
+                        <li class="dropdown" *ngIf="loggedIn && typeCode === 1">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                        aria-expanded="false">View Lists<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                        <li *ngIf="loggedIn && typeCode === 1"><a [routerLink]="['/userlogin/list']"
+                                                        routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">User
+                                                        Login List</a></li>
+                                        <li *ngIf="loggedIn && typeCode === 1"><a [routerLink]="['/admin/list']"
+                                                        routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Admin
+                                                        List</a></li>
+                                        <li *ngIf="loggedIn && typeCode === 1"><a [routerLink]="['/faculty/list']"
+                                                        routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Faculty
+                                                        List</a></li>
+                                        <li *ngIf="loggedIn && typeCode === 1"><a [routerLink]="['/student/list']"
+                                                        routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Student
+                                                        List</a></li>
+                                        <li *ngIf="loggedIn && typeCode === 1"><a [routerLink]="['/course/list']"
+                                                        routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Course
+                                                        List</a></li>
+                                        <li *ngIf="loggedIn && typeCode === 1"><a [routerLink]="['/enrollment/list']"
+                                                        routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                                        Enrollment List</a></li>
+                                        <li *ngIf="loggedIn && typeCode === 1"><a [routerLink]="['/section/list']"
+                                                        routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                                        Section List</a></li>
+                                </ul>
+                        </li>
+
+                        <!-- Student Links -->
+                        <li *ngIf="loggedIn && typeCode === 3"><a [routerLink]="['/student/payment']" routerLinkActive="active"
+                                        [routerLinkActiveOptions]="{exact: true}">Student
+                                        Payment</a></li>
+                        <li *ngIf="!loggedIn"><a [routerLink]="['/login']" routerLinkActive="active"
+                                        [routerLinkActiveOptions]="{exact: true}">Log
+                                        In</a></li>
+                        <li *ngIf="loggedIn"><a [routerLink]="['/logout']" routerLinkActive="active"
+                                        [routerLinkActiveOptions]="{exact: true}">Log
+                                        Out</a></li>
+                </ul>
+        </div>
+</nav>

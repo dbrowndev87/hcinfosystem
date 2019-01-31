@@ -1,0 +1,71 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    /* background: url(./assets/back.jpg) no-repeat center center fixed; */
+    
+     /* background: url(./assets/back3.jpg) no-repeat center center fixed; */
+    
+    background: url(./assets/back5.jpg) no-repeat center center fixed; 
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    text-shadow: 1px 0px 1px silver;
+}
+
+a:link{
+    color: black !important;
+}
+
+a:visited{
+    color: black !important;
+}
+
+a:hover{
+    color: black !important;
+    text-decoration: none;
+}
+
+a:active{
+    color: black !important;
+}
+
+
+.ui-widget-header {
+    color: #564040;
+}
+em{
+    color: black;
+    font-weight: bold;
+}
+.centerDiv{
+    float: none;
+    left:0;
+    right:0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.backLightGrey{
+    background: #e2e2e2;
+}
+
+.homeText{
+    font-size: 35px;
+    color: black;
+    text-align: center;
+    position: relative;
+    top:30px;
+    text-shadow: 2px 2px 2px gray;
+}
+
+.imgLoading{
+    width: 100px;
+}
+
+.well {
+    box-shadow: 1px 1px 1px black;
+    border: 1px black solid;
+    border-radius: 10px;
+}
+

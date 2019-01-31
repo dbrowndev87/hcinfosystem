@@ -1,0 +1,29 @@
+<div class="container-fluid">
+  <br>
+  <div class="row">
+    <div class="col-md-8 centerDiv well">
+      <div class="table-responsive">
+        <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table table-striped">
+          <thead>
+            <tr>
+              <th>Enrolee:</th>
+              <th>Section ID:</th>
+              <th>Status:</th>
+              <th>Grade:</th>
+              <th>Option:</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let enrollment of enrollmentInfo">
+              <td>{{enrollment.student_Id}} - {{enrollment.first_Name}} {{enrollment.last_Name}}</td>
+              <td>{{enrollment.section_Id}}</td>
+              <td>{{enrollment.course_Status}}</td>
+              <td>{{enrollment.grade}}</td>
+              <td><button type="button" id="update" class="btn btn-success" (click)='redirectToUpdatePage(enrollment.enrollment_Id)'>Update</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
