@@ -1,0 +1,30 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="well col-md-8 centerDiv">
+      <a [routerLink]="['/department/create/']">Create Department</a>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-8 centerDiv well">
+      <div class="table-responsive table-striped">
+        <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table table-striped">
+          <thead>
+            <tr>
+              <th style="width: 5%">Department ID</th>
+              <th style="width: 5%">Department Name</th>
+              <th style="width: 5%">Options</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let dept of departments">
+              <td>{{dept.dept_Id}}</td>
+              <td>{{dept.dept_Name}}</td>
+              <td><button type="button" id="update" class="btn btn-success" (click)='redirectToUpdatePage(dept.dept_Id)'>Update</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

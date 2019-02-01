@@ -36,6 +36,9 @@ import { EnrollmentRoutingModule } from './enrollment/enrollment.routing';
 import { SectionModule } from './section/section.module';
 import { SectionRoutingModule } from './section/section.routing';
 import { DataTablesModule, DataTableDirective } from 'angular-datatables';
+import { DepartmentModule } from './department/department.module';
+import { DepartmentRoutingModule } from './department/department.routing';
+
 
 
 
@@ -46,7 +49,7 @@ import { DataTablesModule, DataTableDirective } from 'angular-datatables';
     NotFoundComponent,
     MenuComponent,
     HomeComponent,
-    InternalServerComponent
+    InternalServerComponent,
   ],
   imports: [
     CommonModule,
@@ -70,6 +73,8 @@ import { DataTablesModule, DataTableDirective } from 'angular-datatables';
     EnrollmentRoutingModule,
     SectionModule,
     SectionRoutingModule,
+    DepartmentModule,
+    DepartmentRoutingModule,
     // These Must Go Last.
     RouterModule,
     AppRoutingModule,

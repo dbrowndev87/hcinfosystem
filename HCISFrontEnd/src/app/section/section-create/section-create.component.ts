@@ -5,6 +5,7 @@ import { ErrorHandlerService } from 'src/app/shared/services/error-handler.servi
 import { Router } from '@angular/router';
 import { Section } from 'src/app/_interfaces/section.model';
 import { Course } from "src/app/_interfaces/course.model";
+import { FacultyInfo } from 'src/app/_interfaces/facultyInfo.model';
 
 @Component({
   selector: 'app-section-create',
@@ -17,6 +18,7 @@ export class SectionCreateComponent implements OnInit {
   private userType: number;
   public sectionForm: FormGroup;
   public designations = new Array("A", "B", "C", "L");
+  public faculty: FacultyInfo[];
   public courses: Course[];
 
   @ViewChild('dCode') dCode: ElementRef;
@@ -41,6 +43,7 @@ export class SectionCreateComponent implements OnInit {
 
     this.userType = parseInt(sessionStorage.getItem('typeCode'), 0);
     this.getAllCourses();
+    this.getAllFaculty();
 
   }
 
@@ -66,6 +69,19 @@ export class SectionCreateComponent implements OnInit {
     this.repository.getData(apiAddress)
       .subscribe(res => {
         this.courses = res as Course[];
+      }),
+      // tslint:disable-next-line: no-unused-expression
+      (error) => {
+        this.errorHandler.handleError(error);
+        this.errorMessage = "Unable to access API";
+      };
+  }
+
+  public getAllFaculty() {
+    let apiAddress = "api/facultyInfo";
+    this.repository.getData(apiAddress)
+      .subscribe(res => {
+        this.faculty = res as FacultyInfo[];
       }),
       // tslint:disable-next-line: no-unused-expression
       (error) => {

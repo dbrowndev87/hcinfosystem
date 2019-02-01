@@ -46,11 +46,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GoldStarApi/Controllers/EnrollmentController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="138" column="13" lean-forward="true" selection-start-line="138" selection-start-column="13" selection-end-line="138" selection-end-column="13" />
+            <state relative-caret-position="489">
+              <caret line="138" column="13" selection-start-line="138" selection-start-column="13" selection-end-line="138" selection-end-column="13" />
               <folding>
                 <marker date="1548871481000" expanded="false" signature="6:255" ph="..." />
                 <marker date="1548871481000" expanded="true" signature="290:7253" ph="{...}" />
@@ -91,68 +91,33 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GoldStarApi/Controllers/SectionController.cs">
+        <entry file="file://$PROJECT_DIR$/GoldStarApi/Controllers/FacultyInfoController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="47" column="16" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="69" />
+            <state relative-caret-position="1485">
+              <caret line="104" column="54" selection-start-line="104" selection-start-column="54" selection-end-line="104" selection-end-column="54" />
               <folding>
-                <marker date="1547648056000" expanded="false" signature="6:177" ph="..." />
-                <marker date="1547648056000" expanded="true" signature="212:4989" ph="{...}" />
-                <marker date="1547648056000" expanded="true" signature="289:4987" ph="{...}" />
-                <marker date="1547648056000" expanded="true" signature="479:567" ph="{...}" />
-                <marker date="1547648056000" expanded="true" signature="640:1161" ph="{...}" />
-                <marker date="1547648056000" expanded="true" signature="666:923" ph="{...}" />
-                <marker date="1547648056000" expanded="true" signature="956:1151" ph="{...}" />
-                <marker date="1547648056000" expanded="true" signature="1269:2022" ph="{...}" />
-                <marker date="1547648056000" expanded="true" signature="1308:1784" ph="{...}" />
-                <marker date="1547648056000" expanded="true" signature="1436:1601" ph="{...}" />
-                <marker date="1547648056000" expanded="true" signature="1622:1770" ph="{...}" />
-                <marker date="1547648056000" expanded="true" signature="1817:2012" ph="{...}" />
-                <marker date="1547648056000" expanded="true" signature="2113:2967" ph="{...}" />
-                <marker date="1547648056000" expanded="true" signature="2139:2730" ph="{...}" />
-                <marker date="1547648056000" expanded="true" signature="2194:2377" ph="{...}" />
-                <marker date="1547648056000" expanded="true" signature="2419:2600" ph="{...}" />
-                <marker date="1547648056000" expanded="true" signature="2763:2957" ph="{...}" />
-                <marker date="1547648056000" expanded="true" signature="3080:4214" ph="{...}" />
-                <marker date="1547648056000" expanded="true" signature="3106:3977" ph="{...}" />
-                <marker date="1547648056000" expanded="true" signature="3162:3345" ph="{...}" />
-                <marker date="1547648056000" expanded="true" signature="3388:3569" ph="{...}" />
-                <marker date="1547648056000" expanded="true" signature="3687:3852" ph="{...}" />
-                <marker date="1547648056000" expanded="true" signature="4010:4204" ph="{...}" />
-                <marker date="1547648056000" expanded="true" signature="4294:4974" ph="{...}" />
-                <marker date="1547648056000" expanded="true" signature="4320:4737" ph="{...}" />
-                <marker date="1547648056000" expanded="true" signature="4445:4610" ph="{...}" />
-                <marker date="1547648056000" expanded="true" signature="4770:4964" ph="{...}" />
+                <marker date="1548858609000" expanded="false" signature="6:138" ph="..." />
+                <marker date="1548858609000" expanded="true" signature="173:4403" ph="{...}" />
+                <marker date="1548858609000" expanded="true" signature="258:4401" ph="{...}" />
+                <marker date="1548858609000" expanded="true" signature="550:638" ph="{...}" />
+                <marker date="1548858609000" expanded="true" signature="754:2538" ph="{...}" />
+                <marker date="1548858609000" expanded="true" signature="793:2296" ph="{...}" />
+                <marker date="1548858609000" expanded="true" signature="967:1132" ph="{...}" />
+                <marker date="1548858609000" expanded="true" signature="2329:2528" ph="{...}" />
+                <marker date="1548858609000" expanded="true" signature="2606:4386" ph="{...}" />
+                <marker date="1548858609000" expanded="true" signature="2632:4145" ph="{...}" />
+                <marker date="1548858609000" expanded="true" signature="2864:3979" ph="{...}" />
+                <marker date="1548858609000" expanded="true" signature="2959:3180" ph="{...}" />
+                <marker date="1548858609000" expanded="true" signature="4178:4376" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Entities/Models/Enrollment.cs">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/GoldStarApi/logs/2019-02-01_logfile.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
-              <folding>
-                <marker date="1548679828000" expanded="false" signature="6:133" ph="..." />
-                <marker date="1548679828000" expanded="true" signature="160:1120" ph="{...}" />
-                <marker date="1548679828000" expanded="true" signature="216:1118" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Entities/Models/Section.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
-              <folding>
-                <marker date="1548702513000" expanded="false" signature="6:110" ph="..." />
-                <marker date="1548702513000" expanded="true" signature="137:1584" ph="{...}" />
-                <marker date="1548702513000" expanded="true" signature="187:1582" ph="{...}" />
-              </folding>
-            </state>
+            <state relative-caret-position="-1881" />
           </provider>
         </entry>
       </file>
@@ -298,8 +263,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="FileSystemExplorer" />
-      <pane id="AssemblyExplorer" />
       <pane id="SolutionExplorer">
         <subPane>
           <expand>
@@ -307,11 +270,24 @@
               <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
               <item name="GoldStarApi" type="24d0babc:SolutionExplorerModelNode" />
             </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="GoldStarApi" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="GoldStarApi" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="GoldStarApi" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="GoldStarApi" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="logs" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
           </expand>
           <select />
         </subPane>
         <option name="show-all-files" value="false" />
       </pane>
+      <pane id="AssemblyExplorer" />
+      <pane id="FileSystemExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -370,11 +346,12 @@
       <workItem from="1548700702370" duration="785000" />
       <workItem from="1548724690150" duration="240000" />
       <workItem from="1548765216175" duration="1910000" />
+      <workItem from="1548962497250" duration="2781000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71346000" />
+    <option name="totallyTimeSpent" value="74127000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -387,31 +364,30 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="699" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19386107" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19709209" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3294893" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4927302" visible="true" weight="0.19439869" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4927302" visible="true" weight="0.4250412" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4989339" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3294893" />
       <window_info anchor="bottom" id="NuGet" order="7" weight="0.3294893" />
       <window_info anchor="bottom" id="Performance Profiler" order="8" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.3294893" />
       <window_info anchor="bottom" id="Inspection Results" order="11" weight="0.32936078" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
-      <window_info anchor="bottom" id="Unit Tests" order="13" />
-      <window_info anchor="bottom" id="Terminal" order="14" weight="0.32876712" />
+      <window_info anchor="bottom" id="Unit Tests" order="13" weight="0.3294893" />
+      <window_info anchor="bottom" id="Terminal" order="14" weight="0.32784185" />
       <window_info anchor="bottom" id="Event Log" order="15" sideWeight="0.5072698" side_tool="true" weight="0.5273973" />
-      <window_info anchor="bottom" id="Build" order="16" sideWeight="0.4927302" weight="0.45890412" />
-      <window_info anchor="bottom" id="REST Client" order="17" weight="0.32876712" />
+      <window_info anchor="bottom" id="Build" order="16" sideWeight="0.4927302" weight="0.4579901" />
+      <window_info anchor="bottom" id="REST Client" order="17" weight="0.32784185" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -469,18 +445,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Contracts/IDepartmentRepository.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-          <folding>
-            <marker date="1547568555000" expanded="false" signature="6:56" ph="..." />
-            <marker date="1547568555000" expanded="true" signature="77:513" ph="{...}" />
-            <marker date="1547568555000" expanded="true" signature="122:511" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Contracts/Contracts.csproj">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1021,28 +985,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GoldStarApi/Controllers/FacultyInfoController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1074">
-          <caret line="104" column="54" selection-start-line="104" selection-start-column="54" selection-end-line="104" selection-end-column="54" />
-          <folding>
-            <marker date="1548858609000" expanded="false" signature="6:138" ph="..." />
-            <marker date="1548858609000" expanded="true" signature="173:4403" ph="{...}" />
-            <marker date="1548858609000" expanded="true" signature="258:4401" ph="{...}" />
-            <marker date="1548858609000" expanded="true" signature="550:638" ph="{...}" />
-            <marker date="1548858609000" expanded="true" signature="754:2538" ph="{...}" />
-            <marker date="1548858609000" expanded="true" signature="793:2296" ph="{...}" />
-            <marker date="1548858609000" expanded="true" signature="967:1132" ph="{...}" />
-            <marker date="1548858609000" expanded="true" signature="2329:2528" ph="{...}" />
-            <marker date="1548858609000" expanded="true" signature="2606:4386" ph="{...}" />
-            <marker date="1548858609000" expanded="true" signature="2632:4145" ph="{...}" />
-            <marker date="1548858609000" expanded="true" signature="2864:3979" ph="{...}" />
-            <marker date="1548858609000" expanded="true" signature="2959:3180" ph="{...}" />
-            <marker date="1548858609000" expanded="true" signature="4178:4376" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/GoldStarApi/Controllers/StudentController.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
@@ -1261,70 +1203,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Entities/Models/Enrollment.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
-          <folding>
-            <marker date="1548679828000" expanded="false" signature="6:133" ph="..." />
-            <marker date="1548679828000" expanded="true" signature="160:1120" ph="{...}" />
-            <marker date="1548679828000" expanded="true" signature="216:1118" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Entities/Models/Section.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
-          <folding>
-            <marker date="1548702513000" expanded="false" signature="6:110" ph="..." />
-            <marker date="1548702513000" expanded="true" signature="137:1584" ph="{...}" />
-            <marker date="1548702513000" expanded="true" signature="187:1582" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GoldStarApi/Controllers/SectionController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="47" column="16" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="69" />
-          <folding>
-            <marker date="1547648056000" expanded="false" signature="6:177" ph="..." />
-            <marker date="1547648056000" expanded="true" signature="212:4989" ph="{...}" />
-            <marker date="1547648056000" expanded="true" signature="289:4987" ph="{...}" />
-            <marker date="1547648056000" expanded="true" signature="479:567" ph="{...}" />
-            <marker date="1547648056000" expanded="true" signature="640:1161" ph="{...}" />
-            <marker date="1547648056000" expanded="true" signature="666:923" ph="{...}" />
-            <marker date="1547648056000" expanded="true" signature="956:1151" ph="{...}" />
-            <marker date="1547648056000" expanded="true" signature="1269:2022" ph="{...}" />
-            <marker date="1547648056000" expanded="true" signature="1308:1784" ph="{...}" />
-            <marker date="1547648056000" expanded="true" signature="1436:1601" ph="{...}" />
-            <marker date="1547648056000" expanded="true" signature="1622:1770" ph="{...}" />
-            <marker date="1547648056000" expanded="true" signature="1817:2012" ph="{...}" />
-            <marker date="1547648056000" expanded="true" signature="2113:2967" ph="{...}" />
-            <marker date="1547648056000" expanded="true" signature="2139:2730" ph="{...}" />
-            <marker date="1547648056000" expanded="true" signature="2194:2377" ph="{...}" />
-            <marker date="1547648056000" expanded="true" signature="2419:2600" ph="{...}" />
-            <marker date="1547648056000" expanded="true" signature="2763:2957" ph="{...}" />
-            <marker date="1547648056000" expanded="true" signature="3080:4214" ph="{...}" />
-            <marker date="1547648056000" expanded="true" signature="3106:3977" ph="{...}" />
-            <marker date="1547648056000" expanded="true" signature="3162:3345" ph="{...}" />
-            <marker date="1547648056000" expanded="true" signature="3388:3569" ph="{...}" />
-            <marker date="1547648056000" expanded="true" signature="3687:3852" ph="{...}" />
-            <marker date="1547648056000" expanded="true" signature="4010:4204" ph="{...}" />
-            <marker date="1547648056000" expanded="true" signature="4294:4974" ph="{...}" />
-            <marker date="1547648056000" expanded="true" signature="4320:4737" ph="{...}" />
-            <marker date="1547648056000" expanded="true" signature="4445:4610" ph="{...}" />
-            <marker date="1547648056000" expanded="true" signature="4770:4964" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/GoldStarApi/Controllers/EnrollmentController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="138" column="13" lean-forward="true" selection-start-line="138" selection-start-column="13" selection-end-line="138" selection-end-column="13" />
+        <state relative-caret-position="489">
+          <caret line="138" column="13" selection-start-line="138" selection-start-column="13" selection-end-line="138" selection-end-column="13" />
           <folding>
             <marker date="1548871481000" expanded="false" signature="6:255" ph="..." />
             <marker date="1548871481000" expanded="true" signature="290:7253" ph="{...}" />
@@ -1361,6 +1243,93 @@
             <marker date="1548871481000" expanded="true" signature="7031:7228" ph="{...}" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GoldStarApi/Controllers/SectionController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="47" column="16" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="69" />
+          <folding>
+            <marker date="1547648056000" expanded="false" signature="6:177" ph="..." />
+            <marker date="1547648056000" expanded="true" signature="212:4989" ph="{...}" />
+            <marker date="1547648056000" expanded="true" signature="289:4987" ph="{...}" />
+            <marker date="1547648056000" expanded="true" signature="479:567" ph="{...}" />
+            <marker date="1547648056000" expanded="true" signature="640:1161" ph="{...}" />
+            <marker date="1547648056000" expanded="true" signature="666:923" ph="{...}" />
+            <marker date="1547648056000" expanded="true" signature="956:1151" ph="{...}" />
+            <marker date="1547648056000" expanded="true" signature="1269:2022" ph="{...}" />
+            <marker date="1547648056000" expanded="true" signature="1308:1784" ph="{...}" />
+            <marker date="1547648056000" expanded="true" signature="1436:1601" ph="{...}" />
+            <marker date="1547648056000" expanded="true" signature="1622:1770" ph="{...}" />
+            <marker date="1547648056000" expanded="true" signature="1817:2012" ph="{...}" />
+            <marker date="1547648056000" expanded="true" signature="2113:2967" ph="{...}" />
+            <marker date="1547648056000" expanded="true" signature="2139:2730" ph="{...}" />
+            <marker date="1547648056000" expanded="true" signature="2194:2377" ph="{...}" />
+            <marker date="1547648056000" expanded="true" signature="2419:2600" ph="{...}" />
+            <marker date="1547648056000" expanded="true" signature="2763:2957" ph="{...}" />
+            <marker date="1547648056000" expanded="true" signature="3080:4214" ph="{...}" />
+            <marker date="1547648056000" expanded="true" signature="3106:3977" ph="{...}" />
+            <marker date="1547648056000" expanded="true" signature="3162:3345" ph="{...}" />
+            <marker date="1547648056000" expanded="true" signature="3388:3569" ph="{...}" />
+            <marker date="1547648056000" expanded="true" signature="3687:3852" ph="{...}" />
+            <marker date="1547648056000" expanded="true" signature="4010:4204" ph="{...}" />
+            <marker date="1547648056000" expanded="true" signature="4294:4974" ph="{...}" />
+            <marker date="1547648056000" expanded="true" signature="4320:4737" ph="{...}" />
+            <marker date="1547648056000" expanded="true" signature="4445:4610" ph="{...}" />
+            <marker date="1547648056000" expanded="true" signature="4770:4964" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Entities/Models/Enrollment.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+          <folding>
+            <marker date="1548679828000" expanded="false" signature="6:133" ph="..." />
+            <marker date="1548679828000" expanded="true" signature="160:1120" ph="{...}" />
+            <marker date="1548679828000" expanded="true" signature="216:1118" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Entities/Models/Section.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+          <folding>
+            <marker date="1548702513000" expanded="false" signature="6:110" ph="..." />
+            <marker date="1548702513000" expanded="true" signature="137:1584" ph="{...}" />
+            <marker date="1548702513000" expanded="true" signature="187:1582" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GoldStarApi/Controllers/FacultyInfoController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1485">
+          <caret line="104" column="54" selection-start-line="104" selection-start-column="54" selection-end-line="104" selection-end-column="54" />
+          <folding>
+            <marker date="1548858609000" expanded="false" signature="6:138" ph="..." />
+            <marker date="1548858609000" expanded="true" signature="173:4403" ph="{...}" />
+            <marker date="1548858609000" expanded="true" signature="258:4401" ph="{...}" />
+            <marker date="1548858609000" expanded="true" signature="550:638" ph="{...}" />
+            <marker date="1548858609000" expanded="true" signature="754:2538" ph="{...}" />
+            <marker date="1548858609000" expanded="true" signature="793:2296" ph="{...}" />
+            <marker date="1548858609000" expanded="true" signature="967:1132" ph="{...}" />
+            <marker date="1548858609000" expanded="true" signature="2329:2528" ph="{...}" />
+            <marker date="1548858609000" expanded="true" signature="2606:4386" ph="{...}" />
+            <marker date="1548858609000" expanded="true" signature="2632:4145" ph="{...}" />
+            <marker date="1548858609000" expanded="true" signature="2864:3979" ph="{...}" />
+            <marker date="1548858609000" expanded="true" signature="2959:3180" ph="{...}" />
+            <marker date="1548858609000" expanded="true" signature="4178:4376" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GoldStarApi/logs/2019-02-01_logfile.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1881" />
       </provider>
     </entry>
   </component>

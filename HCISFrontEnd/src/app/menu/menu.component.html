@@ -70,6 +70,10 @@
                                                                         routerLinkActive="active"
                                                                         [routerLinkActiveOptions]="{exact: true}">
                                                                         Section List</a></li>
+                                                        <li *ngIf="loggedIn && typeCode === 1"><a [routerLink]="['/department/list']"
+                                                                        routerLinkActive="active"
+                                                                        [routerLinkActiveOptions]="{exact: true}">
+                                                                        Department List</a></li>
                                                 </ul>
                                         </li>
 

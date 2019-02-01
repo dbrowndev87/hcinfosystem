@@ -47,8 +47,10 @@
       <div class="form-group">
         <label for="faculty_Id" class="control-label col-md-2">Faculty Id: </label>
         <div class="col-md-5">
-          <input type="text" formControlName="faculty_Id" id="faculty_Id" class="form-control" />
-        </div>
+          <select name="facult_Id" id="faculty_Id" formControlName="faculty_Id">
+            <option *ngFor="let current of faculty" value="{{current.faculty_Id}}">{{current.first_Name+" "+current.last_Name}}</option>
+          </select>
+          </div>
         <div class="col-md-5">
           <em *ngIf="validateControl('faculty_Id') && hasError('faculty_Id', 'required')">Faculty Id is required</em>
           <em *ngIf="validateControl('faculty_Id') && hasError('faculty_Id', 'maxlength')">Maximum allowed length 6
@@ -98,9 +100,6 @@
           <em *ngIf="validateControl('vacancy') && hasError('vacancy', 'maxlength')">Max 3 Character.</em>
         </div>
       </div>
-
-    
-
       <br><br>
 
       <div class="form-group">
