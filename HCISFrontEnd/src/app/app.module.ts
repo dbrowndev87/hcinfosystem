@@ -28,7 +28,6 @@ import { CourseModule } from './courses/course.module';
 import { CourseRoutingModule } from './courses/course.routing';
 import { AdminModule } from './admin/admin.module';
 import { AdminRoutingModule } from './admin/admin.routing';
-import { PreviousRouteService } from './shared/services/previous-route.service';
 import { FacultyModule } from './faculty/faculty.module';
 import { FacultyRoutingModule } from './faculty/faculty.routing';
 import { EnrollmentModule } from './enrollment/enrollment.module';
@@ -89,7 +88,6 @@ import { DepartmentRoutingModule } from './department/department.routing';
     AuthGuardAdmin,
     AuthGuardFaculty,
     AuthGuardStudent,
-    PreviousRouteService
   ],
   bootstrap: [AppComponent],
   exports: [

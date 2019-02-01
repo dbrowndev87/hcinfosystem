@@ -1,36 +1,45 @@
 <div class="container-fluid">
-  <form [formGroup]="departmentForm" autocomplete="off" novalidate (ngSubmit)="createDepartment(departmentForm.value)">
-    <div class="form-horizontal well">
+
+  <!-- Loading Bar -->
+  <div *ngIf="!isLoaded">
+    <div class="row">
+      <div class="col-sm-8 col-md-6 col-lg-4 centerDiv well">
+        <img src="../../../assets/loading.gif" class="center-block imgLoading" />
+        <h4 class="text-center">Loading</h4>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="isLoaded" class="form-horizontal well col-sm-8 col-md-6 col-lg-4 centerDiv well">
+    <h4 class="text-center">Create Department</h4>
+    <h5 class="text-center">Department ID gets Auto-Generated.</h5>
+  </div>
+
+  <form *ngIf="isLoaded" [formGroup]="departmentForm" autocomplete="off" novalidate (ngSubmit)="createDepartment(departmentForm.value)">
+    <div class="form-horizontal well col-sm-8 col-md-6 col-lg-4 centerDiv">
 
       <div class="form-group">
-        <label for="dept_Id" class="control-label col-md-2">Department ID: Auto-Generate</label>
-        <div class="col-md-5">
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="dept_Name" class="control-label col-md-2">Department Name: </label>
-        <div class="col-md-5">
-          <input type="text" formControlName="dept_Name" id="dept_Name" class="form-control" />
-        </div>
-        <div class="col-md-5">
-          <em *ngIf="validateControl('dept_Name') && hasError('dept_Name', 'required')">Department Name is required</em>
-          <em *ngIf="validateControl('dept_Name') && hasError('dept_Name', 'maxlength')">Maximum allowed length is
-            140
-            characters.</em>
+        <div class="row">
+          <div class="col-md-12 updateWell">
+            <label for="dept_Name" class="control-label">Department Name: </label>
+            <input type="text" formControlName="dept_Name" id="dept_Name" class="form-control" />
+            <em *ngIf="validateControl('dept_Name') && hasError('dept_Name', 'required')">Department Name is required</em>
+            <em *ngIf="validateControl('dept_Name') && hasError('dept_Name', 'maxlength')">Maximum allowed length is
+              140 characters.</em>
+          </div>
         </div>
       </div>
 
       <br><br>
 
       <div class="form-group">
-        <div class="col-md-offset-5 col-md-1">
-          <button type="submit" class="btn btn-info" [disabled]="!departmentForm.valid">Save</button>
-        </div>
-        <div class="col-md-1">
-          <button type="button" class="btn btn-danger" (click)="redirectToDepartmentList()">Cancel</button>
+        <div class="row">
+          <div class="col-md-12 updateWell">
+            <button type="submit" class="btn btnHc float-left" [disabled]="!departmentForm.valid">Save</button>
+            <button type="button" class="btn btnHc float-right" (click)="redirectToDepartmentList()">Cancel</button>
+          </div>
         </div>
       </div>
-
     </div>
   </form>
 

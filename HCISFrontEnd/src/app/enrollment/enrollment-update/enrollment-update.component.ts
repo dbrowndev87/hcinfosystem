@@ -35,6 +35,7 @@ export class EnrollmentUpdateComponent implements OnInit {
 
     this.updateId = this.activeRoute.snapshot.params['id'];
     this.getEnrollment();
+
   }
 
   // Patch course to form.
@@ -60,7 +61,6 @@ export class EnrollmentUpdateComponent implements OnInit {
               this.errorHandler.handleError(error);
               this.errorMessage = "Unable to access API";
             });
-
       },
         (error) => {
           this.errorHandler.handleError(error);

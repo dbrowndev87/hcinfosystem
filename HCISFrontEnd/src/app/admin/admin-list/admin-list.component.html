@@ -1,10 +1,32 @@
 <div class="container-fluid">
-  <div class="row">
-    <div class="well col-md-8 centerDiv">
-      <a [routerLink]="['/user/create/1']">Create Admin</a>
+
+  <!-- Loading Bar -->
+  <div *ngIf="!isLoaded">
+    <div class="row">
+      <div class="col-md-8 centerDiv well">
+        <img src="../../../assets/loading.gif" class="center-block imgLoading" />
+        <h4 class="text-center">Loading</h4>
+      </div>
     </div>
   </div>
-  <div class="row">
+
+  <!-- HC Well Button -->
+  <div *ngIf="isLoaded" class="row">
+    <div class=" col-md-8 centerDiv well">
+      <div class="row">
+        <div class="col-md-4">
+          <h4 class="float-left">Admin List</h4>
+        </div>
+        <div class="col-md-8">
+          <button class="btn btnHc float-right">
+            <a [routerLink]="[ '/user/create/1']">Create Admin</a>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="isLoaded" class="row">
     <div class="col-md-8 centerDiv well">
       <div class="table-responsive">
         <table *ngIf="isLoaded" datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table table-striped">
@@ -27,7 +49,7 @@
               <td>{{user.eMail}}</td>
               <td>{{user.address}}</td>
               <td>{{user.birth_Date | date: 'yyyy-MM-dd'}}</td>
-              <td><button type="button" id="update" class="btn btn-success" (click)='redirectToUpdatePage(user.user_Id)'>Update</button></td>
+              <td><button type="button" id="update" class="btn btnHc" (click)='redirectToUpdatePage(user.user_Id)'>Update</button></td>
             </tr>
           </tbody>
         </table>

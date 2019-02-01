@@ -33,7 +33,7 @@ export class FacultyListComponent implements OnInit {
   ngOnInit() {
     this.dtOptions = {
       pagingType: 'full_numbers',
-      pageLength: 10
+      pageLength: 8
     };
 
     this.getAllFacultysInfo();

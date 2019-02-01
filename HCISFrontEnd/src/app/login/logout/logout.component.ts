@@ -39,10 +39,6 @@ export class LogoutComponent implements OnInit {
 
       }
 
-      if (sessionStorage.getItem('previousUrl')) {
-        sessionStorage.removeItem('previousUrl');
-      }
-
       // reload page.
       this.globals.reloadPage();
 

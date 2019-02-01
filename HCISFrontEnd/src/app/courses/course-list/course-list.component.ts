@@ -35,11 +35,12 @@ export class CourseListComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.dtOptions = {
       pagingType: 'full_numbers',
-      pageLength: 10
+      pageLength: 8
     };
 
     this.getAllCourses();
     this.getAllDepartments();
+    this.isLoaded = true;
   }
 
   public getAllCourses() {
@@ -61,7 +62,6 @@ export class CourseListComponent implements OnInit, OnDestroy {
     this.repository.getData(apiAddress)
       .subscribe(res => {
         this.depts = res as Department[];
-        this.isLoaded = true;
       }),
       // tslint:disable-next-line: no-unused-expression
       (error) => {

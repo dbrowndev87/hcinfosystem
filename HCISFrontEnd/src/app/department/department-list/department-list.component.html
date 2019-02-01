@@ -1,25 +1,46 @@
 <div class="container-fluid">
-  <div class="row">
-    <div class="well col-md-8 centerDiv">
-      <a [routerLink]="['/department/create/']">Create Department</a>
+  <!-- Loading Bar -->
+  <div *ngIf="!isLoaded">
+    <div class="row">
+      <div class="col-md-8 centerDiv well">
+        <img src="../../../assets/loading.gif" class="center-block imgLoading" />
+        <h4 class="text-center">Loading</h4>
+      </div>
     </div>
   </div>
-  <div class="row">
+
+  <!-- HC Well Button -->
+  <div *ngIf="isLoaded" class="row">
+    <div class=" col-md-8 centerDiv well">
+      <div class="row">
+        <div class="col-md-4">
+          <h4 class="float-left">Department List</h4>
+        </div>
+        <div class="col-md-8">
+          <button class="btn btnHc float-right">
+            <a [routerLink]="['/department/create']">Create Department</a>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="isLoaded" class="row">
     <div class="col-md-8 centerDiv well">
       <div class="table-responsive">
         <table *ngIf="isLoaded" datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table table-striped">
           <thead>
             <tr>
-              <th>Department ID</th>
+              <th style="width: 18%">Department ID</th>
               <th>Department Name</th>
-              <th>Options</th>
+              <th style="width: 10%">Options</th>
             </tr>
           </thead>
           <tbody>
             <tr *ngFor="let department of departments">
               <td>{{department.dept_Id}}</td>
               <td>{{department.dept_Name}}</td>
-              <td><button type="button" id="update" class="btn btn-success" (click)='redirectToUpdatePage(departments.dept_Id)'>Update</button></td>
+              <td><button type="button" id="update" class="btn btnHc" (click)='redirectToUpdatePage(department.dept_Id)'>Update</button></td>
             </tr>
           </tbody>
         </table>

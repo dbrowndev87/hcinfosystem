@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { PreviousRouteService } from '../shared/services/previous-route.service';
 import { Router } from '@angular/router';
 import { StudentInfo } from '../_interfaces/studentInfo.model';
 import { Enrollment } from '../_interfaces/enrollment.model';
@@ -35,7 +34,6 @@ export class HomeComponent implements OnInit {
   private department: Department;
 
   constructor(
-    private previousRoute: PreviousRouteService,
     private router: Router,
     private repository: RepositoryService,
     private errorHandler: ErrorHandlerService,
@@ -48,11 +46,8 @@ export class HomeComponent implements OnInit {
       this.router.navigate(['/login']);
     }
 
-
     this.homeText = "Happy College Information System";
     this.typeCode = parseInt(sessionStorage.getItem('typeCode'), 0);
-    // get the previous URL.
-    this.previousUrl = this.previousRoute.getPreviousUrl();
 
     // If they are a student run the student laod function.
     if (this.typeCode === 3) {

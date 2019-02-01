@@ -45,13 +45,14 @@ export class CourseUpdateComponent implements OnInit {
       course_Id: new FormControl('', [Validators.required, Validators.maxLength(12)]),
       course_Name: new FormControl('', [Validators.required, Validators.maxLength(140)]),
       dept_Id: new FormControl(''),
-      credits: new FormControl('', [Validators.required, Validators.minLength(1), Validators.maxLength(1)]),
+      credits: new FormControl('', [Validators.required, Validators.min(1), Validators.max(10)]),
     });
 
     this.userType = parseInt(sessionStorage.getItem('typeCode'), 0);
     // get all departments.
     this.getAllDepartments();
     this.getCourseById();
+    this.isLoaded = true;
   }
 
   // Patch course to form.
@@ -64,7 +65,6 @@ export class CourseUpdateComponent implements OnInit {
       .subscribe(res => {
         this.course = res as Course;
         this.courseForm.patchValue(this.course);
-        this.isLoaded = true;
         let apiAddress = "api/department";
 
         // make the proper index value based on ID

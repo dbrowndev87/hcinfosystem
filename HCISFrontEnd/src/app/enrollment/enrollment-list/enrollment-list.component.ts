@@ -35,6 +35,8 @@ export class EnrollmentListComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.getAllenrollments();
+    // Set the data is loaded flag.
+    this.isLoaded = true;
   }
 
   /**
@@ -91,8 +93,6 @@ export class EnrollmentListComponent implements OnInit, OnDestroy {
                 }
               }
             }
-            // Set the data is loaded flag.
-            this.isLoaded = true;
           })
         ).subscribe(e => { },
           (error) => {

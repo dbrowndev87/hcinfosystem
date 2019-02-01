@@ -118,7 +118,6 @@ export class LoginComponent implements OnInit {
                 // If everyting passes set sessions
                 sessionStorage.setItem("isLoggedIn", "true");
                 sessionStorage.setItem('typeCode', this.user.type_Code.toString());
-                sessionStorage.setItem('previousUrl', "/home");
               },
                 (error => {
                   this.errorHandler.handleError(error);

@@ -50,7 +50,7 @@ export class StudentUpdateComponent implements OnInit {
       eMail: new FormControl('', [Validators.required, Validators.maxLength(50)]),
       dept_Id: new FormControl('', [Validators.required]),
       student_Status: new FormControl(''),
-      amount_Owing: new FormControl(''),
+      amount_Owing: new FormControl('', [Validators.max(999999)]),
     });
 
     // Get the ID from the URL

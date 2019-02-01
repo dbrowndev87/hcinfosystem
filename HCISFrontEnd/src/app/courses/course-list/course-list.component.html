@@ -1,11 +1,32 @@
 <div class="container-fluid">
-  <div class="row">
-    <div class="well col-md-8 centerDiv">
-      <a [routerLink]="['/course/create']">Create Course</a>
+
+  <!-- Loading Bar -->
+  <div *ngIf="!isLoaded">
+    <div class="row">
+      <div class="col-md-8 centerDiv well">
+        <img src="../../../assets/loading.gif" class="center-block imgLoading" />
+        <h4 class="text-center">Loading</h4>
+      </div>
     </div>
   </div>
-  <br>
-  <div class="row">
+
+  <!-- HC Well Button -->
+  <div *ngIf="isLoaded" class="row">
+    <div class=" col-md-8 centerDiv well">
+      <div class="row">
+        <div class="col-md-4">
+          <h4 class="float-left">Course List</h4>
+        </div>
+        <div class="col-md-8">
+          <button class="btn btnHc float-right">
+            <a [routerLink]="[ '/course/create']">Create Course</a>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="isLoaded" class="row">
     <div class="well col-md-8 centerDiv">
       <div class="table-responsive">
         <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table table-striped">
@@ -26,7 +47,7 @@
                 {{depts[(course.dept_Id - 1)].dept_Id}} - {{depts[(course.dept_Id - 1)].dept_Name}}
               </td>
               <td>{{course.credits}}</td>
-              <td><button type="button" id="update" class="btn btn-success" (click)='redirectToUpdatePage(course.course_Id)'>Update</button></td>
+              <td><button type="button" id="update" class="btn btnHc" (click)='redirectToUpdatePage(course.course_Id)'>Update</button></td>
             </tr>
           </tbody>
         </table>

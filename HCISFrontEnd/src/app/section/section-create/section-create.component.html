@@ -1,121 +1,124 @@
 <div class="container-fluid">
-  <form [formGroup]="sectionForm" autocomplete="off" novalidate (ngSubmit)="createSection(sectionForm.value)">
-    <div class="form-horizontal well">
 
-      <!-- <div class="form-group">
+  <!-- Loading Bar -->
+  <div *ngIf="!isLoaded">
+    <div class="row">
+      <div class="col-sm-8 col-md-6 col-lg-4 centerDiv well">
+        <img src="../../../assets/loading.gif" class="center-block imgLoading" />
+        <h4 class="text-center">Loading</h4>
+      </div>
+    </div>
+  </div>
 
-        <label for="section_Id" class="control-label col-md-2">Section ID: </label>
+  <div *ngIf="isLoaded" class="form-horizontal well col-sm-8 col-md-6 col-lg-4 centerDiv well">
+    <h4 class="text-center">Create Section</h4>
+  </div>
 
-        <div class="col-md-5">
-          <input type="text" formControlName="section_Id" id="section_Id" class="form-control" />
-        </div>
+  <form *ngIf="isLoaded" [formGroup]="sectionForm" autocomplete="off" novalidate (ngSubmit)="createSection(sectionForm.value)">
+    <div class="form-horizontal well col-sm-8 col-md-6 col-lg-4 centerDiv">
 
-        <div class="col-md-5">
-          <em *ngIf="validateControl('section_Id') && hasError('section_Id', 'required')">Section ID is required</em>
-          <em *ngIf="validateControl('section_Id') && hasError('section_Id', 'maxlength')">Maximum allowed length is 6
-            characters.</em>
-        </div>
-
-      </div> -->
 
       <div class="form-group">
-        <label for="course_Id" class="control-label col-md-2">Course Id: </label>
-        <div class="col-md-5">
-        <select name="course_Id" id="course_Id" formControlName="course_Id">
-          <option *ngFor="let current of courses" value="{{current.course_Id}}">{{current.course_Id+"-"+current.course_Name}}</option>
-        </select>
-        </div>
-        <div class="col-md-5">
-          <em *ngIf="validateControl('course_Id') && hasError('course_Id', 'required')">Course Id is required</em>
-          <em *ngIf="validateControl('course_Id') && hasError('course_Id', 'maxlength')">Max 12 Character.</em>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label for="designation" class="control-label col-md-2">Designation: </label>
-        <div class="col-md-5">
-        <select #dCode name="designation" id="designation" formControlName="designation">
-          <option *ngFor="let current of designations; let x= index" value="{{current}}">{{current}}</option>
-        </select>
-      </div>
-        <div class="col-md-5">
-          <em *ngIf="validateControl('designation') && hasError('designation', 'required')">Designation is required</em>
-          <em *ngIf="validateControl('designation') && hasError('designation', 'maxlength')">Max 1 Character.</em>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label for="faculty_Id" class="control-label col-md-2">Faculty Id: </label>
-        <div class="col-md-5">
-          <select name="facult_Id" id="faculty_Id" formControlName="faculty_Id">
-            <option *ngFor="let current of faculty" value="{{current.faculty_Id}}">{{current.first_Name+" "+current.last_Name}}</option>
-          </select>
+        <div class="row">
+          <div class="col-md-12 updateWell">
+            <label for="course_Id" class="control-label">Course Id: </label>
+            <select name="course_Id" class="form-control" id="course_Id" formControlName="course_Id">
+              <option *ngFor="let current of courses" value="{{current.course_Id}}">{{current.course_Id+"-"+current.course_Name}}</option>
+            </select>
+            <em *ngIf="validateControl('course_Id') && hasError('course_Id', 'required')">Course Id is required</em>
+            <em *ngIf="validateControl('course_Id') && hasError('course_Id', 'maxlength')">Max 12 Character.</em>
           </div>
-        <div class="col-md-5">
-          <em *ngIf="validateControl('faculty_Id') && hasError('faculty_Id', 'required')">Faculty Id is required</em>
-          <em *ngIf="validateControl('faculty_Id') && hasError('faculty_Id', 'maxlength')">Maximum allowed length 6
-            characters.</em>
         </div>
       </div>
 
       <div class="form-group">
-        <label for="start_Date" class="control-label col-md-2">Start Date: </label>
-        <div class="col-md-5">
-        <input type="text" formControlName="start_Date" id="start_Date" class="form-control" appDatepicker (change)="executeStartDatePicker($event)"
-        readonly />
-      </div>
-        <div class="col-md-5">
-          <em *ngIf="validateControl('start_Date') && hasError('start_Date', 'required')">Start Date is required</em>
+        <div class="row">
+          <div class="col-md-12 updateWell">
+            <label for="designation" class="control-label">Designation: </label>
+            <select #dCode name="designation" class="form-control" id="designation" formControlName="designation">
+              <option *ngFor="let current of designations; let x= index" value="{{current}}">{{current}}</option>
+            </select>
+            <em *ngIf="validateControl('designation') && hasError('designation', 'required')">Designation is required</em>
+            <em *ngIf="validateControl('designation') && hasError('designation', 'maxlength')">Max 1 Character.</em>
+          </div>
         </div>
       </div>
 
       <div class="form-group">
-        <label for="end_Date" class="control-label col-md-2">End Date: </label>
-        <div class="col-md-5">
-          <input type="text" formControlName="end_Date" id="end_Date" class="form-control" appDatepicker (change)="executeEndDatePicker($event)"
-            readonly />
-        </div>
-        <div class="col-md-5">
-          <em *ngIf="validateControl('end_Date') && hasError('end_Date', 'required')">End Date is required</em>
+        <div class="row">
+          <div class="col-md-12 updateWell">
+            <label for="faculty_Id" class="control-label">Faculty Id: </label>
+            <select name="facult_Id" class="form-control" id="faculty_Id" formControlName="faculty_Id">
+              <option *ngFor="let current of faculty" value="{{current.faculty_Id}}">{{current.first_Name+"
+                "+current.last_Name}}</option>
+            </select>
+            <em *ngIf="validateControl('faculty_Id') && hasError('faculty_Id', 'required')">Faculty Id is required</em>
+            <em *ngIf="validateControl('faculty_Id') && hasError('faculty_Id', 'maxlength')">Maximum allowed length 6
+              characters.</em>
+          </div>
         </div>
       </div>
 
       <div class="form-group">
-        <label for="semester" class="control-label col-md-2">Semester: </label>
-        <div class="col-md-5">
-          <input type="text" formControlName="semester" id="semester" class="form-control" />
-        </div>
-        <div class="col-md-5">
-          <em *ngIf="validateControl('semester') && hasError('semester', 'required')">Semester is required</em>
-          <em *ngIf="validateControl('semester') && hasError('semester', 'maxlength')">Max 10 Character.</em>
+        <div class="row">
+          <div class="col-md-12 updateWell">
+            <label for="start_Date" class="control-label ">Start Date: </label>
+            <input type="text" formControlName="start_Date" id="start_Date" class="form-control" appDatepicker (change)="executeStartDatePicker($event)"
+              readonly />
+            <em *ngIf="validateControl('start_Date') && hasError('start_Date', 'required')">Start Date is required</em>
+          </div>
         </div>
       </div>
+
       <div class="form-group">
-        <label for="vacancy" class="control-label col-md-2">Vacancy: </label>
-        <div class="col-md-5">
-          <input type="text" formControlName="vacancy" id="credits" class="form-control" />
-        </div>
-        <div class="col-md-5">
-          <em *ngIf="validateControl('vacancy') && hasError('vacancy', 'required')">Vacancy is required</em>
-          <em *ngIf="validateControl('vacancy') && hasError('vacancy', 'maxlength')">Max 3 Character.</em>
+        <div class="row">
+          <div class="col-md-12 updateWell">
+            <label for="end_Date" class="control-label">End Date: </label>
+            <input type="text" formControlName="end_Date" id="end_Date" class="form-control" appDatepicker (change)="executeEndDatePicker($event)"
+              readonly />
+            <em *ngIf="validateControl('end_Date') && hasError('end_Date', 'required')">End Date is required</em>
+          </div>
         </div>
       </div>
+
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-12 updateWell">
+            <label for="semester" class="control-label">Semester: </label>
+            <input type="text" formControlName="semester" id="semester" class="form-control" />
+            <em *ngIf="validateControl('semester') && hasError('semester', 'required')">Semester is required</em>
+            <em *ngIf="validateControl('semester') && hasError('semester', 'maxlength')">Max 10 Character.</em>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-12 updateWell">
+            <label for="vacancy" class="control-label">Vacancy: </label>
+            <input type="number" formControlName="vacancy" id="credits" class="form-control" />
+            <em *ngIf="validateControl('vacancy') && hasError('vacancy', 'required')">Vacancy is required</em>
+            <em *ngIf="validateControl('vacancy') && hasError('vacancy', 'max')">Max 3 numbers</em>
+          </div>
+        </div>
+      </div>
+
       <br><br>
 
       <div class="form-group">
-        <div class="col-md-offset-5 col-md-1">
-          <button type="submit" class="btn btn-info" [disabled]="!sectionForm.valid">Save</button>
-        </div>
-        <div class="col-md-1">
-          <button type="button" class="btn btn-danger" (click)="redirectToSectionList()">Cancel</button>
+        <div class="row">
+          <div class="col-md-12 updateWell">
+            <button type="submit" class="btn btnHc float-left" [disabled]="!sectionForm.valid">Save</button>
+            <button type="button" class="btn btnHc float-right" (click)="redirectToSectionList()">Cancel</button>
+          </div>
         </div>
       </div>
 
     </div>
   </form>
 
-  <app-success-modal [modalHeaderText]="'Success message'" [modalBodyText]="'Section Added successfully'" [okButtonText]="'OK'"
-    (redirectOnOK)="redirectToSectionList()"></app-success-modal>
+  <app-success-modal [modalHeaderText]="'Success message'" [modalBodyText]="'Section Added successfully'"
+    [okButtonText]="'OK'" (redirectOnOK)="redirectToSectionList()"></app-success-modal>
 
   <app-error-modal [modalHeaderText]="'Error message'" [modalBodyText]="errorMessage" [okButtonText]="'OK'"></app-error-modal>
 

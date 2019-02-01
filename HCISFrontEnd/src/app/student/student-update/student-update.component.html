@@ -1,110 +1,118 @@
 <div class="container-fluid">
 
+  <div class="form-horizontal well col-sm-8 col-md-6 col-lg-4 centerDiv well">
+    <h4 class="text-center">Student Update</h4>
+    <h5 class="text-center">{{studentInfo.first_Name}} {{studentInfo.last_Name}}</h5>
+  </div>
+
   <form [formGroup]="studentUpdateForm" autocomplete="off" novalidate (ngSubmit)="updateStudent(studentUpdateForm.value)">
-    <div class="form-horizontal well">
+    <div class="form-horizontal well col-sm-8 col-md-6 col-lg-4 centerDiv">
 
       <div class="form-group">
-        <label for="first_Name" class="control-label col-md-2">First Name: </label>
-        <div class="col-md-5">
-          <input type="text" formControlName="first_Name" id="first_Name" class="form-control" />
-        </div>
-        <div class="col-md-5">
-          <em *ngIf="validateControl('first_Name') && hasError('first_Name', 'required')">Name is required</em>
-          <em *ngIf="validateControl('first_Name') && hasError('first_Name', 'maxlength')">Maximum allowed length is 60
-            characters.</em>
+        <div class="row">
+          <div class="col-md-12 updateWell">
+            <label for="first_Name" class="control-label">First Name: </label>
+            <input type="text" formControlName="first_Name" id="first_Name" class="form-control" />
+            <em *ngIf="validateControl('first_Name') && hasError('first_Name', 'required')">Name is required</em>
+            <em *ngIf="validateControl('first_Name') && hasError('first_Name', 'maxlength')">Maximum allowed length is
+              60
+              characters.</em>
+          </div>
         </div>
       </div>
 
       <div class="form-group">
-        <label for="last_Name" class="control-label col-md-2">Last Name: </label>
-        <div class="col-md-5">
-          <input type="text" formControlName="last_Name" id="last_Name" class="form-control" />
-        </div>
-        <div class="col-md-5">
-          <em *ngIf="validateControl('last_Name') && hasError('last_Name', 'required')">Name is required</em>
-          <em *ngIf="validateControl('last_Name') && hasError('last_Name', 'maxlength')">Maximum allowed length is 60
-            characters.</em>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label for="birth_Date" class="control-label col-md-2">Date of birth: </label>
-        <div class="col-md-5">
-          <input type="text" formControlName="birth_Date" id="birth_Date" class="form-control" appDatepicker (change)="executeDatePicker($event)"
-            readonly />
-        </div>
-        <div class="col-md-5">
-          <em *ngIf="validateControl('birth_Date') && hasError('birth_Date', 'required')">Date of birth is required</em>
+        <div class="row">
+          <div class="col-md-12 updateWell">
+            <label for="last_Name" class="control-label">Last Name: </label>
+            <input type="text" formControlName="last_Name" id="last_Name" class="form-control" />
+            <em *ngIf="validateControl('last_Name') && hasError('last_Name', 'required')">Name is required</em>
+            <em *ngIf="validateControl('last_Name') && hasError('last_Name', 'maxlength')">Maximum allowed length is 60
+              characters.</em>
+          </div>
         </div>
       </div>
 
       <div class="form-group">
-        <label for="eMail" class="control-label col-md-2">E-Mail: </label>
-        <div class="col-md-5">
-          <input type="text" formControlName="eMail" id="eMail" class="form-control" />
-        </div>
-        <div class="col-md-5">
-          <em *ngIf="validateControl('eMail') && hasError('eMail', 'required')">E-Mail is required</em>
-          <em *ngIf="validateControl('eMail') && hasError('eMail', 'maxlength')">Maximum allowed length is 50
-            characters.</em>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label for="address" class="control-label col-md-2">Address: </label>
-        <div class="col-md-5">
-          <input type="text" formControlName="address" id="address" class="form-control" />
-        </div>
-        <div class="col-md-5">
-          <em *ngIf="validateControl('address') && hasError('address', 'required')">Address is required</em>
-          <em *ngIf="validateControl('address') && hasError('address', 'maxlength')">Maximum allowed length is 140
-            characters.</em>
+        <div class="row">
+          <div class="col-md-12 updateWell">
+            <label for="birth_Date" class="control-label">Date of birth: </label>
+            <input type="text" formControlName="birth_Date" id="birth_Date" class="form-control" appDatepicker (change)="executeDatePicker($event)"
+              readonly />
+            <em *ngIf="validateControl('birth_Date') && hasError('birth_Date', 'required')">Date of birth is required</em>
+          </div>
         </div>
       </div>
 
       <div class="form-group">
-        <label for="dept_Id" class="control-label col-md-2">Program: </label>
-        <div class="col-md-5">
-          <select name="dept_Id" id="dept_Id" formControlName="dept_Id" #dCode>
-            <option *ngFor="let dept of depts;" value="{{dept.dept_Id}}">{{dept.dept_Id}} - {{dept.dept_Name}}</option>
-          </select>
+        <div class="row">
+          <div class="col-md-12 updateWell">
+            <label for="eMail" class="control-label">E-Mail: </label>
+            <input type="text" formControlName="eMail" id="eMail" class="form-control" />
+            <em *ngIf="validateControl('eMail') && hasError('eMail', 'required')">E-Mail is required</em>
+            <em *ngIf="validateControl('eMail') && hasError('eMail', 'maxlength')">Maximum allowed length is 50
+              characters.</em>
+          </div>
         </div>
       </div>
 
       <div class="form-group">
-        <label for="student_Status" class="control-label col-md-2">Student Status: </label>
-        <div class="col-md-5">
-          <select #sStatus name="student_Status" id="student_Status" formControlName="student_Status">
-            <option value="Enrolled" selected="selected">Enrolled</option>
-            <option value="Alumni">Alumni</option>
-            <option value="Drop Out">Drop Out</option>
-          </select>
+        <div class="row">
+          <div class="col-md-12 updateWell">
+            <label for="address" class="control-label">Address: </label>
+            <input type="text" formControlName="address" id="address" class="form-control" />
+            <em *ngIf="validateControl('address') && hasError('address', 'required')">Address is required</em>
+            <em *ngIf="validateControl('address') && hasError('address', 'maxlength')">Maximum allowed length is 140
+              characters.</em>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-12 updateWell">
+            <label for="dept_Id" class="control-label ">Program: </label>
+            <select name="dept_Id" class="form-control" id="dept_Id" formControlName="dept_Id" #dCode>
+              <option *ngFor="let dept of depts;" value="{{dept.dept_Id}}">{{dept.dept_Id}} - {{dept.dept_Name}}</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-12 updateWell">
+            <label for="student_Status" class="control-label">Student Status: </label>
+            <select #sStatus name="student_Status" class="form-control" id="student_Status" formControlName="student_Status">
+              <option value="Enrolled" selected="selected">Enrolled</option>
+              <option value="Alumni">Alumni</option>
+              <option value="Drop Out">Drop Out</option>
+            </select>
+          </div>
         </div>
       </div>
 
 
       <div class="form-group">
-        <label for="amount_Owing" class="control-label col-md-2">Amount Owing: </label>
-        <div class="col-md-5">
-          <input type="number" formControlName="amount_Owing" id="amount_Owing" class="form-control" />
-        </div>
-        <div class="col-md-5">
-          <em *ngIf="validateControl('amount_Owing') && hasError('amount_Owing', 'required')">amount_Owing is required</em>
-          <em *ngIf="validateControl('amount_Owing') && hasError('amount_Owing', 'maxlength')">Maximum allowed length
-            is 140
-            characters.</em>
+        <div class="row">
+          <div class="col-md-12 updateWell">
+            <label for="amount_Owing" class="control-label">Amount Owing: </label>
+            <input type="number" formControlName="amount_Owing" id="amount_Owing" class="form-control" />
+            <em *ngIf="validateControl('amount_Owing') && hasError('amount_Owing', 'required')">Amount Owing is
+              required</em>
+            <em *ngIf="validateControl('amount_Owing') && hasError('amount_Owing', 'max')">Max Amount of $999,999</em>
+          </div>
         </div>
       </div>
 
       <div class="form-group">
-        <div class="col-md-offset-5 col-md-1">
-          <button type="submit" class="btn btn-info" [disabled]="!studentUpdateForm.valid">Update</button>
-        </div>
-        <div class="col-md-1">
-          <button type="button" class="btn btn-danger" (click)="redirectToStudentList()">Cancel</button>
+        <div class="row">
+          <div class="col-md-12 updateWell">
+            <button type="submit" class="btn btnHc float-left" [disabled]="!studentUpdateForm.valid">Update</button>
+            <button type="button" class="btn btnHc float-right" (click)="redirectToStudentList()">Cancel</button>
+          </div>
         </div>
       </div>
-
     </div>
   </form>
 

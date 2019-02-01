@@ -41,7 +41,7 @@ export class AdminListComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.dtOptions = {
       pagingType: 'full_numbers',
-      pageLength: 10
+      pageLength: 8
     };
 
     // Get all users and departments

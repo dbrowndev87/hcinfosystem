@@ -1,64 +1,76 @@
 <div class="container-fluid">
 
-  <h2 *ngIf="isLoaded">Username: {{userLogin.username}}</h2>
+  <div class="form-horizontal well col-sm-8 col-md-6 col-lg-4 centerDiv well">
+    <h4 class="text-center">User Login Update</h4>
+    <h5 class="text-center">For Username: {{userLogin.username}}</h5>
+  </div>
 
   <form [formGroup]="userLoginForm" autocomplete="off" novalidate (ngSubmit)="updateUserLogin(userLoginForm.value)">
-    <div class="form-horizontal well">
+    <div class="form-horizontal well col-sm-8 col-md-6 col-lg-4 centerDiv">
 
       <br>
 
       <div *ngIf="changePassword" class="form-group">
-        <label for="password" class="control-label">Password: </label>
-        <div class="col-md-auto">
-          <input type="password" formControlName="password" id="password" class="form-control" />
-        </div>
-        <div class="col-md-5">
-          <em *ngIf="validateControl('password') && hasError('password', 'required')">Password is required</em>
-          <em *ngIf="validateControl('password') && hasError('password', 'maxlength')">Maximum allowed length is 45
-            characters.</em>
-          <em *ngIf="validateControl('password') && hasError('password', 'minlength')">Minimum allowed length is 8
-            characters.</em>
+        <div class="row">
+          <div class="col-md-12 updateWell">
+            <label for="password" class="control-label">Password: </label>
+            <input type="password" formControlName="password" id="password" class="form-control" />
+            <em *ngIf="validateControl('password') && hasError('password', 'required')">Password is required</em>
+            <em *ngIf="validateControl('password') && hasError('password', 'maxlength')">Maximum allowed length is 45
+              characters.</em>
+            <em *ngIf="validateControl('password') && hasError('password', 'minlength')">Minimum allowed length is 8
+              characters.</em>
+          </div>
         </div>
       </div>
 
       <div *ngIf="changePassword" class="form-group">
-        <label for="confirmPassword" class="control-label">Confirm Password:</label>
-        <div class="col-md-auto">
-          <input confirmEqualsValidator type="password" formControlName="confirmPassword" id="confirmPassword" class="form-control" />
-        </div>
-        <div class="col-md-5">
-          <em *ngIf="validateControl('confirmPassword') && hasError('confirmPassword', 'required')">Password
-            Confirmation Required</em>
-          <em *ngIf="validateControl('confirmPassword') && hasError('confirmPassword', 'maxlength')">Maximum allowed
-            length is 45
-            characters.</em>
-          <em *ngIf="validateControl('confirmPassword') && hasError('confirmPassword', 'minlength')">Minimum allowed
-            length is 8
-            characters.</em>
-          <em *ngIf="validateControl('confirmPassword') && hasError('confirmPassword', 'notEqual')">Passwords Missmatch</em>
+        <div class="row">
+          <div class="col-md-12 updateWell">
+            <label for="confirmPassword" class="control-label">Confirm Password:</label>
+            <input confirmEqualsValidator type="password" formControlName="confirmPassword" id="confirmPassword" class="form-control" />
+            <em *ngIf="validateControl('confirmPassword') && hasError('confirmPassword', 'required')">Password
+              Confirmation Required</em>
+            <em *ngIf="validateControl('confirmPassword') && hasError('confirmPassword', 'maxlength')">Maximum allowed
+              length is 45
+              characters.</em>
+            <em *ngIf="validateControl('confirmPassword') && hasError('confirmPassword', 'minlength')">Minimum allowed
+              length is 8
+              characters.</em>
+            <em *ngIf="validateControl('confirmPassword') && hasError('confirmPassword', 'notEqual')">Passwords
+              Missmatch</em>
+          </div>
         </div>
       </div>
 
       <div *ngIf="typeCode === 1" class="form-group">
-        <button type="button" class="btn btn-info" (click)="changePass()">{{buttonText}}</button>
+        <div class="row">
+          <div class="col-md-12 updateWell">
+            <button type="button" class="btn btnHc" (click)="changePass()">{{buttonText}}</button>
+          </div>
+        </div>
       </div>
 
       <div *ngIf="typeCode === 1" class="form-group">
-        <label for="active" class="control-label">Active: </label>
-        <div class="col-md-auto">
-          <select #tCode name="active" id="active" formControlName="active">
-            <option value="true" selected="selected">True</option>
-            <option value="false">False</option>
-          </select>
+        <div class="row">
+          <div class="col-md-12 updateWell">
+            <label for="active" class="control-label">Active: </label>
+            <select #tCode name="active" class="form-control" id="active" formControlName="active">
+              <option value="true" selected="selected">True</option>
+              <option value="false">False</option>
+            </select>
+          </div>
         </div>
       </div>
 
       <br><br>
 
       <div class="form-group">
-        <div class="col-md-auto">
-          <button type="submit" class="btn btn-info" [disabled]="!userLoginForm.valid">Save</button>
-          <button type="button" class="btn btn-danger" (click)="redirectToUserLoginList()">Cancel</button>
+        <div class="row">
+          <div class="col-md-12 updateWell">
+            <button type="submit" class="btn btnHc float-left" [disabled]="!userLoginForm.valid">Save</button>
+            <button type="button" class="btn btnHc float-right" (click)="redirectToUserLoginList()">Cancel</button>
+          </div>
         </div>
       </div>
 

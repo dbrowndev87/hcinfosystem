@@ -1,45 +1,56 @@
 <div class="container-fluid">
 
-
-  <div *ngIf="isLoaded" class="well">
-    <h2>{{studentInfo.first_Name}} {{studentInfo.last_Name}}</h2>
-    <h4>Student ID: {{studentInfo.student_Id}}</h4>
-    <h4>Student Status: {{studentInfo.student_Status}}</h4>
+  <!-- Loading Bar -->
+  <div *ngIf="!isLoaded">
+    <div class="row">
+      <div class="col-sm-8 col-md-6 col-lg-4 centerDiv well">
+        <img src="../../../assets/loading.gif" class="center-block imgLoading" />
+        <h4 class="text-center">Loading</h4>
+      </div>
+    </div>
   </div>
 
-  <form [formGroup]="enrollmentUpdateForm" autocomplete="off" novalidate (ngSubmit)="updateEnrollment(enrollmentUpdateForm.value)">
-    <div class="form-horizontal well">
+  <div *ngIf="isLoaded" class="form-horizontal well col-sm-8 col-md-6 col-lg-4 centerDiv well">
+    <h4 class="text-center">Enrollment Update</h4>
+    <h5 class="text-center">{{studentInfo.student_Id}} - {{studentInfo.first_Name}} {{studentInfo.last_Name}}</h5>
+  </div>
+
+  <form *ngIf="isLoaded" [formGroup]="enrollmentUpdateForm" autocomplete="off" novalidate (ngSubmit)="updateEnrollment(enrollmentUpdateForm.value)">
+    <div class="form-horizontal well col-sm-8 col-md-6 col-lg-4 centerDiv">
 
       <div class="form-group">
-        <label for="course_Status" class="control-label col-md-2">Status:</label>
-        <div class="col-md-5">
-          <select name="course_Status" id="course_Status" formControlName="course_Status" #cStatus>
-            <option value="Registered">Registered</option>
-            <option value="Dropped">Dropped</option>
-            <option value="Complete">Complete</option>
-          </select>
+        <div class="row">
+          <div class="col-md-12 updateWell">
+            <label for="course_Status" class="control-label">Status:</label>
+            <select name="course_Status" class="form-control" id="course_Status" formControlName="course_Status"
+              #cStatus>
+              <option value="Registered">Registered</option>
+              <option value="Dropped">Dropped</option>
+              <option value="Complete">Complete</option>
+            </select>
+          </div>
         </div>
       </div>
 
       <div class="form-group">
-        <label for="grade" class="control-label col-md-2">Grade: </label>
-        <div class="col-md-5">
-          <input type="number" formControlName="grade" id="grade" class="form-control" />
-        </div>
-        <div class="col-md-5">
-          <em *ngIf="validateControl('grade') && hasError('grade', 'required')">Grade is required</em>
-          <em *ngIf="validateControl('grade') && hasError('grade', 'max')">Grade cannot exceed 100</em>
+        <div class="row">
+          <div class="col-md-12 updateWell">
+            <label for="grade" class="control-label">Grade: </label>
+            <input type="number" formControlName="grade" id="grade" class="form-control" />
+            <em *ngIf="validateControl('grade') && hasError('grade', 'required')">Grade is required</em>
+            <em *ngIf="validateControl('grade') && hasError('grade', 'max')">Grade cannot exceed 100</em>
+          </div>
         </div>
       </div>
 
       <br><br>
 
       <div class="form-group">
-        <div class="col-md-offset-5 col-md-1">
-          <button type="submit" class="btn btn-info" [disabled]="!enrollmentUpdateForm.valid">Save</button>
-        </div>
-        <div class="col-md-1">
-          <button type="button" class="btn btn-danger" (click)="redirectToEnrollmentList()">Cancel</button>
+        <div class="row">
+          <div class="col-md-12 updateWell">
+            <button type="submit" class="btn btnHc float-left" [disabled]="!enrollmentUpdateForm.valid">Save</button>
+            <button type="button" class="btn btnHc float-right" (click)="redirectToEnrollmentList()">Cancel</button>
+          </div>
         </div>
       </div>
 

@@ -1,10 +1,31 @@
 <div class="container-fluid">
-  <div class="row">
-    <div class="well col-md-8 centerDiv">
-      <a [routerLink]="['/section/create/']">Create Section</a>
+  <!-- Loading Bar -->
+  <div *ngIf="!isLoaded">
+    <div class="row">
+      <div class="col-md-8 centerDiv well">
+        <img src="../../../assets/loading.gif" class="center-block imgLoading" />
+        <h4 class="text-center">Loading</h4>
+      </div>
     </div>
   </div>
-  <div class="row">
+
+  <!-- HC Well Button -->
+  <div *ngIf="isLoaded" class="row">
+    <div class=" col-md-8 centerDiv well">
+      <div class="row">
+        <div class="col-md-4">
+          <h4 class="float-left">Section List</h4>
+        </div>
+        <div class="col-md-8">
+          <button class="btn btnHc float-right">
+            <a [routerLink]="[ '/section/create']">Create Section</a>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="isLoaded" class="row">
     <div class="col-md-8 centerDiv well">
       <div class="table-responsive">
         <table *ngIf="isLoaded" datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table table-striped">
@@ -26,10 +47,10 @@
               <td>{{section.designation}}</td>
               <td>{{section.semester}}</td>
               <td>{{section.faculty_Id}}</td>
-              <td>{{section.start_Date}}</td>
-              <td>{{section.end_Date}}</td>
+              <td>{{section.start_Date | date:'yyyy-mm-dd'}}</td>
+              <td>{{section.end_Date | date:'yyyy-mm-dd'}}</td>
               <td>{{section.vacancy}}</td>
-              <td><button type="button" id="update" class="btn btn-success" (click)='redirectToSectionPage(section.section_Id)'>Update</button></td>
+              <td><button type="button" id="update" class="btn btnHc" (click)='redirectToUpdatePage(section.section_Id)'>Update</button></td>
             </tr>
           </tbody>
         </table>

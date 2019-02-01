@@ -25,6 +25,7 @@ export class CourseCreateComponent implements OnInit {
   private userType: number;
   public courseForm: FormGroup;
   private depts: Department[];
+  private isLoaded = false;
   @ViewChild('dCode') dCode: ElementRef;
 
 
@@ -58,6 +59,7 @@ export class CourseCreateComponent implements OnInit {
             this.depts.splice(x, 1);
           }
         }
+        this.isLoaded = true;
       }),
       // tslint:disable-next-line: no-unused-expression
       (error) => {

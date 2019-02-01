@@ -18,6 +18,7 @@ export class DepartmentCreateComponent implements OnInit {
   private userType: number;
   public departmentForm: FormGroup;
   public departments: Department[];
+  private isLoaded = false;
 
   @ViewChild('dCode') dCode: ElementRef;
 
@@ -50,6 +51,7 @@ export class DepartmentCreateComponent implements OnInit {
     this.repository.getData(apiAddress)
       .subscribe(res => {
         this.departments = res as Department[];
+        this.isLoaded = true;
       }),
       // tslint:disable-next-line: no-unused-expression
       (error) => {

@@ -27,6 +27,7 @@ export class AdminUpdateComponent implements OnInit {
   private deptIndex: number;
   public userForm: FormGroup;
   public depts: Department[];
+  private isLoaded = false;
   @ViewChild('dCode') dCode: ElementRef;
 
   constructor(
@@ -48,6 +49,7 @@ export class AdminUpdateComponent implements OnInit {
 
     // This is get user and get all department calls.
     this.getUserById();
+
   }
 
   /**
@@ -67,6 +69,7 @@ export class AdminUpdateComponent implements OnInit {
         this.userForm.patchValue(this.user);
         this.userForm.get('birth_Date').setValue(this.user.birth_Date.toLocaleString('yyyy/mm/dd').slice(0, 10));
         this.deptIndex = this.user.dept_Id - 1;
+        this.isLoaded = true;
       },
         (error) => {
           this.errorHandler.handleError(error);

@@ -22,7 +22,6 @@ import { Md5 } from 'ts-md5/dist/md5';
 import { Globals } from 'src/app/globals';
 import { Faculty } from 'src/app/_interfaces/faculty.model';
 import { Subscription } from 'rxjs';
-import { PreviousRouteService } from 'src/app/shared/services/previous-route.service';
 
 
 
@@ -39,7 +38,9 @@ export class UserCreateComponent implements OnInit {
   public userId: any;
   private depts: Department[];
   private userType;
+  private userTypeName = ['Admin', 'Faculty', 'Student'];
   private md5 = new Md5();
+  private isLoaded = false;
   private param;
   private successMessage = "";
 
@@ -50,7 +51,6 @@ export class UserCreateComponent implements OnInit {
     private activeRoute: ActivatedRoute,
     private rupg: RandomUserPassGen,
     private sidg: StudentIdGenerator,
-    private previousRouteService: PreviousRouteService,
     private globals: Globals
   ) {
   }
@@ -88,6 +88,8 @@ export class UserCreateComponent implements OnInit {
 
     // get the departments
     this.getAllDepartments();
+
+    this.isLoaded = true;
   }
 
   /**
@@ -346,9 +348,14 @@ export class UserCreateComponent implements OnInit {
     }
   }
 
-  public redirectToLastPage() {
-    // tslint:disable-next-line: no-unused-expression
-    this.router.navigate([sessionStorage.getItem('previousUrl')]);
+  public redirectToUserList() {
+    if (this.userType === 1) {
+      this.router.navigate(['/admin/list']);
+    } else if (this.userType === 2) {
+      this.router.navigate(['/faculty/list']);
+    } else if (this.userType === 3) {
+      this.router.navigate(['/student/list']);
+    }
   }
 
   /**

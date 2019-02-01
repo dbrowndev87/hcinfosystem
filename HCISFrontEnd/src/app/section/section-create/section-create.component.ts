@@ -20,6 +20,7 @@ export class SectionCreateComponent implements OnInit {
   public designations = new Array("A", "B", "C", "L");
   public faculty: FacultyInfo[];
   public courses: Course[];
+  private isLoaded = false;
 
   @ViewChild('dCode') dCode: ElementRef;
 
@@ -38,12 +39,13 @@ export class SectionCreateComponent implements OnInit {
       designation: new FormControl('', [Validators.required, Validators.maxLength(1)]),
       semester: new FormControl('', [Validators.required, Validators.maxLength(10)]),
       course_Id: new FormControl('', [Validators.required]),
-      vacancy: new FormControl('', [Validators.required, Validators.maxLength(3)]),
+      vacancy: new FormControl('', [Validators.required, Validators.max(100)]),
     });
 
     this.userType = parseInt(sessionStorage.getItem('typeCode'), 0);
     this.getAllCourses();
     this.getAllFaculty();
+    this.isLoaded = true;
 
   }
 

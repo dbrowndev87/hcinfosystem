@@ -40,7 +40,7 @@ export class SectionListComponent implements OnInit, OnDestroy {
 
         this.sections = sections as Section[];
         this.dtTrigger.next();
-        
+
       }),
       // tslint:disable-next-line: no-unused-expression
       (error) => {
@@ -53,6 +53,7 @@ export class SectionListComponent implements OnInit, OnDestroy {
     // Do not forget to unsubscribe the event
     this.dtTrigger.unsubscribe();
   }
+
   public redirectToUpdatePage(id) {
     let updateUrl = `/section/update/${id}`;
     this.router.navigate([updateUrl]);

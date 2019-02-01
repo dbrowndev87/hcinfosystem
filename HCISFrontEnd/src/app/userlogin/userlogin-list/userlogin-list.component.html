@@ -1,5 +1,39 @@
 <div class="container-fluid">
-  <div class="row">
+  <!-- Loading Bar -->
+  <div *ngIf="!isLoaded">
+    <div class="row">
+      <div class="col-md-8 centerDiv well">
+        <img src="../../../assets/loading.gif" class="center-block imgLoading" />
+        <h4 class="text-center">Loading</h4>
+      </div>
+    </div>
+  </div>
+
+  <!-- HC Well Button -->
+  <div *ngIf="isLoaded" class="row">
+    <div class=" col-md-8 centerDiv well">
+      <div class="row">
+        <div class="col-md-4">
+          <h4 class="float-left">User Login List</h4>
+        </div>
+        <div class="col-md-8">
+          <button class="btn btnHc float-right">
+            <a [routerLink]="[ '/user/create/3']">Create Student</a>
+          </button>
+          <button class="btn btnHc float-right">
+            <a [routerLink]="[ '/user/create/2']">Create Faculty</a>
+          </button>
+          <button class="btn btnHc float-right">
+            <a [routerLink]="[ '/user/create/1']">Create Admin</a>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div *ngIf="isLoaded" class="row">
     <div class="col-md-8 centerDiv well">
       <div class="table-responsive">
         <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table table-striped">
@@ -7,7 +41,7 @@
             <tr>
               <th>Username</th>
               <th>Password</th>
-              <th>Associated User ID</th>
+              <th>Associated User</th>
               <th>Active</th>
               <th>Options</th>
             </tr>
@@ -16,10 +50,10 @@
             <tr *ngFor="let userLogin of userLogins">
               <td>{{userLogin.username}}</td>
               <td>{{userLogin.password}}</td>
-              <td>{{userLogin.user_Id}}</td>
+              <td>{{users[(userLogin.user_Id - 1)].first_Name}} {{users[(userLogin.user_Id - 1)].last_Name}}</td>
               <td *ngIf="userLogin.active === true">Active</td>
               <td *ngIf="userLogin.active === false">Inactive</td>
-              <td><button type="button" id="update" class="btn btn-success" (click)='redirectToUpdatePage(userLogin.username)'>Update</button></td>
+              <td><button type="button" id="update" class="btn btnHc" (click)='redirectToUpdatePage(userLogin.username)'>Update</button></td>
             </tr>
           </tbody>
         </table>

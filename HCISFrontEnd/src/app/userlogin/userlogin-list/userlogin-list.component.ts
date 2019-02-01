@@ -12,6 +12,7 @@ import { RepositoryService } from 'src/app/shared/services/repository.service';
 import { ErrorHandlerService } from 'src/app/shared/services/error-handler.service';
 import { Router } from '@angular/router';
 import { Subject } from 'rxjs';
+import { User } from 'src/app/_interfaces/user.model';
 
 @Component({
   selector: 'app-userlogin-list',
@@ -23,10 +24,12 @@ export class UserloginListComponent implements OnInit, OnDestroy {
 
 
   dtOptions: DataTables.Settings = {};
-  dtTrigger: Subject<UserLogin> = new Subject();
+  dtTrigger: Subject<UserLogin> = new Subject<UserLogin>();
 
   public userLogins: UserLogin[];
   public errorMessage: String = "";
+  public users: User[] = [];
+  private isLoaded = false;
 
   constructor(
     private repository: RepositoryService,
@@ -41,6 +44,8 @@ export class UserloginListComponent implements OnInit, OnDestroy {
     };
 
     this.getAllUserLogins();
+    this.getAllUsers();
+    this.isLoaded = true;
   }
 
   public getAllUserLogins() {
@@ -56,6 +61,21 @@ export class UserloginListComponent implements OnInit, OnDestroy {
         this.errorMessage = this.errorHandler.errorMessage;
       };
   }
+
+  public getAllUsers() {
+    let apiAddress = "api/user";
+    this.repository.getData(apiAddress)
+      .subscribe(res => {
+        this.users = res as User[];
+      }),
+      // tslint:disable-next-line: no-unused-expression
+      (error) => {
+        this.errorHandler.handleError(error);
+        this.errorMessage = this.errorHandler.errorMessage;
+      };
+  }
+
+
 
   ngOnDestroy(): void {
     // Do not forget to unsubscribe the event

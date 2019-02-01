@@ -54,6 +54,10 @@ em{
     -webkit-text-stroke-width: .4px !important;
     -webkit-text-stroke-color: black !important;
 }
+
+.headerPaddingLeft{
+    padding-left: 150px;
+}
 .centerDiv{
     float: none;
     left:0;
@@ -76,6 +80,11 @@ em{
 
 .imgLoading{
     width: 80px;
+}
+
+.updateWell{
+    padding-left: 60px;
+    padding-right: 60px;
 }
 
 .well {
