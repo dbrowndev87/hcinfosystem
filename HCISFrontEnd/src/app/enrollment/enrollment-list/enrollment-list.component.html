@@ -1,6 +1,22 @@
 <div class="container-fluid">
-  <br>
-  <div class="row">
+  <!-- Loading Bar -->
+  <div *ngIf="!isLoaded">
+    <div class="row">
+      <div class="col-md-8 centerDiv well">
+        <img src="../../../assets/loading.gif" class="center-block imgLoading" />
+        <h4 class="text-center">Loading</h4>
+      </div>
+    </div>
+  </div>
+
+  <!-- HC Well Button -->
+  <div *ngIf="isLoaded" class="row">
+    <div class=" col-md-8 centerDiv well">
+      <h4 class="text-center">Enrollments</h4>
+    </div>
+  </div>
+
+  <div *ngIf="isLoaded" class="row">
     <div class="col-md-8 centerDiv well">
       <div class="table-responsive">
         <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table table-striped">

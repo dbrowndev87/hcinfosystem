@@ -21,6 +21,9 @@ SET time_zone = "+00:00";
 --
 -- Database: `goldstar`
 --
+DROP DATABASE IF EXISTS`goldstar`;
+CREATE DATABASE `goldstar`;
+USE `goldstar`;
 
 DELIMITER $$
 --

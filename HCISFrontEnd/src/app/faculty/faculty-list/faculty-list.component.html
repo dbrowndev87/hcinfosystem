@@ -1,11 +1,25 @@
 <div class="container-fluid">
-  <div class="row">
-    <div class="well col-md-8 centerDiv">
-      <a [routerLink]="['/user/create/2']">Create Faculty</a>
+  <!-- Loading Bar -->
+  <div *ngIf="!isLoaded">
+    <div class="row">
+      <div class="col-md-8 centerDiv well">
+        <img src="../../../assets/loading.gif" class="center-block imgLoading" />
+        <h4 class="text-center">Loading</h4>
+      </div>
     </div>
   </div>
+
+  <!-- HC Well Button -->
+  <div *ngIf="isLoaded" class="row">
+    <div class=" col-md-8 centerDiv well">
+      <button class="btn btnHc">
+        <a [routerLink]="[ '/user/create/2']">Create a Faculty</a>
+      </button>
+    </div>
+  </div>
+
   <br>
-  <div class="row">
+  <div *ngIf="isLoaded" class="row">
     <div class="col-md-8 centerDiv well">
       <div class="table-responsive">
         <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table table-striped">

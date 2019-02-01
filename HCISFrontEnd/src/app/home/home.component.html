@@ -92,6 +92,7 @@
           <div class="row">
             <h5 class="text-center bold">Transaction History:</h5>
             <div id="transDiv" class="col-md-12">
+
               <!-- If transactions -->
               <table *ngIf="transactions.length > 0" class="table">
                 <thead>
@@ -109,6 +110,15 @@
                   </tr>
                 </tbody>
               </table>
+
+              <!-- No Transactions -->
+              <div *ngIf="transactions.length === 0">
+                <br>
+                <div class="col-md-10 centerDiv well">
+                  <h5 class="text-center">No Transaction History</h5>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
