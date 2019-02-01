@@ -1,7 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css?family=Bitter');
+
 body{
     /* background: url(./assets/back.jpg) no-repeat center center fixed; */
-    
      /* background: url(./assets/back3.jpg) no-repeat center center fixed; */
     
     background: url(./assets/back5.jpg) no-repeat center center fixed; 
@@ -10,7 +11,15 @@ body{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    text-shadow: 1px 0px 1px silver;
+
+
+    font-family: 'Bitter', serif;
+
+    text-shadow: 1px 1px 1px silver;
+}
+
+input{
+    box-shadow: 1px 1px 1px silver !important;
 }
 
 a:link{
@@ -30,13 +39,20 @@ a:active{
     color: black !important;
 }
 
+.btnHc{
+    box-shadow: 1px 1px 1px black;
+    background: url('./assets/topbar.jpg') !important;
+    background-size: cover !important;
+}
 
 .ui-widget-header {
     color: #564040;
 }
 em{
-    color: black;
-    font-weight: bold;
+    color:red;
+    text-shadow: 1px 1px 5px red;
+    -webkit-text-stroke-width: .4px !important;
+    -webkit-text-stroke-color: black !important;
 }
 .centerDiv{
     float: none;
@@ -55,17 +71,35 @@ em{
     color: black;
     text-align: center;
     position: relative;
-    top:30px;
     text-shadow: 2px 2px 2px gray;
 }
 
 .imgLoading{
-    width: 100px;
+    width: 80px;
 }
 
 .well {
     box-shadow: 1px 1px 1px black;
     border: 1px black solid;
     border-radius: 10px;
+}
+
+/* Floats */
+.float-right{
+    float: right;
+}
+
+/* Float Right */
+.float-left{
+    float: left;
+}
+
+/* Bold Text */
+.bold{
+    font-weight: bold !important;
+}
+
+.modal-content{
+    background-color: whitesmoke;
 }
 

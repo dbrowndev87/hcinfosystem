@@ -1,0 +1,66 @@
+
+/* Well Divs */
+#sInfo{
+    height: 320px;
+}
+
+#pInfo{
+    height: 60px;
+}
+
+#cInfo{
+    height: 370px;
+}
+
+td{
+    border-bottom: 2px #cccccc solid;
+}
+
+/* Transaction Table */
+.tTrans{
+    width: 100%;
+    border: 1px black solid;
+}
+
+#eWell{
+    height: 112px;
+}
+
+/* Scrollable Information Divs */
+#transDiv{
+    overflow-y: scroll;
+    width: 100%;
+    background-color: white;
+    height: 122px;
+    border: 1px black solid;
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px black;
+}
+
+#courseDiv{
+    overflow-y: scroll;
+    width: 100%;
+    background-color: white;
+    height: 270px;
+    border: 1px black solid;
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px black;
+}
+
+@media only screen and (max-width: 299px) {
+
+    /* Well Divs */
+    #sInfo{
+     height: 320px;
+    }
+
+    #courseDiv{
+        height: 170px;
+    }
+
+    
+    #eWell{
+        height: 150px;
+    }
+
+  }

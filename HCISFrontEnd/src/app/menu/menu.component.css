@@ -1,12 +1,38 @@
 
 a:link{
     color: black !important;
-    text-shadow: 1px 0px 1px silver;
+    text-shadow: 1px 0px 1px dimgray;
+}
+
+#logo{
+    width: 220px;
+}
+
+#logIn{
+    float: right !important;
+}
+
+#logOut{
+    float: right !important;
+}
+
+#spacer{
+    height: 115px !important;
+}
+
+.navbar-toggle{
+    background: url('../../assets/topbar.jpg') !important;
+    background-size: cover !important;
+    box-shadow: 1px 1px 1px black;
+}
+
+.icon-bar{
+    background-color: black !important;
 }
 
 a:visited{
-    background: url('../../assets/topbar.jpg') !important;
-    background-size: contain !important;
+    /* background: url('../../assets/topbar.jpg') !important;
+    background-size: contain !important; */
     color: black !important;
 }
 
@@ -21,33 +47,67 @@ a:active{
 
 .navbar{
     box-shadow: 1px 0px 1px black;
+    
+}
+
+.nav {
+    margin-top: 12px;
 }
 .navbar .navbar-nav > li.open > a {
     background: url('../../assets/topbar.jpg') !important;
     background-size: contain !important;
 }
 
-.navbar .navbar-nav > li.open > a:hover,
-.navbar .navbar-nav > li.open > a:focus {
-    background: url('../../assets/topbar.jpg') !important;
-    background-size: contain !important;
+.navbar .navbar-nav >  a:hover,
+.navbar .navbar-nav >  a:focus {
+    /* background: url('../../assets/topbar.jpg') !important;
+    background-size: contain !important; */
+    background-color: whitesmoke;
 }
 
-.active{
+/* .active{
     font-weight: bold;
     font-style: italic;
     color: #fff;
-}
+} */
 
 #topBar{
-    background: url('../../assets/topbar.jpg');
-    background-size: contain;
+    /* background: url('../../assets/topbar.jpg');
+    background-size: contain; */
+    background-color: whitesmoke;
 }
 
 .dropdown-menu{
-    background-color: #dfe0e2;
+    background-color: whitesmoke;
     border-left-color: black;
     border-right-color: black;
     border-bottom-color: black;
     
 }
+
+#divTopBar{
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: none !important;
+    margin: none !important;
+    padding: 3px !important;
+    height: 70px;
+}
+
+@media only screen and (max-width: 768px) {
+    #logo{
+        width: 175px;
+        position: absolute;
+        left:3px;
+        top:20px;
+    }
+
+    #logIn{
+        float: none !important;
+    }
+    
+    #logOut{
+        float:none !important;
+    }
+  }
+  

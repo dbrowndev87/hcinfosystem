@@ -1,10 +1,16 @@
 <div class="container-fluid">
 
-  <div class="centerDiv" *ngIf="!isLoaded">
-    <img src="../../../assets/loading.gif" class="center-block imgLoading" />
+  <!-- Loading Bar -->
+  <div *ngIf="!isLoaded">
+    <div class="row">
+      <div class="col-md-10 centerDiv well">
+        <img src="../../../assets/loading.gif" class="center-block imgLoading" />
+        <h4 class="text-center">Loading</h4>
+      </div>
+    </div>
   </div>
 
-  <div *ngIf="isLoaded" class="well">
+  <div *ngIf="isLoaded" class="well col-md-10 centerDiv">
     <h2>{{studentInfo.first_Name}} {{studentInfo.last_Name}}</h2>
     <h5>Student ID: {{studentInfo.student_Id}}</h5>
     <h5>Student Status: {{studentInfo.student_Status}}</h5>
@@ -18,7 +24,7 @@
 
   <form *ngIf="isLoaded && studentInfo.amount_Owing > 0" [formGroup]="studentPaymentForm" autocomplete="off" novalidate
     (ngSubmit)="makePayment(studentPaymentForm.value)">
-    <div class="form-horizontal well">
+    <div class="form-horizontal well col-md-10 centerDiv">
 
       <div class="form-group">
         <label for="amount" class="control-label col-md-2">Payment Amount: </label>
@@ -36,15 +42,19 @@
 
       <div class="form-group">
         <div class="col-md-offset-1 col-md-1">
-          <button type="submit" class="btn btn-info" [disabled]="!studentPaymentForm.valid">Make Payment</button>
+          <button type="submit" class="btn btnHc" [disabled]="!studentPaymentForm.valid">Make Payment</button>
         </div>
         <div class="col-md-1">
-          <button type="button" class="btn btn-danger" (click)="redirectToHome()">Cancel</button>
+          <button type="button" class="btn btnHc" (click)="redirectToHome()">Back</button>
         </div>
       </div>
 
     </div>
   </form>
+
+  <div *ngIf="isLoaded && studentInfo.amount_Owing === 0" class="col-md-10 well centerDiv">
+    <button type="button" class="btn btnHc" (click)="redirectToHome()">Back</button>
+  </div>
 
   <app-success-modal [modalHeaderText]="'Success message'" [modalBodyText]="'Payment completed successfully'"
     [okButtonText]="'OK'" (redirectOnOK)="updateViewInformation(studentInfo.studentId)"></app-success-modal>
