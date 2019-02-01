@@ -41,6 +41,7 @@ export class DepartmentListComponent implements OnInit, OnDestroy {
     };
 
     this.getAllDepartments();
+    this.isLoaded = true;
   }
 
   ngOnDestroy(): void {
@@ -59,7 +60,7 @@ export class DepartmentListComponent implements OnInit, OnDestroy {
     this.repository.getData(apiAddress)
       .subscribe(res => {
         this.departments = res as Department[];
-        this.isLoaded = true;
+        this.dtTrigger.next();
       }),
       // tslint:disable-next-line: no-unused-expression
       (error) => {
