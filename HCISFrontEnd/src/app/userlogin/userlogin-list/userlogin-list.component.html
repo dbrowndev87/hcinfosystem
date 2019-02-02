@@ -50,7 +50,7 @@
             <tr *ngFor="let userLogin of userLogins">
               <td>{{userLogin.username}}</td>
               <td>{{userLogin.password}}</td>
-              <td>{{users[(userLogin.user_Id - 1)].first_Name}} {{users[(userLogin.user_Id - 1)].last_Name}}</td>
+              <td>{{userLogin.user_Id}}</td>
               <td *ngIf="userLogin.active === true">Active</td>
               <td *ngIf="userLogin.active === false">Inactive</td>
               <td><button type="button" id="update" class="btn btnHc" (click)='redirectToUpdatePage(userLogin.username)'>Update</button></td>

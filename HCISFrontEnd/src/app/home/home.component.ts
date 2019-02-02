@@ -69,42 +69,42 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   }
 
-  public getCourseRoster(sectionId){
+  public getCourseRoster(sectionId) {
     console.log(sectionId);
     let apiAddressRoster = "api/enrollment/section/" + sectionId;
     this.subscriptions.push(this.repository.getData(apiAddressRoster).pipe(
       map(rosterInfo => {
-       this.enrollments = rosterInfo as Enrollment[];
-       this.enrollments.forEach(current => {    
-         this.getAllStudentInfo(current.student_Id);
-       } );
-       console.log(this.students);
-       this.buttonClicked = true;
-       this.isLoaded = true;
-     })
-   ).subscribe()),
-     // get Roster error
-     // tslint:disable-next-line: no-unused-expression
-     (error) => {
-       this.errorHandler.handleError(error);
-       this.errorMessage = "Unable to access API";
-     };
+        this.enrollments = rosterInfo as Enrollment[];
+        this.enrollments.forEach(current => {
+          this.getAllStudentInfo(current.student_Id);
+        });
+        console.log(this.students);
+        this.buttonClicked = true;
+        this.isLoaded = true;
+      })
+    ).subscribe()),
+      // get Roster error
+      // tslint:disable-next-line: no-unused-expression
+      (error) => {
+        this.errorHandler.handleError(error);
+        this.errorMessage = "Unable to access API";
+      };
   }
 
-  public getAllStudentInfo(studentId){
+  public getAllStudentInfo(studentId) {
     let apiAddressInfo = "api/studentInfo/" + studentId;
     this.subscriptions.push(this.repository.getData(apiAddressInfo).pipe(
       map(studentInfo => {
-       this.students = studentInfo as StudentInfo[];
-       this.isLoaded = true;
-     })
-   ).subscribe()),
-     // get Roster error
-     // tslint:disable-next-line: no-unused-expression
-     (error) => {
-       this.errorHandler.handleError(error);
-       this.errorMessage = "Unable to access API";
-     };
+        this.students = studentInfo as StudentInfo[];
+        this.isLoaded = true;
+      })
+    ).subscribe()),
+      // get Roster error
+      // tslint:disable-next-line: no-unused-expression
+      (error) => {
+        this.errorHandler.handleError(error);
+        this.errorMessage = "Unable to access API";
+      };
   }
 
   // Destroy subscriptions when done.
@@ -113,71 +113,71 @@ export class HomeComponent implements OnInit, OnDestroy {
       subscription.unsubscribe();
     }
   }
-    /*************************************************
-   * Faculty INFORMATION BEINGS HERE
-   ************************************************/
+  /*************************************************
+ * Faculty INFORMATION BEINGS HERE
+ ************************************************/
 
   /************************
    * Get faculty Info
    ************************/
 
-   public getFacultyInfo() {
+  public getFacultyInfo() {
     let apiAddressFaculty = "api/facultyinfo/" + sessionStorage.getItem("facultyId");
     this.subscriptions.push(this.repository.getData(apiAddressFaculty).pipe(
       map(facultyInfo => {
-       this.facultyInfo = facultyInfo as FacultyInfo;
-       this.isLoaded = true;
-       console.log(this.facultyInfo);
-       this.getDepartmentById(sessionStorage.getItem("facultyId"));
-       this.getSectionsById(sessionStorage.getItem("facultyId"));
+        this.facultyInfo = facultyInfo as FacultyInfo;
+        this.isLoaded = true;
+        console.log(this.facultyInfo);
+        this.getDepartmentById(sessionStorage.getItem("facultyId"));
+        this.getSectionsById(sessionStorage.getItem("facultyId"));
 
-     })
-   ).subscribe()),
-     // get Enrollments error
-     // tslint:disable-next-line: no-unused-expression
-     (error) => {
-       this.errorHandler.handleError(error);
-       this.errorMessage = "Unable to access API";
-     };
- }
+      })
+    ).subscribe()),
+      // get Enrollments error
+      // tslint:disable-next-line: no-unused-expression
+      (error) => {
+        this.errorHandler.handleError(error);
+        this.errorMessage = "Unable to access API";
+      };
+  }
 
- public getDepartmentById(id) {
-  let apiAddressDepartments = "api/department/" + id;
-        this.subscriptions.push(this.repository.getData(apiAddressDepartments).pipe(
-          map(department => {
+  public getDepartmentById(id) {
+    let apiAddressDepartments = "api/department/" + id;
+    this.subscriptions.push(this.repository.getData(apiAddressDepartments).pipe(
+      map(department => {
 
-            // Get the depatment
-            this.department = department as Department;
-            this.isLoaded = true;
-      
-          })
-          ).subscribe()),
-   
-     // tslint:disable-next-line: no-unused-expression
-     (error) => {
-       this.errorHandler.handleError(error);
-       this.errorMessage = "Unable to access API";
-     };
- }
+        // Get the depatment
+        this.department = department as Department;
+        this.isLoaded = true;
 
- public getSectionsById(id) {
-  let apiAddressSections = "api/section/faculty/" + id;
-        this.subscriptions.push(this.repository.getData(apiAddressSections).pipe(
-          map(sectionsFromDb => {
+      })
+    ).subscribe()),
 
-            // Get the depatment
-            this.sectionsById = sectionsFromDb as Section[];
-            this.isLoaded = true;
-      
-          })
-          ).subscribe()),
-   
-     // tslint:disable-next-line: no-unused-expression
-     (error) => {
-       this.errorHandler.handleError(error);
-       this.errorMessage = "Unable to access API";
-     };
- }
+      // tslint:disable-next-line: no-unused-expression
+      (error) => {
+        this.errorHandler.handleError(error);
+        this.errorMessage = "Unable to access API";
+      };
+  }
+
+  public getSectionsById(id) {
+    let apiAddressSections = "api/section/faculty/" + id;
+    this.subscriptions.push(this.repository.getData(apiAddressSections).pipe(
+      map(sectionsFromDb => {
+
+        // Get the depatment
+        this.sectionsById = sectionsFromDb as Section[];
+        this.isLoaded = true;
+
+      })
+    ).subscribe()),
+
+      // tslint:disable-next-line: no-unused-expression
+      (error) => {
+        this.errorHandler.handleError(error);
+        this.errorMessage = "Unable to access API";
+      };
+  }
 
   /*************************************************
    * STUDENT INFORMATION BEINGS HERE

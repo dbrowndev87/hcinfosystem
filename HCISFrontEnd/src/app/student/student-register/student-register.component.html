@@ -1,0 +1,81 @@
+<div class="container-fluid">
+
+  <!-- Loading Bar -->
+  <div *ngIf="!isLoaded">
+    <div class="row">
+      <div class="col-sm-8 col-md-6 col-lg-4 centerDiv well">
+        <img src="../../../assets/loading.gif" class="center-block imgLoading" />
+        <h4 class="text-center">Loading</h4>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="isLoaded" class="well col-sm-10 col-md-10 col-lg-10 centerDiv well">
+    <h4 class="text-center">Student Enrollment</h4>
+
+  </div>
+
+  <!-- Custom Course Picker -->
+  <div *ngIf="isLoaded" class="well col-sm-10 col-md-10 col-lg-10 centerDiv">
+    <h6 class="text-center">Current Registered for {{enrolledSections.length}} courses.</h6>
+    <h6 class="text-center">You must apply for minimum 4 and max 8 courses a semester</h6>
+    <div class="row">
+      <div id="selectCourse" class="col-md-6 float-left">
+        <h5 class="text-center">Select Your Courses</h5>
+        <table *ngIf="sectionsSelect.length >= 0" class="table">
+          <thead>
+            <tr>
+              <th>Course ID</th>
+              <th>Course Name</th>
+              <th>Designation</th>
+              <th>Register</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let section of sectionsSelect; let i = index">
+              <td>{{section.course_Id}}</td>
+              <td>{{section.course_Name}}</td>
+              <td>{{section.designation}}</td>
+              <td><button class="btn btnHc" (click)="addToRegister(i)"><i class="fas fa-arrow-right"></i></button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="selectedCourse" class="col-md-6 float-right">
+        <h5 class="text-center">Selected Courses</h5>
+        <table *ngIf="sectionsRegister.length > 0" class="table">
+          <thead>
+            <tr>
+              <th>Un-Select</th>
+              <th>Course ID</th>
+              <th>Course Name</th>
+              <th>Designation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let section of sectionsRegister; let i = index">
+              <td><button class="btn btnHc" (click)="removeFromRegister(i)"><i class="fas fa-arrow-left"></i></button></td>
+              <td>{{section.course_Id}}</td>
+              <td>{{section.course_Name}}</td>
+              <td>{{section.designation}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="isLoaded" class="well col-sm-10 col-md-10 col-lg-10 centerDiv">
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-12 centerDiv">
+        <button type="submit" class="btn btnHc float-left" (click)="validateRegistration()">Register</button>
+        <button type="button" class="btn btnHc float-right" (click)="redirectToHome()">Back</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+<app-success-modal [modalHeaderText]="'Success message'" [modalBodyText]="'Courses Registered successfully'"
+  [okButtonText]="'OK'" (redirectOnOK)="redirectToHome()"></app-success-modal>
+
+<app-error-modal [modalHeaderText]="'Error message'" [modalBodyText]="errorMessage" [okButtonText]="'OK'"></app-error-modal>

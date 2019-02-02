@@ -8,11 +8,11 @@ import { StudentIdGenerator } from './tools/sidg';
 import { TransactionIdGenerator } from './tools/tidg';
 import { DataTablesModule, DataTableDirective } from 'angular-datatables';
 
-
 @NgModule({
   imports: [
     CommonModule,
-    DataTablesModule
+    DataTablesModule,
+
   ],
   declarations: [
     ErrorModalComponent,
@@ -23,8 +23,7 @@ import { DataTablesModule, DataTableDirective } from 'angular-datatables';
     ErrorModalComponent,
     SuccessModalComponent,
     DatepickerDirective,
-    DataTableDirective
-
+    DataTableDirective,
   ],
   providers: [
     RandomUserPassGen,

@@ -34,14 +34,12 @@ import { EnrollmentModule } from './enrollment/enrollment.module';
 import { EnrollmentRoutingModule } from './enrollment/enrollment.routing';
 import { SectionModule } from './section/section.module';
 import { SectionRoutingModule } from './section/section.routing';
-import { DataTablesModule, DataTableDirective } from 'angular-datatables';
 import { DepartmentModule } from './department/department.module';
 import { DepartmentRoutingModule } from './department/department.routing';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { SharedModule } from './shared/shared.module';
 import { ReportsModule } from './reports/reports.module';
 import { ReportsRoutingModule } from './reports/reports.routing';
-
-
-
 
 
 @NgModule({
@@ -81,7 +79,7 @@ import { ReportsRoutingModule } from './reports/reports.routing';
     // These Must Go Last.
     RouterModule,
     AppRoutingModule,
-
+    NoopAnimationsModule
   ],
   providers: [
     EnvironmentUrlService,
@@ -95,7 +93,7 @@ import { ReportsRoutingModule } from './reports/reports.routing';
   ],
   bootstrap: [AppComponent],
   exports: [
-    MenuComponent,
+    MenuComponent
   ]
 })
 export class AppModule { }

@@ -22,155 +22,156 @@
 
     <!-- Faculty Home -->
     <div *ngIf="typeCode === 2 && isLoaded">
-        <div class="row">
-          <div id="fInfo" class="col-md-offset-1 col-md-4 col-lg-4 well text-center">
-            <h3 class="text-center">{{facultyInfo.first_Name}} {{facultyInfo.last_Name}}</h3>
-            <div class="row">
-              <div class="col-md-12">
-                <p><span class="bold">Faculty ID:</span><br>
-                  {{facultyInfo.faculty_Id}}</p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12">
-                <p><span class="bold">E-Mail:</span><br>
-                  {{facultyInfo.eMail}}</p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12">
-                <p><span class="bold">Status:</span><br>
-                  {{facultyInfo.faculty_Status}}</p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12">
-                <span class="bold">Program:</span><br>
-                <p>{{department.dept_Name}}</p>
-              </div>
+      <div class="row">
+        <div id="fInfo" class="col-md-offset-1 col-md-4 col-lg-4 well text-center">
+          <h3 class="text-center">{{facultyInfo.first_Name}} {{facultyInfo.last_Name}}</h3>
+          <div class="row">
+            <div class="col-md-12">
+              <p><span class="bold">Faculty ID:</span><br>
+                {{facultyInfo.faculty_Id}}</p>
             </div>
           </div>
-          <div id="courseInfo" class="col-md-offset-1 col-md-5 col-lg-5 well">
-            <h3 class="text-center">Courses</h3>
-            <!-- Course List -->
-            <div class="row">
-              <div id="courseDiv" class="col-md-12">
-  
-                <!-- If Enrolled in courses -->
-                <ng-template [ngIf]="sectionsById.length > 0" [ngIfElse]="noSections">
-                  <br>
-                  <div class="row">
-                    <div class="col-md-10 well centerDiv">
-                      <p class="text-center"><span class="bold">Current Courses:</span> {{sectionsById.length}}</p>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-10 well centerDiv">
-                      <table class="table">
-                        <thead>
-                          <tr>
-                            <th>Course ID</th>
-                            <th>Course Designation</th>
-                            <th>Start Date</th>
-                            <th>End Date</th>
-                            <th>Options</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr *ngFor="let section of sectionsById">
-                            <td>{{section.course_Id}}</td>
-                            <td>{{section.designation}}</td>
-                            <td>{{section.start_Date | date:'yyyy-MM-dd'}}</td>
-                            <td>{{section.end_Date | date:'yyyy-MM-dd'}}</td>
-                            <td><button type="button" id="courseRoster" class="btn btnHc" (click)='getCourseRoster(section.section_Id)'>Roster</button></td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </ng-template>
-  
-                <!-- No Enrollments -->
-                <ng-template #noSections>
-                  <br>
-                  <div class="row">
-                    <div id="eWell" class="col-md-6 well centerDiv">
-                      <div class="col-md-6 centerDiv">
-                        <p class="text-center"><span class="bold">Current Sections:</span> 0</p>
-                        <br>
-                      </div>
-                    </div>
-                  </div>
-                </ng-template>
-  
-              </div>
+          <div class="row">
+            <div class="col-md-12">
+              <p><span class="bold">E-Mail:</span><br>
+                {{facultyInfo.eMail}}</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <p><span class="bold">Status:</span><br>
+                {{facultyInfo.faculty_Status}}</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <span class="bold">Program:</span><br>
+              <p>{{department.dept_Name}}</p>
             </div>
           </div>
         </div>
-        <div class="row">
-          <!-- Course Enrollment Information -->
-          <div  *ngIf="buttonClicked"  id="rosterInfo" class="col-md-offset-1 col-md-10 col-lg-10 well">
-            <h3 class="text-center">Roster Information</h3>
-            <!--Roster List -->
-            <div class="row">
-              <div id="courseDiv" class="col-md-12">
-  
-                <!-- If Enrolled in courses -->
-                <ng-template [ngIf]="enrollments.length > 0" [ngIfElse]="noEnrollments">
-                  <br>
-                  <div class="row">
-                    <div class="col-md-10 well centerDiv">
-                      <p class="text-center"><span class="bold">Current Students:</span> {{enrollments.length}}</p>
+        <div id="courseInfo" class="col-md-offset-1 col-md-5 col-lg-5 well">
+          <h3 class="text-center">Courses</h3>
+          <!-- Course List -->
+          <div class="row">
+            <div id="courseDiv" class="col-md-12">
+
+              <!-- If Enrolled in courses -->
+              <ng-template [ngIf]="sectionsById.length > 0" [ngIfElse]="noSections">
+                <br>
+                <div class="row">
+                  <div class="col-md-10 well centerDiv">
+                    <p class="text-center"><span class="bold">Current Courses:</span> {{sectionsById.length}}</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-10 well centerDiv">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>Course ID</th>
+                          <th>Course Designation</th>
+                          <th>Start Date</th>
+                          <th>End Date</th>
+                          <th>Options</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let section of sectionsById">
+                          <td>{{section.course_Id}}</td>
+                          <td>{{section.designation}}</td>
+                          <td>{{section.start_Date | date:'yyyy-MM-dd'}}</td>
+                          <td>{{section.end_Date | date:'yyyy-MM-dd'}}</td>
+                          <td><button type="button" id="courseRoster" class="btn btnHc" (click)='getCourseRoster(section.section_Id)'>Roster</button></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </ng-template>
+
+              <!-- No Enrollments -->
+              <ng-template #noSections>
+                <br>
+                <div class="row">
+                  <div id="eWell" class="col-md-6 well centerDiv">
+                    <div class="col-md-6 centerDiv">
+                      <p class="text-center"><span class="bold">Current Sections:</span> 0</p>
+                      <br>
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="col-md-10 well centerDiv">
-                      <table class="table">
-                        <thead>
-                          <tr>
-                            <th>Student ID</th>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Course Status</th>
-                            <th>Grade</th>
-                            <th>Update</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr *ngFor="let student of enrollments; let current of students">
-                            <td>{{student.student_Id}}</td>
-                            <td>{{current.first_Name}}</td>
-                            <td>{{current.last_Name}}</td>
-                            <td>{{student.course_Status}}</td>
-                            <td>{{student.grade}}</td>
-                            <td><button type="button" id="updateGrade" class="btn btnHc" >Update</button></td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </ng-template>
-  
-                <!-- No Enrollments -->
-                <ng-template #noEnrollments>
-                  <br>
-                  <div class="row">
-                    <div id="eWell" class="col-md-6 well centerDiv">
-                      <div class="col-md-6 centerDiv">
-                        <p class="text-center"><span class="bold">Current Enrollments:</span> 0</p>
-                        <br>
-                        <button class="btn btnHc center-block">
-                          <a [routerLink]="[ '/student/register']">Register</a>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </ng-template>
-  
-              </div>
+                </div>
+              </ng-template>
+
             </div>
           </div>
-          <!--End of faculty  -->
+        </div>
+      </div>
+      <div class="row">
+        <!-- Course Enrollment Information -->
+        <div *ngIf="buttonClicked" id="rosterInfo" class="col-md-offset-1 col-md-10 col-lg-10 well">
+          <h3 class="text-center">Roster Information</h3>
+          <!--Roster List -->
+          <div class="row">
+            <div id="courseDiv" class="col-md-12">
+
+              <!-- If Enrolled in courses -->
+              <ng-template [ngIf]="enrollments.length > 0" [ngIfElse]="noEnrollments">
+                <br>
+                <div class="row">
+                  <div class="col-md-10 well centerDiv">
+                    <p class="text-center"><span class="bold">Current Students:</span> {{enrollments.length}}</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-10 well centerDiv">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>Student ID</th>
+                          <th>First Name</th>
+                          <th>Last Name</th>
+                          <th>Course Status</th>
+                          <th>Grade</th>
+                          <th>Update</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let student of enrollments; let current of students">
+                          <td>{{student.student_Id}}</td>
+                          <td>{{current.first_Name}}</td>
+                          <td>{{current.last_Name}}</td>
+                          <td>{{student.course_Status}}</td>
+                          <td>{{student.grade}}</td>
+                          <td><button type="button" id="updateGrade" class="btn btnHc">Update</button></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </ng-template>
+
+              <!-- No Enrollments -->
+              <ng-template #noEnrollments>
+                <br>
+                <div class="row">
+                  <div id="eWell" class="col-md-6 well centerDiv">
+                    <div class="col-md-6 centerDiv">
+                      <p class="text-center"><span class="bold">Current Enrollments:</span> 0</p>
+                      <br>
+                      <button class="btn btnHc center-block">
+                        <a [routerLink]="[ '/student/register']">Register</a>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </ng-template>
+
+            </div>
+          </div>
+        </div>
+        <!--End of faculty  -->
+      </div>
     </div>
 
     <!-- Student Home --->
@@ -288,8 +289,8 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-md-10 well centerDiv">
-                    <table class="table" *ngFor="let section of sections">
+                  <div class="col-md-10 centerDiv">
+                    <table class="table">
                       <thead>
                         <tr>
                           <th>Course ID</th>
@@ -299,7 +300,7 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
+                        <tr *ngFor="let section of sections">
                           <td>{{section.course_Id}}</td>
                           <td>{{section.course_Name}}</td>
                           <td>{{section.start_Date | date:'yyyy-MM-dd'}}</td>

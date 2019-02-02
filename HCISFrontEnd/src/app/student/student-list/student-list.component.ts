@@ -42,7 +42,7 @@ export class StudentListComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.dtOptions = {
       pagingType: 'full_numbers',
-      pageLength: 10
+      pageLength: 8
     };
 
     this.getAllStudentsInfo();

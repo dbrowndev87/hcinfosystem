@@ -76,29 +76,33 @@
                                                                         Department List</a></li>
                                                 </ul>
                                         </li>
+
+                                        <!-- Reports start here  -->
                                         <li class="dropdown" *ngIf="loggedIn && typeCode === 1">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                                        aria-haspopup="true" aria-expanded="false">Reports<span
-                                                                class="caret"></span></a>
+                                                        aria-haspopup="true" aria-expanded="false">Reports<span class="caret"></span></a>
                                                 <ul class="dropdown-menu">
                                                         <li *ngIf="loggedIn && typeCode === 1"><a [routerLink]="['/reports/studentListing']"
                                                                         routerLinkActive="active"
-                                                                        [routerLinkActiveOptions]="{exact: true}">Student Listing</a></li>
+                                                                        [routerLinkActiveOptions]="{exact: true}">Student
+                                                                        Listing</a></li>
                                                         <li *ngIf="loggedIn && typeCode === 1"><a [routerLink]="['/reports/courseCatalogue']"
                                                                         routerLinkActive="active"
-                                                                         [routerLinkActiveOptions]="{exact: true}">Course Catalogue</a></li>
-                                                        
+                                                                        [routerLinkActiveOptions]="{exact: true}">Course
+                                                                        Catalogue</a></li>
+
                                                 </ul>
                                         </li>
 
                                         <!-- Student Links -->
                                         <li *ngIf="loggedIn && typeCode === 3"><a [routerLink]="['/student/payment']"
-                                                        routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Student
+                                                        routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Make
                                                         Payment</a></li>
-                                        <!-- 
-                                        <li *ngIf="!loggedIn"><a id="logIn" class="float-right" [routerLink]="['/login']"
-                                                        routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Log
-                                                        In</a></li> -->
+
+                                        <li *ngIf="loggedIn && typeCode === 3"><a [routerLink]="['/student/register']"
+                                                        routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Course
+                                                        Registration</a></li>
+
 
                                         <li *ngIf="!loggedIn">
                                                 <div id="spacer"></div>

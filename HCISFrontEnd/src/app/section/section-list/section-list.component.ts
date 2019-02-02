@@ -28,7 +28,7 @@ export class SectionListComponent implements OnInit, OnDestroy {
 
     this.dtOptions = {
       pagingType: 'full_numbers',
-      pageLength: 10
+      pageLength: 8
     };
 
     this.getAllSections();

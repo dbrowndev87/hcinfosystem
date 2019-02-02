@@ -43,6 +43,11 @@ export class EnrollmentListComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit() {
+    this.dtOptions = {
+      pagingType: 'full_numbers',
+      pageLength: 8
+    };
+
     this.getAllenrollments();
     // Set the data is loaded flag.
     this.isLoaded = true;

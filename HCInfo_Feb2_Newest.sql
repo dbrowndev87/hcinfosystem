@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Feb 02, 2019 at 02:19 PM
--- Server version: 10.1.35-MariaDB
--- PHP Version: 7.2.9
+-- Host: 127.0.0.1
+-- Generation Time: Feb 02, 2019 at 08:19 PM
+-- Server version: 10.1.37-MariaDB
+-- PHP Version: 7.2.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -21,9 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `goldstar`
 --
-DROP DATABASE IF EXISTS `goldstar`;
-CREATE DATABASE `goldstar`;
-USE `goldstar`;
 
 DELIMITER $$
 --
@@ -52,16 +49,24 @@ CREATE TABLE `course` (
 --
 
 INSERT INTO `course` (`course_id`, `course_name`, `dept_id`, `credits`) VALUES
-('CIS-1111', 'Stuff 1111', 2, 3),
-('CIS-1112', 'Stuff 1112', 2, 3),
+('CIS-1111', 'Introduction to Web Developement', 2, 3),
+('CIS-1112', 'Introduction to Object-Oriented', 2, 3),
 ('CIS-1113', 'Info Security 101', 2, 3),
 ('CIS-1114', 'Security 102', 2, 3),
 ('CIS-1115', 'Database Management', 2, 3),
+('CIS-1116', 'Programming Logic', 2, 3),
+('CIS-1117', 'Intermediate Object-Oriented', 2, 3),
+('CIS-1118', 'Intermediate Web Development', 2, 3),
+('CIS-1119', 'Intermediate Programming Logic', 2, 3),
+('CIS-1120', 'Intermediate Security Concepts', 2, 3),
 ('CIS-2001', 'Advanced Java', 2, 3),
 ('CIS-2002', 'Advanced C #', 2, 3),
 ('CIS-2003', 'Advanced Security', 2, 3),
 ('CIS-2004', 'Advanced Angular', 2, 3),
-('CIS-2005', 'Advanced Info-Systems', 2, 3);
+('CIS-2005', 'Advanced Info-Systems', 2, 3),
+('CIS-2006', 'Android Development', 2, 3),
+('CIS-2007', 'IOS Developement', 2, 3),
+('CIS-2008', 'Advanced Web Developement', 2, 3);
 
 -- --------------------------------------------------------
 
@@ -100,18 +105,6 @@ CREATE TABLE `enrollment` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `enrollment`
---
-
-INSERT INTO `enrollment` (`enrollment_id`, `student_id`, `section_id`, `course_status`, `grade`) VALUES
-(1, 190181, 1, 'ongoing', 0.00),
-(2, 190370, 1, 'ongoing', 0.00),
-(3, 193081, 1, 'ongoing', 0.00),
-(4, 193402, 1, 'ongoing', 0.00),
-(5, 193820, 1, 'ongoing', 0.00),
-(6, 198309, 1, 'ongoing', 0.00);
-
---
 -- Triggers `enrollment`
 --
 DELIMITER $$
@@ -138,7 +131,10 @@ CREATE TABLE `faculty` (
 --
 
 INSERT INTO `faculty` (`faculty_id`, `faculty_status`, `user_id`) VALUES
-(1, 'Full Time', 3);
+(1, 'Full Time', 3),
+(2, 'Full Time', 12),
+(3, 'Full Time', 13),
+(4, 'Full Time', 14);
 
 -- --------------------------------------------------------
 
@@ -162,9 +158,28 @@ CREATE TABLE `section` (
 --
 
 INSERT INTO `section` (`section_id`, `faculty_id`, `start_date`, `end_date`, `designation`, `semester`, `vacancy`, `course_id`) VALUES
-(1, 1, '2019-01-01', '2019-04-11', 'A', 'WIn2019', 24, 'CIS-1111'),
-(2, 1, '2019-01-01', '2019-04-19', 'B', 'win2019', 11, 'CIS-1111'),
-(3, 1, '2019-01-03', '2019-04-18', 'C', 'Fall', 21, 'CIS-1111');
+(1, 1, '2019-01-01', '2019-04-11', 'A', 'Fall', 24, 'CIS-1111'),
+(2, 1, '2019-01-01', '2019-04-19', 'B', 'Fall', 11, 'CIS-1111'),
+(3, 1, '2019-01-03', '2019-04-18', 'C', 'Fall', 21, 'CIS-1111'),
+(4, 1, '2019-09-04', '2019-12-04', 'A', 'Fall', 30, 'CIS-1112'),
+(5, 1, '2019-09-04', '2019-12-07', 'B', 'Fall', 30, 'CIS-1112'),
+(6, 1, '2020-05-14', '2020-09-04', 'L', 'Summer', 20, 'CIS-1112'),
+(7, 1, '2020-01-04', '2020-04-29', 'A', 'Spring', 23, 'CIS-1113'),
+(8, 1, '2020-05-04', '2020-08-29', 'L', 'Summer', 25, 'CIS-1113'),
+(9, 1, '2019-02-21', '2019-02-13', 'A', 'Spring', 22, 'CIS-1114'),
+(10, 1, '2020-02-14', '2020-05-16', 'B', 'Spring', 23, 'CIS-1115'),
+(11, 1, '2020-09-18', '2019-12-30', 'C', 'Fall', 28, 'CIS-1116'),
+(12, 1, '2019-05-04', '2019-09-27', 'B', 'Summer', 30, 'CIS-1118'),
+(13, 1, '2019-05-04', '2019-09-27', 'C', 'Summer', 30, 'CIS-1120'),
+(14, 1, '2020-01-07', '2019-05-27', 'A', 'Spring', 35, 'CIS-2001'),
+(15, 1, '2019-01-07', '2019-05-27', 'A', 'Spring', 29, 'CIS-2002'),
+(16, 1, '2020-01-07', '2020-05-27', 'A', 'Spring', 25, 'CIS-2003'),
+(17, 1, '2019-01-07', '2019-05-29', 'A', 'Spring', 30, 'CIS-2004'),
+(18, 1, '2020-01-07', '2020-05-29', 'A', 'Spring', 30, 'CIS-2004'),
+(19, 1, '2020-09-04', '2020-01-07', 'A', 'Fall', 30, 'CIS-2005'),
+(20, 1, '2020-09-07', '2020-01-07', 'A', 'Fall', 25, 'CIS-2006'),
+(21, 1, '2020-09-04', '2020-01-07', 'A', 'Fall', 25, 'CIS-2007'),
+(22, 1, '2020-09-04', '2020-01-07', 'A', 'Fall', 30, 'CIS-2008');
 
 -- --------------------------------------------------------
 
@@ -191,7 +206,8 @@ INSERT INTO `student` (`student_id`, `student_status`, `gpa`, `user_id`, `amount
 (193081, 'Enrolled', 0.00, 10, 0.00),
 (193402, 'Enrolled', 0.00, 7, 0.00),
 (193820, 'Drop Out', 0.00, 2, 10000.00),
-(198309, 'Enrolled', 0.00, 9, 0.00);
+(198309, 'Enrolled', 0.00, 9, 0.00),
+(198441, 'Enrolled', 0.00, 16, 0.00);
 
 -- --------------------------------------------------------
 
@@ -240,7 +256,7 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`user_id`, `first_name`, `last_name`, `email`, `birth_date`, `type_code`, `address`, `dept_id`) VALUES
 (1, 'Darcy', 'Browns', 'dbrown32066@hollandcollege.com', '2019-03-18', 1, '8 Bonnie Blink dr.', 1),
 (2, 'Test', 'Student', 'teststudent@happycollege.com', '1995-03-09', 3, '123 Student Lane.', 2),
-(3, 'Test', 'Faculty', 'testfaculty@happycollege.com', '2019-03-18', 2, '145 Faculty Lane.', 3),
+(3, 'Tommy', 'Little', 'testfaculty@happycollege.com', '1970-03-17', 2, '145 Faculty Lane.', 3),
 (4, 'Nicholas', 'Peconi', 'npeconi@hollandcollege.com', '2019-03-18', 1, '123 Peconi Lane.', 1),
 (5, 'Kristen', 'Murchison', 'kmurchison@hollandcollege.com', '2019-03-18', 1, '876 Murchison Lane.', 1),
 (6, 'Paul', 'Walker', 'nicholaspeconi@gmail.com', '2006-02-15', 3, '265 Beau View Lane', 3),
@@ -248,7 +264,12 @@ INSERT INTO `user` (`user_id`, `first_name`, `last_name`, `email`, `birth_date`,
 (8, 'Betty', 'Gonazalez', 'nicholaspeconi@gmail.com', '1999-02-17', 3, '265 Beau View Lane', 2),
 (9, 'veronica', 'smalls', 'nicholaspeconi@gmail.com', '2019-02-20', 3, '265 Beau View Lane', 2),
 (10, 'Carlos', 'smith', 'nicholaspeconi@gmail.com', '2019-02-13', 3, '265 Beau View Lane', 2),
-(11, 'steve', 'johanson', 'nicholaspeconi@gmail.com', '1999-02-17', 3, '265 Beau View Lane', 2);
+(11, 'steve', 'johanson', 'nicholaspeconi@gmail.com', '1999-02-17', 3, '265 Beau View Lane', 2),
+(12, 'David', 'Crinshaw', 'dcrinshaw@happycollege.com', '1974-02-13', 2, '123 Park View Lane.', 3),
+(13, 'Daphne', 'Gaudet', 'dgaudet@happycollege.com', '1982-06-18', 2, '45 Crescent St.', 4),
+(14, 'Jake', 'Chaisson', 'jchaisson@happycollege.com', '1987-10-14', 2, '254 Cedar ln', 5),
+(15, 'david', 'jeffree', 'djeffree@happycollege.com', '2019-02-15', 1, '123 Goldpark dr.', 1),
+(16, 'Jammie', 'Furgason', 'jfurgeson@happycollege.com', '1988-04-14', 3, '435 Cambrige Ave', 4);
 
 -- --------------------------------------------------------
 
@@ -271,6 +292,11 @@ INSERT INTO `user_login` (`username`, `password`, `active`, `user_id`) VALUES
 ('BGonaz1479', '2c22412ba55b11b0e91c1d5586ea2612', 1, 8),
 ('Csmith9348', 'fead790cd8793e86429758988526dab5', 1, 10),
 ('dbrown32066', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 1),
+('DCrins4798', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 12),
+('DGaudet663', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 13),
+('djeffr0626', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 15),
+('JChais1156', '2c22412ba55b11b0e91c1d5586ea2612', 1, 14),
+('JFurga7296', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 16),
 ('JSmith7311', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 7),
 ('kmerchison', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 5),
 ('npeconi', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 4),
@@ -395,19 +421,19 @@ ALTER TABLE `enrollment`
 -- AUTO_INCREMENT for table `faculty`
 --
 ALTER TABLE `faculty`
-  MODIFY `faculty_id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `faculty_id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `section`
 --
 ALTER TABLE `section`
-  MODIFY `section_id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `section_id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `user_id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- Constraints for dumped tables

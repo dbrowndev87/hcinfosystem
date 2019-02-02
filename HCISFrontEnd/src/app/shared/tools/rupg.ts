@@ -1,6 +1,4 @@
 import { Injectable } from '@angular/core';
-
-import { UserLogin } from 'src/app/_interfaces/userlogin.model';
 import { RepositoryService } from '../services/repository.service';
 
 
@@ -37,8 +35,8 @@ export class RandomUserPassGen {
 
         // get the first letter of the firstname and concatinate it
         // to the last name
-        const firstLetter = firstname.charAt(0);
-        tempUsername = (firstLetter + lastname);
+        const firstLetter = firstname.charAt(0).toLowerCase;
+        tempUsername = (firstLetter + lastname.toLowerCase());
 
 
         // If the username is less than 8 characters use this method.

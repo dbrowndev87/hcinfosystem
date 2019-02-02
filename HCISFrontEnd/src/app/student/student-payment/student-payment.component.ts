@@ -199,8 +199,6 @@ export class StudentPaymentComponent implements OnInit, OnDestroy {
 
             // If the transaction returns a 0 id value.
             this.transId = transId;
-            // Unsubscribe to clear memory
-            subscription.unsubscribe();
 
             // Execute the rest of the payment.
             this.executeStudentUpdate(studentPaymentFormValue);

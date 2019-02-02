@@ -1,0 +1,26 @@
+#selectCourse{
+    overflow-y: scroll;
+    width: 45%;
+    background-color: white;
+    height: 270px;
+    border: 1px black solid;
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px black;
+}
+
+#selectedCourse{
+    overflow-y: scroll;
+    width: 45%;
+    background-color: white;
+    height: 270px;
+    border: 1px black solid;
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px black;
+}
+
+td{
+    border-bottom: 2px #cccccc solid;
+}
+.sRegWell{
+    height: 175px;
+}

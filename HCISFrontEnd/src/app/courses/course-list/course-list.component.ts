@@ -46,9 +46,8 @@ export class CourseListComponent implements OnInit, OnDestroy {
       pageLength: 8
     };
 
-    this.getAllCourses();
     this.getAllDepartments();
-    this.isLoaded = true;
+    this.getAllCourses();
   }
 
   public getAllCourses() {
@@ -70,6 +69,8 @@ export class CourseListComponent implements OnInit, OnDestroy {
     this.subscriptions.push(this.repository.getData(apiAddress)
       .subscribe(res => {
         this.depts = res as Department[];
+
+        this.isLoaded = true;
       })),
       // tslint:disable-next-line: no-unused-expression
       (error) => {

@@ -5,13 +5,11 @@ import { FacultyUpdateComponent } from './faculty-update/faculty-update.componen
 import { SharedModule } from '../shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { StudentRoutingModule } from '../student/student.routing';
-import { FacultyRosterComponent } from './faculty-roster/faculty-roster.component';
 
 @NgModule({
   declarations: [
     FacultyListComponent,
-    FacultyUpdateComponent,
-    FacultyRosterComponent
+    FacultyUpdateComponent
   ],
   imports: [
     CommonModule,

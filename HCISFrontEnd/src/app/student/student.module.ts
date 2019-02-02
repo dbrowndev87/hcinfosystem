@@ -7,6 +7,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { StudentUpdateComponent } from './student-update/student-update.component';
 import { StudentRoutingModule } from './student.routing';
 import { StudentPaymentComponent } from './student-payment/student-payment.component';
+import { StudentRegisterComponent } from './student-register/student-register.component';
 
 
 
@@ -16,12 +17,14 @@ import { StudentPaymentComponent } from './student-payment/student-payment.compo
     CommonModule,
     SharedModule,
     ReactiveFormsModule,
-    StudentRoutingModule
+    StudentRoutingModule,
+    RouterModule
   ],
   declarations: [
     StudentListComponent,
     StudentUpdateComponent,
-    StudentPaymentComponent
+    StudentPaymentComponent,
+    StudentRegisterComponent
   ]
 })
 export class StudentModule { }

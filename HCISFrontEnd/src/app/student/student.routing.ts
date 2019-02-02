@@ -4,11 +4,13 @@ import { AuthGuardAdmin, AuthGuardStudent } from '../login/authGuard';
 import { StudentListComponent } from './student-list/student-list.component';
 import { StudentUpdateComponent } from './student-update/student-update.component';
 import { StudentPaymentComponent } from './student-payment/student-payment.component';
+import { StudentRegisterComponent } from './student-register/student-register.component';
 
 const routes: Routes = [
     { path: 'student/list', component: StudentListComponent, canActivate: [AuthGuardAdmin] },
     { path: 'student/update/:id', component: StudentUpdateComponent, canActivate: [AuthGuardAdmin] },
-    { path: 'student/payment', component: StudentPaymentComponent, canActivate: [AuthGuardStudent] }
+    { path: 'student/payment', component: StudentPaymentComponent, canActivate: [AuthGuardStudent] },
+    { path: 'student/register', component: StudentRegisterComponent, canActivate: [AuthGuardStudent] }
 ];
 
 @NgModule({
