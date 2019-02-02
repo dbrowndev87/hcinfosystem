@@ -6,20 +6,21 @@
  * Author: Darcy Brown
  * Date: January 26th, 2019
  */
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, OnDestroy } from '@angular/core';
 import { User } from 'src/app/_interfaces/user.model';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Department } from 'src/app/_interfaces/department.model';
 import { RepositoryService } from 'src/app/shared/services/repository.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ErrorHandlerService } from 'src/app/shared/services/error-handler.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-admin-update',
   templateUrl: './admin-update.component.html',
   styleUrls: ['./admin-update.component.css']
 })
-export class AdminUpdateComponent implements OnInit {
+export class AdminUpdateComponent implements OnInit, OnDestroy {
 
 
   public errorMessage = '';
@@ -29,6 +30,9 @@ export class AdminUpdateComponent implements OnInit {
   public depts: Department[];
   private isLoaded = false;
   @ViewChild('dCode') dCode: ElementRef;
+
+  // Array for all the subscriptions
+  private subscriptions: Subscription[] = [];
 
   constructor(
     private repository: RepositoryService,
@@ -52,6 +56,13 @@ export class AdminUpdateComponent implements OnInit {
 
   }
 
+  // Destroy subscriptions when done.
+  ngOnDestroy(): void {
+    for (let subscription of this.subscriptions) {
+      subscription.unsubscribe();
+    }
+  }
+
   /**
    * This method gets the User information by ID
    * 
@@ -63,7 +74,7 @@ export class AdminUpdateComponent implements OnInit {
 
     let userByIdUrl = `api/user/${id}`;
 
-    this.repository.getData(userByIdUrl)
+    this.subscriptions.push(this.repository.getData(userByIdUrl)
       .subscribe(res => {
         this.user = res as User;
         this.userForm.patchValue(this.user);
@@ -74,7 +85,7 @@ export class AdminUpdateComponent implements OnInit {
         (error) => {
           this.errorHandler.handleError(error);
           this.errorMessage = "Unable to access API";
-        });
+        }));
   }
 
   public validateControl(controlName: string) {
@@ -127,7 +138,7 @@ export class AdminUpdateComponent implements OnInit {
     this.user.dept_Id = this.user.dept_Id;
 
     let apiUrl = `api/user/${this.user.user_Id}`;
-    this.repository.update(apiUrl, this.user)
+    this.subscriptions.push(this.repository.update(apiUrl, this.user)
       .subscribe(res => {
         $('#successModal').modal();
       },
@@ -135,6 +146,6 @@ export class AdminUpdateComponent implements OnInit {
           this.errorHandler.handleError(error);
           this.errorMessage = "Unable to access API";
         })
-      );
+      ));
   }
 }

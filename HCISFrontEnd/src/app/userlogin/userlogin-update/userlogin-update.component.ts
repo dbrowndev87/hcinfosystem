@@ -6,20 +6,22 @@
  * Author: Darcy Brown
  * Date: January 24th, 2019
  */
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { RepositoryService } from 'src/app/shared/services/repository.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ErrorHandlerService } from 'src/app/shared/services/error-handler.service';
 import { UserLogin } from 'src/app/_interfaces/userlogin.model';
 import { Md5 } from 'ts-md5';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-userlogin-update',
   templateUrl: './userlogin-update.component.html',
   styleUrls: ['./userlogin-update.component.css']
 })
-export class UserloginUpdateComponent implements OnInit {
+
+export class UserloginUpdateComponent implements OnInit, OnDestroy {
 
 
   public errorMessage = '';
@@ -30,6 +32,9 @@ export class UserloginUpdateComponent implements OnInit {
   private buttonText = "Change Password";
   private md5 = new Md5();
   private typeCode;
+
+  // Array for all the subscriptions
+  private subscriptions: Subscription[] = [];
 
   constructor(
     private repository: RepositoryService,
@@ -50,6 +55,14 @@ export class UserloginUpdateComponent implements OnInit {
     }
   }
 
+  // Destroy subscriptions when done.
+  ngOnDestroy(): void {
+    for (let subscription of this.subscriptions) {
+      subscription.unsubscribe();
+    }
+  }
+
+
   /**
    * This method gets the user information from the api.
    */
@@ -57,7 +70,7 @@ export class UserloginUpdateComponent implements OnInit {
     let username: string = this.activeRoute.snapshot.params['username'];
     let userLoginByUsernameUrl = `api/userlogin/username/${username}`;
 
-    this.repository.getData(userLoginByUsernameUrl)
+    this.subscriptions.push(this.repository.getData(userLoginByUsernameUrl)
       .subscribe((userLogin: UserLogin) => {
         this.userLogin = userLogin as UserLogin;
         this.patchClear();
@@ -66,7 +79,7 @@ export class UserloginUpdateComponent implements OnInit {
         (error) => {
           this.errorHandler.handleError(error);
           this.errorMessage = this.errorHandler.errorMessage;
-        });
+        }));
   }
 
   // Validation Function.
@@ -136,7 +149,7 @@ export class UserloginUpdateComponent implements OnInit {
     this.userLogin.active = userLoginFormValue.active;
 
     let apiUrl = `api/userlogin/${this.userLogin.username}`;
-    this.repository.update(apiUrl, this.userLogin)
+    this.subscriptions.push(this.repository.update(apiUrl, this.userLogin)
       .subscribe(userLogin => {
         $('#successModal').modal();
       },
@@ -144,7 +157,7 @@ export class UserloginUpdateComponent implements OnInit {
           this.errorHandler.handleError(error);
           this.errorMessage = this.errorHandler.errorMessage;
         })
-      );
+      ));
   }
 
   // If they change the password do these actions.

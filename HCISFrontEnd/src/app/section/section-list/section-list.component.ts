@@ -4,7 +4,7 @@ import { RepositoryService } from 'src/app/shared/services/repository.service';
 import { ErrorHandlerService } from 'src/app/shared/services/error-handler.service';
 import { Router } from '@angular/router';
 import { deepStrictEqual } from 'assert';
-import { Subject } from 'rxjs';
+import { Subject, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-section-list',
@@ -21,6 +21,9 @@ export class SectionListComponent implements OnInit, OnDestroy {
   private isLoaded = false;
   constructor(private repository: RepositoryService, private errorHandler: ErrorHandlerService, private router: Router) { }
 
+  // Array for all the subscriptions
+  private subscriptions: Subscription[] = [];
+
   ngOnInit() {
 
     this.dtOptions = {
@@ -32,16 +35,18 @@ export class SectionListComponent implements OnInit, OnDestroy {
     this.isLoaded = true;
   }
 
+
+
   public getAllSections() {
     let apiAddress = "api/section";
-    this.repository.getData(apiAddress)
+    this.subscriptions.push(this.repository.getData(apiAddress)
 
       .subscribe(sections => {
 
         this.sections = sections as Section[];
         this.dtTrigger.next();
 
-      }),
+      })),
       // tslint:disable-next-line: no-unused-expression
       (error) => {
         this.errorHandler.handleError(error);
@@ -52,6 +57,10 @@ export class SectionListComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     // Do not forget to unsubscribe the event
     this.dtTrigger.unsubscribe();
+
+    for (let subscription of this.subscriptions) {
+      subscription.unsubscribe();
+    }
   }
 
   public redirectToUpdatePage(id) {

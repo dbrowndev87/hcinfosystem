@@ -11,7 +11,7 @@ import { UserLogin } from 'src/app/_interfaces/userlogin.model';
 import { RepositoryService } from 'src/app/shared/services/repository.service';
 import { ErrorHandlerService } from 'src/app/shared/services/error-handler.service';
 import { Router } from '@angular/router';
-import { Subject } from 'rxjs';
+import { Subject, Subscription } from 'rxjs';
 import { User } from 'src/app/_interfaces/user.model';
 
 @Component({
@@ -30,6 +30,9 @@ export class UserloginListComponent implements OnInit, OnDestroy {
   public errorMessage: String = "";
   public users: User[] = [];
   private isLoaded = false;
+
+  // Array for all the subscriptions
+  private subscriptions: Subscription[] = [];
 
   constructor(
     private repository: RepositoryService,
@@ -50,11 +53,11 @@ export class UserloginListComponent implements OnInit, OnDestroy {
 
   public getAllUserLogins() {
     let apiAddress = "api/userlogin";
-    this.repository.getData(apiAddress)
+    this.subscriptions.push(this.repository.getData(apiAddress)
       .subscribe(res => {
         this.userLogins = res as UserLogin[];
         this.dtTrigger.next();
-      }),
+      })),
       // tslint:disable-next-line: no-unused-expression
       (error) => {
         this.errorHandler.handleError(error);
@@ -64,10 +67,10 @@ export class UserloginListComponent implements OnInit, OnDestroy {
 
   public getAllUsers() {
     let apiAddress = "api/user";
-    this.repository.getData(apiAddress)
+    this.subscriptions.push(this.repository.getData(apiAddress)
       .subscribe(res => {
         this.users = res as User[];
-      }),
+      })),
       // tslint:disable-next-line: no-unused-expression
       (error) => {
         this.errorHandler.handleError(error);
@@ -80,6 +83,10 @@ export class UserloginListComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     // Do not forget to unsubscribe the event
     this.dtTrigger.unsubscribe();
+
+    for (let subscription of this.subscriptions) {
+      subscription.unsubscribe();
+    }
   }
 
 

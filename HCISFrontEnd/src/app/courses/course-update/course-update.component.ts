@@ -6,14 +6,15 @@
  * Author: Darcy Brown
  * Date: January 26th, 2019
  */
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, OnDestroy } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Department } from 'src/app/_interfaces/department.model';
 import { RepositoryService } from 'src/app/shared/services/repository.service';
 import { ErrorHandlerService } from 'src/app/shared/services/error-handler.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Course } from 'src/app/_interfaces/course.model';
-import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
+import { Subscription } from 'rxjs';
+
 
 
 @Component({
@@ -22,7 +23,7 @@ import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
   styleUrls: ['./course-update.component.css']
 })
 
-export class CourseUpdateComponent implements OnInit {
+export class CourseUpdateComponent implements OnInit, OnDestroy {
 
   public errorMessage = "";
   public courseForm: FormGroup;
@@ -31,6 +32,9 @@ export class CourseUpdateComponent implements OnInit {
   private userType: number;
   private isLoaded = false;
   @ViewChild('dCode') private dCode: ElementRef;
+
+  // Array for all the subscriptions
+  private subscriptions: Subscription[] = [];
 
 
   constructor(
@@ -55,13 +59,20 @@ export class CourseUpdateComponent implements OnInit {
     this.isLoaded = true;
   }
 
+  // Destroy subscriptions when done.
+  ngOnDestroy(): void {
+    for (let subscription of this.subscriptions) {
+      subscription.unsubscribe();
+    }
+  }
+
   // Patch course to form.
   private getCourseById() {
     let id: string = this.activeRoute.snapshot.params['id'];
     let courseByIdUrl = `api/course/${id}`;
 
     // get the course data and patch
-    this.repository.getData(courseByIdUrl)
+    this.subscriptions.push(this.repository.getData(courseByIdUrl)
       .subscribe(res => {
         this.course = res as Course;
         this.courseForm.patchValue(this.course);
@@ -77,13 +88,13 @@ export class CourseUpdateComponent implements OnInit {
         (error) => {
           this.errorHandler.handleError(error);
           this.errorMessage = "Unable to access API";
-        });
+        }));
   }
 
   // get all departments to
   public getAllDepartments() {
     let apiAddress = "api/department";
-    this.repository.getData(apiAddress)
+    this.subscriptions.push(this.repository.getData(apiAddress)
       .subscribe(res => {
         this.depts = res as Department[];
         for (let x = 0; x < this.depts.length; x++) {
@@ -91,7 +102,7 @@ export class CourseUpdateComponent implements OnInit {
             this.depts.splice(x, 1);
           }
         }
-      }),
+      })),
       // tslint:disable-next-line: no-unused-expression
       (error) => {
         this.errorHandler.handleError(error);
@@ -129,7 +140,7 @@ export class CourseUpdateComponent implements OnInit {
 
 
     let apiUrl = `api/course/${updateId}`;
-    this.repository.update(apiUrl, this.course)
+    this.subscriptions.push(this.repository.update(apiUrl, this.course)
       .subscribe(res => {
         $('#successModal').modal();
       },
@@ -137,7 +148,7 @@ export class CourseUpdateComponent implements OnInit {
           this.errorHandler.handleError(error);
           this.errorMessage = "Unable to access API";
         })
-      );
+      ));
   }
 
   public redirectToCourseList() {

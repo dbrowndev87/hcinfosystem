@@ -6,20 +6,21 @@
  * Author: Darcy Brown
  * Date: January 24th, 2019
  */
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Department } from 'src/app/_interfaces/department.model';
 import { RepositoryService } from 'src/app/shared/services/repository.service';
 import { ErrorHandlerService } from 'src/app/shared/services/error-handler.service';
 import { Router } from '@angular/router';
 import { FacultyInfo } from 'src/app/_interfaces/facultyInfo.model';
-import { Subject } from 'rxjs';
+import { Subject, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-faculty-list',
   templateUrl: './faculty-list.component.html',
   styleUrls: ['./faculty-list.component.css']
 })
-export class FacultyListComponent implements OnInit {
+
+export class FacultyListComponent implements OnInit, OnDestroy {
 
   dtOptions: DataTables.Settings = {};
   dtTrigger: Subject<FacultyInfo> = new Subject<FacultyInfo>();
@@ -28,7 +29,14 @@ export class FacultyListComponent implements OnInit {
   public errorMessage: String = "";
   private depts: Department[];
   private isLoaded = false;
-  constructor(private repository: RepositoryService, private errorHandler: ErrorHandlerService, private router: Router) { }
+
+  // Array for all the subscriptions
+  private subscriptions: Subscription[] = [];
+
+  constructor(
+    private repository: RepositoryService,
+    private errorHandler: ErrorHandlerService,
+    private router: Router) { }
 
   ngOnInit() {
     this.dtOptions = {
@@ -40,6 +48,13 @@ export class FacultyListComponent implements OnInit {
     this.getAllDepartments();
   }
 
+  // Destroy subscriptions when done.
+  ngOnDestroy(): void {
+    for (let subscription of this.subscriptions) {
+      subscription.unsubscribe();
+    }
+  }
+
   /**
 * This method gets all the Faculty Info data and assings it to an array
 * for use.
@@ -49,16 +64,17 @@ export class FacultyListComponent implements OnInit {
 */
   public getAllFacultysInfo() {
     let apiAddress = "api/facultyinfo/";
-    this.repository.getData(apiAddress)
+    this.subscriptions.push(this.repository.getData(apiAddress)
       .subscribe(res => {
         this.facultysInfo = res as FacultyInfo[];
         this.dtTrigger.next();
-      }),
+      })),
       // tslint:disable-next-line: no-unused-expression
       (error) => {
         this.errorHandler.handleError(error);
         this.errorMessage = this.errorHandler.errorMessage;
       };
+
   }
 
   /**
@@ -70,11 +86,11 @@ export class FacultyListComponent implements OnInit {
  */
   public getAllDepartments() {
     let apiAddress = "api/department";
-    this.repository.getData(apiAddress)
+    this.subscriptions.push(this.repository.getData(apiAddress)
       .subscribe(res => {
         this.depts = res as Department[];
         this.isLoaded = true;
-      }),
+      })),
       // tslint:disable-next-line: no-unused-expression
       (error) => {
         this.errorHandler.handleError(error);
@@ -86,4 +102,6 @@ export class FacultyListComponent implements OnInit {
     let updateUrl = `/faculty/update/${id}`;
     this.router.navigate([updateUrl]);
   }
+
+
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, OnDestroy } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { RepositoryService } from 'src/app/shared/services/repository.service';
 import { ErrorHandlerService } from 'src/app/shared/services/error-handler.service';
@@ -6,6 +6,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { Section } from 'src/app/_interfaces/section.model';
 import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Course } from 'src/app/_interfaces/course.model';
+import { Subscription } from 'rxjs';
 
 
 @Component({
@@ -14,7 +15,7 @@ import { Course } from 'src/app/_interfaces/course.model';
   styleUrls: ['./section-update.component.css']
 })
 
-export class SectionUpdateComponent implements OnInit {
+export class SectionUpdateComponent implements OnInit, OnDestroy {
 
   public errorMessage = "";
   public sectionForm: FormGroup;
@@ -25,6 +26,8 @@ export class SectionUpdateComponent implements OnInit {
   public courses: Course[];
   @ViewChild('dCode') private dCode: ElementRef;
 
+  // Array for all the subscriptions
+  private subscriptions: Subscription[] = [];
 
   constructor(
     private repository: RepositoryService,
@@ -50,12 +53,20 @@ export class SectionUpdateComponent implements OnInit {
     this.getAllCourses();
   }
 
+  // Destroy subscriptions when done.
+  ngOnDestroy(): void {
+    for (let subscription of this.subscriptions) {
+      subscription.unsubscribe();
+    }
+  }
+
+
   public getAllCourses() {
     let apiAddress = "api/course";
-    this.repository.getData(apiAddress)
+    this.subscriptions.push(this.repository.getData(apiAddress)
       .subscribe(res => {
         this.courses = res as Course[];
-      }),
+      })),
       // tslint:disable-next-line: no-unused-expression
       (error) => {
         this.errorHandler.handleError(error);
@@ -68,7 +79,7 @@ export class SectionUpdateComponent implements OnInit {
     let sectionByIdUrl = `api/section/${id}`;
 
     // get the section data and patch
-    this.repository.getData(sectionByIdUrl)
+    this.subscriptions.push(this.repository.getData(sectionByIdUrl)
       .subscribe(res => {
         this.section = res as Section;
         this.sectionForm.patchValue(this.section);
@@ -78,7 +89,7 @@ export class SectionUpdateComponent implements OnInit {
         (error) => {
           this.errorHandler.handleError(error);
           this.errorMessage = "Unable to access API";
-        });
+        }));
   }
 
   public validateControl(controlName: string) {
@@ -124,7 +135,7 @@ export class SectionUpdateComponent implements OnInit {
     let updateId = this.section.section_Id;
 
     let apiUrl = `api/section/${updateId}`;
-    this.repository.update(apiUrl, this.section)
+    this.subscriptions.push(this.repository.update(apiUrl, this.section)
       .subscribe(res => {
         $('#successModal').modal();
       },
@@ -132,7 +143,7 @@ export class SectionUpdateComponent implements OnInit {
           this.errorHandler.handleError(error);
           this.errorMessage = "Unable to access API";
         })
-      );
+      ));
   }
   public redirectToSectionList() {
     this.router.navigate(['/section/list']);

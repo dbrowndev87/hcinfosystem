@@ -12,7 +12,7 @@ import { RepositoryService } from 'src/app/shared/services/repository.service';
 import { ErrorHandlerService } from 'src/app/shared/services/error-handler.service';
 import { Router } from '@angular/router';
 import { Department } from 'src/app/_interfaces/department.model';
-import { Subject } from 'rxjs';
+import { Subject, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-course-list',
@@ -30,7 +30,15 @@ export class CourseListComponent implements OnInit, OnDestroy {
   private deptNames: string[];
   public errorMessage: String = "";
   private isLoaded = false;
-  constructor(private repository: RepositoryService, private errorHandler: ErrorHandlerService, private router: Router) { }
+
+  // Array for all the subscriptions
+  private subscriptions: Subscription[] = [];
+
+  constructor(
+    private repository: RepositoryService,
+    private errorHandler: ErrorHandlerService,
+    private router: Router
+  ) { }
 
   ngOnInit() {
     this.dtOptions = {
@@ -45,11 +53,11 @@ export class CourseListComponent implements OnInit, OnDestroy {
 
   public getAllCourses() {
     let apiAddress = "api/course";
-    this.repository.getData(apiAddress)
+    this.subscriptions.push(this.repository.getData(apiAddress)
       .subscribe(courses => {
         this.courses = courses as Course[];
         this.dtTrigger.next();
-      }),
+      })),
       // tslint:disable-next-line: no-unused-expression
       (error) => {
         this.errorHandler.handleError(error);
@@ -59,10 +67,10 @@ export class CourseListComponent implements OnInit, OnDestroy {
 
   public getAllDepartments() {
     let apiAddress = "api/department";
-    this.repository.getData(apiAddress)
+    this.subscriptions.push(this.repository.getData(apiAddress)
       .subscribe(res => {
         this.depts = res as Department[];
-      }),
+      })),
       // tslint:disable-next-line: no-unused-expression
       (error) => {
         this.errorHandler.handleError(error);
@@ -73,6 +81,10 @@ export class CourseListComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     // Do not forget to unsubscribe the event
     this.dtTrigger.unsubscribe();
+
+    for (let subscription of this.subscriptions) {
+      subscription.unsubscribe();
+    }
   }
 
   public redirectToUpdatePage(id) {

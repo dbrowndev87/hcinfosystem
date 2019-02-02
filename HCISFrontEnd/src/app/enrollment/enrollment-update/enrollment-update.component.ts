@@ -1,17 +1,19 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, OnDestroy } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { RepositoryService } from 'src/app/shared/services/repository.service';
 import { ErrorHandlerService } from 'src/app/shared/services/error-handler.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Enrollment } from 'src/app/_interfaces/enrollment.model';
 import { StudentInfo } from 'src/app/_interfaces/studentInfo.model';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-enrollment-update',
   templateUrl: './enrollment-update.component.html',
   styleUrls: ['./enrollment-update.component.css']
 })
-export class EnrollmentUpdateComponent implements OnInit {
+
+export class EnrollmentUpdateComponent implements OnInit, OnDestroy {
 
   public errorMessage = "";
   private enrollement: Enrollment;
@@ -19,6 +21,9 @@ export class EnrollmentUpdateComponent implements OnInit {
   public enrollmentUpdateForm: FormGroup;
   private updateId: number;
   private isLoaded = false;
+
+  // Array for all the subscriptions
+  private subscriptions: Subscription[] = [];
 
   constructor(
     private repository: RepositoryService,
@@ -38,13 +43,20 @@ export class EnrollmentUpdateComponent implements OnInit {
 
   }
 
+  // Destroy subscriptions when done.
+  ngOnDestroy(): void {
+    for (let subscription of this.subscriptions) {
+      subscription.unsubscribe();
+    }
+  }
+
   // Patch course to form.
   private getEnrollment() {
 
     let enrollmentByIdUrl = `api/enrollment/` + this.updateId;
 
     // get the course data and patch
-    this.repository.getData(enrollmentByIdUrl)
+    this.subscriptions.push(this.repository.getData(enrollmentByIdUrl)
       .subscribe(enrollment => {
         this.enrollement = enrollment as Enrollment;
         this.enrollmentUpdateForm.patchValue(this.enrollement);
@@ -52,7 +64,7 @@ export class EnrollmentUpdateComponent implements OnInit {
         let studentInfoUrl = `api/studentinfo/` + this.enrollement.student_Id;
 
         // get the course data and patch
-        this.repository.getData(studentInfoUrl)
+        this.subscriptions.push(this.repository.getData(studentInfoUrl)
           .subscribe(studentinfo => {
             this.studentInfo = studentinfo as StudentInfo;
             this.isLoaded = true;
@@ -60,12 +72,12 @@ export class EnrollmentUpdateComponent implements OnInit {
             (error) => {
               this.errorHandler.handleError(error);
               this.errorMessage = "Unable to access API";
-            });
+            }));
       },
         (error) => {
           this.errorHandler.handleError(error);
           this.errorMessage = "Unable to access API";
-        });
+        }));
   }
 
 

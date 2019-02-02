@@ -6,7 +6,7 @@
  * Author: Darcy Brown
  * Date: January 25th, 2019
  */
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { RepositoryService } from 'src/app/shared/services/repository.service';
 import { Router } from '@angular/router';
 import { ErrorHandlerService } from 'src/app/shared/services/error-handler.service';
@@ -23,7 +23,7 @@ import { Subscription } from 'rxjs';
   templateUrl: './student-payment.component.html',
   styleUrls: ['./student-payment.component.css']
 })
-export class StudentPaymentComponent implements OnInit {
+export class StudentPaymentComponent implements OnInit, OnDestroy {
 
 
   public errorMessage = '';
@@ -32,6 +32,9 @@ export class StudentPaymentComponent implements OnInit {
   public studentPaymentForm: FormGroup;
   private transId: number;
   private isLoaded = false;
+
+  // Array for all the subscriptions
+  private subscriptions: Subscription[] = [];
 
   constructor(
     private repository: RepositoryService,
@@ -51,6 +54,14 @@ export class StudentPaymentComponent implements OnInit {
     this.getStudent();
   }
 
+  // Destroy subscriptions when done.
+  ngOnDestroy(): void {
+    for (let subscription of this.subscriptions) {
+      subscription.unsubscribe();
+    }
+  }
+
+
   /**
      * This method gets the Student table info by User id
      * 
@@ -59,7 +70,7 @@ export class StudentPaymentComponent implements OnInit {
      */
   private getStudent() {
     let apiAddress = "api/student/";
-    this.repository.getData(apiAddress + parseInt(sessionStorage.getItem('studentId'), 0))
+    this.subscriptions.push(this.repository.getData(apiAddress + parseInt(sessionStorage.getItem('studentId'), 0))
       .subscribe(student => {
 
         // get student table info
@@ -72,7 +83,7 @@ export class StudentPaymentComponent implements OnInit {
           this.errorHandler.handleError(error);
           this.errorMessage = "Unable to access API";
           this.isLoaded = true;
-        });
+        }));
   }
 
   /**
@@ -84,13 +95,13 @@ export class StudentPaymentComponent implements OnInit {
      */
   public getStudentInfo(studentId: number) {
     let apiAddress = "api/studentinfo/";
-    this.repository.getData(apiAddress + studentId)
+    this.subscriptions.push(this.repository.getData(apiAddress + studentId)
       .subscribe(res => {
 
         this.studentInfo = res as StudentInfo;
         // set laoded to true
         this.isLoaded = true;
-      }),
+      })),
       // tslint:disable-next-line: no-unused-expression
       (error) => {
         this.errorHandler.handleError(error);
@@ -177,7 +188,7 @@ export class StudentPaymentComponent implements OnInit {
 
       // Get a subsctiption to the API
       let apiAddress = "api/transaction/";
-      subscription = this.repository.getData(apiAddress + transId)
+      this.subscriptions.push(this.repository.getData(apiAddress + transId)
         .subscribe(res => {
 
           // Assign Temporary Trasnaction
@@ -199,7 +210,7 @@ export class StudentPaymentComponent implements OnInit {
             // re-loop
             loop(this.tidg.generateId());
           }
-        });
+        }));
       // tslint:disable-next-line: no-unused-expression
       (error) => {
         this.errorHandler.handleError(error);
@@ -223,7 +234,7 @@ export class StudentPaymentComponent implements OnInit {
   private executeStudentUpdate(studentPaymentFormValue) {
 
     let apiUrl = `api/student/${this.student.student_Id}`;
-    this.repository.update(apiUrl, this.student)
+    this.subscriptions.push(this.repository.update(apiUrl, this.student)
       .subscribe(res => {
 
         // Make transaction
@@ -240,7 +251,7 @@ export class StudentPaymentComponent implements OnInit {
           this.errorMessage = "Unable to access API";
           this.isLoaded = true;
         })
-      );
+      ));
   }
 
 
@@ -265,7 +276,7 @@ export class StudentPaymentComponent implements OnInit {
 
     // Create User Login
     let apiUrlTransaction = 'api/transaction';
-    this.repository.create(apiUrlTransaction, transaction)
+    this.subscriptions.push(this.repository.create(apiUrlTransaction, transaction)
       // tslint:disable-next-line: no-shadowed-variable
       .subscribe(res => {
         return;
@@ -276,6 +287,6 @@ export class StudentPaymentComponent implements OnInit {
           this.errorMessage = "Unable to access API";
           this.isLoaded = true;
         })
-      );
+      ));
   }
 }

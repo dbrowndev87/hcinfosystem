@@ -12,7 +12,7 @@ import { Department } from 'src/app/_interfaces/department.model';
 import { RepositoryService } from 'src/app/shared/services/repository.service';
 import { ErrorHandlerService } from 'src/app/shared/services/error-handler.service';
 import { Router } from '@angular/router';
-import { Subject } from 'rxjs';
+import { Subject, Subscription } from 'rxjs';
 
 
 @Component({
@@ -31,6 +31,9 @@ export class AdminListComponent implements OnInit, OnDestroy {
   public errorMessage: String = "";
   private depts: Department[];
   private isLoaded = false;
+
+  // Array for all the subscriptions
+  private subscriptions: Subscription[] = [];
 
   constructor(
     private repository: RepositoryService,
@@ -60,7 +63,7 @@ export class AdminListComponent implements OnInit, OnDestroy {
    */
   public getAllUsers() {
     let apiAddress = "api/user";
-    this.repository.getData(apiAddress)
+    this.subscriptions.push(this.repository.getData(apiAddress)
       .subscribe(observables => {
 
         // Assign observables
@@ -73,7 +76,7 @@ export class AdminListComponent implements OnInit, OnDestroy {
             this.users.splice(x, x);
           }
         }
-      }),
+      })),
       // tslint:disable-next-line: no-unused-expression
       (error) => {
         this.errorHandler.handleError(error);
@@ -84,6 +87,10 @@ export class AdminListComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     // Do not forget to unsubscribe the event
     this.dtTrigger.unsubscribe();
+
+    for (let subscription of this.subscriptions) {
+      subscription.unsubscribe();
+    }
   }
 
 

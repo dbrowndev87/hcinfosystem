@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 import { StudentInfo } from '../_interfaces/studentInfo.model';
 import { Enrollment } from '../_interfaces/enrollment.model';
@@ -10,13 +10,14 @@ import { Department } from '../_interfaces/department.model';
 import { Section } from '../_interfaces/section.model';
 import { SectionInfo } from '../_interfaces/sectionInfo.model';
 import { Course } from '../_interfaces/course.model';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnDestroy {
 
   public homeText: string;
   private typeCode: number;
@@ -29,9 +30,11 @@ export class HomeComponent implements OnInit {
   private enrollments: Enrollment[] = [];
   private transactions: Transaction[] = [];
   private sections: SectionInfo[] = [];
-
-
   private department: Department;
+
+  // Array for all the subscriptions
+  private subscriptions: Subscription[] = [];
+
 
   constructor(
     private router: Router,
@@ -60,6 +63,13 @@ export class HomeComponent implements OnInit {
 
   }
 
+  // Destroy subscriptions when done.
+  ngOnDestroy(): void {
+    for (let subscription of this.subscriptions) {
+      subscription.unsubscribe();
+    }
+  }
+
   /*************************************************
    * STUDENT INFORMATION BEINGS HERE
    ************************************************/
@@ -69,7 +79,7 @@ export class HomeComponent implements OnInit {
    ************************/
   public getStudentInfo() {
     let apiAddressStudentInfo = "api/studentinfo/" + sessionStorage.getItem("studentId");
-    this.repository.getData(apiAddressStudentInfo).pipe(
+    this.subscriptions.push(this.repository.getData(apiAddressStudentInfo).pipe(
       map(studentInfo => {
 
         // assign student info
@@ -80,7 +90,7 @@ export class HomeComponent implements OnInit {
          * Get Department/Program
          ***********************************/
         let apiAddressDepartments = "api/department/" + this.studentInfo.dept_Id;
-        this.repository.getData(apiAddressDepartments).pipe(
+        this.subscriptions.push(this.repository.getData(apiAddressDepartments).pipe(
           map(department => {
 
             // Get the depatment
@@ -91,7 +101,7 @@ export class HomeComponent implements OnInit {
             * Get Transactions
             ***********************************/
             let apiAddressTransactions = "api/transaction";
-            this.repository.getData(apiAddressTransactions).pipe(
+            this.subscriptions.push(this.repository.getData(apiAddressTransactions).pipe(
               map(transactions => {
                 // Get the transactions
                 let tempTrans = transactions as Transaction[];
@@ -107,7 +117,7 @@ export class HomeComponent implements OnInit {
                 * Get Enrollments
                 ***********************************/
                 let apiAddressEnrollments = "api/enrollment";
-                this.repository.getData(apiAddressEnrollments).pipe(
+                this.subscriptions.push(this.repository.getData(apiAddressEnrollments).pipe(
                   map(enrollments => {
                     let tempEnroll = enrollments as Enrollment[];
 
@@ -123,7 +133,7 @@ export class HomeComponent implements OnInit {
                      * Get Sections
                      ***********************************/
                     let apiAddressSections = "api/section";
-                    this.repository.getData(apiAddressSections).pipe(
+                    this.subscriptions.push(this.repository.getData(apiAddressSections).pipe(
                       map(sections => {
                         // Make an array to store the students sections in
                         let studentSections: Section[] = [];
@@ -144,7 +154,7 @@ export class HomeComponent implements OnInit {
                          * Get Courses and make  Section Info
                          ***********************************/
                         let apiAddressCourses = "api/course";
-                        this.repository.getData(apiAddressCourses).pipe(
+                        this.subscriptions.push(this.repository.getData(apiAddressCourses).pipe(
                           map(courses => {
                             let tempCourses = courses as Course[];
 
@@ -176,7 +186,7 @@ export class HomeComponent implements OnInit {
                             console.log(this.sections);
 
                           })
-                        ).subscribe(),
+                        ).subscribe()),
                           // get Enrollments error
                           // tslint:disable-next-line: no-unused-expression
                           (error) => {
@@ -184,7 +194,7 @@ export class HomeComponent implements OnInit {
                             this.errorMessage = "Unable to access API";
                           };
                       })
-                    ).subscribe(),
+                    ).subscribe()),
                       // get Enrollments error
                       // tslint:disable-next-line: no-unused-expression
                       (error) => {
@@ -192,7 +202,7 @@ export class HomeComponent implements OnInit {
                         this.errorMessage = "Unable to access API";
                       };
                   })
-                ).subscribe(),
+                ).subscribe()),
                   // get Enrollments error
                   // tslint:disable-next-line: no-unused-expression
                   (error) => {
@@ -201,7 +211,7 @@ export class HomeComponent implements OnInit {
                   };
 
               })
-            ).subscribe(),
+            ).subscribe()),
               // get transaction error
               // tslint:disable-next-line: no-unused-expression
               (error) => {
@@ -209,7 +219,7 @@ export class HomeComponent implements OnInit {
                 this.errorMessage = "Unable to access API";
               };
           })
-        ).subscribe(),
+        ).subscribe()),
           // get department error
           // tslint:disable-next-line: no-unused-expression
           (error) => {
@@ -217,7 +227,7 @@ export class HomeComponent implements OnInit {
             this.errorMessage = "Unable to access API";
           };
       })
-    ).subscribe(),
+    ).subscribe()),
       // get student info error
       // tslint:disable-next-line: no-unused-expression
       (error) => {
@@ -226,3 +236,4 @@ export class HomeComponent implements OnInit {
       };
   }
 }
+

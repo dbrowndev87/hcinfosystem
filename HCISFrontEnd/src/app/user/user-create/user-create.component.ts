@@ -31,7 +31,7 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./user-create.component.css']
 })
 
-export class UserCreateComponent implements OnInit {
+export class UserCreateComponent implements OnInit, OnDestroy {
 
   public errorMessage = "";
   public userForm: FormGroup;
@@ -44,6 +44,9 @@ export class UserCreateComponent implements OnInit {
   private param;
   private successMessage = "";
 
+  // Array for all the subscriptions
+  private subscriptions: Subscription[] = [];
+
   constructor(
     private repository: RepositoryService,
     private errorHandler: ErrorHandlerService,
@@ -52,14 +55,20 @@ export class UserCreateComponent implements OnInit {
     private rupg: RandomUserPassGen,
     private sidg: StudentIdGenerator,
     private globals: Globals
-  ) {
-  }
+  ) { }
 
   ngOnInit() {
     this.activeRoute.params.subscribe(params => {
       this.param = params['id'];
       this.initialiseState(); // reset and set based on new parameter this time
     });
+  }
+
+  // Destroy subscriptions when done.
+  ngOnDestroy(): void {
+    for (let subscription of this.subscriptions) {
+      subscription.unsubscribe();
+    }
   }
 
 
@@ -76,10 +85,10 @@ export class UserCreateComponent implements OnInit {
 
     // Get the next user ID.
     let apiAddress = "api/user/0";
-    this.repository.getData(apiAddress)
+    this.subscriptions.push(this.repository.getData(apiAddress)
       .subscribe((res: number) => {
         this.userId = res;
-      }),
+      })),
       // tslint:disable-next-line: no-unused-expression
       (error) => {
         this.errorHandler.handleError(error);
@@ -101,7 +110,7 @@ export class UserCreateComponent implements OnInit {
    */
   public getAllDepartments() {
     let apiAddress = "api/department";
-    this.repository.getData(apiAddress)
+    this.subscriptions.push(this.repository.getData(apiAddress)
       .subscribe(res => {
         this.depts = res as Department[];
 
@@ -113,8 +122,7 @@ export class UserCreateComponent implements OnInit {
           }
         }
 
-      }),
-
+      })),
       // tslint:disable-next-line: no-unused-expression
       (error) => {
         this.errorHandler.handleError(error);
@@ -186,7 +194,7 @@ export class UserCreateComponent implements OnInit {
 
     // Create user
     let apiUrl = 'api/user';
-    this.repository.create(apiUrl, user)
+    this.subscriptions.push(this.repository.create(apiUrl, user)
       .subscribe(res => {
 
         // Start the userLogin process.
@@ -219,7 +227,7 @@ export class UserCreateComponent implements OnInit {
           this.errorHandler.handleError(error);
           this.errorMessage = "Unable to access API";
         })
-      );
+      ));
   }
 
   /**
@@ -240,7 +248,7 @@ export class UserCreateComponent implements OnInit {
 
       // Get a subsctiption to the API
       let apiAddress = "api/userlogin/username/";
-      subscription = this.repository.getData(apiAddress + username)
+      this.subscriptions.push(this.repository.getData(apiAddress + username)
         .subscribe(res => {
 
           // Assign Temporary Trasnaction
@@ -254,15 +262,12 @@ export class UserCreateComponent implements OnInit {
             // Execute the rest of the student creation
             this.generateUserLogin(username);
 
-            // Unsubscribe to clear memory
-            subscription.unsubscribe();
-
           } else {
             // If the student comes back populated
             // re-loop
             loop(this.rupg.generateUser(user.first_Name, user.last_Name));
           }
-        });
+        }));
       // tslint:disable-next-line: no-unused-expression
       (error) => {
         this.errorHandler.handleError(error);
@@ -292,7 +297,7 @@ export class UserCreateComponent implements OnInit {
 
       // Get a subsctiption to the API
       let apiAddress = "api/student/";
-      subscription = this.repository.getData(apiAddress + student_Id)
+      this.subscriptions.push(this.repository.getData(apiAddress + student_Id)
         .subscribe(res => {
 
           // Assign Temporary Trasnaction
@@ -303,8 +308,6 @@ export class UserCreateComponent implements OnInit {
 
             // If the transaction returns a 0 id value.
             studentId = student_Id;
-            // Unsubscribe to clear memory
-            subscription.unsubscribe();
 
             // Execute the rest of the student creation
             this.generateStudent(user, studentId);
@@ -314,7 +317,7 @@ export class UserCreateComponent implements OnInit {
             // re-loop
             loop(this.sidg.generateId());
           }
-        });
+        }));
       // tslint:disable-next-line: no-unused-expression
       (error) => {
         this.errorHandler.handleError(error);
@@ -381,7 +384,7 @@ export class UserCreateComponent implements OnInit {
 
     // Create User Login
     let apiUrlUserLogin = 'api/userlogin';
-    this.repository.create(apiUrlUserLogin, userLogin)
+    this.subscriptions.push(this.repository.create(apiUrlUserLogin, userLogin)
       // tslint:disable-next-line: no-shadowed-variable
       .subscribe(res => {
         return;
@@ -391,8 +394,7 @@ export class UserCreateComponent implements OnInit {
           this.errorHandler.handleError(error);
           this.errorMessage = "Unable to access API";
         })
-      );
-
+      ));
   }
 
   /**
@@ -416,7 +418,7 @@ export class UserCreateComponent implements OnInit {
 
     // Create User Login
     let apiUrlStudent = 'api/student';
-    this.repository.create(apiUrlStudent, student)
+    this.subscriptions.push(this.repository.create(apiUrlStudent, student)
       // tslint:disable-next-line: no-shadowed-variable
       .subscribe(res => {
         return;
@@ -426,7 +428,7 @@ export class UserCreateComponent implements OnInit {
           this.errorHandler.handleError(error);
           this.errorMessage = "Unable to access API";
         })
-      );
+      ));
 
   }
 
@@ -449,7 +451,7 @@ export class UserCreateComponent implements OnInit {
 
     // Create User Login
     let apiUrlFaculty = 'api/faculty';
-    this.repository.create(apiUrlFaculty, faculty)
+    this.subscriptions.push(this.repository.create(apiUrlFaculty, faculty)
       // tslint:disable-next-line: no-shadowed-variable
       .subscribe(res => {
         return;
@@ -459,7 +461,7 @@ export class UserCreateComponent implements OnInit {
           this.errorHandler.handleError(error);
           this.errorMessage = "Unable to access API";
         })
-      );
+      ));
   }
 
   /**

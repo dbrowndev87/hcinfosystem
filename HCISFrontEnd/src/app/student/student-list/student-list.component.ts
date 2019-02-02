@@ -12,7 +12,7 @@ import { ErrorHandlerService } from 'src/app/shared/services/error-handler.servi
 import { Router } from '@angular/router';
 import { StudentInfo } from 'src/app/_interfaces/studentInfo.model';
 import { Department } from 'src/app/_interfaces/department.model';
-import { Subject } from 'rxjs';
+import { Subject, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-student-list',
@@ -29,6 +29,9 @@ export class StudentListComponent implements OnInit, OnDestroy {
   public errorMessage: String = "";
   private depts: Department[];
   private isLoaded = false;
+
+  // Array for all the subscriptions
+  private subscriptions: Subscription[] = [];
 
   constructor(
     private repository: RepositoryService,
@@ -48,11 +51,11 @@ export class StudentListComponent implements OnInit, OnDestroy {
 
   public getAllStudentsInfo() {
     let apiAddress = "api/studentinfo/";
-    this.repository.getData(apiAddress)
+    this.subscriptions.push(this.repository.getData(apiAddress)
       .subscribe(res => {
         this.studentsInfo = res as StudentInfo[];
         this.dtTrigger.next();
-      }),
+      })),
       // tslint:disable-next-line: no-unused-expression
       (error) => {
         this.errorHandler.handleError(error);
@@ -63,6 +66,10 @@ export class StudentListComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     // Do not forget to unsubscribe the event
     this.dtTrigger.unsubscribe();
+
+    for (let subscription of this.subscriptions) {
+      subscription.unsubscribe();
+    }
   }
 
 
@@ -75,11 +82,11 @@ export class StudentListComponent implements OnInit, OnDestroy {
  */
   public getAllDepartments() {
     let apiAddress = "api/department";
-    this.repository.getData(apiAddress)
+    this.subscriptions.push(this.repository.getData(apiAddress)
       .subscribe(res => {
         this.depts = res as Department[];
         this.isLoaded = true;
-      }),
+      })),
       // tslint:disable-next-line: no-unused-expression
       (error) => {
         this.errorHandler.handleError(error);

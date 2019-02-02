@@ -6,20 +6,21 @@
  * Author: Darcy Brown
  * Date: January 26th, 2019
  */
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, OnDestroy } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { RepositoryService } from 'src/app/shared/services/repository.service';
 import { ErrorHandlerService } from 'src/app/shared/services/error-handler.service';
 import { Router } from '@angular/router';
 import { Course } from 'src/app/_interfaces/course.model';
 import { Department } from 'src/app/_interfaces/department.model';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-course-create',
   templateUrl: './course-create.component.html',
   styleUrls: ['./course-create.component.css']
 })
-export class CourseCreateComponent implements OnInit {
+export class CourseCreateComponent implements OnInit, OnDestroy {
 
   public errorMessage = "";
   private userType: number;
@@ -27,6 +28,9 @@ export class CourseCreateComponent implements OnInit {
   private depts: Department[];
   private isLoaded = false;
   @ViewChild('dCode') dCode: ElementRef;
+
+  // Array for all the subscriptions
+  private subscriptions: Subscription[] = [];
 
 
   constructor(
@@ -49,9 +53,16 @@ export class CourseCreateComponent implements OnInit {
 
   }
 
+  // Destroy subscriptions when done.
+  ngOnDestroy(): void {
+    for (let subscription of this.subscriptions) {
+      subscription.unsubscribe();
+    }
+  }
+
   public getAllDepartments() {
     let apiAddress = "api/department";
-    this.repository.getData(apiAddress)
+    this.subscriptions.push(this.repository.getData(apiAddress)
       .subscribe(res => {
         this.depts = res as Department[];
         for (let x = 0; x < this.depts.length; x++) {
@@ -60,7 +71,7 @@ export class CourseCreateComponent implements OnInit {
           }
         }
         this.isLoaded = true;
-      }),
+      })),
       // tslint:disable-next-line: no-unused-expression
       (error) => {
         this.errorHandler.handleError(error);
@@ -101,7 +112,7 @@ export class CourseCreateComponent implements OnInit {
 
     // Create user
     let apiUrl = 'api/course';
-    this.repository.create(apiUrl, course)
+    this.subscriptions.push(this.repository.create(apiUrl, course)
       .subscribe(res => {
         $('#successModal').modal();
       },
@@ -110,7 +121,7 @@ export class CourseCreateComponent implements OnInit {
           this.errorHandler.handleError(error);
           this.errorMessage = "Unable to access API";
         })
-      );
+      ));
   }
 
   public redirectToCourseList() {

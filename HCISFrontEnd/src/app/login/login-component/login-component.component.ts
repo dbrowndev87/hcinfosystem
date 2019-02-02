@@ -6,7 +6,7 @@
  * Author: Darcy Brown
  * Date: January 24th, 2019
  */
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { RepositoryService } from 'src/app/shared/services/repository.service';
 import { ErrorHandlerService } from 'src/app/shared/services/error-handler.service';
@@ -25,7 +25,7 @@ import { Faculty } from 'src/app/_interfaces/faculty.model';
   styleUrls: ['./login-component.component.css']
 })
 
-export class LoginComponent implements OnInit {
+export class LoginComponent implements OnInit, OnDestroy {
 
   public errorMessage: String = "";
   public userForm: FormGroup;
@@ -33,6 +33,8 @@ export class LoginComponent implements OnInit {
   private userLogin: UserLogin;
   private user: User;
 
+  // Array for all the subscriptions
+  private subscriptions: Subscription[] = [];
 
   constructor(
     private repository: RepositoryService,
@@ -51,6 +53,14 @@ export class LoginComponent implements OnInit {
       password: new FormControl('', [Validators.required])
     });
   }
+
+  // Destroy subscriptions when done.
+  ngOnDestroy(): void {
+    for (let subscription of this.subscriptions) {
+      subscription.unsubscribe();
+    }
+  }
+
 
   public validateControl(controlName: string) {
     if (this.userForm.controls[controlName].invalid && this.userForm.controls[controlName].touched) {
@@ -84,7 +94,7 @@ export class LoginComponent implements OnInit {
     // Get user Login Stuff
     let apiUrlUserLogin = 'api/userLogin/username/' + username;
 
-    this.repository.getData(apiUrlUserLogin)
+    this.subscriptions.push(this.repository.getData(apiUrlUserLogin)
       .subscribe((userLogin: UserLogin) => {
 
         // Set userLogin and if the passwords match set session.
@@ -98,7 +108,7 @@ export class LoginComponent implements OnInit {
 
             // Get the TypeCode from Users table
             let apiUrlUser = 'api/user/' + this.userLogin.user_Id;
-            this.repository.getData(apiUrlUser)
+            this.subscriptions.push(this.repository.getData(apiUrlUser)
               .subscribe(user => {
 
                 // get user inform and set the typecode
@@ -124,7 +134,7 @@ export class LoginComponent implements OnInit {
                   this.errorMessage = "Unable to access API";
                   this.loading = false;
                 })
-              );
+              ));
           } else {
             // If account is inactive
             this.loading = false;
@@ -145,7 +155,7 @@ export class LoginComponent implements OnInit {
           this.loading = false;
           this.errorMessage = "Unable to access API";
         })
-      );
+      ));
   }
 
   public redirectToHome() {
@@ -158,13 +168,12 @@ export class LoginComponent implements OnInit {
     let apiAddress = "api/student/user/";
 
     // Get Student ID with the user ID and store it.
-    subscription = this.repository.getData(apiAddress + this.user.user_Id)
+    this.subscriptions.push(this.repository.getData(apiAddress + this.user.user_Id)
       .subscribe(res => {
         let student = res as Student;
         sessionStorage.setItem('studentId', student.student_Id.toString());
-        subscription.unsubscribe();
         this.reload();
-      }),
+      })),
       // tslint:disable-next-line: no-unused-expression
       (error) => {
         this.errorHandler.handleError(error);
@@ -179,13 +188,12 @@ export class LoginComponent implements OnInit {
     let apiAddress = "api/faculty/user/";
 
     // Get Student ID with the user ID and store it.
-    subscription = this.repository.getData(apiAddress + this.user.user_Id)
+    this.subscriptions.push(this.repository.getData(apiAddress + this.user.user_Id)
       .subscribe(res => {
         let faculty = res as Faculty;
         sessionStorage.setItem('facultyId', faculty.faculty_Id.toString());
-        subscription.unsubscribe();
         this.reload();
-      }),
+      })),
       // tslint:disable-next-line: no-unused-expression
       (error) => {
         this.errorHandler.handleError(error);

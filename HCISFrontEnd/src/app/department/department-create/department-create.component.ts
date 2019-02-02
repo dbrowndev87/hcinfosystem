@@ -1,10 +1,11 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, OnDestroy } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { RepositoryService } from 'src/app/shared/services/repository.service';
 import { ErrorHandlerService } from 'src/app/shared/services/error-handler.service';
 import { Router } from '@angular/router';
 import { Section } from 'src/app/_interfaces/section.model';
 import { Department } from "src/app/_interfaces/department.model";
+import { Subscription } from 'rxjs';
 
 
 @Component({
@@ -12,16 +13,17 @@ import { Department } from "src/app/_interfaces/department.model";
   templateUrl: './department-create.component.html',
   styleUrls: ['./department-create.component.css']
 })
-export class DepartmentCreateComponent implements OnInit {
+export class DepartmentCreateComponent implements OnInit, OnDestroy {
 
   public errorMessage = "";
   private userType: number;
   public departmentForm: FormGroup;
   public departments: Department[];
   private isLoaded = false;
-
   @ViewChild('dCode') dCode: ElementRef;
 
+  // Array for all the subscriptions
+  private subscriptions: Subscription[] = [];
 
   constructor(
     private repository: RepositoryService,
@@ -39,6 +41,13 @@ export class DepartmentCreateComponent implements OnInit {
 
   }
 
+  // Destroy subscriptions when done.
+  ngOnDestroy(): void {
+    for (let subscription of this.subscriptions) {
+      subscription.unsubscribe();
+    }
+  }
+
   public validateControl(controlName: string) {
     if (this.departmentForm.controls[controlName].invalid && this.departmentForm.controls[controlName].touched) {
       return true;
@@ -48,11 +57,11 @@ export class DepartmentCreateComponent implements OnInit {
 
   public getAllDepartments() {
     let apiAddress = "api/department";
-    this.repository.getData(apiAddress)
+    this.subscriptions.push(this.repository.getData(apiAddress)
       .subscribe(res => {
         this.departments = res as Department[];
         this.isLoaded = true;
-      }),
+      })),
       // tslint:disable-next-line: no-unused-expression
       (error) => {
         this.errorHandler.handleError(error);
@@ -82,9 +91,10 @@ export class DepartmentCreateComponent implements OnInit {
       dept_Id: 0,
       dept_Name: departmentFormValue.dept_Name,
     };
+
     // Create department
     let apiUrl = 'api/department';
-    this.repository.create(apiUrl, dept)
+    this.subscriptions.push(this.repository.create(apiUrl, dept)
       .subscribe(res => {
         $('#successModal').modal();
       },
@@ -93,7 +103,7 @@ export class DepartmentCreateComponent implements OnInit {
           this.errorHandler.handleError(error);
           this.errorMessage = "Unable to access API";
         })
-      );
+      ));
   }
 
   public redirectToDepartmentList() {
