@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jan 26, 2019 at 02:36 AM
--- Server version: 10.1.37-MariaDB
--- PHP Version: 7.2.13
+-- Host: localhost
+-- Generation Time: Feb 02, 2019 at 02:19 PM
+-- Server version: 10.1.35-MariaDB
+-- PHP Version: 7.2.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -21,9 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `goldstar`
 --
-DROP DATABASE IF EXISTS `goldstar`;
-CREATE DATABASE `goldstar`;
-USE `goldstar`;
 
 DELIMITER $$
 --
@@ -47,6 +44,22 @@ CREATE TABLE `course` (
   `credits` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `course`
+--
+
+INSERT INTO `course` (`course_id`, `course_name`, `dept_id`, `credits`) VALUES
+('CIS-1111', 'Stuff 1111', 2, 3),
+('CIS-1112', 'Stuff 1112', 2, 3),
+('CIS-1113', 'Info Security 101', 2, 3),
+('CIS-1114', 'Security 102', 2, 3),
+('CIS-1115', 'Database Management', 2, 3),
+('CIS-2001', 'Advanced Java', 2, 3),
+('CIS-2002', 'Advanced C #', 2, 3),
+('CIS-2003', 'Advanced Security', 2, 3),
+('CIS-2004', 'Advanced Angular', 2, 3),
+('CIS-2005', 'Advanced Info-Systems', 2, 3);
+
 -- --------------------------------------------------------
 
 --
@@ -65,7 +78,9 @@ CREATE TABLE `department` (
 INSERT INTO `department` (`dept_id`, `dept_name`) VALUES
 (1, 'Administration'),
 (2, 'Computer Information and Systems'),
-(3, 'Computer Networking');
+(3, 'Computer Networking'),
+(4, 'Database Administration'),
+(5, 'Networking Administration');
 
 -- --------------------------------------------------------
 
@@ -80,6 +95,28 @@ CREATE TABLE `enrollment` (
   `course_status` varchar(20) NOT NULL,
   `grade` double(5,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `enrollment`
+--
+
+INSERT INTO `enrollment` (`enrollment_id`, `student_id`, `section_id`, `course_status`, `grade`) VALUES
+(1, 190181, 1, 'ongoing', 0.00),
+(2, 190370, 1, 'ongoing', 0.00),
+(3, 193081, 1, 'ongoing', 0.00),
+(4, 193402, 1, 'ongoing', 0.00),
+(5, 193820, 1, 'ongoing', 0.00),
+(6, 198309, 1, 'ongoing', 0.00);
+
+--
+-- Triggers `enrollment`
+--
+DELIMITER $$
+CREATE TRIGGER `update_vacancy` AFTER INSERT ON `enrollment` FOR EACH ROW UPDATE section
+SET section.vacancy = section.vacancy - 1
+WHERE section.section_id = new.section_id
+$$
+DELIMITER ;
 
 -- --------------------------------------------------------
 
@@ -117,6 +154,15 @@ CREATE TABLE `section` (
   `course_id` varchar(12) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `section`
+--
+
+INSERT INTO `section` (`section_id`, `faculty_id`, `start_date`, `end_date`, `designation`, `semester`, `vacancy`, `course_id`) VALUES
+(1, 1, '2019-01-01', '2019-04-11', 'A', 'WIn2019', 24, 'CIS-1111'),
+(2, 1, '2019-01-01', '2019-04-19', 'B', 'win2019', 11, 'CIS-1111'),
+(3, 1, '2019-01-03', '2019-04-18', 'C', 'Fall', 21, 'CIS-1111');
+
 -- --------------------------------------------------------
 
 --
@@ -136,7 +182,13 @@ CREATE TABLE `student` (
 --
 
 INSERT INTO `student` (`student_id`, `student_status`, `gpa`, `user_id`, `amount_owing`) VALUES
-(193820, 'Enrolled', 0.00, 2, 10000.00);
+(190181, 'Enrolled', 0.00, 11, 0.00),
+(190370, 'Enrolled', 0.00, 6, 0.00),
+(192232, 'Enrolled', 0.00, 8, 0.00),
+(193081, 'Enrolled', 0.00, 10, 0.00),
+(193402, 'Enrolled', 0.00, 7, 0.00),
+(193820, 'Drop Out', 0.00, 2, 10000.00),
+(198309, 'Enrolled', 0.00, 9, 0.00);
 
 -- --------------------------------------------------------
 
@@ -183,11 +235,17 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`user_id`, `first_name`, `last_name`, `email`, `birth_date`, `type_code`, `address`, `dept_id`) VALUES
-(1, 'Darcy', 'Brown', 'dbrown32066@hollandcollege.com', '2019-03-18', 1, '8 Bonnie Blink dr.', 1),
-(2, 'Test', 'Student', 'teststudent@happycollege.com', '2019-03-18', 3, '123 Student Lane.', 2),
+(1, 'Darcy', 'Browns', 'dbrown32066@hollandcollege.com', '2019-03-18', 1, '8 Bonnie Blink dr.', 1),
+(2, 'Test', 'Student', 'teststudent@happycollege.com', '1995-03-09', 3, '123 Student Lane.', 2),
 (3, 'Test', 'Faculty', 'testfaculty@happycollege.com', '2019-03-18', 2, '145 Faculty Lane.', 3),
 (4, 'Nicholas', 'Peconi', 'npeconi@hollandcollege.com', '2019-03-18', 1, '123 Peconi Lane.', 1),
-(5, 'Kristen', 'Murchison', 'kmurchison@hollandcollege.com', '2019-03-18', 1, '876 Murchison Lane.', 1);
+(5, 'Kristen', 'Murchison', 'kmurchison@hollandcollege.com', '2019-03-18', 1, '876 Murchison Lane.', 1),
+(6, 'Paul', 'Walker', 'nicholaspeconi@gmail.com', '2006-02-15', 3, '265 Beau View Lane', 3),
+(7, 'Juanita', 'Smith', 'nicholaspeconi@gmail.com', '2019-02-06', 3, 'fgsdfgdfggdfg', 2),
+(8, 'Betty', 'Gonazalez', 'nicholaspeconi@gmail.com', '1999-02-17', 3, '265 Beau View Lane', 2),
+(9, 'veronica', 'smalls', 'nicholaspeconi@gmail.com', '2019-02-20', 3, '265 Beau View Lane', 2),
+(10, 'Carlos', 'smith', 'nicholaspeconi@gmail.com', '2019-02-13', 3, '265 Beau View Lane', 2),
+(11, 'steve', 'johanson', 'nicholaspeconi@gmail.com', '1999-02-17', 3, '265 Beau View Lane', 2);
 
 -- --------------------------------------------------------
 
@@ -207,11 +265,17 @@ CREATE TABLE `user_login` (
 --
 
 INSERT INTO `user_login` (`username`, `password`, `active`, `user_id`) VALUES
+('BGonaz1479', '2c22412ba55b11b0e91c1d5586ea2612', 1, 8),
+('Csmith9348', 'fead790cd8793e86429758988526dab5', 1, 10),
 ('dbrown32066', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 1),
+('JSmith7311', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 7),
 ('kmerchison', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 5),
 ('npeconi', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 4),
+('PWalker383', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 6),
+('sjohan4759', 'fd2c527e73a8ded2bb986b706fa6bee9', 1, 11),
 ('testfaculty', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 3),
-('teststudent', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 2);
+('teststudent', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 2),
+('vsmalls667', '68ae82181c5617be297cf9729bf71eb7', 1, 9);
 
 -- --------------------------------------------------------
 
@@ -313,10 +377,16 @@ ALTER TABLE `user_type_code`
 --
 
 --
+-- AUTO_INCREMENT for table `department`
+--
+ALTER TABLE `department`
+  MODIFY `dept_id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT for table `enrollment`
 --
 ALTER TABLE `enrollment`
-  MODIFY `enrollment_id` int(6) NOT NULL AUTO_INCREMENT;
+  MODIFY `enrollment_id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `faculty`
@@ -328,13 +398,13 @@ ALTER TABLE `faculty`
 -- AUTO_INCREMENT for table `section`
 --
 ALTER TABLE `section`
-  MODIFY `section_id` int(6) NOT NULL AUTO_INCREMENT;
+  MODIFY `section_id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `user_id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- Constraints for dumped tables
