@@ -37,6 +37,8 @@ import { SectionRoutingModule } from './section/section.routing';
 import { DataTablesModule, DataTableDirective } from 'angular-datatables';
 import { DepartmentModule } from './department/department.module';
 import { DepartmentRoutingModule } from './department/department.routing';
+import { ReportsModule } from './reports/reports.module';
+import { ReportsRoutingModule } from './reports/reports.routing';
 
 
 
@@ -74,6 +76,8 @@ import { DepartmentRoutingModule } from './department/department.routing';
     SectionRoutingModule,
     DepartmentModule,
     DepartmentRoutingModule,
+    ReportsModule,
+    ReportsRoutingModule,
     // These Must Go Last.
     RouterModule,
     AppRoutingModule,

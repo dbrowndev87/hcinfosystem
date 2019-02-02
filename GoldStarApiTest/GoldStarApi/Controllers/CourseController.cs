@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using Contracts;
 using Entities.Extensions;
@@ -13,6 +14,8 @@ namespace GoldStarApi.Controllers
     {
         private ILoggerManager _logger;
         private IRepositoryWrapper _repository;
+        
+        private List<Course> coursesByDept;
         
         public CourseController(ILoggerManager logger, IRepositoryWrapper repository)
         {
@@ -57,6 +60,40 @@ namespace GoldStarApi.Controllers
                     _logger.LogInfo($"Returned Course with id: {id}");
                     return Ok(course);
                 }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Something went wrong inside GetCourseById action: {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
+        }
+        
+        [HttpGet("department/{id}", Name ="CoursesByDepartmentId")]
+        public IActionResult GetCoursesByDepartmentId(int id)
+        {
+            
+            try
+            {
+                var courses = _repository.Course.GetAllCourses();
+ 
+                if (courses.Equals(null))
+                {
+                    _logger.LogError($"No courses found in DB");
+                    return NotFound();
+                }
+
+                coursesByDept = new List<Course>();
+                foreach (var course in courses)
+                {
+                    if (course.Dept_Id == id)
+                    {
+                        coursesByDept.Add(course);
+                    }
+                }
+                
+                    _logger.LogInfo($"Returned Course with id: {id}");
+                    return Ok(coursesByDept);
+                
             }
             catch (Exception ex)
             {
