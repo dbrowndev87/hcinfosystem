@@ -14,6 +14,8 @@ namespace GoldStarApi.Controllers
     {
         private ILoggerManager _logger;
         private IRepositoryWrapper _repository;
+        private List<CourseInformation> allSectionCourseInfo;
+        
         
         public SectionController(ILoggerManager logger, IRepositoryWrapper repository)
         {
@@ -134,7 +136,56 @@ namespace GoldStarApi.Controllers
             }
         }
 
+        [HttpGet("courseInfo", Name ="GetAllSectionCourseInfo")]
+        public IActionResult GetAllSectionCourseInfo()
+        {
+            
+            try
+            {
+                var allSections = _repository.Section.GetAllSections();
+                allSectionCourseInfo = new List<CourseInformation>();
+                if (allSections.Equals(null))
+                {
+                    _logger.LogError($"No sections were found");
+                    return NotFound();
+                }
+                
+                foreach (var current in allSections)
+                {
+                    CourseInformation currentCourse = new CourseInformation();
+                    
+                    var sectionId = current.Section_Id;
+                    var currentSectionInfo = _repository.Section.GetSectionById(sectionId);
+                    
+                    currentCourse.Course_Id = currentSectionInfo.Course_Id;
+                    currentCourse.Semester = currentSectionInfo.Semester;
+                    currentCourse.Designation = currentSectionInfo.Designation;
+                    currentCourse.Faculty_Id = currentSectionInfo.Faculty_Id;
+                    currentCourse.Section_Id = currentSectionInfo.Section_Id;
+                    currentCourse.End_Date = currentSectionInfo.End_Date;
+                    currentCourse.Start_Date = currentSectionInfo.Start_Date;
+                    currentCourse.Vacancy= currentSectionInfo.Vacancy;
+                    
+                    var currentCourseInfo = _repository.Course.GetCourseById(currentCourse.Course_Id);
 
+                    currentCourse.Course_Name = currentCourseInfo.Course_Name;
+                    currentCourse.Dept_Id = currentCourseInfo.Dept_Id;
+                    currentCourse.Credits = currentCourseInfo.Credits;
+                    
+                    allSectionCourseInfo.Add(currentCourse);
+                    
+                }
+
+                    _logger.LogInfo($"Returned All Section Course Information");
+                   return Ok(allSectionCourseInfo);
+                
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Something went wrong inside GetEnrollment ById action: {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
+        }
         [HttpPost]
         public IActionResult CreateSection([FromBody]Section section)
         {
