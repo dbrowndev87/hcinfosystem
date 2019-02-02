@@ -132,3 +132,15 @@ D:\Bitbucket\goldstarcode\GoldStarApiTest\Contracts\bin\Debug\netcoreapp2.2\Enti
 D:\Bitbucket\goldstarcode\GoldStarApiTest\Contracts\bin\Debug\netcoreapp2.2\Entities.pdb
 D:\Bitbucket\goldstarcode\GoldStarApiTest\Contracts\obj\Debug\netcoreapp2.2\Contracts.csproj.CopyComplete
 D:\Bitbucket\goldstarcode\GoldStarApiTest\Contracts\obj\Debug\netcoreapp2.2\Contracts.csprojAssemblyReference.cache
+C:\Users\nicholaspeconi\Documents\2nd Year Repos\goldstarcode\GoldStarApiTest\Contracts\bin\Debug\netcoreapp2.2\Contracts.deps.json
+C:\Users\nicholaspeconi\Documents\2nd Year Repos\goldstarcode\GoldStarApiTest\Contracts\bin\Debug\netcoreapp2.2\Contracts.dll
+C:\Users\nicholaspeconi\Documents\2nd Year Repos\goldstarcode\GoldStarApiTest\Contracts\bin\Debug\netcoreapp2.2\Contracts.pdb
+C:\Users\nicholaspeconi\Documents\2nd Year Repos\goldstarcode\GoldStarApiTest\Contracts\bin\Debug\netcoreapp2.2\Entities.dll
+C:\Users\nicholaspeconi\Documents\2nd Year Repos\goldstarcode\GoldStarApiTest\Contracts\bin\Debug\netcoreapp2.2\Entities.pdb
+C:\Users\nicholaspeconi\Documents\2nd Year Repos\goldstarcode\GoldStarApiTest\Contracts\obj\Debug\netcoreapp2.2\Contracts.csprojAssemblyReference.cache
+C:\Users\nicholaspeconi\Documents\2nd Year Repos\goldstarcode\GoldStarApiTest\Contracts\obj\Debug\netcoreapp2.2\Contracts.csproj.CoreCompileInputs.cache
+C:\Users\nicholaspeconi\Documents\2nd Year Repos\goldstarcode\GoldStarApiTest\Contracts\obj\Debug\netcoreapp2.2\Contracts.AssemblyInfoInputs.cache
+C:\Users\nicholaspeconi\Documents\2nd Year Repos\goldstarcode\GoldStarApiTest\Contracts\obj\Debug\netcoreapp2.2\Contracts.AssemblyInfo.cs
+C:\Users\nicholaspeconi\Documents\2nd Year Repos\goldstarcode\GoldStarApiTest\Contracts\obj\Debug\netcoreapp2.2\Contracts.csproj.CopyComplete
+C:\Users\nicholaspeconi\Documents\2nd Year Repos\goldstarcode\GoldStarApiTest\Contracts\obj\Debug\netcoreapp2.2\Contracts.dll
+C:\Users\nicholaspeconi\Documents\2nd Year Repos\goldstarcode\GoldStarApiTest\Contracts\obj\Debug\netcoreapp2.2\Contracts.pdb

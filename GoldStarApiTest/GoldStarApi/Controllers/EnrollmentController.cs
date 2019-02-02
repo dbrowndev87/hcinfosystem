@@ -16,6 +16,7 @@ namespace GoldStarApi.Controllers
         private ILoggerManager _logger;
         private IRepositoryWrapper _repository;
         private List<CourseInformation> allCourseInfo;
+        private List<Enrollment> enrollmentsBySection;
         
         public EnrollmentController(ILoggerManager logger, IRepositoryWrapper repository)
         {
@@ -89,6 +90,17 @@ namespace GoldStarApi.Controllers
                     currentCourse.Course_Id = currentSectionInfo.Course_Id;
                     currentCourse.Semester = currentSectionInfo.Semester;
                     currentCourse.Designation = currentSectionInfo.Designation;
+                    currentCourse.Faculty_Id = currentSectionInfo.Faculty_Id;
+                    currentCourse.Section_Id = currentSectionInfo.Section_Id;
+                    currentCourse.End_Date = currentSectionInfo.End_Date;
+                    currentCourse.Start_Date = currentSectionInfo.Start_Date;
+                    currentCourse.Vacancy= currentSectionInfo.Vacancy;
+                    
+                    var currentCourseInfo = _repository.Course.GetCourseById(currentCourse.Course_Id);
+
+                    currentCourse.Course_Name = currentCourseInfo.Course_Name;
+                    currentCourse.Dept_Id = currentCourseInfo.Dept_Id;
+                    currentCourse.Credits = currentCourseInfo.Credits;
                     
                     allCourseInfo.Add(currentCourse);
                     
@@ -104,6 +116,42 @@ namespace GoldStarApi.Controllers
                     _logger.LogInfo($"Returned Enrollment with id: {id}");
                     return Ok(allCourseInfo);
                 }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Something went wrong inside GetEnrollment ById action: {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
+        }
+        
+        [HttpGet("section/{id}", Name ="EnrollmentBySectionId")]
+        public IActionResult GetEnrollmentBySectionId(int id)
+        {
+            
+            try
+            {
+                
+                var enrollments = _repository.Enrollment.GetAllEnrollments();
+                enrollmentsBySection = new List<Enrollment>();
+               
+ 
+                if (enrollments.Equals(null))
+                {
+                    _logger.LogError($"Enrollment with id: {id}, hasn't been found in db.");
+                    return NotFound();
+                }
+                
+                foreach (var current in enrollments)
+                {
+                    if (current.Section_Id == id)
+                    {
+                        enrollmentsBySection.Add(current);
+                    }
+
+                }
+                    _logger.LogInfo($"Returned Enrollment with id: {id}");
+                    return Ok(enrollmentsBySection);
+                
             }
             catch (Exception ex)
             {

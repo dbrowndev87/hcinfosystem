@@ -153,3 +153,17 @@ D:\Bitbucket\goldstarcode\GoldStarApiTest\Repository\obj\Debug\netcoreapp2.2\Rep
 D:\Bitbucket\goldstarcode\GoldStarApiTest\Repository\obj\Debug\netcoreapp2.2\Repository.csproj.CopyComplete
 D:\Bitbucket\goldstarcode\GoldStarApiTest\Repository\obj\Debug\netcoreapp2.2\Repository.dll
 D:\Bitbucket\goldstarcode\GoldStarApiTest\Repository\obj\Debug\netcoreapp2.2\Repository.pdb
+C:\Users\nicholaspeconi\Documents\2nd Year Repos\goldstarcode\GoldStarApiTest\Repository\bin\Debug\netcoreapp2.2\Repository.deps.json
+C:\Users\nicholaspeconi\Documents\2nd Year Repos\goldstarcode\GoldStarApiTest\Repository\bin\Debug\netcoreapp2.2\Repository.dll
+C:\Users\nicholaspeconi\Documents\2nd Year Repos\goldstarcode\GoldStarApiTest\Repository\bin\Debug\netcoreapp2.2\Repository.pdb
+C:\Users\nicholaspeconi\Documents\2nd Year Repos\goldstarcode\GoldStarApiTest\Repository\bin\Debug\netcoreapp2.2\Contracts.dll
+C:\Users\nicholaspeconi\Documents\2nd Year Repos\goldstarcode\GoldStarApiTest\Repository\bin\Debug\netcoreapp2.2\Entities.dll
+C:\Users\nicholaspeconi\Documents\2nd Year Repos\goldstarcode\GoldStarApiTest\Repository\bin\Debug\netcoreapp2.2\Contracts.pdb
+C:\Users\nicholaspeconi\Documents\2nd Year Repos\goldstarcode\GoldStarApiTest\Repository\bin\Debug\netcoreapp2.2\Entities.pdb
+C:\Users\nicholaspeconi\Documents\2nd Year Repos\goldstarcode\GoldStarApiTest\Repository\obj\Debug\netcoreapp2.2\Repository.csprojAssemblyReference.cache
+C:\Users\nicholaspeconi\Documents\2nd Year Repos\goldstarcode\GoldStarApiTest\Repository\obj\Debug\netcoreapp2.2\Repository.csproj.CoreCompileInputs.cache
+C:\Users\nicholaspeconi\Documents\2nd Year Repos\goldstarcode\GoldStarApiTest\Repository\obj\Debug\netcoreapp2.2\Repository.AssemblyInfoInputs.cache
+C:\Users\nicholaspeconi\Documents\2nd Year Repos\goldstarcode\GoldStarApiTest\Repository\obj\Debug\netcoreapp2.2\Repository.AssemblyInfo.cs
+C:\Users\nicholaspeconi\Documents\2nd Year Repos\goldstarcode\GoldStarApiTest\Repository\obj\Debug\netcoreapp2.2\Repository.csproj.CopyComplete
+C:\Users\nicholaspeconi\Documents\2nd Year Repos\goldstarcode\GoldStarApiTest\Repository\obj\Debug\netcoreapp2.2\Repository.dll
+C:\Users\nicholaspeconi\Documents\2nd Year Repos\goldstarcode\GoldStarApiTest\Repository\obj\Debug\netcoreapp2.2\Repository.pdb

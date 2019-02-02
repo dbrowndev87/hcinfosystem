@@ -33,8 +33,10 @@ export class HomeComponent implements OnInit, OnDestroy {
   private sectionsById: Section[] = [];
   private transactions: Transaction[] = [];
   private sections: SectionInfo[] = [];
+  private students: StudentInfo[];
   private faculty: FacultyInfo[] = [];
   private department: Department;
+  public buttonClicked = false;
 
   // Array for all the subscriptions
   private subscriptions: Subscription[] = [];
@@ -65,6 +67,44 @@ export class HomeComponent implements OnInit, OnDestroy {
       this.isLoaded = true;
     }
 
+  }
+
+  public getCourseRoster(sectionId){
+    console.log(sectionId);
+    let apiAddressRoster = "api/enrollment/section/" + sectionId;
+    this.subscriptions.push(this.repository.getData(apiAddressRoster).pipe(
+      map(rosterInfo => {
+       this.enrollments = rosterInfo as Enrollment[];
+       this.enrollments.forEach(current => {    
+         this.getAllStudentInfo(current.student_Id);
+       } );
+       console.log(this.students);
+       this.buttonClicked = true;
+       this.isLoaded = true;
+     })
+   ).subscribe()),
+     // get Roster error
+     // tslint:disable-next-line: no-unused-expression
+     (error) => {
+       this.errorHandler.handleError(error);
+       this.errorMessage = "Unable to access API";
+     };
+  }
+
+  public getAllStudentInfo(studentId){
+    let apiAddressInfo = "api/studentInfo/" + studentId;
+    this.subscriptions.push(this.repository.getData(apiAddressInfo).pipe(
+      map(studentInfo => {
+       this.students = studentInfo as StudentInfo[];
+       this.isLoaded = true;
+     })
+   ).subscribe()),
+     // get Roster error
+     // tslint:disable-next-line: no-unused-expression
+     (error) => {
+       this.errorHandler.handleError(error);
+       this.errorMessage = "Unable to access API";
+     };
   }
 
   // Destroy subscriptions when done.
