@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using Contracts;
 using Entities.Extensions;
@@ -56,6 +57,40 @@ namespace GoldStarApi.Controllers
                 {
                     _logger.LogInfo($"Returned Section with id: {id}");
                     return Ok(section);
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Something went wrong inside GetSectionById action: {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
+        }
+        
+        [HttpGet("faculty/{id}", Name ="SectionByFacultyId")]
+        public IActionResult GetSectionsByFacultyId(int id)
+        {
+            
+            try
+            {
+                var sections = _repository.Section.GetAllSections();
+                List<Section> sectionsById = new List<Section>();
+                foreach (var section in sections)
+                {
+                    if (section.Faculty_Id == id)
+                    {
+                        sectionsById.Add(section);
+                    }
+                }
+ 
+                if (sections.Equals(null))
+                {
+                    _logger.LogError($"No sections were found.");
+                    return NotFound();
+                }
+                else
+                {
+                    _logger.LogInfo($"Returned Section with id: {id}");
+                    return Ok(sectionsById);
                 }
             }
             catch (Exception ex)

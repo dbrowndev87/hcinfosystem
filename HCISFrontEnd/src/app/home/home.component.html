@@ -22,7 +22,93 @@
 
     <!-- Faculty Home -->
     <div *ngIf="typeCode === 2">
-
+        <div class="row">
+          <div id="fInfo" class="col-md-offset-1 col-md-4 col-lg-4 well text-center">
+            <h3 class="text-center">{{facultyInfo.first_Name}} {{facultyInfo.last_Name}}</h3>
+            <div class="row">
+              <div class="col-md-12">
+                <p><span class="bold">Faculty ID:</span><br>
+                  {{facultyInfo.faculty_Id}}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <p><span class="bold">E-Mail:</span><br>
+                  {{facultyInfo.eMail}}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <p><span class="bold">Status:</span><br>
+                  {{facultyInfo.faculty_Status}}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <span class="bold">Program:</span><br>
+                <p>{{department.dept_Name}}</p>
+              </div>
+            </div>
+          </div>
+          <!-- End of row -->
+        </div>
+        <div class="row">
+          <div id="cInfo" class="col-md-offset-1 col-md-10 col-lg-10 well">
+            <h3 class="text-center">Courses</h3>
+            <!-- Course List -->
+            <div class="row">
+              <div id="courseDiv" class="col-md-12">
+  
+                <!-- If Enrolled in courses -->
+                <ng-template [ngIf]="sectionsById.length > 0" [ngIfElse]="noSections">
+                  <br>
+                  <div class="row">
+                    <div class="col-md-10 well centerDiv">
+                      <p class="text-center"><span class="bold">Current Courses:</span> {{sectionsById.length}}</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-10 well centerDiv">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>Course ID</th>
+                            <th>Course Designation</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let section of sectionsById">
+                            <td>{{section.course_Id}}</td>
+                            <td>{{section.designation}}</td>
+                            <td>{{section.start_Date | date:'yyyy-MM-dd'}}</td>
+                            <td>{{section.end_Date | date:'yyyy-MM-dd'}}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </ng-template>
+  
+                <!-- No Enrollments -->
+                <ng-template #noSections>
+                  <br>
+                  <div class="row">
+                    <div id="eWell" class="col-md-6 well centerDiv">
+                      <div class="col-md-6 centerDiv">
+                        <p class="text-center"><span class="bold">Current Sections:</span> 0</p>
+                        <br>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+  
+              </div>
+            </div>
+          </div>
+        </div>
+          <!--End of faculty  -->
     </div>
 
     <!-- Student Home --->
@@ -57,8 +143,8 @@
             </div>
           </div>
         </div>
-        <div class="col-md-offset-1 col-md-5 well">
 
+        <div class="col-md-offset-1 col-md-5 well">
           <!-- Payment Information Well -->
           <h3 id="pInfo" class="text-center">Payment Information</h3>
           <!-- If Amount id Due -->

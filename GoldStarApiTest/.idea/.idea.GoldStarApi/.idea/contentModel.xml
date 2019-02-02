@@ -106,6 +106,7 @@
           <e p="2019-01-30_logfile.txt" t="Include" />
           <e p="2019-01-31_logfile.txt" t="Include" />
           <e p="2019-02-01_logfile.txt" t="Include" />
+          <e p="2019-02-02_logfile.txt" t="Include" />
         </e>
         <e p="nlog.config" t="Include" />
         <e p="obj" t="ExcludeRecursive">

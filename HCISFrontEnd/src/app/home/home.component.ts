@@ -11,6 +11,7 @@ import { Section } from '../_interfaces/section.model';
 import { SectionInfo } from '../_interfaces/sectionInfo.model';
 import { Course } from '../_interfaces/course.model';
 import { Subscription } from 'rxjs';
+import { FacultyInfo } from '../_interfaces/facultyInfo.model';
 
 @Component({
   selector: 'app-home',
@@ -27,9 +28,12 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   // Student Related Variables
   private studentInfo: StudentInfo;
+  private facultyInfo: FacultyInfo;
   private enrollments: Enrollment[] = [];
+  private sectionsById: Section[] = [];
   private transactions: Transaction[] = [];
   private sections: SectionInfo[] = [];
+  private faculty: FacultyInfo[] = [];
   private department: Department;
 
   // Array for all the subscriptions
@@ -56,7 +60,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     if (this.typeCode === 3) {
       this.getStudentInfo();
     } else if (this.typeCode === 2) {
-
+      this.getFacultyInfo();
     } else {
       this.isLoaded = true;
     }
@@ -69,6 +73,71 @@ export class HomeComponent implements OnInit, OnDestroy {
       subscription.unsubscribe();
     }
   }
+    /*************************************************
+   * Faculty INFORMATION BEINGS HERE
+   ************************************************/
+
+  /************************
+   * Get faculty Info
+   ************************/
+
+   public getFacultyInfo() {
+    let apiAddressFaculty = "api/facultyinfo/" + sessionStorage.getItem("facultyId");
+    this.subscriptions.push(this.repository.getData(apiAddressFaculty).pipe(
+      map(facultyInfo => {
+       this.facultyInfo = facultyInfo as FacultyInfo;
+       this.isLoaded = true;
+       console.log(this.facultyInfo);
+       this.getDepartmentById(sessionStorage.getItem("facultyId"));
+       this.getSectionsById(sessionStorage.getItem("facultyId"));
+
+     })
+   ).subscribe()),
+     // get Enrollments error
+     // tslint:disable-next-line: no-unused-expression
+     (error) => {
+       this.errorHandler.handleError(error);
+       this.errorMessage = "Unable to access API";
+     };
+ }
+
+ public getDepartmentById(id) {
+  let apiAddressDepartments = "api/department/" + id;
+        this.subscriptions.push(this.repository.getData(apiAddressDepartments).pipe(
+          map(department => {
+
+            // Get the depatment
+            this.department = department as Department;
+            this.isLoaded = true;
+      
+          })
+          ).subscribe()),
+   
+     // tslint:disable-next-line: no-unused-expression
+     (error) => {
+       this.errorHandler.handleError(error);
+       this.errorMessage = "Unable to access API";
+     };
+ }
+
+ public getSectionsById(id) {
+  let apiAddressSections = "api/section/faculty/" + id;
+        this.subscriptions.push(this.repository.getData(apiAddressSections).pipe(
+          map(sectionsFromDb => {
+
+            // Get the depatment
+            this.sectionsById = sectionsFromDb as Section[];
+            this.isLoaded = true;
+      
+          })
+          ).subscribe()),
+   
+     // tslint:disable-next-line: no-unused-expression
+     (error) => {
+       this.errorHandler.handleError(error);
+       this.errorMessage = "Unable to access API";
+     };
+ }
 
   /*************************************************
    * STUDENT INFORMATION BEINGS HERE
