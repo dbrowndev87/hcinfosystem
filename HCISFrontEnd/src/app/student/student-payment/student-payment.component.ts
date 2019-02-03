@@ -16,6 +16,7 @@ import { StudentInfo } from 'src/app/_interfaces/studentInfo.model';
 import { Transaction } from 'src/app/_interfaces/transaction.model';
 import { TransactionIdGenerator } from 'src/app/shared/tools/tidg';
 import { Subscription } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 
 @Component({
@@ -30,6 +31,7 @@ export class StudentPaymentComponent implements OnInit, OnDestroy {
   public studentInfo: StudentInfo;
   public student: Student;
   public studentPaymentForm: FormGroup;
+  private transactions: Transaction[] = [];
   private transId: number;
   private isLoaded = false;
 
@@ -52,6 +54,7 @@ export class StudentPaymentComponent implements OnInit, OnDestroy {
     // This is gets the students information and student
     // table object.
     this.getStudent();
+
   }
 
   // Destroy subscriptions when done.
@@ -86,6 +89,31 @@ export class StudentPaymentComponent implements OnInit, OnDestroy {
         }));
   }
 
+  private getTransactions() {
+    /************************************
+         * Get Transactions
+         ***********************************/
+    let apiAddressTransactions = "api/transaction";
+    this.subscriptions.push(this.repository.getData(apiAddressTransactions).pipe(
+      map(transactions => {
+        // Get the transactions
+        let tempTrans = transactions as Transaction[];
+        // get students transactions by id
+        for (let x = 0; x < tempTrans.length; x++) {
+          if (tempTrans[x].student_Id === this.studentInfo.student_Id) {
+            this.transactions.push(tempTrans[x]);
+          }
+        }
+        this.isLoaded = true;
+      })).subscribe()),
+      // get student info error
+      // tslint:disable-next-line: no-unused-expression
+      (error) => {
+        this.errorHandler.handleError(error);
+        this.errorMessage = this.errorHandler.errorMessage;
+      };
+  }
+
   /**
      * This method gets student information pack and puts then into the
      * for display in view.
@@ -99,8 +127,8 @@ export class StudentPaymentComponent implements OnInit, OnDestroy {
       .subscribe(res => {
 
         this.studentInfo = res as StudentInfo;
+        this.getTransactions();
         // set laoded to true
-        this.isLoaded = true;
       })),
       // tslint:disable-next-line: no-unused-expression
       (error) => {

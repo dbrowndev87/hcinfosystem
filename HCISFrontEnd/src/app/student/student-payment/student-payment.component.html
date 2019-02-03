@@ -10,21 +10,57 @@
     </div>
   </div>
 
-  <div *ngIf="isLoaded" class="form-horizontal well col-sm-8 col-md-6 col-lg-4 centerDiv well">
-    <h2>{{studentInfo.first_Name}} {{studentInfo.last_Name}}</h2>
-    <h5>Student ID: {{studentInfo.student_Id}}</h5>
-    <h5>Student Status: {{studentInfo.student_Status}}</h5>
-    <h5>Amount Owing:
-      <span *ngIf="studentInfo.amount_Owing > 0">{{student.amount_Owing | currency}}</span>
+  <div *ngIf="isLoaded" class="form-horizontal well col-sm-6 col-md-6 col-lg-6 centerDiv well">
+    <h2 class="text-center">{{studentInfo.first_Name}} {{studentInfo.last_Name}}</h2>
+    <hr>
+    <h5 class="text-center">Student ID: {{studentInfo.student_Id}}</h5>
+    <hr>
+    <h5 class="text-center bold">Amount Owing:</h5>
+    <p class="text-center">
+      <span class="amountText" *ngIf="studentInfo.amount_Owing > 0">{{student.amount_Owing | currency}}</span>
       <span *ngIf="student.amount_Owing === 0">Payed In Full</span>
-    </h5>
+    </p>
   </div>
 
-  <br>
+  <div *ngIf="isLoaded" class="form-horizontal well col-sm-6 col-md-6 col-lg-6 centerDiv well">
+    <!-- Transaction information -->
+    <div class="row">
+      <h5 class="text-center bold">Transaction History:</h5>
+      <div id="transDiv" class="col-md-12 centerDiv">
+
+        <!-- If transactions -->
+        <table *ngIf="transactions.length > 0" class="table">
+          <thead>
+            <tr>
+              <th>Trans ID</th>
+              <th>Amount</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let transaction of transactions">
+              <td>{{transaction.trans_Id}}</td>
+              <td>{{transaction.trans_Amount | currency}}</td>
+              <td>{{transaction.trans_Date | date:'yyyy-MM-dd'}}</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- No Transactions -->
+        <div *ngIf="transactions.length === 0">
+          <br>
+          <div class="col-md-10 centerDiv well">
+            <h5 class="text-center">No Transaction History</h5>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
 
   <form *ngIf="isLoaded && studentInfo.amount_Owing > 0" [formGroup]="studentPaymentForm" autocomplete="off" novalidate
     (ngSubmit)="makePayment(studentPaymentForm.value)">
-    <div class="form-horizontal well col-sm-8 col-md-6 col-lg-4 centerDiv">
+    <div class="form-horizontal well col-sm-6 col-md-6 col-lg-6 centerDiv">
 
       <div class="form-group">
         <div class="row">

@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, HostListener } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { SectionInfo } from 'src/app/_interfaces/sectionInfo.model';
 import { Router } from '@angular/router';
@@ -29,7 +29,7 @@ export class StudentRegisterComponent implements OnInit, OnDestroy {
   // The select table side
   private sectionsSelect: SectionInfo[] = [];
   // The register table side
-  private sectionsRegister = [];
+  private sectionsRegister = [] = [];
 
   private studentRegisterForm: FormGroup;
   private errorHeader = "";
@@ -38,6 +38,9 @@ export class StudentRegisterComponent implements OnInit, OnDestroy {
   private enrollmentCount: number = 0;
   private semesters = new Semesters();
   private nextSemester: string;
+  private rotateButtons: boolean;
+
+  public innerWidth: any;
 
 
   // Array for all the subscriptions
@@ -51,6 +54,9 @@ export class StudentRegisterComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit() {
+    this.innerWidth = window.innerWidth;
+    this.rotateButt();
+
     this.getRegisterInfo();
     // Declare next Semester
     this.nextSemester = this.semesters.getNextSemester().nextSemester;
@@ -61,6 +67,21 @@ export class StudentRegisterComponent implements OnInit, OnDestroy {
     for (let subscription of this.subscriptions) {
       subscription.unsubscribe();
     }
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.innerWidth = window.innerWidth;
+    this.rotateButt();
+  }
+
+  private rotateButt() {
+    if (this.innerWidth < 990) {
+      this.rotateButtons = true;
+    } else if (this.innerWidth > 990) {
+      this.rotateButtons = false;
+    }
+    // console.log(this.rotateButtons);
   }
 
   /**

@@ -54,7 +54,7 @@
           <h3 class="text-center">Courses</h3>
           <!-- Course List -->
           <div class="row">
-            <div id="courseDiv" class="col-md-12">
+            <div id="fCourseDiv" class="col-md-12 centerDiv">
 
               <!-- If Enrolled in courses -->
               <ng-template [ngIf]="sectionsById.length > 0" [ngIfElse]="noSections">
@@ -116,11 +116,11 @@
             <div id="courseDiv" class="col-md-12">
 
               <!-- If Enrolled in courses -->
-              <ng-template [ngIf]="students.length > 0" [ngIfElse]="noEnrollments">
+              <ng-template [ngIf]="enrollments.length > 0" [ngIfElse]="noEnrollments">
                 <br>
                 <div class="row">
                   <div class="col-md-10 well centerDiv">
-                    <p class="text-center"><span class="bold">Current Students:</span> {{students.length}}</p>
+                    <p class="text-center"><span class="bold">Current Students:</span> {{enrollments.length}}</p>
                   </div>
                 </div>
                 <div class="row">
@@ -129,24 +129,21 @@
                       <thead>
                         <tr>
                           <th>Student ID</th>
-                          <th>First Name</th> 
+                          <th>First Name</th>
                           <th>Last Name</th>
-                          <th>E-mail</th>
                           <th>Course Status</th>
-                          <th>GPA</th>
-                          <th>Options</th>
+                          <th>Grade</th>
+                          <th>Update</th>
                         </tr>
                       </thead>
                       <tbody>
-                        <tr *ngFor="let student of students">
+                        <tr *ngFor="let student of enrollments; let current of students">
                           <td>{{student.student_Id}}</td>
-                          <td>{{student.first_Name}}</td>
-                          <td>{{student.last_Name}}</td>
-                          <td>{{student.eMail}}</td>
-                          <td>{{student.student_Status}}</td>
-                          <td>{{student.gpa}}</td>
-                          <td><button type="button" id="updateGrade" class="btn btnHc">
-                            <a [routerLink]="[ '/faculty/grades:student.student_Id']">Update Grade</a></button></td>
+                          <td>{{current.first_Name}}</td>
+                          <td>{{current.last_Name}}</td>
+                          <td>{{student.course_Status}}</td>
+                          <td>{{student.grade}}</td>
+                          <td><button type="button" id="updateGrade" class="btn btnHc">Update</button></td>
                         </tr>
                       </tbody>
                     </table>
@@ -243,7 +240,7 @@
           <!-- Transaction information -->
           <div class="row">
             <h5 class="text-center bold">Transaction History:</h5>
-            <div id="transDiv" class="col-md-12">
+            <div id="transDiv" class="col-md-12 centerDiv">
 
               <!-- If transactions -->
               <table *ngIf="transactions.length > 0" class="table">
@@ -281,7 +278,7 @@
           <h3 class="text-center">Course Enrollment Information</h3>
           <!-- Enrollment List -->
           <div class="row">
-            <div id="courseDiv" class="col-md-12">
+            <div id="courseDiv" class="col-md-12 centerDiv">
 
               <!-- If Enrolled in courses -->
               <ng-template [ngIf]="enrollments.length > 0" [ngIfElse]="noEnrollments">

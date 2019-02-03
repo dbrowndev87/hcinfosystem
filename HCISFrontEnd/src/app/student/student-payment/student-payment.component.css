@@ -1,0 +1,44 @@
+
+/* Scrollable Information Divs */
+#transDiv{
+    overflow-y: scroll;
+    width: 97%;
+    background-color: white;
+    height: 165px;
+    border: 1px black solid;
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px black;
+}
+
+.amountText{
+    font-size: 24px;
+    color:red;
+    text-shadow: 1px 1px 1px black;
+    -webkit-text-stroke: .4px black;
+
+}
+
+table{
+    margin-top: 3px;
+    border: 1px black solid;
+}
+
+tr>th:first-child{
+    border-left: 1px black solid !important;
+}
+tr>th:last-child{
+    border-right: 1px black solid !important;
+}
+
+th{
+    background: whitesmoke;
+    border-right: none none !important;
+    color: black;
+    border-top: 1px black solid !important;
+    border-bottom: 1px black solid !important;
+    text-shadow: none;
+}
+
+td{
+    border-bottom: 1px black solid;
+}

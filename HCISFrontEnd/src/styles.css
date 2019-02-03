@@ -1,6 +1,10 @@
 /* Google Fonts Import */
 @import url('https://fonts.googleapis.com/css?family=Bitter');
 
+a{
+    color: whitesmoke !important;
+}
+
 body{
     /* background: url(./assets/back.jpg) no-repeat center center fixed; */
      /* background: url(./assets/back3.jpg) no-repeat center center fixed; */
@@ -23,24 +27,32 @@ input{
 }
 
 a:link{
-    color: black !important;
+    color: whitesmoke !important;
 }
 
 a:visited{
-    color: black !important;
+    color:whitesmoke !important;
 }
 
 a:hover{
-    color: black !important;
+    color: whitesmoke !important;
     text-decoration: none;
 }
 
 a:active{
-    color: black !important;
+    color: whitesmoke !important;
 }
 
 .btnHc{
-    box-shadow: 1px 1px 1px black;
+    /* margin-left: 2px; */
+    /* Black Button */
+    background: url('./assets/blackButton.jpg') !important;
+    background-size: cover !important;
+    color: whitesmoke !important;
+}
+
+.btnHcSilver{
+    margin-left: 2px;
     background: url('./assets/topbar.jpg') !important;
     background-size: cover !important;
     color: black !important;
@@ -54,6 +66,10 @@ em{
     text-shadow: 1px 1px 5px red;
     -webkit-text-stroke-width: .4px !important;
     -webkit-text-stroke-color: black !important;
+}
+
+hr{
+    border: .5px silver solid;
 }
 
 .headerPaddingLeft{
@@ -89,7 +105,7 @@ em{
 }
 
 .well {
-    box-shadow: 1px 1px 1px black;
+    box-shadow: 0px 0px 5px black;
     border: 1px black solid;
     border-radius: 10px;
 }
@@ -111,6 +127,90 @@ em{
 
 .modal-content{
     background-color: whitesmoke;
+}
+
+
+
+table{
+    margin-top: 3px;
+    border: 1px black solid;
+}
+
+
+th{
+    background: whitesmoke;
+    color: black;
+    border-bottom: 1px black solid !important;
+    text-shadow: none;
+}
+
+th>.sorting{
+    color:black;
+}
+
+select{
+    border: 1px silver solid;
+    box-shadow: 1px 1px 1px silver !important;
+}
+
+input{
+    border: 1px silver solid;
+    box-shadow: 1px 1px 1px silver !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    
+    /* Silver Buttons
+     background: url('./assets/topbar.jpg') !important;
+    background-size: cover !important;
+    color: black !important; */
+
+    border-radius: 5px;
+    background: url('./assets/blackButton.jpg') !important;
+    background-size: cover !important;
+    color: whitesmoke !important;
+ 
+    background-color: white;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: inline-block;
+    min-width: 1.5em;
+    padding: 0.5em 1em;
+    margin-left: 2px;
+    text-align: center;
+    text-decoration: none !important;
+    cursor: pointer;
+    *cursor: hand;
+
+
+    /* Black Buttons */
+    background: url('./assets/blackButton.jpg') !important;
+    background-size: cover !important;
+    color: whitesmoke !important;
+
+/*  silver Buttons
+    background: url('./assets/topbar.jpg') !important;
+    background-size: cover !important;
+    color: black !important; */
+
+    
+    background-color: white;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active {
+    /* Black Buttons */
+    background-size: cover !important;
+    color: whitesmoke !important;
+
+    /* Silver Buttons
+    background: url('./assets/topbar.jpg') !important;
+    background-size: cover !important;
+    color: black !important; */
+
+    border-radius: 5px;
 }
 
 

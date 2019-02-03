@@ -37,10 +37,10 @@ export class HomeComponent implements OnInit, OnDestroy {
   private sectionsById: Section[] = [];
   private transactions: Transaction[] = [];
   private sections: SectionInfo[] = [];
-  private students: StudentInfo[] = [];
+  private students: StudentInfo[];
   private faculty: FacultyInfo[] = [];
   private department: Department;
-
+  public buttonClicked = false;
 
   // Array for all the subscriptions
   private subscriptions: Subscription[] = [];
@@ -79,7 +79,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       map(studentInfo => {
         this.students = studentInfo as StudentInfo[];
         console.log(this.students);
-        this.isLoaded = true;
+
       })
     ).subscribe()),
       // get Roster error
@@ -109,10 +109,11 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.subscriptions.push(this.repository.getData(apiAddressFaculty).pipe(
       map(facultyInfo => {
         this.facultyInfo = facultyInfo as FacultyInfo;
-        this.isLoaded = true;
-       
-        this.getDepartmentById(sessionStorage.getItem("facultyId"));
+
+
+        this.getDepartmentById(this.facultyInfo.dept_Id);
         this.getSectionsById(sessionStorage.getItem("facultyId"));
+
 
       })
     ).subscribe()),
@@ -133,6 +134,7 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.department = department as Department;
         this.isLoaded = true;
 
+
       })
     ).subscribe()),
 
@@ -150,7 +152,6 @@ export class HomeComponent implements OnInit, OnDestroy {
 
         // Get the depatment
         this.sectionsById = sectionsFromDb as Section[];
-        this.isLoaded = true;
 
       })
     ).subscribe()),
@@ -161,6 +162,8 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.errorMessage = "Unable to access API";
       };
   }
+
+
 
 
 

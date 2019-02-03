@@ -1,8 +1,8 @@
 #selectCourse{
     overflow-y: scroll;
-    width: 45%;
+    width: 100%;
     background-color: white;
-    height: 270px;
+    height: 345px;
     border: 1px black solid;
     border-radius: 2px;
     box-shadow: 1px 1px 1px black;
@@ -10,17 +10,69 @@
 
 #selectedCourse{
     overflow-y: scroll;
-    width: 45%;
+    width: 100%;
     background-color: white;
-    height: 270px;
+    height: 345px;
     border: 1px black solid;
     border-radius: 2px;
     box-shadow: 1px 1px 1px black;
 }
 
-td{
-    border-bottom: 2px #cccccc solid;
-}
 .sRegWell{
     height: 175px;
 }
+
+
+/* Table Styles start Here */
+
+.selectButton {
+    background-color: whitesmoke !important;
+    border-left: 1px black solid;
+    border-right: 1px black solid;
+}
+
+.selectedButton {
+    background-color: whitesmoke !important;
+    border-left: 1px black solid;
+    border-right: 1px black solid;
+}
+
+.selectedLast{
+    border-right: 1px black solid;
+}
+
+.selectFirst{
+    border-left: 1px black solid;
+}
+
+td{
+    border-bottom: 1px black solid;
+}
+
+
+table{
+    margin-top: 3px;
+    border: 1px black solid;
+}
+
+tr>th:first-child{
+    border-left: 1px black solid !important;
+}
+tr>th:last-child{
+    border-right: 1px black solid !important;
+}
+
+th{
+    background: whitesmoke;
+    border-right: none none !important;
+    color: black;
+    border-top: 1px black solid !important;
+    border-bottom: 1px black solid !important;
+    text-shadow: none;
+}
+
+td{
+    border-bottom: 1px black solid;
+} 
+
+
