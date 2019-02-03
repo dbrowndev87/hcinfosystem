@@ -1,4 +1,4 @@
-<div id="errorModal" class="modal fade" role="dialog">
+<div id="confirmModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -9,7 +9,8 @@
         <p>{{modalBodyText}}</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btnHc" data-dismiss="modal">{{okButtonText}}</button>
+        <button type="button" class="btn btnHc float-left" data-dismiss="modal" (click)="okButtonClick()">{{okButtonText}}</button>
+        <button type="button" class="btn btnHc float-right" data-dismiss="modal">{{cancelButtonText}}</button>
       </div>
     </div>
   </div>

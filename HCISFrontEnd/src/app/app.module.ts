@@ -36,7 +36,6 @@ import { SectionModule } from './section/section.module';
 import { SectionRoutingModule } from './section/section.routing';
 import { DepartmentModule } from './department/department.module';
 import { DepartmentRoutingModule } from './department/department.routing';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
 import { ReportsModule } from './reports/reports.module';
 import { ReportsRoutingModule } from './reports/reports.routing';
@@ -54,6 +53,7 @@ import { ReportsRoutingModule } from './reports/reports.routing';
     CommonModule,
     BrowserModule,
     HttpClientModule,
+    SharedModule,
     // Modules Start Here
     UserModule,
     UserRoutingModule,
@@ -78,8 +78,7 @@ import { ReportsRoutingModule } from './reports/reports.routing';
     ReportsRoutingModule,
     // These Must Go Last.
     RouterModule,
-    AppRoutingModule,
-    NoopAnimationsModule
+    AppRoutingModule
   ],
   providers: [
     EnvironmentUrlService,

@@ -43,6 +43,7 @@ a:active{
     box-shadow: 1px 1px 1px black;
     background: url('./assets/topbar.jpg') !important;
     background-size: cover !important;
+    color: black !important;
 }
 
 .ui-widget-header {

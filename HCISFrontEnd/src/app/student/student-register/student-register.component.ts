@@ -29,6 +29,7 @@ export class StudentRegisterComponent implements OnInit, OnDestroy {
   private sectionsRegister = [];
 
   private studentRegisterForm: FormGroup;
+  private errorHeader = "";
   private errorMessage = "";
   private isLoaded = false;
 
@@ -94,7 +95,7 @@ export class StudentRegisterComponent implements OnInit, OnDestroy {
 
     // Already registered for 8
     if (this.enrolledSections.length === 8) {
-
+      this.errorHeader = "Maximum Courses";
       this.errorMessage = "You have already registered for the Maximum amount of courses.";
       $('#errorModal').modal();
 
@@ -124,15 +125,22 @@ export class StudentRegisterComponent implements OnInit, OnDestroy {
 
       } else {
         // Duplicate error
+        this.errorHeader = "Duplicate Courses";
         this.errorMessage = "Duplicate courses chosen!\n you may only take a course once in a given time period.";
         $('#errorModal').modal();
       }
     } else {
       // Quantity error
+      this.errorHeader = "Invalid Quantity";
       this.errorMessage = "Register to a minimum of 4 and a maximum of 8.";
       $('#errorModal').modal();
     }
   }
+
+
+
+  // TODO: ADD REMOVAL OF VACANCY'S ON REGISTER
+  // TODO: IMPLEMENT SEMESTER
 
   /**
    * This is the register method which does all the actions involved

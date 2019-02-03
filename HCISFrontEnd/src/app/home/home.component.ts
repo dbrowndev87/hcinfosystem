@@ -12,6 +12,7 @@ import { SectionInfo } from '../_interfaces/sectionInfo.model';
 import { Course } from '../_interfaces/course.model';
 import { Subscription } from 'rxjs';
 import { FacultyInfo } from '../_interfaces/facultyInfo.model';
+import { SectionCreateComponent } from '../section/section-create/section-create.component';
 
 @Component({
   selector: 'app-home',
@@ -25,11 +26,14 @@ export class HomeComponent implements OnInit, OnDestroy {
   private previousUrl;
   private isLoaded = false;
   private errorMessage = "";
+  private successHeader;
+  private successMessage;
 
   // Student Related Variables
   private studentInfo: StudentInfo;
   private facultyInfo: FacultyInfo;
   private enrollments: Enrollment[] = [];
+  private sectionToDrop: SectionInfo;
   private sectionsById: Section[] = [];
   private transactions: Transaction[] = [];
   private sections: SectionInfo[] = [];
@@ -179,9 +183,97 @@ export class HomeComponent implements OnInit, OnDestroy {
       };
   }
 
+
+
+
   /*************************************************
    * STUDENT INFORMATION BEINGS HERE
    ************************************************/
+
+  // This triggers the confirmation dialog
+  private studentConfirm(section: SectionInfo) {
+    this.sectionToDrop = section;
+    $('#confirmModal').modal();
+  }
+
+  // if they pick yes on the dialog
+  private studentDropCourse(sectionToDrop: SectionInfo) {
+
+    let apiAddressEnrollments = "api/enrollment/section/" + sectionToDrop.section_Id;
+    this.subscriptions.push(this.repository.getData(apiAddressEnrollments).pipe(
+      map(studentEnrollments => {
+
+        let tempEnrollments = studentEnrollments as Enrollment[];
+        let enrollmentToDrop: Enrollment;
+
+        // get the enrollment object
+        tempEnrollments.forEach(temp => {
+          if (temp.student_Id === this.studentInfo.student_Id) {
+            enrollmentToDrop = temp;
+          }
+        });
+
+        // set the enrollment to dropped
+        enrollmentToDrop.course_Status = "Dropped";
+
+        // Update the enrollment to dropped
+        let apiUrlEnrollment = `api/enrollment/` + enrollmentToDrop.enrollment_Id;
+        this.subscriptions.push(this.repository.update(apiUrlEnrollment, enrollmentToDrop)
+          .subscribe(res => { },
+            (error => {
+              this.errorHandler.handleError(error);
+              this.errorMessage = "Unable to access API";
+            })
+          ));
+
+        // Update the display array
+        let index = 0;
+        this.sections.forEach(temp => {
+          if (temp.section_Id === enrollmentToDrop.section_Id) {
+            this.sections.splice(index, 1);
+          }
+          index++;
+        });
+
+        // Update the enrollment to dropped
+        let apiUrlSection = `api/section/` + this.sectionToDrop.section_Id;
+
+        // set the section object and add the vacancy back
+        let tempSection: Section = {
+          course_Id: sectionToDrop.course_Id,
+          designation: sectionToDrop.designation,
+          end_Date: sectionToDrop.end_Date,
+          faculty_Id: sectionToDrop.faculty_Id,
+          section_Id: sectionToDrop.section_Id,
+          semester: sectionToDrop.semester,
+          start_Date: sectionToDrop.start_Date,
+          vacancy: (sectionToDrop.vacancy + 1)
+        };
+
+        // Update the section object
+        this.subscriptions.push(this.repository.update(apiUrlSection, tempSection)
+          .subscribe(res => { },
+            (error => {
+              this.errorHandler.handleError(error);
+              this.errorMessage = "Unable to access API";
+            })
+          ));
+
+        // Success message and modal.
+        this.successHeader = "Drop Course";
+        this.successMessage = "Course dropped Successfuly";
+        $('#successModal').modal();
+      })
+    ).subscribe()),
+
+      // tslint:disable-next-line: no-unused-expression
+      (error) => {
+        this.errorHandler.handleError(error);
+        this.errorMessage = "Unable to access API";
+      };
+
+  }
+
 
   /************************
    * Get student Info
@@ -233,7 +325,9 @@ export class HomeComponent implements OnInit, OnDestroy {
                     // get Enrollments by Student ID
                     for (let x = 0; x < tempEnroll.length; x++) {
                       if (tempEnroll[x].student_Id === this.studentInfo.student_Id) {
-                        this.enrollments.push(tempEnroll[x]);
+                        if (tempEnroll[x].course_Status !== "Dropped") {
+                          this.enrollments.push(tempEnroll[x]);
+                        }
                       }
                     }
                     // console.log(this.enrollments);
@@ -250,9 +344,9 @@ export class HomeComponent implements OnInit, OnDestroy {
 
                         // loop trough the enrollments compare them to the sections
                         // to get the students sections.
-                        for (let x = 0; x < tempEnroll.length; x++) {
+                        for (let x = 0; x < this.enrollments.length; x++) {
                           for (let y = 0; y < tempSections.length; y++) {
-                            if (tempEnroll[x].section_Id === tempSections[y].section_Id) {
+                            if (this.enrollments[x].section_Id === tempSections[y].section_Id) {
                               studentSections.push(tempSections[y]);
                             }
                           }
@@ -292,7 +386,7 @@ export class HomeComponent implements OnInit, OnDestroy {
                             }
 
                             this.isLoaded = true;
-                            console.log(this.sections);
+                            // console.log(this.sections);
 
                           })
                         ).subscribe()),

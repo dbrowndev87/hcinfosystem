@@ -295,16 +295,23 @@
                         <tr>
                           <th>Course ID</th>
                           <th>Course Name</th>
+                          <th>Designation</th>
                           <th>Start Date</th>
                           <th>End Date</th>
+                          <th>Drop Course</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr *ngFor="let section of sections">
                           <td>{{section.course_Id}}</td>
                           <td>{{section.course_Name}}</td>
+                          <td>{{section.designation}}</td>
                           <td>{{section.start_Date | date:'yyyy-MM-dd'}}</td>
                           <td>{{section.end_Date | date:'yyyy-MM-dd'}}</td>
+                          <td>
+                            <button class="btn btnHc" (click)="studentConfirm(section)">Drop Course
+                            </button>
+                          </td>
                         </tr>
                       </tbody>
                     </table>
@@ -336,4 +343,14 @@
     <!-- End of Student Home. -->
 
   </div>
+  <!-- Student Drop Course Confirm. -->
+  <app-confirm-modal *ngIf="typeCode === 3" [modalHeaderText]="'Confirmation'" [modalBodyText]="'Are you sure??'"
+    [okButtonText]="'Yes'" [cancelButtonText]="'No'" (confirmOk)="studentDropCourse(sectionToDrop)">
+  </app-confirm-modal>
+
+  <!-- success model -->
+  <app-success-modal [modalHeaderText]="successHeader" [modalBodyText]="successMessage" [okButtonText]="'OK'"></app-success-modal>
+
+  <app-error-modal [modalHeaderText]="'Error message'" [modalBodyText]="errorMessage" [okButtonText]="'OK'"></app-error-modal>
+
 </div>

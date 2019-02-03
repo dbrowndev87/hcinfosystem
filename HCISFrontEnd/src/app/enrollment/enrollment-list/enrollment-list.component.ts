@@ -49,6 +49,7 @@ export class EnrollmentListComponent implements OnInit, OnDestroy {
     };
 
     this.getAllenrollments();
+
     // Set the data is loaded flag.
     this.isLoaded = true;
   }
@@ -93,21 +94,22 @@ export class EnrollmentListComponent implements OnInit, OnDestroy {
                 if (this.enrollments[x].student_Id === Id) {
 
                   let tempEnrollment: EnrollmentInfo = {
-                    student_Id: this.enrollments[x].student_Id,
+                    student_Id: this.enrollments[y].student_Id,
                     first_Name: this.studentInfo[x].first_Name,
                     last_Name: this.studentInfo[x].last_Name,
-                    course_Status: this.enrollments[x].course_Status,
-                    grade: this.enrollments[x].grade,
-                    section_Id: this.enrollments[x].section_Id,
-                    enrollment_Id: this.enrollments[x].enrollment_Id
+                    course_Status: this.enrollments[y].course_Status,
+                    grade: this.enrollments[y].grade,
+                    section_Id: this.enrollments[y].section_Id,
+                    enrollment_Id: this.enrollments[y].enrollment_Id
                   };
 
                   // Push the Enrollment Info item to the array
                   this.enrollmentInfo.push(tempEnrollment);
-                  this.dtTrigger.next();
                 }
               }
             }
+            // Update the Data Table
+            this.dtTrigger.next();
           })
         ).subscribe(e => { },
           (error) => {
