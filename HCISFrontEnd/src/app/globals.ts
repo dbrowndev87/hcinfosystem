@@ -2,6 +2,8 @@ import { NgZone, Injectable } from '@angular/core';
 
 @Injectable()
 export class Globals {
+
+
     constructor(
         private zone: NgZone) {
     }
@@ -12,4 +14,6 @@ export class Globals {
             location.reload();
         });
     }
+
+
 }

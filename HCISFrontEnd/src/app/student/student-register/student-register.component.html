@@ -12,12 +12,13 @@
 
   <div *ngIf="isLoaded" class="well col-sm-10 col-md-10 col-lg-10 centerDiv well">
     <h4 class="text-center">Student Enrollment</h4>
+    <h5 class="text-center">For the {{nextSemester}} semester</h5>
 
   </div>
 
   <!-- Custom Course Picker -->
   <div *ngIf="isLoaded" class="well col-sm-10 col-md-10 col-lg-10 centerDiv">
-    <h6 class="text-center">Current Registered for {{enrolledSections.length}} courses.</h6>
+    <h6 class="text-center">Current Registered for {{enrollmentCount}} courses.</h6>
     <h6 class="text-center">You must apply for minimum 4 and max 8 courses a semester</h6>
     <div class="row">
       <div id="selectCourse" class="col-md-6 float-left">
@@ -28,6 +29,7 @@
               <th>Course ID</th>
               <th>Course Name</th>
               <th>Designation</th>
+              <th>Semester</th>
               <th>Register</th>
             </tr>
           </thead>
@@ -36,6 +38,7 @@
               <td>{{section.course_Id}}</td>
               <td>{{section.course_Name}}</td>
               <td>{{section.designation}}</td>
+              <td>{{section.semester}}</td>
               <td><button class="btn btnHc" (click)="addToRegister(i)"><i class="fas fa-arrow-right"></i></button></td>
             </tr>
           </tbody>

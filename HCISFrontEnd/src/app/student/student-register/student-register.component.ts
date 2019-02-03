@@ -7,6 +7,9 @@ import { ErrorHandlerService } from 'src/app/shared/services/error-handler.servi
 import { StudentInfo } from 'src/app/_interfaces/studentInfo.model';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Enrollment } from 'src/app/_interfaces/enrollment.model';
+import { Section } from 'src/app/_interfaces/section.model';
+import { map } from 'rxjs/operators';
+import { Semesters } from 'src/app/shared/tools/semesters';
 
 
 
@@ -32,6 +35,10 @@ export class StudentRegisterComponent implements OnInit, OnDestroy {
   private errorHeader = "";
   private errorMessage = "";
   private isLoaded = false;
+  private enrollmentCount: number = 0;
+  private semesters = new Semesters();
+  private nextSemester: string;
+
 
   // Array for all the subscriptions
   private subscriptions: Subscription[] = [];
@@ -45,7 +52,8 @@ export class StudentRegisterComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.getRegisterInfo();
-    console.log(this.enrolledSections);
+    // Declare next Semester
+    this.nextSemester = this.semesters.getNextSemester().nextSemester;
   }
 
   // Destroy subscriptions when done.
@@ -139,7 +147,7 @@ export class StudentRegisterComponent implements OnInit, OnDestroy {
 
 
 
-  // TODO: ADD REMOVAL OF VACANCY'S ON REGISTER
+
   // TODO: IMPLEMENT SEMESTER
 
   /**
@@ -180,6 +188,29 @@ export class StudentRegisterComponent implements OnInit, OnDestroy {
         ));
 
 
+      // Update the enrollment to dropped
+      let apiUrlSection = `api/section/` + sectioninfo.section_Id;
+
+      // set the section object and add the vacancy back
+      let tempSection: Section = {
+        course_Id: sectioninfo.course_Id,
+        designation: sectioninfo.designation,
+        end_Date: sectioninfo.end_Date,
+        faculty_Id: sectioninfo.faculty_Id,
+        section_Id: sectioninfo.section_Id,
+        semester: sectioninfo.semester,
+        start_Date: sectioninfo.start_Date,
+        vacancy: (sectioninfo.vacancy - 1)
+      };
+
+      // Update the section object
+      this.subscriptions.push(this.repository.update(apiUrlSection, tempSection)
+        .subscribe(res => { },
+          (error => {
+            this.errorHandler.handleError(error);
+            this.errorMessage = "Unable to access API";
+          })
+        ));
     });
   }
 
@@ -231,6 +262,38 @@ export class StudentRegisterComponent implements OnInit, OnDestroy {
       .subscribe(sectioninfo => {
         this.enrolledSections = sectioninfo as SectionInfo[];
 
+        // Make an index for the forEach;
+        let index = 0;
+        this.enrolledSections.forEach(enrollment => {
+
+          // This loop filters out all the dropped courses a student may have.
+          let apiAddressEnrollments = "api/enrollment/section/" + enrollment.section_Id;
+          this.subscriptions.push(this.repository.getData(apiAddressEnrollments).pipe(
+            map(studentEnrollments => {
+
+              let tempEnrollments = studentEnrollments as Enrollment[];
+
+              // get the enrollment object
+              tempEnrollments.forEach(temp => {
+                if (temp.section_Id === enrollment.section_Id &&
+                  temp.course_Status !== "Dropped") {
+                  this.enrollmentCount++;
+                }
+              });
+
+              // Increate the Index
+              index++;
+
+            })).subscribe()),
+            // tslint:disable-next-line: no-unused-expression
+            (error) => {
+              this.errorHandler.handleError(error);
+              this.errorMessage = "Unable to access API";
+            };
+
+        });
+
+        // Continue with the process
         this.getAllSectionsInfo(this.enrolledSections);
 
       })),
@@ -249,16 +312,19 @@ export class StudentRegisterComponent implements OnInit, OnDestroy {
     ***********************************/
     let apiAddressSectionsInfo = "api/section/courseinfo/";
     this.subscriptions.push(this.repository.getData(apiAddressSectionsInfo)
-      .subscribe(sectionsinfo => {
+      .subscribe((sectionsinfo: SectionInfo[]) => {
 
         this.sections = sectionsinfo as SectionInfo[];
-        this.sectionsSelect = sectionsinfo as SectionInfo[];
+
+        // Grab the courses for the next semester.
+        sectionsinfo.forEach(sections => {
+          if (sections.semester === this.nextSemester) {
+            this.sectionsSelect.push(sections);
+          }
+        });
+
         // console.log(tempSections);
-
-
-        this.isLoaded = true;
-
-
+        // Remove all your currently enrolled courses
         this.getCourses(this.sectionsSelect, studentSections);
       },
         // get Sections error
@@ -269,9 +335,16 @@ export class StudentRegisterComponent implements OnInit, OnDestroy {
         }));
   }
 
-
+  /**
+   * This method filters out the courses that the student already has from
+   * the rest of the list.
+   * 
+   * @author: Darcy Brown
+   * @since Febuary 2nd, 2019
+   * @param tempSections 
+   * @param studentSections 
+   */
   private getCourses(tempSections: SectionInfo[], studentSections: SectionInfo[]) {
-
     studentSections.forEach(sectionInfo => {
       for (let x = 0; x < tempSections.length; x++) {
         if (sectionInfo.section_Id === tempSections[x].section_Id) {
@@ -280,6 +353,8 @@ export class StudentRegisterComponent implements OnInit, OnDestroy {
       }
     });
     this.sections = this.sectionsSelect;
-  }
 
+    // set fully loaded
+    this.isLoaded = true;
+  }
 }
