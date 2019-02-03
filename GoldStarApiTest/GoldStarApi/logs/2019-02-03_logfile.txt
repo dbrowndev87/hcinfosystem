@@ -1,0 +1,811 @@
+2019-02-03 07:02:39.3700 INFO Returned user with username: dbrown32066
+2019-02-03 07:02:39.6396 INFO Returned User with id: 1
+2019-02-03 07:02:45.0700 INFO Returned all users from database. System.Linq.OrderedEnumerable`2[Entities.Models.User,System.String]
+2019-02-03 07:02:45.0866 INFO Returned all userlogins from database. 13
+2019-02-03 07:02:47.2374 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-03 07:02:47.2797 INFO Enrolled
+2019-02-03 07:02:47.2861 INFO Entities.Models.StudentInfo
+2019-02-03 07:02:47.2861 INFO Enrolled
+2019-02-03 07:02:47.2904 INFO Entities.Models.StudentInfo
+2019-02-03 07:02:47.2909 INFO Enrolled
+2019-02-03 07:02:47.2922 INFO Entities.Models.StudentInfo
+2019-02-03 07:02:47.2928 INFO Enrolled
+2019-02-03 07:02:47.2943 INFO Entities.Models.StudentInfo
+2019-02-03 07:02:47.2948 INFO Enrolled
+2019-02-03 07:02:47.2962 INFO Entities.Models.StudentInfo
+2019-02-03 07:02:47.2968 INFO Enrolled
+2019-02-03 07:02:47.2987 INFO Entities.Models.StudentInfo
+2019-02-03 07:02:47.2996 INFO Drop Out
+2019-02-03 07:02:47.3010 INFO Entities.Models.StudentInfo
+2019-02-03 07:02:47.3019 INFO Enrolled
+2019-02-03 07:02:47.3048 INFO Entities.Models.StudentInfo
+2019-02-03 07:02:47.3082 INFO Returned all students from database. 8
+2019-02-03 07:03:01.1879 INFO Returned all sections from database. 3
+2019-02-03 07:03:10.6037 INFO Returned all courses from database. 10
+2019-02-03 07:03:10.6054 INFO Entities.Models.FacultyInfo
+2019-02-03 07:03:10.6081 INFO Returned all faculty from database. 1
+2019-02-03 07:03:47.7372 INFO Returned all sections from database. 4
+2019-02-03 07:03:57.9562 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-03 07:03:57.9593 INFO Enrolled
+2019-02-03 07:03:57.9634 INFO Entities.Models.StudentInfo
+2019-02-03 07:03:57.9634 INFO Enrolled
+2019-02-03 07:03:57.9657 INFO Entities.Models.StudentInfo
+2019-02-03 07:03:57.9663 INFO Enrolled
+2019-02-03 07:03:57.9682 INFO Entities.Models.StudentInfo
+2019-02-03 07:03:57.9682 INFO Enrolled
+2019-02-03 07:03:57.9700 INFO Entities.Models.StudentInfo
+2019-02-03 07:03:57.9705 INFO Enrolled
+2019-02-03 07:03:57.9719 INFO Entities.Models.StudentInfo
+2019-02-03 07:03:57.9723 INFO Enrolled
+2019-02-03 07:03:57.9736 INFO Entities.Models.StudentInfo
+2019-02-03 07:03:57.9741 INFO Drop Out
+2019-02-03 07:03:57.9757 INFO Entities.Models.StudentInfo
+2019-02-03 07:03:57.9769 INFO Enrolled
+2019-02-03 07:03:57.9788 INFO Entities.Models.StudentInfo
+2019-02-03 07:03:57.9802 INFO Returned all students from database. 8
+2019-02-03 07:04:01.5805 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-03 07:04:01.5962 INFO Returned Student with id: 190181
+2019-02-03 07:04:23.6658 INFO Returned user with username: teststudent
+2019-02-03 07:04:23.6759 INFO Returned User with id: 2
+2019-02-03 07:04:23.6880 INFO Returned Student with id: 2
+2019-02-03 07:04:25.3989 INFO Returned Student with id: 193820
+2019-02-03 07:04:25.4454 INFO Returned Department with id: 2
+2019-02-03 07:04:25.4795 INFO Returned all transactions from database. System.Linq.OrderedEnumerable`2[Entities.Models.Transaction,System.Int32]
+2019-02-03 07:04:25.5442 INFO Returned all Enrollments from database. 6
+2019-02-03 07:04:25.5565 INFO Returned all sections from database. 4
+2019-02-03 07:04:25.5641 INFO Returned all courses from database. 10
+2019-02-03 07:04:35.7599 INFO Returned Student with id: 193820
+2019-02-03 07:04:35.8015 INFO Look Enrollment with id: 193820
+2019-02-03 07:04:35.8234 INFO Returned Enrollment with id: 193820
+2019-02-03 07:04:35.8395 INFO Returned Enrollment with id: 1
+2019-02-03 07:04:35.8582 INFO Returned All Section Course Information
+2019-02-03 07:04:57.7130 INFO Returned Student with id: 193820
+2019-02-03 07:04:57.7221 INFO Returned Student with id: 193820
+2019-02-03 07:04:58.5746 INFO Returned Student with id: 193820
+2019-02-03 07:04:58.5897 INFO Returned Department with id: 2
+2019-02-03 07:04:58.5952 INFO Returned all transactions from database. System.Linq.OrderedEnumerable`2[Entities.Models.Transaction,System.Int32]
+2019-02-03 07:04:58.6074 INFO Returned all Enrollments from database. 6
+2019-02-03 07:04:58.6174 INFO Returned all sections from database. 4
+2019-02-03 07:04:58.6247 INFO Returned all courses from database. 10
+2019-02-03 07:11:48.8642 INFO Returned user with username: testfaculty
+2019-02-03 07:11:48.8777 INFO Returned User with id: 3
+2019-02-03 07:11:48.8933 INFO Returned Faculty with id: 3
+2019-02-03 07:11:50.5831 INFO Returned Faculty with id: 1
+2019-02-03 07:11:50.6200 INFO Returned Department with id: 1
+2019-02-03 07:11:50.6261 INFO Returned Section with id: 1
+2019-02-03 07:11:58.1211 INFO Returned Enrollment with id: 2
+2019-02-03 07:12:00.0998 INFO Returned Enrollment with id: 3
+2019-02-03 07:12:08.8337 INFO Returned Enrollment with id: 4
+2019-02-03 07:12:10.3622 INFO Returned Enrollment with id: 1
+2019-02-03 07:12:10.3794 INFO Returned Student with id: 190181
+2019-02-03 07:12:10.3855 INFO Returned Student with id: 190370
+2019-02-03 07:12:10.3855 INFO Returned Student with id: 193402
+2019-02-03 07:12:10.3881 INFO Returned Student with id: 198309
+2019-02-03 07:12:10.3929 INFO Returned Student with id: 193081
+2019-02-03 07:12:10.3943 INFO Returned Student with id: 193820
+2019-02-03 07:14:51.9532 INFO Returned Faculty with id: 1
+2019-02-03 07:14:51.9891 INFO Returned Department with id: 1
+2019-02-03 07:14:51.9927 INFO Returned Section with id: 1
+2019-02-03 07:14:53.7022 INFO Returned Enrollment with id: 1
+2019-02-03 07:14:53.7209 INFO Returned Student with id: 190181
+2019-02-03 07:14:53.7209 INFO Returned Student with id: 198309
+2019-02-03 07:14:53.7209 INFO Returned Student with id: 190370
+2019-02-03 07:14:53.7209 INFO Returned Student with id: 193081
+2019-02-03 07:14:53.7299 INFO Returned Student with id: 193402
+2019-02-03 07:14:53.7348 INFO Returned Student with id: 193820
+2019-02-03 07:15:57.3424 INFO Returned Faculty with id: 1
+2019-02-03 07:15:57.3920 INFO Returned Department with id: 1
+2019-02-03 07:15:57.3966 INFO Returned Section with id: 1
+2019-02-03 07:15:59.1492 INFO Returned Enrollment with id: 1
+2019-02-03 07:15:59.1630 INFO Returned Student with id: 190181
+2019-02-03 07:15:59.1630 INFO Returned Student with id: 190370
+2019-02-03 07:15:59.1633 INFO Returned Student with id: 193081
+2019-02-03 07:15:59.1688 INFO Returned Student with id: 193820
+2019-02-03 07:15:59.1688 INFO Returned Student with id: 193402
+2019-02-03 07:15:59.1694 INFO Returned Student with id: 198309
+2019-02-03 07:18:54.4594 INFO Returned Faculty with id: 1
+2019-02-03 07:18:54.4951 INFO Returned Department with id: 1
+2019-02-03 07:18:54.4984 INFO Returned Section with id: 1
+2019-02-03 07:19:01.3228 INFO Returned Enrollment with id: 1
+2019-02-03 07:19:01.3405 INFO Returned Student with id: 190181
+2019-02-03 07:19:01.3422 INFO Returned Student with id: 190370
+2019-02-03 07:19:01.3445 INFO Returned Student with id: 198309
+2019-02-03 07:19:01.3473 INFO Returned Student with id: 193820
+2019-02-03 07:19:01.3484 INFO Returned Student with id: 193081
+2019-02-03 07:19:01.3514 INFO Returned Student with id: 193402
+2019-02-03 07:19:05.3618 INFO Returned Enrollment with id: 2
+2019-02-03 07:19:06.3455 INFO Returned Enrollment with id: 1
+2019-02-03 07:19:06.3623 INFO Returned Student with id: 190181
+2019-02-03 07:19:06.3636 INFO Returned Student with id: 190370
+2019-02-03 07:19:06.3646 INFO Returned Student with id: 193081
+2019-02-03 07:19:06.3654 INFO Returned Student with id: 193402
+2019-02-03 07:19:06.3654 INFO Returned Student with id: 193820
+2019-02-03 07:19:06.3762 INFO Returned Student with id: 198309
+2019-02-03 07:25:54.0158 INFO Returned Faculty with id: 1
+2019-02-03 07:25:54.1341 INFO Returned Section with id: 1
+2019-02-03 07:25:54.1352 INFO Returned Department with id: 1
+2019-02-03 07:26:04.6872 INFO Returned Enrollment with id: 1
+2019-02-03 07:26:04.7160 INFO Returned Student with id: 193081
+2019-02-03 07:26:04.7160 INFO Returned Student with id: 190370
+2019-02-03 07:26:04.7241 INFO Returned Student with id: 193402
+2019-02-03 07:26:04.7241 INFO Returned Student with id: 190181
+2019-02-03 07:26:04.7281 INFO Returned Student with id: 198309
+2019-02-03 07:26:04.7293 INFO Returned Student with id: 193820
+2019-02-03 07:26:12.2633 INFO Returned Enrollment with id: 1
+2019-02-03 07:26:12.2842 INFO Returned Student with id: 190181
+2019-02-03 07:26:12.2842 INFO Returned Student with id: 190370
+2019-02-03 07:26:12.2872 INFO Returned Student with id: 193081
+2019-02-03 07:26:12.2872 INFO Returned Student with id: 193402
+2019-02-03 07:26:12.2872 INFO Returned Student with id: 193820
+2019-02-03 07:26:12.3032 INFO Returned Student with id: 198309
+2019-02-03 07:49:41.1907 INFO Returned Faculty with id: 1
+2019-02-03 07:49:41.4135 INFO Returned Section with id: 1
+2019-02-03 07:49:41.4293 INFO Returned Department with id: 1
+2019-02-03 07:51:07.2196 INFO Returned Section with id: 0
+2019-02-03 07:51:32.9848 INFO Returned Section with id: 0
+2019-02-03 07:51:36.9422 INFO Returned Section with id: 0
+2019-02-03 07:51:42.0406 INFO Returned all students from database. 8
+2019-02-03 07:51:55.3300 INFO Returned Student with id: 3
+2019-02-03 07:55:19.7747 INFO Returned Faculty with id: 1
+2019-02-03 07:55:19.8231 INFO Returned Section with id: 1
+2019-02-03 07:55:19.8241 INFO Returned Department with id: 1
+2019-02-03 07:55:36.4685 INFO Returned Faculty with id: 1
+2019-02-03 07:55:36.5031 INFO Returned Section with id: 1
+2019-02-03 07:55:36.5042 INFO Returned Department with id: 1
+2019-02-03 07:56:37.0489 INFO Returned Faculty with id: 1
+2019-02-03 07:56:37.1355 INFO Returned Department with id: 1
+2019-02-03 07:56:37.1388 INFO Returned Section with id: 1
+2019-02-03 07:57:56.6652 INFO Returned Faculty with id: 1
+2019-02-03 07:57:56.7188 INFO Returned Department with id: 1
+2019-02-03 07:57:56.7212 INFO Returned Section with id: 1
+2019-02-03 07:58:51.9979 INFO Returned Faculty with id: 1
+2019-02-03 07:58:52.0307 INFO Returned Section with id: 1
+2019-02-03 07:58:52.0343 INFO Returned Department with id: 1
+2019-02-03 07:59:42.6776 INFO Returned Faculty with id: 1
+2019-02-03 07:59:42.7322 INFO Returned Department with id: 1
+2019-02-03 07:59:42.7345 INFO Returned Section with id: 1
+2019-02-03 08:00:17.9639 INFO Returned Faculty with id: 1
+2019-02-03 08:00:18.0044 INFO Returned Department with id: 1
+2019-02-03 08:00:18.0124 INFO Returned Section with id: 1
+2019-02-03 08:00:29.4179 INFO Returned Faculty with id: 1
+2019-02-03 08:00:29.4599 INFO Returned Department with id: 1
+2019-02-03 08:00:29.4599 INFO Returned Section with id: 1
+2019-02-03 08:01:33.7819 INFO Returned Faculty with id: 1
+2019-02-03 08:01:33.8273 INFO Returned Department with id: 1
+2019-02-03 08:01:33.8273 INFO Returned Section with id: 1
+2019-02-03 08:02:29.8135 INFO Returned Faculty with id: 1
+2019-02-03 08:02:29.8692 INFO Returned Department with id: 1
+2019-02-03 08:02:29.8703 INFO Returned Section with id: 1
+2019-02-03 08:04:22.2108 INFO Returned Faculty with id: 1
+2019-02-03 08:04:22.3260 INFO Returned Department with id: 1
+2019-02-03 08:04:22.3276 INFO Returned Section with id: 1
+2019-02-03 08:05:03.6926 INFO Returned Faculty with id: 1
+2019-02-03 08:05:03.7265 INFO Returned Section with id: 1
+2019-02-03 08:05:03.7280 INFO Returned Department with id: 1
+2019-02-03 08:05:26.4448 INFO Returned Faculty with id: 1
+2019-02-03 08:05:26.4742 INFO Returned Department with id: 1
+2019-02-03 08:05:26.4750 INFO Returned Section with id: 1
+2019-02-03 08:07:30.7186 INFO Returned Faculty with id: 1
+2019-02-03 08:07:30.7712 INFO Returned Department with id: 1
+2019-02-03 08:07:30.7739 INFO Returned Section with id: 1
+2019-02-03 08:10:58.7579 INFO Returned user with username: teststudent
+2019-02-03 08:10:58.7758 INFO Returned User with id: 2
+2019-02-03 08:10:58.7913 INFO Returned Student with id: 2
+2019-02-03 08:11:00.6931 INFO Returned Student with id: 193820
+2019-02-03 08:11:00.7328 INFO Returned Department with id: 2
+2019-02-03 08:11:00.7564 INFO Returned all transactions from database. System.Linq.OrderedEnumerable`2[Entities.Models.Transaction,System.Int32]
+2019-02-03 08:11:00.8192 INFO Returned all Enrollments from database. 6
+2019-02-03 08:11:00.8363 INFO Returned all sections from database. 4
+2019-02-03 08:11:00.8656 INFO Returned all courses from database. 10
+2019-02-03 08:11:19.7308 INFO Returned Student with id: 193820
+2019-02-03 08:11:19.7457 INFO Returned Student with id: 193820
+2019-02-03 08:12:59.9224 INFO Returned Student with id: 193820
+2019-02-03 08:12:59.9783 INFO Returned Student with id: 193820
+2019-02-03 08:13:00.1733 INFO Returned Faculty with id: 1
+2019-02-03 08:13:00.2067 INFO Returned Section with id: 1
+2019-02-03 08:13:00.2080 INFO Returned Department with id: 1
+2019-02-03 08:20:30.8478 INFO Returned Student with id: 193820
+2019-02-03 08:20:31.0157 INFO Returned Student with id: 193820
+2019-02-03 08:20:32.0537 INFO Returned Faculty with id: 1
+2019-02-03 08:20:32.1021 INFO Returned Department with id: 1
+2019-02-03 08:20:32.1089 INFO Returned Section with id: 1
+2019-02-03 08:22:57.6254 INFO Returned Faculty with id: 1
+2019-02-03 08:22:57.6904 INFO Returned Department with id: 1
+2019-02-03 08:22:57.6940 INFO Returned Section with id: 1
+2019-02-03 08:22:58.1246 INFO Returned Student with id: 193820
+2019-02-03 08:22:58.1671 INFO Returned Student with id: 193820
+2019-02-03 08:23:45.2680 INFO Returned Student with id: 193820
+2019-02-03 08:23:45.3820 INFO Returned Student with id: 193820
+2019-02-03 08:23:46.3956 INFO Returned Faculty with id: 1
+2019-02-03 08:23:46.4248 INFO Returned Section with id: 1
+2019-02-03 08:23:46.4274 INFO Returned Department with id: 1
+2019-02-03 08:23:48.6507 INFO Returned Faculty with id: 1
+2019-02-03 08:23:48.6644 INFO Returned Department with id: 1
+2019-02-03 08:23:48.6667 INFO Returned Section with id: 1
+2019-02-03 08:24:05.4690 INFO Returned Faculty with id: 1
+2019-02-03 08:24:05.6297 INFO Returned Department with id: 1
+2019-02-03 08:24:05.6297 INFO Returned Section with id: 1
+2019-02-03 08:24:06.0553 INFO Returned Student with id: 193820
+2019-02-03 08:24:06.0936 INFO Returned Student with id: 193820
+2019-02-03 08:24:11.9366 INFO Returned Faculty with id: 1
+2019-02-03 08:24:11.9586 INFO Returned Department with id: 1
+2019-02-03 08:24:11.9597 INFO Returned Section with id: 1
+2019-02-03 08:24:30.6031 INFO Returned Faculty with id: 1
+2019-02-03 08:24:30.6455 INFO Returned Department with id: 1
+2019-02-03 08:24:30.6486 INFO Returned Section with id: 1
+2019-02-03 08:24:30.8824 INFO Returned Student with id: 193820
+2019-02-03 08:24:30.9409 INFO Returned Student with id: 193820
+2019-02-03 08:24:52.6700 INFO Returned Student with id: 193820
+2019-02-03 08:24:52.7370 INFO Returned Student with id: 193820
+2019-02-03 08:24:52.8864 INFO Returned Faculty with id: 1
+2019-02-03 08:24:52.9352 INFO Returned Department with id: 1
+2019-02-03 08:24:52.9352 INFO Returned Section with id: 1
+2019-02-03 08:25:07.8965 INFO Returned Faculty with id: 1
+2019-02-03 08:25:08.0342 INFO Returned Department with id: 1
+2019-02-03 08:25:08.0373 INFO Returned Section with id: 1
+2019-02-03 08:25:08.9080 INFO Returned Student with id: 193820
+2019-02-03 08:25:08.9611 INFO Returned Student with id: 193820
+2019-02-03 08:25:33.9694 INFO Returned Student with id: 193820
+2019-02-03 08:25:34.0338 INFO Returned Student with id: 193820
+2019-02-03 08:25:34.5908 INFO Returned Faculty with id: 1
+2019-02-03 08:25:34.6169 INFO Returned Department with id: 1
+2019-02-03 08:25:34.6169 INFO Returned Section with id: 1
+2019-02-03 08:26:06.7031 INFO Returned Student with id: 193820
+2019-02-03 08:26:06.7487 INFO Returned Student with id: 193820
+2019-02-03 08:26:51.9218 INFO Returned Student with id: 193820
+2019-02-03 08:26:51.9546 INFO Returned Student with id: 193820
+2019-02-03 08:27:31.6762 INFO Returned Student with id: 193820
+2019-02-03 08:27:31.7573 INFO Returned Student with id: 193820
+2019-02-03 08:27:32.7434 INFO Returned Faculty with id: 1
+2019-02-03 08:27:32.7718 INFO Returned Department with id: 1
+2019-02-03 08:27:32.7718 INFO Returned Section with id: 1
+2019-02-03 08:27:36.9863 INFO Returned Faculty with id: 1
+2019-02-03 08:27:37.0014 INFO Returned Department with id: 1
+2019-02-03 08:27:37.0014 INFO Returned Section with id: 1
+2019-02-03 08:27:41.8712 INFO Returned Faculty with id: 1
+2019-02-03 08:27:41.8835 INFO Returned Department with id: 1
+2019-02-03 08:27:41.8858 INFO Returned Section with id: 1
+2019-02-03 08:27:44.5029 INFO Returned Faculty with id: 1
+2019-02-03 08:27:44.5169 INFO Returned Department with id: 1
+2019-02-03 08:27:44.5170 INFO Returned Section with id: 1
+2019-02-03 08:28:28.1533 INFO Returned Student with id: 193820
+2019-02-03 08:28:28.1967 INFO Returned Student with id: 193820
+2019-02-03 08:28:28.5783 INFO Returned Faculty with id: 1
+2019-02-03 08:28:28.6043 INFO Returned Department with id: 1
+2019-02-03 08:28:28.6043 INFO Returned Section with id: 1
+2019-02-03 08:28:30.4364 INFO Returned Faculty with id: 1
+2019-02-03 08:28:30.4535 INFO Returned Department with id: 1
+2019-02-03 08:28:30.4535 INFO Returned Section with id: 1
+2019-02-03 08:29:05.8996 INFO Returned Student with id: 193820
+2019-02-03 08:29:06.0028 INFO Returned Student with id: 193820
+2019-02-03 08:29:14.3384 INFO Returned Student with id: 193820
+2019-02-03 08:29:14.3736 INFO Returned Student with id: 193820
+2019-02-03 08:29:18.4192 INFO Returned Faculty with id: 1
+2019-02-03 08:29:18.4560 INFO Returned Department with id: 1
+2019-02-03 08:29:18.4560 INFO Returned Section with id: 1
+2019-02-03 08:29:21.0255 INFO Returned Faculty with id: 1
+2019-02-03 08:29:21.0393 INFO Returned Department with id: 1
+2019-02-03 08:29:21.0393 INFO Returned Section with id: 1
+2019-02-03 08:29:22.0144 INFO Returned Faculty with id: 1
+2019-02-03 08:29:22.0301 INFO Returned Department with id: 1
+2019-02-03 08:29:22.0301 INFO Returned Section with id: 1
+2019-02-03 08:29:22.8268 INFO Returned Faculty with id: 1
+2019-02-03 08:29:22.8380 INFO Returned Department with id: 1
+2019-02-03 08:29:22.8380 INFO Returned Section with id: 1
+2019-02-03 08:29:27.4862 INFO Returned user with username: dbrown32066
+2019-02-03 08:29:27.5010 INFO Returned User with id: 1
+2019-02-03 08:29:31.6950 INFO Returned all courses from database. 10
+2019-02-03 08:29:32.9064 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-03 08:29:32.9221 INFO Entities.Models.FacultyInfo
+2019-02-03 08:29:32.9235 INFO Returned all faculty from database. 1
+2019-02-03 08:29:34.6395 INFO Returned all Enrollments from database. 6
+2019-02-03 08:29:34.6724 INFO Enrolled
+2019-02-03 08:29:34.6740 INFO Entities.Models.StudentInfo
+2019-02-03 08:29:34.6745 INFO Enrolled
+2019-02-03 08:29:34.6758 INFO Entities.Models.StudentInfo
+2019-02-03 08:29:34.6758 INFO Enrolled
+2019-02-03 08:29:34.6777 INFO Entities.Models.StudentInfo
+2019-02-03 08:29:34.6777 INFO Enrolled
+2019-02-03 08:29:34.6796 INFO Entities.Models.StudentInfo
+2019-02-03 08:29:34.6796 INFO Enrolled
+2019-02-03 08:29:34.6817 INFO Entities.Models.StudentInfo
+2019-02-03 08:29:34.6817 INFO Enrolled
+2019-02-03 08:29:34.6835 INFO Entities.Models.StudentInfo
+2019-02-03 08:29:34.6835 INFO Drop Out
+2019-02-03 08:29:34.6852 INFO Entities.Models.StudentInfo
+2019-02-03 08:29:34.6856 INFO Enrolled
+2019-02-03 08:29:34.6869 INFO Entities.Models.StudentInfo
+2019-02-03 08:29:34.6881 INFO Returned all students from database. 8
+2019-02-03 08:29:44.4957 INFO Returned user with username: testfaculty
+2019-02-03 08:29:44.5140 INFO Returned User with id: 3
+2019-02-03 08:29:44.5272 INFO Returned Faculty with id: 3
+2019-02-03 08:29:47.0269 INFO Returned Faculty with id: 1
+2019-02-03 08:29:47.0676 INFO Returned Department with id: 1
+2019-02-03 08:29:47.0734 INFO Returned Section with id: 1
+2019-02-03 08:30:06.2040 INFO Returned Faculty with id: 1
+2019-02-03 08:30:06.2154 INFO Returned Department with id: 1
+2019-02-03 08:30:06.2178 INFO Returned Section with id: 1
+2019-02-03 08:30:54.2461 INFO Returned Faculty with id: 1
+2019-02-03 08:30:54.2907 INFO Returned Department with id: 1
+2019-02-03 08:30:54.2987 INFO Returned Section with id: 1
+2019-02-03 08:31:04.0336 INFO Returned Faculty with id: 1
+2019-02-03 08:31:04.1117 INFO Returned Department with id: 1
+2019-02-03 08:31:04.1224 INFO Returned Section with id: 1
+2019-02-03 08:31:04.6164 INFO Returned Student with id: 193820
+2019-02-03 08:31:04.6693 INFO Returned Student with id: 193820
+2019-02-03 08:31:56.8138 INFO Returned Faculty with id: 1
+2019-02-03 08:31:56.9003 INFO Returned Department with id: 1
+2019-02-03 08:31:56.9105 INFO Returned Section with id: 1
+2019-02-03 08:31:57.1111 INFO Returned Student with id: 193820
+2019-02-03 08:31:57.1609 INFO Returned Student with id: 193820
+2019-02-03 08:32:28.0729 INFO Returned Faculty with id: 1
+2019-02-03 08:32:28.1218 INFO Returned Department with id: 1
+2019-02-03 08:32:28.1245 INFO Returned Section with id: 1
+2019-02-03 08:32:28.5669 INFO Returned Student with id: 193820
+2019-02-03 08:32:28.6096 INFO Returned Student with id: 193820
+2019-02-03 08:36:02.7581 INFO Returned Faculty with id: 1
+2019-02-03 08:36:02.7692 INFO Returned Department with id: 1
+2019-02-03 08:36:02.7706 INFO Returned Section with id: 1
+2019-02-03 08:37:22.8975 INFO Returned Student with id: 193820
+2019-02-03 08:37:22.9617 INFO Returned Student with id: 193820
+2019-02-03 08:37:32.2909 INFO Returned user with username: dbrown32066
+2019-02-03 08:37:32.3024 INFO Returned User with id: 1
+2019-02-03 08:39:20.8039 INFO Returned Student with id: 193820
+2019-02-03 08:39:20.8381 INFO Returned Student with id: 193820
+2019-02-03 08:41:15.5663 INFO Returned Student with id: 193820
+2019-02-03 08:41:15.6046 INFO Returned Student with id: 193820
+2019-02-03 08:44:49.6691 INFO Returned Student with id: 193820
+2019-02-03 08:44:49.7087 INFO Returned Student with id: 193820
+2019-02-03 08:45:32.3691 INFO Returned Student with id: 193820
+2019-02-03 08:45:32.4312 INFO Returned Student with id: 193820
+2019-02-03 08:47:20.8856 INFO Returned Student with id: 193820
+2019-02-03 08:47:20.9203 INFO Returned Student with id: 193820
+2019-02-03 08:50:06.3694 INFO Returned Student with id: 0
+2019-02-03 08:50:06.7802 INFO Returned Student with id: 193820
+2019-02-03 08:50:06.8166 INFO Returned Student with id: 193820
+2019-02-03 08:50:37.8405 INFO Returned user with username: testfaculty
+2019-02-03 08:50:37.8544 INFO Returned User with id: 3
+2019-02-03 08:50:37.8644 INFO Returned Faculty with id: 3
+2019-02-03 08:50:40.2841 INFO Returned Faculty with id: 1
+2019-02-03 08:50:40.3302 INFO Returned Department with id: 1
+2019-02-03 08:50:40.3348 INFO Returned Section with id: 1
+2019-02-03 09:01:00.4949 INFO Returned Faculty with id: 1
+2019-02-03 09:01:00.5414 INFO Returned Department with id: 1
+2019-02-03 09:01:00.5443 INFO Returned Section with id: 1
+2019-02-03 09:02:59.0130 INFO Returned Faculty with id: 1
+2019-02-03 09:02:59.0416 INFO Returned Section with id: 1
+2019-02-03 09:02:59.0427 INFO Returned Department with id: 1
+2019-02-03 09:06:11.6675 INFO Returned Faculty with id: 1
+2019-02-03 09:06:11.7210 INFO Returned Department with id: 1
+2019-02-03 09:06:11.7210 INFO Returned Section with id: 1
+2019-02-03 09:06:11.7551 INFO Returned all students from database. 8
+2019-02-03 09:06:48.5276 INFO Returned Faculty with id: 1
+2019-02-03 09:06:48.5613 INFO Returned Department with id: 1
+2019-02-03 09:06:48.5613 INFO Returned Section with id: 1
+2019-02-03 09:06:48.6866 INFO Returned all students from database. 8
+2019-02-03 09:07:08.8036 INFO Returned Faculty with id: 1
+2019-02-03 09:07:08.9156 INFO Returned Department with id: 1
+2019-02-03 09:07:08.9156 INFO Returned Section with id: 1
+2019-02-03 09:07:08.9830 INFO Returned all students from database. 8
+2019-02-03 09:08:25.7623 INFO Returned all students from database. 8
+2019-02-03 09:08:26.0943 INFO Returned Faculty with id: 1
+2019-02-03 09:08:26.1210 INFO Returned Department with id: 1
+2019-02-03 09:08:26.1210 INFO Returned Section with id: 1
+2019-02-03 09:09:46.9030 INFO Returned Faculty with id: 1
+2019-02-03 09:09:46.9394 INFO Returned Department with id: 1
+2019-02-03 09:09:46.9424 INFO Returned Section with id: 1
+2019-02-03 09:09:47.1980 INFO Returned all students from database. 8
+2019-02-03 09:10:22.4299 INFO Returned Faculty with id: 1
+2019-02-03 09:10:22.4748 INFO Returned Department with id: 1
+2019-02-03 09:10:22.4748 INFO Returned Section with id: 1
+2019-02-03 09:10:22.7148 INFO Returned all students from database. 8
+2019-02-03 09:11:24.0905 INFO Returned Faculty with id: 1
+2019-02-03 09:11:24.1322 INFO Returned Department with id: 1
+2019-02-03 09:11:24.1358 INFO Returned Section with id: 1
+2019-02-03 09:11:24.5406 INFO Returned all students from database. 8
+2019-02-03 09:12:54.7001 INFO Returned Faculty with id: 1
+2019-02-03 09:12:54.8175 INFO Returned Department with id: 1
+2019-02-03 09:12:54.8175 INFO Returned Section with id: 1
+2019-02-03 09:12:55.6231 INFO Returned all students from database. 8
+2019-02-03 09:13:26.8908 INFO Returned all students from database. 8
+2019-02-03 09:28:46.4238 INFO Could not find enrollment: 190161
+2019-02-03 09:31:57.6069 INFO  Look HereEntities.Models.Enrollment
+2019-02-03 09:31:57.6563 INFO Enrollment with id: 190181, hasn't been found in db.Entities.Models.Enrollment
+2019-02-03 09:33:23.8762 INFO  Look HereEntities.Models.Enrollment
+2019-02-03 09:33:23.9312 INFO Found enrollment Entities.Models.Enrollment
+2019-02-03 09:37:27.3812 INFO Returned Faculty with id: 1
+2019-02-03 09:37:27.5040 INFO Returned Department with id: 1
+2019-02-03 09:37:27.5127 INFO Returned Section with id: 1
+2019-02-03 09:37:27.7464 INFO Returned all students from database. 8
+2019-02-03 09:38:53.2698 INFO Returned all students from database. 8
+2019-02-03 09:38:53.3578 INFO Returned Faculty with id: 1
+2019-02-03 09:38:53.4063 INFO Returned Department with id: 1
+2019-02-03 09:38:53.4076 INFO Returned Section with id: 1
+2019-02-03 09:40:41.6226 INFO Returned Faculty with id: 1
+2019-02-03 09:40:41.6790 INFO Returned Department with id: 1
+2019-02-03 09:40:41.6798 INFO Returned Section with id: 1
+2019-02-03 09:40:42.3448 INFO Returned all students from database. 8
+2019-02-03 09:41:15.5794 INFO Returned Faculty with id: 1
+2019-02-03 09:41:15.6219 INFO Returned Department with id: 1
+2019-02-03 09:41:15.6252 INFO Returned Section with id: 1
+2019-02-03 09:41:16.0108 INFO Returned all students from database. 8
+2019-02-03 09:41:29.7326 INFO Returned all students from database. 8
+2019-02-03 09:41:53.9671 INFO Returned all students from database. 8
+2019-02-03 09:42:46.8612 INFO Returned Faculty with id: 1
+2019-02-03 09:42:46.9166 INFO Returned Department with id: 1
+2019-02-03 09:42:46.9174 INFO Returned Section with id: 1
+2019-02-03 09:42:47.5391 INFO Returned all students from database. 8
+2019-02-03 09:43:29.0121 INFO Enrolled
+2019-02-03 09:43:29.0150 INFO Entities.Models.StudentInfo
+2019-02-03 09:43:29.0168 INFO Enrolled
+2019-02-03 09:43:29.0192 INFO Entities.Models.StudentInfo
+2019-02-03 09:43:29.0192 INFO Enrolled
+2019-02-03 09:43:29.0210 INFO Entities.Models.StudentInfo
+2019-02-03 09:43:29.0210 INFO Enrolled
+2019-02-03 09:43:29.0231 INFO Entities.Models.StudentInfo
+2019-02-03 09:43:29.0231 INFO Enrolled
+2019-02-03 09:43:29.0251 INFO Entities.Models.StudentInfo
+2019-02-03 09:43:29.0264 INFO Enrolled
+2019-02-03 09:43:29.0280 INFO Entities.Models.StudentInfo
+2019-02-03 09:43:29.0280 INFO Drop Out
+2019-02-03 09:43:29.0298 INFO Entities.Models.StudentInfo
+2019-02-03 09:43:29.0298 INFO Enrolled
+2019-02-03 09:43:29.0316 INFO Entities.Models.StudentInfo
+2019-02-03 09:43:29.0333 INFO Returned all students from database. 8
+2019-02-03 09:43:29.4733 INFO Returned Faculty with id: 1
+2019-02-03 09:43:29.5356 INFO Returned Section with id: 1
+2019-02-03 09:43:29.5359 INFO Returned Department with id: 1
+2019-02-03 09:46:55.3167 INFO Enrolled
+2019-02-03 09:46:55.3277 INFO Entities.Models.StudentInfo
+2019-02-03 09:46:55.3277 INFO Enrolled
+2019-02-03 09:46:55.3294 INFO Entities.Models.StudentInfo
+2019-02-03 09:46:55.3294 INFO Returned all sections from database. 4
+2019-02-03 09:46:55.3294 INFO Enrolled
+2019-02-03 09:46:55.3315 INFO Entities.Models.StudentInfo
+2019-02-03 09:46:55.3315 INFO Enrolled
+2019-02-03 09:46:55.3333 INFO Entities.Models.StudentInfo
+2019-02-03 09:46:55.3339 INFO Enrolled
+2019-02-03 09:46:55.3357 INFO Entities.Models.StudentInfo
+2019-02-03 09:46:55.3366 INFO Enrolled
+2019-02-03 09:46:55.3383 INFO Entities.Models.StudentInfo
+2019-02-03 09:46:55.3387 INFO Drop Out
+2019-02-03 09:46:55.3402 INFO Entities.Models.StudentInfo
+2019-02-03 09:46:55.3408 INFO Enrolled
+2019-02-03 09:46:55.3423 INFO Entities.Models.StudentInfo
+2019-02-03 09:46:55.3435 INFO Returned all students from database. 8
+2019-02-03 09:46:55.3976 INFO Returned Faculty with id: 1
+2019-02-03 09:46:55.4413 INFO Returned Department with id: 1
+2019-02-03 09:46:55.4441 INFO Returned Section with id: 1
+2019-02-03 09:48:19.6497 INFO Enrolled
+2019-02-03 09:48:19.6551 INFO Entities.Models.StudentInfo
+2019-02-03 09:48:19.6589 INFO Enrolled
+2019-02-03 09:48:19.6606 INFO Entities.Models.StudentInfo
+2019-02-03 09:48:19.6606 INFO Enrolled
+2019-02-03 09:48:19.6606 INFO Returned all sections from database. 4
+2019-02-03 09:48:19.7010 INFO Entities.Models.StudentInfo
+2019-02-03 09:48:19.7014 INFO Enrolled
+2019-02-03 09:48:19.7027 INFO Entities.Models.StudentInfo
+2019-02-03 09:48:19.7027 INFO Enrolled
+2019-02-03 09:48:19.7049 INFO Entities.Models.StudentInfo
+2019-02-03 09:48:19.7053 INFO Enrolled
+2019-02-03 09:48:19.7066 INFO Entities.Models.StudentInfo
+2019-02-03 09:48:19.7066 INFO Drop Out
+2019-02-03 09:48:19.7082 INFO Entities.Models.StudentInfo
+2019-02-03 09:48:19.7082 INFO Enrolled
+2019-02-03 09:48:19.7099 INFO Entities.Models.StudentInfo
+2019-02-03 09:48:19.7110 INFO Returned all students from database. 8
+2019-02-03 09:48:19.7504 INFO Returned Faculty with id: 1
+2019-02-03 09:48:19.7794 INFO Returned Department with id: 1
+2019-02-03 09:48:19.7828 INFO Returned Section with id: 1
+2019-02-03 09:48:57.0811 INFO Enrolled
+2019-02-03 09:48:57.0820 INFO Returned all sections from database. 4
+2019-02-03 09:48:57.0911 INFO Entities.Models.StudentInfo
+2019-02-03 09:48:57.0916 INFO Enrolled
+2019-02-03 09:48:57.0930 INFO Entities.Models.StudentInfo
+2019-02-03 09:48:57.0935 INFO Enrolled
+2019-02-03 09:48:57.0953 INFO Entities.Models.StudentInfo
+2019-02-03 09:48:57.0953 INFO Enrolled
+2019-02-03 09:48:57.0976 INFO Entities.Models.StudentInfo
+2019-02-03 09:48:57.0976 INFO Enrolled
+2019-02-03 09:48:57.0998 INFO Entities.Models.StudentInfo
+2019-02-03 09:48:57.1003 INFO Enrolled
+2019-02-03 09:48:57.1017 INFO Entities.Models.StudentInfo
+2019-02-03 09:48:57.1017 INFO Drop Out
+2019-02-03 09:48:57.1036 INFO Entities.Models.StudentInfo
+2019-02-03 09:48:57.1036 INFO Enrolled
+2019-02-03 09:48:57.1054 INFO Entities.Models.StudentInfo
+2019-02-03 09:48:57.1070 INFO Returned all students from database. 8
+2019-02-03 09:48:57.4125 INFO Returned Faculty with id: 1
+2019-02-03 09:48:57.4393 INFO Returned Section with id: 1
+2019-02-03 09:48:57.4393 INFO Returned Department with id: 1
+2019-02-03 09:52:07.9857 INFO Returned all sections from database. 4
+2019-02-03 09:52:07.9857 INFO Enrolled
+2019-02-03 09:52:08.3447 INFO Entities.Models.StudentInfo
+2019-02-03 09:52:08.4398 INFO Enrolled
+2019-02-03 09:52:08.5354 INFO Entities.Models.StudentInfo
+2019-02-03 09:52:08.6297 INFO Enrolled
+2019-02-03 09:52:08.7265 INFO Entities.Models.StudentInfo
+2019-02-03 09:52:08.8215 INFO Enrolled
+2019-02-03 09:52:08.9161 INFO Entities.Models.StudentInfo
+2019-02-03 09:52:09.0092 INFO Enrolled
+2019-02-03 09:52:09.1036 INFO Entities.Models.StudentInfo
+2019-02-03 09:52:09.1983 INFO Enrolled
+2019-02-03 09:52:09.1983 INFO Returned Faculty with id: 1
+2019-02-03 09:52:09.2580 INFO Entities.Models.StudentInfo
+2019-02-03 09:52:09.2593 INFO Drop Out
+2019-02-03 09:52:09.2608 INFO Entities.Models.StudentInfo
+2019-02-03 09:52:09.2624 INFO Enrolled
+2019-02-03 09:52:09.2638 INFO Entities.Models.StudentInfo
+2019-02-03 09:52:09.2650 INFO Returned all students from database. 8
+2019-02-03 09:52:09.2898 INFO Returned Department with id: 1
+2019-02-03 09:52:09.2918 INFO Returned Section with id: 1
+2019-02-03 09:53:22.5311 INFO Returned Faculty with id: 1
+2019-02-03 09:53:22.5751 INFO Returned Department with id: 1
+2019-02-03 09:53:22.5763 INFO Returned Section with id: 1
+2019-02-03 09:53:22.7042 INFO Returned all sections from database. 4
+2019-02-03 09:53:22.7042 INFO Enrolled
+2019-02-03 09:53:22.7058 INFO Entities.Models.StudentInfo
+2019-02-03 09:53:22.7058 INFO Enrolled
+2019-02-03 09:53:22.7075 INFO Entities.Models.StudentInfo
+2019-02-03 09:53:22.7075 INFO Enrolled
+2019-02-03 09:53:22.7097 INFO Entities.Models.StudentInfo
+2019-02-03 09:53:22.7097 INFO Enrolled
+2019-02-03 09:53:22.7112 INFO Entities.Models.StudentInfo
+2019-02-03 09:53:22.7117 INFO Enrolled
+2019-02-03 09:53:22.7129 INFO Entities.Models.StudentInfo
+2019-02-03 09:53:22.7134 INFO Enrolled
+2019-02-03 09:53:22.7146 INFO Entities.Models.StudentInfo
+2019-02-03 09:53:22.7146 INFO Drop Out
+2019-02-03 09:53:22.7163 INFO Entities.Models.StudentInfo
+2019-02-03 09:53:22.7164 INFO Enrolled
+2019-02-03 09:53:22.7181 INFO Entities.Models.StudentInfo
+2019-02-03 09:53:22.7192 INFO Returned all students from database. 8
+2019-02-03 09:53:40.3777 INFO Returned Faculty with id: 1
+2019-02-03 09:53:40.4945 INFO Returned Department with id: 1
+2019-02-03 09:53:40.4974 INFO Returned Section with id: 1
+2019-02-03 09:53:40.5888 INFO Returned all sections from database. 4
+2019-02-03 09:53:40.5889 INFO Enrolled
+2019-02-03 09:53:40.6697 INFO Entities.Models.StudentInfo
+2019-02-03 09:53:40.6701 INFO Enrolled
+2019-02-03 09:53:40.6715 INFO Entities.Models.StudentInfo
+2019-02-03 09:53:40.6721 INFO Enrolled
+2019-02-03 09:53:40.6733 INFO Entities.Models.StudentInfo
+2019-02-03 09:53:40.6733 INFO Enrolled
+2019-02-03 09:53:40.6750 INFO Entities.Models.StudentInfo
+2019-02-03 09:53:40.6750 INFO Enrolled
+2019-02-03 09:53:40.6771 INFO Entities.Models.StudentInfo
+2019-02-03 09:53:40.6771 INFO Enrolled
+2019-02-03 09:53:40.6791 INFO Entities.Models.StudentInfo
+2019-02-03 09:53:40.6791 INFO Drop Out
+2019-02-03 09:53:40.6810 INFO Entities.Models.StudentInfo
+2019-02-03 09:53:40.6810 INFO Enrolled
+2019-02-03 09:53:40.6826 INFO Entities.Models.StudentInfo
+2019-02-03 09:53:40.6837 INFO Returned all students from database. 8
+2019-02-03 09:55:31.0928 INFO Returned Faculty with id: 1
+2019-02-03 09:55:31.1614 INFO Enrolled
+2019-02-03 09:55:31.1626 INFO Returned Section with id: 1
+2019-02-03 09:55:31.1640 INFO Entities.Models.StudentInfo
+2019-02-03 09:55:31.1640 INFO Enrolled
+2019-02-03 09:55:31.1661 INFO Returned Department with id: 1
+2019-02-03 09:55:31.1675 INFO Returned all sections from database. 4
+2019-02-03 09:55:31.1684 INFO Entities.Models.StudentInfo
+2019-02-03 09:55:31.1705 INFO Enrolled
+2019-02-03 09:55:31.1768 INFO Entities.Models.StudentInfo
+2019-02-03 09:55:31.1774 INFO Enrolled
+2019-02-03 09:55:31.1791 INFO Entities.Models.StudentInfo
+2019-02-03 09:55:31.1791 INFO Enrolled
+2019-02-03 09:55:31.1813 INFO Entities.Models.StudentInfo
+2019-02-03 09:55:31.1821 INFO Enrolled
+2019-02-03 09:55:31.1834 INFO Entities.Models.StudentInfo
+2019-02-03 09:55:31.1834 INFO Drop Out
+2019-02-03 09:55:31.1851 INFO Entities.Models.StudentInfo
+2019-02-03 09:55:31.1851 INFO Enrolled
+2019-02-03 09:55:31.1938 INFO Entities.Models.StudentInfo
+2019-02-03 09:55:31.1956 INFO Returned all students from database. 8
+2019-02-03 09:56:12.5931 INFO Enrolled
+2019-02-03 09:56:12.5990 INFO Returned all sections from database. 4
+2019-02-03 09:56:12.6032 INFO Entities.Models.StudentInfo
+2019-02-03 09:56:12.6032 INFO Enrolled
+2019-02-03 09:56:12.6052 INFO Entities.Models.StudentInfo
+2019-02-03 09:56:12.6052 INFO Enrolled
+2019-02-03 09:56:12.6071 INFO Entities.Models.StudentInfo
+2019-02-03 09:56:12.6071 INFO Enrolled
+2019-02-03 09:56:12.6095 INFO Entities.Models.StudentInfo
+2019-02-03 09:56:12.6100 INFO Enrolled
+2019-02-03 09:56:12.6116 INFO Entities.Models.StudentInfo
+2019-02-03 09:56:12.6124 INFO Enrolled
+2019-02-03 09:56:12.6138 INFO Entities.Models.StudentInfo
+2019-02-03 09:56:12.6143 INFO Drop Out
+2019-02-03 09:56:12.6162 INFO Entities.Models.StudentInfo
+2019-02-03 09:56:12.6162 INFO Enrolled
+2019-02-03 09:56:12.6181 INFO Entities.Models.StudentInfo
+2019-02-03 09:56:12.6193 INFO Returned all students from database. 8
+2019-02-03 09:56:12.6879 INFO Returned Faculty with id: 1
+2019-02-03 09:56:12.7350 INFO Returned Department with id: 1
+2019-02-03 09:56:12.7350 INFO Returned Section with id: 1
+2019-02-03 10:00:12.3523 INFO Enrolled
+2019-02-03 10:00:12.3530 INFO Returned all sections from database. 4
+2019-02-03 10:00:12.3677 INFO Entities.Models.StudentInfo
+2019-02-03 10:00:12.3677 INFO Enrolled
+2019-02-03 10:00:12.3716 INFO Entities.Models.StudentInfo
+2019-02-03 10:00:12.3722 INFO Enrolled
+2019-02-03 10:00:12.3737 INFO Entities.Models.StudentInfo
+2019-02-03 10:00:12.3737 INFO Enrolled
+2019-02-03 10:00:12.3755 INFO Entities.Models.StudentInfo
+2019-02-03 10:00:12.3762 INFO Enrolled
+2019-02-03 10:00:12.3778 INFO Entities.Models.StudentInfo
+2019-02-03 10:00:12.3787 INFO Enrolled
+2019-02-03 10:00:12.3802 INFO Entities.Models.StudentInfo
+2019-02-03 10:00:12.3802 INFO Drop Out
+2019-02-03 10:00:12.3823 INFO Entities.Models.StudentInfo
+2019-02-03 10:00:12.3828 INFO Enrolled
+2019-02-03 10:00:12.3844 INFO Entities.Models.StudentInfo
+2019-02-03 10:00:12.3856 INFO Returned all students from database. 8
+2019-02-03 10:00:12.4033 INFO Returned Faculty with id: 1
+2019-02-03 10:00:12.4304 INFO Returned Department with id: 1
+2019-02-03 10:00:12.4304 INFO Returned Section with id: 1
+2019-02-03 10:01:04.8628 INFO Returned Faculty with id: 1
+2019-02-03 10:01:04.9056 INFO Returned Department with id: 1
+2019-02-03 10:01:04.9070 INFO Returned Section with id: 1
+2019-02-03 10:01:04.9294 INFO Enrolled
+2019-02-03 10:01:04.9329 INFO Entities.Models.StudentInfo
+2019-02-03 10:01:04.9334 INFO Enrolled
+2019-02-03 10:01:04.9344 INFO Returned all sections from database. 4
+2019-02-03 10:01:04.9398 INFO Entities.Models.StudentInfo
+2019-02-03 10:01:04.9409 INFO Enrolled
+2019-02-03 10:01:04.9422 INFO Entities.Models.StudentInfo
+2019-02-03 10:01:04.9426 INFO Enrolled
+2019-02-03 10:01:04.9441 INFO Entities.Models.StudentInfo
+2019-02-03 10:01:04.9489 INFO Enrolled
+2019-02-03 10:01:04.9504 INFO Entities.Models.StudentInfo
+2019-02-03 10:01:04.9504 INFO Enrolled
+2019-02-03 10:01:04.9524 INFO Entities.Models.StudentInfo
+2019-02-03 10:01:04.9524 INFO Drop Out
+2019-02-03 10:01:04.9542 INFO Entities.Models.StudentInfo
+2019-02-03 10:01:04.9547 INFO Enrolled
+2019-02-03 10:01:04.9567 INFO Entities.Models.StudentInfo
+2019-02-03 10:01:04.9580 INFO Returned all students from database. 8
+2019-02-03 10:01:15.5555 INFO Enrolled
+2019-02-03 10:01:15.5577 INFO Returned all sections from database. 4
+2019-02-03 10:01:15.5663 INFO Entities.Models.StudentInfo
+2019-02-03 10:01:15.5663 INFO Enrolled
+2019-02-03 10:01:15.5682 INFO Entities.Models.StudentInfo
+2019-02-03 10:01:15.5682 INFO Enrolled
+2019-02-03 10:01:15.5702 INFO Entities.Models.StudentInfo
+2019-02-03 10:01:15.5702 INFO Enrolled
+2019-02-03 10:01:15.5721 INFO Entities.Models.StudentInfo
+2019-02-03 10:01:15.5721 INFO Enrolled
+2019-02-03 10:01:15.5745 INFO Entities.Models.StudentInfo
+2019-02-03 10:01:15.5745 INFO Enrolled
+2019-02-03 10:01:15.5765 INFO Entities.Models.StudentInfo
+2019-02-03 10:01:15.5772 INFO Drop Out
+2019-02-03 10:01:15.5789 INFO Entities.Models.StudentInfo
+2019-02-03 10:01:15.5794 INFO Enrolled
+2019-02-03 10:01:15.5808 INFO Entities.Models.StudentInfo
+2019-02-03 10:01:15.5843 INFO Returned all students from database. 8
+2019-02-03 10:01:15.6364 INFO Returned Faculty with id: 1
+2019-02-03 10:01:15.6959 INFO Returned Department with id: 1
+2019-02-03 10:01:15.7009 INFO Returned Section with id: 1
+2019-02-03 10:02:48.0448 INFO Returned Faculty with id: 1
+2019-02-03 10:02:48.0998 INFO Returned Department with id: 1
+2019-02-03 10:02:48.1033 INFO Returned Section with id: 1
+2019-02-03 10:02:48.5707 INFO Enrolled
+2019-02-03 10:02:48.5724 INFO Entities.Models.StudentInfo
+2019-02-03 10:02:48.5729 INFO Enrolled
+2019-02-03 10:02:48.5744 INFO Entities.Models.StudentInfo
+2019-02-03 10:02:48.5749 INFO Enrolled
+2019-02-03 10:02:48.5763 INFO Entities.Models.StudentInfo
+2019-02-03 10:02:48.5767 INFO Enrolled
+2019-02-03 10:02:48.5782 INFO Entities.Models.StudentInfo
+2019-02-03 10:02:48.5797 INFO Returned all sections from database. 4
+2019-02-03 10:02:48.5797 INFO Enrolled
+2019-02-03 10:02:48.5815 INFO Entities.Models.StudentInfo
+2019-02-03 10:02:48.5821 INFO Enrolled
+2019-02-03 10:02:48.5837 INFO Entities.Models.StudentInfo
+2019-02-03 10:02:48.5837 INFO Drop Out
+2019-02-03 10:02:48.5856 INFO Entities.Models.StudentInfo
+2019-02-03 10:02:48.5857 INFO Enrolled
+2019-02-03 10:02:48.5881 INFO Entities.Models.StudentInfo
+2019-02-03 10:02:48.5893 INFO Returned all students from database. 8
+2019-02-03 10:02:59.6290 INFO Returned Faculty with id: 1
+2019-02-03 10:02:59.6726 INFO Returned Department with id: 1
+2019-02-03 10:02:59.6749 INFO Returned Section with id: 1
+2019-02-03 10:02:59.9480 INFO Enrolled
+2019-02-03 10:02:59.9496 INFO Entities.Models.StudentInfo
+2019-02-03 10:02:59.9496 INFO Enrolled
+2019-02-03 10:02:59.9516 INFO Entities.Models.StudentInfo
+2019-02-03 10:02:59.9516 INFO Enrolled
+2019-02-03 10:02:59.9531 INFO Returned all sections from database. 4
+2019-02-03 10:02:59.9538 INFO Entities.Models.StudentInfo
+2019-02-03 10:02:59.9538 INFO Enrolled
+2019-02-03 10:02:59.9555 INFO Entities.Models.StudentInfo
+2019-02-03 10:02:59.9555 INFO Enrolled
+2019-02-03 10:02:59.9575 INFO Entities.Models.StudentInfo
+2019-02-03 10:02:59.9575 INFO Enrolled
+2019-02-03 10:02:59.9594 INFO Entities.Models.StudentInfo
+2019-02-03 10:02:59.9594 INFO Drop Out
+2019-02-03 10:02:59.9612 INFO Entities.Models.StudentInfo
+2019-02-03 10:02:59.9617 INFO Enrolled
+2019-02-03 10:02:59.9631 INFO Entities.Models.StudentInfo
+2019-02-03 10:02:59.9644 INFO Returned all students from database. 8
+2019-02-03 10:04:20.0917 INFO Returned Faculty with id: 1
+2019-02-03 10:04:20.1353 INFO Returned Department with id: 1
+2019-02-03 10:04:20.1380 INFO Returned Section with id: 1
+2019-02-03 10:04:20.6070 INFO Enrolled
+2019-02-03 10:04:20.6086 INFO Entities.Models.StudentInfo
+2019-02-03 10:04:20.6086 INFO Enrolled
+2019-02-03 10:04:20.6104 INFO Entities.Models.StudentInfo
+2019-02-03 10:04:20.6104 INFO Enrolled
+2019-02-03 10:04:20.6117 INFO Returned all sections from database. 4
+2019-02-03 10:04:20.6125 INFO Entities.Models.StudentInfo
+2019-02-03 10:04:20.6125 INFO Enrolled
+2019-02-03 10:04:20.6143 INFO Entities.Models.StudentInfo
+2019-02-03 10:04:20.6143 INFO Enrolled
+2019-02-03 10:04:20.6163 INFO Entities.Models.StudentInfo
+2019-02-03 10:04:20.6163 INFO Enrolled
+2019-02-03 10:04:20.6190 INFO Entities.Models.StudentInfo
+2019-02-03 10:04:20.6195 INFO Drop Out
+2019-02-03 10:04:20.6208 INFO Entities.Models.StudentInfo
+2019-02-03 10:04:20.6213 INFO Enrolled
+2019-02-03 10:04:20.6226 INFO Entities.Models.StudentInfo
+2019-02-03 10:04:20.6238 INFO Returned all students from database. 8
+2019-02-03 10:06:01.6784 INFO Returned Faculty with id: 1
+2019-02-03 10:06:01.7285 INFO Returned Department with id: 1
+2019-02-03 10:06:01.7285 INFO Returned Section with id: 1
+2019-02-03 10:06:02.0865 INFO Enrolled
+2019-02-03 10:06:02.0878 INFO Entities.Models.StudentInfo
+2019-02-03 10:06:02.0878 INFO Enrolled
+2019-02-03 10:06:02.0878 INFO Returned all sections from database. 4
+2019-02-03 10:06:02.0899 INFO Entities.Models.StudentInfo
+2019-02-03 10:06:02.0899 INFO Enrolled
+2019-02-03 10:06:02.0916 INFO Entities.Models.StudentInfo
+2019-02-03 10:06:02.0916 INFO Enrolled
+2019-02-03 10:06:02.0935 INFO Entities.Models.StudentInfo
+2019-02-03 10:06:02.0941 INFO Enrolled
+2019-02-03 10:06:02.0955 INFO Entities.Models.StudentInfo
+2019-02-03 10:06:02.0960 INFO Enrolled
+2019-02-03 10:06:02.0973 INFO Entities.Models.StudentInfo
+2019-02-03 10:06:02.0980 INFO Drop Out
+2019-02-03 10:06:02.1000 INFO Entities.Models.StudentInfo
+2019-02-03 10:06:02.1000 INFO Enrolled
+2019-02-03 10:06:02.1017 INFO Entities.Models.StudentInfo
+2019-02-03 10:06:02.1031 INFO Returned all students from database. 8
+2019-02-03 10:06:16.2740 INFO Enrolled
+2019-02-03 10:06:16.2779 INFO Returned all sections from database. 4
+2019-02-03 10:06:16.2779 INFO Entities.Models.StudentInfo
+2019-02-03 10:06:16.2784 INFO Enrolled
+2019-02-03 10:06:16.2802 INFO Entities.Models.StudentInfo
+2019-02-03 10:06:16.2803 INFO Enrolled
+2019-02-03 10:06:16.2821 INFO Entities.Models.StudentInfo
+2019-02-03 10:06:16.2826 INFO Enrolled
+2019-02-03 10:06:16.2839 INFO Entities.Models.StudentInfo
+2019-02-03 10:06:16.2844 INFO Enrolled
+2019-02-03 10:06:16.2861 INFO Entities.Models.StudentInfo
+2019-02-03 10:06:16.2865 INFO Enrolled
+2019-02-03 10:06:16.2879 INFO Entities.Models.StudentInfo
+2019-02-03 10:06:16.2884 INFO Drop Out
+2019-02-03 10:06:16.2897 INFO Entities.Models.StudentInfo
+2019-02-03 10:06:16.2897 INFO Enrolled
+2019-02-03 10:06:16.2916 INFO Entities.Models.StudentInfo
+2019-02-03 10:06:16.2928 INFO Returned all students from database. 8
+2019-02-03 10:11:51.9752 INFO Returned Faculty with id: 1
+2019-02-03 10:11:52.0333 INFO Returned Section with id: 1
+2019-02-03 10:11:52.0348 INFO Returned Department with id: 1
+2019-02-03 10:11:52.6930 INFO Enrolled
+2019-02-03 10:11:52.7103 INFO Entities.Models.StudentInfo
+2019-02-03 10:11:52.7107 INFO Enrolled
+2019-02-03 10:11:52.7119 INFO Entities.Models.StudentInfo
+2019-02-03 10:11:52.7127 INFO Enrolled
+2019-02-03 10:11:52.7148 INFO Entities.Models.StudentInfo
+2019-02-03 10:11:52.7148 INFO Enrolled
+2019-02-03 10:11:52.7177 INFO Entities.Models.StudentInfo
+2019-02-03 10:11:52.7177 INFO Enrolled
+2019-02-03 10:11:52.7194 INFO Entities.Models.StudentInfo
+2019-02-03 10:11:52.7222 INFO Enrolled
+2019-02-03 10:11:52.7332 INFO Entities.Models.StudentInfo
+2019-02-03 10:11:52.7336 INFO Drop Out
+2019-02-03 10:11:52.7352 INFO Entities.Models.StudentInfo
+2019-02-03 10:11:52.7357 INFO Enrolled
+2019-02-03 10:11:52.7380 INFO Entities.Models.StudentInfo
+2019-02-03 10:11:52.7401 INFO Returned all students from database. 8
+2019-02-03 10:11:52.7608 INFO Returned all sections from database. 4

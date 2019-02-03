@@ -1,13 +1,13 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "C:\\Users\\nicholaspeconi\\Documents\\2nd Year Repos\\goldstarcode\\GoldStarApiTest\\GoldStarApi\\GoldStarApi.csproj",
+    "projectUniqueName": "/Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/GoldStarApi.csproj",
     "projectName": "GoldStarApi",
-    "projectPath": "C:\\Users\\nicholaspeconi\\Documents\\2nd Year Repos\\goldstarcode\\GoldStarApiTest\\GoldStarApi\\GoldStarApi.csproj",
-    "outputPath": "C:\\Users\\nicholaspeconi\\Documents\\2nd Year Repos\\goldstarcode\\GoldStarApiTest\\GoldStarApi\\obj\\",
+    "projectPath": "/Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/GoldStarApi.csproj",
+    "outputPath": "/Users/Nick/goldstarcode/GoldStarApiTest/GoldStarApi/obj/",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
-      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
     ],
     "originalTargetFrameworks": [
       "netcoreapp2.2"
@@ -15,17 +15,17 @@
     "frameworks": {
       "netcoreapp2.2": {
         "projectReferences": {
-          "C:\\Users\\nicholaspeconi\\Documents\\2nd Year Repos\\goldstarcode\\GoldStarApiTest\\Contracts\\Contracts.csproj": {
-            "projectPath": "C:\\Users\\nicholaspeconi\\Documents\\2nd Year Repos\\goldstarcode\\GoldStarApiTest\\Contracts\\Contracts.csproj"
+          "/Users/Nick/goldstarcode/GoldStarApiTest/Contracts/Contracts.csproj": {
+            "projectPath": "/Users/Nick/goldstarcode/GoldStarApiTest/Contracts/Contracts.csproj"
           },
-          "C:\\Users\\nicholaspeconi\\Documents\\2nd Year Repos\\goldstarcode\\GoldStarApiTest\\Entities\\Entities.csproj": {
-            "projectPath": "C:\\Users\\nicholaspeconi\\Documents\\2nd Year Repos\\goldstarcode\\GoldStarApiTest\\Entities\\Entities.csproj"
+          "/Users/Nick/goldstarcode/GoldStarApiTest/Entities/Entities.csproj": {
+            "projectPath": "/Users/Nick/goldstarcode/GoldStarApiTest/Entities/Entities.csproj"
           },
-          "C:\\Users\\nicholaspeconi\\Documents\\2nd Year Repos\\goldstarcode\\GoldStarApiTest\\LoggerService\\LoggerService.csproj": {
-            "projectPath": "C:\\Users\\nicholaspeconi\\Documents\\2nd Year Repos\\goldstarcode\\GoldStarApiTest\\LoggerService\\LoggerService.csproj"
+          "/Users/Nick/goldstarcode/GoldStarApiTest/LoggerService/LoggerService.csproj": {
+            "projectPath": "/Users/Nick/goldstarcode/GoldStarApiTest/LoggerService/LoggerService.csproj"
           },
-          "C:\\Users\\nicholaspeconi\\Documents\\2nd Year Repos\\goldstarcode\\GoldStarApiTest\\Repository\\Repository.csproj": {
-            "projectPath": "C:\\Users\\nicholaspeconi\\Documents\\2nd Year Repos\\goldstarcode\\GoldStarApiTest\\Repository\\Repository.csproj"
+          "/Users/Nick/goldstarcode/GoldStarApiTest/Repository/Repository.csproj": {
+            "projectPath": "/Users/Nick/goldstarcode/GoldStarApiTest/Repository/Repository.csproj"
           }
         }
       }

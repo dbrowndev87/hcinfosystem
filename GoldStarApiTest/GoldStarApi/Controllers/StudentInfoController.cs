@@ -69,6 +69,80 @@ namespace GoldStarApi.Controllers
                 return StatusCode(500, "Internal server error");
             }
         }
+        
+          
+        [HttpGet("section/{id}", Name ="AllInfoBySectionId")]
+        public IActionResult GetAllInfoBySectionId(int id)
+        {
+            
+            try
+            {
+                
+      
+                var enrollments = _repository.Enrollment.GetAllEnrollments();
+                
+                if (enrollments.Equals(null))
+                {
+                    _logger.LogError($"No Enrollments found");
+                    return NotFound();
+                }
+                allStudentInfo = new List<StudentInfo>(); 
+
+                foreach (var enrollment in enrollments)
+                {
+                    var studentInfoCurrent = new StudentInfo();
+                    
+                    if (enrollment.Section_Id == id)
+                    {
+                       studentInfoCurrent = getStudentInfoFromId(enrollment.Student_Id);
+                       allStudentInfo.Add(studentInfoCurrent);
+                    }
+                
+                }
+
+                return Ok(allStudentInfo);
+
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Something went wrong inside GetStudentInfoById action: {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
+        }
+
+        public StudentInfo getStudentInfoFromId(int studentId)
+        {
+            var studentFromDb = _repository.Student.GetStudentById(studentId);
+                
+ 
+            if (studentFromDb.Equals(null))
+            {
+                _logger.LogError($"Student with id: {studentId}, hasn't been found in db.");
+                return null;
+            }
+
+            studentInfoObject = new StudentInfo
+            {
+                Gpa = studentFromDb.Gpa,
+                Student_Id = studentFromDb.Student_Id,
+                Amount_Owing = studentFromDb.Amount_Owing,
+                Student_Status = studentFromDb.Student_Status
+            };
+                        
+            var userFromDb = _repository.Users.GetUserById(studentFromDb.User_Id);
+            studentInfoObject.Last_Name = userFromDb.Last_Name;
+            studentInfoObject.First_Name = userFromDb.First_Name;
+            studentInfoObject.Birth_Date = userFromDb.Birth_Date;
+            studentInfoObject.Address = userFromDb.Address;
+            studentInfoObject.EMail = userFromDb.EMail;
+            studentInfoObject.Dept_Id = userFromDb.Dept_Id;
+            studentInfoObject.Type_Code = userFromDb.Type_Code;
+            studentInfoObject.User_Id = userFromDb.User_Id;
+
+            return studentInfoObject;
+
+        }
+
 
         [HttpGet]
         public IActionResult GetAllStudentInfo()

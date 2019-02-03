@@ -159,6 +159,45 @@ namespace GoldStarApi.Controllers
                 return StatusCode(500, "Internal server error");
             }
         }
+        
+        [HttpGet("section/student/{studentId}/{sectionId}", Name ="EnrollmentBySectionStudentId")]
+        public IActionResult GetEnrollmentBySectionStudentId(int studentId, int sectionId)
+        {
+            
+            try
+            {
+                
+                var enrollments = _repository.Enrollment.GetAllEnrollments();
+                var enrollment = new Enrollment();
+               
+                if (enrollments.Equals(null))
+                {
+                    _logger.LogError($"Enrollment with id: {studentId}, hasn't been found in db.");
+                    return NotFound();
+                }
+                
+                foreach (var current in enrollments)
+                {
+                    _logger.LogInfo($" Look Here"+ current);
+                    
+                    if (current.Section_Id == sectionId && current.Student_Id == studentId)
+                    {
+                        _logger.LogInfo($"Found enrollment "+ current);
+                        return Ok(current);
+                    }
+
+                }
+                _logger.LogInfo($"Could not find enrollment: {studentId}");
+                return NotFound();
+                
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Something went wrong inside GetEnrollment ById action: {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
+        }
+
 
 
         [HttpPost]
