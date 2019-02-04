@@ -126,8 +126,8 @@
                       <td>{{student.first_Name}}</td>
                       <td>{{student.last_Name}}</td>
                       <td>{{student.eMail}}</td>
-                      <td>{{student.student_Status}}</td>
-                      <td>{{enrollmentGrades[i]}}</td>
+                      <td>{{enrollmentGrades[i].course_Status}}</td>
+                      <td>{{enrollmentGrades[i].grade}}</td>
                       <td><button type="button" id="updateGrade" class="btn
                           btnHc" (click)="UpdateGrades(student.student_Id)">Update
                           Grades</button></td>

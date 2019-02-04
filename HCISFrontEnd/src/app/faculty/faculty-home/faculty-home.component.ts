@@ -38,7 +38,7 @@ export class FacultyHomeComponent implements OnInit {
   private sections: SectionInfo[] = [];
   private students: StudentInfo[] = [];
   private faculty: FacultyInfo[] = [];
-  private enrollmentGrades: number[] = [];
+  private enrollmentGrades: Enrollment[] = [];
   private department: Department;
   public buttonClicked = false;
 
@@ -103,7 +103,7 @@ export class FacultyHomeComponent implements OnInit {
           this.subscriptions.push(this.repository.getData(apiAddress)
             .subscribe((enrollment: Enrollment) => {
 
-              this.enrollmentGrades[index] = enrollment.grade;
+              this.enrollmentGrades[index] = enrollment;
 
             },
               (error) => {
