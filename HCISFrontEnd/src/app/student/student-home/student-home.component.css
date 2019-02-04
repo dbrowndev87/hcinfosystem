@@ -1,0 +1,117 @@
+a{
+    color: whitesmoke !important;
+}
+
+
+/*
+a{ Silver Buttons
+    color: black !important;
+}
+*/
+
+/* Well Divs */
+#sInfo{
+    height: 320px;
+}
+
+#pInfo{
+    height: 60px;
+}
+
+#cInfo{
+    height: 400px;
+}
+
+td{
+    border-bottom: 2px #cccccc solid;
+}
+
+/* Transaction Table */
+.tTrans{
+    width: 100%;
+    border: 1px black solid;
+}
+
+#eWell{
+    box-shadow: 1px 1px 1px black;
+    height: 112px;
+}
+
+/* Scrollable Information Divs */
+#transDiv{
+    overflow-y: scroll;
+    width: 97%;
+    background-color: white;
+    height: 122px;
+    border: 1px black solid;
+    border-radius: 2px;
+    box-shadow: 1px 1px 3px black;
+}
+
+#courseDiv{
+    overflow-y: scroll;
+    width: 97%;
+    background-color: white;
+    height: 300px;
+    border: 1px black thin;
+    border-radius: 2px;
+    box-shadow: 1px 1px 5px black;
+}
+
+#fCourseDiv{
+    overflow-y: scroll;
+    width: 97%;
+    background-color: white;
+    height: 200px;
+    border: 1px black thin;
+    border-radius: 2px;
+    box-shadow: 1px 1px 5px black;
+}
+
+#courseInfo{
+    height: 300px;
+}
+
+table{
+    margin-top: 3px;
+    border: 1px black solid;
+}
+
+tr>th:first-child{
+    border-left: 1px black solid !important;
+}
+tr>th:last-child{
+    border-right: 1px black solid !important;
+}
+
+th{
+    background: whitesmoke;
+    border-right: none none !important;
+    color: black;
+    border-top: 1px black solid !important;
+    border-bottom: 1px black solid !important;
+    text-shadow: none;
+}
+
+td{
+    border-bottom: 1px black solid;
+}
+
+
+@media only screen and (max-width: 299px) {
+
+    /* Well Divs */
+    #sInfo{
+     height: 320px;
+    }
+
+    #courseDiv{
+        height: 170px;
+    }
+
+    
+    #eWell{
+        height: 150px;
+    }
+
+  }

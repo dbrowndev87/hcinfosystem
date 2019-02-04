@@ -80,6 +80,7 @@ export class EnrollmentListComponent implements OnInit, OnDestroy {
             // assign the student info
             this.studentInfo = studentinfo as StudentInfo[];
 
+
             // Create enrollement info array for view.
             for (let x = 0; x < this.studentInfo.length; x++) {
 
@@ -91,7 +92,7 @@ export class EnrollmentListComponent implements OnInit, OnDestroy {
 
                 // If the IDs match create an enrollement info
                 // Interface and push it to the Array.
-                if (this.enrollments[x].student_Id === Id) {
+                if (this.enrollments[y].student_Id === Id) {
 
                   let tempEnrollment: EnrollmentInfo = {
                     student_Id: this.enrollments[y].student_Id,
@@ -108,6 +109,7 @@ export class EnrollmentListComponent implements OnInit, OnDestroy {
                 }
               }
             }
+
             // Update the Data Table
             this.dtTrigger.next();
           })

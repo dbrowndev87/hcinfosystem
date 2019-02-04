@@ -18,7 +18,7 @@
     <h5 class="text-center bold">Amount Owing:</h5>
     <p class="text-center">
       <span class="amountText" *ngIf="studentInfo.amount_Owing > 0">{{student.amount_Owing | currency}}</span>
-      <span *ngIf="student.amount_Owing === 0">Payed In Full</span>
+      <span *ngIf="student.amount_Owing === 0">No Oustanding Balance</span>
     </p>
   </div>
 
@@ -85,10 +85,11 @@
         </div>
       </div>
 
+
     </div>
   </form>
 
-  <div *ngIf="isLoaded && studentInfo.amount_Owing === 0" class="col-md-10 well centerDiv">
+  <div *ngIf="isLoaded && studentInfo.amount_Owing === 0" class="well col-sm-6 col-md-6 col-lg-6 centerDiv">
     <button type="button" class="btn btnHc" (click)="redirectToHome()">Back</button>
   </div>
 

@@ -10,6 +10,7 @@ import { Enrollment } from 'src/app/_interfaces/enrollment.model';
 import { Section } from 'src/app/_interfaces/section.model';
 import { map } from 'rxjs/operators';
 import { Semesters } from 'src/app/shared/tools/semesters';
+import { Student } from 'src/app/_interfaces/student.model';
 
 
 
@@ -35,7 +36,8 @@ export class StudentRegisterComponent implements OnInit, OnDestroy {
   private errorHeader = "";
   private errorMessage = "";
   private isLoaded = false;
-  private enrollmentCount: number = 0;
+  private droppedCourses = 0;
+  private enrollmentCount = 0;
   private semesters = new Semesters();
   private nextSemester: string;
   private rotateButtons: boolean;
@@ -168,9 +170,6 @@ export class StudentRegisterComponent implements OnInit, OnDestroy {
 
 
 
-
-  // TODO: IMPLEMENT SEMESTER
-
   /**
    * This is the register method which does all the actions involved
    * with completing the registration.
@@ -180,7 +179,6 @@ export class StudentRegisterComponent implements OnInit, OnDestroy {
    * @param index
    */
   private registerCourses() {
-    let enrollmentByIdUrl = `api/enrollment`;
     let counter = 0;
 
     this.sectionsRegister.forEach(sectioninfo => {
@@ -224,6 +222,7 @@ export class StudentRegisterComponent implements OnInit, OnDestroy {
         vacancy: (sectioninfo.vacancy - 1)
       };
 
+
       // Update the section object
       this.subscriptions.push(this.repository.update(apiUrlSection, tempSection)
         .subscribe(res => { },
@@ -233,6 +232,32 @@ export class StudentRegisterComponent implements OnInit, OnDestroy {
           })
         ));
     });
+
+    // Charge then 4000 if its their first 4 or above courses
+    if ((this.enrollmentCount + this.droppedCourses) <= 4) {
+
+      // Update the enrollment to dropped
+      let apiUrlStudent = `api/student/` + this.studentInfo.student_Id;
+      // set the student object and add the vacancy back
+      let tempStudent: Student = {
+        amount_Owing: this.studentInfo.amount_Owing += 4000,
+        gpa: this.studentInfo.gpa,
+        student_Id: this.studentInfo.student_Id,
+        student_Status: this.studentInfo.student_Status,
+        user_id: this.studentInfo.user_Id
+      };
+
+      // Update the section object
+      this.subscriptions.push(this.repository.update(apiUrlStudent, tempStudent)
+        .subscribe(res => { },
+          (error => {
+            this.errorHandler.handleError(error);
+            this.errorMessage = "Unable to access API";
+          })
+        ));
+    }
+
+
   }
 
 
@@ -299,6 +324,11 @@ export class StudentRegisterComponent implements OnInit, OnDestroy {
                 if (temp.section_Id === enrollment.section_Id &&
                   temp.course_Status !== "Dropped") {
                   this.enrollmentCount++;
+                }
+
+                if (temp.section_Id === enrollment.section_Id &&
+                  temp.course_Status === "Dropped") {
+                  this.droppedCourses++;
                 }
               });
 

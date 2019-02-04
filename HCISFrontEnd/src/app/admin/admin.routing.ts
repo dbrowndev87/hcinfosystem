@@ -10,8 +10,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthGuardAdmin } from '../login/authGuard';
 import { AdminUpdateComponent } from './admin-update/admin-update.component';
 import { AdminListComponent } from './admin-list/admin-list.component';
+import { AdminHomeComponent } from './admin-home/admin-home.component';
 
 const routes: Routes = [
+    { path: 'admin/home', component: AdminHomeComponent, canActivate: [AuthGuardAdmin] },
     { path: 'admin/update/:id', component: AdminUpdateComponent, canActivate: [AuthGuardAdmin] },
     { path: 'admin/list', component: AdminListComponent, canActivate: [AuthGuardAdmin] }
 ];

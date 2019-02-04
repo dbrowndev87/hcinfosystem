@@ -5,11 +5,13 @@ import { AdminUpdateComponent } from './admin-update/admin-update.component';
 import { SharedModule } from '../shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { StudentRoutingModule } from '../student/student.routing';
+import { AdminHomeComponent } from './admin-home/admin-home.component';
 
 @NgModule({
   declarations: [
     AdminListComponent,
-    AdminUpdateComponent
+    AdminUpdateComponent,
+    AdminHomeComponent
   ],
   imports: [
     CommonModule,

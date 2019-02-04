@@ -1,0 +1,192 @@
+<div class="container-fluid">
+  <div class="col-md-12">
+
+    <!-- Loading Bar -->
+    <div *ngIf="!isLoaded">
+      <div class="row">
+        <div class="col-md-10 centerDiv well">
+          <img src="../../../assets/loading.gif" class="center-block imgLoading" />
+          <h4 class="text-center">Loading</h4>
+        </div>
+      </div>
+    </div>
+
+    <!-- Student Home --->
+    <div *ngIf="typeCode === 3 && isLoaded">
+      <div class="row">
+
+        <!-- Student Information Well-->
+        <div id="sInfo" class="col-md-offset-1 col-md-4 col-lg-4 well text-center">
+          <h3 class="text-center">{{studentInfo.first_Name}} {{studentInfo.last_Name}}</h3>
+          <div class="row">
+            <div class="col-md-12">
+              <p><span class="bold">Student ID:</span><br>
+                {{studentInfo.student_Id}}</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <p><span class="bold">E-Mail:</span><br>
+                {{studentInfo.eMail}}</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <p><span class="bold">Status:</span><br>
+                {{studentInfo.student_Status}}</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <span class="bold">Program:</span><br>
+              <p>{{department.dept_Name}}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-offset-1 col-md-5 well">
+          <!-- Payment Information Well -->
+          <h3 id="pInfo" class="text-center">Payment Information</h3>
+          <!-- If Amount id Due -->
+          <ng-template [ngIf]="studentInfo.amount_Owing > 0" [ngIfElse]="noAmountOwing">
+            <div class="row">
+              <div class="col-md-6">
+                <p><span class="bold">Amount Due:</span> {{studentInfo.amount_Owing | currency}}</p>
+              </div>
+              <div class="col-md-6">
+                <div class="float-right">
+                  <button class="btn btnHc">
+                    <a [routerLink]="[ '/student/payment']">Make a Payment</a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+
+          <!-- No Amount Due -->
+          <ng-template #noAmountOwing>
+            <div class="row">
+              <div class="col-md-12 text-center">
+                <p *ngIf="studentInfo.amount_Owing === 0"><span class="bold">Amount Due:</span> No Oustanding Balance</p>
+              </div>
+            </div>
+          </ng-template>
+
+
+          <!-- Transaction information -->
+          <div class="row">
+            <h5 class="text-center bold">Transaction History:</h5>
+            <div id="transDiv" class="col-md-12 centerDiv">
+
+              <!-- If transactions -->
+              <table *ngIf="transactions.length > 0" class="table">
+                <thead>
+                  <tr>
+                    <th>Trans ID</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let transaction of transactions">
+                    <td>{{transaction.trans_Id}}</td>
+                    <td>{{transaction.trans_Amount | currency}}</td>
+                    <td>{{transaction.trans_Date | date:'yyyy-MM-dd'}}</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <!-- No Transactions -->
+              <div *ngIf="transactions.length === 0">
+                <br>
+                <div class="col-md-10 centerDiv well">
+                  <h5 class="text-center">No Transaction History</h5>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <!-- Course Enrollment Information -->
+        <div id="cInfo" class="col-md-offset-1 col-md-10 col-lg-10 well">
+          <h3 class="text-center">Course Enrollment Information</h3>
+          <!-- Enrollment List -->
+          <div class="row">
+            <div id="courseDiv" class="col-md-12 centerDiv">
+
+              <!-- If Enrolled in courses -->
+              <ng-template [ngIf]="enrollments.length > 0" [ngIfElse]="noEnrollments">
+                <br>
+                <div class="row">
+                  <div class="col-md-10 well centerDiv">
+                    <p class="text-center"><span class="bold">Current Enrollments:</span> {{enrollments.length}}</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-10 centerDiv">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>Course ID</th>
+                          <th>Course Name</th>
+                          <th>Designation</th>
+                          <th>Start Date</th>
+                          <th>End Date</th>
+                          <th>Drop Course</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let section of sections">
+                          <td>{{section.course_Id}}</td>
+                          <td>{{section.course_Name}}</td>
+                          <td>{{section.designation}}</td>
+                          <td>{{section.start_Date | date:'yyyy-MM-dd'}}</td>
+                          <td>{{section.end_Date | date:'yyyy-MM-dd'}}</td>
+                          <td>
+                            <button class="btn btnHc" (click)="studentConfirm(section)">Drop Course
+                            </button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </ng-template>
+
+              <!-- No Enrollments -->
+              <ng-template #noEnrollments>
+                <br>
+                <div class="row">
+                  <div id="eWell" class="col-md-6 well centerDiv">
+                    <div class="col-md-6 centerDiv">
+                      <p class="text-center"><span class="bold">Current Enrollments:</span> 0</p>
+                      <br>
+                      <button class="btn btnHc center-block">
+                        <a [routerLink]="[ '/student/register']">Register</a>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </ng-template>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of Student Home. -->
+
+  </div>
+  <!-- Student Drop Course Confirm. -->
+  <app-confirm-modal *ngIf="typeCode === 3" [modalHeaderText]="'Confirmation'" [modalBodyText]="'Are you sure??'"
+    [okButtonText]="'Yes'" [cancelButtonText]="'No'" (confirmOk)="studentDropCourse(sectionToDrop)">
+  </app-confirm-modal>
+
+  <!-- success model -->
+  <app-success-modal [modalHeaderText]="successHeader" [modalBodyText]="successMessage" [okButtonText]="'OK'"></app-success-modal>
+
+  <app-error-modal [modalHeaderText]="'Error message'" [modalBodyText]="errorMessage" [okButtonText]="'OK'"></app-error-modal>
+
+</div>

@@ -159,8 +159,13 @@ export class StudentPaymentComponent implements OnInit, OnDestroy {
   }
 
   updateViewInformation() {
+    // Clear the Array
+    this.transactions = [];
+
     // Update the view information after success.
-    this.getStudent();
+    if (this.transactions.length < 1) {
+      this.getStudent();
+    }
   }
 
   /**

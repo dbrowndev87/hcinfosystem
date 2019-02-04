@@ -35,7 +35,7 @@ export class RandomUserPassGen {
 
         // get the first letter of the firstname and concatinate it
         // to the last name
-        const firstLetter = firstname.charAt(0).toLowerCase;
+        const firstLetter = firstname.charAt(0).toLowerCase();
         tempUsername = (firstLetter + lastname.toLowerCase());
 
 

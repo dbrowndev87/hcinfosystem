@@ -8,6 +8,7 @@ import { StudentUpdateComponent } from './student-update/student-update.componen
 import { StudentRoutingModule } from './student.routing';
 import { StudentPaymentComponent } from './student-payment/student-payment.component';
 import { StudentRegisterComponent } from './student-register/student-register.component';
+import { StudentHomeComponent } from './student-home/student-home.component';
 
 
 
@@ -24,7 +25,8 @@ import { StudentRegisterComponent } from './student-register/student-register.co
     StudentListComponent,
     StudentUpdateComponent,
     StudentPaymentComponent,
-    StudentRegisterComponent
+    StudentRegisterComponent,
+    StudentHomeComponent
   ]
 })
 export class StudentModule { }
