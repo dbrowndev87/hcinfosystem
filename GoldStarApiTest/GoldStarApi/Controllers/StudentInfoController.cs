@@ -70,7 +70,7 @@ namespace GoldStarApi.Controllers
             }
         }
         
-          
+       
         [HttpGet("section/{id}", Name ="AllInfoBySectionId")]
         public IActionResult GetAllInfoBySectionId(int id)
         {
@@ -78,7 +78,7 @@ namespace GoldStarApi.Controllers
             try
             {
                 
-      
+        // get all enrollments
                 var enrollments = _repository.Enrollment.GetAllEnrollments();
                 
                 if (enrollments.Equals(null))
@@ -86,20 +86,25 @@ namespace GoldStarApi.Controllers
                     _logger.LogError($"No Enrollments found");
                     return NotFound();
                 }
+                // new studentInfo List
                 allStudentInfo = new List<StudentInfo>(); 
 
+                // check all enrollments for the section id
                 foreach (var enrollment in enrollments)
                 {
                     var studentInfoCurrent = new StudentInfo();
                     
                     if (enrollment.Section_Id == id)
                     {
+                       // if the section id matches get their studentInfo from studentId in enrollment
                        studentInfoCurrent = getStudentInfoFromId(enrollment.Student_Id);
+                       // add student to studentInfo List
                        allStudentInfo.Add(studentInfoCurrent);
                     }
                 
                 }
-
+                
+                // return all studentInfo for a section
                 return Ok(allStudentInfo);
 
             }

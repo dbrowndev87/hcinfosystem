@@ -1,83 +1,75 @@
 <div class="container-fluid">
 
-    <!-- Loading Bar -->
-    <div *ngIf="!isLoaded">
-      <div class="row">
-        <div class="col-sm-8 col-md-6 col-lg-4 centerDiv well">
-          <img src="../../../assets/loading.gif" class="center-block imgLoading" />
-          <h4 class="text-center">Loading</h4>
-        </div>
+  <!-- Loading Bar -->
+  <div *ngIf="!isLoaded">
+    <div class="row">
+      <div class="col-sm-8 col-md-6 col-lg-4 centerDiv well">
+        <img src="../../../assets/loading.gif" class="center-block imgLoading"
+          />
+        <h4 class="text-center">Loading</h4>
       </div>
     </div>
+  </div>
 
-    <div *ngIf="isLoaded" class="form-horizontal well col-sm-8 col-md-6 col-lg-4 centerDiv well">
-        <div class="row">
-          <div class="col-md-12 updateWell">
-            <label for="student_Id" class="control-label">Student Id: </label>
-            <select name="student_Id" class="form-control" id="student_Id">
-              <option *ngFor="let student of students" value="{{student.student_Id}}">{{student.first_Name}} {{student.last_Name}}</option>
-            </select>
-        </div>
-      </div>
-      <div class="row">
-          <div class="col-md-12 updateWell">
-            <label for="section" class="control-label">Sections: </label>
-            <select name="section" class="form-control" id="section">
-              <option *ngFor="let section of sections" value="{{section.section_Id}}">{{section.course_Id}} {{section.designation}}</option>
-            </select>
-        </div>
-      </div>
-      <div class="row">
-          <div class="col-md-12 updateWell">
-              <button type="button" class="btn btnHc" (click)="getEnrollmentInfo(student.student_Id, section.section_Id)">Get Info</button>
-        </div>
-      </div>
-    </div>
-
-    <br>
-
-    <div *ngIf="isLoaded" class="form-horizontal well col-sm-8 col-md-6 col-lg-4 centerDiv well">
-    <form *ngIf="isLoaded" [formGroup]="studentGradesForm" autocomplete="off" novalidate
+  <br>
+  <div *ngIf="isLoaded" class="form-horizontal well col-sm-8 col-md-6 col-lg-4
+    centerDiv well">
+    <form *ngIf="isLoaded" [formGroup]="studentGradesForm" autocomplete="off"
+      novalidate
       (ngSubmit)="updateGrade(studentGradesForm.value)">
 
-        <div class="form-group">
-          <div class="row">
-            <div class="col-md-12 updateWell">
-              <label for="grade" class="control-label">Enter Grade: </label>
-              <input type="number" formControlName="grade" id="grade" class="form-control" />
-              <em *ngIf="validateControl('grade') && hasError('grade', 'required')">grade is required</em>
-              <em *ngIf="validateControl('grade') && hasError('grade', 'maxlength')">Maximum allowed length is 3
-                characters.</em>
-            </div>
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-12 updateWell">
+            <label for="grade" class="control-label">Enter Grade: </label>
+            <input type="number" formControlName="grade" id="grade"
+              class="form-control" />
+            <em *ngIf="validateControl('grade') && hasError('grade',
+              'required')">grade is required</em>
+            <em *ngIf="validateControl('grade') && hasError('grade',
+              'maxlength')">Maximum allowed length is 3
+              characters.</em>
           </div>
         </div>
-        <div class="form-group">
-            <div class="row">
-              <div class="col-md-12 updateWell">
-                <label for="course_Status" class="control-label">Enter Status: </label>
-                <input type="text" formControlName="course_Status" id="course_Status" class="form-control" />
-                <em *ngIf="validateControl('course_Status') && hasError('course_Status', 'required')">Status is required</em>
-                <em *ngIf="validateControl('course_Status') && hasError('course_Status', 'maxlength')">Maximum allowed length is 140
-                  characters.</em>
-              </div>
-            </div>
-        </div>
-        <br><br>
-  
-        <div class="form-group">
-          <div class="row">
-            <div class="col-md-12 updateWell">
-              <button type="submit" class="btn btnHc float-left" [disabled]="!studentGradesForm.valid">Update Grade</button>
-              <button type="button" class="btn btnHc float-right" (click)="redirectToHome()">Back</button>
-            </div>
+      </div>
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-12 updateWell">
+            <label for="course_Status" class="control-label">Enter Status:
+            </label>
+            <select name="course_Status" class="form-control" id="course_Status"
+              formControlName="course_Status">
+              <option value="Completed" selected="selected">Completed</option>
+              <option value="Dropped Out">Dropped Out</option>
+            </select>
+            <em *ngIf="validateControl('course_Status') &&
+              hasError('course_Status', 'required')">Status is required</em>
+            <em *ngIf="validateControl('course_Status') &&
+              hasError('course_Status', 'maxlength')">Maximum allowed length
+              is 140
+              characters.</em>
           </div>
         </div>
+      </div>
+      <br><br>
+
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-12 updateWell">
+            <button type="submit" class="btn btnHc float-left"
+              [disabled]="!studentGradesForm.valid">Update Grade</button>
+            <button type="button" class="btn btnHc float-right"
+              (click)="redirectToHome()">Back</button>
+          </div>
+        </div>
+      </div>
     </form>
-    </div>
-  
-    <app-success-modal [modalHeaderText]="'Success message'" [modalBodyText]="'Payment completed successfully'"
-      [okButtonText]="'OK'" (redirectOnOK)="updateViewInformation(studentInfo.studentId)"></app-success-modal>
-  
-    <app-error-modal [modalHeaderText]="'Error message'" [modalBodyText]="errorMessage" [okButtonText]="'OK'"></app-error-modal>
-  
   </div>
+
+  <app-success-modal [modalHeaderText]="'Success message'"
+    [modalBodyText]="'Grade Updated successfully'"
+    [okButtonText]="'OK'"
+    (redirectOnOK)="redirectToFacultyHome()"></app-success-modal>
+  <app-error-modal [modalHeaderText]="'Error message'"
+    [modalBodyText]="errorMessage" [okButtonText]="'OK'"></app-error-modal>
+</div>

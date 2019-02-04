@@ -7,17 +7,23 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { StudentRoutingModule } from '../student/student.routing';
 import { FacultyGradesComponent } from './faculty-grades/faculty-grades.component';
 import { FacultyRosterComponent } from './faculty-roster/faculty-roster.component';
+import { FacultyHomeComponent } from './faculty-home/faculty-home.component';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
     FacultyListComponent,
     FacultyUpdateComponent,
     FacultyGradesComponent,
-    FacultyRosterComponent
+    FacultyRosterComponent,
+    FacultyHomeComponent
   ],
   imports: [
     CommonModule,
     SharedModule,
+    RouterModule,
+    HttpClientModule,
     ReactiveFormsModule,
     StudentRoutingModule
   ]
