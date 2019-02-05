@@ -25,7 +25,7 @@
             <input type="number" formControlName="grade" id="grade"
               class="form-control" />
             <em *ngIf="validateControl('grade') && hasError('grade',
-              'required')">grade is required</em>
+              'required')">Grade is required</em>
             <em *ngIf="validateControl('grade') && hasError('grade',
               'maxlength')">Maximum allowed length is 3
               characters.</em>
@@ -46,7 +46,7 @@
               hasError('course_Status', 'required')">Status is required</em>
             <em *ngIf="validateControl('course_Status') &&
               hasError('course_Status', 'maxlength')">Maximum allowed length
-              is 140
+              is 20
               characters.</em>
           </div>
         </div>

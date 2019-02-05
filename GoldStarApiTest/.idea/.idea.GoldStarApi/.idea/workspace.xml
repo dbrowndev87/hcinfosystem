@@ -20,7 +20,13 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/GoldStarApi/logs/2019-02-05_logfile.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -177,7 +183,7 @@
               <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
               <item name="GoldStarApi" type="24d0babc:SolutionExplorerModelNode" />
               <item name="GoldStarApi" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Controllers" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="logs" type="24d0babc:SolutionExplorerModelNode" />
             </path>
           </expand>
           <select />
@@ -263,11 +269,12 @@
       <workItem from="1549106581614" duration="1472000" />
       <workItem from="1549113431923" duration="8925000" />
       <workItem from="1549307251184" duration="7600000" />
+      <workItem from="1549371292246" duration="532000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97435000" />
+    <option name="totallyTimeSpent" value="97967000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -281,7 +288,7 @@
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="699" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21324718" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21647818" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -302,7 +309,7 @@
       <window_info anchor="bottom" id="Unit Tests" order="13" weight="0.21746293" />
       <window_info anchor="bottom" id="Terminal" order="14" weight="0.32784185" />
       <window_info anchor="bottom" id="Event Log" order="15" sideWeight="0.5072698" side_tool="true" weight="0.5273973" />
-      <window_info anchor="bottom" id="Build" order="16" sideWeight="0.4927302" weight="0.31630972" />
+      <window_info anchor="bottom" id="Build" order="16" sideWeight="0.4927302" weight="0.49917626" />
       <window_info anchor="bottom" id="REST Client" order="17" weight="0.32784185" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -361,13 +368,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Entities/Extensions/IEntityExtensions.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Entities/Extensions/SectionExtensions.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -459,13 +459,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Entities/IEntity.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Entities/IEntity.cs" />
     <entry file="file://$PROJECT_DIR$/Entities/Models/Course.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1208,6 +1202,9 @@
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GoldStarApi/logs/2019-02-05_logfile.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

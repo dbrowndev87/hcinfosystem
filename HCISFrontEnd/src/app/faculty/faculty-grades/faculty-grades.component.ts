@@ -50,7 +50,7 @@ export class FacultyGradesComponent implements OnInit {
     this.getEnrollmentInfo(this.studentId, this.sectionId);
 
     this.studentGradesForm = new FormGroup({
-      grade: new FormControl('', [Validators.required]),
+      grade: new FormControl('', [Validators.required, Validators.maxLength(3)]),
       course_Status: new FormControl('', [Validators.required, Validators.maxLength(20)]),
     });
 

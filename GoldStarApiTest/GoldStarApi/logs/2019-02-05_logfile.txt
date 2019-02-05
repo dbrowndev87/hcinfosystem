@@ -1,0 +1,24 @@
+2019-02-05 08:56:09.5029 ERROR Something went wrong inside GetUserById action: Unable to connect to any of the specified MySQL hosts.
+2019-02-05 08:56:18.3325 ERROR Something went wrong inside GetUserById action: Unable to connect to any of the specified MySQL hosts.
+2019-02-05 08:56:24.1866 ERROR Something went wrong inside GetUserById action: Unable to connect to any of the specified MySQL hosts.
+2019-02-05 08:56:59.3372 ERROR Something went wrong inside GetUserById action: Unable to connect to any of the specified MySQL hosts.
+2019-02-05 09:02:50.2942 INFO Returned user with username: dbrown32066
+2019-02-05 09:02:50.5479 INFO Returned User with id: 1
+2019-02-05 09:02:59.5372 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-05 09:03:05.6717 INFO Returned User with id: 1
+2019-02-05 09:03:05.6955 INFO Returned Department with id: 2
+2019-02-05 09:03:05.7388 INFO Returned Course with id: 2
+2019-02-05 09:03:07.9808 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-05 09:03:09.7734 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-05 09:03:09.7748 INFO Returned User with id: 1
+2019-02-05 09:03:09.8178 INFO Returned Course with id: 5
+2019-02-05 09:03:09.8178 INFO Returned Course with id: 4
+2019-02-05 09:03:09.8313 INFO Returned Course with id: 2
+2019-02-05 09:03:09.8333 INFO Returned Course with id: 3
+2019-02-05 09:03:14.0572 INFO Returned all users from database. System.Linq.OrderedEnumerable`2[Entities.Models.User,System.String]
+2019-02-05 09:03:14.0758 INFO Returned all userlogins from database. 14
+2019-02-05 09:03:16.2566 INFO Returned all users from database. System.Linq.OrderedEnumerable`2[Entities.Models.User,System.String]
+2019-02-05 09:17:04.4512 INFO Returned user with username: dbrown32066
+2019-02-05 09:17:04.4611 INFO Returned User with id: 1
+2019-02-05 09:18:02.4141 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-05 09:26:01.8624 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]

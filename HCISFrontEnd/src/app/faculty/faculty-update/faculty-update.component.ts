@@ -45,7 +45,7 @@ export class FacultyUpdateComponent implements OnInit, OnDestroy {
   }
   ngOnInit() {
     this.facultyUpdateForm = new FormGroup({
-      first_Name: new FormControl('', [Validators.required, Validators.maxLength(20)]),
+      first_Name: new FormControl('', [Validators.required, Validators.maxLength(30)]),
       last_Name: new FormControl('', [Validators.required, Validators.maxLength(30)]),
       address: new FormControl('', [Validators.required, Validators.maxLength(140)]),
       birth_Date: new FormControl('', [Validators.required]),

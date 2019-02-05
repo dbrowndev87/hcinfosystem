@@ -6,7 +6,6 @@ import { SharedModule } from '../shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { StudentRoutingModule } from '../student/student.routing';
 import { FacultyGradesComponent } from './faculty-grades/faculty-grades.component';
-import { FacultyRosterComponent } from './faculty-roster/faculty-roster.component';
 import { FacultyHomeComponent } from './faculty-home/faculty-home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
@@ -16,7 +15,6 @@ import { RouterModule } from '@angular/router';
     FacultyListComponent,
     FacultyUpdateComponent,
     FacultyGradesComponent,
-    FacultyRosterComponent,
     FacultyHomeComponent
   ],
   imports: [

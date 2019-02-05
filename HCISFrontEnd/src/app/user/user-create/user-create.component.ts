@@ -476,8 +476,8 @@ export class UserCreateComponent implements OnInit, OnDestroy {
     // Admin form (No department ID selection)
     if (this.userType === 1) {
       this.userForm = new FormGroup({
-        first_Name: new FormControl('', [Validators.required, Validators.maxLength(50)]),
-        last_Name: new FormControl('', [Validators.required, Validators.maxLength(50)]),
+        first_Name: new FormControl('', [Validators.required, Validators.maxLength(30)]),
+        last_Name: new FormControl('', [Validators.required, Validators.maxLength(30)]),
         address: new FormControl('', [Validators.required, Validators.maxLength(140)]),
         birth_Date: new FormControl('', [Validators.required]),
         eMail: new FormControl('', [Validators.required, Validators.maxLength(50)]),
@@ -485,8 +485,8 @@ export class UserCreateComponent implements OnInit, OnDestroy {
     } else {
       // Student and Faculty form
       this.userForm = new FormGroup({
-        first_Name: new FormControl('', [Validators.required, Validators.maxLength(50)]),
-        last_Name: new FormControl('', [Validators.required, Validators.maxLength(50)]),
+        first_Name: new FormControl('', [Validators.required, Validators.maxLength(30)]),
+        last_Name: new FormControl('', [Validators.required, Validators.maxLength(30)]),
         address: new FormControl('', [Validators.required, Validators.maxLength(140)]),
         birth_Date: new FormControl('', [Validators.required]),
         eMail: new FormControl('', [Validators.required, Validators.maxLength(50)]),

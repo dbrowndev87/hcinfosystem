@@ -5,7 +5,8 @@
     <h5 class="text-center">For Username: {{userLogin.username}}</h5>
   </div>
 
-  <form [formGroup]="userLoginForm" autocomplete="off" novalidate (ngSubmit)="updateUserLogin(userLoginForm.value)">
+  <form [formGroup]="userLoginForm" autocomplete="off" novalidate
+    (ngSubmit)="updateUserLogin(userLoginForm.value)">
     <div class="form-horizontal well col-sm-8 col-md-6 col-lg-4 centerDiv">
 
       <br>
@@ -14,11 +15,15 @@
         <div class="row">
           <div class="col-md-12 updateWell">
             <label for="password" class="control-label">Password: </label>
-            <input type="password" formControlName="password" id="password" class="form-control" />
-            <em *ngIf="validateControl('password') && hasError('password', 'required')">Password is required</em>
-            <em *ngIf="validateControl('password') && hasError('password', 'maxlength')">Maximum allowed length is 45
+            <input type="password" formControlName="password" id="password"
+              class="form-control" />
+            <em *ngIf="validateControl('password') && hasError('password',
+              'required')">Password is required</em>
+            <em *ngIf="validateControl('password') && hasError('password',
+              'maxlength')">Maximum allowed length is 50
               characters.</em>
-            <em *ngIf="validateControl('password') && hasError('password', 'minlength')">Minimum allowed length is 8
+            <em *ngIf="validateControl('password') && hasError('password',
+              'minlength')">Minimum allowed length is 8
               characters.</em>
           </div>
         </div>
@@ -28,16 +33,22 @@
         <div class="row">
           <div class="col-md-12 updateWell">
             <label for="confirmPassword" class="control-label">Confirm Password:</label>
-            <input confirmEqualsValidator type="password" formControlName="confirmPassword" id="confirmPassword" class="form-control" />
-            <em *ngIf="validateControl('confirmPassword') && hasError('confirmPassword', 'required')">Password
+            <input confirmEqualsValidator type="password"
+              formControlName="confirmPassword" id="confirmPassword"
+              class="form-control" />
+            <em *ngIf="validateControl('confirmPassword') &&
+              hasError('confirmPassword', 'required')">Password
               Confirmation Required</em>
-            <em *ngIf="validateControl('confirmPassword') && hasError('confirmPassword', 'maxlength')">Maximum allowed
-              length is 45
+            <em *ngIf="validateControl('confirmPassword') &&
+              hasError('confirmPassword', 'maxlength')">Maximum allowed
+              length is 50
               characters.</em>
-            <em *ngIf="validateControl('confirmPassword') && hasError('confirmPassword', 'minlength')">Minimum allowed
+            <em *ngIf="validateControl('confirmPassword') &&
+              hasError('confirmPassword', 'minlength')">Minimum allowed
               length is 8
               characters.</em>
-            <em *ngIf="validateControl('confirmPassword') && hasError('confirmPassword', 'notEqual')">Passwords
+            <em *ngIf="validateControl('confirmPassword') &&
+              hasError('confirmPassword', 'notEqual')">Passwords
               Missmatch</em>
           </div>
         </div>
@@ -55,7 +66,8 @@
         <div class="row">
           <div class="col-md-12 updateWell">
             <label for="active" class="control-label">Active: </label>
-            <select #tCode name="active" class="form-control" id="active" formControlName="active">
+            <select #tCode name="active" class="form-control" id="active"
+              formControlName="active">
               <option value="true" selected="selected">True</option>
               <option value="false">False</option>
             </select>
@@ -68,8 +80,10 @@
       <div class="form-group">
         <div class="row">
           <div class="col-md-12 updateWell">
-            <button type="submit" class="btn btnHc float-left" [disabled]="!userLoginForm.valid">Save</button>
-            <button type="button" class="btn btnHc float-right" (click)="redirectToUserLoginList()">Cancel</button>
+            <button type="submit" class="btn btnHc float-left"
+              [disabled]="!userLoginForm.valid">Save</button>
+            <button type="button" class="btn btnHc float-right"
+              (click)="redirectToUserLoginList()">Cancel</button>
           </div>
         </div>
       </div>
@@ -77,9 +91,9 @@
     </div>
   </form>
 
-  <app-success-modal [modalHeaderText]="'Update Successful'" [modalBodyText]="'User login information upddated successfully'"
+  <app-success-modal [modalHeaderText]="'Update Successful'"
+    [modalBodyText]="'User login information upddated successfully'"
     [okButtonText]="'OK'" (redirectOnOK)="redirectToUserLoginList()"></app-success-modal>
-
-  <app-error-modal [modalHeaderText]="'Error message'" [modalBodyText]="errorMessage" [okButtonText]="'OK'"></app-error-modal>
-
+  <app-error-modal [modalHeaderText]="'Error message'"
+    [modalBodyText]="errorMessage" [okButtonText]="'OK'"></app-error-modal>
 </div>
