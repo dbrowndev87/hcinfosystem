@@ -1,3 +1,11 @@
+/**
+ * Name: IDepartmentRepository
+ * Description: This is an interface to be implemented by all Departmetn Repositories, containing typical CRUD methods
+ *     for database interaction
+ * 
+ * Author: Nick Peconi/Darcy Brown
+ * Date: January 7th, 2019
+ */
 using System.Collections.Generic;
 using Entities.Models;
 

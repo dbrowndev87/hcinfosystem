@@ -1,3 +1,13 @@
+/**
+ * Name: User
+ * Description: This is a model class for a User object. This class uses data annotations to map the class
+ *         to a database table and attributes to database columns. It also uses the required, stringLength, and range
+ *         annotations for validation before inserting into the database. Theses annotations will match those restraints
+ *         from the Database.
+ * 
+ * Author: Nick Peconi/Darcy Brown
+ * Date: January 7th, 2019
+ */
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;

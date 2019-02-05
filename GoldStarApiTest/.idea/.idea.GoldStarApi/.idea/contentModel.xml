@@ -29,13 +29,11 @@
       <e p="Entities" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="Entities.csproj" t="IncludeRecursive" />
-        <e p="ExtendedModels" t="Include" />
         <e p="Extensions" t="Include">
           <e p="CourseExtensions.cs" t="Include" />
           <e p="DepartmentExtensions.cs" t="Include" />
           <e p="EnrollmentExtensions.cs" t="Include" />
           <e p="FacultyExtensions.cs" t="Include" />
-          <e p="IEntityExtensions.cs" t="Include" />
           <e p="SectionExtensions.cs" t="Include" />
           <e p="StudentExtensions.cs" t="Include" />
           <e p="TransactionExtensions.cs" t="Include" />
@@ -43,7 +41,6 @@
           <e p="UserLoginExtensions.cs" t="Include" />
           <e p="UserTypeCodeExtensions.cs" t="Include" />
         </e>
-        <e p="IEntity.cs" t="Include" />
         <e p="Models" t="Include">
           <e p="Course.cs" t="Include" />
           <e p="CourseInformation.cs" t="Include" />

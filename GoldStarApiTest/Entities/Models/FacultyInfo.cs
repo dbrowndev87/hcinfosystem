@@ -1,3 +1,12 @@
+/**
+ * Name: FacultyInformation
+ * Description: This is a model class for a FacultyInformation object. It is a combination of faculty and user objects
+ *         in order to get all course information into one object to be returned by an end point. This will
+ *         allow one api endpoint call to get all course information instead of making one for each object.
+ * 
+ * Author: Nick Peconi/Darcy Brown
+ * Date: January 7th, 2019
+ */
 using System;
 
 namespace Entities.Models

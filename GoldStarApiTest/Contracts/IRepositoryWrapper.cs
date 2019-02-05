@@ -1,3 +1,12 @@
+/**
+ * Name: IRepositoryWrapper
+ * Description: This is an interface that will hold all of the different types of interfaces to be used in the system.
+ *         It will essentially instantiate every type of repository interface by simply by simply instantiating this wrapper
+ *         interface class.
+ * 
+ * Author: Nick Peconi/Darcy Brown
+ * Date: January 7th, 2019
+ */
 using Repository;
 
 namespace Contracts

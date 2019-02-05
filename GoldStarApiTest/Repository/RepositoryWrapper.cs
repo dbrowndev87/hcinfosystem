@@ -1,3 +1,10 @@
+/**
+ * Name: RepositoryWrapper
+ * Description: This is a repository class that instantiates all of the IRepositoryWrapper objects. 
+ * 
+ * Author: Nick Peconi/Darcy Brown
+ * Date: January 7th, 2019
+ */
 using Contracts;
 using Entities;
 

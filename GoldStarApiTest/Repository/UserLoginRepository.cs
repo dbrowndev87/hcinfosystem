@@ -1,4 +1,12 @@
-using System;
+/**
+ * Name: UserLoginRepository
+ * Description: This is a repository class that implements all of the IUserLoginRepository methods which are basic methods that
+ *         give access to manipulate database information. This class will also call the repositoryBase methods for direct
+ *         manipulation of db data. 
+ * 
+ * Author: Nick Peconi/Darcy Brown
+ * Date: January 7th, 2019
+ */
 using System.Collections.Generic;
 using System.Linq;
 using Entities;
