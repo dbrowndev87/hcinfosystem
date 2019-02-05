@@ -22,3 +22,345 @@
 2019-02-05 09:17:04.4611 INFO Returned User with id: 1
 2019-02-05 09:18:02.4141 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
 2019-02-05 09:26:01.8624 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-05 10:59:44.5669 INFO Returned user with username: dbrown32066
+2019-02-05 10:59:44.9003 INFO Returned User with id: 1
+2019-02-05 11:00:04.0691 INFO Returned all users from database. System.Linq.OrderedEnumerable`2[Entities.Models.User,System.String]
+2019-02-05 11:00:50.4082 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-05 11:01:32.2971 INFO Returned user with username: testfaculty
+2019-02-05 11:01:32.3104 INFO Returned User with id: 3
+2019-02-05 11:01:32.3474 INFO Returned Faculty with id: 3
+2019-02-05 11:01:34.1323 INFO Returned Faculty with id: 1
+2019-02-05 11:01:34.2109 INFO Returned Department with id: 3
+2019-02-05 11:01:34.2299 INFO Returned Section with id: 1
+2019-02-05 11:01:47.3653 INFO Returned Faculty with id: 1
+2019-02-05 11:01:47.4050 INFO Returned Section with id: 1
+2019-02-05 11:01:47.4142 INFO Returned Department with id: 3
+2019-02-05 11:01:55.6032 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:01:55.6057 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:01:55.6057 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:01:55.6204 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:01:55.6225 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:01:55.6225 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:01:55.6238 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:01:55.6238 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:01:55.6275 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:01:55.6275 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:01:55.6458 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:01:55.6465 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:01:55.6465 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:01:55.6481 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:01:55.6517 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:01:55.6714 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:01:55.6714 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:01:55.6727 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:01:55.6714 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:01:55.6727 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:01:55.6759 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:01:55.6775 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:01:55.6775 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:01:55.6788 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:01:55.6794 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:01:55.6794 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:01:55.6804 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:01:57.7427 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:01:57.7433 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:02:03.6523 INFO Returned Faculty with id: 1
+2019-02-05 11:02:03.6745 INFO Returned Section with id: 1
+2019-02-05 11:02:03.6753 INFO Returned Department with id: 3
+2019-02-05 11:02:43.8855 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:02:43.8864 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:02:43.8864 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:02:43.8882 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:02:43.8882 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:02:43.8855 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:02:43.8897 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:02:43.8901 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:02:43.8901 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:02:43.8987 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:02:43.9006 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:02:43.9012 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:02:43.9012 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:02:43.9012 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:02:43.9012 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:02:43.9047 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:02:43.9051 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:02:43.9051 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:02:43.9062 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:02:43.9062 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:02:43.9062 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:02:43.8987 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:02:43.9085 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:02:43.9085 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:02:43.9093 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:02:43.9093 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:02:43.9102 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:02:46.4724 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:02:46.4724 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:02:53.3726 INFO Returned Faculty with id: 1
+2019-02-05 11:02:53.3892 INFO Returned Department with id: 3
+2019-02-05 11:02:53.3892 INFO Returned Section with id: 1
+2019-02-05 11:02:56.1508 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:02:56.1508 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:02:56.1554 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:02:56.1560 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:02:56.1560 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:02:56.1599 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:02:56.1599 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:02:56.1599 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:02:56.1611 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:02:56.1692 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:02:56.1698 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:02:56.1732 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:02:56.1739 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:02:56.1739 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:02:56.1748 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:02:56.1764 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:02:56.1770 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:02:56.1822 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:02:56.1822 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:02:56.1831 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:02:56.1848 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:02:56.1848 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:02:56.1848 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:02:56.1861 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:02:56.1861 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:02:56.1889 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:02:56.1889 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:02:59.0686 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:02:59.0693 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:04:06.4628 INFO Returned user with username: testfaculty
+2019-02-05 11:04:06.4755 INFO Returned User with id: 3
+2019-02-05 11:04:06.4867 INFO Returned Faculty with id: 3
+2019-02-05 11:04:08.3443 INFO Returned Faculty with id: 1
+2019-02-05 11:04:08.4214 INFO Returned Department with id: 3
+2019-02-05 11:04:08.4352 INFO Returned Section with id: 1
+2019-02-05 11:07:09.5408 INFO Returned user with username: teststudent
+2019-02-05 11:07:09.5553 INFO Returned User with id: 2
+2019-02-05 11:07:09.5809 INFO Returned Student with id: 2
+2019-02-05 11:07:11.4279 INFO Returned Student with id: 193820
+2019-02-05 11:07:11.4838 INFO Returned Department with id: 2
+2019-02-05 11:07:11.5289 INFO Returned all transactions from database. System.Linq.OrderedEnumerable`2[Entities.Models.Transaction,System.Int32]
+2019-02-05 11:07:11.5737 INFO Returned all Enrollments from database. 6
+2019-02-05 11:07:11.5906 INFO Returned all sections from database. 5
+2019-02-05 11:07:11.6313 INFO Returned all courses from database. 11
+2019-02-05 11:07:13.3846 INFO Returned Student with id: 193820
+2019-02-05 11:07:13.3959 INFO Returned Student with id: 193820
+2019-02-05 11:07:13.4051 INFO Returned all transactions from database. System.Linq.OrderedEnumerable`2[Entities.Models.Transaction,System.Int32]
+2019-02-05 11:07:14.0982 INFO Returned Student with id: 193820
+2019-02-05 11:07:14.1191 INFO Look Enrollment with id: 193820
+2019-02-05 11:07:14.1462 INFO Returned Enrollment with id: 193820
+2019-02-05 11:07:14.1648 INFO Returned Enrollment with id: 1
+2019-02-05 11:07:14.1760 INFO Returned All Section Course Information
+2019-02-05 11:07:14.9653 INFO Returned Student with id: 193820
+2019-02-05 11:07:14.9799 INFO Returned Department with id: 2
+2019-02-05 11:07:14.9855 INFO Returned all transactions from database. System.Linq.OrderedEnumerable`2[Entities.Models.Transaction,System.Int32]
+2019-02-05 11:07:15.0070 INFO Returned all Enrollments from database. 6
+2019-02-05 11:07:15.0264 INFO Returned all sections from database. 5
+2019-02-05 11:07:15.0392 INFO Returned all courses from database. 11
+2019-02-05 11:09:19.4565 INFO Returned user with username: testadmin
+2019-02-05 11:10:39.7854 INFO Returned user with username: dbrown32066
+2019-02-05 11:10:39.7962 INFO Returned User with id: 1
+2019-02-05 11:11:49.2941 INFO Returned user with username: testfaculty
+2019-02-05 11:11:49.3164 INFO Returned User with id: 3
+2019-02-05 11:11:49.3330 INFO Returned Faculty with id: 3
+2019-02-05 11:11:51.1742 INFO Returned Faculty with id: 1
+2019-02-05 11:11:51.1958 INFO Returned Department with id: 3
+2019-02-05 11:11:51.2026 INFO Returned Section with id: 1
+2019-02-05 11:12:06.4246 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:12:06.4265 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:12:06.4305 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:12:06.4305 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:12:06.4312 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:12:06.4381 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:12:06.4387 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:12:06.4393 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:12:06.4393 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:12:06.4549 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:12:06.4555 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:12:06.4555 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:12:06.4555 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:12:06.4562 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:12:06.4562 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:12:06.4572 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:12:06.4572 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:12:06.4585 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:12:06.4585 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:12:06.4595 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:12:06.4595 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:12:06.4595 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:12:06.4602 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:12:06.4562 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:12:06.4585 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:12:06.4615 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:12:06.4627 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:23:33.2197 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:23:33.2249 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:24:17.2833 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:24:17.3601 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:24:27.5161 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:24:27.5170 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:25:15.3914 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:25:15.3961 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:26:18.2443 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:26:18.2455 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:26:50.9682 INFO Returned Faculty with id: 1
+2019-02-05 11:26:50.9848 INFO Returned Section with id: 1
+2019-02-05 11:26:50.9980 INFO Returned Department with id: 3
+2019-02-05 11:26:55.2482 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:26:55.2488 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:26:55.2522 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:26:55.2522 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:26:55.2528 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:26:55.2540 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:26:55.2540 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:26:55.2528 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:26:55.2566 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:26:55.2653 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:26:55.2659 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:26:55.2659 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:26:55.2668 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:26:55.2668 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:26:55.2668 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:26:55.2676 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:26:55.2668 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:26:55.2698 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:26:55.2709 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:26:55.2709 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:26:55.2718 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:26:55.2718 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:26:55.3020 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:26:55.3026 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:26:55.3026 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:26:55.3026 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:26:55.3040 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:26:59.7588 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:26:59.7588 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:27:04.8445 INFO Returned Faculty with id: 1
+2019-02-05 11:27:04.8583 INFO Returned Section with id: 1
+2019-02-05 11:27:04.8596 INFO Returned Department with id: 3
+2019-02-05 11:27:07.8614 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:27:07.8614 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:27:07.8614 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:27:07.8626 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:27:07.8635 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:27:07.8697 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:27:07.8704 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:27:07.8704 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:27:07.8714 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:27:07.8697 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:27:07.8723 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:27:07.8733 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:27:07.8733 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:27:07.8733 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:27:07.8747 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:27:07.8697 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:27:07.8766 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:27:07.8766 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:27:07.8774 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:27:07.8774 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:27:07.8785 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:27:07.8785 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:27:07.8704 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:27:07.8836 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:27:07.8844 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:27:07.8844 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:27:07.8854 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:28:42.0286 INFO Returned Faculty with id: 1
+2019-02-05 11:28:42.0781 INFO Returned Department with id: 3
+2019-02-05 11:28:42.0838 INFO Returned Section with id: 1
+2019-02-05 11:29:46.6393 INFO Returned Faculty with id: 1
+2019-02-05 11:29:46.6851 INFO Returned Department with id: 3
+2019-02-05 11:29:46.6902 INFO Returned Section with id: 1
+2019-02-05 11:30:19.3521 INFO Returned Faculty with id: 1
+2019-02-05 11:30:19.3962 INFO Returned Department with id: 3
+2019-02-05 11:30:19.4035 INFO Returned Section with id: 1
+2019-02-05 11:30:23.7829 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:30:23.7835 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:30:23.7845 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:30:23.8710 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:30:23.8723 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:30:23.7859 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:30:23.8754 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:30:23.8742 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:30:23.8775 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:30:23.8775 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:30:23.8775 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:30:23.8754 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:30:23.7880 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:30:23.8800 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:30:23.8805 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:30:23.8770 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:30:23.8788 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:30:23.8824 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:30:23.8836 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:30:23.8819 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:30:23.8846 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:30:23.8856 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:30:23.8856 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:30:23.8819 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:30:23.8875 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:30:23.8836 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:30:23.8896 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:30:41.1031 INFO Returned Faculty with id: 1
+2019-02-05 11:30:41.1323 INFO Returned Department with id: 3
+2019-02-05 11:30:41.1323 INFO Returned Section with id: 1
+2019-02-05 11:30:43.0347 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:30:43.0358 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:30:43.0385 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:30:43.0392 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:30:43.0392 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:30:43.0407 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:30:43.0440 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:30:43.0440 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:30:43.0451 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:30:43.0451 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:30:43.0463 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:30:43.0469 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:30:43.0482 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:30:43.0482 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:30:43.0493 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:30:43.0493 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:30:43.0469 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:30:43.0564 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:30:43.0564 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:30:43.0576 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:30:43.0601 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:30:43.0440 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:30:43.0622 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:30:43.0622 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:30:43.0632 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:30:43.0652 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:30:43.0652 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:31:24.4720 INFO Returned Faculty with id: 1
+2019-02-05 11:31:24.5263 INFO Returned Department with id: 3
+2019-02-05 11:31:24.5302 INFO Returned Section with id: 1
+2019-02-05 11:31:26.5134 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:31:26.5139 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:31:26.5134 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:31:26.5153 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:31:26.5153 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:31:26.5153 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:31:26.5181 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:31:26.5181 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:31:26.5190 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:31:26.5206 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:31:26.5211 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:31:26.5211 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:31:26.5221 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:31:26.5221 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:31:26.5231 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:31:26.5211 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:31:26.5269 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:31:26.5269 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:31:26.5269 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:31:26.5281 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:31:26.5281 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:31:26.5290 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:31:26.5349 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:31:26.5349 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:31:26.5365 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:31:26.5372 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 11:31:26.5384 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 11:32:11.9171 INFO Returned Faculty with id: 1
+2019-02-05 11:32:11.9454 INFO Returned Department with id: 3
+2019-02-05 11:32:11.9454 INFO Returned Section with id: 1

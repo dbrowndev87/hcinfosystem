@@ -103,7 +103,8 @@ export class FacultyHomeComponent implements OnInit {
           this.subscriptions.push(this.repository.getData(apiAddress)
             .subscribe((enrollment: Enrollment) => {
 
-              this.enrollmentGrades[index] = enrollment.grade;
+              this.enrollments[index] = enrollment;
+
 
             },
               (error) => {
@@ -122,10 +123,6 @@ export class FacultyHomeComponent implements OnInit {
       };
   }
 
-  private getEnrollmentInfo() {
-
-
-  }
 
 
   public UpdateGrades(studentId) {
