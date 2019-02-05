@@ -8,6 +8,7 @@ import { StudentIdGenerator } from './tools/sidg';
 import { TransactionIdGenerator } from './tools/tidg';
 import { DataTablesModule, DataTableDirective } from 'angular-datatables';
 import { ConfirmModalComponent } from './modals/confirm-modal/confirm-modal.component';
+import { ReportIdGenerator } from './tools/ridg';
 
 @NgModule({
   imports: [
@@ -33,6 +34,7 @@ import { ConfirmModalComponent } from './modals/confirm-modal/confirm-modal.comp
     RandomUserPassGen,
     StudentIdGenerator,
     TransactionIdGenerator,
+    ReportIdGenerator
   ],
 
 

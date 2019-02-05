@@ -1,0 +1,27 @@
+.logoReport{
+    width: 200px;
+}
+
+.reportTable{
+    width: 100%;
+}
+
+.headerDiv{
+    background-color: silver;
+    color: black;
+    border: 1px black solid;
+    margin-bottom: 5px;
+}
+
+.courseDiv{
+    background-color: white;
+    border: 1px black solid; 
+    margin-bottom: 5px;
+}
+
+tr:nth-child(2n+2){
+    background-color: white !important;
+}
+tr:nth-child(2n+1){
+    background-color: #f0f0ee!important;
+}

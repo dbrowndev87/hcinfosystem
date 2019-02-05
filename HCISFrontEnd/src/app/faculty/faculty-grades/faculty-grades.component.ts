@@ -101,6 +101,7 @@ export class FacultyGradesComponent implements OnInit {
   public updateGrade(gradesForm) {
     if (this.studentGradesForm.valid) {
 
+      console.log(gradesForm.course_Status)
       let enrollment: Enrollment = {
         student_Id: this.studentEnrollment.student_Id,
         grade: gradesForm.grade,

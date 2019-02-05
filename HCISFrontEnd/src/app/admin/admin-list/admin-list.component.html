@@ -41,7 +41,7 @@
               <th>Option</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody *ngIf="users !== undefined">
             <tr *ngFor="let user of users">
               <td>{{user.user_Id}}</td>
               <td>{{user.first_Name}}</td>
@@ -50,6 +50,18 @@
               <td>{{user.address}}</td>
               <td>{{user.birth_Date | date: 'yyyy-MM-dd'}}</td>
               <td><button type="button" id="update" class="btn btnHc" (click)='redirectToUpdatePage(user.user_Id)'>Update</button></td>
+            </tr>
+          </tbody>
+          <tbody *ngIf="this.courses === undefined">
+            <tr>
+              <td colspan="7" class="bold text-center">
+                <div class="row">
+                  <div class="col-md-8 centerDiv">
+                    <img src="../../../assets/loading.gif" class="center-block imgLoading" />
+                    <h4 class="text-center">Loading</h4>
+                  </div>
+                </div>
+              </td>
             </tr>
           </tbody>
         </table>

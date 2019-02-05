@@ -46,8 +46,10 @@ export class CourseListComponent implements OnInit, OnDestroy {
       pageLength: 8
     };
 
-    this.getAllDepartments();
     this.getAllCourses();
+    this.getAllDepartments();
+    this.isLoaded = true;
+    console.log(this.courses);
   }
 
   public getAllCourses() {
@@ -56,12 +58,12 @@ export class CourseListComponent implements OnInit, OnDestroy {
       .subscribe(courses => {
         this.courses = courses as Course[];
         this.dtTrigger.next();
-      })),
-      // tslint:disable-next-line: no-unused-expression
-      (error) => {
-        this.errorHandler.handleError(error);
-        this.errorMessage = "Unable to access API";
-      };
+      },
+        // tslint:disable-next-line: no-unused-expression
+        (error) => {
+          this.errorHandler.handleError(error);
+          this.errorMessage = "Unable to access API";
+        }));
   }
 
   public getAllDepartments() {
@@ -69,14 +71,20 @@ export class CourseListComponent implements OnInit, OnDestroy {
     this.subscriptions.push(this.repository.getData(apiAddress)
       .subscribe(res => {
         this.depts = res as Department[];
+      },
+        // tslint:disable-next-line: no-unused-expression
+        (error) => {
+          this.errorHandler.handleError(error);
+          this.errorMessage = "Unable to access API";
+        },
+        // tslint:disable-next-line: no-unused-expression
+        () => {
+          this.loaded();
+        }));
+  }
 
-        this.isLoaded = true;
-      })),
-      // tslint:disable-next-line: no-unused-expression
-      (error) => {
-        this.errorHandler.handleError(error);
-        this.errorMessage = "Unable to access API";
-      };
+  private loaded() {
+    this.isLoaded = true;
   }
 
   ngOnDestroy(): void {

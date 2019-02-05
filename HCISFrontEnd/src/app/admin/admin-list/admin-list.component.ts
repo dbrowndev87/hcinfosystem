@@ -14,7 +14,6 @@ import { ErrorHandlerService } from 'src/app/shared/services/error-handler.servi
 import { Router } from '@angular/router';
 import { Subject, Subscription } from 'rxjs';
 
-
 @Component({
   selector: 'app-admin-list',
   templateUrl: './admin-list.component.html',
@@ -49,8 +48,6 @@ export class AdminListComponent implements OnInit, OnDestroy {
 
     // Get all users and departments
     this.getAllUsers();
-
-    // Set to loaded
     this.isLoaded = true;
   }
 
@@ -69,19 +66,20 @@ export class AdminListComponent implements OnInit, OnDestroy {
         // Assign observables
         this.users = observables as User[];
         this.dtTrigger.next();
-
         // Pick out the administration
         for (let x = 0; x < this.users.length; x++) {
           if (this.users[x].type_Code !== 1) {
             this.users.splice(x, x);
           }
         }
-      })),
-      // tslint:disable-next-line: no-unused-expression
-      (error) => {
-        this.errorHandler.handleError(error);
-        this.errorMessage = "Unable to access API";
-      };
+      },
+        // tslint:disable-next-line: no-unused-expression
+        (error) => {
+          this.errorHandler.handleError(error);
+          this.errorMessage = "Unable to access API";
+        }).add(() => {
+          // This is after finished
+        }));
   }
 
   ngOnDestroy(): void {
@@ -92,7 +90,6 @@ export class AdminListComponent implements OnInit, OnDestroy {
       subscription.unsubscribe();
     }
   }
-
 
   /**
    * Redirect method.

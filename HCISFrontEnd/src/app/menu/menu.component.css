@@ -101,6 +101,11 @@ a:active{
         top:20px;
     }
 
+    #divTopBar{
+        height: 130px !important;
+     }
+ 
+
     #logIn{
         float: none !important;
     }
@@ -109,4 +114,5 @@ a:active{
         float:none !important;
     }
   }
+
   

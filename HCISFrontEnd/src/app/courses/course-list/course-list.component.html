@@ -39,7 +39,7 @@
               <th>Options:</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody *ngIf="courses !== undefined">
             <tr *ngFor="let course of courses">
               <td>{{course.course_Id}}</td>
               <td>{{course.course_Name}}</td>
@@ -48,6 +48,18 @@
               </td>
               <td>{{course.credits}}</td>
               <td><button type="button" id="update" class="btn btnHc" (click)='redirectToUpdatePage(course.course_Id)'>Update</button></td>
+            </tr>
+          </tbody>
+          <tbody *ngIf="courses === undefined">
+            <tr>
+              <td colspan="5" class="bold text-center">
+                <div class="row">
+                  <div class="col-md-8 centerDiv">
+                    <img src="../../../assets/loading.gif" class="center-block imgLoading" />
+                    <h4 class="text-center">Loading</h4>
+                  </div>
+                </div>
+              </td>
             </tr>
           </tbody>
         </table>

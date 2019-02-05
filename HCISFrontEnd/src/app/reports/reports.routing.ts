@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuardAdmin } from '../login/authGuard';
 import { StudentListingComponent } from './student-listing/student-listing.component';
+import { CourseCatalogueReportComponent } from './course-catalogue-report/course-catalogue-report.component';
 
 const routes: Routes = [
     { path: 'reports/studentListing', component: StudentListingComponent, canActivate: [AuthGuardAdmin] },
-    { path: 'reports/courseCatalogue', component: CourseCatalogueComponent, canActivate: [AuthGuardAdmin] }
+    { path: 'reports/coursecatalogue', component: CourseCatalogueComponent, canActivate: [AuthGuardAdmin] },
+    { path: 'reports/coursecatalogue/report/:id', component: CourseCatalogueReportComponent, canActivate: [AuthGuardAdmin] }
 ];
 
 @NgModule({

@@ -46,6 +46,7 @@ export class FacultyListComponent implements OnInit, OnDestroy {
 
     this.getAllFacultysInfo();
     this.getAllDepartments();
+    this.isLoaded = true;
   }
 
   // Destroy subscriptions when done.
@@ -89,7 +90,6 @@ export class FacultyListComponent implements OnInit, OnDestroy {
     this.subscriptions.push(this.repository.getData(apiAddress)
       .subscribe(res => {
         this.depts = res as Department[];
-        this.isLoaded = true;
       })),
       // tslint:disable-next-line: no-unused-expression
       (error) => {

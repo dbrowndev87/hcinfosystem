@@ -29,7 +29,7 @@ export class EnrollmentListComponent implements OnInit, OnDestroy {
 
   private studentInfo: StudentInfo[];
   private enrollments: Enrollment[];
-  private enrollmentInfo: EnrollmentInfo[] = [];
+  private enrollmentInfo: EnrollmentInfo[];
   public errorMessage: String = "";
   private isLoaded = false;
 
@@ -70,6 +70,7 @@ export class EnrollmentListComponent implements OnInit, OnDestroy {
     this.subscriptions.push(this.repository.getData(apiAddress).pipe(
       map(enrollments => {
         // Assign the enrollements
+        this.enrollmentInfo = [];
         this.enrollments = enrollments as Enrollment[];
 
         // Get the student info

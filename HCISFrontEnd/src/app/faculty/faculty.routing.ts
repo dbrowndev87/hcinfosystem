@@ -9,8 +9,8 @@ import { FacultyHomeComponent } from './faculty-home/faculty-home.component';
 
 
 const routes: Routes = [
-    { path: 'faculty/list', component: FacultyListComponent, canActivate: [AuthGuardFaculty] },
-    { path: 'faculty/update/:id', component: FacultyUpdateComponent, canActivate: [AuthGuardFaculty] },
+    { path: 'faculty/list', component: FacultyListComponent, canActivate: [AuthGuardAdmin] },
+    { path: 'faculty/update/:id', component: FacultyUpdateComponent, canActivate: [AuthGuardAdmin] },
     { path: 'faculty/grades/:studentId/:sectionId', component: FacultyGradesComponent, canActivate: [AuthGuardFaculty] },
     { path: 'faculty/roster', component: FacultyRosterComponent, canActivate: [AuthGuardFaculty] },
     { path: 'faculty/home', component: FacultyHomeComponent, canActivate: [AuthGuardFaculty] }

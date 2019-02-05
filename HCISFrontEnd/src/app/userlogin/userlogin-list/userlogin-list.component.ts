@@ -13,6 +13,7 @@ import { ErrorHandlerService } from 'src/app/shared/services/error-handler.servi
 import { Router } from '@angular/router';
 import { Subject, Subscription } from 'rxjs';
 import { User } from 'src/app/_interfaces/user.model';
+import { HttpErrorResponse, HttpHeaderResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-userlogin-list',
@@ -29,6 +30,8 @@ export class UserloginListComponent implements OnInit, OnDestroy {
   public userLogins: UserLogin[];
   public errorMessage: String = "";
   public users: User[] = [];
+  public error: HttpHeaderResponse;
+  private loadingMessage = "Loading";
   private isLoaded = false;
 
   // Array for all the subscriptions
@@ -48,6 +51,7 @@ export class UserloginListComponent implements OnInit, OnDestroy {
 
     this.getAllUserLogins();
     this.getAllUsers();
+
     this.isLoaded = true;
   }
 
@@ -57,26 +61,29 @@ export class UserloginListComponent implements OnInit, OnDestroy {
       .subscribe(res => {
         this.userLogins = res as UserLogin[];
         this.dtTrigger.next();
-      })),
-      // tslint:disable-next-line: no-unused-expression
-      (error) => {
-        this.errorHandler.handleError(error);
-        this.errorMessage = this.errorHandler.errorMessage;
-      };
+      },
+        // tslint:disable-next-line: no-unused-expression
+        (error) => {
+          this.errorHandler.handleError(error);
+          this.errorMessage = this.errorHandler.errorMessage;
+          this.error = error;
+        }));
   }
+
 
   public getAllUsers() {
     let apiAddress = "api/user";
     this.subscriptions.push(this.repository.getData(apiAddress)
       .subscribe(res => {
         this.users = res as User[];
-      })),
-      // tslint:disable-next-line: no-unused-expression
-      (error) => {
-        this.errorHandler.handleError(error);
-        this.errorMessage = this.errorHandler.errorMessage;
-      };
+      },
+        // tslint:disable-next-line: no-unused-expression
+        (error) => {
+          this.errorHandler.handleError(error);
+          this.errorMessage = this.errorHandler.errorMessage;
+        }));
   }
+
 
 
 
@@ -89,12 +96,9 @@ export class UserloginListComponent implements OnInit, OnDestroy {
     }
   }
 
-
   public redirectToUpdatePage(username) {
     let updateUrl = `/userlogin/update/${username}`;
     this.router.navigate([updateUrl]);
   }
-
-
 
 }

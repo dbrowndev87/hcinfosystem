@@ -1,4 +1,5 @@
 <div class="container-fluid">
+
   <!-- Loading Bar -->
   <div *ngIf="!isLoaded">
     <div class="row">
@@ -13,50 +14,45 @@
   <div *ngIf="isLoaded" class="row">
     <div class=" col-md-8 centerDiv well">
       <div class="row">
-        <div class="col-md-4">
-          <h4 class="float-left">Course Catalogue Report</h4>
+        <div class="col-md-12">
+          <h4 class="text-center">Course Catalogue Report</h4>
         </div>
       </div>
     </div>
   </div>
   <div class="row">
-    <div class=" col-md-8 centerDiv well">
-      <div class="row">
-        <div class="col-md-4">
-          <h4 class="float-left">Departments</h4>
+    <div *ngIf="isLoaded">
+      <div class="col-md-8 centerDiv well">
+        <div class="row">
+          <div class="col-md-12">
+          </div>
         </div>
-         <div class=" col-md-4">
-    <select name="dept_Id" class="form-control" id="dept_Id" formControlName="dept_Id" #dCode>
-      <option *ngFor="let dept of depts;" value="{{dept.dept_Id}}">{{dept.dept_Id}}--{{dept.dept_Name}}</option>
-    </select>
-  </div>
-        <div class="col-md-8">
-          <button class="btn btnHc float-right" (click)="getCoursesByDeptId(dept.deptId)">Generate Report</button>
+        <div class="row">
+          <div class="col-md-12">
+            <h4 class="float-left">By Department</h4>
+            <form [formGroup]="courseCatalogueForm" autocomplete="off" novalidate (ngSubmit)="redirectToReport(courseCatalogueForm.value)">
+              <select name="dept_Id" class="form-control" id="dept_Id" formControlName="dept_Id" #dCode>
+                <option *ngFor="let dept of depts;" value="{{dept.dept_Id}}">{{dept.dept_Name}}</option>
+              </select>
+              <em *ngIf="validateControl('dept_Id') && hasError('dept_Id', 'required')">You must choose a Department</em>
+              <br>
+              <button type="submit" class="btn btnHc float-left" [disabled]="!courseCatalogueForm.valid">Generate
+                Report</button>
+            </form>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-md-12">
+            <h4 class="float-left">All Departments</h4>
+            <br>
+            <br>
+            <button class="btn btnHc float-left" (click)="redirectToAllReport(0)">Generate
+              Report</button>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
- 
-  <div *ngIf="isLoaded" class="row">
-    <div class="col-md-8 centerDiv well">
-      <div class="table-responsive table-striped">
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th style="width: 5%">Course Id</th>
-              <th style="width: 5%">Course Name</th>
-              <th style="width: 5%">Credits</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let course of courses">
-              <td>{{course.course_Id}}</td>
-              <td>{{course.course_Name}}</td>
-              <td>{{course.credits}}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+
     </div>
   </div>
 </div>
