@@ -1,3 +1,89 @@
-<p>
-  admin-home works!
-</p>
+<div class="container-fluid">
+  <div class="col-md-12">
+
+    <!-- Loading Bar -->
+    <div *ngIf="!isLoaded">
+      <div class="row">
+        <div class="col-md-10 centerDiv well">
+          <img src="../../../assets/loading.gif" class="center-block imgLoading" />
+          <h4 class="text-center">Loading</h4>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="typeCode === 1 && isLoaded" class="row">
+
+
+      <div id="aSidebar" class="col-md-offset-1 col-md-3 col-lg-3 well">
+
+
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-lg-12">
+            <hr>
+            <h4 class="text-center">Create User</h4>
+            <hr>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <ol class="float-left">
+              <li><a [routerLink]="['/user/create/3']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Create
+                  Student</a></li>
+              <li><a [routerLink]="['/user/create/2']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Create
+                  Faculty</a></li>
+              <li><a [routerLink]="['/user/create/1']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Create
+                  Admin</a></li>
+            </ol>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <hr>
+            <h4 class="text-center">Data Lists</h4>
+            <hr>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <ol class="float-left">
+              <li><a [routerLink]="['/userlogin/list']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">User
+                  Login List</a></li>
+              <li><a [routerLink]="['/admin/list']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Admin
+                  List</a></li>
+              <li><a [routerLink]="['/faculty/list']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Faculty
+                  List</a></li>
+              <li><a [routerLink]="['/student/list']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Student
+                  List</a></li>
+              <li><a [routerLink]="['/course/list']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Course
+                  List</a></li>
+              <li><a [routerLink]="['/enrollment/list']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                  Enrollment List</a></li>
+              <li><a [routerLink]="['/section/list']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                  Section List</a></li>
+              <li><a [routerLink]="['/department/list']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                  Department List</a></li>
+            </ol>
+          </div>
+        </div>
+        <div class="padding"></div>
+        <hr>
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-lg-12 logOut text-center">
+            <a [routerLink]="['/logout']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+              Log Out</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div id="aContent" class="col-md-offset-1 col-md-6 col-lg-6 well text-center">
+          <img class="adminImage img-responsive" src="../../../assets/admin.png">
+        </div>
+
+
+      </div>
+    </div>
+
+
+  </div>
+</div>

@@ -1,0 +1,55 @@
+#aSidebar{
+    height: 750px;
+}
+
+a{
+    color: black !important;
+}
+
+ol{
+    list-style: none;
+    margin: none !important;
+    padding: none !important;
+    width: 100% !important;
+}
+
+li{
+    margin: none !important;
+    width: 100% !important;
+}
+
+.row{
+padding: none !important;
+}
+
+.logOut{
+    position: relative;
+    bottom: 10px;
+    width: 100%;
+}
+
+.adminImage{
+    height: 710px !important;
+    width: 1000px !important;
+    opacity: .8;
+    border: 1px black solid;
+    border-radius: 6px;
+}
+
+.padding{
+    height: 230px;
+}
+
+.aContent{
+    height: 750px !important;
+}
+
+@media only screen and (max-width: 983px) {
+    .padding{
+        height: 20px;
+    }
+    
+    #aSidebar{
+        height: 550px;
+    }
+  }

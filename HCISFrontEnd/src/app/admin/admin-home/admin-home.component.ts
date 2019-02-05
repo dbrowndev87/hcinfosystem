@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminHomeComponent implements OnInit {
 
+  private isLoaded;
+  private typeCode;
+
   constructor() { }
 
   ngOnInit() {
+    this.typeCode = parseInt(sessionStorage.getItem('typeCode'), 0);
+    this.isLoaded = true;
   }
 
 }
