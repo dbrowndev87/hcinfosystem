@@ -1,4 +1,5 @@
 <div class="container-fluid">
+
   <!-- Loading Bar -->
   <div *ngIf="!isLoaded">
     <div class="row">
@@ -13,49 +14,45 @@
   <div *ngIf="isLoaded" class="row">
     <div class=" col-md-8 centerDiv well">
       <div class="row">
-        <div class="col-md-4">
-          <h4 class="float-left">Student Listing Report</h4>
+        <div class="col-md-12">
+          <h4 class="text-center">Student Listing Report</h4>
         </div>
       </div>
     </div>
   </div>
-  <div class=" col-md-2 centerDiv well">
-    <select name="course_Id" class="form-control" id="sourse_Id" formControlName="course_Id" #dCode>
-      <option *ngFor="let course of courses;" value="{{course.course_Id}}">{{course.course_Id}}--{{course.course_Name}}</option>
-    </select>
-  </div>
-  <div *ngIf="isLoaded" class="row">
-    <div class="col-md-8 centerDiv well">
-      <div class="table-responsive table-striped">
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th style="width: 5%">ID</th>
-              <th style="width: 5%">Status</th>
-              <th style="width: 5%">GPA</th>
-              <th style="width: 10%">Amount Due</th>
-              <th style="width: 10%">First Name</th>
-              <th style="width: 10%">Last Name</th>
-              <th style="width: 15%">E-Mail</th>
-              <th style="width: 17.5%">Program</th>
-              <th style="width: 5%">Option</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let student of studentsInfo">
-              <td>{{student.student_Id}}</td>
-              <td>{{student.student_Status}}</td>
-              <td>{{student.gpa}}</td>
-              <td>{{student.amount_Owing}}</td>
-              <td>{{student.first_Name}}</td>
-              <td>{{student.last_Name}}</td>
-              <td>{{student.eMail}}</td>
-              <td *ngIf="isLoaded">{{depts[(student.dept_Id - 1)].dept_Name}}</td>
-              <td><button type="button" id="update" class="btn btnHc" (click)='redirectToUpdatePage(student.student_Id)'>Update</button></td>
-            </tr>
-          </tbody>
-        </table>
+  <div class="row">
+    <div *ngIf="isLoaded">
+      <div class="col-md-8 centerDiv well">
+        <div class="row">
+          <div class="col-md-12">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <h4 class="float-left">By Course</h4>
+            <form [formGroup]="studentListingForm" autocomplete="off" novalidate (ngSubmit)="redirectToReport(studentListingForm.value)">
+              <select name="course_Id" class="form-control" id="course_Id" formControlName="course_Id">
+                <option *ngFor="let course of courses;" value="{{course.course_Id}}">{{course.course_Name}}</option>
+              </select>
+              <em *ngIf="validateControl('course_Id') && hasError('course_Id', 'required')">You must choose a Course</em>
+              <br>
+              <button type="submit" class="btn btnHc float-left" [disabled]="!studentListingForm.valid">Generate
+                Report</button>
+            </form>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-md-12">
+            <h4 class="float-left">All Courses</h4>
+            <br>
+            <br>
+            <button class="btn btnHc float-left" (click)="redirectToAllReport(0)">Generate
+              Report</button>
+          </div>
+        </div>
       </div>
+
     </div>
   </div>
 </div>

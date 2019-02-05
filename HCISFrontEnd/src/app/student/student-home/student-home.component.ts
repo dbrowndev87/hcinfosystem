@@ -12,8 +12,6 @@ import { Router } from '@angular/router';
 import { RepositoryService } from 'src/app/shared/services/repository.service';
 import { ErrorHandlerService } from 'src/app/shared/services/error-handler.service';
 
-// TODO: After dropping a course the number of enrollments does not change unless the
-// page is reloaded
 @Component({
   selector: 'app-student-home',
   templateUrl: './student-home.component.html',
@@ -27,6 +25,7 @@ export class StudentHomeComponent implements OnInit {
   private typeCode: number;
   private isLoaded = false;
   private errorMessage = "";
+  private enrollmentCount = 0;
   private successHeader;
   private successMessage;
 
@@ -69,6 +68,7 @@ export class StudentHomeComponent implements OnInit {
     this.sectionToDrop = section;
     $('#confirmModal').modal();
   }
+
 
   // if they pick yes on the dialog
   private studentDropCourse(sectionToDrop: SectionInfo) {
@@ -132,6 +132,9 @@ export class StudentHomeComponent implements OnInit {
               this.errorMessage = "Unable to access API";
             })
           ));
+
+        // Update the view.
+        this.enrollmentCount--;
 
         // Success message and modal.
         this.successHeader = "Drop Course";
@@ -201,6 +204,7 @@ export class StudentHomeComponent implements OnInit {
                       if (tempEnroll[x].student_Id === this.studentInfo.student_Id) {
                         if (tempEnroll[x].course_Status !== "Dropped") {
                           this.enrollments.push(tempEnroll[x]);
+                          this.enrollmentCount++;
                         }
                       }
                     }

@@ -7,6 +7,10 @@ import { Section } from 'src/app/_interfaces/section.model';
 import { Course } from "src/app/_interfaces/course.model";
 import { FacultyInfo } from 'src/app/_interfaces/facultyInfo.model';
 import { Subscription } from 'rxjs';
+import { Semesters } from 'src/app/shared/tools/semesters';
+
+// TODO: Semester Dropdown (Summer, Spring, Fall)
+// TODO: Sates showing up white?
 
 @Component({
   selector: 'app-section-create',
@@ -22,8 +26,8 @@ export class SectionCreateComponent implements OnInit, OnDestroy {
   public designations = new Array("A", "B", "C", "L");
   public faculty: FacultyInfo[];
   public courses: Course[];
+  private semesters = new Semesters();
   private isLoaded = false;
-  @ViewChild('dCode') dCode: ElementRef;
 
   // Array for all the subscriptions
   private subscriptions: Subscription[] = [];
@@ -46,7 +50,30 @@ export class SectionCreateComponent implements OnInit, OnDestroy {
       vacancy: new FormControl('', [Validators.required, Validators.max(100)]),
     });
 
+    let start_Date;
+    let end_Date;
+
+    // Patch current semester
+    this.sectionForm.get('semester').patchValue(this.semesters.getNextSemester().nextSemester);
+
+    // Get current dats based on semester
+    if (this.semesters.getCurrentSemester().semester === "Summer") {
+      start_Date = this.semesters.getSemesters().SummerStart;
+      end_Date = this.semesters.getSemesters().SummerEnd;
+    } else if (this.semesters.getCurrentSemester().semester === "Spring") {
+      start_Date = this.semesters.getSemesters().SpringStart;
+      end_Date = this.semesters.getSemesters().SpringEnd;
+    } else if (this.semesters.getCurrentSemester().semester === "Fall") {
+      start_Date = this.semesters.getSemesters().FallStart;
+      end_Date = this.semesters.getSemesters().FallEnd;
+    }
+
+    // patch current dates
+    this.sectionForm.get('start_Date').patchValue(start_Date);
+    this.sectionForm.get('end_Date').patchValue(end_Date);
+
     this.userType = parseInt(sessionStorage.getItem('typeCode'), 0);
+
     this.getAllCourses();
     this.getAllFaculty();
     this.isLoaded = true;

@@ -95,9 +95,10 @@
 
 
                                                         <!-- Admin Reports -->
-                                                        <li *ngIf="loggedIn && typeCode === 1"><a [routerLink]="['/faculty/grades']"
+                                                        <li *ngIf="loggedIn && typeCode === 1"><a [routerLink]="['/reports/studentlisting']"
                                                                         routerLinkActive="active"
-                                                                        [routerLinkActiveOptions]="{exact: true}">Grades</a></li>
+                                                                        [routerLinkActiveOptions]="{exact: true}">Student
+                                                                        Listing</a></li>
                                                         <li *ngIf="loggedIn && typeCode === 1"><a [routerLink]="['/reports/coursecatalogue']"
                                                                         routerLinkActive="active"
                                                                         [routerLinkActiveOptions]="{exact: true}">Course

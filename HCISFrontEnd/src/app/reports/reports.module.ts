@@ -7,12 +7,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from '../shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+import { StudentListingReportComponent } from './student-listing-report/student-listing-report.component';
 
 @NgModule({
   declarations: [
     StudentListingComponent,
     CourseCatalogueComponent,
-    CourseCatalogueReportComponent
+    CourseCatalogueReportComponent,
+    StudentListingReportComponent
   ],
   imports: [
     CommonModule,

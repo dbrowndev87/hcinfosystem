@@ -13,8 +13,7 @@ import { Semesters } from 'src/app/shared/tools/semesters';
 import { Student } from 'src/app/_interfaces/student.model';
 
 
-// TODO: Need to change the course count getting 5 resistered courses when there are 
-// TODO: suppose to be 0, not actually checking the database
+
 @Component({
   selector: 'app-student-register',
   templateUrl: './student-register.component.html',
@@ -234,29 +233,28 @@ export class StudentRegisterComponent implements OnInit, OnDestroy {
         ));
     });
 
-    // Charge then 4000 if its their first 4 or above courses
-    if ((this.enrollmentCount + this.droppedCourses) <= 4) {
 
-      // Update the enrollment to dropped
-      let apiUrlStudent = `api/student/` + this.studentInfo.student_Id;
-      // set the student object and add the vacancy back
-      let tempStudent: Student = {
-        amount_Owing: this.studentInfo.amount_Owing += 4000,
-        gpa: this.studentInfo.gpa,
-        student_Id: this.studentInfo.student_Id,
-        student_Status: this.studentInfo.student_Status,
-        user_id: this.studentInfo.user_Id
-      };
 
-      // Update the section object
-      this.subscriptions.push(this.repository.update(apiUrlStudent, tempStudent)
-        .subscribe(res => { },
-          (error => {
-            this.errorHandler.handleError(error);
-            this.errorMessage = "Unable to access API";
-          })
-        ));
-    }
+    // Update the enrollment to dropped
+    let apiUrlStudent = `api/student/` + this.studentInfo.student_Id;
+    // set the student object and add the vacancy back
+    let tempStudent: Student = {
+      amount_Owing: this.studentInfo.amount_Owing += (this.sectionsRegister.length * 1000),
+      gpa: this.studentInfo.gpa,
+      student_Id: this.studentInfo.student_Id,
+      student_Status: this.studentInfo.student_Status,
+      user_id: this.studentInfo.user_Id
+    };
+
+    // Update the section object
+    this.subscriptions.push(this.repository.update(apiUrlStudent, tempStudent)
+      .subscribe(res => { },
+        (error => {
+          this.errorHandler.handleError(error);
+          this.errorMessage = "Unable to access API";
+        })
+      ));
+
 
 
   }
