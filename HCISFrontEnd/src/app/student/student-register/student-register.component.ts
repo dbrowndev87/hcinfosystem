@@ -13,7 +13,8 @@ import { Semesters } from 'src/app/shared/tools/semesters';
 import { Student } from 'src/app/_interfaces/student.model';
 
 
-
+// TODO: Need to change the course count getting 5 resistered courses when there are 
+// TODO: suppose to be 0, not actually checking the database
 @Component({
   selector: 'app-student-register',
   templateUrl: './student-register.component.html',

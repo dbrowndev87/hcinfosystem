@@ -70,6 +70,7 @@ export class FacultyHomeComponent implements OnInit {
    * Get faculty Info
    ************************/
 
+
   public getFacultyInfo() {
 
     let apiAddressFaculty = "api/facultyinfo/" + sessionStorage.getItem("facultyId");

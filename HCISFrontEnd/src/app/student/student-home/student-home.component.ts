@@ -12,6 +12,8 @@ import { Router } from '@angular/router';
 import { RepositoryService } from 'src/app/shared/services/repository.service';
 import { ErrorHandlerService } from 'src/app/shared/services/error-handler.service';
 
+// TODO: After dropping a course the number of enrollments does not change unless the
+// page is reloaded
 @Component({
   selector: 'app-student-home',
   templateUrl: './student-home.component.html',
