@@ -8,13 +8,17 @@ import { SharedModule } from '../shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { StudentListingReportComponent } from './student-listing-report/student-listing-report.component';
+import { FacultyCoursesComponent } from './faculty-courses/faculty-courses.component';
+import { FacultyCoursesReportComponent } from './faculty-courses-report/faculty-courses-report.component';
 
 @NgModule({
   declarations: [
     StudentListingComponent,
     CourseCatalogueComponent,
     CourseCatalogueReportComponent,
-    StudentListingReportComponent
+    StudentListingReportComponent,
+    FacultyCoursesComponent,
+    FacultyCoursesReportComponent
   ],
   imports: [
     CommonModule,

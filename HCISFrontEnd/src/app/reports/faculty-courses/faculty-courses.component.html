@@ -1,0 +1,64 @@
+<div class="container-fluid">
+
+  <!-- Loading Bar -->
+  <div *ngIf="!isLoaded">
+    <div class="row">
+      <div class="col-md-8 centerDiv well">
+        <img src="../../../assets/loading.gif" class="center-block imgLoading"
+          />
+        <h4 class="text-center">Loading</h4>
+      </div>
+    </div>
+  </div>
+
+  <!-- HC Well Button -->
+  <div *ngIf="isLoaded" class="row">
+    <div class="col-md-8 centerDiv well">
+      <div class="row">
+        <div class="col-md-12">
+          <h4 class="text-center">Faculty Report</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div *ngIf="isLoaded">
+      <div class="col-md-8 centerDiv well">
+        <div class="row">
+          <div class="col-md-12">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <h4 class="float-left">By Department</h4>
+            <form [formGroup]="facultyReportForm" autocomplete="off" novalidate
+              (ngSubmit)="redirectToReport(facultyReportForm.value)">
+              <select name="dept_Id" class="form-control" id="dept_Id"
+                formControlName="dept_Id" #dCode>
+                <option *ngFor="let dept of depts;" value="{{dept.dept_Id}}">{{dept.dept_Name}}</option>
+              </select>
+              <em *ngIf="validateControl('dept_Id') && hasError('dept_Id',
+                'required')">You must choose a Department</em>
+              <br>
+              <button type="submit" class="btn btnHc float-left"
+                [disabled]="!facultyReportForm.valid">Generate
+                Report</button>
+            </form>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-md-12">
+            <h4 class="float-left">All Departments</h4>
+            <br>
+            <br>
+            <button class="btn btnHc float-left"
+              (click)="redirectToAllReport(0)">Generate
+              Report</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

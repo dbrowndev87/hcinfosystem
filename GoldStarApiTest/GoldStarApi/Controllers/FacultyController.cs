@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using Contracts;
 using Entities.Extensions;
@@ -13,6 +14,7 @@ namespace GoldStarApi.Controllers
     {
         private ILoggerManager _logger;
         private IRepositoryWrapper _repository;
+        private List<Faculty> _allFacultyByDept;
         
         public FacultyController(ILoggerManager logger, IRepositoryWrapper repository)
         {
@@ -74,6 +76,8 @@ namespace GoldStarApi.Controllers
                 return StatusCode(500, "Internal server error");
             }
         }
+        
+        
         
         [HttpGet("{id}", Name ="FacultyById")]
         public IActionResult GetFacultyById(int id)

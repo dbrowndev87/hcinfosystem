@@ -10,12 +10,13 @@ import { FacultyHomeComponent } from './faculty-home/faculty-home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
+
 @NgModule({
   declarations: [
     FacultyListComponent,
     FacultyUpdateComponent,
     FacultyGradesComponent,
-    FacultyHomeComponent
+    FacultyHomeComponent,
   ],
   imports: [
     CommonModule,

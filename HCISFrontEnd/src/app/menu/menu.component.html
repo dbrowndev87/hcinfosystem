@@ -1,11 +1,14 @@
 <div class="container-fluid">
         <div class="row">
-                <nav class="navbar navbar-inverse navbar-static-top" id="topBar" role="navigation">
+                <nav class="navbar navbar-inverse navbar-static-top" id="topBar"
+                        role="navigation">
                         <div id="divTopBar" class="col-lg-12 text-center">
                                 <img src="../../assets/Logo1.png" id="logo">
                         </div>
                         <div *ngIf="loggedIn" class="navbar-header">
-                                <button type="button" id="hbb" class="navbar-toggle collapsed" data-toggle="collapse"
+                                <button type="button" id="hbb"
+                                        class="navbar-toggle collapsed"
+                                        data-toggle="collapse"
                                         data-target="#bs-example-navbar-collapse-1">
                                         <span class="sr-only">Toggle navigation</span>
                                         <span class="icon-bar"></span>
@@ -18,92 +21,168 @@
                                 <br>
                                 <br>
                         </div>
-                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <div class="collapse navbar-collapse"
+                                id="bs-example-navbar-collapse-1">
                                 <ul class="nav navbar-nav">
-                                        <li *ngIf="loggedIn && typeCode === 1"><a [routerLink]="['/admin/home']"
-                                                        routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
-                                        <li *ngIf="loggedIn && typeCode === 2"><a [routerLink]="['/faculty/home']"
-                                                        routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
-                                        <li *ngIf="loggedIn && typeCode === 3"><a [routerLink]="['/student/home']"
-                                                        routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
+                                        <li *ngIf="loggedIn && typeCode === 1"><a
+                                                        [routerLink]="['/admin/home']"
+                                                        routerLinkActive="active"
+                                                        [routerLinkActiveOptions]="{exact:
+                                                        true}">Home</a></li>
+                                        <li *ngIf="loggedIn && typeCode === 2"><a
+                                                        [routerLink]="['/faculty/home']"
+                                                        routerLinkActive="active"
+                                                        [routerLinkActiveOptions]="{exact:
+                                                        true}">Home</a></li>
+                                        <li *ngIf="loggedIn && typeCode === 3"><a
+                                                        [routerLink]="['/student/home']"
+                                                        routerLinkActive="active"
+                                                        [routerLinkActiveOptions]="{exact:
+                                                        true}">Home</a></li>
                                         <!-- Administrator Links -->
-                                        <li class="dropdown" *ngIf="loggedIn && typeCode === 1">
-                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                                        aria-haspopup="true" aria-expanded="false">Create User<span
+                                        <li class="dropdown" *ngIf="loggedIn &&
+                                                typeCode === 1">
+                                                <a href="#"
+                                                        class="dropdown-toggle"
+                                                        data-toggle="dropdown"
+                                                        role="button"
+                                                        aria-haspopup="true"
+                                                        aria-expanded="false">Create
+                                                        User<span
                                                                 class="caret"></span></a>
                                                 <ul class="dropdown-menu">
-                                                        <li *ngIf="loggedIn && typeCode === 1"><a [routerLink]="['/user/create/3']"
+                                                        <li *ngIf="loggedIn &&
+                                                                typeCode === 1"><a
+                                                                        [routerLink]="['/user/create/3']"
                                                                         routerLinkActive="active"
-                                                                        [routerLinkActiveOptions]="{exact: true}">Create
+                                                                        [routerLinkActiveOptions]="{exact:
+                                                                        true}">Create
                                                                         Student</a></li>
-                                                        <li *ngIf="loggedIn && typeCode === 1"><a [routerLink]="['/user/create/2']"
+                                                        <li *ngIf="loggedIn &&
+                                                                typeCode === 1"><a
+                                                                        [routerLink]="['/user/create/2']"
                                                                         routerLinkActive="active"
-                                                                        [routerLinkActiveOptions]="{exact: true}">Create
+                                                                        [routerLinkActiveOptions]="{exact:
+                                                                        true}">Create
                                                                         Faculty</a></li>
-                                                        <li *ngIf="loggedIn && typeCode === 1"><a [routerLink]="['/user/create/1']"
+                                                        <li *ngIf="loggedIn &&
+                                                                typeCode === 1"><a
+                                                                        [routerLink]="['/user/create/1']"
                                                                         routerLinkActive="active"
-                                                                        [routerLinkActiveOptions]="{exact: true}">Create
+                                                                        [routerLinkActiveOptions]="{exact:
+                                                                        true}">Create
                                                                         Admin</a></li>
                                                 </ul>
                                         </li>
-                                        <li class="dropdown" *ngIf="loggedIn && typeCode === 1">
-                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                                        aria-haspopup="true" aria-expanded="false">View Lists<span
+                                        <li class="dropdown" *ngIf="loggedIn &&
+                                                typeCode === 1">
+                                                <a href="#"
+                                                        class="dropdown-toggle"
+                                                        data-toggle="dropdown"
+                                                        role="button"
+                                                        aria-haspopup="true"
+                                                        aria-expanded="false">View
+                                                        Lists<span
                                                                 class="caret"></span></a>
                                                 <ul class="dropdown-menu">
-                                                        <li *ngIf="loggedIn && typeCode === 1"><a [routerLink]="['/userlogin/list']"
+                                                        <li *ngIf="loggedIn &&
+                                                                typeCode === 1"><a
+                                                                        [routerLink]="['/userlogin/list']"
                                                                         routerLinkActive="active"
-                                                                        [routerLinkActiveOptions]="{exact: true}">User
-                                                                        Login List</a></li>
-                                                        <li *ngIf="loggedIn && typeCode === 1"><a [routerLink]="['/admin/list']"
-                                                                        routerLinkActive="active"
-                                                                        [routerLinkActiveOptions]="{exact: true}">Admin
+                                                                        [routerLinkActiveOptions]="{exact:
+                                                                        true}">User
+                                                                        Login
                                                                         List</a></li>
-                                                        <li *ngIf="loggedIn && typeCode === 1"><a [routerLink]="['/faculty/list']"
+                                                        <li *ngIf="loggedIn &&
+                                                                typeCode === 1"><a
+                                                                        [routerLink]="['/admin/list']"
                                                                         routerLinkActive="active"
-                                                                        [routerLinkActiveOptions]="{exact: true}">Faculty
+                                                                        [routerLinkActiveOptions]="{exact:
+                                                                        true}">Admin
                                                                         List</a></li>
-                                                        <li *ngIf="loggedIn && typeCode === 1"><a [routerLink]="['/student/list']"
+                                                        <li *ngIf="loggedIn &&
+                                                                typeCode === 1"><a
+                                                                        [routerLink]="['/faculty/list']"
                                                                         routerLinkActive="active"
-                                                                        [routerLinkActiveOptions]="{exact: true}">Student
+                                                                        [routerLinkActiveOptions]="{exact:
+                                                                        true}">Faculty
                                                                         List</a></li>
-                                                        <li *ngIf="loggedIn && typeCode === 1"><a [routerLink]="['/course/list']"
+                                                        <li *ngIf="loggedIn &&
+                                                                typeCode === 1"><a
+                                                                        [routerLink]="['/student/list']"
                                                                         routerLinkActive="active"
-                                                                        [routerLinkActiveOptions]="{exact: true}">Course
+                                                                        [routerLinkActiveOptions]="{exact:
+                                                                        true}">Student
                                                                         List</a></li>
-                                                        <li *ngIf="loggedIn && typeCode === 1"><a [routerLink]="['/enrollment/list']"
+                                                        <li *ngIf="loggedIn &&
+                                                                typeCode === 1"><a
+                                                                        [routerLink]="['/course/list']"
                                                                         routerLinkActive="active"
-                                                                        [routerLinkActiveOptions]="{exact: true}">
-                                                                        Enrollment List</a></li>
-                                                        <li *ngIf="loggedIn && typeCode === 1"><a [routerLink]="['/section/list']"
+                                                                        [routerLinkActiveOptions]="{exact:
+                                                                        true}">Course
+                                                                        List</a></li>
+                                                        <li *ngIf="loggedIn &&
+                                                                typeCode === 1"><a
+                                                                        [routerLink]="['/enrollment/list']"
                                                                         routerLinkActive="active"
-                                                                        [routerLinkActiveOptions]="{exact: true}">
-                                                                        Section List</a></li>
-                                                        <li *ngIf="loggedIn && typeCode === 1"><a [routerLink]="['/department/list']"
+                                                                        [routerLinkActiveOptions]="{exact:
+                                                                        true}">
+                                                                        Enrollment
+                                                                        List</a></li>
+                                                        <li *ngIf="loggedIn &&
+                                                                typeCode === 1"><a
+                                                                        [routerLink]="['/section/list']"
                                                                         routerLinkActive="active"
-                                                                        [routerLinkActiveOptions]="{exact: true}">
-                                                                        Department List</a></li>
+                                                                        [routerLinkActiveOptions]="{exact:
+                                                                        true}">
+                                                                        Section
+                                                                        List</a></li>
+                                                        <li *ngIf="loggedIn &&
+                                                                typeCode === 1"><a
+                                                                        [routerLink]="['/department/list']"
+                                                                        routerLinkActive="active"
+                                                                        [routerLinkActiveOptions]="{exact:
+                                                                        true}">
+                                                                        Department
+                                                                        List</a></li>
                                                 </ul>
                                         </li>
 
                                         <!-- Reports start here  -->
-                                        <li class="dropdown" *ngIf="loggedIn && typeCode === 1">
-                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                                        aria-haspopup="true" aria-expanded="false">Reports<span class="caret"></span></a>
+                                        <li class="dropdown" *ngIf="loggedIn &&
+                                                typeCode === 1">
+                                                <a href="#"
+                                                        class="dropdown-toggle"
+                                                        data-toggle="dropdown"
+                                                        role="button"
+                                                        aria-haspopup="true"
+                                                        aria-expanded="false">Reports<span
+                                                                class="caret"></span></a>
                                                 <ul class="dropdown-menu">
                                                         <!-- Faculty Reports -->
-
-
                                                         <!-- Admin Reports -->
-                                                        <li *ngIf="loggedIn && typeCode === 1"><a [routerLink]="['/reports/studentlisting']"
+                                                        <li *ngIf="loggedIn &&
+                                                                typeCode === 1"><a
+                                                                        [routerLink]="['/reports/studentlisting']"
                                                                         routerLinkActive="active"
-                                                                        [routerLinkActiveOptions]="{exact: true}">Student
+                                                                        [routerLinkActiveOptions]="{exact:
+                                                                        true}">Student
                                                                         Listing</a></li>
-                                                        <li *ngIf="loggedIn && typeCode === 1"><a [routerLink]="['/reports/coursecatalogue']"
+                                                        <li *ngIf="loggedIn &&
+                                                                typeCode === 1"><a
+                                                                        [routerLink]="['/reports/coursecatalogue']"
                                                                         routerLinkActive="active"
-                                                                        [routerLinkActiveOptions]="{exact: true}">Course
+                                                                        [routerLinkActiveOptions]="{exact:
+                                                                        true}">Course
                                                                         Catalogue</a></li>
-
+                                                        <li *ngIf="loggedIn &&
+                                                                typeCode === 1"><a
+                                                                        [routerLink]="['/reports/facultycourses']"
+                                                                        routerLinkActive="active"
+                                                                        [routerLinkActiveOptions]="{exact:
+                                                                        true}">Faculty
+                                                                        Course
+                                                                        Report</a></li>
                                                 </ul>
                                         </li>
 
@@ -123,22 +202,28 @@
 
                                                 </ul>
                                         </li> -->
-
                                         <!-- Student Links -->
-                                        <li *ngIf="loggedIn && typeCode === 3"><a [routerLink]="['/student/payment']"
-                                                        routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Make
+                                        <li *ngIf="loggedIn && typeCode === 3"><a
+                                                        [routerLink]="['/student/payment']"
+                                                        routerLinkActive="active"
+                                                        [routerLinkActiveOptions]="{exact:
+                                                        true}">Make
                                                         Payment</a></li>
 
-                                        <li *ngIf="loggedIn && typeCode === 3"><a [routerLink]="['/student/register']"
-                                                        routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Course
+                                        <li *ngIf="loggedIn && typeCode === 3"><a
+                                                        [routerLink]="['/student/register']"
+                                                        routerLinkActive="active"
+                                                        [routerLinkActiveOptions]="{exact:
+                                                        true}">Course
                                                         Registration</a></li>
-
-
                                         <li *ngIf="!loggedIn">
                                                 <div id="spacer"></div>
                                         </li>
-                                        <li *ngIf="loggedIn"><a id="logOut" [routerLink]="['/logout']" routerLinkActive="active"
-                                                        [routerLinkActiveOptions]="{exact: true}">Log
+                                        <li *ngIf="loggedIn"><a id="logOut"
+                                                        [routerLink]="['/logout']"
+                                                        routerLinkActive="active"
+                                                        [routerLinkActiveOptions]="{exact:
+                                                        true}">Log
                                                         Out</a></li>
                                 </ul>
                         </div>
