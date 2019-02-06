@@ -18,18 +18,15 @@ import { FacultyInfo } from 'src/app/_interfaces/facultyInfo.model';
 })
 export class FacultyCoursesReportComponent implements OnInit {
 
-  public courses: any[] = [];
   public errorMessage: String = "";
-  private depts: any = [];
-  private sectionsById: FacultyInfo[][] = [];
+
   private user: User;
   private id: number;
   private isLoaded = false;
   private semesters = new Semesters();
   private counter = 0;
-  private allFaculty: FacultyInfo[] = [];
-  private mulitArray: Department[][];
   private theDepartment: Department;
+  private facultyByDepartment: FacultyInfo[] = [];
 
 
   private reportId = "";
@@ -38,6 +35,7 @@ export class FacultyCoursesReportComponent implements OnInit {
 
   // Array for all the subscriptions
   private subscriptions: Subscription[] = [];
+  sectionsByFaculty: Section[] = [];
 
 
   constructor(
@@ -51,19 +49,14 @@ export class FacultyCoursesReportComponent implements OnInit {
   ngOnInit() {
 
     this.getUser();
+
     this.id = parseInt(this.activeatedRoute.snapshot.params['id'], 0);
     this.reportDate = this.semesters.getTodaysDate();
     this.reportId = this.reportIDGen.generateId('CC');
-
-    if (this.id === 0) {
-      // this.getAllDepartments();
-    } else {
-      this.getDepartment();
-    }
   }
 
   public getSections() {
-    // tslint:disable-next-line:curly
+    console.log(this.facultyByDepartment);
 
   }
   private getDepartment() {
@@ -73,7 +66,7 @@ export class FacultyCoursesReportComponent implements OnInit {
       .subscribe(res => {
 
         if (this.id === 0) {
-          this.depts = res as Department[];
+
         } else {
           this.theDepartment = res as Department;
           console.log(this.theDepartment.dept_Name);
@@ -81,14 +74,17 @@ export class FacultyCoursesReportComponent implements OnInit {
         }
         // console.log(this.depts);
         // this.getFacultyByDeptId(this.id);
-        this.isLoaded = true;
 
-      })),
-      // tslint:disable-next-line: no-unused-expression
-      (error) => {
-        this.errorHandler.handleError(error);
-        this.errorMessage = this.errorHandler.errorMessage;
-      };
+      },
+        // tslint:disable-next-line: no-unused-expression
+        (error) => {
+          this.errorHandler.handleError(error);
+          this.errorMessage = this.errorHandler.errorMessage;
+        }).add(() => {
+          this.getFacultyByDeptId(this.theDepartment.dept_Id);
+
+
+        }));
   }
 
   private getUser() {
@@ -97,6 +93,8 @@ export class FacultyCoursesReportComponent implements OnInit {
 
       .subscribe(res => {
         this.user = res as User;
+      }).add(() => {
+        this.getDepartment();
       })),
       // tslint:disable-next-line: no-unused-expression
       (error) => {
@@ -107,6 +105,48 @@ export class FacultyCoursesReportComponent implements OnInit {
 
   public getFacultyByDeptId(deptId) {
 
+    console.log(deptId);
+    let apiAddress = "api/facultyinfo/department/" + deptId;
+    this.subscriptions.push(this.repository.getData(apiAddress)
+
+      .subscribe(res => {
+
+        this.facultyByDepartment = res as FacultyInfo[];
+        console.log(this.facultyByDepartment);
+        for (let i = 0; i < this.facultyByDepartment.length; i++) {
+          this.getSectionsByFacultyId(this.facultyByDepartment[i], i);
+        }
+        if (this.facultyByDepartment.length === 0) {
+          this.isLoaded = true;
+        }
+      })),
+      // tslint:disable-next-line: no-unused-expression
+      (error) => {
+        this.errorHandler.handleError(error);
+        this.errorMessage = this.errorHandler.errorMessage;
+      };
+
+
+  }
+
+  public getSectionsByFacultyId(faculty, index) {
+    let i = index;
+    let apiAddress = "api/section/faculty/" + faculty.faculty_Id;
+    this.subscriptions.push(this.repository.getData(apiAddress)
+      .subscribe(res => {
+        this.sectionsByFaculty = res as Section[];
+        this.facultyByDepartment[index]['sections'] = this.sectionsByFaculty;
+        console.log(this.facultyByDepartment[index]['sections']);
+      },
+        // tslint:disable-next-line: no-unused-expression
+        (error) => {
+          this.errorHandler.handleError(error);
+          this.errorMessage = this.errorHandler.errorMessage;
+        }).add(() => {
+          if (i === this.facultyByDepartment.length - 1) {
+            this.isLoaded = true;
+          }
+        }));
 
   }
 

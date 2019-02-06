@@ -13,18 +13,24 @@
 
   <!-- HC Well Button -->
   <div *ngIf="isLoaded" class="row">
+
     <div class="col-md-8 centerDiv well">
+
       <div class="row">
+
         <div class="col-md-5">
           <img class="logoReport" src="../../../assets/Logo1.png">
         </div>
+
         <div class="col-md-7">
           <br>
           <br>
           <br>
           <h3 class="reportHeader">Faculty Course Report</h3>
         </div>
+
       </div>
+
       <div class="row">
         <hr>
         <div class="col-md-6">
@@ -40,42 +46,41 @@
         </div>
         <div class="row">
           <div class="col-md-12 centerDiv">
-            <div>
-              <div class="row">
-                <div class="col-md-12 headerDiv">
-                  <h4 class="text-center">{{theDepartment.dept_Name}}</h4>
-                </div>
-                <div class="col-md-12 courseDiv">
-                  <!-- <p *ngFor="let current of allFaculty; let i= index">
-                    <ng-container *ngIf="allFaculty.length >= 1; else
-                      noFaculty">
-                      <span class="text-center">{{allFaculty[i].first_Name}}-
-                        {{allFaculty[i].last_Name}}</span>
-                    </ng-container>
-                    <ng-container *ngIf="sectionsById[i].length >= 1; else
-                      noSections">
-                      <span *ngFor="let current of sectionsById[i]; let x=
-                        index">{{sectionsById[i][x].course_Id}}</span>
-                    </ng-container>
-                    <ng-template #noFaculty>
-                      <p>No faculty for this Department</p>
-                    </ng-template>
-                    <ng-template #noSections>
-                      <p>No faculty for this Department</p>
-                    </ng-template>
-                  </p> -->
+            <div class="row">
+              <div class="col-md-12 headerDiv">
+                <h4 class="text-center">{{theDepartment.dept_Name}}</h4>
+              </div>
+              <div class="col-md-12 courseDiv">
+
+                <div *ngFor="let current of facultyByDepartment; let i=
+                  index">
+                  <ng-container *ngIf="facultyByDepartment.length >= 1; else
+                    noFaculty">
+                    <span class="text-center">{{current.first_Name}}
+                      {{current.last_Name}}</span>
+                  </ng-container>
+                  <div *ngIf="current['sections'].length >= 1">
+                    {{current['sections'].length}}
+                    <p *ngFor="let section of current['sections']; let x=
+                      index">{{section.course_Id}} {{section.designation}}</p>
+                  </div>
+                  <ng-template #elseTemplate>
+                    <div>No faculty for this department</div>
+                  </ng-template>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <br>
-        <div class="row">
-          <div class="col-md-12 centerDiv">
-            <button class="btn btnHc float-right"
-              (click)="backToReportGenerator()">Back</button>
+          <br>
+
+
+
+          <div class="row">
+            <div class="col-md-12 centerDiv">
+              <button class="btn btnHc float-right"
+                (click)="backToReportGenerator()">Back</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
