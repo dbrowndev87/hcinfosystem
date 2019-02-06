@@ -14,6 +14,8 @@ export class MenuComponent implements OnInit {
   private typeCode = 0;
   private loggedIn = false;
   private userId = 0;
+  private studentId;
+  private facultyId;
 
   constructor(
     private router: Router,
@@ -31,6 +33,14 @@ export class MenuComponent implements OnInit {
 
     if (sessionStorage.getItem('isLoggedIn')) {
       this.loggedIn = true;
+
+      if (sessionStorage.getItem('studentId')) {
+        this.studentId = parseInt(sessionStorage.getItem('studentId'), 0);
+      }
+
+      if (sessionStorage.getItem('facultyId')) {
+        this.facultyId = parseInt(sessionStorage.getItem('facultyId'), 0);
+      }
     }
   }
 }

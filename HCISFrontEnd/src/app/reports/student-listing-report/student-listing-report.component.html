@@ -24,43 +24,80 @@
           <h3 class="reportHeader ">Student Listing Report</h3>
         </div>
       </div>
+      <hr>
       <div class="row">
-        <hr>
         <div class="col-md-6">
           <p><span class="bold">ID: </span>{{reportId}}</p>
           <p><span class="bold">Date: </span>{{reportDate}}</p>
         </div>
         <div class="col-md-6">
           <p><span class="bold">For:</span> {{user.first_Name}} {{user.last_Name}}</p>
-          <p><span class="bold">Type:</span> Student Listing<br>
+          <span class="bold">Type:</span> Student Listing<br>
         </div>
-        <hr>
       </div>
-      <div class="row">
-        <div class="col-md-12 centerDiv">
-          <div *ngIf="depts[0].dept_Name !== null && depts[0].dept_Name !== 'Administration'">
-            <div class="row" *ngFor="let dept of depts; let i = index">
-              <div class="col-md-12 headerDiv">
-                <h4 class="text-center">{{dept.dept_Name}}</h4>
+      <hr>
+      <div *ngIf="isLoaded">
+        <div *ngFor="let course of courses; let i = index">
+          <div class="row">
+            <div class="col-md-12 headerDiv">
+              <!-- Course Header -->
+              <h4 class="text-center">{{course.course_Id}} - {{course.course_Name}}</h4>
+
+              <div class="row">
+                <div class="col-md-12">
+                  <!-- If the course has sections -->
+
+                </div>
               </div>
-              <div class="col-md-12 courseDiv">
-                <p *ngFor="let course of courses[i]">
-                  <ng-container *ngIf="courses[i].length >= 1; else noCourses">
-                    <span class="text-center">{{course.course_Id}} - {{course.course_Name}}</span>
-                  </ng-container>
-                  <ng-template #noCourses>
-                    <p>No Courses for this Department</p>
-                  </ng-template>
-                </p>
+
+              <div class="row">
+
+                <div *ngIf="courses[i]['sections'].length === 0">
+                  <div class="desDiv">
+                    <h3 class="text-center">No Sections Exist</h3>
+                  </div>
+                </div>
+
+                <div *ngFor="let section of courses[i]['sections']; let z = index">
+
+                  <div *ngIf="courses[i]['sections'].length > 0">
+                    <!-- Designation Bar -->
+                    <div class="col-md-12 desDiv">
+                      <span class="boldReport">Section:</span> {{section.designation}}
+                    </div>
+
+                    <!-- Students -->
+                    <div class="stuDiv">
+                      <br>
+
+                      <p class="student" *ngFor="let student of courses[i]['sections'][z]['students']">
+                        - {{student.student_Id}} - {{student.first_Name}} {{student.last_Name}}
+                      </p>
+
+                      <h5 class="bold student" *ngIf="courses[i]['sections'][z]['students'].length === 0 
+                      || courses[i]['sections'][z]['students'] === undefined ">
+                        - No students enrolled</h5>
+
+                      <hr>
+
+                      <p *ngIf="courses[i]['sections'][z]['students'].length > 0 && 
+                      courses[i]['sections'][z]['students'] !== undefined"
+                        class="float-right">
+
+                        <span class="bold">Total Students: </span>{{courses[i]['sections'][z]['students'].length}}
+
+                      </p>
+                      <br>
+                      <hr>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div *ngIf="depts[0].dept_Name === null || depts[0].dept_Name === 'Administration'">
-            <h4 class="text-center">No Data to Report for this ID</h4>
-          </div>
+          <div class="spacer"></div>
         </div>
       </div>
-      <br>
       <div class="row">
         <div class="col-md-12 centerDiv">
           <button class="btn btnHc float-right" (click)="backToReportGenerator()">Back</button>

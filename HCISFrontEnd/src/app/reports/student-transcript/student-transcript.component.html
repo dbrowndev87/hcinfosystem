@@ -1,0 +1,54 @@
+<div class="container-fluid">
+
+  <!-- Loading Bar -->
+  <div *ngIf="!isLoaded">
+    <div class="row">
+      <div class="col-md-8 centerDiv well">
+        <img src="../../../assets/loading.gif" class="center-block imgLoading" />
+        <h4 class="text-center">Loading</h4>
+      </div>
+    </div>
+  </div>
+
+  <!-- HC Well Button -->
+  <div *ngIf="isLoaded" class="row">
+    <div class=" col-md-8 centerDiv well">
+      <div class="row">
+        <div class="col-md-12">
+          <h4 class="text-center">Student Transacript</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div *ngIf="isLoaded">
+      <div class="col-md-8 centerDiv well">
+        <div class="row">
+          <div class="col-md-12">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <h4 class="float-left">By Student</h4>
+            <form [formGroup]="studentTranscriptForm" autocomplete="off" novalidate (ngSubmit)="redirectToReport(studentTranscriptForm.value)">
+              <select name="student_Id" class="form-control" id="student_Id" formControlName="student_Id">
+                <option *ngFor="let student of studentInfo;" value="{{student.student_Id}}">
+                  {{student.student_Id}} - {{student.first_Name}} {{student.last_Name}}
+                </option>
+              </select>
+              <em *ngIf="validateControl('student_Id') && hasError('student_Id', 'required')">You must choose a
+                Student</em>
+              <br>
+              <button type="submit" class="btn btnHc float-left" [disabled]="!studentTranscriptForm.valid">Generate
+                Transcript</button>
+            </form>
+          </div>
+          <div class="col-md-12 centerDiv">
+            <button class="btn btnHc float-right" (click)="goHome()">Home</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

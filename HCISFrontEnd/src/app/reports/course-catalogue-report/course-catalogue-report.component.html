@@ -4,8 +4,7 @@
   <div *ngIf="!isLoaded">
     <div class="row">
       <div class="col-md-8 centerDiv well">
-        <img src="../../../assets/loading.gif" class="center-block imgLoading"
-          />
+        <img src="../../../assets/loading.gif" class="center-block imgLoading" />
         <h4 class="text-center">Loading</h4>
       </div>
     </div>
@@ -13,7 +12,7 @@
 
   <!-- HC Well Button -->
   <div *ngIf="isLoaded" class="row">
-    <div class="col-md-8 centerDiv well">
+    <div class=" col-md-8 centerDiv well">
       <div class="row">
         <div class="col-md-5">
           <img class="logoReport" src="../../../assets/Logo1.png">
@@ -22,7 +21,7 @@
           <br>
           <br>
           <br>
-          <h3 class="reportHeader">Course Catalogue Report</h3>
+          <h3 class="reportHeader ">Course Catalogue Report</h3>
         </div>
       </div>
       <div class="row">
@@ -32,47 +31,43 @@
           <p><span class="bold">Date: </span>{{reportDate}}</p>
         </div>
         <div class="col-md-6">
-          <p><span class="bold">For:</span> {{user.first_Name}}
-            {{user.last_Name}}</p>
+          <p><span class="bold">For:</span> {{user.first_Name}} {{user.last_Name}}</p>
           <p><span class="bold">Type:</span> Course Catalogue<br>
-          </div>
-          <hr>
         </div>
-        <div class="row">
-          <div class="col-md-12 centerDiv">
-            <div *ngIf="theDepartment.dept_Name !== null &&
-              theDepartment.dept_Name !== 'Administration'">
-              <div class="row">
-                <div class="col-md-12 headerDiv">
-                  <h4 class="text-center">{{theDepartment.dept_Name}}</h4>
-                </div>
-                <div class="col-md-12 courseDiv">
-                  <p *ngFor="let course of courses[i]">
-                    <ng-container *ngIf="courses[i].length >= 1; else
-                      noCourses">
-                      <span class="text-center">{{course.course_Id}} -
-                        {{course.course_Name}}</span>
-                    </ng-container>
-                    <ng-template #noCourses>
-                      <p>No Courses for this Department</p>
-                    </ng-template>
-                  </p>
+        <hr>
+      </div>
+      <div class="row">
+        <div class="col-md-12 centerDiv">
+          <div *ngIf="depts[0].dept_Name !== null && depts[0].dept_Name !== 'Administration'">
+            <div class="row" *ngFor="let dept of depts; let i = index">
+              <div class="col-md-12 headerDiv">
+                <h4 class="text-center">{{dept.dept_Name}}</h4>
+                <div class="row">
+                  <div class="col-md-12 courseDiv">
+                    <p *ngFor="let course of courses[i]">
+                      <ng-container *ngIf="courses[i].length >= 1; else noCourses">
+                        <span class="text-center">{{course.course_Id}} - {{course.course_Name}}</span>
+                      </ng-container>
+                      <ng-template #noCourses>
+                        <p>No Courses for this Department</p>
+                      </ng-template>
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-            <div *ngIf="depts[0].dept_Name === null || depts[0].dept_Name ===
-              'Administration'">
+            <div *ngIf="depts[0].dept_Name === null || depts[0].dept_Name === 'Administration'">
               <h4 class="text-center">No Data to Report for this ID</h4>
             </div>
           </div>
         </div>
-        <br>
-        <div class="row">
-          <div class="col-md-12 centerDiv">
-            <button class="btn btnHc float-right"
-              (click)="backToReportGenerator()">Back</button>
-          </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-12 centerDiv">
+          <button class="btn btnHc float-right" (click)="backToReportGenerator()">Back</button>
         </div>
       </div>
     </div>
   </div>
+</div>

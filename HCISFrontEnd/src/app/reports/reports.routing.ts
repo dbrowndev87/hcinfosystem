@@ -7,10 +7,15 @@ import { CourseCatalogueReportComponent } from './course-catalogue-report/course
 import { StudentListingReportComponent } from './student-listing-report/student-listing-report.component';
 import { FacultyCoursesComponent } from './faculty-courses/faculty-courses.component';
 import { FacultyCoursesReportComponent } from './faculty-courses-report/faculty-courses-report.component';
+import { StudentTranscriptReportComponent } from './student-transcript-report/student-transcript-report.component';
+import { StudentTranscriptComponent } from './student-transcript/student-transcript.component';
+import { AuthGuardAdminStudent } from '../login/authGuard/auth-admin-student.guard';
 
 const routes: Routes = [
     { path: 'reports/studentlisting', component: StudentListingComponent, canActivate: [AuthGuardAdmin] },
     { path: 'reports/studentlisting/report/:id', component: StudentListingReportComponent, canActivate: [AuthGuardAdmin] },
+    { path: 'reports/studenttranscript', component: StudentTranscriptComponent, canActivate: [AuthGuardAdmin] },
+    { path: 'reports/studenttranscript/report/:id', component: StudentTranscriptReportComponent, canActivate: [AuthGuardAdminStudent] },
     { path: 'reports/coursecatalogue', component: CourseCatalogueComponent, canActivate: [AuthGuardAdmin] },
     { path: 'reports/coursecatalogue/report/:id', component: CourseCatalogueReportComponent, canActivate: [AuthGuardAdmin] },
     { path: 'reports/facultycourses', component: FacultyCoursesComponent, canActivate: [AuthGuardAdmin] },

@@ -1,3 +1,11 @@
+/**
+ * Name: Student Register Component
+ * Description: This is the student register component which allows the student to 
+ * pregister for their courses for the semester.
+ * 
+ * Author: Darcy Brown
+ * Date: January 1st, 2019
+ */
 import { Component, OnInit, OnDestroy, HostListener } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { SectionInfo } from 'src/app/_interfaces/sectionInfo.model';

@@ -1,5 +1,5 @@
 import { DatepickerDirective } from './directives/datepicker.directive';
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ErrorModalComponent } from './modals/error-modal/error-modal.component';
 import { SuccessModalComponent } from './modals/success-modal/success-modal.component';
@@ -9,12 +9,12 @@ import { TransactionIdGenerator } from './tools/tidg';
 import { DataTablesModule, DataTableDirective } from 'angular-datatables';
 import { ConfirmModalComponent } from './modals/confirm-modal/confirm-modal.component';
 import { ReportIdGenerator } from './tools/ridg';
+import { OrderByPipe } from './tools/orderByPipe';
 
 @NgModule({
   imports: [
     CommonModule,
     DataTablesModule,
-
   ],
   declarations: [
     ErrorModalComponent,

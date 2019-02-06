@@ -8,6 +8,8 @@ import { SharedModule } from '../shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { StudentListingReportComponent } from './student-listing-report/student-listing-report.component';
+import { StudentTranscriptComponent } from './student-transcript/student-transcript.component';
+import { StudentTranscriptReportComponent } from './student-transcript-report/student-transcript-report.component';
 import { FacultyCoursesComponent } from './faculty-courses/faculty-courses.component';
 import { FacultyCoursesReportComponent } from './faculty-courses-report/faculty-courses-report.component';
 
@@ -17,6 +19,8 @@ import { FacultyCoursesReportComponent } from './faculty-courses-report/faculty-
     CourseCatalogueComponent,
     CourseCatalogueReportComponent,
     StudentListingReportComponent,
+    StudentTranscriptComponent,
+    StudentTranscriptReportComponent,
     FacultyCoursesComponent,
     FacultyCoursesReportComponent
   ],

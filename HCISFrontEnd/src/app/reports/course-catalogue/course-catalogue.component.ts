@@ -1,3 +1,12 @@
+/**
+ * Name: Course Catalogue Component
+ * 
+ * Description: This course catalogue component allows to pick what you would
+ * like to generate for the report data wise.
+ * 
+ * Author: Darcy Brown
+ * Date: Febuary 4th, 2019
+ */
 import { Course } from 'src/app/_interfaces/course.model';
 import { Component, OnInit } from '@angular/core';
 import { Department } from 'src/app/_interfaces/department.model';
@@ -87,6 +96,10 @@ export class CourseCatalogueComponent implements OnInit {
 
   private redirectToAllReport(id) {
     this.router.navigate(['/reports/coursecatalogue/report/' + id]);
+  }
+
+  private goHome() {
+    this.router.navigate(['/home']);
   }
 
 }

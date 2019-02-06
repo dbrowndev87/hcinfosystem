@@ -1,3 +1,12 @@
+/**
+ * Name: Student Home
+ * Description: This is the student home component which was seperated
+ * from the home page we use to have where everyone was. This is the hub which
+ * allows you to accomplish lots of stuff.
+ * 
+ * Author: Darcy Brown
+ * Date: Febary 5th, 2019
+ */
 import { Component, OnInit } from '@angular/core';
 import { SectionInfo } from 'src/app/_interfaces/sectionInfo.model';
 import { map } from 'rxjs/operators';

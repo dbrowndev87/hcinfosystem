@@ -39,6 +39,8 @@ import { DepartmentRoutingModule } from './department/department.routing';
 import { SharedModule } from './shared/shared.module';
 import { ReportsModule } from './reports/reports.module';
 import { ReportsRoutingModule } from './reports/reports.routing';
+import { AuthGuardAdminFaculty } from './login/authGuard/auth-admin-faculty.guard';
+import { AuthGuardAdminStudent } from './login/authGuard/auth-admin-student.guard';
 
 
 @NgModule({
@@ -47,7 +49,7 @@ import { ReportsRoutingModule } from './reports/reports.routing';
     NotFoundComponent,
     MenuComponent,
     HomeComponent,
-    InternalServerComponent,
+    InternalServerComponent
   ],
   imports: [
     CommonModule,
@@ -89,6 +91,8 @@ import { ReportsRoutingModule } from './reports/reports.routing';
     AuthGuardAdmin,
     AuthGuardFaculty,
     AuthGuardStudent,
+    AuthGuardAdminFaculty,
+    AuthGuardAdminStudent
   ],
   bootstrap: [AppComponent],
   exports: [

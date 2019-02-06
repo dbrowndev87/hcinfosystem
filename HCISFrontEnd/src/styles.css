@@ -45,7 +45,6 @@ a:active{
 }
 
 .btnHc{
-    /* margin-left: 2px; */
     /* Black Button */
     background: url('./assets/blackButton.jpg') !important;
     background-size: cover !important;
@@ -113,12 +112,14 @@ hr{
 
 /* Floats */
 .float-right{
-    float: right;
+    float: right !important;
+    margin: none !important;
 }
 
 /* Float Right */
 .float-left{
-    float: left;
+    float: left !important;
+    margin: none !important;
 }
 
 /* Bold Text */

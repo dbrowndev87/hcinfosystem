@@ -1,3 +1,11 @@
+/**
+ * Name: Course Catalogue Report C0mponent
+ * Description: This is the course catalogue report which generates
+ * the data based on the department you chose.
+ * 
+ * Author: Darcy Brown
+ * Date: Febuary 4th, 2019
+ */
 import { Component, OnInit } from '@angular/core';
 import { Course } from 'src/app/_interfaces/course.model';
 import { Department } from 'src/app/_interfaces/department.model';

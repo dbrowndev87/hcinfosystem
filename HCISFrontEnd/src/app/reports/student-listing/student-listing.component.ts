@@ -1,3 +1,11 @@
+/**
+ * Name: Student Listing Component
+ * Description: This is the page that allows you to pick the course or all
+ * courses to generate the report about.
+ * 
+ * Author: Darcy Brown
+ * Date: Febuary 5th, 2019
+ */
 import { Component, OnInit, OnChanges, OnDestroy } from '@angular/core';
 import { RepositoryService } from 'src/app/shared/services/repository.service';
 import { ErrorHandlerService } from 'src/app/shared/services/error-handler.service';
@@ -50,7 +58,7 @@ export class StudentListingComponent implements OnInit {
     this.subscriptions.push(this.repository.getData(apiAddress)
       .subscribe(res => {
         this.courses = res as Course[];
-        console.log(this.courses);
+        // console.log(this.courses);
       })),
       // tslint:disable-next-line: no-unused-expression
       (error) => {
@@ -85,4 +93,7 @@ export class StudentListingComponent implements OnInit {
     this.router.navigate(['/reports/studentlisting/report/' + id]);
   }
 
+  private goHome() {
+    this.router.navigate(['/home']);
+  }
 }

@@ -1,5 +1,6 @@
 #aSidebar{
     height: 750px;
+    display:block;
 }
 
 a{
@@ -37,7 +38,7 @@ padding: none !important;
 }
 
 .padding{
-    height: 230px;
+    height: 30px;
 }
 
 .aContent{
@@ -50,6 +51,6 @@ padding: none !important;
     }
     
     #aSidebar{
-        height: 550px;
+        display: none;
     }
   }

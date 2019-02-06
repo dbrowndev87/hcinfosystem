@@ -32,7 +32,8 @@
             <h4 class="float-left">By Course</h4>
             <form [formGroup]="studentListingForm" autocomplete="off" novalidate (ngSubmit)="redirectToReport(studentListingForm.value)">
               <select name="course_Id" class="form-control" id="course_Id" formControlName="course_Id">
-                <option *ngFor="let course of courses;" value="{{course.course_Id}}">{{course.course_Name}}</option>
+                <option *ngFor="let course of courses;" value="{{course.course_Id}}">{{course.course_Id}} -
+                  {{course.course_Name}}</option>
               </select>
               <em *ngIf="validateControl('course_Id') && hasError('course_Id', 'required')">You must choose a Course</em>
               <br>
@@ -43,16 +44,21 @@
         </div>
         <hr>
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-md-12 colAll">
             <h4 class="float-left">All Courses</h4>
             <br>
             <br>
-            <button class="btn btnHc float-left" (click)="redirectToAllReport(0)">Generate
-              Report</button>
+            <br>
+            <button class="btn btnHc" (click)="redirectToAllReport(0)">
+              Generate Report
+            </button>
+          </div>
+          <br>
+          <div class="col-md-12 centerDiv">
+            <button class="btn btnHc float-right" (click)="goHome()">Home</button>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </div>
