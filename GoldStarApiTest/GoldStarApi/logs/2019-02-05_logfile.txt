@@ -741,3 +741,483 @@
 2019-02-05 12:41:29.1995 INFO Returned all Enrollments from database. 10
 2019-02-05 12:41:29.2113 INFO Returned all sections from database. 8
 2019-02-05 12:41:29.2215 INFO Returned all courses from database. 11
+2019-02-05 15:43:10.6102 INFO Returned user with username: dbrown32066
+2019-02-05 15:43:10.8669 INFO Returned User with id: 1
+2019-02-05 15:44:11.2144 INFO Returned user with username: teststudent
+2019-02-05 15:44:11.2505 INFO Returned User with id: 2
+2019-02-05 15:44:11.3144 INFO Returned Student with id: 2
+2019-02-05 15:44:13.1593 INFO Returned Student with id: 193820
+2019-02-05 15:44:13.2830 INFO Returned Department with id: 2
+2019-02-05 15:44:13.3016 INFO Returned all transactions from database. System.Linq.OrderedEnumerable`2[Entities.Models.Transaction,System.Int32]
+2019-02-05 15:44:13.3627 INFO Returned all Enrollments from database. 10
+2019-02-05 15:44:13.4098 INFO Returned all sections from database. 8
+2019-02-05 15:44:13.4555 INFO Returned all courses from database. 11
+2019-02-05 15:44:19.2458 INFO Returned Student with id: 193820
+2019-02-05 15:44:19.2759 INFO Look Enrollment with id: 193820
+2019-02-05 15:44:19.3119 INFO Returned Enrollment with id: 193820
+2019-02-05 15:44:19.3573 INFO Returned Enrollment with id: 1
+2019-02-05 15:44:19.3621 INFO Returned Enrollment with id: 7
+2019-02-05 15:44:19.3710 INFO Returned Enrollment with id: 6
+2019-02-05 15:44:19.3944 INFO Returned Enrollment with id: 5
+2019-02-05 15:44:19.3977 INFO Returned Enrollment with id: 8
+2019-02-05 15:44:19.4127 INFO Returned All Section Course Information
+2019-02-05 15:46:07.6486 INFO Returned Student with id: 193820
+2019-02-05 15:46:07.7075 INFO Look Enrollment with id: 193820
+2019-02-05 15:46:07.7132 INFO Returned Enrollment with id: 193820
+2019-02-05 15:46:07.7893 INFO Returned All Section Course Information
+2019-02-05 15:46:33.0183 INFO Returned Student with id: 193820
+2019-02-05 15:46:33.0337 INFO Returned Department with id: 2
+2019-02-05 15:46:33.0459 INFO Returned all transactions from database. System.Linq.OrderedEnumerable`2[Entities.Models.Transaction,System.Int32]
+2019-02-05 15:46:33.0585 INFO Returned all Enrollments from database. 4
+2019-02-05 15:46:33.0682 INFO Returned all sections from database. 8
+2019-02-05 15:46:33.0795 INFO Returned all courses from database. 11
+2019-02-05 15:46:43.0716 INFO Returned Enrollment with id: 1
+2019-02-05 15:46:48.8373 INFO Returned Student with id: 193820
+2019-02-05 15:46:48.8687 INFO Look Enrollment with id: 193820
+2019-02-05 15:46:48.8886 INFO Returned Enrollment with id: 193820
+2019-02-05 15:46:48.9087 INFO Returned Enrollment with id: 5
+2019-02-05 15:46:48.9087 INFO Returned Enrollment with id: 4
+2019-02-05 15:46:48.9112 INFO Returned Enrollment with id: 6
+2019-02-05 15:46:48.9112 INFO Returned Enrollment with id: 1
+2019-02-05 15:46:48.9551 INFO Returned All Section Course Information
+2019-02-05 15:47:25.8889 INFO Returned Student with id: 193820
+2019-02-05 15:47:25.9034 INFO Returned Department with id: 2
+2019-02-05 15:47:25.9169 INFO Returned all transactions from database. System.Linq.OrderedEnumerable`2[Entities.Models.Transaction,System.Int32]
+2019-02-05 15:47:25.9263 INFO Returned all Enrollments from database. 4
+2019-02-05 15:47:25.9337 INFO Returned all sections from database. 8
+2019-02-05 15:47:25.9463 INFO Returned all courses from database. 11
+2019-02-05 15:47:39.9458 INFO Returned user with username: dbrown32066
+2019-02-05 15:47:39.9637 INFO Returned User with id: 1
+2019-02-05 15:48:03.2065 INFO Returned all userlogins from database. 14
+2019-02-05 15:48:03.2173 INFO Returned all users from database. System.Linq.OrderedEnumerable`2[Entities.Models.User,System.String]
+2019-02-05 15:48:07.9959 INFO Returned all Enrollments from database. 4
+2019-02-05 15:48:08.0225 INFO Enrolled
+2019-02-05 15:48:08.0255 INFO Entities.Models.StudentInfo
+2019-02-05 15:48:08.0263 INFO Enrolled
+2019-02-05 15:48:08.0283 INFO Entities.Models.StudentInfo
+2019-02-05 15:48:08.0290 INFO Enrolled
+2019-02-05 15:48:08.0310 INFO Entities.Models.StudentInfo
+2019-02-05 15:48:08.0310 INFO Enrolled
+2019-02-05 15:48:08.0326 INFO Entities.Models.StudentInfo
+2019-02-05 15:48:08.0331 INFO Enrolled
+2019-02-05 15:48:08.0344 INFO Entities.Models.StudentInfo
+2019-02-05 15:48:08.0349 INFO Enrolled
+2019-02-05 15:48:08.0360 INFO Entities.Models.StudentInfo
+2019-02-05 15:48:08.0360 INFO Drop Out
+2019-02-05 15:48:08.0375 INFO Entities.Models.StudentInfo
+2019-02-05 15:48:08.0379 INFO Enrolled
+2019-02-05 15:48:08.0388 INFO Entities.Models.StudentInfo
+2019-02-05 15:48:08.0388 INFO Enrolled
+2019-02-05 15:48:08.0408 INFO Entities.Models.StudentInfo
+2019-02-05 15:48:08.0423 INFO Returned all students from database. 9
+2019-02-05 15:48:11.9784 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-05 15:49:00.4970 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-05 15:56:43.7548 INFO Returned user with username: testfaculty
+2019-02-05 15:56:44.0571 INFO Returned User with id: 3
+2019-02-05 15:56:44.1125 INFO Returned Faculty with id: 3
+2019-02-05 15:56:46.4108 INFO Returned Faculty with id: 1
+2019-02-05 15:56:46.5384 INFO Returned Section with id: 1
+2019-02-05 15:56:46.5391 INFO Returned Department with id: 3
+2019-02-05 15:56:50.3022 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 15:56:50.3038 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 15:57:07.6439 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 15:57:07.6446 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 15:57:19.5478 INFO Returned user with username: dbrown32066
+2019-02-05 15:57:19.5708 INFO Returned User with id: 1
+2019-02-05 15:57:24.1101 INFO Returned all users from database. System.Linq.OrderedEnumerable`2[Entities.Models.User,System.String]
+2019-02-05 15:57:24.1331 INFO Returned all userlogins from database. 14
+2019-02-05 15:57:37.4702 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-05 15:57:37.4964 INFO Enrolled
+2019-02-05 15:57:37.4993 INFO Entities.Models.StudentInfo
+2019-02-05 15:57:37.4999 INFO Enrolled
+2019-02-05 15:57:37.5022 INFO Entities.Models.StudentInfo
+2019-02-05 15:57:37.5028 INFO Enrolled
+2019-02-05 15:57:37.5091 INFO Entities.Models.StudentInfo
+2019-02-05 15:57:37.5091 INFO Enrolled
+2019-02-05 15:57:37.5126 INFO Entities.Models.StudentInfo
+2019-02-05 15:57:37.5133 INFO Enrolled
+2019-02-05 15:57:37.5160 INFO Entities.Models.StudentInfo
+2019-02-05 15:57:37.5170 INFO Enrolled
+2019-02-05 15:57:37.5239 INFO Entities.Models.StudentInfo
+2019-02-05 15:57:37.5239 INFO Drop Out
+2019-02-05 15:57:37.5260 INFO Entities.Models.StudentInfo
+2019-02-05 15:57:37.5260 INFO Enrolled
+2019-02-05 15:57:37.5282 INFO Entities.Models.StudentInfo
+2019-02-05 15:57:37.5288 INFO Enrolled
+2019-02-05 15:57:37.5303 INFO Entities.Models.StudentInfo
+2019-02-05 15:57:37.5325 INFO Returned all students from database. 9
+2019-02-05 15:57:38.7771 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-05 15:58:07.0529 INFO Returned user with username: sjohan3141
+2019-02-05 15:58:07.0616 INFO Returned Student with id: 198219
+2019-02-05 15:58:07.2510 ERROR Look Here198219
+2019-02-05 15:58:11.5678 INFO Returned all users from database. System.Linq.OrderedEnumerable`2[Entities.Models.User,System.String]
+2019-02-05 15:58:11.6036 INFO Returned all userlogins from database. 15
+2019-02-05 15:58:20.4135 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-05 15:58:20.4181 INFO Enrolled
+2019-02-05 15:58:20.4255 INFO Entities.Models.StudentInfo
+2019-02-05 15:58:20.4260 INFO Enrolled
+2019-02-05 15:58:20.4299 INFO Entities.Models.StudentInfo
+2019-02-05 15:58:20.4299 INFO Enrolled
+2019-02-05 15:58:20.4329 INFO Entities.Models.StudentInfo
+2019-02-05 15:58:20.4329 INFO Enrolled
+2019-02-05 15:58:20.4378 INFO Entities.Models.StudentInfo
+2019-02-05 15:58:20.4378 INFO Enrolled
+2019-02-05 15:58:20.4403 INFO Entities.Models.StudentInfo
+2019-02-05 15:58:20.4409 INFO Enrolled
+2019-02-05 15:58:20.4430 INFO Entities.Models.StudentInfo
+2019-02-05 15:58:20.4430 INFO Drop Out
+2019-02-05 15:58:20.4456 INFO Entities.Models.StudentInfo
+2019-02-05 15:58:20.4462 INFO Enrolled
+2019-02-05 15:58:20.4478 INFO Entities.Models.StudentInfo
+2019-02-05 15:58:20.4478 INFO Enrolled
+2019-02-05 15:58:20.4500 INFO Entities.Models.StudentInfo
+2019-02-05 15:58:20.4500 INFO Enrolled
+2019-02-05 15:58:20.4526 INFO Entities.Models.StudentInfo
+2019-02-05 15:58:20.4542 INFO Returned all students from database. 10
+2019-02-05 15:58:31.0532 INFO Returned all userlogins from database. 15
+2019-02-05 15:58:31.0564 INFO Returned all users from database. System.Linq.OrderedEnumerable`2[Entities.Models.User,System.String]
+2019-02-05 15:59:04.9852 INFO Returned user with username: sjohan3141
+2019-02-05 15:59:05.0030 INFO Returned User with id: 15
+2019-02-05 15:59:05.0192 INFO Returned Student with id: 15
+2019-02-05 15:59:06.8692 INFO Returned Student with id: 198219
+2019-02-05 15:59:06.8985 INFO Returned Department with id: 2
+2019-02-05 15:59:06.9353 INFO Returned all transactions from database. System.Linq.OrderedEnumerable`2[Entities.Models.Transaction,System.Int32]
+2019-02-05 15:59:06.9799 INFO Returned all Enrollments from database. 4
+2019-02-05 15:59:06.9970 INFO Returned all sections from database. 8
+2019-02-05 15:59:07.0673 INFO Returned all courses from database. 11
+2019-02-05 15:59:14.8889 INFO Returned Student with id: 198219
+2019-02-05 15:59:14.9208 INFO Look Enrollment with id: 198219
+2019-02-05 15:59:14.9270 INFO Returned Enrollment with id: 198219
+2019-02-05 15:59:14.9909 INFO Returned All Section Course Information
+2019-02-05 15:59:35.0191 INFO Returned Student with id: 198219
+2019-02-05 15:59:35.0528 INFO Returned Department with id: 2
+2019-02-05 15:59:35.0635 INFO Returned all transactions from database. System.Linq.OrderedEnumerable`2[Entities.Models.Transaction,System.Int32]
+2019-02-05 15:59:35.0725 INFO Returned all Enrollments from database. 8
+2019-02-05 15:59:35.0809 INFO Returned all sections from database. 8
+2019-02-05 15:59:35.0890 INFO Returned all courses from database. 11
+2019-02-05 15:59:48.7406 INFO Returned user with username: testfaculty
+2019-02-05 15:59:48.7578 INFO Returned User with id: 3
+2019-02-05 15:59:48.7705 INFO Returned Faculty with id: 3
+2019-02-05 15:59:50.5140 INFO Returned Faculty with id: 1
+2019-02-05 15:59:50.5457 INFO Returned Department with id: 3
+2019-02-05 15:59:50.5457 INFO Returned Section with id: 1
+2019-02-05 15:59:54.8463 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 15:59:54.8491 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 15:59:54.8497 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 15:59:54.8497 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 15:59:54.8497 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 16:00:01.2247 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 16:00:01.2258 INFO  Look HereEntities.Models.Enrollment
+2019-02-05 16:00:01.2284 INFO Found enrollment Entities.Models.Enrollment
+2019-02-05 16:00:31.1793 INFO Returned user with username: teststudent
+2019-02-05 16:00:31.1957 INFO Returned User with id: 2
+2019-02-05 16:00:31.2115 INFO Returned Student with id: 2
+2019-02-05 16:00:33.0545 INFO Returned Student with id: 193820
+2019-02-05 16:00:33.1001 INFO Returned Department with id: 2
+2019-02-05 16:00:33.1156 INFO Returned all transactions from database. System.Linq.OrderedEnumerable`2[Entities.Models.Transaction,System.Int32]
+2019-02-05 16:00:33.1469 INFO Returned all Enrollments from database. 8
+2019-02-05 16:00:33.1671 INFO Returned all sections from database. 8
+2019-02-05 16:00:33.1901 INFO Returned all courses from database. 11
+2019-02-05 16:01:18.5669 INFO Returned Student with id: 193820
+2019-02-05 16:01:18.6754 INFO Look Enrollment with id: 193820
+2019-02-05 16:01:18.6899 INFO Returned Enrollment with id: 193820
+2019-02-05 16:01:18.7078 INFO Returned Enrollment with id: 5
+2019-02-05 16:01:18.7093 INFO Returned Enrollment with id: 1
+2019-02-05 16:01:18.7093 INFO Returned Enrollment with id: 6
+2019-02-05 16:01:18.7166 INFO Returned Enrollment with id: 4
+2019-02-05 16:01:18.7411 INFO Returned All Section Course Information
+2019-02-05 16:01:33.7430 INFO Returned user with username: dbrown32066
+2019-02-05 16:01:33.7593 INFO Returned User with id: 1
+2019-02-05 16:01:40.4812 INFO Returned all sections from database. 8
+2019-02-05 16:01:54.5692 INFO Returned all courses from database. 11
+2019-02-05 16:01:54.5808 INFO Entities.Models.FacultyInfo
+2019-02-05 16:01:54.5824 INFO Returned all faculty from database. 1
+2019-02-05 16:02:20.6512 INFO Returned all sections from database. 9
+2019-02-05 16:02:34.2044 INFO Returned user with username: teststudent
+2019-02-05 16:02:34.2201 INFO Returned User with id: 2
+2019-02-05 16:02:34.2317 INFO Returned Student with id: 2
+2019-02-05 16:02:35.9771 INFO Returned Student with id: 193820
+2019-02-05 16:02:36.0303 INFO Returned Department with id: 2
+2019-02-05 16:02:36.0540 INFO Returned all transactions from database. System.Linq.OrderedEnumerable`2[Entities.Models.Transaction,System.Int32]
+2019-02-05 16:02:36.0780 INFO Returned all Enrollments from database. 8
+2019-02-05 16:02:36.1067 INFO Returned all sections from database. 9
+2019-02-05 16:02:36.1201 INFO Returned all courses from database. 11
+2019-02-05 16:02:46.5751 INFO Returned Enrollment with id: 4
+2019-02-05 16:02:49.6410 INFO Returned Enrollment with id: 5
+2019-02-05 16:02:52.2007 INFO Returned Enrollment with id: 6
+2019-02-05 16:02:57.2194 INFO Returned Student with id: 193820
+2019-02-05 16:02:57.2444 INFO Returned Student with id: 193820
+2019-02-05 16:02:57.2594 INFO Returned all transactions from database. System.Linq.OrderedEnumerable`2[Entities.Models.Transaction,System.Int32]
+2019-02-05 16:03:02.5099 INFO Returned Transaction with id: 640135236
+2019-02-05 16:03:13.2161 INFO Returned Student with id: 193820
+2019-02-05 16:03:13.2263 INFO Returned Student with id: 193820
+2019-02-05 16:03:13.2372 INFO Returned all transactions from database. System.Linq.OrderedEnumerable`2[Entities.Models.Transaction,System.Int32]
+2019-02-05 16:03:36.1502 INFO Returned Student with id: 193820
+2019-02-05 16:03:36.1867 INFO Returned Department with id: 2
+2019-02-05 16:03:36.1974 INFO Returned all transactions from database. System.Linq.OrderedEnumerable`2[Entities.Models.Transaction,System.Int32]
+2019-02-05 16:03:36.2078 INFO Returned all Enrollments from database. 8
+2019-02-05 16:03:36.2165 INFO Returned all sections from database. 9
+2019-02-05 16:03:36.2254 INFO Returned all courses from database. 11
+2019-02-05 16:03:54.9972 INFO Returned Student with id: 193820
+2019-02-05 16:03:55.0072 INFO Look Enrollment with id: 193820
+2019-02-05 16:03:55.0196 INFO Returned Enrollment with id: 193820
+2019-02-05 16:03:55.0316 INFO Returned Enrollment with id: 1
+2019-02-05 16:03:55.0316 INFO Returned Enrollment with id: 5
+2019-02-05 16:03:55.0359 INFO Returned Enrollment with id: 6
+2019-02-05 16:03:55.0445 INFO Returned Enrollment with id: 4
+2019-02-05 16:03:55.0616 INFO Returned All Section Course Information
+2019-02-05 16:05:55.7449 INFO Returned Student with id: 193820
+2019-02-05 16:05:55.7627 INFO Returned Department with id: 2
+2019-02-05 16:05:55.7694 INFO Returned all transactions from database. System.Linq.OrderedEnumerable`2[Entities.Models.Transaction,System.Int32]
+2019-02-05 16:05:55.7826 INFO Returned all Enrollments from database. 8
+2019-02-05 16:05:55.7916 INFO Returned all sections from database. 9
+2019-02-05 16:05:55.7986 INFO Returned all courses from database. 11
+2019-02-05 16:06:07.9951 INFO Returned user with username: dbrown32066
+2019-02-05 16:06:08.0086 INFO Returned User with id: 1
+2019-02-05 16:11:55.3073 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-05 16:14:40.6142 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-05 16:14:40.6200 INFO Enrolled
+2019-02-05 16:14:40.6239 INFO Entities.Models.StudentInfo
+2019-02-05 16:14:40.6247 INFO Enrolled
+2019-02-05 16:14:40.6275 INFO Entities.Models.StudentInfo
+2019-02-05 16:14:40.6275 INFO Enrolled
+2019-02-05 16:14:40.6334 INFO Entities.Models.StudentInfo
+2019-02-05 16:14:40.6334 INFO Enrolled
+2019-02-05 16:14:40.6381 INFO Entities.Models.StudentInfo
+2019-02-05 16:14:40.6387 INFO Enrolled
+2019-02-05 16:14:40.6414 INFO Entities.Models.StudentInfo
+2019-02-05 16:14:40.6414 INFO Enrolled
+2019-02-05 16:14:40.6471 INFO Entities.Models.StudentInfo
+2019-02-05 16:14:40.6477 INFO Drop Out
+2019-02-05 16:14:40.6493 INFO Entities.Models.StudentInfo
+2019-02-05 16:14:40.6493 INFO Enrolled
+2019-02-05 16:14:40.6524 INFO Entities.Models.StudentInfo
+2019-02-05 16:14:40.6539 INFO Enrolled
+2019-02-05 16:14:40.6576 INFO Entities.Models.StudentInfo
+2019-02-05 16:14:40.6583 INFO Enrolled
+2019-02-05 16:14:40.6606 INFO Entities.Models.StudentInfo
+2019-02-05 16:14:40.6620 INFO Returned all students from database. 10
+2019-02-05 16:21:35.9349 INFO Returned all users from database. System.Linq.OrderedEnumerable`2[Entities.Models.User,System.String]
+2019-02-05 16:21:35.9475 INFO Returned all userlogins from database. 15
+2019-02-05 16:21:52.7399 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-05 16:21:52.7425 INFO Enrolled
+2019-02-05 16:21:52.7457 INFO Entities.Models.StudentInfo
+2019-02-05 16:21:52.8392 INFO Enrolled
+2019-02-05 16:21:52.9414 INFO Entities.Models.StudentInfo
+2019-02-05 16:21:52.9414 INFO Enrolled
+2019-02-05 16:21:52.9433 INFO Entities.Models.StudentInfo
+2019-02-05 16:21:52.9433 INFO Enrolled
+2019-02-05 16:21:52.9453 INFO Entities.Models.StudentInfo
+2019-02-05 16:21:52.9453 INFO Enrolled
+2019-02-05 16:21:52.9471 INFO Entities.Models.StudentInfo
+2019-02-05 16:21:52.9476 INFO Enrolled
+2019-02-05 16:21:52.9491 INFO Entities.Models.StudentInfo
+2019-02-05 16:21:52.9496 INFO Drop Out
+2019-02-05 16:21:52.9512 INFO Entities.Models.StudentInfo
+2019-02-05 16:21:52.9512 INFO Enrolled
+2019-02-05 16:21:52.9530 INFO Entities.Models.StudentInfo
+2019-02-05 16:21:52.9536 INFO Enrolled
+2019-02-05 16:21:52.9556 INFO Entities.Models.StudentInfo
+2019-02-05 16:21:52.9562 INFO Enrolled
+2019-02-05 16:21:52.9584 INFO Entities.Models.StudentInfo
+2019-02-05 16:21:52.9599 INFO Returned all students from database. 10
+2019-02-05 16:22:06.0983 INFO Returned all users from database. System.Linq.OrderedEnumerable`2[Entities.Models.User,System.String]
+2019-02-05 16:22:06.1023 INFO Returned all userlogins from database. 15
+2019-02-05 16:22:15.6613 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-05 16:22:39.9436 INFO Returned user with username: gwhate2219
+2019-02-05 16:22:39.9448 INFO Returned Student with id: 191611
+2019-02-05 16:22:40.0469 ERROR Look Here191611
+2019-02-05 16:22:45.7986 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-05 16:22:45.8012 INFO Enrolled
+2019-02-05 16:22:45.8062 INFO Entities.Models.StudentInfo
+2019-02-05 16:22:45.8072 INFO Enrolled
+2019-02-05 16:22:45.8093 INFO Entities.Models.StudentInfo
+2019-02-05 16:22:45.8101 INFO Enrolled
+2019-02-05 16:22:45.8133 INFO Entities.Models.StudentInfo
+2019-02-05 16:22:45.8140 INFO Enrolled
+2019-02-05 16:22:45.8161 INFO Entities.Models.StudentInfo
+2019-02-05 16:22:45.8161 INFO Enrolled
+2019-02-05 16:22:45.8184 INFO Entities.Models.StudentInfo
+2019-02-05 16:22:45.8191 INFO Enrolled
+2019-02-05 16:22:45.8208 INFO Entities.Models.StudentInfo
+2019-02-05 16:22:45.8215 INFO Enrolled
+2019-02-05 16:22:45.8231 INFO Entities.Models.StudentInfo
+2019-02-05 16:22:45.8231 INFO Drop Out
+2019-02-05 16:22:45.8257 INFO Entities.Models.StudentInfo
+2019-02-05 16:22:45.8264 INFO Enrolled
+2019-02-05 16:22:45.8280 INFO Entities.Models.StudentInfo
+2019-02-05 16:22:45.8280 INFO Enrolled
+2019-02-05 16:22:45.8303 INFO Entities.Models.StudentInfo
+2019-02-05 16:22:45.8311 INFO Enrolled
+2019-02-05 16:22:45.8325 INFO Entities.Models.StudentInfo
+2019-02-05 16:22:45.8340 INFO Returned all students from database. 11
+2019-02-05 16:22:53.2832 INFO Returned all userlogins from database. 16
+2019-02-05 16:22:53.2873 INFO Returned all users from database. System.Linq.OrderedEnumerable`2[Entities.Models.User,System.String]
+2019-02-05 16:28:27.4901 INFO Returned user with username: gwhate2219
+2019-02-05 16:28:27.5009 INFO Returned User with id: 16
+2019-02-05 16:28:27.5103 INFO Returned Student with id: 16
+2019-02-05 16:28:29.3148 INFO Returned Student with id: 191611
+2019-02-05 16:28:29.3484 INFO Returned Department with id: 2
+2019-02-05 16:28:29.3678 INFO Returned all transactions from database. System.Linq.OrderedEnumerable`2[Entities.Models.Transaction,System.Int32]
+2019-02-05 16:28:29.3963 INFO Returned all Enrollments from database. 8
+2019-02-05 16:28:29.4117 INFO Returned all sections from database. 9
+2019-02-05 16:28:29.4269 INFO Returned all courses from database. 11
+2019-02-05 22:11:30.5387 INFO Returned user with username: dbrown32066
+2019-02-05 22:11:30.7956 INFO Returned User with id: 1
+2019-02-05 22:12:45.0098 INFO Returned all userlogins from database. 16
+2019-02-05 22:12:45.0449 INFO Returned all users from database. System.Linq.OrderedEnumerable`2[Entities.Models.User,System.String]
+2019-02-05 22:17:46.9865 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-05 22:17:47.0305 INFO Returned all courses from database. 11
+2019-02-05 22:24:19.7128 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-05 22:28:50.5442 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-05 22:29:41.1461 ERROR Look HereCIS-1212
+2019-02-05 22:29:42.7724 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-05 22:29:42.7779 INFO Returned all courses from database. 12
+2019-02-05 22:34:13.4552 INFO Returned all sections from database. 9
+2019-02-05 22:36:39.1640 INFO Returned all courses from database. 12
+2019-02-05 22:36:39.2018 INFO Entities.Models.FacultyInfo
+2019-02-05 22:36:39.2035 INFO Returned all faculty from database. 1
+2019-02-05 22:38:12.3711 INFO Returned all courses from database. 12
+2019-02-05 22:38:12.3785 INFO Entities.Models.FacultyInfo
+2019-02-05 22:38:12.3835 INFO Returned all faculty from database. 1
+2019-02-05 22:41:00.8516 INFO Returned all sections from database. 10
+2019-02-05 22:41:37.7989 INFO Returned all courses from database. 12
+2019-02-05 22:41:37.8414 INFO Returned Section with id: 10
+2019-02-05 22:41:43.9710 INFO Returned all sections from database. 10
+2019-02-05 22:42:32.7301 INFO Entities.Models.FacultyInfo
+2019-02-05 22:42:32.7335 INFO Returned all faculty from database. 1
+2019-02-05 22:42:32.7430 INFO Returned all courses from database. 12
+2019-02-05 22:43:51.8760 INFO Returned all sections from database. 11
+2019-02-05 22:46:04.4774 INFO Returned all sections from database. 11
+2019-02-05 22:46:45.8409 INFO Returned all sections from database. 11
+2019-02-05 22:46:58.6081 INFO Returned all sections from database. 11
+2019-02-05 22:49:28.2987 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-05 22:49:28.4189 INFO Enrolled
+2019-02-05 22:49:28.4217 INFO Entities.Models.StudentInfo
+2019-02-05 22:49:28.4217 INFO Enrolled
+2019-02-05 22:49:28.4234 INFO Entities.Models.StudentInfo
+2019-02-05 22:49:28.4234 INFO Enrolled
+2019-02-05 22:49:28.4251 INFO Entities.Models.StudentInfo
+2019-02-05 22:49:28.4258 INFO Enrolled
+2019-02-05 22:49:28.4271 INFO Entities.Models.StudentInfo
+2019-02-05 22:49:28.4276 INFO Enrolled
+2019-02-05 22:49:28.4289 INFO Entities.Models.StudentInfo
+2019-02-05 22:49:28.4296 INFO Enrolled
+2019-02-05 22:49:28.4320 INFO Entities.Models.StudentInfo
+2019-02-05 22:49:28.4349 INFO Enrolled
+2019-02-05 22:49:28.4400 INFO Entities.Models.StudentInfo
+2019-02-05 22:49:28.4407 INFO Drop Out
+2019-02-05 22:49:28.4426 INFO Entities.Models.StudentInfo
+2019-02-05 22:49:28.4426 INFO Enrolled
+2019-02-05 22:49:28.4447 INFO Entities.Models.StudentInfo
+2019-02-05 22:49:28.4447 INFO Enrolled
+2019-02-05 22:49:28.4466 INFO Entities.Models.StudentInfo
+2019-02-05 22:49:28.4466 INFO Enrolled
+2019-02-05 22:49:28.4488 INFO Entities.Models.StudentInfo
+2019-02-05 22:49:28.4516 INFO Returned all students from database. 11
+2019-02-05 22:49:31.9704 INFO Returned all Enrollments from database. 8
+2019-02-05 22:49:31.9843 INFO Enrolled
+2019-02-05 22:49:31.9931 INFO Entities.Models.StudentInfo
+2019-02-05 22:49:31.9936 INFO Enrolled
+2019-02-05 22:49:31.9971 INFO Entities.Models.StudentInfo
+2019-02-05 22:49:31.9978 INFO Enrolled
+2019-02-05 22:49:32.0001 INFO Entities.Models.StudentInfo
+2019-02-05 22:49:32.0007 INFO Enrolled
+2019-02-05 22:49:32.0022 INFO Entities.Models.StudentInfo
+2019-02-05 22:49:32.0022 INFO Enrolled
+2019-02-05 22:49:32.0050 INFO Entities.Models.StudentInfo
+2019-02-05 22:49:32.0057 INFO Enrolled
+2019-02-05 22:49:32.0074 INFO Entities.Models.StudentInfo
+2019-02-05 22:49:32.0074 INFO Enrolled
+2019-02-05 22:49:32.0098 INFO Entities.Models.StudentInfo
+2019-02-05 22:49:32.0104 INFO Drop Out
+2019-02-05 22:49:32.0117 INFO Entities.Models.StudentInfo
+2019-02-05 22:49:32.0123 INFO Enrolled
+2019-02-05 22:49:32.0137 INFO Entities.Models.StudentInfo
+2019-02-05 22:49:32.0143 INFO Enrolled
+2019-02-05 22:49:32.0159 INFO Entities.Models.StudentInfo
+2019-02-05 22:49:32.0166 INFO Enrolled
+2019-02-05 22:49:32.0182 INFO Entities.Models.StudentInfo
+2019-02-05 22:49:32.0198 INFO Returned all students from database. 11
+2019-02-05 22:49:34.3733 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-05 22:49:36.1280 INFO Returned all userlogins from database. 16
+2019-02-05 22:49:36.1450 INFO Returned all users from database. System.Linq.OrderedEnumerable`2[Entities.Models.User,System.String]
+2019-02-05 22:49:38.3893 INFO Returned all users from database. System.Linq.OrderedEnumerable`2[Entities.Models.User,System.String]
+2019-02-05 22:49:46.5720 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-05 22:49:46.5773 INFO Entities.Models.FacultyInfo
+2019-02-05 22:49:46.5815 INFO Returned all faculty from database. 1
+2019-02-05 22:49:49.1625 INFO Returned all users from database. System.Linq.OrderedEnumerable`2[Entities.Models.User,System.String]
+2019-02-05 22:49:57.0154 INFO Returned all Enrollments from database. 8
+2019-02-05 22:49:57.0291 INFO Enrolled
+2019-02-05 22:49:57.0308 INFO Entities.Models.StudentInfo
+2019-02-05 22:49:57.0308 INFO Enrolled
+2019-02-05 22:49:57.0331 INFO Entities.Models.StudentInfo
+2019-02-05 22:49:57.0337 INFO Enrolled
+2019-02-05 22:49:57.0351 INFO Entities.Models.StudentInfo
+2019-02-05 22:49:57.0351 INFO Enrolled
+2019-02-05 22:49:57.0372 INFO Entities.Models.StudentInfo
+2019-02-05 22:49:57.0377 INFO Enrolled
+2019-02-05 22:49:57.0392 INFO Entities.Models.StudentInfo
+2019-02-05 22:49:57.0397 INFO Enrolled
+2019-02-05 22:49:57.0414 INFO Entities.Models.StudentInfo
+2019-02-05 22:49:57.0420 INFO Enrolled
+2019-02-05 22:49:57.0438 INFO Entities.Models.StudentInfo
+2019-02-05 22:49:57.0438 INFO Drop Out
+2019-02-05 22:49:57.0466 INFO Entities.Models.StudentInfo
+2019-02-05 22:49:57.0473 INFO Enrolled
+2019-02-05 22:49:57.0487 INFO Entities.Models.StudentInfo
+2019-02-05 22:49:57.0487 INFO Enrolled
+2019-02-05 22:49:57.0503 INFO Entities.Models.StudentInfo
+2019-02-05 22:49:57.0507 INFO Enrolled
+2019-02-05 22:49:57.0517 INFO Entities.Models.StudentInfo
+2019-02-05 22:49:57.0530 INFO Returned all students from database. 11
+2019-02-05 22:50:01.8662 INFO Returned all users from database. System.Linq.OrderedEnumerable`2[Entities.Models.User,System.String]
+2019-02-05 22:50:40.0852 INFO Returned all courses from database. 12
+2019-02-05 22:50:45.2150 INFO Returned User with id: 1
+2019-02-05 22:50:45.2472 INFO Returned Department with id: 0
+2019-02-05 22:50:45.2594 INFO Returned Course with id: 0
+2019-02-05 22:50:47.6301 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-05 22:50:53.3795 INFO Returned User with id: 1
+2019-02-05 22:50:53.3795 INFO Returned Department with id: 3
+2019-02-05 22:50:53.3981 INFO Returned Course with id: 3
+2019-02-05 22:50:57.0224 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-05 22:50:59.6831 INFO Returned User with id: 1
+2019-02-05 22:50:59.6891 INFO Returned Department with id: 2
+2019-02-05 22:50:59.7243 INFO Returned Course with id: 2
+2019-02-05 22:51:02.6513 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-05 22:51:03.5566 INFO Returned User with id: 1
+2019-02-05 22:51:03.5596 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-05 22:51:03.5940 INFO Returned Course with id: 3
+2019-02-05 22:51:03.5958 INFO Returned Course with id: 4
+2019-02-05 22:51:03.5958 INFO Returned Course with id: 2
+2019-02-05 22:51:03.6156 INFO Returned Course with id: 5
+2019-02-05 22:51:06.0803 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-05 22:51:08.3708 INFO Returned all courses from database. 12
+2019-02-05 22:51:11.3822 INFO Returned User with id: 1
+2019-02-05 22:51:11.3913 INFO Returned Department with id: 0
+2019-02-05 22:51:11.4022 INFO Returned Course with id: 0
+2019-02-05 22:51:13.1906 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-05 22:51:19.1287 INFO Returned all courses from database. 12
+2019-02-05 22:51:22.0448 INFO Returned Department with id: 0
+2019-02-05 22:51:22.0448 INFO Returned User with id: 1
+2019-02-05 22:51:22.0591 INFO Returned Course with id: 0
+2019-02-05 22:51:23.6794 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-05 22:53:51.5633 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-05 22:53:52.4488 INFO Returned User with id: 1
+2019-02-05 22:53:52.5681 INFO Returned Course with id: 4
+2019-02-05 22:53:52.5702 INFO Returned Course with id: 2
+2019-02-05 22:53:52.5715 INFO Returned Course with id: 5
+2019-02-05 22:53:52.5702 INFO Returned Course with id: 3
+2019-02-05 22:54:01.5139 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-05 22:54:05.3318 INFO Returned User with id: 1
+2019-02-05 22:54:05.3475 INFO Returned Department with id: 2
+2019-02-05 22:54:05.3629 INFO Returned Course with id: 2
+2019-02-05 22:54:08.1231 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-05 22:54:10.3453 INFO Returned all courses from database. 12
+2019-02-05 22:54:13.2574 INFO Returned User with id: 1
+2019-02-05 22:54:13.2730 INFO Returned Department with id: 0
+2019-02-05 22:54:13.2915 INFO Returned Course with id: 0
+2019-02-05 22:54:16.0463 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-05 22:54:18.7908 INFO Returned User with id: 1
+2019-02-05 22:54:18.7919 INFO Returned Department with id: 2
+2019-02-05 22:54:18.8099 INFO Returned Course with id: 2
