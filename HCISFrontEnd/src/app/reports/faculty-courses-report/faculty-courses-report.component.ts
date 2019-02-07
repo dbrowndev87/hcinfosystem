@@ -7,7 +7,6 @@ import { ErrorHandlerService } from 'src/app/shared/services/error-handler.servi
 import { Router, ActivatedRoute } from '@angular/router';
 import { ReportIdGenerator } from 'src/app/shared/tools/ridg';
 import { Department } from 'src/app/_interfaces/department.model';
-import { Course } from 'src/app/_interfaces/course.model';
 import { Section } from 'src/app/_interfaces/section.model';
 import { FacultyInfo } from 'src/app/_interfaces/facultyInfo.model';
 
@@ -16,6 +15,7 @@ import { FacultyInfo } from 'src/app/_interfaces/facultyInfo.model';
   templateUrl: './faculty-courses-report.component.html',
   styleUrls: ['./faculty-courses-report.component.css']
 })
+
 export class FacultyCoursesReportComponent implements OnInit {
 
   public errorMessage: String = "";
@@ -28,7 +28,6 @@ export class FacultyCoursesReportComponent implements OnInit {
   private theDepartment: Department;
   private facultyByDepartment: FacultyInfo[] = [];
 
-
   private reportId = "";
   private reportDate;
   private reportFor = "";
@@ -36,7 +35,6 @@ export class FacultyCoursesReportComponent implements OnInit {
   // Array for all the subscriptions
   private subscriptions: Subscription[] = [];
   sectionsByFaculty: Section[] = [];
-
 
   constructor(
     private repository: RepositoryService,
@@ -125,8 +123,6 @@ export class FacultyCoursesReportComponent implements OnInit {
         this.errorHandler.handleError(error);
         this.errorMessage = this.errorHandler.errorMessage;
       };
-
-
   }
 
   public getSectionsByFacultyId(faculty, index) {
@@ -147,7 +143,6 @@ export class FacultyCoursesReportComponent implements OnInit {
             this.isLoaded = true;
           }
         }));
-
   }
 
   private backToReportGenerator() {

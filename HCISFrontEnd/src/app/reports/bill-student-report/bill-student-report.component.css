@@ -1,0 +1,34 @@
+
+.billTable{
+    width: 100%;
+    background-color: white !important;
+}
+
+table{
+    background-color: white !important;
+}
+
+td{
+    padding: 5px !important;
+}
+
+th{
+    padding: 5px !important;
+}
+
+.logoReport{
+    width: 200px;
+}
+
+.reportTable{
+    width: 100%;
+}
+
+
+.totalZero{
+    background-color: greenyellow
+}
+
+.totalOwing{
+    background-color: red;
+}

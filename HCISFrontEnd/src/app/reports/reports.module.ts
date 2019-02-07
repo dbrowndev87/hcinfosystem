@@ -12,6 +12,10 @@ import { StudentTranscriptComponent } from './student-transcript/student-transcr
 import { StudentTranscriptReportComponent } from './student-transcript-report/student-transcript-report.component';
 import { FacultyCoursesComponent } from './faculty-courses/faculty-courses.component';
 import { FacultyCoursesReportComponent } from './faculty-courses-report/faculty-courses-report.component';
+import { StudentCoursesComponent } from './student-courses/student-courses.component';
+import { StudentCoursesReportComponent } from './student-courses-report/student-courses-report.component';
+import { BillStudentComponent } from './bill-student/bill-student.component';
+import { BillStudentReportComponent } from './bill-student-report/bill-student-report.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,11 @@ import { FacultyCoursesReportComponent } from './faculty-courses-report/faculty-
     StudentTranscriptComponent,
     StudentTranscriptReportComponent,
     FacultyCoursesComponent,
-    FacultyCoursesReportComponent
+    FacultyCoursesReportComponent,
+    StudentCoursesComponent,
+    StudentCoursesReportComponent,
+    BillStudentComponent,
+    BillStudentReportComponent
   ],
   imports: [
     CommonModule,
