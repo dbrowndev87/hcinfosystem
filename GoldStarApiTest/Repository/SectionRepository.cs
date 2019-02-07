@@ -26,7 +26,7 @@ namespace Repository
         public IEnumerable<Section> GetAllSections()
         {
             return FindAll()
-                .OrderBy(ow => ow.Section_Id);
+                .OrderBy(ow => ow.End_Date);
         }
 
         public Section GetSectionById(int sectionId)
