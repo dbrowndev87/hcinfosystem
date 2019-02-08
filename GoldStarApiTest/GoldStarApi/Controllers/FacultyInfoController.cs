@@ -46,6 +46,7 @@ namespace GoldStarApi.Controllers
                 facultyInfoObject.Faculty_Status = facultyFromDb.Faculty_Status;
                 facultyInfoObject.Faculty_Id = facultyFromDb.Faculty_Id;
                 facultyInfoObject.User_Id = facultyFromDb.User_Id;
+                //facultyInfoObject.Start_Date = facultyFromDb.Start_Date;
 
                 var userFromDb = _repository.Users.GetUserById(facultyFromDb.User_Id);
                 facultyInfoObject.Last_Name = userFromDb.Last_Name;
@@ -82,6 +83,7 @@ namespace GoldStarApi.Controllers
                         Faculty_Id = current.Faculty_Id,
                         Faculty_Status = current.Faculty_Status,
                         User_Id = current.User_Id,
+                        //Start_Date = current.Start_Date,
 
                     };
 
@@ -95,6 +97,7 @@ namespace GoldStarApi.Controllers
                     facultyInfoObject.Dept_Id = user.Dept_Id;
                     facultyInfoObject.Type_Code = user.Type_Code;
                     facultyInfoObject.User_Id = user.User_Id;
+                   
 
                     allFacultyInfo.Add(facultyInfoObject);
 
@@ -129,6 +132,7 @@ namespace GoldStarApi.Controllers
                     Faculty_Id = current.Faculty_Id,
                     Faculty_Status = current.Faculty_Status,
                     User_Id = current.User_Id,
+                    //Start_Date = current.Start_Date,
 
                 };
 

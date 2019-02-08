@@ -10,6 +10,7 @@ import { Department } from 'src/app/_interfaces/department.model';
 import { Section } from 'src/app/_interfaces/section.model';
 import { FacultyInfo } from 'src/app/_interfaces/facultyInfo.model';
 import { Faculty } from 'src/app/_interfaces/faculty.model';
+import { SectionInfo } from 'src/app/_interfaces/sectionInfo.model';
 
 @Component({
   selector: 'app-faculty-courses-report',
@@ -187,12 +188,13 @@ export class FacultyCoursesReportComponent implements OnInit {
 
   public getSectionInfoByFacultyId(facultyId, x, y) {
 
-    let apiAddress = "api/section/faculty/" + facultyId;
+    let apiAddress = "api/section/courseInfo/faculty/" + facultyId;
     this.subscriptions.push(this.repository.getData(apiAddress)
       .subscribe(res => {
-        let sections: Section[] = res as Section[];
+        let sections: SectionInfo[] = res as SectionInfo[];
         let tempArray: any[] = new Array();
-        console.log("Sections: " + sections + " By FacultyID: " + facultyId);
+
+        console.log(sections);
 
         for (let z = 0; z < sections.length; z++) {
           this.depts[x]['faculty'][y]['sections'].push(sections[z]);

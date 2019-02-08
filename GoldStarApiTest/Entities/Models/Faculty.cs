@@ -8,6 +8,8 @@
  * Author: Nick Peconi/Darcy Brown
  * Date: January 7th, 2019
  */
+
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -28,5 +30,8 @@ namespace Entities.Models
         [Required(ErrorMessage = "User ID is required")]
         [Range(1,999999, ErrorMessage = "User id length must be between 1 and 6")]
         public int User_Id { get; set; }
+        
+        //[Required(ErrorMessage = "Start Date is required")]
+        //public DateTime Start_Date { get; set; }
     }
 }

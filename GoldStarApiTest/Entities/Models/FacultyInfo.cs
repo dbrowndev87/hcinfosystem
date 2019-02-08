@@ -32,5 +32,7 @@ namespace Entities.Models
         public int Dept_Id { get; set; }
 
         public string Address { get; set; }
+        
+        public DateTime Start_Date { get; set; }
     }
 }

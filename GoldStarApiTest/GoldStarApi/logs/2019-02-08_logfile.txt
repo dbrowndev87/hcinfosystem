@@ -1,0 +1,393 @@
+2019-02-08 00:04:18.4744 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-08 00:04:19.1162 INFO Entities.Models.FacultyInfo
+2019-02-08 00:04:19.1212 INFO Entities.Models.FacultyInfo
+2019-02-08 00:04:19.1227 INFO Entities.Models.FacultyInfo
+2019-02-08 00:04:19.1238 INFO Entities.Models.FacultyInfo
+2019-02-08 00:04:19.1250 INFO Entities.Models.FacultyInfo
+2019-02-08 00:04:19.1265 INFO Returned all faculty from database. 5
+2019-02-08 00:04:23.7581 INFO Returned all courses from database. 13
+2019-02-08 00:04:27.1606 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-08 00:04:30.0352 INFO Returned User with id: 1
+2019-02-08 00:04:30.0453 INFO Returned Department with id: 4
+2019-02-08 00:04:30.0618 INFO Returned Course with id: 4
+2019-02-08 00:04:31.9498 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-08 00:04:32.8316 INFO Returned User with id: 1
+2019-02-08 00:04:32.8338 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-08 00:04:32.8549 INFO Returned Course with id: 2
+2019-02-08 00:04:32.8726 INFO Returned Course with id: 3
+2019-02-08 00:04:32.8733 INFO Returned Course with id: 5
+2019-02-08 00:04:32.8792 INFO Returned Course with id: 7
+2019-02-08 00:04:32.8911 INFO Returned Course with id: 4
+2019-02-08 00:04:32.8947 INFO Returned Course with id: 6
+2019-02-08 00:04:42.1316 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-08 00:04:42.1330 INFO Returned all courses from database. 13
+2019-02-08 00:04:43.2230 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-08 00:05:15.5403 ERROR Look HereTEST-101
+2019-02-08 00:05:16.9263 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-08 00:05:16.9309 INFO Returned all courses from database. 14
+2019-02-08 00:05:19.9416 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-08 00:05:22.1935 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-08 00:05:22.1989 INFO Returned User with id: 1
+2019-02-08 00:05:22.2130 INFO Returned Course with id: 2
+2019-02-08 00:05:22.2172 INFO Returned Course with id: 3
+2019-02-08 00:05:22.2442 INFO Returned Course with id: 5
+2019-02-08 00:05:22.2494 INFO Returned Course with id: 6
+2019-02-08 00:05:22.2557 INFO Returned Course with id: 4
+2019-02-08 00:05:22.2640 INFO Returned Course with id: 7
+2019-02-08 00:05:25.4146 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-08 00:05:35.6563 INFO Returned all sections from database. 14
+2019-02-08 00:05:38.5852 INFO Returned all courses from database. 14
+2019-02-08 00:05:38.5887 INFO Entities.Models.FacultyInfo
+2019-02-08 00:05:38.5924 INFO Entities.Models.FacultyInfo
+2019-02-08 00:05:38.5942 INFO Entities.Models.FacultyInfo
+2019-02-08 00:05:38.5962 INFO Entities.Models.FacultyInfo
+2019-02-08 00:05:38.5982 INFO Entities.Models.FacultyInfo
+2019-02-08 00:05:38.5995 INFO Returned all faculty from database. 5
+2019-02-08 00:05:53.3330 INFO Returned all sections from database. 15
+2019-02-08 00:05:57.9446 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-08 00:05:59.9349 INFO Returned User with id: 1
+2019-02-08 00:05:59.9374 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-08 00:05:59.9641 INFO Entities.Models.FacultyInfo
+2019-02-08 00:06:00.0387 INFO Entities.Models.FacultyInfo
+2019-02-08 00:06:00.1329 INFO Entities.Models.FacultyInfo
+2019-02-08 00:06:00.1342 INFO Entities.Models.FacultyInfo
+2019-02-08 00:06:00.1355 INFO Entities.Models.FacultyInfo
+2019-02-08 00:06:00.1364 INFO Returned all faculty from database. 5
+2019-02-08 00:06:00.1539 INFO Current: 1 Faculty ID In: 2
+2019-02-08 00:06:00.1558 INFO Current: 1 Faculty ID In: 2
+2019-02-08 00:06:00.1567 INFO Current: 1 Faculty ID In: 2
+2019-02-08 00:06:00.1567 INFO Current: 1 Faculty ID In: 2
+2019-02-08 00:06:00.1597 INFO Current: 1 Faculty ID In: 2
+2019-02-08 00:06:00.1606 INFO Current: 2 Faculty ID In: 2
+2019-02-08 00:06:00.1597 INFO Current: 1 Faculty ID In: 3
+2019-02-08 00:06:00.1614 INFO Current: 1 Faculty ID In: 3
+2019-02-08 00:06:00.1644 INFO Current: 1 Faculty ID In: 3
+2019-02-08 00:06:00.1644 INFO Current: 1 Faculty ID In: 3
+2019-02-08 00:06:00.1644 INFO Current: 1 Faculty ID In: 3
+2019-02-08 00:06:00.1655 INFO Current: 2 Faculty ID In: 3
+2019-02-08 00:06:00.1655 INFO Current: 4 Faculty ID In: 3
+2019-02-08 00:06:00.1655 INFO Current: 5 Faculty ID In: 3
+2019-02-08 00:06:00.1666 INFO Current: 1 Faculty ID In: 3
+2019-02-08 00:06:00.1666 INFO Current: 1 Faculty ID In: 3
+2019-02-08 00:06:00.1673 INFO Current: 1 Faculty ID In: 3
+2019-02-08 00:06:00.1673 INFO Current: 1 Faculty ID In: 3
+2019-02-08 00:06:00.1673 INFO Current: 1 Faculty ID In: 3
+2019-02-08 00:06:00.1683 INFO Current: 1 Faculty ID In: 3
+2019-02-08 00:06:00.1683 INFO Current: 1 Faculty ID In: 3
+2019-02-08 00:06:00.1683 INFO Returned All Section Course Information
+2019-02-08 00:06:00.1638 INFO Current: 1 Faculty ID In: 5
+2019-02-08 00:06:00.1715 INFO Current: 1 Faculty ID In: 5
+2019-02-08 00:06:00.1715 INFO Current: 1 Faculty ID In: 5
+2019-02-08 00:06:00.1715 INFO Current: 1 Faculty ID In: 5
+2019-02-08 00:06:00.1726 INFO Current: 1 Faculty ID In: 5
+2019-02-08 00:06:00.1726 INFO Current: 2 Faculty ID In: 5
+2019-02-08 00:06:00.1733 INFO Current: 4 Faculty ID In: 5
+2019-02-08 00:06:00.1733 INFO Current: 5 Faculty ID In: 5
+2019-02-08 00:06:00.1733 INFO Current: 1 Faculty ID In: 1
+2019-02-08 00:06:00.1812 INFO Current: 1 Faculty ID In: 4
+2019-02-08 00:06:00.1816 INFO Current: 1 Faculty ID In: 4
+2019-02-08 00:06:00.1816 INFO Current: 1 Faculty ID In: 4
+2019-02-08 00:06:00.1816 INFO Current: 1 Faculty ID In: 4
+2019-02-08 00:06:00.1827 INFO Current: 1 Faculty ID In: 4
+2019-02-08 00:06:00.1827 INFO Current: 2 Faculty ID In: 4
+2019-02-08 00:06:00.1833 INFO Current: 4 Faculty ID In: 4
+2019-02-08 00:06:00.2008 INFO Current: 5 Faculty ID In: 4
+2019-02-08 00:06:00.2016 INFO Current: 1 Faculty ID In: 4
+2019-02-08 00:06:00.2016 INFO Current: 1 Faculty ID In: 4
+2019-02-08 00:06:00.2025 INFO Current: 1 Faculty ID In: 4
+2019-02-08 00:06:00.2025 INFO Current: 1 Faculty ID In: 4
+2019-02-08 00:06:00.2025 INFO Current: 1 Faculty ID In: 4
+2019-02-08 00:06:00.2036 INFO Current: 1 Faculty ID In: 4
+2019-02-08 00:06:00.2036 INFO Current: 1 Faculty ID In: 4
+2019-02-08 00:06:00.2036 INFO Returned All Section Course Information
+2019-02-08 00:06:00.2016 INFO Current: 1 Faculty ID In: 1
+2019-02-08 00:06:00.2016 INFO Current: 4 Faculty ID In: 2
+2019-02-08 00:06:00.2109 INFO Current: 5 Faculty ID In: 2
+2019-02-08 00:06:00.2113 INFO Current: 1 Faculty ID In: 2
+2019-02-08 00:06:00.2113 INFO Current: 1 Faculty ID In: 2
+2019-02-08 00:06:00.2125 INFO Current: 1 Faculty ID In: 2
+2019-02-08 00:06:00.2125 INFO Current: 1 Faculty ID In: 2
+2019-02-08 00:06:00.2125 INFO Current: 1 Faculty ID In: 2
+2019-02-08 00:06:00.2135 INFO Current: 1 Faculty ID In: 2
+2019-02-08 00:06:00.2135 INFO Current: 1 Faculty ID In: 2
+2019-02-08 00:06:00.2135 INFO Returned All Section Course Information
+2019-02-08 00:06:00.2159 INFO Current: 1 Faculty ID In: 5
+2019-02-08 00:06:00.2180 INFO Current: 1 Faculty ID In: 5
+2019-02-08 00:06:00.2185 INFO Current: 1 Faculty ID In: 5
+2019-02-08 00:06:00.2185 INFO Current: 1 Faculty ID In: 5
+2019-02-08 00:06:00.2185 INFO Current: 1 Faculty ID In: 5
+2019-02-08 00:06:00.2196 INFO Current: 1 Faculty ID In: 5
+2019-02-08 00:06:00.2196 INFO Current: 1 Faculty ID In: 5
+2019-02-08 00:06:00.2203 INFO Returned All Section Course Information
+2019-02-08 00:06:00.2216 INFO Current: 1 Faculty ID In: 1
+2019-02-08 00:06:00.2275 INFO Current: 1 Faculty ID In: 1
+2019-02-08 00:06:00.2308 INFO Current: 1 Faculty ID In: 1
+2019-02-08 00:06:00.2335 INFO Current: 2 Faculty ID In: 1
+2019-02-08 00:06:00.2335 INFO Current: 4 Faculty ID In: 1
+2019-02-08 00:06:00.2346 INFO Current: 5 Faculty ID In: 1
+2019-02-08 00:06:00.2346 INFO Current: 1 Faculty ID In: 1
+2019-02-08 00:06:00.2376 INFO Current: 1 Faculty ID In: 1
+2019-02-08 00:06:00.2400 INFO Current: 1 Faculty ID In: 1
+2019-02-08 00:06:00.2428 INFO Current: 1 Faculty ID In: 1
+2019-02-08 00:06:00.2453 INFO Current: 1 Faculty ID In: 1
+2019-02-08 00:06:00.2489 INFO Current: 1 Faculty ID In: 1
+2019-02-08 00:06:00.2515 INFO Current: 1 Faculty ID In: 1
+2019-02-08 00:06:00.2541 INFO Returned All Section Course Information
+2019-02-08 00:06:25.7791 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-08 00:06:53.8990 INFO Returned user with username: rstarr1213
+2019-02-08 00:06:58.8087 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-08 00:07:00.5000 INFO Returned User with id: 1
+2019-02-08 00:07:00.5074 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-08 00:07:00.5299 INFO Entities.Models.FacultyInfo
+2019-02-08 00:07:00.5315 INFO Entities.Models.FacultyInfo
+2019-02-08 00:07:00.5342 INFO Entities.Models.FacultyInfo
+2019-02-08 00:07:00.5380 INFO Entities.Models.FacultyInfo
+2019-02-08 00:07:00.5404 INFO Entities.Models.FacultyInfo
+2019-02-08 00:07:00.5423 INFO Entities.Models.FacultyInfo
+2019-02-08 00:07:00.5437 INFO Returned all faculty from database. 6
+2019-02-08 00:07:00.5700 INFO Current: 1 Faculty ID In: 2
+2019-02-08 00:07:00.5705 INFO Current: 1 Faculty ID In: 2
+2019-02-08 00:07:00.5705 INFO Current: 1 Faculty ID In: 2
+2019-02-08 00:07:00.5705 INFO Current: 1 Faculty ID In: 2
+2019-02-08 00:07:00.5716 INFO Current: 1 Faculty ID In: 2
+2019-02-08 00:07:00.5716 INFO Current: 2 Faculty ID In: 2
+2019-02-08 00:07:00.5914 INFO Current: 1 Faculty ID In: 6
+2019-02-08 00:07:00.5928 INFO Current: 1 Faculty ID In: 6
+2019-02-08 00:07:00.5928 INFO Current: 1 Faculty ID In: 6
+2019-02-08 00:07:00.5941 INFO Current: 1 Faculty ID In: 6
+2019-02-08 00:07:00.5946 INFO Current: 1 Faculty ID In: 6
+2019-02-08 00:07:00.5946 INFO Current: 2 Faculty ID In: 6
+2019-02-08 00:07:00.5955 INFO Current: 4 Faculty ID In: 6
+2019-02-08 00:07:00.5955 INFO Current: 5 Faculty ID In: 6
+2019-02-08 00:07:00.5955 INFO Current: 1 Faculty ID In: 6
+2019-02-08 00:07:00.5966 INFO Current: 1 Faculty ID In: 6
+2019-02-08 00:07:00.5966 INFO Current: 1 Faculty ID In: 6
+2019-02-08 00:07:00.5975 INFO Current: 1 Faculty ID In: 6
+2019-02-08 00:07:00.5975 INFO Current: 1 Faculty ID In: 6
+2019-02-08 00:07:00.5988 INFO Current: 1 Faculty ID In: 6
+2019-02-08 00:07:00.5988 INFO Current: 1 Faculty ID In: 6
+2019-02-08 00:07:00.5996 INFO Returned All Section Course Information
+2019-02-08 00:07:00.5941 INFO Current: 1 Faculty ID In: 5
+2019-02-08 00:07:00.6027 INFO Current: 1 Faculty ID In: 5
+2019-02-08 00:07:00.6027 INFO Current: 1 Faculty ID In: 5
+2019-02-08 00:07:00.6027 INFO Current: 1 Faculty ID In: 5
+2019-02-08 00:07:00.6037 INFO Current: 1 Faculty ID In: 5
+2019-02-08 00:07:00.6037 INFO Current: 2 Faculty ID In: 5
+2019-02-08 00:07:00.6037 INFO Current: 4 Faculty ID In: 5
+2019-02-08 00:07:00.6047 INFO Current: 5 Faculty ID In: 5
+2019-02-08 00:07:00.5996 INFO Current: 1 Faculty ID In: 4
+2019-02-08 00:07:00.6077 INFO Current: 1 Faculty ID In: 4
+2019-02-08 00:07:00.6077 INFO Current: 1 Faculty ID In: 4
+2019-02-08 00:07:00.6086 INFO Current: 1 Faculty ID In: 4
+2019-02-08 00:07:00.6086 INFO Current: 1 Faculty ID In: 4
+2019-02-08 00:07:00.6095 INFO Current: 2 Faculty ID In: 4
+2019-02-08 00:07:00.6095 INFO Current: 4 Faculty ID In: 4
+2019-02-08 00:07:00.6059 INFO Current: 1 Faculty ID In: 3
+2019-02-08 00:07:00.6106 INFO Current: 1 Faculty ID In: 3
+2019-02-08 00:07:00.6117 INFO Current: 1 Faculty ID In: 3
+2019-02-08 00:07:00.6117 INFO Current: 1 Faculty ID In: 3
+2019-02-08 00:07:00.6140 INFO Current: 1 Faculty ID In: 3
+2019-02-08 00:07:00.6145 INFO Current: 2 Faculty ID In: 3
+2019-02-08 00:07:00.6145 INFO Current: 4 Faculty ID In: 3
+2019-02-08 00:07:00.6145 INFO Current: 5 Faculty ID In: 3
+2019-02-08 00:07:00.6156 INFO Current: 1 Faculty ID In: 3
+2019-02-08 00:07:00.6156 INFO Current: 1 Faculty ID In: 3
+2019-02-08 00:07:00.6167 INFO Current: 1 Faculty ID In: 3
+2019-02-08 00:07:00.6167 INFO Current: 1 Faculty ID In: 3
+2019-02-08 00:07:00.6175 INFO Current: 1 Faculty ID In: 3
+2019-02-08 00:07:00.6175 INFO Current: 1 Faculty ID In: 3
+2019-02-08 00:07:00.6175 INFO Current: 1 Faculty ID In: 3
+2019-02-08 00:07:00.6190 INFO Returned All Section Course Information
+2019-02-08 00:07:00.6140 INFO Current: 5 Faculty ID In: 4
+2019-02-08 00:07:00.6215 INFO Current: 1 Faculty ID In: 4
+2019-02-08 00:07:00.6215 INFO Current: 1 Faculty ID In: 4
+2019-02-08 00:07:00.6225 INFO Current: 1 Faculty ID In: 4
+2019-02-08 00:07:00.6225 INFO Current: 1 Faculty ID In: 4
+2019-02-08 00:07:00.6234 INFO Current: 1 Faculty ID In: 4
+2019-02-08 00:07:00.6234 INFO Current: 1 Faculty ID In: 4
+2019-02-08 00:07:00.6246 INFO Current: 1 Faculty ID In: 4
+2019-02-08 00:07:00.6246 INFO Returned All Section Course Information
+2019-02-08 00:07:00.6127 INFO Current: 1 Faculty ID In: 5
+2019-02-08 00:07:00.6257 INFO Current: 1 Faculty ID In: 5
+2019-02-08 00:07:00.6257 INFO Current: 1 Faculty ID In: 5
+2019-02-08 00:07:00.6267 INFO Current: 1 Faculty ID In: 5
+2019-02-08 00:07:00.6267 INFO Current: 1 Faculty ID In: 5
+2019-02-08 00:07:00.6275 INFO Current: 1 Faculty ID In: 5
+2019-02-08 00:07:00.6275 INFO Current: 1 Faculty ID In: 5
+2019-02-08 00:07:00.6275 INFO Returned All Section Course Information
+2019-02-08 00:07:00.5946 INFO Current: 4 Faculty ID In: 2
+2019-02-08 00:07:00.6298 INFO Current: 5 Faculty ID In: 2
+2019-02-08 00:07:00.6298 INFO Current: 1 Faculty ID In: 2
+2019-02-08 00:07:00.6309 INFO Current: 1 Faculty ID In: 2
+2019-02-08 00:07:00.6309 INFO Current: 1 Faculty ID In: 2
+2019-02-08 00:07:00.6316 INFO Current: 1 Faculty ID In: 2
+2019-02-08 00:07:00.6316 INFO Current: 1 Faculty ID In: 2
+2019-02-08 00:07:00.6316 INFO Current: 1 Faculty ID In: 2
+2019-02-08 00:07:00.6327 INFO Current: 1 Faculty ID In: 2
+2019-02-08 00:07:00.6327 INFO Returned All Section Course Information
+2019-02-08 00:07:00.5975 INFO Current: 1 Faculty ID In: 1
+2019-02-08 00:07:00.6434 INFO Current: 1 Faculty ID In: 1
+2019-02-08 00:07:00.6460 INFO Current: 1 Faculty ID In: 1
+2019-02-08 00:07:00.6486 INFO Current: 1 Faculty ID In: 1
+2019-02-08 00:07:00.6511 INFO Current: 1 Faculty ID In: 1
+2019-02-08 00:07:00.6545 INFO Current: 2 Faculty ID In: 1
+2019-02-08 00:07:00.6545 INFO Current: 4 Faculty ID In: 1
+2019-02-08 00:07:00.6545 INFO Current: 5 Faculty ID In: 1
+2019-02-08 00:07:00.6554 INFO Current: 1 Faculty ID In: 1
+2019-02-08 00:07:00.6578 INFO Current: 1 Faculty ID In: 1
+2019-02-08 00:07:00.6602 INFO Current: 1 Faculty ID In: 1
+2019-02-08 00:07:00.6624 INFO Current: 1 Faculty ID In: 1
+2019-02-08 00:07:00.6656 INFO Current: 1 Faculty ID In: 1
+2019-02-08 00:07:00.6689 INFO Current: 1 Faculty ID In: 1
+2019-02-08 00:07:00.6712 INFO Current: 1 Faculty ID In: 1
+2019-02-08 00:07:00.6732 INFO Returned All Section Course Information
+2019-02-08 00:07:10.3934 INFO Returned all sections from database. 15
+2019-02-08 00:07:11.8468 INFO Returned all courses from database. 14
+2019-02-08 00:07:11.8623 INFO Entities.Models.FacultyInfo
+2019-02-08 00:07:11.8639 INFO Entities.Models.FacultyInfo
+2019-02-08 00:07:11.8655 INFO Entities.Models.FacultyInfo
+2019-02-08 00:07:11.8671 INFO Entities.Models.FacultyInfo
+2019-02-08 00:07:11.8693 INFO Entities.Models.FacultyInfo
+2019-02-08 00:07:11.8712 INFO Entities.Models.FacultyInfo
+2019-02-08 00:07:11.8726 INFO Returned all faculty from database. 6
+2019-02-08 00:07:25.2120 INFO Returned all sections from database. 16
+2019-02-08 00:07:27.6030 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-08 00:07:39.5349 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-08 00:07:44.9011 INFO Returned User with id: 1
+2019-02-08 00:07:44.9062 INFO Returned Department with id: 7
+2019-02-08 00:07:44.9290 INFO Entities.Models.FacultyInfo
+2019-02-08 00:07:44.9307 INFO Entities.Models.FacultyInfo
+2019-02-08 00:07:44.9329 INFO Entities.Models.FacultyInfo
+2019-02-08 00:07:44.9343 INFO Entities.Models.FacultyInfo
+2019-02-08 00:07:44.9355 INFO Entities.Models.FacultyInfo
+2019-02-08 00:07:44.9366 INFO Entities.Models.FacultyInfo
+2019-02-08 00:07:44.9375 INFO Returned all faculty from database. 6
+2019-02-08 00:07:44.9479 INFO Current: 1 Faculty ID In: 6
+2019-02-08 00:07:44.9485 INFO Current: 1 Faculty ID In: 6
+2019-02-08 00:07:44.9485 INFO Current: 1 Faculty ID In: 6
+2019-02-08 00:07:44.9485 INFO Current: 1 Faculty ID In: 6
+2019-02-08 00:07:44.9497 INFO Current: 1 Faculty ID In: 6
+2019-02-08 00:07:44.9497 INFO Current: 2 Faculty ID In: 6
+2019-02-08 00:07:44.9505 INFO Current: 4 Faculty ID In: 6
+2019-02-08 00:07:44.9505 INFO Current: 5 Faculty ID In: 6
+2019-02-08 00:07:44.9505 INFO Current: 6 Faculty ID In: 6
+2019-02-08 00:07:44.9564 INFO Current: 1 Faculty ID In: 6
+2019-02-08 00:07:44.9564 INFO Current: 1 Faculty ID In: 6
+2019-02-08 00:07:44.9564 INFO Current: 1 Faculty ID In: 6
+2019-02-08 00:07:44.9575 INFO Current: 1 Faculty ID In: 6
+2019-02-08 00:07:44.9575 INFO Current: 1 Faculty ID In: 6
+2019-02-08 00:07:44.9585 INFO Current: 1 Faculty ID In: 6
+2019-02-08 00:07:44.9585 INFO Current: 1 Faculty ID In: 6
+2019-02-08 00:07:44.9595 INFO Returned All Section Course Information
+2019-02-08 00:07:50.1774 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-08 00:07:52.1371 INFO Returned User with id: 1
+2019-02-08 00:07:52.1396 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-08 00:07:52.1566 INFO Entities.Models.FacultyInfo
+2019-02-08 00:07:52.1582 INFO Entities.Models.FacultyInfo
+2019-02-08 00:07:52.1596 INFO Entities.Models.FacultyInfo
+2019-02-08 00:07:52.1622 INFO Entities.Models.FacultyInfo
+2019-02-08 00:07:52.1638 INFO Entities.Models.FacultyInfo
+2019-02-08 00:07:52.1657 INFO Entities.Models.FacultyInfo
+2019-02-08 00:07:52.1668 INFO Returned all faculty from database. 6
+2019-02-08 00:07:52.1776 INFO Current: 1 Faculty ID In: 2
+2019-02-08 00:07:52.1790 INFO Current: 1 Faculty ID In: 2
+2019-02-08 00:07:52.1796 INFO Current: 1 Faculty ID In: 2
+2019-02-08 00:07:52.1796 INFO Current: 1 Faculty ID In: 2
+2019-02-08 00:07:52.1832 INFO Current: 1 Faculty ID In: 2
+2019-02-08 00:07:52.1848 INFO Current: 2 Faculty ID In: 2
+2019-02-08 00:07:52.1872 INFO Current: 1 Faculty ID In: 3
+2019-02-08 00:07:52.1872 INFO Current: 1 Faculty ID In: 3
+2019-02-08 00:07:52.1883 INFO Current: 1 Faculty ID In: 3
+2019-02-08 00:07:52.1883 INFO Current: 1 Faculty ID In: 3
+2019-02-08 00:07:52.1883 INFO Current: 1 Faculty ID In: 3
+2019-02-08 00:07:52.1894 INFO Current: 2 Faculty ID In: 3
+2019-02-08 00:07:52.1894 INFO Current: 4 Faculty ID In: 3
+2019-02-08 00:07:52.1903 INFO Current: 5 Faculty ID In: 3
+2019-02-08 00:07:52.1903 INFO Current: 6 Faculty ID In: 3
+2019-02-08 00:07:52.1903 INFO Current: 1 Faculty ID In: 3
+2019-02-08 00:07:52.1918 INFO Current: 1 Faculty ID In: 3
+2019-02-08 00:07:52.1918 INFO Current: 1 Faculty ID In: 3
+2019-02-08 00:07:52.1925 INFO Current: 1 Faculty ID In: 3
+2019-02-08 00:07:52.1925 INFO Current: 1 Faculty ID In: 3
+2019-02-08 00:07:52.1935 INFO Current: 1 Faculty ID In: 3
+2019-02-08 00:07:52.1935 INFO Current: 1 Faculty ID In: 3
+2019-02-08 00:07:52.1943 INFO Returned All Section Course Information
+2019-02-08 00:07:52.1872 INFO Current: 1 Faculty ID In: 5
+2019-02-08 00:07:52.1955 INFO Current: 1 Faculty ID In: 5
+2019-02-08 00:07:52.1955 INFO Current: 1 Faculty ID In: 5
+2019-02-08 00:07:52.1977 INFO Current: 1 Faculty ID In: 5
+2019-02-08 00:07:52.1982 INFO Current: 1 Faculty ID In: 5
+2019-02-08 00:07:52.1982 INFO Current: 2 Faculty ID In: 5
+2019-02-08 00:07:52.2003 INFO Current: 4 Faculty ID In: 5
+2019-02-08 00:07:52.2003 INFO Current: 5 Faculty ID In: 5
+2019-02-08 00:07:52.1935 INFO Current: 1 Faculty ID In: 1
+2019-02-08 00:07:52.1982 INFO Current: 4 Faculty ID In: 2
+2019-02-08 00:07:52.2023 INFO Current: 5 Faculty ID In: 2
+2019-02-08 00:07:52.2033 INFO Current: 6 Faculty ID In: 2
+2019-02-08 00:07:52.2033 INFO Current: 1 Faculty ID In: 2
+2019-02-08 00:07:52.2043 INFO Current: 1 Faculty ID In: 2
+2019-02-08 00:07:52.2043 INFO Current: 1 Faculty ID In: 2
+2019-02-08 00:07:52.2053 INFO Current: 1 Faculty ID In: 2
+2019-02-08 00:07:52.2071 INFO Current: 1 Faculty ID In: 2
+2019-02-08 00:07:52.2076 INFO Current: 1 Faculty ID In: 2
+2019-02-08 00:07:52.2076 INFO Current: 1 Faculty ID In: 2
+2019-02-08 00:07:52.2085 INFO Returned All Section Course Information
+2019-02-08 00:07:52.2043 INFO Current: 1 Faculty ID In: 6
+2019-02-08 00:07:52.2094 INFO Current: 1 Faculty ID In: 6
+2019-02-08 00:07:52.2103 INFO Current: 1 Faculty ID In: 6
+2019-02-08 00:07:52.2127 INFO Current: 1 Faculty ID In: 6
+2019-02-08 00:07:52.2127 INFO Current: 1 Faculty ID In: 6
+2019-02-08 00:07:52.2132 INFO Current: 6 Faculty ID In: 5
+2019-02-08 00:07:52.2132 INFO Current: 1 Faculty ID In: 5
+2019-02-08 00:07:52.2157 INFO Current: 1 Faculty ID In: 5
+2019-02-08 00:07:52.2162 INFO Current: 1 Faculty ID In: 5
+2019-02-08 00:07:52.2162 INFO Current: 1 Faculty ID In: 5
+2019-02-08 00:07:52.2162 INFO Current: 1 Faculty ID In: 5
+2019-02-08 00:07:52.2175 INFO Current: 1 Faculty ID In: 5
+2019-02-08 00:07:52.2175 INFO Current: 1 Faculty ID In: 5
+2019-02-08 00:07:52.2184 INFO Returned All Section Course Information
+2019-02-08 00:07:52.2132 INFO Current: 2 Faculty ID In: 6
+2019-02-08 00:07:52.2195 INFO Current: 4 Faculty ID In: 6
+2019-02-08 00:07:52.2195 INFO Current: 5 Faculty ID In: 6
+2019-02-08 00:07:52.2203 INFO Current: 6 Faculty ID In: 6
+2019-02-08 00:07:52.2151 INFO Current: 1 Faculty ID In: 1
+2019-02-08 00:07:52.2132 INFO Current: 1 Faculty ID In: 4
+2019-02-08 00:07:52.2246 INFO Current: 1 Faculty ID In: 4
+2019-02-08 00:07:52.2246 INFO Current: 1 Faculty ID In: 4
+2019-02-08 00:07:52.2252 INFO Current: 1 Faculty ID In: 4
+2019-02-08 00:07:52.2252 INFO Current: 1 Faculty ID In: 4
+2019-02-08 00:07:52.2269 INFO Current: 2 Faculty ID In: 4
+2019-02-08 00:07:52.2273 INFO Current: 4 Faculty ID In: 4
+2019-02-08 00:07:52.2309 INFO Current: 1 Faculty ID In: 1
+2019-02-08 00:07:52.2309 INFO Current: 1 Faculty ID In: 6
+2019-02-08 00:07:52.2335 INFO Current: 1 Faculty ID In: 6
+2019-02-08 00:07:52.2335 INFO Current: 1 Faculty ID In: 6
+2019-02-08 00:07:52.2345 INFO Current: 1 Faculty ID In: 6
+2019-02-08 00:07:52.2345 INFO Current: 1 Faculty ID In: 6
+2019-02-08 00:07:52.2353 INFO Current: 1 Faculty ID In: 6
+2019-02-08 00:07:52.2353 INFO Current: 1 Faculty ID In: 6
+2019-02-08 00:07:52.2353 INFO Returned All Section Course Information
+2019-02-08 00:07:52.2385 INFO Current: 5 Faculty ID In: 4
+2019-02-08 00:07:52.2393 INFO Current: 6 Faculty ID In: 4
+2019-02-08 00:07:52.2393 INFO Current: 1 Faculty ID In: 4
+2019-02-08 00:07:52.2402 INFO Current: 1 Faculty ID In: 4
+2019-02-08 00:07:52.2402 INFO Current: 1 Faculty ID In: 4
+2019-02-08 00:07:52.2413 INFO Current: 1 Faculty ID In: 4
+2019-02-08 00:07:52.2413 INFO Current: 1 Faculty ID In: 4
+2019-02-08 00:07:52.2423 INFO Current: 1 Faculty ID In: 4
+2019-02-08 00:07:52.2423 INFO Current: 1 Faculty ID In: 4
+2019-02-08 00:07:52.2423 INFO Returned All Section Course Information
+2019-02-08 00:07:52.2423 INFO Current: 1 Faculty ID In: 1
+2019-02-08 00:07:52.2474 INFO Current: 1 Faculty ID In: 1
+2019-02-08 00:07:52.2500 INFO Current: 2 Faculty ID In: 1
+2019-02-08 00:07:52.2508 INFO Current: 4 Faculty ID In: 1
+2019-02-08 00:07:52.2513 INFO Current: 5 Faculty ID In: 1
+2019-02-08 00:07:52.2513 INFO Current: 6 Faculty ID In: 1
+2019-02-08 00:07:52.2524 INFO Current: 1 Faculty ID In: 1
+2019-02-08 00:07:52.2546 INFO Current: 1 Faculty ID In: 1
+2019-02-08 00:07:52.2568 INFO Current: 1 Faculty ID In: 1
+2019-02-08 00:07:52.2596 INFO Current: 1 Faculty ID In: 1
+2019-02-08 00:07:52.2644 INFO Current: 1 Faculty ID In: 1
+2019-02-08 00:07:52.2673 INFO Current: 1 Faculty ID In: 1
+2019-02-08 00:07:52.2699 INFO Current: 1 Faculty ID In: 1
+2019-02-08 00:07:52.2722 INFO Returned All Section Course Information

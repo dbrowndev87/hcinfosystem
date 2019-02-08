@@ -73,10 +73,11 @@
                     <!-- Sections -->
                     <div class="stuDiv">
                       <br>
-                      <p class="student">Course ID - Designation</p>
+
                       <p class="student" *ngFor="let section of
                         depts[i]['faculty'][z]['sections']">
                         {{section.course_Id}} - {{section.designation}}
+                        {{section.course_Name}}
                       </p>
 
                       <h5 class="bold student"

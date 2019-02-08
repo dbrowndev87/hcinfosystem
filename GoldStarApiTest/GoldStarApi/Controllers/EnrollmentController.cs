@@ -124,6 +124,8 @@ namespace GoldStarApi.Controllers
             }
         }
         
+        
+        
         [HttpGet("section/{id}", Name ="EnrollmentBySectionId")]
         public IActionResult GetEnrollmentBySectionId(int id)
         {

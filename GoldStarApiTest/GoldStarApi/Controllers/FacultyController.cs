@@ -14,7 +14,7 @@ namespace GoldStarApi.Controllers
     {
         private ILoggerManager _logger;
         private IRepositoryWrapper _repository;
-        private List<Faculty> _allFacultyByDept;
+      
         
         public FacultyController(ILoggerManager logger, IRepositoryWrapper repository)
         {
