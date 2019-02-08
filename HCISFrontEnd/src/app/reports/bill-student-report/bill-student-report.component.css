@@ -6,6 +6,8 @@
 
 table{
     background-color: white !important;
+    box-shadow: 1px 1px 1px black;
+    border-radius: 6px;
 }
 
 td{
@@ -24,11 +26,26 @@ th{
     width: 100%;
 }
 
-
-.totalZero{
-    background-color: greenyellow
+.total{
+ border-top: 1px black solid;
 }
 
-.totalOwing{
+.borderLeft{
+    border-left: 1px black solid;
+}
+
+.zero{
+    background-color: Green;
+    color: white;
+}
+
+.owe{
     background-color: red;
+    color: white;
 }
+
+.bt0{
+    border-top:0 !important;;
+}
+
+

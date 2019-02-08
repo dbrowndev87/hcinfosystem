@@ -9,7 +9,6 @@ import { TransactionIdGenerator } from './tools/tidg';
 import { DataTablesModule, DataTableDirective } from 'angular-datatables';
 import { ConfirmModalComponent } from './modals/confirm-modal/confirm-modal.component';
 import { ReportIdGenerator } from './tools/ridg';
-import { OrderByPipe } from './tools/orderByPipe';
 
 @NgModule({
   imports: [
@@ -36,7 +35,6 @@ import { OrderByPipe } from './tools/orderByPipe';
     TransactionIdGenerator,
     ReportIdGenerator
   ],
-
 
 })
 export class SharedModule { }

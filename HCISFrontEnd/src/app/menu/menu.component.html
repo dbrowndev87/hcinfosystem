@@ -179,6 +179,12 @@
                                                         routerLinkActive="active"
                                                         [routerLinkActiveOptions]="{exact: true}">Generate
                                                         Transcript</a></li>
+                                        <li *ngIf="loggedIn && typeCode === 3"><a
+                                                        [routerLink]="['/reports/billstudent/report/' + studentId]"
+                                                        routerLinkActive="active"
+                                                        [routerLinkActiveOptions]="{exact: true}">Generate Bill</a></li>
+
+
 
 
                                         <li *ngIf="!loggedIn">

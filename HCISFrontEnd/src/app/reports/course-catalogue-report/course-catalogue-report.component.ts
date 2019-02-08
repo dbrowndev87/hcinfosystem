@@ -52,27 +52,35 @@ export class CourseCatalogueReportComponent implements OnInit {
 
   ngOnInit() {
 
+    // Get the ID comming in from the URL, todays date, and generate a
+    // report ID prefixed 'CC'
     this.id = parseInt(this.activeatedRoute.snapshot.params['id'], 0);
     this.reportDate = this.semesters.getTodaysDate();
     this.reportId = this.reportIDGen.generateId('CC');
 
+    // Get the user information
     this.getUser();
 
+    // If 0 is passed in thats all departments
     if (this.id === 0) {
       this.getAllDepartments();
     } else {
+      // Otherwise get department by ID
       this.getDepartment();
-
     }
   }
 
 
+  /**
+   * Get all the departments to geenrate the report with
+   */
   private getDepartment() {
     let apiAddress = "api/department/" + this.id;
     this.subscriptions.push(this.repository.getData(apiAddress)
 
       .subscribe(res => {
 
+        // If its jsut one push it to the 0 index.
         if (this.id === 0) {
           this.depts = res as Department[];
         } else {
@@ -91,6 +99,9 @@ export class CourseCatalogueReportComponent implements OnInit {
       };
   }
 
+  /**
+   * Gets the user information from the API
+   */
   private getUser() {
     let apiAddress = "api/user/" + sessionStorage.getItem('userId');
     this.subscriptions.push(this.repository.getData(apiAddress)
@@ -105,6 +116,10 @@ export class CourseCatalogueReportComponent implements OnInit {
       };
   }
 
+  /**
+   * This gets all the departments and splices out the Administration
+   * department.
+   */
   private getAllDepartments() {
     let apiAddress = "api/department";
     this.subscriptions.push(this.repository.getData(apiAddress)
@@ -135,6 +150,10 @@ export class CourseCatalogueReportComponent implements OnInit {
       };
   }
 
+  /**
+   *  Get the courses for a departments By department ID
+   * @param deptId
+   */
   public getCoursesByDeptId(deptId) {
     let apiAddress = "api/course/department/" + deptId;
     this.subscriptions.push(this.repository.getData(apiAddress)
@@ -146,12 +165,15 @@ export class CourseCatalogueReportComponent implements OnInit {
           tempCourses.push(course);
         });
 
+        // If all courses set the ID
         if (this.id === 0) {
           this.courses[deptId - 2] = tempCourses;
         } else {
+          // Else 0
           this.courses[0] = tempCourses;
         }
 
+        // Set isLoaded to true.
         this.isLoaded = true;
 
         // console.log(this.courses);

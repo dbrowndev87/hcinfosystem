@@ -27,7 +27,7 @@ const routes: Routes = [
     { path: 'reports/studentcourses', component: StudentCoursesComponent, canActivate: [AuthGuardAdmin] },
     { path: 'reports/studentcourses/report/:id', component: StudentCoursesReportComponent, canActivate: [AuthGuardAdmin] },
     { path: 'reports/billstudent', component: BillStudentComponent, canActivate: [AuthGuardAdmin] },
-    { path: 'reports/billstudent/report/:id', component: BillStudentReportComponent, canActivate: [AuthGuardAdmin] },
+    { path: 'reports/billstudent/report/:id', component: BillStudentReportComponent, canActivate: [AuthGuardAdminStudent] },
 ];
 
 @NgModule({

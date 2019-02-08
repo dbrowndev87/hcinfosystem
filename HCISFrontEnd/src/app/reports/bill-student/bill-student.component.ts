@@ -1,3 +1,11 @@
+/**
+ * Name: Bill Student Component
+ * Description: this allows yo to choose which student to generate
+ * the bill for
+ * 
+ * Author: Darcy Brown
+ * Date: Febuary 8th, 2019
+ */
 import { Component, OnInit } from '@angular/core';
 import { StudentInfo } from 'src/app/_interfaces/studentInfo.model';
 import { FormGroup, FormControl, Validators } from '@angular/forms';

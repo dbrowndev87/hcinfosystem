@@ -20,6 +20,7 @@ import { Course } from 'src/app/_interfaces/course.model';
 import { SectionInfo } from 'src/app/_interfaces/sectionInfo.model';
 import { Student } from 'src/app/_interfaces/student.model';
 import { StudentInfo } from 'src/app/_interfaces/studentInfo.model';
+import { OrderBy } from 'src/app/shared/tools/orderBy';
 
 
 @Component({
@@ -37,6 +38,7 @@ export class StudentListingReportComponent implements OnInit {
   private isLoaded = false;
   private semesters = new Semesters();
   private counter = 0;
+  private orderBy = new OrderBy();
 
   private students: any[] = new Array();
   private sections: any[] = [];
@@ -44,6 +46,7 @@ export class StudentListingReportComponent implements OnInit {
   private reportId = "";
   private reportDate;
   private reportFor = "";
+
 
   // Array for all the subscriptions
   private subscriptions: Subscription[] = [];
@@ -93,9 +96,9 @@ export class StudentListingReportComponent implements OnInit {
       .subscribe(res => {
 
         let courses = res as Course[];
-        let sections: any[] = new Array();
-        let counter = 0;
 
+        // for each course create an array, push the course to it then
+        // push that array to this.courses.
         courses.forEach(course => {
           let tempArray: any[] = new Array();
           tempArray.push(course);
@@ -117,6 +120,10 @@ export class StudentListingReportComponent implements OnInit {
   }
 
 
+  /**
+   * Gets all the sections as SectionInfo objects.
+   * @param courses
+   */
   private getSections(courses: any[]) {
 
     let apiAddress = "api/section/courseInfo";
@@ -132,8 +139,6 @@ export class StudentListingReportComponent implements OnInit {
          * that belong to that course to the 1 index of the index of that
          * course in the courses array
          */
-
-
         for (let x = 0; x < courses.length; x++) {
           let tempArray: any[] = [];
           courses[x]['sections'] = tempArray;
@@ -145,32 +150,29 @@ export class StudentListingReportComponent implements OnInit {
           }
 
         }
-
         // console.log(courses);
-
         this.sections = tempSections;
         // console.log(this.sections);
 
         // If you turn up no results for sections just call isLoaded here
-        if (this.courses.length <= 1 || this.sections[0].length === 0) {
+        if (this.courses.length <= 1 || this.sections[0].length === undefined) {
           this.isLoaded = true;
         }
 
-
       }).add(() => {
 
+        // for each sections add a student JSON object
         for (let x = 0; x < this.courses.length; x++) {
           for (let y = 0; y < this.courses[x]['sections'].length; y++) {
             let tempArray: any[] = [];
             this.courses[x]['sections'][y]['students'] = tempArray;
 
+            // If the sections length is greater than zero pass in the avriables needed to continue.
             if (this.courses[x]['sections'].length > 0) {
               this.getStudentInfoBySection(this.courses[x]['sections'][y].section_Id, this.courses[x]['sections'][y].designation, x, y);
             }
           }
         }
-
-
       })),
       // tslint:disable-next-line: no-unused-expression
       (error) => {
@@ -180,6 +182,9 @@ export class StudentListingReportComponent implements OnInit {
   }
 
 
+  /**
+   * Get the user information.
+   */
   private getUser() {
     let apiAddress = "api/user/" + sessionStorage.getItem('userId');
     this.subscriptions.push(this.repository.getData(apiAddress)
@@ -195,6 +200,14 @@ export class StudentListingReportComponent implements OnInit {
   }
 
 
+  /**
+   * Get the student information using all the passed in variables from above.
+   * 
+   * @param section_Id
+   * @param designation 
+   * @param x 
+   * @param y 
+   */
   private getStudentInfoBySection(section_Id, designation, x, y) {
     let apiAddress = "api/studentInfo/section/" + section_Id;
     this.subscriptions.push(this.repository.getData(apiAddress)
@@ -202,17 +215,21 @@ export class StudentListingReportComponent implements OnInit {
         let students: StudentInfo[] = res as StudentInfo[];
         let tempArray: any[] = new Array();
 
+        // Order students by Last Name.
+        this.orderBy.transform(students, 'first_Name');
 
+
+        // for each student push them to the students JSON object.
         for (let z = 0; z < students.length; z++) {
           this.courses[x]['sections'][y]['students'].push(students[z]);
         }
 
+        // console.log(this.courses);
 
-        console.log(this.courses);
       }).add(() => {
         this.counter++;
 
-        console.log(this.counter + " " + this.courses.length);
+        // If we have finished all of them set isLoaded to true
         if (this.counter = this.courses.length) {
           this.isLoaded = true;
         }

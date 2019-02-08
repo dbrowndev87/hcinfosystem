@@ -1,3 +1,11 @@
+/**
+ * Name: Bill Student Report Component
+ * Description: This has all the functions and attributes which pertain
+ * to the process of building the students bill.
+ * 
+ * Author: Darcy Brown
+ * Date: Febuary 8th, 2019
+ */
 import { Component, OnInit } from '@angular/core';
 import { SectionInfo } from 'src/app/_interfaces/sectionInfo.model';
 import { Student } from 'src/app/_interfaces/student.model';
@@ -25,6 +33,7 @@ export class BillStudentReportComponent implements OnInit {
   private typeCode;
   private semesters = new Semesters();
 
+  // Set some Information for the View.
   private totals: any[] = [
     { "type": "Total Accumulative Enrollments", "total": 0 },
     { "type": "Total Amount Paid", "total": 0 },
@@ -48,6 +57,7 @@ export class BillStudentReportComponent implements OnInit {
 
   ngOnInit() {
 
+    // Get the ID from the URL.
     this.typeCode = parseInt(sessionStorage.getItem('typeCode'), 0);
 
     // if a student is logged in and tries to access anything other
@@ -73,6 +83,9 @@ export class BillStudentReportComponent implements OnInit {
   }
 
 
+  /**
+   * Get the studenst Information for the bill
+   */
   private getStudent() {
     let apiAddress = "api/studentInfo/" + this.id;
     this.subscriptions.push(this.repository.getData(apiAddress)
@@ -91,16 +104,21 @@ export class BillStudentReportComponent implements OnInit {
         }));
   }
 
+  /**
+   * Get  the section information for all the sections a student has been
+   * enrolled in.
+   */
   private getSectionsByStudentId() {
     let apiAddress = "api/enrollment/student/" + this.id;
     this.subscriptions.push(this.repository.getData(apiAddress)
       .subscribe(res => {
         this.sections = res as SectionInfo[];
 
+        // For each one of those sections, add 1000 to the totals array
         for (let x = 0; x < this.sections.length; x++) {
           this.totals[0]['total'] += 1000.00;
         }
-        console.log(this.sections);
+        // console.log(this.sections);
       },
         // tslint:disable-next-line: no-unused-expression
         (error) => {
@@ -112,19 +130,25 @@ export class BillStudentReportComponent implements OnInit {
         }));
   }
 
+  /**
+   * Get all the students transaction information.
+   */
   private getTransactions() {
     let apiAddress = "api/transaction";
     this.subscriptions.push(this.repository.getData(apiAddress)
       .subscribe(res => {
         let tempTransactions = res as Transaction[];
 
+        // For each transaction made by the student, add the transaction
+        // ammount to its palce in the totals array, and add the trasnaction info.
         for (let x = 0; x < tempTransactions.length; x++) {
           if (tempTransactions[x].student_Id === this.id) {
             this.transactions[x] = tempTransactions[x];
             this.totals[1]['total'] += tempTransactions[x].trans_Amount;
           }
         }
-        console.log(this.transactions);
+
+        // console.log(this.transactions);
       },
         // tslint:disable-next-line: no-unused-expression
         (error) => {
@@ -132,11 +156,16 @@ export class BillStudentReportComponent implements OnInit {
           this.errorMessage = this.errorHandler.errorMessage;
 
         }).add(() => {
+          // call the calculations and set loaded.
           this.calculate();
           this.isLoaded = true;
         }));
   }
 
+  /**
+   * This method calculates the total owed. which is # of enrollments * 100 then
+   * minus the total of all the transactions made.
+   */
   private calculate() {
     this.totals[2]['total'] = (this.totals[0]['total'] - this.totals[1]['total']);
     console.log(this.totals);
@@ -144,5 +173,12 @@ export class BillStudentReportComponent implements OnInit {
 
   private backToReportGenerator() {
     this.router.navigate(['/reports/billstudent']);
+  }
+
+  private backToStudentHome() {
+    this.router.navigate(['/student/home']);
+  }
+  private toStudentPayment() {
+    this.router.navigate(['/student/payment']);
   }
 }

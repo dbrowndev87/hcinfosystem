@@ -1,3 +1,11 @@
+/**
+ * Name: Menu Component
+ * Description: This contains all the functions which pertain to the applications
+ * menu.
+ * 
+ * Author: Darcy Brown
+ * Date: January 20th, 2019
+ */
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Globals } from '../globals';

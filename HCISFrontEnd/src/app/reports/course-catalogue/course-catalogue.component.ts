@@ -50,7 +50,9 @@ export class CourseCatalogueComponent implements OnInit {
     this.isLoaded = true;
   }
 
-
+  /**
+   * Get all Departments for dropdown menu.
+   */
   private getAllDepartments() {
 
     let apiAddress = "api/department/";

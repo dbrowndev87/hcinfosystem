@@ -35,13 +35,57 @@
           <p><span class="bold">Type:</span> Personal Student Transcript<br>
         </div>
         <hr>
+
+        <div class="row">
+          <div class="col-md-8 centerDiv">
+            <table class="reportTable">
+              <thead>
+                <tr>
+                  <th>Course ID</th>
+                  <th>Course Name</th>
+                  <th>End Date</th>
+                  <th>Grade</th>
+                </tr>
+              </thead>
+              <tbody *ngIf="sectionInfo.length > 0">
+                <tr *ngFor="let section of sectionInfo">
+                  <td>{{section['section'].course_Id}}</td>
+                  <td>{{section['section'].course_Name}}</td>
+                  <td>{{section['section'].end_Date | date:'yyyy-MM-dd'}}</td>
+                  <td>{{section['grade']}}</td>
+                </tr>
+                <tr>
+                  <th colspan="4" class="bt">Accumulative GPA</th>
+                </tr>
+                <tr>
+                  <td colspan="3">GPA:</td>
+                  <td>{{gpa}}</td>
+                </tr>
+              </tbody>
+              <tbody *ngIf="sectionInfo.length === 0">
+                <tr>
+                  <td colspan="4" class="bold text-center">No Completed Courses to Date</td>
+                </tr>
+                <tr>
+                  <th colspan="4" class="bt">Accumulative GPA</th>
+                </tr>
+                <tr>
+                  <td colspan="3">GPA:</td>
+                  <td>0</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <br>
+        <br>
       </div>
       <div class="row">
         <div *ngIf="typeCode === 1" class="col-md-12 centerDiv">
           <button class="btn btnHc float-right" (click)="backToReportGenerator()">Back</button>
         </div>
         <div *ngIf="typeCode === 3" class="col-md-12 centerDiv">
-          <button class="btn btnHc float-right" (click)="backToStudentHome()">Back</button>
+          <button class="btn btnHc float-right" (click)="backToStudentHome()">Home</button>
         </div>
       </div>
     </div>

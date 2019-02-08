@@ -376,6 +376,10 @@ export class StudentRegisterComponent implements OnInit, OnDestroy {
 
         // Grab the courses for the next semester.
         sectionsinfo.forEach(sections => {
+
+          // FIXME: Need to add vacancy check  here ( && sections.vacancy > 0) when
+          // done testing and have more courses.
+
           if (sections.semester === this.nextSemester) {
             this.sectionsSelect.push(sections);
           }

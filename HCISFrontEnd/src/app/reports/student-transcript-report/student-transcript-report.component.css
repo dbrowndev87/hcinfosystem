@@ -4,6 +4,10 @@
 
 .reportTable{
     width: 100%;
+    background-color: white;
+    padding: 5px;
+    box-shadow: 1px 1px 1px black;
+    border-radius: 6px;
 }
 
 .headerDiv{
@@ -23,9 +27,14 @@
     padding-top: 5px;
 }
 
-tr:nth-child(2n+2){
-    background-color: white !important;
+td{
+    padding: 5px;
 }
-tr:nth-child(2n+1){
-    background-color: #f0f0ee!important;
+
+th{
+    padding: 5px;
+}
+
+.bt{
+    border-top:1px black solid !important;
 }

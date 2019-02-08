@@ -1,3 +1,11 @@
+/**
+ * Name: Student Transcript  Component
+ * Description: This is the component that allows you to choose
+ * which student you would like to generate the transacript for
+ * 
+ * Author: Darcy Brown
+ * Date: Febuary 8th, 2019
+ */
 import { Component, OnInit } from '@angular/core';
 import { Course } from 'src/app/_interfaces/course.model';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
