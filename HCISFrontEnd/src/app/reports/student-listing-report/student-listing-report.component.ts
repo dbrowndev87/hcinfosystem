@@ -152,7 +152,7 @@ export class StudentListingReportComponent implements OnInit {
         // console.log(this.sections);
 
         // If you turn up no results for sections just call isLoaded here
-        if (this.courses.length <= 1 && this.sections[0].length === 0) {
+        if (this.courses.length <= 1 || this.sections[0].length === 0) {
           this.isLoaded = true;
         }
 
@@ -212,6 +212,7 @@ export class StudentListingReportComponent implements OnInit {
       }).add(() => {
         this.counter++;
 
+        console.log(this.counter + " " + this.courses.length);
         if (this.counter = this.courses.length) {
           this.isLoaded = true;
         }

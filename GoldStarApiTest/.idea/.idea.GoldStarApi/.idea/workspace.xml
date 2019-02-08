@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47b11001-0ccd-463e-ae93-58d9cb355c18" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GoldStarApi/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GoldStarApi/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GoldStarApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GoldStarApi/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GoldStarApi/internal_logs/internallog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GoldStarApi/internal_logs/internallog.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GoldStarApi/logs/2019-02-06_logfile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GoldStarApi/logs/2019-02-06_logfile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HCISFrontEnd/src/app/reports/faculty-courses-report/faculty-courses-report.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../HCISFrontEnd/src/app/reports/faculty-courses-report/faculty-courses-report.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HCISFrontEnd/src/app/reports/faculty-courses-report/faculty-courses-report.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../HCISFrontEnd/src/app/reports/faculty-courses-report/faculty-courses-report.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../HCISFrontEnd/src/app/reports/faculty-courses-report/faculty-courses-report.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../HCISFrontEnd/src/app/reports/faculty-courses-report/faculty-courses-report.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HCISFrontEnd/src/app/reports/student-listing-report/student-listing-report.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../HCISFrontEnd/src/app/reports/student-listing-report/student-listing-report.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HCISFrontEnd/src/app/reports/student-listing-report/student-listing-report.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../HCISFrontEnd/src/app/reports/student-listing-report/student-listing-report.component.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,11 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GoldStarApi/Controllers/SectionController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-389">
-              <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+            <state relative-caret-position="-18">
+              <caret line="30" column="56" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="56" />
               <folding>
                 <marker date="1549141891000" expanded="false" signature="6:211" ph="..." />
                 <marker date="1549141891000" expanded="true" signature="246:9763" ph="{...}" />
@@ -73,9 +77,66 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Repository/SectionRepository.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
+              <folding>
+                <marker date="1549566013963" expanded="true" signature="0:386" ph="/* Name: SectionRepository ... */" />
+                <marker date="1549566013963" expanded="false" signature="394:523" ph="..." />
+                <marker date="1549566013963" expanded="true" signature="545:1566" ph="{...}" />
+                <marker date="1549566013963" expanded="true" signature="628:1564" ph="{...}" />
+                <marker date="1549566013963" expanded="true" signature="730:750" ph="{...}" />
+                <marker date="1549566013963" expanded="true" signature="804:898" ph="{...}" />
+                <marker date="1549566013963" expanded="true" signature="952:1138" ph="{...}" />
+                <marker date="1549566013963" expanded="true" signature="1190:1259" ph="{...}" />
+                <marker date="1549566013963" expanded="true" signature="1330:1437" ph="{...}" />
+                <marker date="1549566013963" expanded="true" signature="1489:1558" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Repository/FacultyRepository.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-23">
+              <caret line="2" column="78" selection-start-line="2" selection-start-column="78" selection-end-line="2" selection-end-column="78" />
+              <folding>
+                <marker date="1549334746000" expanded="true" signature="0:386" ph="/* Name: FacultyRepository ... */" />
+                <marker date="1549334746000" expanded="false" signature="393:522" ph="..." />
+                <marker date="1549334746000" expanded="true" signature="544:1566" ph="{...}" />
+                <marker date="1549334746000" expanded="true" signature="627:1564" ph="{...}" />
+                <marker date="1549334746000" expanded="true" signature="729:749" ph="{...}" />
+                <marker date="1549334746000" expanded="true" signature="802:898" ph="{...}" />
+                <marker date="1549334746000" expanded="true" signature="952:1138" ph="{...}" />
+                <marker date="1549334746000" expanded="true" signature="1190:1259" ph="{...}" />
+                <marker date="1549334746000" expanded="true" signature="1330:1437" ph="{...}" />
+                <marker date="1549334746000" expanded="true" signature="1489:1558" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Contracts/ISectionRepository.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+              <folding>
+                <marker date="1549331704000" expanded="true" signature="0:249" ph="/* Name: ISectionRepository ... */" />
+                <marker date="1549331704000" expanded="false" signature="256:306" ph="..." />
+                <marker date="1549331704000" expanded="true" signature="327:721" ph="{...}" />
+                <marker date="1549331704000" expanded="true" signature="369:719" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/GoldStarApi/Controllers/FacultyInfoController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1281">
+            <state relative-caret-position="662">
               <caret line="161" column="41" selection-start-line="161" selection-start-column="41" selection-end-line="161" selection-end-column="41" />
               <folding>
                 <marker date="1549468068340" expanded="false" signature="6:138" ph="..." />
@@ -214,7 +275,6 @@
         <option value="$PROJECT_DIR$/Repository/DepartmentRepository.cs" />
         <option value="$PROJECT_DIR$/Repository/EnrollmentRepository.cs" />
         <option value="$PROJECT_DIR$/Repository/FacultyRepository.cs" />
-        <option value="$PROJECT_DIR$/Repository/SectionRepository.cs" />
         <option value="$PROJECT_DIR$/Repository/StudentRepository.cs" />
         <option value="$PROJECT_DIR$/Repository/TransactionRepository.cs" />
         <option value="$PROJECT_DIR$/Repository/UserLoginRepository.cs" />
@@ -228,6 +288,7 @@
         <option value="$PROJECT_DIR$/GoldStarApi/Controllers/EnrollmentController.cs" />
         <option value="$PROJECT_DIR$/GoldStarApi/Controllers/FacultyController.cs" />
         <option value="$PROJECT_DIR$/GoldStarApi/Controllers/FacultyInfoController.cs" />
+        <option value="$PROJECT_DIR$/Repository/SectionRepository.cs" />
       </list>
     </option>
   </component>
@@ -241,22 +302,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="FileSystemExplorer" />
       <pane id="SolutionExplorer">
         <subPane>
           <expand>
             <path>
               <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
               <item name="GoldStarApi" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="GoldStarApi" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Contracts" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="GoldStarApi" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Entities" type="24d0babc:SolutionExplorerModelNode" />
             </path>
             <path>
               <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
@@ -275,7 +327,6 @@
         <option name="show-all-files" value="false" />
       </pane>
       <pane id="AssemblyExplorer" />
-      <pane id="FileSystemExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -362,11 +413,12 @@
       <workItem from="1549421505688" duration="1000" />
       <workItem from="1549421583138" duration="143000" />
       <workItem from="1549457137316" duration="4720000" />
+      <workItem from="1549565938699" duration="773000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105729000" />
+    <option name="totallyTimeSpent" value="106502000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -379,15 +431,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="689" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23909532" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24313408" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3294893" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4927302" weight="0.2998325" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4927302" visible="true" weight="0.2998325" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4989339" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -401,7 +454,7 @@
       <window_info anchor="bottom" id="Unit Tests" order="13" weight="0.21746293" />
       <window_info anchor="bottom" id="Terminal" order="14" weight="0.32784185" />
       <window_info anchor="bottom" id="Event Log" order="15" sideWeight="0.5072698" side_tool="true" weight="0.5273973" />
-      <window_info anchor="bottom" id="Build" order="16" sideWeight="0.4927302" weight="0.49916247" />
+      <window_info anchor="bottom" id="Build" order="16" sideWeight="0.4927302" weight="0.0921273" />
       <window_info anchor="bottom" id="REST Client" order="17" weight="0.32784185" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -460,19 +513,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Entities/Extensions/StudentExtensions.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
-          <folding>
-            <marker date="1549332833000" expanded="true" signature="0:369" ph="/* Name: StudentExtension ... */" />
-            <marker date="1549332833000" expanded="true" signature="423:840" ph="{...}" />
-            <marker date="1549332833000" expanded="true" signature="467:838" ph="{...}" />
-            <marker date="1549332833000" expanded="true" signature="545:832" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Entities/Extensions/UserTypeCodeExtensions.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -732,25 +772,6 @@
             <marker date="1549334670000" expanded="true" signature="1435:1507" ph="{...}" />
             <marker date="1549334670000" expanded="true" signature="1593:1709" ph="{...}" />
             <marker date="1549334670000" expanded="true" signature="1770:1842" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Repository/FacultyRepository.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="78" selection-start-line="2" selection-start-column="78" selection-end-line="2" selection-end-column="78" />
-          <folding>
-            <marker date="1549334746000" expanded="true" signature="0:386" ph="/* Name: FacultyRepository ... */" />
-            <marker date="1549334746000" expanded="false" signature="393:522" ph="..." />
-            <marker date="1549334746000" expanded="true" signature="544:1566" ph="{...}" />
-            <marker date="1549334746000" expanded="true" signature="627:1564" ph="{...}" />
-            <marker date="1549334746000" expanded="true" signature="729:749" ph="{...}" />
-            <marker date="1549334746000" expanded="true" signature="802:898" ph="{...}" />
-            <marker date="1549334746000" expanded="true" signature="952:1138" ph="{...}" />
-            <marker date="1549334746000" expanded="true" signature="1190:1259" ph="{...}" />
-            <marker date="1549334746000" expanded="true" signature="1330:1437" ph="{...}" />
-            <marker date="1549334746000" expanded="true" signature="1489:1558" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1274,56 +1295,23 @@
         <state relative-caret-position="-7292" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Repository/SectionRepository.cs">
+    <entry file="file://$PROJECT_DIR$/Contracts/ISectionRepository.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="31" column="32" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
+        <state relative-caret-position="240">
+          <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
           <folding>
-            <marker date="1549334790000" expanded="true" signature="0:386" ph="/* Name: SectionRepository ... */" />
-            <marker date="1549334790000" expanded="false" signature="394:523" ph="..." />
-            <marker date="1549334790000" expanded="true" signature="545:1568" ph="{...}" />
-            <marker date="1549334790000" expanded="true" signature="628:1566" ph="{...}" />
-            <marker date="1549334790000" expanded="true" signature="730:750" ph="{...}" />
-            <marker date="1549334790000" expanded="true" signature="804:900" ph="{...}" />
-            <marker date="1549334790000" expanded="true" signature="954:1140" ph="{...}" />
-            <marker date="1549334790000" expanded="true" signature="1192:1261" ph="{...}" />
-            <marker date="1549334790000" expanded="true" signature="1332:1439" ph="{...}" />
-            <marker date="1549334790000" expanded="true" signature="1491:1560" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GoldStarApi/Controllers/FacultyInfoController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1281">
-          <caret line="161" column="41" selection-start-line="161" selection-start-column="41" selection-end-line="161" selection-end-column="41" />
-          <folding>
-            <marker date="1549468068340" expanded="false" signature="6:138" ph="..." />
-            <marker date="1549468068340" expanded="true" signature="173:5789" ph="{...}" />
-            <marker date="1549468068340" expanded="true" signature="258:5787" ph="{...}" />
-            <marker date="1549468068340" expanded="true" signature="542:630" ph="{...}" />
-            <marker date="1549468068340" expanded="true" signature="739:2339" ph="{...}" />
-            <marker date="1549468068340" expanded="true" signature="766:2097" ph="{...}" />
-            <marker date="1549468068340" expanded="true" signature="907:1072" ph="{...}" />
-            <marker date="1549468068340" expanded="true" signature="2130:2329" ph="{...}" />
-            <marker date="1549468068340" expanded="true" signature="2407:4072" ph="{...}" />
-            <marker date="1549468068340" expanded="true" signature="2433:3831" ph="{...}" />
-            <marker date="1549468068340" expanded="true" signature="2633:3665" ph="{...}" />
-            <marker date="1549468068340" expanded="true" signature="2728:2925" ph="{...}" />
-            <marker date="1549468068340" expanded="true" signature="3864:4062" ph="{...}" />
-            <marker date="1549468068340" expanded="true" signature="4204:5780" ph="{...}" />
-            <marker date="1549468068340" expanded="true" signature="4389:5345" ph="{...}" />
-            <marker date="1549468068340" expanded="true" signature="4472:4653" ph="{...}" />
-            <marker date="1549468068340" expanded="true" signature="5488:5649" ph="{...}" />
-            <marker date="1549468068340" expanded="true" signature="5545:5635" ph="{...}" />
+            <marker date="1549331704000" expanded="true" signature="0:249" ph="/* Name: ISectionRepository ... */" />
+            <marker date="1549331704000" expanded="false" signature="256:306" ph="..." />
+            <marker date="1549331704000" expanded="true" signature="327:721" ph="{...}" />
+            <marker date="1549331704000" expanded="true" signature="369:719" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GoldStarApi/Controllers/SectionController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-389">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        <state relative-caret-position="-18">
+          <caret line="30" column="56" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="56" />
           <folding>
             <marker date="1549141891000" expanded="false" signature="6:211" ph="..." />
             <marker date="1549141891000" expanded="true" signature="246:9763" ph="{...}" />
@@ -1371,6 +1359,71 @@
             <marker date="1549141891000" expanded="true" signature="9094:9511" ph="{...}" />
             <marker date="1549141891000" expanded="true" signature="9219:9384" ph="{...}" />
             <marker date="1549141891000" expanded="true" signature="9544:9738" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Repository/SectionRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
+          <folding>
+            <marker date="1549566013963" expanded="true" signature="0:386" ph="/* Name: SectionRepository ... */" />
+            <marker date="1549566013963" expanded="false" signature="394:523" ph="..." />
+            <marker date="1549566013963" expanded="true" signature="545:1566" ph="{...}" />
+            <marker date="1549566013963" expanded="true" signature="628:1564" ph="{...}" />
+            <marker date="1549566013963" expanded="true" signature="730:750" ph="{...}" />
+            <marker date="1549566013963" expanded="true" signature="804:898" ph="{...}" />
+            <marker date="1549566013963" expanded="true" signature="952:1138" ph="{...}" />
+            <marker date="1549566013963" expanded="true" signature="1190:1259" ph="{...}" />
+            <marker date="1549566013963" expanded="true" signature="1330:1437" ph="{...}" />
+            <marker date="1549566013963" expanded="true" signature="1489:1558" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Repository/FacultyRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-23">
+          <caret line="2" column="78" selection-start-line="2" selection-start-column="78" selection-end-line="2" selection-end-column="78" />
+          <folding>
+            <marker date="1549334746000" expanded="true" signature="0:386" ph="/* Name: FacultyRepository ... */" />
+            <marker date="1549334746000" expanded="false" signature="393:522" ph="..." />
+            <marker date="1549334746000" expanded="true" signature="544:1566" ph="{...}" />
+            <marker date="1549334746000" expanded="true" signature="627:1564" ph="{...}" />
+            <marker date="1549334746000" expanded="true" signature="729:749" ph="{...}" />
+            <marker date="1549334746000" expanded="true" signature="802:898" ph="{...}" />
+            <marker date="1549334746000" expanded="true" signature="952:1138" ph="{...}" />
+            <marker date="1549334746000" expanded="true" signature="1190:1259" ph="{...}" />
+            <marker date="1549334746000" expanded="true" signature="1330:1437" ph="{...}" />
+            <marker date="1549334746000" expanded="true" signature="1489:1558" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GoldStarApi/Controllers/FacultyInfoController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="662">
+          <caret line="161" column="41" selection-start-line="161" selection-start-column="41" selection-end-line="161" selection-end-column="41" />
+          <folding>
+            <marker date="1549468068340" expanded="false" signature="6:138" ph="..." />
+            <marker date="1549468068340" expanded="true" signature="173:5789" ph="{...}" />
+            <marker date="1549468068340" expanded="true" signature="258:5787" ph="{...}" />
+            <marker date="1549468068340" expanded="true" signature="542:630" ph="{...}" />
+            <marker date="1549468068340" expanded="true" signature="739:2339" ph="{...}" />
+            <marker date="1549468068340" expanded="true" signature="766:2097" ph="{...}" />
+            <marker date="1549468068340" expanded="true" signature="907:1072" ph="{...}" />
+            <marker date="1549468068340" expanded="true" signature="2130:2329" ph="{...}" />
+            <marker date="1549468068340" expanded="true" signature="2407:4072" ph="{...}" />
+            <marker date="1549468068340" expanded="true" signature="2433:3831" ph="{...}" />
+            <marker date="1549468068340" expanded="true" signature="2633:3665" ph="{...}" />
+            <marker date="1549468068340" expanded="true" signature="2728:2925" ph="{...}" />
+            <marker date="1549468068340" expanded="true" signature="3864:4062" ph="{...}" />
+            <marker date="1549468068340" expanded="true" signature="4204:5780" ph="{...}" />
+            <marker date="1549468068340" expanded="true" signature="4389:5345" ph="{...}" />
+            <marker date="1549468068340" expanded="true" signature="4472:4653" ph="{...}" />
+            <marker date="1549468068340" expanded="true" signature="5488:5649" ph="{...}" />
+            <marker date="1549468068340" expanded="true" signature="5545:5635" ph="{...}" />
           </folding>
         </state>
       </provider>

@@ -13,26 +13,20 @@
 
   <!-- HC Well Button -->
   <div *ngIf="isLoaded" class="row">
-
     <div class="col-md-8 centerDiv well">
-
       <div class="row">
-
         <div class="col-md-5">
           <img class="logoReport" src="../../../assets/Logo1.png">
         </div>
-
         <div class="col-md-7">
           <br>
           <br>
           <br>
-          <h3 class="reportHeader">Faculty Course Report</h3>
+          <h3 class="reportHeader">Faculty Report By Course</h3>
         </div>
-
       </div>
-
+      <hr>
       <div class="row">
-        <hr>
         <div class="col-md-6">
           <p><span class="bold">ID: </span>{{reportId}}</p>
           <p><span class="bold">Date: </span>{{reportDate}}</p>
@@ -40,47 +34,83 @@
         <div class="col-md-6">
           <p><span class="bold">For:</span> {{user.first_Name}}
             {{user.last_Name}}</p>
-          <p><span class="bold">Type:</span> Faculty By Course<br>
-          </div>
-          <hr>
+          <span class="bold">Type:</span> Student Listing<br>
         </div>
-        <div class="row">
-          <div class="col-md-12 centerDiv">
-            <div class="row">
-              <div class="col-md-12 headerDiv">
-                <h4 class="text-center">{{theDepartment.dept_Name}}</h4>
-              </div>
-              <div class="col-md-12 courseDiv">
+      </div>
+      <hr>
+      <div *ngIf="isLoaded">
+        <div *ngFor="let dept of depts; let i= index">
+          <div class="row">
+            <div class="col-md-12 headerDiv">
+              <!-- Course Header -->
+              <h4 class="text-center">{{dept.dept_Name}}</h4>
 
-                <div *ngFor="let current of facultyByDepartment; let i=
-                  index">
-                  <ng-container *ngIf="facultyByDepartment.length >= 1; else
-                    noFaculty">
-                    <span class="text-center">{{current.first_Name}}
-                      {{current.last_Name}}</span>
-                  </ng-container>
-                  <div *ngIf="current['sections'].length >= 1">
-                    {{current['sections'].length}}
-                    <p *ngFor="let section of current['sections']; let x=
-                      index">{{section.course_Id}} {{section.designation}}</p>
+              <div class="row">
+                <div class="col-md-12">
+                  <!-- If the department has faculty -->
+
+                </div>
+              </div>
+
+              <div class="row">
+
+                <div *ngIf="depts[i]['faculty'].length === 0">
+                  <div class="desDiv">
+                    <h3 class="text-center">No Faculty Exist</h3>
                   </div>
-                  <ng-template #elseTemplate>
-                    <div>No faculty for this department</div>
-                  </ng-template>
+                </div>
+
+                <div *ngFor="let faculty of depts[i]['faculty']; let z=
+                  index">
+
+                  <div *ngIf="depts[i]['faculty'].length> 0">
+                    <!-- Designation Bar -->
+                    <div class="col-md-12 desDiv">
+                      <span class="boldReport">Faculty:</span>
+                      {{faculty.first_Name}} {{faculty.last_Name}}
+                    </div>
+
+                    <!-- Sections -->
+                    <div class="stuDiv">
+                      <br>
+                      <p class="student">Course ID - Designation</p>
+                      <p class="student" *ngFor="let section of
+                        depts[i]['faculty'][z]['sections']">
+                        {{section.course_Id}} - {{section.designation}}
+                      </p>
+
+                      <h5 class="bold student"
+                        *ngIf="depts[i]['faculty'][z]['sections'].length ===
+                        0
+                        || depts[i]['faculty'][z]['sections'] === undefined">
+                        - No sections created</h5>
+
+                      <hr>
+
+                      <p *ngIf="depts[i]['faculty'][z]['sections'].length> 0
+                        &&
+                        depts[i]['faculty'][z]['sections'] !== undefined"
+                        class="float-right">
+
+                        <span class="bold">Total Sections: </span>{{depts[i]['faculty'][z]['sections'].length}}
+                      </p>
+                      <br>
+                      <hr>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <br>
-
-
-
-          <div class="row">
-            <div class="col-md-12 centerDiv">
-              <button class="btn btnHc float-right"
-                (click)="backToReportGenerator()">Back</button>
-            </div>
-          </div>
+          <div class="spacer"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 centerDiv">
+          <button class="btn btnHc float-right"
+            (click)="backToReportGenerator()">Back</button>
         </div>
       </div>
     </div>
+  </div>
+</div>

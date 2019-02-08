@@ -9,6 +9,7 @@ import { ReportIdGenerator } from 'src/app/shared/tools/ridg';
 import { Department } from 'src/app/_interfaces/department.model';
 import { Section } from 'src/app/_interfaces/section.model';
 import { FacultyInfo } from 'src/app/_interfaces/facultyInfo.model';
+import { Faculty } from 'src/app/_interfaces/faculty.model';
 
 @Component({
   selector: 'app-faculty-courses-report',
@@ -19,9 +20,11 @@ import { FacultyInfo } from 'src/app/_interfaces/facultyInfo.model';
 export class FacultyCoursesReportComponent implements OnInit {
 
   public errorMessage: String = "";
+  private depts: any[] = new Array();
+  private faculty: any[] = [];
 
   private user: User;
-  private id: number;
+  private id: string;
   private isLoaded = false;
   private semesters = new Semesters();
   private counter = 0;
@@ -47,43 +50,64 @@ export class FacultyCoursesReportComponent implements OnInit {
   ngOnInit() {
 
     this.getUser();
+    this.id = this.activeatedRoute.snapshot.params['id'];
 
-    this.id = parseInt(this.activeatedRoute.snapshot.params['id'], 0);
     this.reportDate = this.semesters.getTodaysDate();
-    this.reportId = this.reportIDGen.generateId('CC');
-  }
+    this.reportId = this.reportIDGen.generateId('FC');
 
-  public getSections() {
-    console.log(this.facultyByDepartment);
-
+    if (this.id === '0') {
+      this.getAllDepartments();
+    } else {
+      this.getDepartmentById();
+    }
   }
-  private getDepartment() {
+  public getDepartmentById() {
+
     let apiAddress = "api/department/" + this.id;
     this.subscriptions.push(this.repository.getData(apiAddress)
-
       .subscribe(res => {
-
-        if (this.id === 0) {
-
-        } else {
-          this.theDepartment = res as Department;
-          console.log(this.theDepartment.dept_Name);
-
-        }
-        // console.log(this.depts);
-        // this.getFacultyByDeptId(this.id);
-
+        this.depts[0] = res as Department;
+        // console.log(this.courses);
       },
         // tslint:disable-next-line: no-unused-expression
         (error) => {
           this.errorHandler.handleError(error);
           this.errorMessage = this.errorHandler.errorMessage;
         }).add(() => {
-          this.getFacultyByDeptId(this.theDepartment.dept_Id);
-
-
+          // Pass the depts on to get the faculty.
+          this.getFaculty(this.depts);
         }));
   }
+
+  private getAllDepartments() {
+    let apiAddress = "api/department";
+    this.subscriptions.push(this.repository.getData(apiAddress)
+      .subscribe(res => {
+
+        let depts = res as Department[];
+        let faculty: any[] = new Array();
+        let counter = 0;
+
+        depts.forEach(dept => {
+          let tempArray: any[] = new Array();
+          tempArray.push(dept);
+          this.depts.push(tempArray);
+        });
+
+        // console.log(this.courses);
+
+        // Pass the courses on to get the sections.
+        this.getFaculty(depts);
+        this.depts = depts;
+
+      },
+        // tslint:disable-next-line: no-unused-expression
+        (error) => {
+          this.errorHandler.handleError(error);
+          this.errorMessage = this.errorHandler.errorMessage;
+        }));
+  }
+
 
   private getUser() {
     let apiAddress = "api/user/" + sessionStorage.getItem('userId');
@@ -91,8 +115,68 @@ export class FacultyCoursesReportComponent implements OnInit {
 
       .subscribe(res => {
         this.user = res as User;
+      })),
+      // tslint:disable-next-line: no-unused-expression
+      (error) => {
+        this.errorHandler.handleError(error);
+        this.errorMessage = this.errorHandler.errorMessage;
+      };
+  }
+  private getFaculty(depts: any[]) {
+
+    let apiAddress = "api/facultyInfo";
+    this.subscriptions.push(this.repository.getData(apiAddress)
+      .subscribe(res => {
+
+        let faculty: FacultyInfo[] = [];
+        let tempFaculty: any[] = [];
+        faculty = res as FacultyInfo[];
+
+        /**
+         * For each of the courses create a temporary array push the sections
+         * that belong to that course to the 1 index of the index of that
+         * course in the courses array
+         */
+
+
+        for (let x = 0; x < depts.length; x++) {
+          let tempArray: any[] = [];
+          depts[x]['faculty'] = tempArray;
+
+          for (let y = 0; y < faculty.length; y++) {
+            if (depts[x].dept_Id === faculty[y].dept_Id) {
+              depts[x]['faculty'].push(faculty[y]);
+            }
+          }
+
+        }
+
+
+        // console.log(courses);
+
+        // this.faculty = tempFaculty;
+        // console.log(this.sections);
+
+        // If you turn up no results for faculty just call isLoaded here
+        if (this.depts.length <= 1 || this.faculty[0].length === 0) {
+          this.isLoaded = true;
+        }
+
+
       }).add(() => {
-        this.getDepartment();
+
+        for (let x = 0; x < this.depts.length; x++) {
+          for (let y = 0; y < this.depts[x]['faculty'].length; y++) {
+            let tempArray: any[] = [];
+            this.depts[x]['faculty'][y]['sections'] = tempArray;
+
+            if (this.depts[x]['faculty'].length > 0) {
+              this.getSectionInfoByFacultyId(this.depts[x]['faculty'][y].faculty_Id, x, y);
+            }
+          }
+        }
+
+
       })),
       // tslint:disable-next-line: no-unused-expression
       (error) => {
@@ -101,23 +185,27 @@ export class FacultyCoursesReportComponent implements OnInit {
       };
   }
 
-  public getFacultyByDeptId(deptId) {
+  public getSectionInfoByFacultyId(facultyId, x, y) {
 
-    console.log(deptId);
-    let apiAddress = "api/facultyinfo/department/" + deptId;
+    let apiAddress = "api/section/faculty/" + facultyId;
     this.subscriptions.push(this.repository.getData(apiAddress)
-
       .subscribe(res => {
+        let sections: Section[] = res as Section[];
+        let tempArray: any[] = new Array();
+        console.log("Sections: " + sections + " By FacultyID: " + facultyId);
 
-        this.facultyByDepartment = res as FacultyInfo[];
-        console.log(this.facultyByDepartment);
-        for (let i = 0; i < this.facultyByDepartment.length; i++) {
-          this.getSectionsByFacultyId(this.facultyByDepartment[i], i);
+        for (let z = 0; z < sections.length; z++) {
+          this.depts[x]['faculty'][y]['sections'].push(sections[z]);
         }
-        if (this.facultyByDepartment.length === 0) {
+
+      }).add(() => {
+        this.counter++;
+
+        if (this.counter = this.depts.length) {
           this.isLoaded = true;
         }
       })),
+
       // tslint:disable-next-line: no-unused-expression
       (error) => {
         this.errorHandler.handleError(error);
@@ -125,25 +213,6 @@ export class FacultyCoursesReportComponent implements OnInit {
       };
   }
 
-  public getSectionsByFacultyId(faculty, index) {
-    let i = index;
-    let apiAddress = "api/section/faculty/" + faculty.faculty_Id;
-    this.subscriptions.push(this.repository.getData(apiAddress)
-      .subscribe(res => {
-        this.sectionsByFaculty = res as Section[];
-        this.facultyByDepartment[index]['sections'] = this.sectionsByFaculty;
-        console.log(this.facultyByDepartment[index]['sections']);
-      },
-        // tslint:disable-next-line: no-unused-expression
-        (error) => {
-          this.errorHandler.handleError(error);
-          this.errorMessage = this.errorHandler.errorMessage;
-        }).add(() => {
-          if (i === this.facultyByDepartment.length - 1) {
-            this.isLoaded = true;
-          }
-        }));
-  }
 
   private backToReportGenerator() {
     this.router.navigate(['/reports/facultycourses']);
