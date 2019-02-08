@@ -9,7 +9,6 @@
 import { Injectable } from '@angular/core';
 import { Router, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 
-import { Globals } from 'src/app/globals';
 
 @Injectable({ providedIn: 'root' })
 export class AuthGuardStudent implements CanActivate {

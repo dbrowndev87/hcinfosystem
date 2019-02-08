@@ -91,7 +91,7 @@ export class BillStudentReportComponent implements OnInit {
     this.subscriptions.push(this.repository.getData(apiAddress)
       .subscribe(res => {
         this.student = res as Student;
-        console.log(this.student);
+        // console.log(this.student);
       },
         // tslint:disable-next-line: no-unused-expression
         (error) => {
@@ -168,7 +168,7 @@ export class BillStudentReportComponent implements OnInit {
    */
   private calculate() {
     this.totals[2]['total'] = (this.totals[0]['total'] - this.totals[1]['total']);
-    console.log(this.totals);
+    // console.log(this.totals);
   }
 
   private backToReportGenerator() {

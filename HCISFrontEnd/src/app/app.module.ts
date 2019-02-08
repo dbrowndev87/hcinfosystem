@@ -41,6 +41,7 @@ import { ReportsModule } from './reports/reports.module';
 import { ReportsRoutingModule } from './reports/reports.routing';
 import { AuthGuardAdminFaculty } from './login/authGuard/auth-admin-faculty.guard';
 import { AuthGuardAdminStudent } from './login/authGuard/auth-admin-student.guard';
+import { AuthGuardStudentNotEnrolled } from './login/authGuard/auth-student-notenrolled.guard';
 
 
 @NgModule({
@@ -92,7 +93,8 @@ import { AuthGuardAdminStudent } from './login/authGuard/auth-admin-student.guar
     AuthGuardFaculty,
     AuthGuardStudent,
     AuthGuardAdminFaculty,
-    AuthGuardAdminStudent
+    AuthGuardAdminStudent,
+    AuthGuardStudentNotEnrolled
   ],
   bootstrap: [AppComponent],
   exports: [

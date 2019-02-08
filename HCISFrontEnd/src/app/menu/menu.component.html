@@ -169,13 +169,13 @@
                                                         [routerLinkActiveOptions]="{exact: true}">Make
                                                         Payment</a></li>
 
-                                        <li *ngIf="loggedIn && typeCode === 3"><a [routerLink]="['/student/register']"
-                                                        routerLinkActive="active"
+                                        <li *ngIf="loggedIn && typeCode === 3 && showRegister"><a
+                                                        [routerLink]="['/student/register']" routerLinkActive="active"
                                                         [routerLinkActiveOptions]="{exact: true}">Course
                                                         Registration</a></li>
 
                                         <li *ngIf="loggedIn && typeCode === 3"><a
-                                                        [routerLink]="['/reports/studenttranscript/report/' + studentId]"
+                                                        [routerLink]="['/reports/studenttranscript']"
                                                         routerLinkActive="active"
                                                         [routerLinkActiveOptions]="{exact: true}">Generate
                                                         Transcript</a></li>

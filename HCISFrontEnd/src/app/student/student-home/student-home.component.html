@@ -67,7 +67,8 @@
           <ng-template #noAmountOwing>
             <div class="row">
               <div class="col-md-12 text-center">
-                <p *ngIf="studentInfo.amount_Owing === 0"><span class="bold">Amount Due:</span> No Oustanding Balance</p>
+                <p *ngIf="studentInfo.amount_Owing === 0"><span class="bold">Amount Due:</span> No Oustanding Balance
+                </p>
               </div>
             </div>
           </ng-template>
@@ -117,7 +118,7 @@
             <div id="courseDiv" class="col-md-12 centerDiv">
 
               <!-- If Enrolled in courses -->
-              <ng-template [ngIf]="enrollments.length > 0" [ngIfElse]="noEnrollments">
+              <ng-template [ngIf]="enrollments.length > 0 && enrolled" [ngIfElse]="noEnrollments">
                 <br>
                 <div class="row">
                   <div class="col-md-10 well centerDiv">
@@ -160,12 +161,18 @@
                 <br>
                 <div class="row">
                   <div id="eWell" class="col-md-6 well centerDiv">
-                    <div class="col-md-6 centerDiv">
+                    <div class="col-md-6 centerDiv" *ngIf="enrolled">
                       <p class="text-center"><span class="bold">Current Enrollments:</span> 0</p>
                       <br>
                       <button class="btn btnHc center-block">
                         <a [routerLink]="[ '/student/register']">Register</a>
                       </button>
+                    </div>
+                    <div class="col-md-6 centerDiv" *ngIf="!enrolled">
+                      <p class="text-center"><span class="bold">Currently not a student at this college</span>
+                        <p class="text-center"><span class="bold">Current Status:</span> {{studentInfo.student_Status}}
+                        </p>
+                        <br>
                     </div>
                   </div>
                 </div>
@@ -185,8 +192,10 @@
   </app-confirm-modal>
 
   <!-- success model -->
-  <app-success-modal [modalHeaderText]="successHeader" [modalBodyText]="successMessage" [okButtonText]="'OK'"></app-success-modal>
+  <app-success-modal [modalHeaderText]="successHeader" [modalBodyText]="successMessage" [okButtonText]="'OK'">
+  </app-success-modal>
 
-  <app-error-modal [modalHeaderText]="'Error message'" [modalBodyText]="errorMessage" [okButtonText]="'OK'"></app-error-modal>
+  <app-error-modal [modalHeaderText]="'Error message'" [modalBodyText]="errorMessage" [okButtonText]="'OK'">
+  </app-error-modal>
 
 </div>

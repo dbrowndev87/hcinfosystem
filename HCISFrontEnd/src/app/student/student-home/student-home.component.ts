@@ -37,6 +37,7 @@ export class StudentHomeComponent implements OnInit {
   private enrollmentCount = 0;
   private successHeader;
   private successMessage;
+  private enrolled = false;
 
   // Student Related Variables
   private studentInfo: StudentInfo;
@@ -172,6 +173,10 @@ export class StudentHomeComponent implements OnInit {
         // assign student info
         this.studentInfo = studentInfo as StudentInfo;
         // console.log(this.studentInfo);
+
+        if (this.studentInfo.student_Status === 'Enrolled') {
+          this.enrolled = true;
+        }
 
         /************************************
          * Get Department/Program
