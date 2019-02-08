@@ -24,11 +24,13 @@ import { OrderBy } from '../../shared/tools/orderBy';
   templateUrl: './student-transcript-report.component.html',
   styleUrls: ['./student-transcript-report.component.css']
 })
+
 export class StudentTranscriptReportComponent implements OnInit {
 
   public courses: any[] = [];
   public errorMessage: String = "";
-  private sectionInfo: any[] = [];
+  private sectionInfo: any;
+  private tempStorage: any[] = [];
   private enrollments: Enrollment[];
   private student: Student;
   private id: number;
@@ -37,6 +39,13 @@ export class StudentTranscriptReportComponent implements OnInit {
   private typeCode;
   private semesters = new Semesters();
   private orderBy = new OrderBy();
+
+  private byYear = false;
+  private type = "";
+  private semester = "";
+  private year = "";
+
+
 
   private counter = 0;
   private transcriptDate;
@@ -55,12 +64,19 @@ export class StudentTranscriptReportComponent implements OnInit {
 
   ngOnInit() {
 
+    this.sectionInfo = {
+      'spring': { 'sections': [] = <any>Array(), 'pass': 0, 'fail': 0, 'credits': 0, 'sumgrades': 0 },
+      'summer': { 'sections': [] = <any>Array(), 'pass': 0, 'fail': 0, 'credits': 0, 'sumgrades': 0 },
+      'fall': { 'sections': [] = <any>Array(), 'pass': 0, 'fail': 0, 'credits': 0, 'sumgrades': 0 }
+    };
+
     this.typeCode = parseInt(sessionStorage.getItem('typeCode'), 0);
 
     // if a student is logged in and tries to access anything other
     // than their own transcript, send them to 404.
     if (this.typeCode === 3 && sessionStorage.getItem('studentId')) {
       let urlParam = parseInt(this.activeatedRoute.snapshot.params['id'], 0);
+      let urlType = this.activeatedRoute.snapshot.params['v'];
       let studentId = parseInt(sessionStorage.getItem('studentId'), 0);
 
       if (urlParam !== studentId) {
@@ -69,12 +85,40 @@ export class StudentTranscriptReportComponent implements OnInit {
         // else load their transcript.
         this.transcriptDate = this.semesters.getTodaysDate();
         this.id = parseInt(sessionStorage.getItem('studentId'), 0);
+
+        if (urlType === "Summer" || urlType === "Spring" || urlType === "Fall") {
+
+          this.type = "Semester";
+          this.semester = urlType;
+
+        } else {
+
+          this.byYear = true;
+          this.type = "Year";
+          this.year = urlType;
+
+        }
+
         this.getStudent();
       }
     } else {
       // Admin load transcripts.
       this.transcriptDate = this.semesters.getTodaysDate();
+      let urlType = this.activeatedRoute.snapshot.params['v'];
       this.id = parseInt(this.activeatedRoute.snapshot.params['id'], 0);
+
+      if (urlType === "Summer" || urlType === "Spring" || urlType === "Fall") {
+
+        this.type = "Semester";
+        this.semester = urlType;
+
+      } else {
+
+        this.byYear = true;
+        this.type = "Year";
+        this.year = urlType;
+      }
+
       this.getStudent();
     }
   }
@@ -108,13 +152,46 @@ export class StudentTranscriptReportComponent implements OnInit {
     this.subscriptions.push(this.repository.getData(apiAddress)
       .subscribe(res => {
         let sectionInfo = res as SectionInfo[];
-        let tempSectionInfo: any[] = [];
-
-        // Order By End Date
         this.orderBy.transform(sectionInfo, 'end_Date');
-        tempSectionInfo = sectionInfo;
 
-        this.getEnrollments(tempSectionInfo);
+        if (this.type === "Year") {
+
+          for (let x = 0; x < sectionInfo.length; x++) {
+
+            if (sectionInfo[x].start_Date.toString().slice(0, 4) === this.year) {
+
+              if (sectionInfo[x].semester === "Spring") {
+                this.getEnrollments(sectionInfo[x], 'spring', x);
+              } else if (sectionInfo[x].semester === "Summer") {
+                this.getEnrollments(sectionInfo[x], 'summer', x);
+              } else if (sectionInfo[x].semester === "Fall") {
+                this.getEnrollments(sectionInfo[x], 'fall', x);
+              }
+
+            } else {
+              this.isLoaded = true;
+            }
+          }
+        } else if (this.type === "Semester") {
+
+          for (let x = 0; x < sectionInfo.length; x++) {
+
+            if (sectionInfo[x].semester === this.semester) {
+
+              if (sectionInfo[x].semester === "Spring") {
+                this.getEnrollments(sectionInfo[x], 'spring', x);
+              } else if (sectionInfo[x].semester === "Summer") {
+                this.getEnrollments(sectionInfo[x], 'summer', x);
+              } else if (sectionInfo[x].semester === "Fall") {
+                this.getEnrollments(sectionInfo[x], 'fall', x);
+              }
+
+            } else {
+              this.isLoaded = true;
+            }
+          }
+
+        }
 
       },
         // tslint:disable-next-line: no-unused-expression
@@ -130,7 +207,7 @@ export class StudentTranscriptReportComponent implements OnInit {
    * section info object.
    * @param sectionInfo
    */
-  private getEnrollments(sectionInfo: SectionInfo[]) {
+  private getEnrollments(sectionInfo: SectionInfo, semester: string, index: number) {
     let apiAddress = "api/enrollment";
     this.subscriptions.push(this.repository.getData(apiAddress)
       .subscribe(res => {
@@ -140,28 +217,31 @@ export class StudentTranscriptReportComponent implements OnInit {
         let enrollmentCount: number = 0;
         let acumulativeGrade: number = 0;
 
+
         // check the section info objects against the enrollment objects
-        for (let x = 0; x < sectionInfo.length; x++) {
-          for (let y = 0; y < enrollments.length; y++) {
 
-            // if these credentials match
-            if (sectionInfo[x].section_Id === enrollments[y].section_Id &&
-              enrollments[y].student_Id === this.id &&
-              enrollments[y].course_Status === "Completed") {
+        for (let y = 0; y < enrollments.length; y++) {
 
-              // store them ad the X index as 'section' and 'grade' fro the section
-              this.sectionInfo[x] = { 'section': sectionInfo[x], 'grade': enrollments[y].grade };
-              enrollmentCount++;
-              acumulativeGrade += enrollments[y].grade;
+          // if these credentials match
+          if (sectionInfo.section_Id === enrollments[y].section_Id &&
+            enrollments[y].student_Id === this.id &&
+            enrollments[y].course_Status === "Completed") {
+
+            // Passing additions
+            if (enrollments[y].grade >= 60) {
+              this.sectionInfo[semester]['pass'] += 1;
+              this.sectionInfo[semester]['credits'] += sectionInfo.credits;
+
+              // Failing additions
+            } else if (enrollments[y].grade < 60) {
+              this.sectionInfo[semester]['fail'] += 1;
             }
+
+            // Push the sectiona nd the grade
+            this.sectionInfo[semester]['sections'].push({ 'info': sectionInfo, 'grade': enrollments[y].grade });
+            this.sectionInfo[semester]['sumgrades'] += enrollments[y].grade;
           }
         }
-
-        // calculate the gpa
-        this.gpa = (acumulativeGrade / enrollmentCount);
-
-        // console.log(this.sectionInfo);
-        // console.log("GPA: " + this.gpa);
       },
         // tslint:disable-next-line: no-unused-expression
         (error) => {
@@ -184,4 +264,6 @@ export class StudentTranscriptReportComponent implements OnInit {
   private backToStudentHome() {
     this.router.navigate(['/student/home']);
   }
+
+
 }

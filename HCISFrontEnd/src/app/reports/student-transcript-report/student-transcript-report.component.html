@@ -38,54 +38,186 @@
 
         <div class="row">
           <div class="col-md-8 centerDiv">
-            <table class="reportTable">
+
+            <table *ngIf="byYear || semester === 'Spring'" class="reportTable">
+              <!-- Year/Spring starts Here -->
               <thead>
                 <tr>
+                  <th colspan="4" class="semesterHead">
+                    <h4 class="text-center">Spring</h4>
+                  </th>
+                </tr>
+                <tr *ngIf="sectionInfo['spring']['sections'].length > 0">
                   <th>Course ID</th>
                   <th>Course Name</th>
                   <th>End Date</th>
                   <th>Grade</th>
                 </tr>
               </thead>
-              <tbody *ngIf="sectionInfo.length > 0">
-                <tr *ngFor="let section of sectionInfo">
+              <tbody *ngIf="sectionInfo['spring']['sections'].length > 0">
+                <tr *ngFor="let section of sectionInfo['spring']['sections']">
                   <td>{{section['section'].course_Id}}</td>
                   <td>{{section['section'].course_Name}}</td>
                   <td>{{section['section'].end_Date | date:'yyyy-MM-dd'}}</td>
                   <td>{{section['grade']}}</td>
                 </tr>
+              </tbody>
+              <tbody *ngIf="sectionInfo['spring']['sections'].length === 0">
                 <tr>
-                  <th colspan="4" class="bt">Accumulative GPA</th>
-                </tr>
-                <tr>
-                  <td colspan="3">GPA:</td>
-                  <td>{{gpa}}</td>
+                  <td colspan="4" class="bold text-center">No courses taken for this semester.</td>
                 </tr>
               </tbody>
-              <tbody *ngIf="sectionInfo.length === 0">
+              <tr *ngIf="sectionInfo['spring']['sections'].length > 0">
+                <th colspan="4">
+                  <p class="">
+                    Spring Semester Totals:
+                  </p>
+                </th>
+              </tr>
+              <tbody *ngIf="sectionInfo['spring']['sections'].length > 0">
                 <tr>
-                  <td colspan="4" class="bold text-center">No Completed Courses to Date</td>
-                </tr>
-                <tr>
-                  <th colspan="4" class="bt">Accumulative GPA</th>
-                </tr>
-                <tr>
-                  <td colspan="3">GPA:</td>
-                  <td>0</td>
+                  <td>Passes: {{sectionInfo['spring']['pass']}}</td>
+                  <td>Fails: {{sectionInfo['spring']['fail']}}</td>
+                  <td>
+                    Average:
+                    {{(sectionInfo['spring']['sumgrades'] / (sectionInfo['spring']['pass'] + sectionInfo['spring']['fail']))}}
+                  </td>
+                  <td>Credits: {{sectionInfo['spring']['credits']}}</td>
                 </tr>
               </tbody>
             </table>
+
+            <!-- Year/Summer satrs here -->
+            <table *ngIf="byYear || semester === 'Summer'" class="reportTable">
+              <tr>
+                <th colspan="4" class="semesterHead">
+                  <h4 class="text-center">Summer</h4>
+                </th>
+              </tr>
+              <tr *ngIf="sectionInfo['summer']['sections'].length > 0">
+                <th>Course ID</th>
+                <th>Course Name</th>
+                <th>End Date</th>
+                <th>Grade</th>
+              </tr>
+              <tbody *ngIf="sectionInfo['summer']['sections'].length > 0">
+                <tr *ngFor="let section of sectionInfo['summer']['sections']">
+                  <td>{{section['info'].course_Id}}</td>
+                  <td>{{section['info'].course_Name}}</td>
+                  <td>{{section['info'].end_Date | date:'yyyy-MM-dd'}}</td>
+                  <td>{{section['grade']}}</td>
+                </tr>
+              </tbody>
+              <tbody *ngIf="sectionInfo['summer']['sections'].length === 0">
+                <tr>
+                  <td colspan="4" class="bold text-center">No courses taken for this semester.</td>
+                </tr>
+              </tbody>
+              <tr *ngIf="sectionInfo['summer']['sections'].length > 0">
+                <th colspan="4">
+                  Summer Semester Totals:
+                </th>
+              </tr>
+              <tbody *ngIf="sectionInfo['summer']['sections'].length > 0">
+                <tr>
+                  <td>Passes: {{sectionInfo['summer']['pass']}}</td>
+                  <td>Fails: {{sectionInfo['summer']['fail']}}</td>
+                  <td>
+                    Average:
+                    {{(sectionInfo['summer']['sumgrades'] / (sectionInfo['summer']['pass'] + sectionInfo['summer']['fail']))}}
+                  </td>
+                  <td>Credits: {{sectionInfo['summer']['credits']}}</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- Fall Satrts Here -->
+            <table *ngIf="byYear || semester === 'Fall'" class="reportTable">
+              <tr>
+                <th colspan="4" class="semesterHead">
+                  <h4 class="text-center">Fall</h4>
+                </th>
+              </tr>
+              <tr *ngIf="sectionInfo['fall']['sections'].length > 0">
+                <th>Course ID</th>
+                <th>Course Name</th>
+                <th>End Date</th>
+                <th>Grade</th>
+              </tr>
+              <tbody *ngIf="sectionInfo['fall']['sections'].length > 0">
+                <tr *ngFor="let section of sectionInfo['fall']['sections']">
+                  <td>{{section['info'].course_Id}}</td>
+                  <td>{{section['info'].course_Name}}</td>
+                  <td>{{section['info'].end_Date | date:'yyyy-MM-dd'}}</td>
+                  <td>{{section['grade']}}</td>
+                </tr>
+              </tbody>
+              <tbody *ngIf="sectionInfo['fall']['sections'].length === 0">
+                <tr>
+                  <td colspan="4" class="bold text-center">No courses taken for this semester.</td>
+                </tr>
+              </tbody>
+              <tr *ngIf="sectionInfo['fall']['sections'].length > 0">
+                <th colspan="4">
+                  Fall Semester Totals:
+                </th>
+              </tr>
+              <tbody *ngIf="sectionInfo['fall']['sections'].length > 0">
+                <tr>
+                  <td>Passes: {{sectionInfo['fall']['pass']}}</td>
+                  <td>Fails: {{sectionInfo['fall']['fail']}}</td>
+                  <td>
+                    Average:
+                    {{(sectionInfo['fall']['sumgrades'] / (sectionInfo['fall']['pass'] + sectionInfo['fall']['fail']))}}
+                  </td>
+                  <td>Credits: {{sectionInfo['fall']['credits']}}</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- final count -->
+            <table *ngIf="
+            sectionInfo['fall']['sections'].length > 0 ||
+            sectionInfo['summer']['sections'].length > 0 ||
+            sectionInfo['spring']['sections'].length > 0
+            " class="reportTable">
+              <tr>
+                <th colspan="4">
+                  Final Count:
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  Total Passes:
+                  {{(sectionInfo['fall']['pass'] + sectionInfo['spring']['pass'] + sectionInfo['summer']['pass'])}}
+                </td>
+                <td>
+                  Total Fails:
+                  {{(sectionInfo['fall']['fail'] + sectionInfo['spring']['fail'] + sectionInfo['summer']['fail'])}}
+                </td>
+                <td>
+                  Total Credits:
+                  {{(sectionInfo['fall']['credits'] + sectionInfo['spring']['credits'] + sectionInfo['summer']['credits'])}}
+                </td>
+                <td>
+                  Transcript GPA:
+                  {{
+                      (sectionInfo['fall']['sumgrades'] + sectionInfo['spring']['sumgrades'] + sectionInfo['summer']['sumgrades']) /
+                      ((sectionInfo['fall']['pass'] + sectionInfo['spring']['pass'] + sectionInfo['summer']['pass'])+
+                      (sectionInfo['fall']['fail'] + sectionInfo['spring']['fail'] + sectionInfo['summer']['fail']))
+                    }}
+                </td>
+              </tr>
+            </table>
+
           </div>
         </div>
         <br>
         <br>
       </div>
       <div class="row">
-        <div *ngIf="typeCode === 1" class="col-md-12 centerDiv">
+        <div class="col-md-12 centerDiv">
           <button class="btn btnHc float-right" (click)="backToReportGenerator()">Back</button>
-        </div>
-        <div *ngIf="typeCode === 3" class="col-md-12 centerDiv">
-          <button class="btn btnHc float-right" (click)="backToStudentHome()">Home</button>
         </div>
       </div>
     </div>

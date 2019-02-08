@@ -18,8 +18,8 @@ import { BillStudentReportComponent } from './bill-student-report/bill-student-r
 const routes: Routes = [
     { path: 'reports/studentlisting', component: StudentListingComponent, canActivate: [AuthGuardAdmin] },
     { path: 'reports/studentlisting/report/:id', component: StudentListingReportComponent, canActivate: [AuthGuardAdmin] },
-    { path: 'reports/studenttranscript', component: StudentTranscriptComponent, canActivate: [AuthGuardAdmin] },
-    { path: 'reports/studenttranscript/report/:id', component: StudentTranscriptReportComponent, canActivate: [AuthGuardAdminStudent] },
+    { path: 'reports/studenttranscript', component: StudentTranscriptComponent, canActivate: [AuthGuardAdminStudent] },
+    { path: 'reports/studenttranscript/report/:id/:v', component: StudentTranscriptReportComponent, canActivate: [AuthGuardAdminStudent] },
     { path: 'reports/coursecatalogue', component: CourseCatalogueComponent, canActivate: [AuthGuardAdmin] },
     { path: 'reports/coursecatalogue/report/:id', component: CourseCatalogueReportComponent, canActivate: [AuthGuardAdmin] },
     { path: 'reports/facultycourses', component: FacultyCoursesComponent, canActivate: [AuthGuardAdmin] },

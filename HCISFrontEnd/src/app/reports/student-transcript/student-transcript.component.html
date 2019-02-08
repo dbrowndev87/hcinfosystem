@@ -30,10 +30,13 @@
         </div>
         <div class="row">
           <div class="col-md-12">
-            <h4 class="float-left">By Student</h4>
+            <h4 *ngIf="typeCode === 1" class="float-left">By Student</h4>
             <form [formGroup]="studentTranscriptForm" autocomplete="off" novalidate
               (ngSubmit)="redirectToReport(studentTranscriptForm.value)">
-              <select name="student_Id" class="form-control" id="student_Id" formControlName="student_Id">
+
+
+              <select *ngIf="typeCode === 1" name="student_Id" class="form-control" id="student_Id"
+                formControlName="student_Id">
                 <option *ngFor="let student of studentInfo;" value="{{student.student_Id}}">
                   {{student.student_Id}} - {{student.first_Name}} {{student.last_Name}}
                 </option>
@@ -41,8 +44,32 @@
               <em *ngIf="validateControl('student_Id') && hasError('student_Id', 'required')">You must choose a
                 Student</em>
               <br>
-              <button type="submit" class="btn btnHc float-left" [disabled]="!studentTranscriptForm.valid">Generate
+
+              <h4 *ngIf="bySemester" class="float-left">Choose Semester</h4>
+              <h4 *ngIf="byYear" class="float-left">Choose Year</h4>
+              <select *ngIf="bySemester" name="semester" class="form-control" id="semester" formControlName="semester">
+                <option value="Spring">Spring</option>
+                <option value="Summer">Summer</option>
+                <option value="Fall">Fall</option>
+                <em *ngIf="validateControl('semester') && hasError('semester', 'required')">You must choose a
+                  Semester</em>
+              </select>
+
+
+              <select *ngIf="byYear" name="year" class="form-control" id="year" formControlName="year">
+                <option *ngFor="let year of years" value="{{year}}">{{year}}</option>
+                <em *ngIf="validateControl('semester') && hasError('semester', 'required')">You must choose a
+                  Year</em>
+              </select>
+              <br>
+              <br>
+              <button type="submit" class="btn btnHc" [disabled]="!studentTranscriptForm.valid">Generate
                 Transcript</button>
+              <button *ngIf="byYear" class="btn btnHc" (click)="Semester()">By Semester</button>
+              <button *ngIf="bySemester" class="btn btnHc" (click)="Year()">By Year</button>
+              <br>
+              <br>
+              <br>
             </form>
           </div>
           <div class="col-md-12 centerDiv">

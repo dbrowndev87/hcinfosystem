@@ -56,7 +56,7 @@ export class BillStudentComponent implements OnInit {
     this.subscriptions.push(this.repository.getData(apiAddress)
       .subscribe(res => {
         this.studentInfo = res as StudentInfo[];
-        console.log(this.studentInfo);
+        // console.log(this.studentInfo);
 
       })),
       // tslint:disable-next-line: no-unused-expression

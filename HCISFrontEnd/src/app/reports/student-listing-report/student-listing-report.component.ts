@@ -155,7 +155,7 @@ export class StudentListingReportComponent implements OnInit {
         // console.log(this.sections);
 
         // If you turn up no results for sections just call isLoaded here
-        if (this.courses.length <= 1 || this.sections[0].length === undefined) {
+        if (this.courses.length <= 1 || this.sections.length <= 0) {
           this.isLoaded = true;
         }
 
