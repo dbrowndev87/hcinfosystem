@@ -66,7 +66,6 @@ export class FacultyGradesComponent implements OnInit {
 
   private getEnrollmentInfo(studentId, sectionId) {
 
-    console.log("Hello");
     let apiAddress = "api/enrollment/section/student/" + studentId + " /" + sectionId;
     this.subscriptions.push(this.repository.getData(apiAddress)
       .subscribe(enrollment => {
@@ -116,6 +115,7 @@ export class FacultyGradesComponent implements OnInit {
   }
   private executeUpdateGrade(enrollment: Enrollment) {
 
+    console.log(enrollment.student_Id);
     let apiUrlEnrollment = `api/enrollment/` + enrollment.student_Id;
     this.subscriptions.push(this.repository.update(apiUrlEnrollment, enrollment)
       .subscribe(res => {

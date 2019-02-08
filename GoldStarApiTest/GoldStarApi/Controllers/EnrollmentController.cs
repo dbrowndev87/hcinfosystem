@@ -236,6 +236,7 @@ namespace GoldStarApi.Controllers
         [HttpPut("{id}")]
         public IActionResult UpdateEnrollment(int id, [FromBody]Enrollment enrollment)
         {
+            
             try
             {
                 if (enrollment.Equals(null))
@@ -256,9 +257,12 @@ namespace GoldStarApi.Controllers
                     _logger.LogError($"Enrollment with id: {id}, hasn't been found in db.");
                     return NotFound();
                 }
- 
+                
                 _repository.Enrollment.UpdateEnrollment(dbEnrollment, enrollment);
- 
+                
+                updateStudentGpa(id);
+                
+               
                 return NoContent();
             }
             catch (Exception ex)
@@ -267,6 +271,33 @@ namespace GoldStarApi.Controllers
                 return StatusCode(500, "Internal server error");
             }
         }
+
+        public void updateStudentGpa(int studentId)
+        {
+             
+            var tempStudent = _repository.Student.GetStudentById(studentId);
+            var enrollmentsForGrade = _repository.Enrollment.GetAllEnrollments();
+            double totalAllGrades = 0;
+            var numberOfCompletedCourses = 0;
+
+            foreach (var current in enrollmentsForGrade)
+            {
+                if (current.Student_Id == tempStudent.Student_Id && current.Course_Status == "Completed")
+                {
+                    numberOfCompletedCourses++;
+                    totalAllGrades += current.Grade;
+                }
+            }
+
+            tempStudent.Gpa = totalAllGrades / numberOfCompletedCourses;
+                
+            var dbStudent = _repository.Student.GetStudentById(studentId);
+                
+            _repository.Student.UpdateStudent(dbStudent, tempStudent);
+            
+        }
+        
+        
         [HttpDelete("{id}")]
         public IActionResult DeleteEnrollment(int id)
         {
