@@ -6,6 +6,8 @@ import { Semesters } from 'src/app/shared/tools/semesters';
 import { Subscription } from 'rxjs';
 import { RepositoryService } from 'src/app/shared/services/repository.service';
 import { Router, ActivatedRoute } from '@angular/router';
+import { StudentInfo } from 'src/app/_interfaces/studentInfo.model';
+import { Enrollment } from 'src/app/_interfaces/enrollment.model';
 
 @Component({
   selector: 'app-student-courses-report',
@@ -16,15 +18,20 @@ export class StudentCoursesReportComponent implements OnInit {
 
   public courses: any[] = [];
   public errorMessage: String = "";
-  private sectionInfo: SectionInfo[];
+  private studentInfos: StudentInfo[] = [];
+  private enrollments: Enrollment[] = [];
   private student: Student;
   private id: number;
   private isLoaded = false;
   private typeCode;
   private semesters = new Semesters();
+  private students: any[] = [];
 
   private counter = 0;
   private transcriptDate;
+  private semester: any;
+  private year: any;
+  private dept: number;
 
 
   // Array for all the subscriptions
@@ -42,34 +49,28 @@ export class StudentCoursesReportComponent implements OnInit {
 
     this.typeCode = parseInt(sessionStorage.getItem('typeCode'), 0);
 
-    // if a student is logged in and tries to access anything other
-    // than their own transcript, send them to 404.
-    if (this.typeCode === 3 && sessionStorage.getItem('studentId')) {
-      let urlParam = parseInt(this.activeatedRoute.snapshot.params['id'], 0);
-      let studentId = parseInt(sessionStorage.getItem('studentId'), 0);
-
-      if (urlParam !== studentId) {
-        this.router.navigate(['/404']);
-      } else {
-        // else load their transcript.
-        this.transcriptDate = this.semesters.getTodaysDate();
-        this.id = parseInt(sessionStorage.getItem('studentId'), 0);
-        this.getStudent();
-      }
+    if (this.typeCode !== 1) {
+      this.router.navigate(['/404']);
     } else {
-      // Admin load transcripts.
+      // else load their transcript.
       this.transcriptDate = this.semesters.getTodaysDate();
-      this.id = parseInt(this.activeatedRoute.snapshot.params['id'], 0);
-      this.getStudent();
+      this.id = parseInt(sessionStorage.getItem('id'), 0);
+      this.semester = this.activeatedRoute.snapshot.params['semester'];
+      this.year = parseInt(this.activeatedRoute.snapshot.params['year']);
+      this.dept = this.activeatedRoute.snapshot.params['deptId'];
+
+
+      this.getStudentsBySemesterYear();
+
     }
   }
 
-
-  private getStudent() {
-    let apiAddress = "api/studentInfo/" + this.id;
+  private getEnrollmentsBySectionId(id) {
+    let apiAddress = "api/enrollment/section/" + id;
     this.subscriptions.push(this.repository.getData(apiAddress)
       .subscribe(res => {
-        this.student = res as Student;
+        let enrollments = res as Enrollment[];
+
       },
         // tslint:disable-next-line: no-unused-expression
         (error) => {
@@ -78,22 +79,17 @@ export class StudentCoursesReportComponent implements OnInit {
 
         }).add(() => {
           // get the students sections
-          this.getSectionsByStudentId();
+          // this.getSectionsBySemesterYear();
         }));
   }
 
-  private getSectionsByStudentId() {
-    let apiAddress = "api/enrollment/student/" + this.id;
+  private getStudentsBySemesterYear() {
+    let apiAddress = "api/section/semester/year/" + this.semester + "/" + this.year;
     this.subscriptions.push(this.repository.getData(apiAddress)
       .subscribe(res => {
-        this.sectionInfo = res as SectionInfo[];
-        console.log(this.sectionInfo);
+        this.studentInfos = res as StudentInfo[];
 
-        let array: any[] = [];
-
-        this.sectionInfo.forEach(sections => {
-
-        });
+        console.log(this.studentInfos);
       },
         // tslint:disable-next-line: no-unused-expression
         (error) => {
@@ -101,8 +97,26 @@ export class StudentCoursesReportComponent implements OnInit {
           this.errorMessage = this.errorHandler.errorMessage;
 
         }).add(() => {
+
           this.isLoaded = true;
+
         }));
+  }
+
+  private getAllStudents() {
+
+    let apiAddress = "api/studentInfo/";
+    this.subscriptions.push(this.repository.getData(apiAddress)
+      .subscribe(res => {
+        this.students = res as StudentInfo[];
+
+      })),
+      // tslint:disable-next-line: no-unused-expression
+      (error) => {
+        this.isLoaded = false;
+        this.errorHandler.handleError(error);
+        this.errorMessage = this.errorHandler.errorMessage;
+      };
   }
 
   private backToReportGenerator() {

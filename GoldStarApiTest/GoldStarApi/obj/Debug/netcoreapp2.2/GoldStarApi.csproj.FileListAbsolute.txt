@@ -194,7 +194,6 @@ C:\Users\nicholaspeconi\Documents\2nd Year Repos\goldstarcode\GoldStarApiTest\Go
 C:\Users\nicholaspeconi\Documents\2nd Year Repos\goldstarcode\GoldStarApiTest\GoldStarApi\bin\Debug\netcoreapp2.2\Contracts.pdb
 C:\Users\nicholaspeconi\Documents\2nd Year Repos\goldstarcode\GoldStarApiTest\GoldStarApi\bin\Debug\netcoreapp2.2\Entities.pdb
 C:\Users\nicholaspeconi\Documents\2nd Year Repos\goldstarcode\GoldStarApiTest\GoldStarApi\bin\Debug\netcoreapp2.2\LoggerService.pdb
-C:\Users\nicholaspeconi\Documents\2nd Year Repos\goldstarcode\GoldStarApiTest\GoldStarApi\bin\Debug\netcoreapp2.2\Repository.pdb
 C:\Users\nicholaspeconi\Documents\2nd Year Repos\goldstarcode\GoldStarApiTest\GoldStarApi\obj\Debug\netcoreapp2.2\GoldStarApi.csprojAssemblyReference.cache
 C:\Users\nicholaspeconi\Documents\2nd Year Repos\goldstarcode\GoldStarApiTest\GoldStarApi\obj\Debug\netcoreapp2.2\GoldStarApi.csproj.CoreCompileInputs.cache
 C:\Users\nicholaspeconi\Documents\2nd Year Repos\goldstarcode\GoldStarApiTest\GoldStarApi\obj\Debug\netcoreapp2.2\GoldStarApi.RazorAssemblyInfo.cache

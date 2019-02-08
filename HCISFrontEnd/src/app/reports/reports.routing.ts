@@ -25,7 +25,7 @@ const routes: Routes = [
     { path: 'reports/facultycourses', component: FacultyCoursesComponent, canActivate: [AuthGuardAdmin] },
     { path: 'reports/facultycourses/report/:id', component: FacultyCoursesReportComponent, canActivate: [AuthGuardAdmin] },
     { path: 'reports/studentcourses', component: StudentCoursesComponent, canActivate: [AuthGuardAdmin] },
-    { path: 'reports/studentcourses/report/:id', component: StudentCoursesReportComponent, canActivate: [AuthGuardAdmin] },
+    { path: 'reports/studentcourses/report/:semester/:year/:deptId', component: StudentCoursesReportComponent, canActivate: [AuthGuardAdmin] },
     { path: 'reports/billstudent', component: BillStudentComponent, canActivate: [AuthGuardAdmin] },
     { path: 'reports/billstudent/report/:id', component: BillStudentReportComponent, canActivate: [AuthGuardAdminStudent] },
 ];

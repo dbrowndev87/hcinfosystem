@@ -15,7 +15,7 @@
     <div class="col-md-8 centerDiv well">
       <div class="row">
         <div class="col-md-12">
-          <h4 class="text-center">Student Courses</h4>
+          <h3 class="text-center">Student Courses</h3>
         </div>
       </div>
     </div>
@@ -29,15 +29,33 @@
         </div>
         <div class="row">
           <div class="col-md-12">
-            <h4 class="float-left">By Student</h4>
-            <form [formGroup]="studentCoursesForm" autocomplete="off" novalidate
-              (ngSubmit)="redirectToReport(studentCoursesForm.value)">
-              <select name="student_Id" class="form-control" id="student_Id" formControlName="student_Id">
-                <option *ngFor="let student of students" value="{{student.student_Id}}">{{student.student_Id}} -
-                  {{student.first_Name}} {{student.last_Name}}</option>
+            
+            <form [formGroup]="studentCoursesForm" autocomplete="off" novalidate (ngSubmit)="redirectToReport(studentCoursesForm.value)">
+              <h4 class="float-left">Select Semester: </h4>
+              <select name="semester" class="form-control" id="semester" formControlName="semester">
+                <option value="Spring">Spring</option>
+                <option value="Summer">Summer</option>
+                <option value="Fall">Fall</option>
               </select>
-              <em *ngIf="validateControl('student_Id') && hasError('student_Id',
-                'required')">You must choose a Student</em>
+              <em *ngIf="validateControl('semester') && hasError('semester',
+                'required')">You must
+                choose a Semester</em>
+              <br>
+              <h4 class="float-left">Select Year: </h4>
+              <select name="year" class="form-control" id="year" formControlName="year">
+                <option *ngFor="let current of years">{{current}}</option>
+              </select>
+              <em *ngIf="validateControl('year') && hasError('year',
+                'required')">You must
+                choose a Year</em>
+              <br>
+              <h4 class="float-left">Select Department: </h4>
+              <select name="dept_Id" class="form-control" id="dept_Id" formControlName="dept_Id" #dCode>
+                <option *ngFor="let dept of depts;" value="{{dept.dept_Id}}">{{dept.dept_Name}}</option>
+              </select>
+              <em *ngIf="validateControl('dept_Id') && hasError('dept_Id',
+                'required')">You must
+                choose a Department</em>
               <br>
               <button type="submit" class="btn btnHc float-left" [disabled]="!studentCoursesForm.valid">Generate
                 Report</button>
@@ -45,7 +63,7 @@
           </div>
         </div>
         <hr>
-        <div class="row">
+        <!-- <div class="row">
           <div class="col-md-12">
             <h4 class="float-left">All Students</h4>
             <br>
@@ -53,7 +71,7 @@
             <button class="btn btnHc float-left" (click)="redirectToAllReport(0)">Generate
               Report</button>
           </div>
-        </div>
+        </div> -->
         <div class="row">
           <div class="col-md-12 centerDiv">
             <button class="btn btnHc float-right" (click)="goHome()">Home</button>
