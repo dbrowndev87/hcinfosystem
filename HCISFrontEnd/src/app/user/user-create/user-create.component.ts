@@ -12,7 +12,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ErrorHandlerService } from './../../shared/services/error-handler.service';
 import { RepositoryService } from './../../shared/services/repository.service';
-import { Router, ActivatedRoute, NavigationEnd, Params } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { UserLogin } from 'src/app/_interfaces/userlogin.model';
 import { RandomUserPassGen } from 'src/app/shared/tools/rupg';
 import { Student } from 'src/app/_interfaces/student.model';
@@ -23,7 +23,7 @@ import { Globals } from 'src/app/globals';
 import { Faculty } from 'src/app/_interfaces/faculty.model';
 import { Subscription } from 'rxjs';
 import { Semesters } from 'src/app/shared/tools/semesters';
-import { formatDate, DatePipe } from '@angular/common';
+import { DatePipe } from '@angular/common';
 
 
 
@@ -41,7 +41,6 @@ export class UserCreateComponent implements OnInit, OnDestroy {
   private depts: Department[];
   private userType;
   private userTypeName = ['Admin', 'Faculty', 'Student'];
-  private md5 = new Md5();
   private isLoaded = false;
   private param;
   private successMessage = "";
@@ -382,8 +381,8 @@ export class UserCreateComponent implements OnInit, OnDestroy {
    * @param user 
    */
   private generateUserLogin(username: string) {
-
-    let password = this.md5.appendStr('password').end();
+    let md5 = new Md5();
+    let password = md5.appendStr('password').end();
     // this.rupg.generatePass(); Password Generator implementation.
 
     // Generate user login info
