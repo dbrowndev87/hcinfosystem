@@ -23,7 +23,8 @@ namespace Entities.Extensions
             dbuser.Dept_Id = user.Dept_Id;
             dbuser.First_Name = user.First_Name;
             dbuser.Birth_Date = user.Birth_Date;
-            
+            dbuser.Start_Date = user.Start_Date;
+
         }
     }
 }

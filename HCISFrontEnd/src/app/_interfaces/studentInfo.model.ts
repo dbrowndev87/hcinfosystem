@@ -18,4 +18,5 @@ export interface StudentInfo {
     type_Code: number;
     user_Id: number;
     dept_Id: number;
+    start_Date: Date;
 }

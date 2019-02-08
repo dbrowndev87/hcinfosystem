@@ -68,7 +68,7 @@ export class FacultyCoursesReportComponent implements OnInit {
     this.subscriptions.push(this.repository.getData(apiAddress)
       .subscribe(res => {
         this.depts[0] = res as Department;
-        // console.log(this.courses);
+
       },
         // tslint:disable-next-line: no-unused-expression
         (error) => {
@@ -95,7 +95,7 @@ export class FacultyCoursesReportComponent implements OnInit {
           this.depts.push(tempArray);
         });
 
-        // console.log(this.courses);
+
 
         // Pass the courses on to get the sections.
         this.getFaculty(depts);
@@ -153,10 +153,7 @@ export class FacultyCoursesReportComponent implements OnInit {
         }
 
 
-        // console.log(courses);
 
-        // this.faculty = tempFaculty;
-        // console.log(this.sections);
 
         // If you turn up no results for faculty just call isLoaded here
         if (this.depts.length <= 1 || this.faculty[0].length === 0) {
@@ -193,8 +190,6 @@ export class FacultyCoursesReportComponent implements OnInit {
       .subscribe(res => {
         let sections: SectionInfo[] = res as SectionInfo[];
         let tempArray: any[] = new Array();
-
-        console.log(sections);
 
         for (let z = 0; z < sections.length; z++) {
           this.depts[x]['faculty'][y]['sections'].push(sections[z]);

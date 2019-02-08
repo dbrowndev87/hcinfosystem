@@ -57,6 +57,21 @@
       <div class="form-group">
         <div class="row">
           <div class="col-md-12 updateWell">
+            <label for="start_Date" class="control-label">Start Date:
+            </label>
+            <input type="text" formControlName="start_Date" id="start_Date"
+              class="form-control" appDatepicker
+              (change)="executeDatePickerStartDate($event)"
+              readonly />
+            <em *ngIf="validateControl('start_Date') && hasError('start_Date',
+              'required')">Start Date is required</em>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-12 updateWell">
             <label for="eMail" class="control-label">E-Mail: </label>
             <input type="text" formControlName="eMail" id="eMail"
               class="form-control" />

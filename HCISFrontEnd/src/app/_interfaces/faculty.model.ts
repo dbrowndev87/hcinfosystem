@@ -9,4 +9,5 @@ export interface Faculty {
     faculty_Id: number;
     faculty_Status: string;
     user_Id: number;
+
 }

@@ -30,5 +30,7 @@ namespace Entities.Models
         public DateTime Birth_Date { get; set; }
         public string Address { get; set; }
         public string EMail { get; set; }
+       
+        public DateTime Start_Date { get; set; }
     }
 }

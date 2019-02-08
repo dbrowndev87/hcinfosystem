@@ -60,6 +60,7 @@ namespace GoldStarApi.Controllers
                     studentInfoObject.Dept_Id = userFromDb.Dept_Id;
                     studentInfoObject.Type_Code = userFromDb.Type_Code;
                     studentInfoObject.User_Id = userFromDb.User_Id;
+                    studentInfoObject.Start_Date = userFromDb.Start_Date;
                     return Ok(studentInfoObject);
                 
             }
@@ -143,6 +144,7 @@ namespace GoldStarApi.Controllers
             studentInfoObject.Dept_Id = userFromDb.Dept_Id;
             studentInfoObject.Type_Code = userFromDb.Type_Code;
             studentInfoObject.User_Id = userFromDb.User_Id;
+            studentInfoObject.Start_Date = userFromDb.Start_Date;
 
             return studentInfoObject;
 
@@ -180,6 +182,7 @@ namespace GoldStarApi.Controllers
                     studentInfoObject.Dept_Id = user.Dept_Id;
                     studentInfoObject.Type_Code = user.Type_Code;
                     studentInfoObject.User_Id = user.User_Id;
+                    studentInfoObject.Start_Date = user.Start_Date;
                     
                     allStudentInfo.Add(studentInfoObject);
 

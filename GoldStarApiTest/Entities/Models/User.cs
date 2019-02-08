@@ -48,5 +48,7 @@ namespace Entities.Models
         [StringLength(140, ErrorMessage = "Address can't be longer than 140 characters")]
         public string Address { get; set; }
 
+        [Required(ErrorMessage = "Start Date is required")]
+        public DateTime Start_Date { get; set; }
     }
 }

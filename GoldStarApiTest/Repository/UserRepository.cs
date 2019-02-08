@@ -26,7 +26,7 @@ namespace Repository
         {
             
             return FindAll()
-                .OrderBy(ow => ow.Last_Name);
+                .OrderBy(ow => ow.Start_Date);
         }
 
         public IEnumerable<User> GetLastId()

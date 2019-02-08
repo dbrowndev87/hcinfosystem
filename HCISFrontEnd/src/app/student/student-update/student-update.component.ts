@@ -50,10 +50,12 @@ export class StudentUpdateComponent implements OnInit, OnDestroy {
       last_Name: new FormControl('', [Validators.required, Validators.maxLength(30)]),
       address: new FormControl('', [Validators.required, Validators.maxLength(140)]),
       birth_Date: new FormControl('', [Validators.required]),
+      start_Date: new FormControl('', [Validators.required]),
       eMail: new FormControl('', [Validators.required, Validators.maxLength(50)]),
       dept_Id: new FormControl('', [Validators.required]),
       student_Status: new FormControl(''),
       amount_Owing: new FormControl('', [Validators.max(999999)]),
+
     });
 
     // Get the ID from the URL
@@ -162,7 +164,8 @@ export class StudentUpdateComponent implements OnInit, OnDestroy {
         dept_Id: studentFormValue.dept_Id,
         eMail: studentFormValue.eMail,
         type_Code: this.studentInfo.type_Code,
-        user_Id: this.studentInfo.user_Id
+        user_Id: this.studentInfo.user_Id,
+        start_Date: studentFormValue.start_Date
       };
 
       this.executeStudentUpdate(user, student);
@@ -171,6 +174,10 @@ export class StudentUpdateComponent implements OnInit, OnDestroy {
 
   public executeDatePicker(event) {
     this.studentUpdateForm.patchValue({ 'birth_Date': event });
+  }
+
+  public executeDatePickerStartDate(event) {
+    this.studentUpdateForm.patchValue({ 'start_Date': event });
   }
 
   redirectToStudentList() {

@@ -49,6 +49,7 @@ export class FacultyUpdateComponent implements OnInit, OnDestroy {
       last_Name: new FormControl('', [Validators.required, Validators.maxLength(30)]),
       address: new FormControl('', [Validators.required, Validators.maxLength(140)]),
       birth_Date: new FormControl('', [Validators.required]),
+      start_Date: new FormControl('', [Validators.required]),
       eMail: new FormControl('', [Validators.required, Validators.maxLength(50)]),
       dept_Id: new FormControl('', [Validators.required]),
       faculty_Status: new FormControl(''),
@@ -85,7 +86,7 @@ export class FacultyUpdateComponent implements OnInit, OnDestroy {
 
         this.facultyInfo = facultyinfo as FacultyInfo;
         this.facultyUpdateForm.patchValue(this.facultyInfo);
-        this.facultyUpdateForm.get('birth_Date').setValue(this.facultyInfo.birth_Date.toLocaleString('yyyy/mm/dd').slice(0, 10));
+        this.facultyUpdateForm.get('birth_Date').setValue(this.facultyInfo.birth_Date.toLocaleString('yyyy/MM/dd').slice(0, 10));
       })),
       // tslint:disable-next-line: no-unused-expression
       (error) => {
@@ -150,7 +151,8 @@ export class FacultyUpdateComponent implements OnInit, OnDestroy {
       let faculty: Faculty = {
         faculty_Id: this.facultyInfo.faculty_Id,
         faculty_Status: facultyFormValue.faculty_Status,
-        user_Id: this.facultyInfo.user_Id
+        user_Id: this.facultyInfo.user_Id,
+
       };
 
       let user: User = {
@@ -161,7 +163,8 @@ export class FacultyUpdateComponent implements OnInit, OnDestroy {
         dept_Id: facultyFormValue.dept_Id,
         eMail: facultyFormValue.eMail,
         type_Code: this.facultyInfo.type_Code,
-        user_Id: this.facultyInfo.user_Id
+        user_Id: this.facultyInfo.user_Id,
+        start_Date: this.facultyInfo.start_Date,
       };
 
       this.executeFacultyUpdate(user, faculty);
@@ -170,6 +173,10 @@ export class FacultyUpdateComponent implements OnInit, OnDestroy {
 
   public executeDatePicker(event) {
     this.facultyUpdateForm.patchValue({ 'birth_Date': event });
+  }
+
+  public executeDatePickerStartDate(event) {
+    this.facultyUpdateForm.patchValue({ 'start_Date': event });
   }
 
   redirectToFacultyList() {

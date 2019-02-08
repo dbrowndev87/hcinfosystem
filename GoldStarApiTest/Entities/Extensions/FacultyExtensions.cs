@@ -18,7 +18,6 @@ namespace Entities.Extensions
             dbFaculty.Faculty_Id = faculty.Faculty_Id;
             dbFaculty.Faculty_Status = faculty.Faculty_Status;
             dbFaculty.User_Id= faculty.User_Id;
-            //dbFaculty.Start_Date = faculty.Start_Date;
 
         }
     }

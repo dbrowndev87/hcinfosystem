@@ -9,4 +9,5 @@ export interface FacultyInfo {
     type_Code: number;
     dept_Id: number;
     address: string;
+    start_Date: Date;
 }

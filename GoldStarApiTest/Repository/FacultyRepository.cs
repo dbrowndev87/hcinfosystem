@@ -24,8 +24,7 @@ namespace Repository
 
         public IEnumerable<Faculty> GetAllFaculty()
         {
-            return FindAll()
-                //.OrderBy(ow => ow.Start_Date);
+            return FindAll()     
                 .OrderBy(ow => ow.Faculty_Id);
         }
 

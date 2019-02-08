@@ -22,6 +22,8 @@ import { Md5 } from 'ts-md5/dist/md5';
 import { Globals } from 'src/app/globals';
 import { Faculty } from 'src/app/_interfaces/faculty.model';
 import { Subscription } from 'rxjs';
+import { Semesters } from 'src/app/shared/tools/semesters';
+import { formatDate, DatePipe } from '@angular/common';
 
 
 
@@ -43,6 +45,8 @@ export class UserCreateComponent implements OnInit, OnDestroy {
   private isLoaded = false;
   private param;
   private successMessage = "";
+  private semesters = new Semesters();
+
 
   // Array for all the subscriptions
   private subscriptions: Subscription[] = [];
@@ -54,7 +58,8 @@ export class UserCreateComponent implements OnInit, OnDestroy {
     private activeRoute: ActivatedRoute,
     private rupg: RandomUserPassGen,
     private sidg: StudentIdGenerator,
-    private globals: Globals
+    private globals: Globals,
+    private datePipe: DatePipe
   ) { }
 
   ngOnInit() {
@@ -151,6 +156,10 @@ export class UserCreateComponent implements OnInit, OnDestroy {
     this.userForm.patchValue({ 'birth_Date': event });
   }
 
+  public executeDatePickerStartDate(event) {
+    this.userForm.patchValue({ 'start_Date': event });
+  }
+
   // Create user if form is valid.
   public createUser(userFormValue) {
     if (this.userForm.valid) {
@@ -185,6 +194,7 @@ export class UserCreateComponent implements OnInit, OnDestroy {
       last_Name: userFormValue.last_Name,
       address: userFormValue.address,
       birth_Date: userFormValue.birth_Date,
+      start_Date: userFormValue.start_Date,
       type_Code: this.userType,
       eMail: userFormValue.eMail,
       user_Id: this.userId,
@@ -344,6 +354,8 @@ export class UserCreateComponent implements OnInit, OnDestroy {
     this.userForm.get('birth_Date').markAsUntouched();
     this.userForm.get('address').setValue('');
     this.userForm.get('address').markAsUntouched();
+    this.userForm.get('start_Date').setValue('');
+    this.userForm.get('start_Date').markAsUntouched();
 
     if (this.userType > 1) {
       this.userForm.get('dept_Id').setValue('');
@@ -480,6 +492,7 @@ export class UserCreateComponent implements OnInit, OnDestroy {
         last_Name: new FormControl('', [Validators.required, Validators.maxLength(30)]),
         address: new FormControl('', [Validators.required, Validators.maxLength(140)]),
         birth_Date: new FormControl('', [Validators.required]),
+        start_Date: new FormControl('', [Validators.required]),
         eMail: new FormControl('', [Validators.required, Validators.maxLength(50)]),
       });
     } else {
@@ -491,6 +504,7 @@ export class UserCreateComponent implements OnInit, OnDestroy {
         birth_Date: new FormControl('', [Validators.required]),
         eMail: new FormControl('', [Validators.required, Validators.maxLength(50)]),
         dept_Id: new FormControl('', Validators.required),
+        start_Date: new FormControl('', [Validators.required]),
       });
     }
   }

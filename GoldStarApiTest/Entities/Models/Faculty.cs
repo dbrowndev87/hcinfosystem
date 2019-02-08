@@ -31,7 +31,6 @@ namespace Entities.Models
         [Range(1,999999, ErrorMessage = "User id length must be between 1 and 6")]
         public int User_Id { get; set; }
         
-        //[Required(ErrorMessage = "Start Date is required")]
-        //public DateTime Start_Date { get; set; }
+  
     }
 }

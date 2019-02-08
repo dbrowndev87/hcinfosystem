@@ -4,7 +4,8 @@
   <div *ngIf="!isLoaded">
     <div class="row">
       <div class="col-md-8 centerDiv well">
-        <img src="../../../assets/loading.gif" class="center-block imgLoading" />
+        <img src="../../../assets/loading.gif" class="center-block imgLoading"
+          />
         <h4 class="text-center">Loading</h4>
       </div>
     </div>
@@ -12,7 +13,7 @@
 
   <!-- HC Well Button -->
   <div *ngIf="isLoaded" class="row">
-    <div class=" col-md-8 centerDiv well">
+    <div class="col-md-8 centerDiv well">
       <div class="row">
         <div class="col-md-5">
           <img class="logoReport" src="../../../assets/Logo1.png">
@@ -21,7 +22,7 @@
           <br>
           <br>
           <br>
-          <h3 class="reportHeader ">Student Bill</h3>
+          <h3 class="reportHeader">Student Bill</h3>
         </div>
       </div>
       <div class="row">
@@ -31,113 +32,125 @@
           <p><span class="bold">Date: </span>{{transcriptDate}}</p>
         </div>
         <div class="col-md-6">
-          <p><span class="bold">For:</span> {{student.first_Name}} {{student.last_Name}}</p>
-          <p><span class="bold">Amount Due:</span> {{student.amount_Owing | currency }}<br>
-        </div>
-        <hr>
-        <div class="row">
-          <div class="col-md-8 centerDiv">
-            <h4>All Enrollments</h4>
-            <table class="billTable">
-              <tr>
-                <th>Course ID</th>
-                <th>Course Name</th>
-                <th>Start Date</th>
-                <th>End Date</th>
-                <th>Cost</th>
-              </tr>
-              <tr *ngFor="let section of sections">
-                <td>{{section.course_Id}}</td>
-                <td style="width: 60%">{{section.course_Name}}</td>
-                <td>{{section.start_Date | date:'yyyy-mm-dd'}}</td>
-                <td>{{section.end_Date | date:'yyyy-mm-dd'}}</td>
-                <td>{{ 1000 | currency}}</td>
-              </tr>
-              <tr *ngIf="sections.length === 0">
-                <td colspan="5" class="bold text-center">No Previous Enrollments</td>
-              </tr>
-              <tr>
-                <th class="total" colspan="5">Total:</th>
-              </tr>
-              <tr>
-                <td class="total" colspan="4">{{totals[0]['type']}}: ({{sections.length}} Enrollments)</td>
-                <td class="total float-right borderLeft bt0">{{totals[0]['total'] | currency}}</td>
-              </tr>
-            </table>
+          <p><span class="bold">For:</span> {{student.first_Name}}
+            {{student.last_Name}}</p>
+          <p><span class="bold">Amount Due:</span> {{student.amount_Owing |
+            currency }}<br>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-md-8 centerDiv">
+              <h4>All Enrollments</h4>
+              <table class="billTable">
+                <tr>
+                  <th>Course ID</th>
+                  <th>Course Name</th>
+                  <th>Start Date</th>
+                  <th>End Date</th>
+                  <th>Cost</th>
+                </tr>
+                <tr *ngFor="let section of sections">
+                  <td>{{section.course_Id}}</td>
+                  <td style="width: 60%">{{section.course_Name}}</td>
+                  <td>{{section.start_Date | date:'yyyy-MM-dd'}}</td>
+                  <td>{{section.end_Date | date:'yyyy-MM-dd'}}</td>
+                  <td>{{ 1000 | currency}}</td>
+                </tr>
+                <tr *ngIf="sections.length === 0">
+                  <td colspan="5" class="bold text-center">No Previous
+                    Enrollments</td>
+                </tr>
+                <tr>
+                  <th class="total" colspan="5">Total:</th>
+                </tr>
+                <tr>
+                  <td class="total" colspan="4">{{totals[0]['type']}}:
+                    ({{sections.length}} Enrollments)</td>
+                  <td class="total float-right borderLeft bt0">{{totals[0]['total']
+                    | currency}}</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-md-8 centerDiv">
+              <h4>All Transactions</h4>
+              <table class="billTable">
+                <tr>
+                  <th>Transaction ID</th>
+                  <th>Date</th>
+                  <th>Ammount</th>
+                </tr>
+                <tr *ngFor="let transaction of transactions">
+                  <td style="width: 80%">{{transaction.trans_Id}}</td>
+                  <td>{{transaction.trans_Date | date:'yyyy-MM-dd'}}</td>
+                  <td>{{transaction.trans_Amount | currency}}</td>
+                </tr>
+                <tr *ngIf="transactions.length === 0">
+                  <td colspan="5" class="bold text-center">No Previous
+                    Transactions</td>
+                </tr>
+                <tr>
+                  <th class="total" colspan="3">Total:</th>
+                </tr>
+                <tr>
+                  <td class="total" colspan="2">{{totals[1]['type']}}:
+                    ({{transactions.length}} Transactions)</td>
+                  <td class="total float-right borderLeft bt0">{{totals[1]['total']
+                    | currency}}</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-md-8 centerDiv">
+              <h4>Totals</h4>
+              <table class="billTable">
+                <tr>
+                  <th style="width: 95%">Amount For</th>
+                  <th>Total</th>
+                </tr>
+                <tr>
+                  <td>{{totals[0]['type']}}</td>
+                  <td class="float-right">{{totals[0]['total'] | currency}}</td>
+                </tr>
+                <tr>
+                  <td>{{totals[1]['type']}}</td>
+                  <td class="float-right"> -{{totals[1]['total'] | currency}}</td>
+                </tr>
+                <tr>
+                  <th class="total" colspan="2">Amount Owing</th>
+                </tr>
+                <tr>
+                  <td class="total">{{totals[2]['type']}}:</td>
+                  <td *ngIf="totals[2]['total'] <= 0" class="total float-right
+                    zero borderLeft bt0">
+                    {{totals[2]['total'] | currency}}
+                  </td>
+                  <td *ngIf="totals[2]['total']> 0" class="total float-right owe
+                    borderLeft bt0">
+                    {{totals[2]['total'] | currency}}</td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
         <br>
         <div class="row">
-          <div class="col-md-8 centerDiv">
-            <h4>All Transactions</h4>
-            <table class="billTable">
-              <tr>
-                <th>Transaction ID</th>
-                <th>Date</th>
-                <th>Ammount</th>
-              </tr>
-              <tr *ngFor="let transaction of transactions">
-                <td style="width: 80%">{{transaction.trans_Id}}</td>
-                <td>{{transaction.trans_Date | date:'yyyy-mm-dd'}}</td>
-                <td>{{transaction.trans_Amount | currency}}</td>
-              </tr>
-              <tr *ngIf="transactions.length === 0">
-                <td colspan="5" class="bold text-center">No Previous Transactions</td>
-              </tr>
-              <tr>
-                <th class="total" colspan="3">Total:</th>
-              </tr>
-              <tr>
-                <td class="total" colspan="2">{{totals[1]['type']}}: ({{transactions.length}} Transactions)</td>
-                <td class="total float-right borderLeft bt0">{{totals[1]['total'] | currency}}</td>
-              </tr>
-            </table>
+          <div *ngIf="typeCode === 1" class="col-md-12 centerDiv">
+            <button class="btn btnHc float-right"
+              (click)="backToReportGenerator()">Back</button>
           </div>
-        </div>
-        <br>
-        <div class="row">
-          <div class="col-md-8 centerDiv">
-            <h4>Totals</h4>
-            <table class="billTable">
-              <tr>
-                <th style="width: 95%">Amount For</th>
-                <th>Total</th>
-              </tr>
-              <tr>
-                <td>{{totals[0]['type']}}</td>
-                <td class="float-right">{{totals[0]['total'] | currency}}</td>
-              </tr>
-              <tr>
-                <td>{{totals[1]['type']}}</td>
-                <td class="float-right"> -{{totals[1]['total'] | currency}}</td>
-              </tr>
-              <tr>
-                <th class="total" colspan="2">Amount Owing</th>
-              </tr>
-              <tr>
-                <td class="total">{{totals[2]['type']}}:</td>
-                <td *ngIf="totals[2]['total'] <= 0" class="total float-right zero borderLeft bt0">
-                  {{totals[2]['total'] | currency}}
-                </td>
-                <td *ngIf="totals[2]['total'] > 0" class="total float-right owe borderLeft bt0">
-                  {{totals[2]['total'] | currency}}</td>
-              </tr>
-            </table>
+          <div *ngIf="typeCode === 3" class="col-md-12 centerDiv">
+            <button class="btn btnHc float-right" (click)="backToStudentHome()">Home</button>
           </div>
-        </div>
-      </div>
-      <br>
-      <div class="row">
-        <div *ngIf="typeCode === 1" class="col-md-12 centerDiv">
-          <button class="btn btnHc float-right" (click)="backToReportGenerator()">Back</button>
-        </div>
-        <div *ngIf="typeCode === 3" class="col-md-12 centerDiv">
-          <button class="btn btnHc float-right" (click)="backToStudentHome()">Home</button>
-        </div>
-        <div *ngIf="typeCode === 3" class="col-md-12 centerDiv">
-          <button class="btn btnHc float-left" (click)="toStudentPayment()">Make a Payment</button>
+          <div *ngIf="typeCode === 3" class="col-md-12 centerDiv">
+            <button class="btn btnHc float-left" (click)="toStudentPayment()">Make
+              a Payment</button>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
