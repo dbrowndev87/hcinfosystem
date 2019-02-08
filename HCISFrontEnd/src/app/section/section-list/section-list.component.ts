@@ -5,6 +5,9 @@ import { ErrorHandlerService } from 'src/app/shared/services/error-handler.servi
 import { Router } from '@angular/router';
 import { deepStrictEqual } from 'assert';
 import { Subject, Subscription } from 'rxjs';
+import { SectionInfo } from 'src/app/_interfaces/sectionInfo.model';
+import { Faculty } from 'src/app/_interfaces/faculty.model';
+import { FacultyInfo } from 'src/app/_interfaces/facultyInfo.model';
 
 @Component({
   selector: 'app-section-list',
@@ -19,7 +22,13 @@ export class SectionListComponent implements OnInit, OnDestroy {
   public sections: Section[];
   public errorMessage: String = "";
   private isLoaded = false;
-  constructor(private repository: RepositoryService, private errorHandler: ErrorHandlerService, private router: Router) { }
+  private count;
+  private faculty: FacultyInfo[] = [];
+
+  constructor(
+    private repository: RepositoryService,
+    private errorHandler: ErrorHandlerService,
+    private router: Router) { }
 
   // Array for all the subscriptions
   private subscriptions: Subscription[] = [];
@@ -31,6 +40,7 @@ export class SectionListComponent implements OnInit, OnDestroy {
       pageLength: 8
     };
 
+    this.getAllFaculty();
     this.getAllSections();
     this.isLoaded = true;
   }
@@ -38,20 +48,24 @@ export class SectionListComponent implements OnInit, OnDestroy {
 
 
   public getAllSections() {
-    let apiAddress = "api/section";
+    let apiAddress = "api/section/courseInfo";
     this.subscriptions.push(this.repository.getData(apiAddress)
 
       .subscribe(sections => {
 
-        this.sections = sections as Section[];
+        this.sections = sections as SectionInfo[];
         this.dtTrigger.next();
 
-      })),
-      // tslint:disable-next-line: no-unused-expression
-      (error) => {
-        this.errorHandler.handleError(error);
-        this.errorMessage = "Unable to access API";
-      };
+
+
+      },
+        // tslint:disable-next-line: no-unused-expression
+        (error) => {
+          this.errorHandler.handleError(error);
+          this.errorMessage = "Unable to access API";
+        }).add(() => {
+
+        }));
   }
 
   ngOnDestroy(): void {
@@ -61,6 +75,25 @@ export class SectionListComponent implements OnInit, OnDestroy {
     for (let subscription of this.subscriptions) {
       subscription.unsubscribe();
     }
+  }
+
+  private getAllFaculty() {
+    let apiAddress = "api/facultyInfo";
+    this.subscriptions.push(this.repository.getData(apiAddress)
+
+      .subscribe(faculty => {
+
+        this.faculty = faculty as FacultyInfo[];
+
+
+      },
+        // tslint:disable-next-line: no-unused-expression
+        (error) => {
+          this.errorHandler.handleError(error);
+          this.errorMessage = "Unable to access API";
+        }).add(() => {
+
+        }));
   }
 
   public redirectToUpdatePage(id) {
