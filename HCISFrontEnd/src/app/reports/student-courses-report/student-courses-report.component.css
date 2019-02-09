@@ -13,14 +13,7 @@
     margin-bottom: 5px;
     border-radius: 6px;
     box-shadow: 1px 1px 1px dimgray;
-}
 
-.courseDiv{
-    background-color: white;
-    border: 1px black solid; 
-    margin-bottom: 5px;
-    border-radius: 6px;
-    padding-top: 5px;
 }
 
 tr:nth-child(2n+2){
@@ -29,3 +22,42 @@ tr:nth-child(2n+2){
 tr:nth-child(2n+1){
     background-color: #f0f0ee!important;
 }
+
+.desDiv{
+    border: 1px black solid;
+    background: url("../../../assets/blackButton.jpg") !important;
+    background-size: cover;
+    color: white;
+    -webkit-text-stroke: .01px black;
+    text-shadow: 1px 1px 1px black;
+    font-size: 20px;
+    margin-bottom: 5px;
+    padding: 5px;
+    border-top: 1px white solid;
+    border-bottom: 1px whitesmoke solid;
+}
+.stuDiv{
+    border: 1px black solid;
+    background-color: white;
+    margin-bottom: 5px;
+    padding: 10px;
+}
+
+.student{
+    margin-left: 100px;
+}
+
+.noSections{
+    background-color: white;
+    border: 1px black solid;
+    width: 100%;
+}
+
+.boldReport{
+    font-weight: 300;
+}
+
+.spacer{
+    margin-top: 10px;
+}
+

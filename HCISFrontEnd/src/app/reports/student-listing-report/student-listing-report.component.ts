@@ -228,7 +228,7 @@ export class StudentListingReportComponent implements OnInit {
 
       }).add(() => {
         this.counter++;
-
+        console.log(this.courses)
         // If we have finished all of them set isLoaded to true
         if (this.counter = this.courses.length) {
           this.isLoaded = true;

@@ -243,66 +243,131 @@ namespace GoldStarApi.Controllers
                 return StatusCode(500, "Internal server error");
             }
         }
-         [HttpGet("semester/year/{semester}/{year}", Name = "GetAllSectionsSemesterYear")]
-        public IActionResult GetAllSectionsSemesterYear(string semester, int year)
+        
+         [HttpGet("semester/year/{semester}/{year}", Name = "GetAllStudentsSemesterYear")]
+        public IActionResult GetAllStudentsSemesterYear(string semester, int year)
         {
 
             try
+            {
+                var allSectionsSemesterYear = GetAllSectionsBySemesterYear(semester, year);
+           
+
+                var studentsByEnrollment = GetStudentInfosFromAllSections(allSectionsSemesterYear);
+
+                return Ok(studentsByEnrollment);
+
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Something went wrong inside GetEnrollment ById action: {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
+        }
+
+        public List<CourseInformation> GetAllSectionsBySemesterYear(string semester, int year)
+        {
+             try
             {
                 var allSections = _repository.Section.GetAllSections();
                 var allSectionsSemesterYear = new List<CourseInformation>();
                 if (allSections.Equals(null))
                 {
                     _logger.LogError($"No sections were found");
-                    return NotFound();
+                    return null;
                 }
 
                 foreach (var current in allSections)
                 {
-                    
-                    if (current.Semester == semester && current.Start_Date.Year == year)
-                    {
-                        
-                        CourseInformation currentCourse = new CourseInformation();
+                    var currentCourse = new CourseInformation();
 
-                        var sectionId = current.Section_Id;
-                        var currentSectionInfo = _repository.Section.GetSectionById(sectionId);
+                    if (current.Semester != semester || current.Start_Date.Year != year) continue;
+                    var sectionId = current.Section_Id;
+                    var currentSectionInfo = _repository.Section.GetSectionById(sectionId);
 
-                        currentCourse.Course_Id = currentSectionInfo.Course_Id;
-                        currentCourse.Semester = currentSectionInfo.Semester;
-                        currentCourse.Designation = currentSectionInfo.Designation;
-                        currentCourse.Faculty_Id = currentSectionInfo.Faculty_Id;
-                        currentCourse.Section_Id = currentSectionInfo.Section_Id;
-                        currentCourse.End_Date = currentSectionInfo.End_Date;
-                        currentCourse.Start_Date = currentSectionInfo.Start_Date;
-                        currentCourse.Vacancy = currentSectionInfo.Vacancy;
+                    currentCourse.Course_Id = currentSectionInfo.Course_Id;
+                    currentCourse.Semester = currentSectionInfo.Semester;
+                    currentCourse.Designation = currentSectionInfo.Designation;
+                    currentCourse.Faculty_Id = currentSectionInfo.Faculty_Id;
+                    currentCourse.Section_Id = currentSectionInfo.Section_Id;
+                    currentCourse.End_Date = currentSectionInfo.End_Date;
+                    currentCourse.Start_Date = currentSectionInfo.Start_Date;
+                    currentCourse.Vacancy = currentSectionInfo.Vacancy;
 
-                        var currentCourseInfo = _repository.Course.GetCourseById(currentCourse.Course_Id);
+                    var currentCourseInfo = _repository.Course.GetCourseById(currentCourse.Course_Id);
 
-                        currentCourse.Course_Name = currentCourseInfo.Course_Name;
-                        currentCourse.Dept_Id = currentCourseInfo.Dept_Id;
-                        currentCourse.Credits = currentCourseInfo.Credits;
+                    currentCourse.Course_Name = currentCourseInfo.Course_Name;
+                    currentCourse.Dept_Id = currentCourseInfo.Dept_Id;
+                    currentCourse.Credits = currentCourseInfo.Credits;
 
-                        allSectionsSemesterYear.Add(currentCourse);
-                    }
+                    allSectionsSemesterYear.Add(currentCourse);
                 }
+
+              
+                return allSectionsSemesterYear;
+
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Something went wrong inside GetEnrollment ById action: {ex.Message}");
+                return null;
+            }
+        }
+        
+        
+        
+        [HttpGet("semester/year/student/{semester}/{year}/{id}", Name = "GetAllEnrollmentsByStudentId")]
+        public IActionResult GetAllEnrollmentsByStudentId(string semester, int year, int id)
+        {
+
+            try
+            {
+                var allSectionsSemesterYear = GetAllSectionsBySemesterYear(semester, year);
+
                 var enrollments = _repository.Enrollment.GetAllEnrollments();
                 var enrollmentsBySection = new List<Enrollment>();
-                _logger.LogInfo("Number of Sections: "+ allSectionsSemesterYear.Count);
+                var enrollmentsByStudentId = new List<Enrollment>();
+
+                var enumerable = enrollments as Enrollment[] ?? enrollments.ToArray();
+                
+                foreach(var section in allSectionsSemesterYear)
+                {
+                    enrollmentsBySection.AddRange(enumerable.Where(enrollment => section.Section_Id == enrollment.Section_Id));
+                }
+                
+                foreach (var currentEnrollment in enrollmentsBySection)
+                {
+                    if (currentEnrollment.Student_Id == id)
+                    {
+                        enrollmentsByStudentId.Add(currentEnrollment);
+                    }
+                }
+                
+                return Ok(enrollmentsByStudentId);
+
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Something went wrong inside GetEnrollment ById action: {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
+        }
+        
+
+        public List<StudentInfo> GetStudentInfosFromAllSections( List<CourseInformation> allSectionsSemesterYear)
+        {
+            var enrollments = _repository.Enrollment.GetAllEnrollments();
+                var enrollmentsBySection = new List<Enrollment>();
 
                 var enumerable = enrollments as Enrollment[] ?? enrollments.ToArray();
                 foreach(var section in allSectionsSemesterYear)
                 {
-                    foreach (var enrollment in enumerable)
-                    {
-                        if (section.Section_Id == enrollment.Section_Id)
-                        {
-                            enrollmentsBySection.Add(enrollment);
-                        }
-                    }
+                    enrollmentsBySection.AddRange(enumerable.Where(enrollment => section.Section_Id == enrollment.Section_Id));
                 }
+                
                 var studentsByEnrollment = new List<StudentInfo>();
                 _logger.LogInfo("Number of Enrollments"+ enrollmentsBySection.Count);
+                
                 foreach (var current in enrollmentsBySection)
                 {
                     var studentFromDb = _repository.Student.GetStudentById(current.Student_Id);
@@ -328,9 +393,9 @@ namespace GoldStarApi.Controllers
                     studentsByEnrollment.Add(studentInfoObject);
                 }
 
-                for (int i = 0; i < studentsByEnrollment.Count; i++)
+                for (var i = 0; i < studentsByEnrollment.Count; i++)
                 {
-                    for (int x = 0; x <studentsByEnrollment.Count; x++)
+                    for (var x = 0; x <studentsByEnrollment.Count; x++)
                     {
                         if (studentsByEnrollment[i].Student_Id == studentsByEnrollment[x].Student_Id)
                         {
@@ -338,16 +403,8 @@ namespace GoldStarApi.Controllers
                         }
                     }
                 }
-
                 _logger.LogInfo($"Returned All Section Course Information");
-                return Ok(studentsByEnrollment);
-
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError($"Something went wrong inside GetEnrollment ById action: {ex.Message}");
-                return StatusCode(500, "Internal server error");
-            }
+                return studentsByEnrollment;
         }
 
         [HttpPost]
