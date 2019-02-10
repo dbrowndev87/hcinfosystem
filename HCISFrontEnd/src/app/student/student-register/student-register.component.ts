@@ -9,7 +9,7 @@
 import { Component, OnInit, OnDestroy, HostListener } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { SectionInfo } from 'src/app/_interfaces/sectionInfo.model';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { RepositoryService } from 'src/app/shared/services/repository.service';
 import { ErrorHandlerService } from 'src/app/shared/services/error-handler.service';
 import { StudentInfo } from 'src/app/_interfaces/studentInfo.model';
@@ -49,6 +49,7 @@ export class StudentRegisterComponent implements OnInit, OnDestroy {
   private semesters = new Semesters();
   private nextSemester: string;
   private rotateButtons: boolean;
+  private studentStatus: string;
 
   public innerWidth: any;
 
@@ -61,12 +62,14 @@ export class StudentRegisterComponent implements OnInit, OnDestroy {
     private router: Router,
     private repository: RepositoryService,
     private errorHandler: ErrorHandlerService,
+    private activatedRoute: ActivatedRoute
   ) { }
 
   ngOnInit() {
+    this.studentStatus = this.activatedRoute.snapshot.params['status'];
     this.innerWidth = window.innerWidth;
     this.rotateButt();
-    console.log("HEllo");  
+
     this.getRegisterInfo();
     // Declare next Semester
     this.nextSemester = this.semesters.getNextSemester().nextSemester;
@@ -263,7 +266,10 @@ export class StudentRegisterComponent implements OnInit, OnDestroy {
         })
       ));
 
-      }
+
+
+  }
+
 
   redirectToHome() {
     this.router.navigate(['/home']);

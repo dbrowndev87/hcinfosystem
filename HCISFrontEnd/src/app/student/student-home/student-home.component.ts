@@ -29,7 +29,6 @@ import { ErrorHandlerService } from 'src/app/shared/services/error-handler.servi
 export class StudentHomeComponent implements OnInit {
 
 
-
   public homeText: string;
   private typeCode: number;
   private isLoaded = false;
@@ -65,7 +64,6 @@ export class StudentHomeComponent implements OnInit {
     }
 
     this.getStudentInfo();
-   
     this.typeCode = parseInt(sessionStorage.getItem('typeCode'), 0);
   }
 

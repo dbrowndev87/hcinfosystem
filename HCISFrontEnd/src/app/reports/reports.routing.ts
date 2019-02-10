@@ -16,18 +16,66 @@ import { BillStudentComponent } from './bill-student/bill-student.component';
 import { BillStudentReportComponent } from './bill-student-report/bill-student-report.component';
 
 const routes: Routes = [
-    { path: 'reports/studentlisting', component: StudentListingComponent, canActivate: [AuthGuardAdmin] },
-    { path: 'reports/studentlisting/report/:id', component: StudentListingReportComponent, canActivate: [AuthGuardAdmin] },
-    { path: 'reports/studenttranscript', component: StudentTranscriptComponent, canActivate: [AuthGuardAdminStudent] },
-    { path: 'reports/studenttranscript/report/:id/:v', component: StudentTranscriptReportComponent, canActivate: [AuthGuardAdminStudent] },
-    { path: 'reports/coursecatalogue', component: CourseCatalogueComponent, canActivate: [AuthGuardAdmin] },
-    { path: 'reports/coursecatalogue/report/:id', component: CourseCatalogueReportComponent, canActivate: [AuthGuardAdmin] },
-    { path: 'reports/facultycourses', component: FacultyCoursesComponent, canActivate: [AuthGuardAdmin] },
-    { path: 'reports/facultycourses/report/:id', component: FacultyCoursesReportComponent, canActivate: [AuthGuardAdmin] },
-    { path: 'reports/studentcourses', component: StudentCoursesComponent, canActivate: [AuthGuardAdmin] },
-    { path: 'reports/studentcourses/report/:semester/:year/:deptId', component: StudentCoursesReportComponent, canActivate: [AuthGuardAdmin] },
-    { path: 'reports/billstudent', component: BillStudentComponent, canActivate: [AuthGuardAdmin] },
-    { path: 'reports/billstudent/report/:id', component: BillStudentReportComponent, canActivate: [AuthGuardAdminStudent] },
+    {
+        path: 'reports/studentlisting',
+        component: StudentListingComponent,
+        canActivate: [AuthGuardAdmin]
+    },
+    {
+        path: 'reports/studentlisting/report/:id',
+        component: StudentListingReportComponent,
+        canActivate: [AuthGuardAdmin]
+    },
+    {
+        path: 'reports/studenttranscript',
+        component: StudentTranscriptComponent,
+        canActivate: [AuthGuardAdminStudent]
+    },
+    {
+        path: 'reports/studenttranscript/report/:id/:v',
+        component: StudentTranscriptReportComponent,
+        canActivate: [AuthGuardAdminStudent]
+    },
+    {
+        path: 'reports/coursecatalogue',
+        component: CourseCatalogueComponent,
+        canActivate: [AuthGuardAdmin]
+    },
+    {
+        path: 'reports/coursecatalogue/report/:id',
+        component: CourseCatalogueReportComponent,
+        canActivate: [AuthGuardAdmin]
+    },
+    {
+        path: 'reports/facultycourses',
+        component: FacultyCoursesComponent,
+        canActivate: [AuthGuardAdmin]
+    },
+    {
+        path: 'reports/facultycourses/report/:id',
+        component: FacultyCoursesReportComponent,
+        canActivate: [AuthGuardAdmin]
+    },
+    {
+        path: 'reports/studentcourses',
+        component: StudentCoursesComponent,
+        canActivate: [AuthGuardAdmin]
+    },
+    {
+        path: 'reports/studentcourses/report/:semester/:year/:deptId',
+        component: StudentCoursesReportComponent,
+        canActivate: [AuthGuardAdmin]
+    },
+    {
+        path: 'reports/billstudent',
+        component: BillStudentComponent,
+        canActivate: [AuthGuardAdmin]
+    },
+    {
+        path: 'reports/billstudent/report/:id',
+        component: BillStudentReportComponent,
+        canActivate: [AuthGuardAdminStudent]
+    },
 ];
 
 @NgModule({

@@ -49,3 +49,7 @@ th{
     background-color: silver;
     color: black;
 }
+
+td{
+text-shadow: 1px 0px 1px silver;
+}

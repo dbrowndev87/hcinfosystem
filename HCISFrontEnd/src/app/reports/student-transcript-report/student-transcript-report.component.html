@@ -44,7 +44,7 @@
               <thead>
                 <tr>
                   <th colspan="4" class="semesterHead">
-                    <h4 class="text-center">Spring</h4>
+                    <h4 class="text-center bold">Spring</h4>
                   </th>
                 </tr>
                 <tr *ngIf="sectionInfo['spring']['sections'].length > 0">
@@ -56,15 +56,15 @@
               </thead>
               <tbody *ngIf="sectionInfo['spring']['sections'].length > 0">
                 <tr *ngFor="let section of sectionInfo['spring']['sections']">
-                  <td>{{section['section'].course_Id}}</td>
-                  <td>{{section['section'].course_Name}}</td>
-                  <td>{{section['section'].end_Date | date:'yyyy-MM-dd'}}</td>
-                  <td>{{section['grade']}}</td>
+                  <td style="width: 15%">{{section['section'].course_Id}}</td>
+                  <td style="width: 35%">{{section['section'].course_Name}}</td>
+                  <td style="width: 30%">{{section['section'].end_Date | date:'yyyy-MM-dd'}}</td>
+                  <td style="width: 20%">{{section['grade']}}</td>
                 </tr>
               </tbody>
               <tbody *ngIf="sectionInfo['spring']['sections'].length === 0">
                 <tr>
-                  <td colspan="4" class="bold text-center">No courses taken for this semester.</td>
+                  <td colspan="4" class="text-center">No courses taken for this semester.</td>
                 </tr>
               </tbody>
               <tr *ngIf="sectionInfo['spring']['sections'].length > 0">
@@ -76,13 +76,13 @@
               </tr>
               <tbody *ngIf="sectionInfo['spring']['sections'].length > 0">
                 <tr>
-                  <td>Passes: {{sectionInfo['spring']['pass']}}</td>
-                  <td>Fails: {{sectionInfo['spring']['fail']}}</td>
-                  <td>
-                    Average:
-                    {{(sectionInfo['spring']['sumgrades'] / (sectionInfo['spring']['pass'] + sectionInfo['spring']['fail']))}}
+                  <td style="width: 25%"><span class="bold">Passes:</span> {{sectionInfo['spring']['pass']}}</td>
+                  <td style="width: 25%"><span class="bold">Fails:</span> {{sectionInfo['spring']['fail']}}</td>
+                  <td style="width: 25%">
+                    <span class="bold">Average:</span>
+                    {{(sectionInfo['spring']['sumgrades'] / (sectionInfo['spring']['pass'] + sectionInfo['spring']['fail'])) | number:'1.1'}}
                   </td>
-                  <td>Credits: {{sectionInfo['spring']['credits']}}</td>
+                  <td style="width: 25%"><span class="bold">Credits:</span> {{sectionInfo['spring']['credits']}}</td>
                 </tr>
               </tbody>
             </table>
@@ -91,7 +91,7 @@
             <table *ngIf="byYear || semester === 'Summer'" class="reportTable">
               <tr>
                 <th colspan="4" class="semesterHead">
-                  <h4 class="text-center">Summer</h4>
+                  <h4 class="text-center bold">Summer</h4>
                 </th>
               </tr>
               <tr *ngIf="sectionInfo['summer']['sections'].length > 0">
@@ -102,15 +102,15 @@
               </tr>
               <tbody *ngIf="sectionInfo['summer']['sections'].length > 0">
                 <tr *ngFor="let section of sectionInfo['summer']['sections']">
-                  <td>{{section['info'].course_Id}}</td>
-                  <td>{{section['info'].course_Name}}</td>
-                  <td>{{section['info'].end_Date | date:'yyyy-MM-dd'}}</td>
-                  <td>{{section['grade']}}</td>
+                  <td style="width: 15%">{{section['info'].course_Id}}</td>
+                  <td style="width: 35%">{{section['info'].course_Name}}</td>
+                  <td style="width: 30%">{{section['info'].end_Date | date:'yyyy-MM-dd'}}</td>
+                  <td style="width: 20%">{{section['grade']}}</td>
                 </tr>
               </tbody>
               <tbody *ngIf="sectionInfo['summer']['sections'].length === 0">
                 <tr>
-                  <td colspan="4" class="bold text-center">No courses taken for this semester.</td>
+                  <td colspan="4" class="text-center">No courses taken for this semester.</td>
                 </tr>
               </tbody>
               <tr *ngIf="sectionInfo['summer']['sections'].length > 0">
@@ -120,13 +120,13 @@
               </tr>
               <tbody *ngIf="sectionInfo['summer']['sections'].length > 0">
                 <tr>
-                  <td>Passes: {{sectionInfo['summer']['pass']}}</td>
-                  <td>Fails: {{sectionInfo['summer']['fail']}}</td>
-                  <td>
-                    Average:
-                    {{(sectionInfo['summer']['sumgrades'] / (sectionInfo['summer']['pass'] + sectionInfo['summer']['fail']))}}
+                  <td style="width: 25%"><span class="bold">Passes:</span> {{sectionInfo['summer']['pass']}}</td>
+                  <td style="width: 25%"><span class="bold">Fails:</span> {{sectionInfo['summer']['fail']}}</td>
+                  <td style="width: 25%">
+                    <span class="bold">Average:</span>
+                    {{(sectionInfo['summer']['sumgrades'] / (sectionInfo['summer']['pass'] + sectionInfo['summer']['fail'])) | number:'1.0-1'}}
                   </td>
-                  <td>Credits: {{sectionInfo['summer']['credits']}}</td>
+                  <td style="width: 25%"><span class="bold">Credits:</span> {{sectionInfo['summer']['credits']}}</td>
                 </tr>
               </tbody>
             </table>
@@ -135,7 +135,7 @@
             <table *ngIf="byYear || semester === 'Fall'" class="reportTable">
               <tr>
                 <th colspan="4" class="semesterHead">
-                  <h4 class="text-center">Fall</h4>
+                  <h4 class="text-center bold">Fall</h4>
                 </th>
               </tr>
               <tr *ngIf="sectionInfo['fall']['sections'].length > 0">
@@ -146,15 +146,15 @@
               </tr>
               <tbody *ngIf="sectionInfo['fall']['sections'].length > 0">
                 <tr *ngFor="let section of sectionInfo['fall']['sections']">
-                  <td>{{section['info'].course_Id}}</td>
-                  <td>{{section['info'].course_Name}}</td>
-                  <td>{{section['info'].end_Date | date:'yyyy-MM-dd'}}</td>
-                  <td>{{section['grade']}}</td>
+                  <td style="width: 15%">{{section['info'].course_Id}}</td>
+                  <td style="width: 35%">{{section['info'].course_Name}}</td>
+                  <td style="width: 30%">{{section['info'].end_Date | date:'yyyy-MM-dd'}}</td>
+                  <td style="width: 20%">{{section['grade']}}</td>
                 </tr>
               </tbody>
               <tbody *ngIf="sectionInfo['fall']['sections'].length === 0">
                 <tr>
-                  <td colspan="4" class="bold text-center">No courses taken for this semester.</td>
+                  <td colspan="4" class="text-center">No courses taken for this semester.</td>
                 </tr>
               </tbody>
               <tr *ngIf="sectionInfo['fall']['sections'].length > 0">
@@ -163,14 +163,14 @@
                 </th>
               </tr>
               <tbody *ngIf="sectionInfo['fall']['sections'].length > 0">
-                <tr>
-                  <td>Passes: {{sectionInfo['fall']['pass']}}</td>
-                  <td>Fails: {{sectionInfo['fall']['fail']}}</td>
-                  <td>
-                    Average:
-                    {{(sectionInfo['fall']['sumgrades'] / (sectionInfo['fall']['pass'] + sectionInfo['fall']['fail']))}}
+                <tr class="text-center">
+                  <td style="width: 25%"><span class="bold">Passes:</span> {{sectionInfo['fall']['pass']}}</td>
+                  <td style="width: 25%"><span class="bold">Fails:</span> {{sectionInfo['fall']['fail']}}</td>
+                  <td style="width: 25%">
+                    <span class="bold">Average:</span>
+                    {{(sectionInfo['fall']['sumgrades'] / (sectionInfo['fall']['pass'] + sectionInfo['fall']['fail'])) | number:'1.0-1' }}
                   </td>
-                  <td>Credits: {{sectionInfo['fall']['credits']}}</td>
+                  <td style="width: 25%"><span class="bold">Credits:</span> {{sectionInfo['fall']['credits']}}</td>
                 </tr>
               </tbody>
             </table>
@@ -187,25 +187,25 @@
                 </th>
               </tr>
               <tr>
-                <td>
-                  Total Passes:
+                <td style="width: 24.8%">
+                  <span class="bold">Total Passes:</span>
                   {{(sectionInfo['fall']['pass'] + sectionInfo['spring']['pass'] + sectionInfo['summer']['pass'])}}
                 </td>
-                <td>
-                  Total Fails:
+                <td style="width: 35.8%">
+                  <span class="bold">Total Fails:</span>
                   {{(sectionInfo['fall']['fail'] + sectionInfo['spring']['fail'] + sectionInfo['summer']['fail'])}}
                 </td>
-                <td>
-                  Total Credits:
-                  {{(sectionInfo['fall']['credits'] + sectionInfo['spring']['credits'] + sectionInfo['summer']['credits'])}}
+                <td style="width: 26%">
+                  <span class="bold">GPA:</span>
+                  {{
+                        (sectionInfo['fall']['sumgrades'] + sectionInfo['spring']['sumgrades'] + sectionInfo['summer']['sumgrades']) /
+                        ((sectionInfo['fall']['pass'] + sectionInfo['spring']['pass'] + sectionInfo['summer']['pass'])+
+                        (sectionInfo['fall']['fail'] + sectionInfo['spring']['fail'] + sectionInfo['summer']['fail'])) | number:'1.0-1'
+                      }}
                 </td>
                 <td>
-                  Transcript GPA:
-                  {{
-                      (sectionInfo['fall']['sumgrades'] + sectionInfo['spring']['sumgrades'] + sectionInfo['summer']['sumgrades']) /
-                      ((sectionInfo['fall']['pass'] + sectionInfo['spring']['pass'] + sectionInfo['summer']['pass'])+
-                      (sectionInfo['fall']['fail'] + sectionInfo['spring']['fail'] + sectionInfo['summer']['fail']))
-                    }}
+                  <span class="bold">Total Credits:</span>
+                  {{(sectionInfo['fall']['credits'] + sectionInfo['spring']['credits'] + sectionInfo['summer']['credits'])}}
                 </td>
               </tr>
             </table>

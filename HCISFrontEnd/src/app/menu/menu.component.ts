@@ -28,7 +28,6 @@ export class MenuComponent implements OnInit {
   private studentId;
   private facultyId;
   private errorMessage = "";
-  private showRegister = false;
 
   private subscriptions: Subscription[] = [];
 
@@ -56,7 +55,6 @@ export class MenuComponent implements OnInit {
       if (sessionStorage.getItem('facultyId')) {
         this.facultyId = parseInt(sessionStorage.getItem('facultyId'), 0);
       }
-
     }
 
     if (this.typeCode === 3) {
@@ -72,12 +70,7 @@ export class MenuComponent implements OnInit {
             this.errorHandler.handleError(error);
             this.errorMessage = this.errorHandler.errorMessage;
 
-          }).add(() => {
-            if (this.student.student_Status === "Enrolled") {
-              // authorised so return true
-              this.showRegister = true;
-            }
-          }));
+          }).add(() => { }));
     }
   }
 }

@@ -39,16 +39,20 @@ export class StudentCoursesComponent implements OnInit {
 
   ngOnInit() {
 
-    for (var i = 1; i < 7; i++) {
-        this.range.push(this.year+2 - i);
+    for (let i = 1; i < 7; i++) {
+      this.range.push(this.year + 2 - i);
     }
     this.years = this.range;
 
+    // took the validator off 
     this.studentCoursesForm = new FormGroup({
       semester: new FormControl('', [Validators.required]),
-      year: new FormControl('', [Validators.required]),
+      year: new FormControl(''),
       dept_Id: new FormControl('', [Validators.required]),
     });
+
+    // patched initial value. DB
+    this.studentCoursesForm.get('year').patchValue(this.year + 1);
     this.getAllDepartments();
     this.isLoaded = true;
   }
@@ -94,8 +98,8 @@ export class StudentCoursesComponent implements OnInit {
 
 
   private redirectToReport(formValue) {
-  
-    this.router.navigate(['/reports/studentcourses/report/' + formValue.semester + '/'+ formValue.year+'/'+formValue.dept_Id]);
+
+    this.router.navigate(['/reports/studentcourses/report/' + formValue.semester + '/' + formValue.year + '/' + formValue.dept_Id]);
   }
 
   // private redirectToAllReport(id) {

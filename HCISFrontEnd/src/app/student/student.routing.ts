@@ -13,7 +13,7 @@ const routes: Routes = [
     { path: 'student/update/:id', component: StudentUpdateComponent, canActivate: [AuthGuardAdmin] },
     { path: 'student/home', component: StudentHomeComponent, canActivate: [AuthGuardStudent] },
     { path: 'student/payment', component: StudentPaymentComponent, canActivate: [AuthGuardStudent] },
-    { path: 'student/register', component: StudentRegisterComponent, canActivate: [AuthGuardStudentNotEnrolled] }
+    { path: 'student/register/:status', component: StudentRegisterComponent, canActivate: [AuthGuardStudent] }
 ];
 
 @NgModule({

@@ -4,8 +4,7 @@
   <div *ngIf="!isLoaded">
     <div class="row">
       <div class="col-sm-8 col-md-6 col-lg-4 centerDiv well">
-        <img src="../../../assets/loading.gif" class="center-block imgLoading"
-          />
+        <img src="../../../assets/loading.gif" class="center-block imgLoading" />
         <h4 class="text-center">Loading</h4>
       </div>
     </div>
@@ -15,11 +14,18 @@
     well">
     <h4 class="text-center">Student Enrollment</h4>
     <h5 class="text-center">For the {{nextSemester}} semester</h5>
-
+    <br>
+    <div *ngIf="studentStatus !== 'Enrolled'">
+      <hr>
+      <h5 class="text-center">
+        You must be Enrolled in the college to register for courses.
+      </h5>
+      <hr>
+    </div>
   </div>
 
   <!-- Custom Course Picker -->
-  <div *ngIf="isLoaded" id="cPicker" class="well col-sm-10 col-md-10 col-lg-10
+  <div *ngIf="isLoaded && studentStatus === 'Enrolled'" id="cPicker" class="well col-sm-10 col-md-10 col-lg-10
     centerDiv">
     <h6 class="text-center">Current Registered for {{enrollmentCount}} courses.</h6>
     <h6 class="text-center">You must apply for minimum 4 and max 8 courses a
@@ -52,10 +58,10 @@
                 <td>{{section.designation}}</td>
                 <td>{{section.semester}}</td>
                 <td class="selectButton">
-                  <button *ngIf="!rotateButtons" class="btn btnHc"
-                    (click)="addToRegister(i)"><i class="fas fa-arrow-right"></i></button>
-                  <button *ngIf="rotateButtons" class="btn btnHc"
-                    (click)="addToRegister(i)"><i class="fas fa-arrow-down"></i></button>
+                  <button *ngIf="!rotateButtons" class="btn btnHc" (click)="addToRegister(i)"><i
+                      class="fas fa-arrow-right"></i></button>
+                  <button *ngIf="rotateButtons" class="btn btnHc" (click)="addToRegister(i)"><i
+                      class="fas fa-arrow-down"></i></button>
                 </td>
               </tr>
             </tbody>
@@ -84,11 +90,10 @@
             <tbody>
               <tr *ngFor="let section of sectionsRegister; let i= index">
                 <td class="selectedButton">
-                  <button *ngIf="!rotateButtons" class="btn btnHc center-block"
-                    (click)="removeFromRegister(i)"><i
+                  <button *ngIf="!rotateButtons" class="btn btnHc center-block" (click)="removeFromRegister(i)"><i
                       class="fas fa-arrow-left"></i></button>
-                  <button *ngIf="rotateButtons" class="btn btnHc center-block"
-                    (click)="removeFromRegister(i)"><i class="fas fa-arrow-up"></i></button>
+                  <button *ngIf="rotateButtons" class="btn btnHc center-block" (click)="removeFromRegister(i)"><i
+                      class="fas fa-arrow-up"></i></button>
                 </td>
                 <td>{{section.course_Id}}</td>
                 <td>{{section.course_Name}}</td>
@@ -102,20 +107,24 @@
     </div>
   </div>
 
-  <div *ngIf="isLoaded" class="well col-sm-10 col-md-10 col-lg-10 centerDiv">
+  <div *ngIf="isLoaded && studentStatus === 'Enrolled'" class="well col-sm-10 col-md-10 col-lg-10 centerDiv">
     <div class="row">
       <div class="col-sm-12 col-md-12 col-lg-12 centerDiv">
-        <button type="submit" class="btn btnHc float-left"
-          (click)="validateRegistration()">Register</button>
-        <button type="button" class="btn btnHc float-right"
-          (click)="redirectToHome()">Back</button>
+        <button type="submit" class="btn btnHc float-left" (click)="validateRegistration()">Register</button>
+        <button type="button" class="btn btnHc float-right" (click)="redirectToHome()">Back</button>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="isLoaded && studentStatus !== 'Enrolled'" class="well col-sm-10 col-md-10 col-lg-10 centerDiv">
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-12 centerDiv">
+        <button type="button" class="btn btnHc center-block" (click)="redirectToHome()">Back</button>
       </div>
     </div>
   </div>
 
 </div>
-<app-success-modal [modalHeaderText]="'Success message'"
-  [modalBodyText]="'Courses Registered successfully'"
+<app-success-modal [modalHeaderText]="'Success message'" [modalBodyText]="'Courses Registered successfully'"
   [okButtonText]="'OK'" (redirectOnOK)="redirectToHome()"></app-success-modal>
-<app-error-modal [modalHeaderText]="errorHeader" [modalBodyText]="errorMessage"
-  [okButtonText]="'OK'"></app-error-modal>
+<app-error-modal [modalHeaderText]="errorHeader" [modalBodyText]="errorMessage" [okButtonText]="'OK'"></app-error-modal>
