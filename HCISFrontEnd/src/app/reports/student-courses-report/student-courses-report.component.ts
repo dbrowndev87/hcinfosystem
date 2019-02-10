@@ -64,9 +64,6 @@ export class StudentCoursesReportComponent implements OnInit {
 
 
       this.getAllSections();
-      console.log(this.isLoaded);
-      this.getDepartmentById(this.dept);
-      this.getStudentsBySemesterYear();
 
     }
   }
@@ -75,7 +72,8 @@ export class StudentCoursesReportComponent implements OnInit {
     this.subscriptions.push(this.repository.getData(apiAddress)
       .subscribe(res => {
         this.department = res as Department;
-        console.log(this.department.dept_Name);
+        
+        this.getStudentsBySemesterYear();
       })),
       // tslint:disable-next-line: no-unused-expression
       (error) => {
@@ -88,7 +86,7 @@ export class StudentCoursesReportComponent implements OnInit {
     this.subscriptions.push(this.repository.getData(apiAddress)
       .subscribe(res => {
         this.allSections = res as SectionInfo[];
-      
+        this.getDepartmentById(this.dept);
       })),
       // tslint:disable-next-line: no-unused-expression
       (error) => {
@@ -98,7 +96,7 @@ export class StudentCoursesReportComponent implements OnInit {
   }
 
   private getEnrollmentsByStudentId(id, i) {
-    let apiAddress = "api/section/semester/year/student/" + this.semester+"/"+this.year+"/"+id;
+    let apiAddress = "api/section/semester/year/student/dept/" + this.semester+"/"+this.year+"/"+id+"/"+this.department.dept_Id;
     this.subscriptions.push(this.repository.getData(apiAddress)
       .subscribe(res => {
         
@@ -131,11 +129,13 @@ export class StudentCoursesReportComponent implements OnInit {
   }
 
   private getStudentsBySemesterYear() {
-    let apiAddress = "api/section/semester/year/" + this.semester + "/" + this.year;
+    console.log(this.semester+this.year);
+    let apiAddress = "api/section/semester/year/dept/" + this.semester + "/" + this.year+ "/" + this.department.dept_Id;
     this.subscriptions.push(this.repository.getData(apiAddress)
       .subscribe(res => {
-        this.studentInfos = res as StudentInfo[];
         
+        this.studentInfos = res as StudentInfo[];
+        console.log(this.studentInfos);
 
         for(let i = 0; i < this.studentInfos.length; i++){
           this.getEnrollmentsByStudentId(this.studentInfos[i].student_Id, i);

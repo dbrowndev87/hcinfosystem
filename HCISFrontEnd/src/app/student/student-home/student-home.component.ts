@@ -65,6 +65,7 @@ export class StudentHomeComponent implements OnInit {
     }
 
     this.getStudentInfo();
+   
     this.typeCode = parseInt(sessionStorage.getItem('typeCode'), 0);
   }
 

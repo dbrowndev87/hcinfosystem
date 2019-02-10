@@ -244,13 +244,13 @@ namespace GoldStarApi.Controllers
             }
         }
         
-         [HttpGet("semester/year/{semester}/{year}", Name = "GetAllStudentsSemesterYear")]
-        public IActionResult GetAllStudentsSemesterYear(string semester, int year)
+         [HttpGet("semester/year/dept/{semester}/{year}/{deptId}", Name = "GetAllStudentsSemesterYear")]
+        public IActionResult GetAllStudentsSemesterYear(string semester, int year, int deptId)
         {
 
             try
             {
-                var allSectionsSemesterYear = GetAllSectionsBySemesterYear(semester, year);
+                var allSectionsSemesterYear = GetAllSectionsBySemesterYear(semester, year, deptId);
            
 
                 var studentsByEnrollment = GetStudentInfosFromAllSections(allSectionsSemesterYear);
@@ -265,7 +265,7 @@ namespace GoldStarApi.Controllers
             }
         }
 
-        public List<CourseInformation> GetAllSectionsBySemesterYear(string semester, int year)
+        public List<CourseInformation> GetAllSectionsBySemesterYear(string semester, int year, int deptId)
         {
              try
             {
@@ -281,29 +281,33 @@ namespace GoldStarApi.Controllers
                 {
                     var currentCourse = new CourseInformation();
 
-                    if (current.Semester != semester || current.Start_Date.Year != year) continue;
-                    var sectionId = current.Section_Id;
-                    var currentSectionInfo = _repository.Section.GetSectionById(sectionId);
+                    if (current.Semester == semester && current.Start_Date.Year == year)
+                    {
+                        var sectionId = current.Section_Id;
+                        var currentSectionInfo = _repository.Section.GetSectionById(sectionId);
 
-                    currentCourse.Course_Id = currentSectionInfo.Course_Id;
-                    currentCourse.Semester = currentSectionInfo.Semester;
-                    currentCourse.Designation = currentSectionInfo.Designation;
-                    currentCourse.Faculty_Id = currentSectionInfo.Faculty_Id;
-                    currentCourse.Section_Id = currentSectionInfo.Section_Id;
-                    currentCourse.End_Date = currentSectionInfo.End_Date;
-                    currentCourse.Start_Date = currentSectionInfo.Start_Date;
-                    currentCourse.Vacancy = currentSectionInfo.Vacancy;
+                        currentCourse.Course_Id = currentSectionInfo.Course_Id;
+                        currentCourse.Semester = currentSectionInfo.Semester;
+                        currentCourse.Designation = currentSectionInfo.Designation;
+                        currentCourse.Faculty_Id = currentSectionInfo.Faculty_Id;
+                        currentCourse.Section_Id = currentSectionInfo.Section_Id;
+                        currentCourse.End_Date = currentSectionInfo.End_Date;
+                        currentCourse.Start_Date = currentSectionInfo.Start_Date;
+                        currentCourse.Vacancy = currentSectionInfo.Vacancy;
 
-                    var currentCourseInfo = _repository.Course.GetCourseById(currentCourse.Course_Id);
+                        var currentCourseInfo = _repository.Course.GetCourseById(currentCourse.Course_Id);
 
-                    currentCourse.Course_Name = currentCourseInfo.Course_Name;
-                    currentCourse.Dept_Id = currentCourseInfo.Dept_Id;
-                    currentCourse.Credits = currentCourseInfo.Credits;
+                        currentCourse.Course_Name = currentCourseInfo.Course_Name;
+                        currentCourse.Dept_Id = currentCourseInfo.Dept_Id;
+                        currentCourse.Credits = currentCourseInfo.Credits;
 
-                    allSectionsSemesterYear.Add(currentCourse);
+                        if (currentCourse.Dept_Id == deptId)
+                        {
+                            allSectionsSemesterYear.Add(currentCourse);
+                        }
+                        
+                    }
                 }
-
-              
                 return allSectionsSemesterYear;
 
             }
@@ -316,13 +320,13 @@ namespace GoldStarApi.Controllers
         
         
         
-        [HttpGet("semester/year/student/{semester}/{year}/{id}", Name = "GetAllEnrollmentsByStudentId")]
-        public IActionResult GetAllEnrollmentsByStudentId(string semester, int year, int id)
+        [HttpGet("semester/year/student/dept/{semester}/{year}/{id}/{deptId}", Name = "GetAllEnrollmentsByStudentId")]
+        public IActionResult GetAllEnrollmentsByStudentId(string semester, int year, int id, int deptId)
         {
 
             try
             {
-                var allSectionsSemesterYear = GetAllSectionsBySemesterYear(semester, year);
+                var allSectionsSemesterYear = GetAllSectionsBySemesterYear(semester, year, deptId);
 
                 var enrollments = _repository.Enrollment.GetAllEnrollments();
                 var enrollmentsBySection = new List<Enrollment>();
@@ -378,7 +382,7 @@ namespace GoldStarApi.Controllers
                         Amount_Owing = studentFromDb.Amount_Owing,
                         Student_Status = studentFromDb.Student_Status
                     };
-                        
+                         _logger.LogInfo("Current StudentID "+current.Student_Id);
                     var userFromDb = _repository.Users.GetUserById(studentFromDb.User_Id);
                     studentInfoObject.Last_Name = userFromDb.Last_Name;
                     studentInfoObject.First_Name = userFromDb.First_Name;
@@ -390,21 +394,27 @@ namespace GoldStarApi.Controllers
                     studentInfoObject.User_Id = userFromDb.User_Id;
                     studentInfoObject.Start_Date = userFromDb.Start_Date;
                     
+                    
                     studentsByEnrollment.Add(studentInfoObject);
                 }
+                var distinct =
+                    studentsByEnrollment
+                        .GroupBy(student => student.Student_Id)
+                        .Select(g => g.First())
+                        .ToList();
 
-                for (var i = 0; i < studentsByEnrollment.Count; i++)
-                {
-                    for (var x = 0; x <studentsByEnrollment.Count; x++)
-                    {
-                        if (studentsByEnrollment[i].Student_Id == studentsByEnrollment[x].Student_Id)
-                        {
-                            studentsByEnrollment.Remove(studentsByEnrollment[x]);
-                        }
-                    }
-                }
+               // for (var i = 0; i < studentsByEnrollment.Count; i++)
+               // {
+                 //   for (var x = 0; x <studentsByEnrollment.Count; x++)
+                 //   {
+                     //   if (studentsByEnrollment[i].Student_Id == studentsByEnrollment[x].Student_Id)
+                     //   {
+                          //  studentsByEnrollment.Remove(studentsByEnrollment[x]);
+                      //  }
+                  //  }
+             //   }
                 _logger.LogInfo($"Returned All Section Course Information");
-                return studentsByEnrollment;
+                return distinct;
         }
 
         [HttpPost]

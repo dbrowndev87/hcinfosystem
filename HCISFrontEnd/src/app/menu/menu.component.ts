@@ -56,6 +56,7 @@ export class MenuComponent implements OnInit {
       if (sessionStorage.getItem('facultyId')) {
         this.facultyId = parseInt(sessionStorage.getItem('facultyId'), 0);
       }
+
     }
 
     if (this.typeCode === 3) {

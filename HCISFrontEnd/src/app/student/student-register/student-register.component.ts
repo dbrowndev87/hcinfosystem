@@ -66,7 +66,7 @@ export class StudentRegisterComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.innerWidth = window.innerWidth;
     this.rotateButt();
-
+    console.log("HEllo");  
     this.getRegisterInfo();
     // Declare next Semester
     this.nextSemester = this.semesters.getNextSemester().nextSemester;
@@ -263,10 +263,7 @@ export class StudentRegisterComponent implements OnInit, OnDestroy {
         })
       ));
 
-
-
-  }
-
+      }
 
   redirectToHome() {
     this.router.navigate(['/home']);
