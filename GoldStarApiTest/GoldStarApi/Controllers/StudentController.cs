@@ -1,3 +1,13 @@
+/**
+ * Name: StudentController
+ * Description: This is the controller for the Student interface. This controller is modeled after the Student database
+ *     table. It will house all of the API end points for interactions with student objects. The basic GET, POST,
+ *     PUT, and DELETE database HTTP requests are used here as well as GET by id passed, and some custom endpoints that
+ *     accept ids or other attributes from other models.
+ * 
+ * Author: Nick Peconi/Darcy Brown
+ * Date: January 7th, 2019
+ */
 using System;
 using System.Collections.Generic;
 using System.Linq;

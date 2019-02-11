@@ -1,3 +1,13 @@
+/**
+ * Name: StudentInfoController
+ * Description: This is the controller for the StudentInfo interface. 
+ *     It will house all of the API end points for interactions with StudentInfo objects. These objects are made by 
+ *     joining the student table and the user table to get all of the information associated with a student id. This
+ *     controller is used to accept the student id from the front end and return all associated information by that
+ *     student id. There are also other custom GET http requests to get more specific information. 
+ * Author: Nick Peconi/Darcy Brown
+ * Date: January 7th, 2019
+ */
 using System;
 using System.Collections.Generic;
 using System.Linq;

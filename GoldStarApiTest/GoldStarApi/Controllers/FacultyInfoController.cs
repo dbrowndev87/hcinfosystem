@@ -1,3 +1,14 @@
+/**
+ * Name: FacultyInfoController
+ * Description: This is the controller for the FacultyInfo interface. 
+ *     It will house all of the API end points for interactions with FacultyInfo objects. These objects are made by 
+ *     joining the faculty table and the user table to get all of the information associated with a faculty id. This
+ *     controller is used to accept the faculty id from the front end and return all associated information by that
+ *     faculty id. There are also other custom GET http requests to get more specific information. 
+ * Author: Nick Peconi/Darcy Brown
+ * Date: January 7th, 2019
+ */
+
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -25,7 +25,7 @@ export class AdminListComponent implements OnInit, OnDestroy {
   dtOptions: DataTables.Settings = {};
   dtTrigger: Subject<User> = new Subject<User>();
 
-  public users: User[];
+  public users: User[] = [];
   public usersObservable: User[];
   public errorMessage: String = "";
   private depts: Department[];
@@ -64,12 +64,12 @@ export class AdminListComponent implements OnInit, OnDestroy {
       .subscribe(observables => {
 
         // Assign observables
-        this.users = observables as User[];
+        let users = observables as User[];
         this.dtTrigger.next();
         // Pick out the administration
-        for (let x = 0; x < this.users.length; x++) {
-          if (this.users[x].type_Code !== 1) {
-            this.users.splice(x, x);
+        for (let x = 0; x < users.length; x++) {
+          if (users[x].type_Code === 1) {
+            this.users.push(users[x]);
           }
         }
       },

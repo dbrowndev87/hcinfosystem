@@ -1,3 +1,13 @@
+/**
+ * Name: DepartmentController
+ * Description: This is the controller for the Department interface. This controller is modeled after the Department database
+ *     table. It will house all of the API end points for interactions with department objects. The basic GET, POST,
+ *     PUT, and DELETE database HTTP requests are used here as well as GET by id passed, and some custom endpoints that
+ *     accept ids or other attributes from other models.
+ * 
+ * Author: Nick Peconi/Darcy Brown
+ * Date: January 7th, 2019
+ */
 using System;
 using System.Linq;
 using Contracts;
