@@ -10,7 +10,7 @@ body{
     /* background: url(./assets/back.jpg) no-repeat center center fixed; */
      /* background: url(./assets/back3.jpg) no-repeat center center fixed; */
     
-    background: url(./assets/back5.jpg) no-repeat center center fixed; 
+    background: url(/assets/back5.jpg) no-repeat center center fixed; 
 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -46,14 +46,14 @@ a:active{
 
 .btnHc{
     /* Black Button */
-    background: url('./assets/blackButton.jpg') !important;
+    background: url('/assets/blackButton.jpg') !important;
     background-size: cover !important;
     color: whitesmoke !important;
 }
 
 .btnHcSilver{
     margin-left: 2px;
-    background: url('./assets/topbar.jpg') !important;
+    background: url('/assets/topbar.jpg') !important;
     background-size: cover !important;
     color: black !important;
 }
@@ -168,7 +168,7 @@ input{
     color: black !important; */
 
     border-radius: 5px;
-    background: url('./assets/blackButton.jpg') !important;
+    background: url('/assets/blackButton.jpg') !important;
     background-size: cover !important;
     color: whitesmoke !important;
  
@@ -189,7 +189,7 @@ input{
 
 
     /* Black Buttons */
-    background: url('./assets/blackButton.jpg') !important;
+    background: url('/assets/blackButton.jpg') !important;
     background-size: cover !important;
     color: whitesmoke !important;
 
@@ -231,7 +231,7 @@ input{
 
 .ui-widget-header {
     border: 1px solid #e78f08;
-    background: #f6a828 url('assets/back5.jpg') 50% 50% repeat-x;
+    background: #f6a828 url('/assets/back5.jpg') 50% 50% repeat-x;
     color: black;
     font-weight: bold;
     border: 1px black solid;
