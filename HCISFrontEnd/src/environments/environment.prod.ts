@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  urlAddress: 'http://dbrowndev87.github.io/hcinfosystem/'
+  urlAddress: 'https://localhost:44334/'
 };
