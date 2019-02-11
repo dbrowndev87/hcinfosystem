@@ -11,7 +11,7 @@ import { NotFoundComponent } from './error-pages/not-found/not-found.component';
 import { EnvironmentUrlService } from './shared/services/environment-url.service';
 import { HttpClientModule } from '@angular/common/http';
 import { InternalServerComponent } from './error-pages/internal-server/internal-server.component';
-import { DatePipe, CommonModule } from '@angular/common';
+import { DatePipe, CommonModule, LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { UserModule } from './user/user.module';
 import { UserRoutingModule } from './user/user.routing';
 import { LoginModule } from './login/login.module';
@@ -94,7 +94,9 @@ import { AuthGuardStudentNotEnrolled } from './login/authGuard/auth-student-note
     AuthGuardStudent,
     AuthGuardAdminFaculty,
     AuthGuardAdminStudent,
-    AuthGuardStudentNotEnrolled
+    AuthGuardStudentNotEnrolled,
+    // Helps with links in production mode.
+    { provide: LocationStrategy, useClass: HashLocationStrategy }
   ],
   bootstrap: [AppComponent],
   exports: [
