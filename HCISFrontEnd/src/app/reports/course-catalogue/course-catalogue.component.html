@@ -4,7 +4,7 @@
   <div *ngIf="!isLoaded">
     <div class="row">
       <div class="col-md-8 centerDiv well">
-        <img src="../../../assets/loading.gif" class="center-block imgLoading" />
+        <img src="assets/loading.gif" class="center-block imgLoading" />
         <h4 class="text-center">Loading</h4>
       </div>
     </div>
@@ -30,11 +30,13 @@
         <div class="row">
           <div class="col-md-12">
             <h4 class="float-left">By Department</h4>
-            <form [formGroup]="courseCatalogueForm" autocomplete="off" novalidate (ngSubmit)="redirectToReport(courseCatalogueForm.value)">
+            <form [formGroup]="courseCatalogueForm" autocomplete="off" novalidate
+              (ngSubmit)="redirectToReport(courseCatalogueForm.value)">
               <select name="dept_Id" class="form-control" id="dept_Id" formControlName="dept_Id" #dCode>
                 <option *ngFor="let dept of depts;" value="{{dept.dept_Id}}">{{dept.dept_Name}}</option>
               </select>
-              <em *ngIf="validateControl('dept_Id') && hasError('dept_Id', 'required')">You must choose a Department</em>
+              <em *ngIf="validateControl('dept_Id') && hasError('dept_Id', 'required')">You must choose a
+                Department</em>
               <br>
               <button type="submit" class="btn btnHc float-left" [disabled]="!courseCatalogueForm.valid">Generate
                 Report</button>

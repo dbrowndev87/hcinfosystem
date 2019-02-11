@@ -13,8 +13,7 @@
         <div class="row">
           <div class="col-md-12 updateWell">
             <label for="first_Name" class="control-label">First Name: </label>
-            <input type="text" formControlName="first_Name" id="first_Name"
-              class="form-control" />
+            <input type="text" formControlName="first_Name" id="first_Name" class="form-control" />
             <em *ngIf="validateControl('first_Name') && hasError('first_Name',
               'required')">First Name is required</em>
             <em *ngIf="validateControl('first_Name') && hasError('first_Name',
@@ -28,8 +27,7 @@
         <div class="row">
           <div class="col-md-12 updateWell">
             <label for="last_Name" class="control-label">Last Name: </label>
-            <input type="text" formControlName="last_Name" id="last_Name"
-              class="form-control" />
+            <input type="text" formControlName="last_Name" id="last_Name" class="form-control" />
             <em *ngIf="validateControl('last_Name') && hasError('last_Name',
               'required')">Last Name is required</em>
             <em *ngIf="validateControl('last_Name') && hasError('last_Name',
@@ -44,10 +42,8 @@
           <div class="col-md-12 updateWell">
             <label for="birth_Date" class="control-label">Date of birth:
             </label>
-            <input type="text" formControlName="birth_Date" id="birth_Date"
-              class="form-control" appDatepicker
-              (change)="executeDatePicker($event)"
-              readonly />
+            <input type="text" formControlName="birth_Date" id="birth_Date" class="form-control" appDatepicker
+              (change)="executeDatePicker($event)" readonly />
             <em *ngIf="validateControl('birth_Date') && hasError('birth_Date',
               'required')">Date of birth is required</em>
           </div>
@@ -59,10 +55,8 @@
           <div class="col-md-12 updateWell">
             <label for="start_Date" class="control-label">Start Date:
             </label>
-            <input type="text" formControlName="start_Date" id="start_Date"
-              class="form-control" appDatepicker
-              (change)="executeDatePickerStartDate($event)"
-              readonly />
+            <input type="text" formControlName="start_Date" id="start_Date" class="form-control" appDatepicker
+              (change)="executeDatePickerStartDate($event)" readonly />
             <em *ngIf="validateControl('start_Date') && hasError('start_Date',
               'required')">Start Date is required</em>
           </div>
@@ -73,8 +67,7 @@
         <div class="row">
           <div class="col-md-12 updateWell">
             <label for="eMail" class="control-label">E-Mail: </label>
-            <input type="text" formControlName="eMail" id="eMail"
-              class="form-control" />
+            <input type="text" formControlName="eMail" id="eMail" class="form-control" />
             <em *ngIf="validateControl('eMail') && hasError('eMail',
               'required')">E-Mail is required</em>
             <em *ngIf="validateControl('eMail') && hasError('eMail',
@@ -88,8 +81,7 @@
         <div class="row">
           <div class="col-md-12 updateWell">
             <label for="address" class="control-label">Address: </label>
-            <input type="text" formControlName="address" id="address"
-              class="form-control" />
+            <input type="text" formControlName="address" id="address" class="form-control" />
             <em *ngIf="validateControl('address') && hasError('address',
               'required')">Address is required</em>
             <em *ngIf="validateControl('address') && hasError('address',
@@ -103,8 +95,7 @@
         <div class="row">
           <div class="col-md-12 updateWell">
             <label for="dept_Id" class="control-label">Department: </label>
-            <select name="dept_Id" class="form-control" id="dept_Id"
-              formControlName="dept_Id" #dCode>
+            <select name="dept_Id" class="form-control" id="dept_Id" formControlName="dept_Id" #dCode>
               <option *ngFor="let dept of depts;" value="{{dept.dept_Id}}">{{dept.dept_Name}}</option>
             </select>
           </div>
@@ -116,8 +107,8 @@
           <div class="col-md-12 updateWell">
             <label for="faculty_Status" class="control-label">Faculty Status:
             </label>
-            <select #fStatus name="faculty_Status" class="form-control"
-              id="faculty_Status" formControlName="faculty_Status">
+            <select #fStatus name="faculty_Status" class="form-control" id="faculty_Status"
+              formControlName="faculty_Status">
               <option value="Full Time" selected="selected">Full Time</option>
               <option value="Part Time">Part Time</option>
               <option value="Substitute">Substitute</option>
@@ -130,19 +121,16 @@
       <div class="form-group">
         <div class="row">
           <div class="col-md-12 updateWell">
-            <button type="submit" class="btn btnHc float-left"
-              [disabled]="!facultyUpdateForm.valid">Update</button>
-            <button type="button" class="btn btnHc float-right"
-              (click)="redirectToFacultyList()">Cancel</button>
+            <button type="submit" class="btn btnHc float-left" [disabled]="!facultyUpdateForm.valid">Update</button>
+            <button type="button" class="btn btnHc float-right" (click)="redirectToFacultyList()">Cancel</button>
           </div>
         </div>
       </div>
     </div>
   </form>
 
-  <app-success-modal [modalHeaderText]="'Success message'"
-    [modalBodyText]="'Update completed successfully'"
+  <app-success-modal [modalHeaderText]="'Success message'" [modalBodyText]="'Update completed successfully'"
     [okButtonText]="'OK'" (redirectOnOK)="redirectToFacultyList()"></app-success-modal>
-  <app-error-modal [modalHeaderText]="'Error message'"
-    [modalBodyText]="errorMessage" [okButtonText]="'OK'"></app-error-modal>
+  <app-error-modal [modalHeaderText]="'Error message'" [modalBodyText]="errorMessage" [okButtonText]="'OK'">
+  </app-error-modal>
 </div>

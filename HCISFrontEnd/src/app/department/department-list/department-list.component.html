@@ -3,7 +3,7 @@
   <div *ngIf="!isLoaded">
     <div class="row">
       <div class="col-md-8 centerDiv well">
-        <img src="../../../assets/loading.gif" class="center-block imgLoading" />
+        <img src="assets/loading.gif" class="center-block imgLoading" />
         <h4 class="text-center">Loading</h4>
       </div>
     </div>
@@ -40,7 +40,8 @@
             <tr *ngFor="let department of departments">
               <td>{{department.dept_Id}}</td>
               <td>{{department.dept_Name}}</td>
-              <td><button type="button" id="update" class="btn btnHc" (click)='redirectToUpdatePage(department.dept_Id)'>Update</button></td>
+              <td><button type="button" id="update" class="btn btnHc"
+                  (click)='redirectToUpdatePage(department.dept_Id)'>Update</button></td>
             </tr>
           </tbody>
           <tbody *ngIf="departments === undefined">
@@ -48,7 +49,7 @@
               <td colspan="3" class="bold text-center">
                 <div class="row">
                   <div class="col-md-8 centerDiv">
-                    <img src="../../../assets/loading.gif" class="center-block imgLoading" />
+                    <img src="assets/loading.gif" class="center-block imgLoading" />
                     <h4 class="text-center">Loading</h4>
                   </div>
                 </div>

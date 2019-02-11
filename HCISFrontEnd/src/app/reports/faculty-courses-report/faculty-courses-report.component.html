@@ -4,8 +4,7 @@
   <div *ngIf="!isLoaded">
     <div class="row">
       <div class="col-md-8 centerDiv well">
-        <img src="../../../assets/loading.gif" class="center-block imgLoading"
-          />
+        <img src="assets/loading.gif" class="center-block imgLoading" />
         <h4 class="text-center">Loading</h4>
       </div>
     </div>
@@ -16,7 +15,7 @@
     <div class="col-md-8 centerDiv well">
       <div class="row">
         <div class="col-md-5">
-          <img class="logoReport" src="../../../assets/Logo1.png">
+          <img class="logoReport" src="assets/Logo1.png">
         </div>
         <div class="col-md-7">
           <br>
@@ -80,8 +79,7 @@
                         {{section.course_Name}}
                       </p>
 
-                      <h5 class="bold student"
-                        *ngIf="depts[i]['faculty'][z]['sections'].length ===
+                      <h5 class="bold student" *ngIf="depts[i]['faculty'][z]['sections'].length ===
                         0
                         || depts[i]['faculty'][z]['sections'] === undefined">
                         - No sections created</h5>
@@ -90,8 +88,7 @@
 
                       <p *ngIf="depts[i]['faculty'][z]['sections'].length> 0
                         &&
-                        depts[i]['faculty'][z]['sections'] !== undefined"
-                        class="float-right">
+                        depts[i]['faculty'][z]['sections'] !== undefined" class="float-right">
 
                         <span class="bold">Total Sections: </span>{{depts[i]['faculty'][z]['sections'].length}}
                       </p>
@@ -108,8 +105,7 @@
       </div>
       <div class="row">
         <div class="col-md-12 centerDiv">
-          <button class="btn btnHc float-right"
-            (click)="backToReportGenerator()">Back</button>
+          <button class="btn btnHc float-right" (click)="backToReportGenerator()">Back</button>
         </div>
       </div>
     </div>

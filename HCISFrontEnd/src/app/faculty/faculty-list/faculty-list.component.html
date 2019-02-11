@@ -3,7 +3,7 @@
   <div *ngIf="!isLoaded">
     <div class="row">
       <div class="col-md-8 centerDiv well">
-        <img src="../../../assets/loading.gif" class="center-block imgLoading" />
+        <img src="assets/loading.gif" class="center-block imgLoading" />
         <h4 class="text-center">Loading</h4>
       </div>
     </div>
@@ -52,7 +52,8 @@
               <td>{{faculty.address}}</td>
               <td *ngIf="isLoaded">{{depts[(faculty.dept_Id - 1)].dept_Name}}</td>
               <td>
-                <button type="button" id="update" class="btn btnHc" (click)='redirectToUpdatePage(faculty.faculty_Id)'>Update</button>
+                <button type="button" id="update" class="btn btnHc"
+                  (click)='redirectToUpdatePage(faculty.faculty_Id)'>Update</button>
               </td>
             </tr>
           </tbody>
@@ -61,7 +62,7 @@
               <td colspan="8" class="bold text-center">
                 <div class="row">
                   <div class="col-md-8 centerDiv">
-                    <img src="../../../assets/loading.gif" class="center-block imgLoading" />
+                    <img src="assets/loading.gif" class="center-block imgLoading" />
                     <h4 class="text-center">Loading</h4>
                   </div>
                 </div>

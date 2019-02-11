@@ -4,8 +4,7 @@
   <div *ngIf="!isLoaded">
     <div class="row">
       <div class="col-sm-8 col-md-6 col-lg-4 centerDiv well">
-        <img src="../../../assets/loading.gif" class="center-block imgLoading"
-          />
+        <img src="assets/loading.gif" class="center-block imgLoading" />
         <h4 class="text-center">Loading</h4>
       </div>
     </div>
@@ -17,8 +16,8 @@
     <h5 class="text-center">Department ID Auto-Generated.</h5>
   </div>
 
-  <form *ngIf="isLoaded" [formGroup]="departmentForm" autocomplete="off"
-    novalidate (ngSubmit)="createDepartment(departmentForm.value)">
+  <form *ngIf="isLoaded" [formGroup]="departmentForm" autocomplete="off" novalidate
+    (ngSubmit)="createDepartment(departmentForm.value)">
     <div class="form-horizontal well col-sm-8 col-md-6 col-lg-4 centerDiv">
 
       <div class="form-group">
@@ -26,8 +25,7 @@
           <div class="col-md-12 updateWell">
             <label for="dept_Name" class="control-label">Department Name:
             </label>
-            <input type="text" formControlName="dept_Name" id="dept_Name"
-              class="form-control" />
+            <input type="text" formControlName="dept_Name" id="dept_Name" class="form-control" />
             <em *ngIf="validateControl('dept_Name') && hasError('dept_Name',
               'required')">Department Name is required</em>
             <em *ngIf="validateControl('dept_Name') && hasError('dept_Name',
@@ -42,19 +40,16 @@
       <div class="form-group">
         <div class="row">
           <div class="col-md-12 updateWell">
-            <button type="submit" class="btn btnHc float-left"
-              [disabled]="!departmentForm.valid">Save</button>
-            <button type="button" class="btn btnHc float-right"
-              (click)="redirectToDepartmentList()">Cancel</button>
+            <button type="submit" class="btn btnHc float-left" [disabled]="!departmentForm.valid">Save</button>
+            <button type="button" class="btn btnHc float-right" (click)="redirectToDepartmentList()">Cancel</button>
           </div>
         </div>
       </div>
     </div>
   </form>
 
-  <app-success-modal [modalHeaderText]="'Success message'"
-    [modalBodyText]="'Course Added successfully'" [okButtonText]="'OK'"
-    (redirectOnOK)="redirectToDepartmentList()"></app-success-modal>
-  <app-error-modal [modalHeaderText]="'Error message'"
-    [modalBodyText]="errorMessage" [okButtonText]="'OK'"></app-error-modal>
+  <app-success-modal [modalHeaderText]="'Success message'" [modalBodyText]="'Course Added successfully'"
+    [okButtonText]="'OK'" (redirectOnOK)="redirectToDepartmentList()"></app-success-modal>
+  <app-error-modal [modalHeaderText]="'Error message'" [modalBodyText]="errorMessage" [okButtonText]="'OK'">
+  </app-error-modal>
 </div>

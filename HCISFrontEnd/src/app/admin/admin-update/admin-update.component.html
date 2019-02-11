@@ -4,8 +4,7 @@
   <div *ngIf="!isLoaded">
     <div class="row">
       <div class="col-sm-8 col-md-6 col-lg-4 centerDiv well">
-        <img src="../../../assets/loading.gif" class="center-block imgLoading"
-          />
+        <img src="assets/loading.gif" class="center-block imgLoading" />
         <h4 class="text-center">Loading</h4>
       </div>
     </div>
@@ -17,16 +16,14 @@
     <h5 class="text-center">{{user.first_Name}} {{user.last_Name}}</h5>
   </div>
 
-  <form *ngIf="isLoaded" [formGroup]="userForm" autocomplete="off" novalidate
-    (ngSubmit)="updateUser(userForm.value)">
+  <form *ngIf="isLoaded" [formGroup]="userForm" autocomplete="off" novalidate (ngSubmit)="updateUser(userForm.value)">
     <div class="form-horizontal well col-sm-8 col-md-6 col-lg-4 centerDiv">
 
       <div class="form-group">
         <div class="row">
           <div class="col-md-12 updateWell">
             <label for="first_Name" class="control-label">First Name: </label>
-            <input type="text" formControlName="first_Name" id="first_Name"
-              class="form-control" />
+            <input type="text" formControlName="first_Name" id="first_Name" class="form-control" />
             <em *ngIf="validateControl('first_Name') && hasError('first_Name',
               'required')">First Name is required</em>
             <em *ngIf="validateControl('first_Name') && hasError('first_Name',
@@ -41,8 +38,7 @@
         <div class="row">
           <div class="col-md-12 updateWell">
             <label for="last_Name" class="control-label">Last Name: </label>
-            <input type="text" formControlName="last_Name" id="last_Name"
-              class="form-control" />
+            <input type="text" formControlName="last_Name" id="last_Name" class="form-control" />
             <em *ngIf="validateControl('last_Name') && hasError('last_Name',
               'required')">Last Name is required</em>
             <em *ngIf="validateControl('last_Name') && hasError('last_Name',
@@ -57,10 +53,8 @@
           <div class="col-md-12 updateWell">
             <label for="birth_Date" class="control-label">Date of birth:
             </label>
-            <input type="text" formControlName="birth_Date" id="birth_Date"
-              class="form-control" appDatepicker
-              (change)="executeDatePicker($event)"
-              readonly />
+            <input type="text" formControlName="birth_Date" id="birth_Date" class="form-control" appDatepicker
+              (change)="executeDatePicker($event)" readonly />
             <em *ngIf="validateControl('birth_Date') && hasError('birth_Date',
               'required')">Date of birth is required</em>
           </div>
@@ -71,8 +65,7 @@
         <div class="row">
           <div class="col-md-12 updateWell">
             <label for="address" class="control-label">Address: </label>
-            <input type="text" formControlName="address" id="address"
-              class="form-control" />
+            <input type="text" formControlName="address" id="address" class="form-control" />
             <em *ngIf="validateControl('address') && hasError('address',
               'required')">Address is required</em>
             <em *ngIf="validateControl('address') && hasError('address',
@@ -86,8 +79,7 @@
         <div class="row">
           <div class="col-md-12 updateWell">
             <label for="eMail" class="control-label">E-Mail: </label>
-            <input type="text" formControlName="eMail" id="eMail"
-              class="form-control" />
+            <input type="text" formControlName="eMail" id="eMail" class="form-control" />
             <em *ngIf="validateControl('eMail') && hasError('eMail',
               'required')">E-Mail is required</em>
             <em *ngIf="validateControl('eMail') && hasError('eMail',
@@ -102,10 +94,8 @@
       <div class="form-group">
         <div class="row">
           <div class="col-md-12 updateWell">
-            <button type="submit" class="btn btnHc float-left"
-              [disabled]="!userForm.valid">Save</button>
-            <button type="button" class="btn btnHc float-right"
-              (click)="redirectToUserList()">Cancel</button>
+            <button type="submit" class="btn btnHc float-left" [disabled]="!userForm.valid">Save</button>
+            <button type="button" class="btn btnHc float-right" (click)="redirectToUserList()">Cancel</button>
           </div>
         </div>
       </div>
@@ -113,9 +103,8 @@
   </form>
 
 
-  <app-success-modal [modalHeaderText]="'Success message'"
-    [modalBodyText]="'Action completed successfully'"
+  <app-success-modal [modalHeaderText]="'Success message'" [modalBodyText]="'Action completed successfully'"
     [okButtonText]="'OK'" (redirectOnOK)="redirectToUserList()"></app-success-modal>
-  <app-error-modal [modalHeaderText]="'Error message'"
-    [modalBodyText]="errorMessage" [okButtonText]="'OK'"></app-error-modal>
+  <app-error-modal [modalHeaderText]="'Error message'" [modalBodyText]="errorMessage" [okButtonText]="'OK'">
+  </app-error-modal>
 </div>

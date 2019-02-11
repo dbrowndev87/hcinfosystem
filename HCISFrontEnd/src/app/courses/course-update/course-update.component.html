@@ -4,8 +4,7 @@
   <div *ngIf="!isLoaded">
     <div class="row">
       <div class="col-sm-8 col-md-6 col-lg-4 centerDiv well">
-        <img src="../../../assets/loading.gif" class="center-block imgLoading"
-          />
+        <img src="assets/loading.gif" class="center-block imgLoading" />
         <h4 class="text-center">Loading</h4>
       </div>
     </div>
@@ -25,8 +24,7 @@
         <div class="row">
           <div class="col-md-12 updateWell">
             <label for="course_Name" class="control-label">Course Name: </label>
-            <input type="text" formControlName="course_Name" id="course_Name"
-              class="form-control" />
+            <input type="text" formControlName="course_Name" id="course_Name" class="form-control" />
             <em *ngIf="validateControl('course_Name') && hasError('course_Name',
               'required')">Course Name is required</em>
             <em *ngIf="validateControl('course_Name') && hasError('course_Name',
@@ -40,8 +38,7 @@
         <div class="row">
           <div class="col-md-12 updateWell">
             <label for="dept_Id" class="control-label">Department ID: </label>
-            <select name="dept_Id" class="form-control" id="dept_Id"
-              formControlName="dept_Id" #dCode>
+            <select name="dept_Id" class="form-control" id="dept_Id" formControlName="dept_Id" #dCode>
               <option *ngFor="let dept of depts" value="{{dept.dept_Id}}">{{dept.dept_Name}}</option>
             </select>
             <em *ngIf="validateControl('dept_Id') && hasError('dept_Id',
@@ -54,8 +51,7 @@
         <div class="row">
           <div class="col-md-12 updateWell">
             <label for="credits" class="control-label">Credits: </label>
-            <input type="text" formControlName="credits" id="credits"
-              class="form-control" />
+            <input type="text" formControlName="credits" id="credits" class="form-control" />
             <em *ngIf="validateControl('credits') && hasError('credits',
               'required')">Credits are required</em>
             <em *ngIf="validateControl('credits') && hasError('credits',
@@ -71,10 +67,8 @@
       <div class="form-group">
         <div class="row">
           <div class="col-md-12 updateWell">
-            <button type="submit" class="btn btnHc float-left"
-              [disabled]="!courseForm.valid">Save</button>
-            <button type="button" class="btn btnHc float-right"
-              (click)="redirectToCourseList()">Cancel</button>
+            <button type="submit" class="btn btnHc float-left" [disabled]="!courseForm.valid">Save</button>
+            <button type="button" class="btn btnHc float-right" (click)="redirectToCourseList()">Cancel</button>
           </div>
         </div>
       </div>
@@ -82,9 +76,8 @@
     </div>
   </form>
 
-  <app-success-modal [modalHeaderText]="'Success message'"
-    [modalBodyText]="'Course Updated successfully'"
+  <app-success-modal [modalHeaderText]="'Success message'" [modalBodyText]="'Course Updated successfully'"
     [okButtonText]="'OK'" (redirectOnOK)="redirectToCourseList()"></app-success-modal>
-  <app-error-modal [modalHeaderText]="'Error message'"
-    [modalBodyText]="errorMessage" [okButtonText]="'OK'"></app-error-modal>
+  <app-error-modal [modalHeaderText]="'Error message'" [modalBodyText]="errorMessage" [okButtonText]="'OK'">
+  </app-error-modal>
 </div>
