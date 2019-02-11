@@ -1,14 +1,6 @@
 {
-  "ProjectFilePath": "c:\\Users\\nicholaspeconi\\Documents\\2nd Year Repos\\goldstarcode\\GoldStarApiTest\\GoldStarApi\\GoldStarApi.csproj",
+  "ProjectFilePath": "d:\\Bitbucket\\hcinfosystem\\GoldStarApiTest\\GoldStarApi\\GoldStarApi.csproj",
   "TargetFramework": "netcoreapp2.2",
   "TagHelpers": [],
-  "Configuration": {
-    "ConfigurationName": "MVC-2.1",
-    "LanguageVersion": "2.1",
-    "Extensions": [
-      {
-        "ExtensionName": "MVC-2.1"
-      }
-    ]
-  }
+  "Configuration": null
 }

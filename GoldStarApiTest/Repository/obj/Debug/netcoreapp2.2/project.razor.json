@@ -1,14 +1,6 @@
 {
-  "ProjectFilePath": "c:\\Users\\nicholaspeconi\\Documents\\2nd Year Repos\\goldstarcode\\GoldStarApiTest\\Repository\\Repository.csproj",
+  "ProjectFilePath": "d:\\Bitbucket\\hcinfosystem\\GoldStarApiTest\\Repository\\Repository.csproj",
   "TargetFramework": "netcoreapp2.2",
   "TagHelpers": [],
-  "Configuration": {
-    "ConfigurationName": "UnsupportedRazor",
-    "LanguageVersion": "1.0",
-    "Extensions": [
-      {
-        "ExtensionName": "UnsupportedRazorExtension"
-      }
-    ]
-  }
+  "Configuration": null
 }
