@@ -161,3 +161,37 @@
 2019-02-10 09:35:05.6617 INFO Current StudentID 190370
 2019-02-10 09:35:05.6617 INFO Current StudentID 193402
 2019-02-10 09:35:05.6772 INFO Returned All Section Course Information
+2019-02-10 14:33:34.2238 INFO Returned user with username: dbrown32066
+2019-02-10 14:33:34.5256 INFO Returned User with id: 1
+2019-02-10 14:33:41.2504 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-10 14:33:47.7556 INFO Returned All Section Course Information
+2019-02-10 14:33:47.7930 INFO Returned Department with id: 2
+2019-02-10 14:33:47.8663 INFO Number of Enrollments6
+2019-02-10 14:33:47.8916 INFO Current StudentID 190181
+2019-02-10 14:33:47.8949 INFO Current StudentID 190370
+2019-02-10 14:33:47.8972 INFO Current StudentID 193402
+2019-02-10 14:33:47.8994 INFO Current StudentID 190181
+2019-02-10 14:33:47.9015 INFO Current StudentID 190370
+2019-02-10 14:33:47.9039 INFO Current StudentID 193402
+2019-02-10 14:33:47.9177 INFO Returned All Section Course Information
+2019-02-10 14:33:53.8908 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-10 14:34:06.5997 INFO Returned All Section Course Information
+2019-02-10 14:34:06.6096 INFO Returned Department with id: 3
+2019-02-10 14:34:06.6263 INFO Number of Enrollments0
+2019-02-10 14:34:06.6263 INFO Returned All Section Course Information
+2019-02-10 14:34:08.0761 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-10 14:34:18.4808 INFO Returned All Section Course Information
+2019-02-10 14:34:18.4972 INFO Returned Department with id: 2
+2019-02-10 14:34:18.5274 INFO Number of Enrollments0
+2019-02-10 14:34:18.5281 INFO Returned All Section Course Information
+2019-02-10 14:34:20.0127 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-10 14:34:27.2271 INFO Returned All Section Course Information
+2019-02-10 14:34:27.2366 INFO Returned Department with id: 2
+2019-02-10 14:34:27.2468 INFO Number of Enrollments0
+2019-02-10 14:34:27.2468 INFO Returned All Section Course Information
+2019-02-10 14:34:28.8495 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-10 14:35:16.4729 INFO Returned All Section Course Information
+2019-02-10 14:35:16.4825 INFO Returned Department with id: 2
+2019-02-10 14:35:16.4978 INFO Number of Enrollments0
+2019-02-10 14:35:16.5716 INFO Returned All Section Course Information
+2019-02-10 14:35:18.1456 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]

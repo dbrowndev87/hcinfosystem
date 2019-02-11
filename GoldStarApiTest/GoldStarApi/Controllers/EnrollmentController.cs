@@ -259,8 +259,12 @@ namespace GoldStarApi.Controllers
                 }
                 
                 _repository.Enrollment.UpdateEnrollment(dbEnrollment, enrollment);
-                
-                updateStudentGpa(id);
+
+                if (dbEnrollment.Course_Status == "Completed")
+                {
+                    
+                    updateStudentGpa(id);
+                }
                 
                
                 return NoContent();

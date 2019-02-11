@@ -255,7 +255,7 @@ namespace GoldStarApi.Controllers
 
                 var studentsByEnrollment = GetStudentInfosFromAllSections(allSectionsSemesterYear);
 
-                return Ok(studentsByEnrollment);
+                return Ok(studentsByEnrollment.OrderBy(student => student.Last_Name));
 
             }
             catch (Exception ex)

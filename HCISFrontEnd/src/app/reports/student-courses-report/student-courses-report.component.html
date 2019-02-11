@@ -4,7 +4,8 @@
   <div *ngIf="!isLoaded">
     <div class="row">
       <div class="col-md-8 centerDiv well">
-        <img src="../../../assets/loading.gif" class="center-block imgLoading" />
+        <img src="../../../assets/loading.gif" class="center-block imgLoading"
+          />
         <h4 class="text-center">Loading</h4>
       </div>
     </div>
@@ -12,7 +13,7 @@
 
   <!-- HC Well Button -->
   <div *ngIf="isLoaded" class="row">
-    <div class=" col-md-8 centerDiv well">
+    <div class="col-md-8 centerDiv well">
       <div class="row">
         <div class="col-md-5">
           <img class="logoReport" src="../../../assets/Logo1.png">
@@ -21,52 +22,59 @@
           <br>
           <br>
           <br>
-          <h3 class="reportHeader ">Student Courses</h3>
+          <h3 class="reportHeader">Student Courses</h3>
         </div>
       </div>
       <div class="row">
         <hr>
         <div class="col-md-6">
-          <p><span class="bold">Adiministration: </span></p>
+          <p><span class="bold">Department: Administration </span></p>
           <p><span class="bold">Date: </span>{{transcriptDate}}</p>
         </div>
         <div class="col-md-6">
-          <p><span class="bold">For:</span></p>
+          <p><span class="bold">For: {{loggedInUser.first_Name}}
+              {{loggedInUser.last_Name}}</span></p>
           <p><span class="bold">Type:</span> Student Courses<br>
+          </div>
+          <hr>
         </div>
-        <hr>
-      </div>
-      <div *ngIf="isLoaded" class="row">
-        <div class="col-md-12 headerDiv">
-          <h3 class="text-center">{{department.dept_Name}}: {{semester}} {{year}}</h3>
-          <div *ngFor="let student of studentInfos;let i = index">
+        <div *ngIf="isLoaded" class="row">
+          <div class="col-md-12 headerDiv">
+            <h3 class="text-center">{{department.dept_Name}}: {{semester}}
+              {{year}}</h3>
+            <div *ngFor="let student of studentInfos;let i= index">
 
-            <div *ngIf="studentInfos.length > 0">
-              <!-- Designation Bar -->
-              <div class="col-md-12 desDiv">
-                <span class="boldReport">Student Id:</span> {{student.student_Id}} <br>{{student.first_Name}}
-                {{student.last_Name}}
-              </div>
+              <div *ngIf="studentInfos.length> 0">
+                <!-- Designation Bar -->
+                <div class="col-md-12 desDiv">
+                  <span class="boldReport">Student Id:</span>
+                  {{student.student_Id}} <br>{{student.first_Name}}
+                  {{student.last_Name}}
+                </div>
 
-              <!-- Enrollments -->
-              <div class="stuDiv">
-                <br>
-                <p class="student" *ngFor="let section of studentInfos[i]['sections']; let j = index">
-                  Course: {{section.course_Id}} {{section.designation}} {{section.course_Name}}
-                </p>
-                <br>
-                <hr>
+                <!-- Enrollments -->
+                <div class="stuDiv">
+                  <br>
+                  <p class="student" *ngFor="let section of
+                    studentInfos[i]['sections']; let j= index">
+                    Course: {{section.course_Id}} {{section.designation}}
+                    {{section.course_Name}}<br>Course Status:
+                    {{studentInfos[i]['enrollments'][j].course_Status}}
+                  </p>
+                  <br>
+                  <hr>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="row">
-          <div *ngIf="typeCode === 1" class="col-md-10 centerDiv">
-            <button class="btn btnHc float-right" (click)="backToReportGenerator()">Back</button>
+          <div class="row">
+            <div *ngIf="typeCode === 1" class="col-md-10 centerDiv">
+              <button class="btn btnHc float-right"
+                (click)="backToReportGenerator()">Back</button>
+            </div>
           </div>
         </div>
-      </div>
 
+      </div>
     </div>
   </div>
-</div>

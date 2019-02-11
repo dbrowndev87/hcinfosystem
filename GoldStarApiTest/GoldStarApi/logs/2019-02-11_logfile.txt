@@ -1,0 +1,599 @@
+2019-02-11 09:47:35.1212 ERROR Something went wrong inside GetUserById action: Unable to connect to any of the specified MySQL hosts.
+2019-02-11 09:48:36.8737 INFO Returned user with username: dbrown32066
+2019-02-11 09:48:37.0396 INFO Returned User with id: 1
+2019-02-11 09:48:42.3177 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-11 09:48:52.9373 INFO Returned All Section Course Information
+2019-02-11 09:48:52.9725 INFO Returned Department with id: 2
+2019-02-11 09:48:53.0283 INFO Number of Enrollments6
+2019-02-11 09:48:53.0502 INFO Current StudentID 190181
+2019-02-11 09:48:53.0534 INFO Current StudentID 190370
+2019-02-11 09:48:53.0554 INFO Current StudentID 193402
+2019-02-11 09:48:53.0574 INFO Current StudentID 190181
+2019-02-11 09:48:53.0592 INFO Current StudentID 190370
+2019-02-11 09:48:53.0615 INFO Current StudentID 193402
+2019-02-11 09:48:53.0700 INFO Returned All Section Course Information
+2019-02-11 09:48:59.5714 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-11 09:49:04.0290 INFO Returned All Section Course Information
+2019-02-11 09:49:04.0382 INFO Returned Department with id: 2
+2019-02-11 09:49:04.0568 INFO Number of Enrollments6
+2019-02-11 09:49:04.0584 INFO Current StudentID 190181
+2019-02-11 09:49:04.0609 INFO Current StudentID 190370
+2019-02-11 09:49:04.0633 INFO Current StudentID 193402
+2019-02-11 09:49:04.0654 INFO Current StudentID 190181
+2019-02-11 09:49:04.1036 INFO Current StudentID 190370
+2019-02-11 09:49:04.1056 INFO Current StudentID 193402
+2019-02-11 09:49:04.1069 INFO Returned All Section Course Information
+2019-02-11 09:49:09.7615 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-11 09:49:15.0136 INFO Returned All Section Course Information
+2019-02-11 09:49:15.0217 INFO Returned Department with id: 2
+2019-02-11 09:49:15.0382 INFO Number of Enrollments6
+2019-02-11 09:49:15.0398 INFO Current StudentID 190181
+2019-02-11 09:49:15.0422 INFO Current StudentID 190370
+2019-02-11 09:49:15.0445 INFO Current StudentID 193402
+2019-02-11 09:49:15.0468 INFO Current StudentID 190181
+2019-02-11 09:49:15.0491 INFO Current StudentID 190370
+2019-02-11 09:49:15.0512 INFO Current StudentID 193402
+2019-02-11 09:49:15.0526 INFO Returned All Section Course Information
+2019-02-11 09:49:35.2322 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-11 09:49:39.4712 INFO Returned All Section Course Information
+2019-02-11 09:49:39.4843 INFO Returned Department with id: 3
+2019-02-11 09:49:39.5025 INFO Number of Enrollments0
+2019-02-11 09:49:39.5032 INFO Returned All Section Course Information
+2019-02-11 09:49:40.8977 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-11 09:49:48.6006 INFO Returned All Section Course Information
+2019-02-11 09:49:48.6098 INFO Returned Department with id: 2
+2019-02-11 09:49:48.6233 INFO Number of Enrollments0
+2019-02-11 09:49:48.6973 INFO Returned All Section Course Information
+2019-02-11 09:49:50.2435 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-11 09:49:56.2866 INFO Returned All Section Course Information
+2019-02-11 09:49:56.3002 INFO Returned Department with id: 3
+2019-02-11 09:49:56.3118 INFO Number of Enrollments0
+2019-02-11 09:49:56.3118 INFO Returned All Section Course Information
+2019-02-11 09:49:57.4899 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-11 09:50:03.1498 INFO Returned All Section Course Information
+2019-02-11 09:50:03.1641 INFO Returned Department with id: 3
+2019-02-11 09:50:03.1772 INFO Number of Enrollments0
+2019-02-11 09:50:03.2533 INFO Returned All Section Course Information
+2019-02-11 09:50:05.2035 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-11 09:50:11.5359 INFO Returned All Section Course Information
+2019-02-11 09:50:11.5447 INFO Returned Department with id: 3
+2019-02-11 09:50:11.5552 INFO Number of Enrollments0
+2019-02-11 09:50:11.5552 INFO Returned All Section Course Information
+2019-02-11 09:50:12.6412 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-11 09:50:20.5130 INFO Returned All Section Course Information
+2019-02-11 09:50:20.5267 INFO Returned Department with id: 3
+2019-02-11 09:50:20.5380 INFO Number of Enrollments0
+2019-02-11 09:50:20.5380 INFO Returned All Section Course Information
+2019-02-11 09:50:21.6174 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-11 09:51:11.0249 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-11 09:51:11.0420 INFO Enrolled
+2019-02-11 09:51:11.0439 INFO Entities.Models.StudentInfo
+2019-02-11 09:51:11.0445 INFO Enrolled
+2019-02-11 09:51:11.0460 INFO Entities.Models.StudentInfo
+2019-02-11 09:51:11.0467 INFO Enrolled
+2019-02-11 09:51:11.0483 INFO Entities.Models.StudentInfo
+2019-02-11 09:51:11.0485 INFO Enrolled
+2019-02-11 09:51:11.0512 INFO Entities.Models.StudentInfo
+2019-02-11 09:51:11.0520 INFO Enrolled
+2019-02-11 09:51:11.0536 INFO Entities.Models.StudentInfo
+2019-02-11 09:51:11.0536 INFO Enrolled
+2019-02-11 09:51:11.0559 INFO Entities.Models.StudentInfo
+2019-02-11 09:51:11.0566 INFO Drop Out
+2019-02-11 09:51:11.0580 INFO Entities.Models.StudentInfo
+2019-02-11 09:51:11.0585 INFO Enrolled
+2019-02-11 09:51:11.0599 INFO Entities.Models.StudentInfo
+2019-02-11 09:51:11.0605 INFO Enrolled
+2019-02-11 09:51:11.0618 INFO Entities.Models.StudentInfo
+2019-02-11 09:51:11.0618 INFO Enrolled
+2019-02-11 09:51:11.0636 INFO Entities.Models.StudentInfo
+2019-02-11 09:51:11.0636 INFO Enrolled
+2019-02-11 09:51:11.0658 INFO Entities.Models.StudentInfo
+2019-02-11 09:51:11.0658 INFO Enrolled
+2019-02-11 09:51:11.0680 INFO Entities.Models.StudentInfo
+2019-02-11 09:51:11.0685 INFO Enrolled
+2019-02-11 09:51:11.0699 INFO Entities.Models.StudentInfo
+2019-02-11 09:51:11.0715 INFO Returned all students from database. 13
+2019-02-11 09:51:20.2003 INFO Returned all userlogins from database. 26
+2019-02-11 09:51:20.2161 INFO Returned all users from database. System.Linq.OrderedEnumerable`2[Entities.Models.User,System.DateTime]
+2019-02-11 09:51:56.0103 INFO Returned user with username: dblue95733
+2019-02-11 09:51:56.0272 INFO Returned User with id: 24
+2019-02-11 09:51:56.0386 INFO Returned Student with id: 24
+2019-02-11 09:51:58.1544 INFO Returned Student with id: 195630
+2019-02-11 09:51:58.2539 INFO Returned Student with id: 195630
+2019-02-11 09:51:58.2928 INFO Returned Department with id: 3
+2019-02-11 09:51:58.3227 INFO Returned all transactions from database. System.Linq.OrderedEnumerable`2[Entities.Models.Transaction,System.Int32]
+2019-02-11 09:51:58.3675 INFO Returned all Enrollments from database. 12
+2019-02-11 09:51:58.3789 INFO Returned all sections from database. 22
+2019-02-11 09:51:58.3975 INFO Returned all courses from database. 24
+2019-02-11 09:52:04.2379 INFO Returned Student with id: 195630
+2019-02-11 09:52:04.2573 INFO Returned Department with id: 3
+2019-02-11 09:52:04.2655 INFO Returned all transactions from database. System.Linq.OrderedEnumerable`2[Entities.Models.Transaction,System.Int32]
+2019-02-11 09:52:04.2740 INFO Returned all Enrollments from database. 12
+2019-02-11 09:52:04.2841 INFO Returned all sections from database. 22
+2019-02-11 09:52:04.2933 INFO Returned all courses from database. 24
+2019-02-11 09:52:08.7042 INFO Returned Student with id: 195630
+2019-02-11 09:52:08.7203 INFO Returned Department with id: 3
+2019-02-11 09:52:08.7286 INFO Returned all transactions from database. System.Linq.OrderedEnumerable`2[Entities.Models.Transaction,System.Int32]
+2019-02-11 09:52:08.7369 INFO Returned all Enrollments from database. 12
+2019-02-11 09:52:08.7439 INFO Returned all sections from database. 22
+2019-02-11 09:52:08.7527 INFO Returned all courses from database. 24
+2019-02-11 09:52:16.1741 INFO Returned Student with id: 195630
+2019-02-11 09:52:16.2715 INFO Returned Department with id: 3
+2019-02-11 09:52:16.2769 INFO Returned all transactions from database. System.Linq.OrderedEnumerable`2[Entities.Models.Transaction,System.Int32]
+2019-02-11 09:52:16.2848 INFO Returned all Enrollments from database. 12
+2019-02-11 09:52:16.2928 INFO Returned all sections from database. 22
+2019-02-11 09:52:16.3017 INFO Returned all courses from database. 24
+2019-02-11 09:52:23.9493 INFO Returned Student with id: 195630
+2019-02-11 09:52:23.9639 INFO Returned Department with id: 3
+2019-02-11 09:52:23.9710 INFO Returned all transactions from database. System.Linq.OrderedEnumerable`2[Entities.Models.Transaction,System.Int32]
+2019-02-11 09:52:23.9790 INFO Returned all Enrollments from database. 12
+2019-02-11 09:52:23.9887 INFO Returned all sections from database. 22
+2019-02-11 09:52:23.9975 INFO Returned all courses from database. 24
+2019-02-11 09:52:42.0091 INFO Returned Student with id: 195630
+2019-02-11 09:52:42.0291 INFO Returned Department with id: 3
+2019-02-11 09:52:42.0365 INFO Returned all transactions from database. System.Linq.OrderedEnumerable`2[Entities.Models.Transaction,System.Int32]
+2019-02-11 09:52:42.0450 INFO Returned all Enrollments from database. 12
+2019-02-11 09:52:42.0527 INFO Returned all sections from database. 22
+2019-02-11 09:52:42.0597 INFO Returned all courses from database. 24
+2019-02-11 09:52:47.3518 INFO Returned Student with id: 195630
+2019-02-11 09:52:47.3737 INFO Look Enrollment with id: 195630
+2019-02-11 09:52:47.3763 INFO Returned Enrollment with id: 195630
+2019-02-11 09:52:47.4136 INFO Returned All Section Course Information
+2019-02-11 09:53:13.6005 ERROR Something went wrong inside UpdateSection action: Transient exception detected
+2019-02-11 09:53:13.6005 ERROR Something went wrong inside UpdateSection action: Transient exception detected
+2019-02-11 09:53:18.5223 INFO Returned Student with id: 195630
+2019-02-11 09:53:18.5429 INFO Returned Department with id: 3
+2019-02-11 09:53:18.5516 INFO Returned all transactions from database. System.Linq.OrderedEnumerable`2[Entities.Models.Transaction,System.Int32]
+2019-02-11 09:53:18.5592 INFO Returned all Enrollments from database. 16
+2019-02-11 09:53:18.5663 INFO Returned all sections from database. 22
+2019-02-11 09:53:18.5742 INFO Returned all courses from database. 24
+2019-02-11 09:54:21.8620 INFO Returned Student with id: 195630
+2019-02-11 09:54:21.9644 INFO Look Enrollment with id: 195630
+2019-02-11 09:54:21.9801 INFO Returned Enrollment with id: 195630
+2019-02-11 09:54:22.0033 INFO Returned Enrollment with id: 12
+2019-02-11 09:54:22.0033 INFO Returned Enrollment with id: 8
+2019-02-11 09:54:22.0033 INFO Returned Enrollment with id: 13
+2019-02-11 09:54:22.0087 INFO Returned Enrollment with id: 6
+2019-02-11 09:54:22.0585 INFO Returned All Section Course Information
+2019-02-11 09:54:23.8465 INFO Returned Student with id: 195630
+2019-02-11 09:54:23.8649 INFO Returned Department with id: 3
+2019-02-11 09:54:23.9542 INFO Returned all transactions from database. System.Linq.OrderedEnumerable`2[Entities.Models.Transaction,System.Int32]
+2019-02-11 09:54:23.9627 INFO Returned all Enrollments from database. 16
+2019-02-11 09:54:23.9699 INFO Returned all sections from database. 22
+2019-02-11 09:54:23.9780 INFO Returned all courses from database. 24
+2019-02-11 09:54:25.3919 INFO Returned Student with id: 195630
+2019-02-11 09:54:25.4157 INFO Look Enrollment with id: 195630
+2019-02-11 09:54:25.4275 INFO Returned Enrollment with id: 195630
+2019-02-11 09:54:25.4448 INFO Returned Enrollment with id: 8
+2019-02-11 09:54:25.4448 INFO Returned Enrollment with id: 12
+2019-02-11 09:54:25.4467 INFO Returned Enrollment with id: 13
+2019-02-11 09:54:25.4538 INFO Returned Enrollment with id: 6
+2019-02-11 09:54:25.4981 INFO Returned All Section Course Information
+2019-02-11 09:54:40.1779 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-11 09:54:47.0987 INFO Returned All Section Course Information
+2019-02-11 09:54:47.1063 INFO Returned Department with id: 2
+2019-02-11 09:54:47.1172 INFO Number of Enrollments8
+2019-02-11 09:54:47.1186 INFO Current StudentID 190181
+2019-02-11 09:54:47.1204 INFO Current StudentID 190370
+2019-02-11 09:54:47.1234 INFO Current StudentID 193402
+2019-02-11 09:54:47.1252 INFO Current StudentID 195630
+2019-02-11 09:54:47.1268 INFO Current StudentID 190181
+2019-02-11 09:54:47.1284 INFO Current StudentID 190370
+2019-02-11 09:54:47.1300 INFO Current StudentID 193402
+2019-02-11 09:54:47.1318 INFO Current StudentID 195630
+2019-02-11 09:54:47.1331 INFO Returned All Section Course Information
+2019-02-11 09:55:52.9461 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-11 09:55:59.0107 INFO Returned All Section Course Information
+2019-02-11 09:55:59.0192 INFO Returned Department with id: 3
+2019-02-11 09:55:59.0337 INFO Number of Enrollments0
+2019-02-11 09:55:59.0343 INFO Returned All Section Course Information
+2019-02-11 09:56:00.7241 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-11 09:58:15.8716 INFO Returned All Section Course Information
+2019-02-11 09:58:15.8832 INFO Returned Department with id: 2
+2019-02-11 09:58:15.8988 INFO Number of Enrollments8
+2019-02-11 09:58:15.9000 INFO Current StudentID 190181
+2019-02-11 09:58:15.9021 INFO Current StudentID 190370
+2019-02-11 09:58:15.9038 INFO Current StudentID 193402
+2019-02-11 09:58:15.9057 INFO Current StudentID 195630
+2019-02-11 09:58:15.9076 INFO Current StudentID 190181
+2019-02-11 09:58:15.9093 INFO Current StudentID 190370
+2019-02-11 09:58:15.9113 INFO Current StudentID 193402
+2019-02-11 09:58:15.9131 INFO Current StudentID 195630
+2019-02-11 09:58:15.9141 INFO Returned All Section Course Information
+2019-02-11 10:03:50.1557 INFO Returned user with username: hgoobye337
+2019-02-11 10:03:50.1692 INFO Returned User with id: 25
+2019-02-11 10:03:50.1801 INFO Returned Student with id: 25
+2019-02-11 10:03:52.3662 INFO Returned Student with id: 194644
+2019-02-11 10:03:52.4867 INFO Returned Student with id: 194644
+2019-02-11 10:03:52.5328 INFO Returned Department with id: 3
+2019-02-11 10:03:52.5473 INFO Returned all transactions from database. System.Linq.OrderedEnumerable`2[Entities.Models.Transaction,System.Int32]
+2019-02-11 10:03:52.5696 INFO Returned all Enrollments from database. 16
+2019-02-11 10:03:52.5903 INFO Returned all sections from database. 22
+2019-02-11 10:03:52.6072 INFO Returned all courses from database. 24
+2019-02-11 10:03:58.1756 INFO Returned Student with id: 194644
+2019-02-11 10:03:58.2833 INFO Returned Department with id: 3
+2019-02-11 10:03:58.3025 INFO Returned all transactions from database. System.Linq.OrderedEnumerable`2[Entities.Models.Transaction,System.Int32]
+2019-02-11 10:03:58.3122 INFO Returned all Enrollments from database. 16
+2019-02-11 10:03:58.3226 INFO Returned all sections from database. 22
+2019-02-11 10:03:58.3396 INFO Returned all courses from database. 24
+2019-02-11 10:04:01.3339 INFO Returned Student with id: 194644
+2019-02-11 10:04:01.3475 INFO Look Enrollment with id: 194644
+2019-02-11 10:04:01.3522 INFO Returned Enrollment with id: 194644
+2019-02-11 10:04:01.3929 INFO Returned All Section Course Information
+2019-02-11 10:13:06.8914 INFO Returned All Section Course Information
+2019-02-11 10:13:07.1353 INFO Returned Department with id: 2
+2019-02-11 10:13:07.1973 INFO Number of Enrollments8
+2019-02-11 10:13:07.2225 INFO Current StudentID 190181
+2019-02-11 10:13:07.2488 INFO Current StudentID 190370
+2019-02-11 10:13:07.2535 INFO Current StudentID 193402
+2019-02-11 10:13:07.2574 INFO Current StudentID 195630
+2019-02-11 10:13:07.2611 INFO Current StudentID 190181
+2019-02-11 10:13:07.2646 INFO Current StudentID 190370
+2019-02-11 10:13:07.2676 INFO Current StudentID 193402
+2019-02-11 10:13:07.2712 INFO Current StudentID 195630
+2019-02-11 10:13:07.2902 INFO Returned All Section Course Information
+2019-02-11 10:14:36.1490 INFO Returned Student with id: 194644
+2019-02-11 10:14:36.1796 INFO Returned Department with id: 3
+2019-02-11 10:14:36.1957 INFO Returned all transactions from database. System.Linq.OrderedEnumerable`2[Entities.Models.Transaction,System.Int32]
+2019-02-11 10:14:36.2240 INFO Returned all Enrollments from database. 20
+2019-02-11 10:14:36.2391 INFO Returned all sections from database. 22
+2019-02-11 10:14:36.2611 INFO Returned all courses from database. 24
+2019-02-11 10:14:39.5435 INFO Returned Enrollment with id: 6
+2019-02-11 10:14:39.6355 ERROR Something went wrong inside UpdateEnrollment action: An error occurred while updating the entries. See the inner exception for details.
+2019-02-11 10:14:47.9527 INFO Returned Student with id: 194644
+2019-02-11 10:14:49.5000 INFO Returned Student with id: 194644
+2019-02-11 10:14:49.5237 INFO Returned Department with id: 3
+2019-02-11 10:14:49.5347 INFO Returned all transactions from database. System.Linq.OrderedEnumerable`2[Entities.Models.Transaction,System.Int32]
+2019-02-11 10:14:49.5451 INFO Returned all Enrollments from database. 20
+2019-02-11 10:14:49.5537 INFO Returned all sections from database. 22
+2019-02-11 10:14:49.5621 INFO Returned all courses from database. 24
+2019-02-11 10:14:57.7316 INFO Returned Enrollment with id: 12
+2019-02-11 10:14:57.7895 ERROR Something went wrong inside UpdateEnrollment action: An error occurred while updating the entries. See the inner exception for details.
+2019-02-11 10:15:02.6465 INFO Returned Student with id: 194644
+2019-02-11 10:15:04.3276 INFO Returned Student with id: 194644
+2019-02-11 10:15:04.3487 INFO Returned Department with id: 3
+2019-02-11 10:15:04.3597 INFO Returned all transactions from database. System.Linq.OrderedEnumerable`2[Entities.Models.Transaction,System.Int32]
+2019-02-11 10:15:04.3678 INFO Returned all Enrollments from database. 20
+2019-02-11 10:15:04.3825 INFO Returned all sections from database. 22
+2019-02-11 10:15:04.3929 INFO Returned all courses from database. 24
+2019-02-11 10:15:39.0509 INFO Returned All Section Course Information
+2019-02-11 10:15:39.0939 INFO Returned Department with id: 2
+2019-02-11 10:15:39.1428 INFO Number of Enrollments10
+2019-02-11 10:15:39.1451 INFO Current StudentID 190181
+2019-02-11 10:15:39.1477 INFO Current StudentID 190370
+2019-02-11 10:15:39.1500 INFO Current StudentID 193402
+2019-02-11 10:15:39.1537 INFO Current StudentID 195630
+2019-02-11 10:15:39.1579 INFO Current StudentID 194644
+2019-02-11 10:15:39.1602 INFO Current StudentID 190181
+2019-02-11 10:15:39.1627 INFO Current StudentID 190370
+2019-02-11 10:15:39.1675 INFO Current StudentID 193402
+2019-02-11 10:15:39.1697 INFO Current StudentID 195630
+2019-02-11 10:15:39.1728 INFO Current StudentID 194644
+2019-02-11 10:15:39.1747 INFO Returned All Section Course Information
+2019-02-11 10:15:54.3727 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-11 10:16:00.0110 INFO Returned All Section Course Information
+2019-02-11 10:16:00.0246 INFO Returned Department with id: 2
+2019-02-11 10:16:00.0582 INFO Number of Enrollments10
+2019-02-11 10:16:00.0595 INFO Current StudentID 190181
+2019-02-11 10:16:00.0616 INFO Current StudentID 190370
+2019-02-11 10:16:00.0641 INFO Current StudentID 193402
+2019-02-11 10:16:00.0661 INFO Current StudentID 195630
+2019-02-11 10:16:00.0680 INFO Current StudentID 194644
+2019-02-11 10:16:00.0714 INFO Current StudentID 190181
+2019-02-11 10:16:00.0742 INFO Current StudentID 190370
+2019-02-11 10:16:00.0764 INFO Current StudentID 193402
+2019-02-11 10:16:00.0785 INFO Current StudentID 195630
+2019-02-11 10:16:00.0805 INFO Current StudentID 194644
+2019-02-11 10:16:00.0816 INFO Returned All Section Course Information
+2019-02-11 10:17:12.8495 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-11 10:17:20.1032 INFO Returned All Section Course Information
+2019-02-11 10:17:20.1602 INFO Returned Department with id: 2
+2019-02-11 10:17:20.1714 INFO Number of Enrollments10
+2019-02-11 10:17:20.1726 INFO Current StudentID 190181
+2019-02-11 10:17:20.1747 INFO Current StudentID 190370
+2019-02-11 10:17:20.1770 INFO Current StudentID 193402
+2019-02-11 10:17:20.1799 INFO Current StudentID 195630
+2019-02-11 10:17:20.1831 INFO Current StudentID 194644
+2019-02-11 10:17:20.1850 INFO Current StudentID 190181
+2019-02-11 10:17:20.1869 INFO Current StudentID 190370
+2019-02-11 10:17:20.1888 INFO Current StudentID 193402
+2019-02-11 10:17:20.1904 INFO Current StudentID 195630
+2019-02-11 10:17:20.1921 INFO Current StudentID 194644
+2019-02-11 10:17:20.1931 INFO Returned All Section Course Information
+2019-02-11 10:17:26.5867 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-11 10:17:32.4531 INFO Returned All Section Course Information
+2019-02-11 10:17:32.4616 INFO Returned Department with id: 2
+2019-02-11 10:17:32.4734 INFO Number of Enrollments10
+2019-02-11 10:17:32.4747 INFO Current StudentID 190181
+2019-02-11 10:17:32.4766 INFO Current StudentID 190370
+2019-02-11 10:17:32.4788 INFO Current StudentID 193402
+2019-02-11 10:17:32.4810 INFO Current StudentID 195630
+2019-02-11 10:17:32.4836 INFO Current StudentID 194644
+2019-02-11 10:17:32.4860 INFO Current StudentID 190181
+2019-02-11 10:17:32.4885 INFO Current StudentID 190370
+2019-02-11 10:17:32.4908 INFO Current StudentID 193402
+2019-02-11 10:17:32.4930 INFO Current StudentID 195630
+2019-02-11 10:17:32.4952 INFO Current StudentID 194644
+2019-02-11 10:17:32.4969 INFO Returned All Section Course Information
+2019-02-11 10:18:51.2711 INFO Returned Student with id: 194644
+2019-02-11 10:18:51.3354 INFO Returned Student with id: 194644
+2019-02-11 10:18:51.3991 INFO Returned Department with id: 3
+2019-02-11 10:18:51.4693 INFO Returned All Section Course Information
+2019-02-11 10:18:51.4977 INFO Returned all transactions from database. System.Linq.OrderedEnumerable`2[Entities.Models.Transaction,System.Int32]
+2019-02-11 10:18:51.5354 INFO Returned Department with id: 2
+2019-02-11 10:18:51.5461 INFO Returned all Enrollments from database. 20
+2019-02-11 10:18:51.5950 INFO Returned all sections from database. 22
+2019-02-11 10:18:51.5983 INFO Number of Enrollments10
+2019-02-11 10:18:51.5999 INFO Current StudentID 190181
+2019-02-11 10:18:51.6022 INFO Current StudentID 190370
+2019-02-11 10:18:51.6051 INFO Current StudentID 193402
+2019-02-11 10:18:51.6083 INFO Current StudentID 195630
+2019-02-11 10:18:51.6095 INFO Returned all courses from database. 24
+2019-02-11 10:18:51.6104 INFO Current StudentID 194644
+2019-02-11 10:18:51.6131 INFO Current StudentID 190181
+2019-02-11 10:18:51.6152 INFO Current StudentID 190370
+2019-02-11 10:18:51.6175 INFO Current StudentID 193402
+2019-02-11 10:18:51.6199 INFO Current StudentID 195630
+2019-02-11 10:18:51.6219 INFO Current StudentID 194644
+2019-02-11 10:18:51.6240 INFO Returned All Section Course Information
+2019-02-11 10:21:00.4696 INFO Returned Student with id: 194644
+2019-02-11 10:21:00.5454 INFO Returned Student with id: 194644
+2019-02-11 10:21:00.6001 INFO Returned Department with id: 3
+2019-02-11 10:21:00.6324 INFO Returned all transactions from database. System.Linq.OrderedEnumerable`2[Entities.Models.Transaction,System.Int32]
+2019-02-11 10:21:00.6822 INFO Returned all Enrollments from database. 20
+2019-02-11 10:21:00.7019 INFO Returned all sections from database. 22
+2019-02-11 10:21:00.7167 INFO Returned all courses from database. 24
+2019-02-11 10:21:00.9518 INFO Returned All Section Course Information
+2019-02-11 10:21:01.0094 INFO Returned Department with id: 2
+2019-02-11 10:21:01.0745 INFO Number of Enrollments10
+2019-02-11 10:21:01.0764 INFO Current StudentID 190181
+2019-02-11 10:21:01.0786 INFO Current StudentID 190370
+2019-02-11 10:21:01.0812 INFO Current StudentID 193402
+2019-02-11 10:21:01.0836 INFO Current StudentID 195630
+2019-02-11 10:21:01.0870 INFO Current StudentID 194644
+2019-02-11 10:21:01.0894 INFO Current StudentID 190181
+2019-02-11 10:21:01.0921 INFO Current StudentID 190370
+2019-02-11 10:21:01.0949 INFO Current StudentID 193402
+2019-02-11 10:21:01.0982 INFO Current StudentID 195630
+2019-02-11 10:21:01.1010 INFO Current StudentID 194644
+2019-02-11 10:21:01.1026 INFO Returned All Section Course Information
+2019-02-11 10:21:47.1150 INFO Returned All Section Course Information
+2019-02-11 10:21:47.2113 INFO Returned Department with id: 2
+2019-02-11 10:21:47.3573 INFO Number of Enrollments10
+2019-02-11 10:21:47.3593 INFO Current StudentID 190181
+2019-02-11 10:21:47.3640 INFO Current StudentID 190370
+2019-02-11 10:21:47.3668 INFO Current StudentID 193402
+2019-02-11 10:21:47.3692 INFO Current StudentID 195630
+2019-02-11 10:21:47.3723 INFO Current StudentID 194644
+2019-02-11 10:21:47.3747 INFO Current StudentID 190181
+2019-02-11 10:21:47.3779 INFO Current StudentID 190370
+2019-02-11 10:21:47.3813 INFO Current StudentID 193402
+2019-02-11 10:21:47.3850 INFO Current StudentID 195630
+2019-02-11 10:21:47.3875 INFO Current StudentID 194644
+2019-02-11 10:21:47.3892 INFO Returned All Section Course Information
+2019-02-11 10:21:47.4963 INFO Returned Student with id: 194644
+2019-02-11 10:21:47.6473 INFO Returned Student with id: 194644
+2019-02-11 10:21:47.7209 INFO Returned Department with id: 3
+2019-02-11 10:21:47.7913 INFO Returned all transactions from database. System.Linq.OrderedEnumerable`2[Entities.Models.Transaction,System.Int32]
+2019-02-11 10:21:47.8548 INFO Returned all Enrollments from database. 20
+2019-02-11 10:21:47.8753 INFO Returned all sections from database. 22
+2019-02-11 10:21:47.8901 INFO Returned all courses from database. 24
+2019-02-11 10:22:50.8324 INFO Returned Student with id: 194644
+2019-02-11 10:22:50.9582 INFO Returned All Section Course Information
+2019-02-11 10:22:50.9891 INFO Returned Student with id: 194644
+2019-02-11 10:22:51.0292 INFO Returned Department with id: 2
+2019-02-11 10:22:51.0920 INFO Returned Department with id: 3
+2019-02-11 10:22:51.1340 INFO Returned all transactions from database. System.Linq.OrderedEnumerable`2[Entities.Models.Transaction,System.Int32]
+2019-02-11 10:22:51.1409 INFO Number of Enrollments10
+2019-02-11 10:22:51.1430 INFO Current StudentID 190181
+2019-02-11 10:22:51.1456 INFO Current StudentID 190370
+2019-02-11 10:22:51.1481 INFO Current StudentID 193402
+2019-02-11 10:22:51.1510 INFO Current StudentID 195630
+2019-02-11 10:22:51.1577 INFO Current StudentID 194644
+2019-02-11 10:22:51.1617 INFO Current StudentID 190181
+2019-02-11 10:22:51.1655 INFO Current StudentID 190370
+2019-02-11 10:22:51.1774 INFO Current StudentID 193402
+2019-02-11 10:22:51.1820 INFO Current StudentID 195630
+2019-02-11 10:22:51.1855 INFO Current StudentID 194644
+2019-02-11 10:22:51.1885 INFO Returned All Section Course Information
+2019-02-11 10:22:51.3033 INFO Returned all Enrollments from database. 20
+2019-02-11 10:22:51.3369 INFO Returned all sections from database. 22
+2019-02-11 10:22:51.3761 INFO Returned all courses from database. 24
+2019-02-11 10:22:56.5034 INFO Returned All Section Course Information
+2019-02-11 10:22:56.5266 INFO Returned Department with id: 2
+2019-02-11 10:22:56.5529 INFO Number of Enrollments10
+2019-02-11 10:22:56.5551 INFO Current StudentID 190181
+2019-02-11 10:22:56.5583 INFO Current StudentID 190370
+2019-02-11 10:22:56.5607 INFO Current StudentID 193402
+2019-02-11 10:22:56.5636 INFO Current StudentID 195630
+2019-02-11 10:22:56.5664 INFO Current StudentID 194644
+2019-02-11 10:22:56.5690 INFO Current StudentID 190181
+2019-02-11 10:22:56.5718 INFO Current StudentID 190370
+2019-02-11 10:22:56.5746 INFO Current StudentID 193402
+2019-02-11 10:22:56.5777 INFO Current StudentID 195630
+2019-02-11 10:22:56.5815 INFO Current StudentID 194644
+2019-02-11 10:22:56.5831 INFO Returned All Section Course Information
+2019-02-11 10:34:35.9728 INFO Returned all userlogins from database. 26
+2019-02-11 10:34:36.1693 INFO Returned all users from database. System.Linq.OrderedEnumerable`2[Entities.Models.User,System.DateTime]
+2019-02-11 10:34:44.3921 INFO Returned Enrollment with id: 8
+2019-02-11 10:36:41.0698 INFO Returned Student with id: 194644
+2019-02-11 10:36:41.1045 INFO Returned Student with id: 194644
+2019-02-11 10:36:41.2060 INFO Returned Department with id: 3
+2019-02-11 10:36:41.2449 INFO Returned all transactions from database. System.Linq.OrderedEnumerable`2[Entities.Models.Transaction,System.Int32]
+2019-02-11 10:36:41.2906 INFO Returned all Enrollments from database. 20
+2019-02-11 10:36:41.3171 INFO Returned all sections from database. 22
+2019-02-11 10:36:41.3504 INFO Returned all courses from database. 24
+2019-02-11 10:36:41.5581 INFO Returned all userlogins from database. 26
+2019-02-11 10:36:41.5936 INFO Returned all users from database. System.Linq.OrderedEnumerable`2[Entities.Models.User,System.DateTime]
+2019-02-11 10:38:01.1925 INFO Enrolled
+2019-02-11 10:38:01.1954 INFO Entities.Models.StudentInfo
+2019-02-11 10:38:01.1954 INFO Enrolled
+2019-02-11 10:38:01.1971 INFO Entities.Models.StudentInfo
+2019-02-11 10:38:01.1971 INFO Enrolled
+2019-02-11 10:38:01.1988 INFO Entities.Models.StudentInfo
+2019-02-11 10:38:01.1993 INFO Enrolled
+2019-02-11 10:38:01.2005 INFO Entities.Models.StudentInfo
+2019-02-11 10:38:01.2011 INFO Enrolled
+2019-02-11 10:38:01.2056 INFO Entities.Models.StudentInfo
+2019-02-11 10:38:01.2066 INFO Enrolled
+2019-02-11 10:38:01.2088 INFO Entities.Models.StudentInfo
+2019-02-11 10:38:01.2095 INFO Drop Out
+2019-02-11 10:38:01.2112 INFO Entities.Models.StudentInfo
+2019-02-11 10:38:01.2112 INFO Enrolled
+2019-02-11 10:38:01.2129 INFO Entities.Models.StudentInfo
+2019-02-11 10:38:01.2130 INFO Enrolled
+2019-02-11 10:38:01.2148 INFO Entities.Models.StudentInfo
+2019-02-11 10:38:01.2154 INFO Enrolled
+2019-02-11 10:38:01.2171 INFO Entities.Models.StudentInfo
+2019-02-11 10:38:01.2171 INFO Enrolled
+2019-02-11 10:38:01.2221 INFO Entities.Models.StudentInfo
+2019-02-11 10:38:01.2221 INFO Enrolled
+2019-02-11 10:38:01.2253 INFO Entities.Models.StudentInfo
+2019-02-11 10:38:01.2253 INFO Enrolled
+2019-02-11 10:38:01.2280 INFO Entities.Models.StudentInfo
+2019-02-11 10:38:01.2300 INFO Returned all students from database. 13
+2019-02-11 10:38:03.6660 INFO Enrolled
+2019-02-11 10:38:03.6689 INFO Entities.Models.StudentInfo
+2019-02-11 10:38:03.6690 INFO Enrolled
+2019-02-11 10:38:03.6725 INFO Entities.Models.StudentInfo
+2019-02-11 10:38:03.6731 INFO Enrolled
+2019-02-11 10:38:03.6750 INFO Entities.Models.StudentInfo
+2019-02-11 10:38:03.6750 INFO Enrolled
+2019-02-11 10:38:03.6773 INFO Entities.Models.StudentInfo
+2019-02-11 10:38:03.6780 INFO Enrolled
+2019-02-11 10:38:03.6796 INFO Entities.Models.StudentInfo
+2019-02-11 10:38:03.6804 INFO Enrolled
+2019-02-11 10:38:03.6824 INFO Entities.Models.StudentInfo
+2019-02-11 10:38:03.6833 INFO Drop Out
+2019-02-11 10:38:03.6848 INFO Entities.Models.StudentInfo
+2019-02-11 10:38:03.6854 INFO Enrolled
+2019-02-11 10:38:03.6869 INFO Entities.Models.StudentInfo
+2019-02-11 10:38:03.6869 INFO Enrolled
+2019-02-11 10:38:03.6890 INFO Entities.Models.StudentInfo
+2019-02-11 10:38:03.6890 INFO Enrolled
+2019-02-11 10:38:03.6907 INFO Entities.Models.StudentInfo
+2019-02-11 10:38:03.6913 INFO Enrolled
+2019-02-11 10:38:03.6927 INFO Entities.Models.StudentInfo
+2019-02-11 10:38:03.6933 INFO Enrolled
+2019-02-11 10:38:03.6949 INFO Entities.Models.StudentInfo
+2019-02-11 10:38:03.6954 INFO Enrolled
+2019-02-11 10:38:03.6975 INFO Entities.Models.StudentInfo
+2019-02-11 10:38:03.6999 INFO Returned all students from database. 13
+2019-02-11 10:57:59.8832 INFO Returned all departments from database. System.Linq.OrderedEnumerable`2[Entities.Models.Department,System.Int32]
+2019-02-11 10:58:21.2711 INFO Returned All Section Course Information
+2019-02-11 10:58:21.2953 INFO Returned Department with id: 2
+2019-02-11 10:58:21.3254 INFO Number of Enrollments10
+2019-02-11 10:58:21.3273 INFO Current StudentID 190181
+2019-02-11 10:58:21.3300 INFO Current StudentID 190370
+2019-02-11 10:58:21.3323 INFO Current StudentID 193402
+2019-02-11 10:58:21.3343 INFO Current StudentID 195630
+2019-02-11 10:58:21.3359 INFO Current StudentID 194644
+2019-02-11 10:58:21.3381 INFO Current StudentID 190181
+2019-02-11 10:58:21.3402 INFO Current StudentID 190370
+2019-02-11 10:58:21.3429 INFO Current StudentID 193402
+2019-02-11 10:58:21.3453 INFO Current StudentID 195630
+2019-02-11 10:58:21.3479 INFO Current StudentID 194644
+2019-02-11 10:58:21.3571 INFO Returned All Section Course Information
+2019-02-11 10:59:45.4670 INFO Returned All Section Course Information
+2019-02-11 10:59:45.4980 INFO Returned Department with id: 2
+2019-02-11 10:59:45.5393 INFO Number of Enrollments10
+2019-02-11 10:59:45.5423 INFO Current StudentID 190181
+2019-02-11 10:59:45.5451 INFO Current StudentID 190370
+2019-02-11 10:59:45.5481 INFO Current StudentID 193402
+2019-02-11 10:59:45.5522 INFO Current StudentID 195630
+2019-02-11 10:59:45.5586 INFO Current StudentID 194644
+2019-02-11 10:59:45.5621 INFO Current StudentID 190181
+2019-02-11 10:59:45.5651 INFO Current StudentID 190370
+2019-02-11 10:59:45.5680 INFO Current StudentID 193402
+2019-02-11 10:59:45.5704 INFO Current StudentID 195630
+2019-02-11 10:59:45.5735 INFO Current StudentID 194644
+2019-02-11 10:59:45.5764 INFO Returned All Section Course Information
+2019-02-11 11:00:36.3428 INFO Returned All Section Course Information
+2019-02-11 11:00:36.3988 INFO Returned Department with id: 2
+2019-02-11 11:00:36.4512 INFO Number of Enrollments10
+2019-02-11 11:00:36.4536 INFO Current StudentID 190181
+2019-02-11 11:00:36.4573 INFO Current StudentID 190370
+2019-02-11 11:00:36.4606 INFO Current StudentID 193402
+2019-02-11 11:00:36.4634 INFO Current StudentID 195630
+2019-02-11 11:00:36.4670 INFO Current StudentID 194644
+2019-02-11 11:00:36.4714 INFO Current StudentID 190181
+2019-02-11 11:00:36.4745 INFO Current StudentID 190370
+2019-02-11 11:00:36.4779 INFO Current StudentID 193402
+2019-02-11 11:00:36.4812 INFO Current StudentID 195630
+2019-02-11 11:00:36.4838 INFO Current StudentID 194644
+2019-02-11 11:00:36.4857 INFO Returned All Section Course Information
+2019-02-11 11:06:42.0468 INFO Returned Student with id: 194644
+2019-02-11 11:06:42.1027 INFO Returned Student with id: 194644
+2019-02-11 11:06:42.1661 INFO Returned Department with id: 3
+2019-02-11 11:06:42.1788 INFO Returned all transactions from database. System.Linq.OrderedEnumerable`2[Entities.Models.Transaction,System.Int32]
+2019-02-11 11:06:42.1961 INFO Returned all Enrollments from database. 20
+2019-02-11 11:06:42.2053 INFO Returned all sections from database. 22
+2019-02-11 11:06:42.2140 INFO Returned all courses from database. 24
+2019-02-11 11:08:06.7853 INFO Returned Student with id: 194644
+2019-02-11 11:08:06.8573 INFO Returned Student with id: 194644
+2019-02-11 11:08:06.8907 INFO Returned Department with id: 3
+2019-02-11 11:08:06.9141 INFO Returned all transactions from database. System.Linq.OrderedEnumerable`2[Entities.Models.Transaction,System.Int32]
+2019-02-11 11:08:06.9385 INFO Returned all Enrollments from database. 20
+2019-02-11 11:08:06.9564 INFO Returned all sections from database. 22
+2019-02-11 11:08:06.9730 INFO Returned all courses from database. 24
+2019-02-11 11:08:07.2706 INFO Returned User with id: 1
+2019-02-11 11:08:07.3272 INFO Returned All Section Course Information
+2019-02-11 11:08:07.3636 INFO Number of Enrollments0
+2019-02-11 11:08:07.3641 INFO Returned All Section Course Information
+2019-02-11 11:08:07.3890 INFO Returned Department with id: 2
+2019-02-11 11:08:07.4419 INFO Number of Enrollments10
+2019-02-11 11:08:07.4431 INFO Current StudentID 190181
+2019-02-11 11:08:07.4452 INFO Current StudentID 190370
+2019-02-11 11:08:07.4478 INFO Current StudentID 193402
+2019-02-11 11:08:07.4504 INFO Current StudentID 195630
+2019-02-11 11:08:07.4534 INFO Current StudentID 194644
+2019-02-11 11:08:07.4559 INFO Current StudentID 190181
+2019-02-11 11:08:07.4583 INFO Current StudentID 190370
+2019-02-11 11:08:07.4607 INFO Current StudentID 193402
+2019-02-11 11:08:07.4633 INFO Current StudentID 195630
+2019-02-11 11:08:07.4662 INFO Current StudentID 194644
+2019-02-11 11:08:07.4686 INFO Returned All Section Course Information
+2019-02-11 11:10:00.7808 INFO Returned Student with id: 194644
+2019-02-11 11:10:00.8573 INFO Returned Student with id: 194644
+2019-02-11 11:10:00.9012 INFO Returned Department with id: 3
+2019-02-11 11:10:00.9304 INFO Returned all transactions from database. System.Linq.OrderedEnumerable`2[Entities.Models.Transaction,System.Int32]
+2019-02-11 11:10:00.9834 INFO Returned all Enrollments from database. 20
+2019-02-11 11:10:01.0013 INFO Returned all sections from database. 22
+2019-02-11 11:10:01.0159 INFO Returned all courses from database. 24
+2019-02-11 11:10:01.5924 INFO Returned User with id: 1
+2019-02-11 11:10:01.6497 INFO Returned All Section Course Information
+2019-02-11 11:10:01.7085 INFO Returned Department with id: 2
+2019-02-11 11:10:01.7531 INFO Number of Enrollments10
+2019-02-11 11:10:01.7544 INFO Current StudentID 190181
+2019-02-11 11:10:01.7582 INFO Current StudentID 190370
+2019-02-11 11:10:01.7609 INFO Current StudentID 193402
+2019-02-11 11:10:01.7639 INFO Current StudentID 195630
+2019-02-11 11:10:01.7668 INFO Current StudentID 194644
+2019-02-11 11:10:01.7697 INFO Current StudentID 190181
+2019-02-11 11:10:01.7722 INFO Current StudentID 190370
+2019-02-11 11:10:01.7749 INFO Current StudentID 193402
+2019-02-11 11:10:01.7778 INFO Current StudentID 195630
+2019-02-11 11:10:01.7803 INFO Current StudentID 194644
+2019-02-11 11:10:01.7824 INFO Returned All Section Course Information
+2019-02-11 11:10:37.9870 INFO Returned Student with id: 194644
+2019-02-11 11:10:38.0805 INFO Returned Student with id: 194644
+2019-02-11 11:10:38.1915 INFO Returned Department with id: 3
+2019-02-11 11:10:38.2165 INFO Returned all transactions from database. System.Linq.OrderedEnumerable`2[Entities.Models.Transaction,System.Int32]
+2019-02-11 11:10:38.2616 INFO Returned all Enrollments from database. 20
+2019-02-11 11:10:38.2737 INFO Returned all sections from database. 22
+2019-02-11 11:10:38.2895 INFO Returned all courses from database. 24
+2019-02-11 11:10:38.7039 INFO Returned User with id: 1
+2019-02-11 11:10:38.7866 INFO Returned All Section Course Information
+2019-02-11 11:10:38.8796 INFO Returned Department with id: 2
+2019-02-11 11:10:38.9663 INFO Number of Enrollments10
+2019-02-11 11:10:38.9681 INFO Current StudentID 190181
+2019-02-11 11:10:38.9711 INFO Current StudentID 190370
+2019-02-11 11:10:38.9747 INFO Current StudentID 193402
+2019-02-11 11:10:38.9776 INFO Current StudentID 195630
+2019-02-11 11:10:38.9808 INFO Current StudentID 194644
+2019-02-11 11:10:38.9841 INFO Current StudentID 190181
+2019-02-11 11:10:38.9866 INFO Current StudentID 190370
+2019-02-11 11:10:38.9890 INFO Current StudentID 193402
+2019-02-11 11:10:38.9924 INFO Current StudentID 195630
+2019-02-11 11:10:38.9960 INFO Current StudentID 194644
+2019-02-11 11:10:38.9976 INFO Returned All Section Course Information

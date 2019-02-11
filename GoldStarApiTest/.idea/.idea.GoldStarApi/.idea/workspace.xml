@@ -2,18 +2,82 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47b11001-0ccd-463e-ae93-58d9cb355c18" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/GoldStarApi/logs/2019-02-11_logfile.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../testing/Template Test Summary Report.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../testing/Template Testing Incident Report.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../testing/testingDoc.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GoldStarApi/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GoldStarApi/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GoldStarApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GoldStarApi/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contracts/bin/Debug/netcoreapp2.2/Contracts.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts/bin/Debug/netcoreapp2.2/Contracts.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contracts/bin/Debug/netcoreapp2.2/Contracts.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts/bin/Debug/netcoreapp2.2/Contracts.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contracts/bin/Debug/netcoreapp2.2/Entities.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts/bin/Debug/netcoreapp2.2/Entities.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contracts/bin/Debug/netcoreapp2.2/Entities.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts/bin/Debug/netcoreapp2.2/Entities.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contracts/obj/Contracts.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts/obj/Contracts.csproj.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contracts/obj/Contracts.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts/obj/Contracts.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contracts/obj/Contracts.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts/obj/Contracts.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contracts/obj/Debug/netcoreapp2.2/Contracts.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts/obj/Debug/netcoreapp2.2/Contracts.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contracts/obj/Debug/netcoreapp2.2/Contracts.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts/obj/Debug/netcoreapp2.2/Contracts.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contracts/obj/Debug/netcoreapp2.2/Contracts.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts/obj/Debug/netcoreapp2.2/Contracts.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contracts/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contracts/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/bin/Debug/netcoreapp2.2/Entities.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/bin/Debug/netcoreapp2.2/Entities.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/bin/Debug/netcoreapp2.2/Entities.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/bin/Debug/netcoreapp2.2/Entities.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/bin/Debug/netcoreapp2.2/Entities.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/bin/Debug/netcoreapp2.2/Entities.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/obj/Debug/netcoreapp2.2/Entities.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/obj/Debug/netcoreapp2.2/Entities.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/obj/Debug/netcoreapp2.2/Entities.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/obj/Debug/netcoreapp2.2/Entities.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/obj/Debug/netcoreapp2.2/Entities.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/obj/Debug/netcoreapp2.2/Entities.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/obj/Debug/netcoreapp2.2/Entities.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/obj/Debug/netcoreapp2.2/Entities.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/obj/Entities.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/obj/Entities.csproj.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/obj/Entities.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/obj/Entities.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/obj/Entities.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/obj/Entities.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoldStarApi/Controllers/EnrollmentController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoldStarApi/Controllers/EnrollmentController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GoldStarApi/Controllers/SectionController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoldStarApi/Controllers/SectionController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoldStarApi/bin/Debug/netcoreapp2.2/Contracts.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GoldStarApi/bin/Debug/netcoreapp2.2/Contracts.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoldStarApi/bin/Debug/netcoreapp2.2/Entities.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GoldStarApi/bin/Debug/netcoreapp2.2/Entities.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoldStarApi/bin/Debug/netcoreapp2.2/Entities.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/GoldStarApi/bin/Debug/netcoreapp2.2/Entities.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoldStarApi/bin/Debug/netcoreapp2.2/GoldStarApi.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/GoldStarApi/bin/Debug/netcoreapp2.2/GoldStarApi.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GoldStarApi/bin/Debug/netcoreapp2.2/GoldStarApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GoldStarApi/bin/Debug/netcoreapp2.2/GoldStarApi.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GoldStarApi/bin/Debug/netcoreapp2.2/GoldStarApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/GoldStarApi/bin/Debug/netcoreapp2.2/GoldStarApi.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoldStarApi/bin/Debug/netcoreapp2.2/GoldStarApi.runtimeconfig.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/GoldStarApi/bin/Debug/netcoreapp2.2/GoldStarApi.runtimeconfig.dev.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoldStarApi/bin/Debug/netcoreapp2.2/LoggerService.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GoldStarApi/bin/Debug/netcoreapp2.2/LoggerService.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoldStarApi/bin/Debug/netcoreapp2.2/LoggerService.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/GoldStarApi/bin/Debug/netcoreapp2.2/LoggerService.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GoldStarApi/internal_logs/internallog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GoldStarApi/internal_logs/internallog.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoldStarApi/logs/2019-02-10_logfile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GoldStarApi/logs/2019-02-10_logfile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoldStarApi/obj/Debug/netcoreapp2.2/GoldStarApi.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GoldStarApi/obj/Debug/netcoreapp2.2/GoldStarApi.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoldStarApi/obj/Debug/netcoreapp2.2/GoldStarApi.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GoldStarApi/obj/Debug/netcoreapp2.2/GoldStarApi.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoldStarApi/obj/Debug/netcoreapp2.2/GoldStarApi.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GoldStarApi/obj/Debug/netcoreapp2.2/GoldStarApi.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GoldStarApi/obj/Debug/netcoreapp2.2/GoldStarApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GoldStarApi/obj/Debug/netcoreapp2.2/GoldStarApi.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GoldStarApi/obj/Debug/netcoreapp2.2/GoldStarApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/GoldStarApi/obj/Debug/netcoreapp2.2/GoldStarApi.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCISFrontEnd/src/app/menu/menu.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../HCISFrontEnd/src/app/menu/menu.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoldStarApi/obj/GoldStarApi.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GoldStarApi/obj/GoldStarApi.csproj.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoldStarApi/obj/GoldStarApi.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/GoldStarApi/obj/GoldStarApi.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoldStarApi/obj/GoldStarApi.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/GoldStarApi/obj/GoldStarApi.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoldStarApi/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/GoldStarApi/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoldStarApi/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/GoldStarApi/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggerService/bin/Debug/netcoreapp2.2/Contracts.dll" beforeDir="false" afterPath="$PROJECT_DIR$/LoggerService/bin/Debug/netcoreapp2.2/Contracts.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggerService/bin/Debug/netcoreapp2.2/Entities.dll" beforeDir="false" afterPath="$PROJECT_DIR$/LoggerService/bin/Debug/netcoreapp2.2/Entities.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggerService/bin/Debug/netcoreapp2.2/Entities.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/LoggerService/bin/Debug/netcoreapp2.2/Entities.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggerService/bin/Debug/netcoreapp2.2/LoggerService.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/LoggerService/bin/Debug/netcoreapp2.2/LoggerService.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggerService/bin/Debug/netcoreapp2.2/LoggerService.dll" beforeDir="false" afterPath="$PROJECT_DIR$/LoggerService/bin/Debug/netcoreapp2.2/LoggerService.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggerService/bin/Debug/netcoreapp2.2/LoggerService.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/LoggerService/bin/Debug/netcoreapp2.2/LoggerService.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.dll" beforeDir="false" afterPath="$PROJECT_DIR$/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/LoggerService/obj/Debug/netcoreapp2.2/LoggerService.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggerService/obj/LoggerService.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/LoggerService/obj/LoggerService.csproj.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggerService/obj/LoggerService.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/LoggerService/obj/LoggerService.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggerService/obj/LoggerService.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/LoggerService/obj/LoggerService.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggerService/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/LoggerService/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggerService/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/LoggerService/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Repository/obj/Debug/netcoreapp2.2/Repository.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Repository/obj/Debug/netcoreapp2.2/Repository.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Repository/obj/Repository.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Repository/obj/Repository.csproj.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Repository/obj/Repository.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Repository/obj/Repository.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Repository/obj/Repository.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/Repository/obj/Repository.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Repository/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Repository/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Repository/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Repository/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HCISFrontEnd/src/app/reports/student-courses-report/student-courses-report.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../HCISFrontEnd/src/app/reports/student-courses-report/student-courses-report.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../HCISFrontEnd/src/app/reports/student-courses-report/student-courses-report.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../HCISFrontEnd/src/app/reports/student-courses-report/student-courses-report.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCISFrontEnd/src/app/student/student-home/student-home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../HCISFrontEnd/src/app/student/student-home/student-home.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCISFrontEnd/src/app/student/student-register/student-register.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../HCISFrontEnd/src/app/student/student-register/student-register.component.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,85 +87,166 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/GoldStarApi/Controllers/SectionController.cs">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GoldStarApi/Controllers/EnrollmentController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="53">
-              <caret line="328" column="43" selection-start-line="328" selection-start-column="43" selection-end-line="328" selection-end-column="43" />
+            <state relative-caret-position="21">
+              <caret line="262" column="62" selection-start-line="262" selection-start-column="62" selection-end-line="262" selection-end-column="62" />
               <folding>
-                <marker date="1549805501229" expanded="false" signature="6:211" ph="..." />
-                <marker date="1549805501229" expanded="true" signature="246:20077" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="323:20075" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="584:672" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="745:1266" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="771:1028" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="1061:1256" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="1374:2127" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="1413:1889" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="1541:1706" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="1727:1875" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="1922:2117" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="2258:3289" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="2297:3051" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="2496:2677" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="2564:2659" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="2722:2863" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="2884:3037" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="3084:3279" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="3421:4456" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="3460:4218" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="3665:3844" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="3703:3826" ph="/* if (section. == id) ... */" />
-                <marker date="1549805501229" expanded="true" signature="3889:4030" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="4051:4204" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="4251:4446" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="4577:6798" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="4616:6556" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="4818:4958" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="5028:6391" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="6589:6788" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="6961:9329" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="6988:9087" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="7190:7330" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="7384:8945" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="7545:8905" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="9120:9319" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="9538:10099" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="9565:9857" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="9890:10089" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="10207:12487" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="10234:12281" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="10443:10577" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="10631:12218" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="10804:12200" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="12029:12153" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="12314:12477" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="12738:14052" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="12765:13810" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="13263:13427" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="13516:13727" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="13594:13709" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="13843:14042" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="14176:17111" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="14479:14643" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="14893:16294" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="15088:15360" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="16530:16991" ph="/* for (var i = 0; i &lt; studentsByEnrollment.Count; i++) ... */" />
-                <marker date="1549805501229" expanded="true" signature="17201:18055" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="17227:17818" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="17282:17465" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="17507:17688" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="17851:18045" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="18168:19302" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="18194:19065" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="18250:18433" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="18476:18657" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="18775:18940" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="19098:19292" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="19382:20062" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="19408:19825" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="19533:19698" ph="{...}" />
-                <marker date="1549805501229" expanded="true" signature="19858:20052" ph="{...}" />
+                <marker date="1549895595373" expanded="false" signature="6:255" ph="..." />
+                <marker date="1549895595373" expanded="true" signature="290:11919" ph="{...}" />
+                <marker date="1549895595373" expanded="true" signature="373:11917" ph="{...}" />
+                <marker date="1549895595373" expanded="true" signature="676:764" ph="{...}" />
+                <marker date="1549895595373" expanded="true" signature="840:1382" ph="{...}" />
+                <marker date="1549895595373" expanded="true" signature="866:1141" ph="{...}" />
+                <marker date="1549895595373" expanded="true" signature="1174:1372" ph="{...}" />
+                <marker date="1549895595373" expanded="true" signature="1496:2288" ph="{...}" />
+                <marker date="1549895595373" expanded="true" signature="1535:2046" ph="{...}" />
+                <marker date="1549895595373" expanded="true" signature="1689:1857" ph="{...}" />
+                <marker date="1549895595373" expanded="true" signature="1878:2032" ph="{...}" />
+                <marker date="1549895595373" expanded="true" signature="2079:2278" ph="{...}" />
+                <marker date="1549895595373" expanded="true" signature="2424:4781" ph="{...}" />
+                <marker date="1549895595373" expanded="true" signature="2463:4539" ph="{...}" />
+                <marker date="1549895595373" expanded="true" signature="2775:4131" ph="{...}" />
+                <marker date="1549895595373" expanded="true" signature="4179:4347" ph="{...}" />
+                <marker date="1549895595373" expanded="true" signature="4368:4525" ph="{...}" />
+                <marker date="1549895595373" expanded="true" signature="4572:4771" ph="{...}" />
+                <marker date="1549895595373" expanded="true" signature="4935:6039" ph="{...}" />
+                <marker date="1549895595373" expanded="true" signature="4974:5797" ph="{...}" />
+                <marker date="1549895595373" expanded="true" signature="5210:5378" ph="{...}" />
+                <marker date="1549895595373" expanded="true" signature="5448:5638" ph="{...}" />
+                <marker date="1549895595373" expanded="true" signature="5516:5619" ph="{...}" />
+                <marker date="1549895595373" expanded="true" signature="5830:6029" ph="{...}" />
+                <marker date="1549895595373" expanded="true" signature="6238:7499" ph="{...}" />
+                <marker date="1549895595373" expanded="true" signature="6277:7257" ph="{...}" />
+                <marker date="1549895595373" expanded="true" signature="6499:6674" ph="{...}" />
+                <marker date="1549895595373" expanded="true" signature="6744:7115" ph="{...}" />
+                <marker date="1549895595373" expanded="true" signature="6936:7096" ph="{...}" />
+                <marker date="1549895595373" expanded="true" signature="7290:7489" ph="{...}" />
+                <marker date="1549895595373" expanded="true" signature="7600:8649" ph="{...}" />
+                <marker date="1549895595373" expanded="true" signature="7667:8409" ph="{...}" />
+                <marker date="1549895595373" expanded="true" signature="7725:7914" ph="{...}" />
+                <marker date="1549895595373" expanded="true" signature="7956:8140" ph="{...}" />
+                <marker date="1549895595373" expanded="true" signature="8442:8639" ph="{...}" />
+                <marker date="1549895595373" expanded="true" signature="8771:10169" ph="{...}" />
+                <marker date="1549895595373" expanded="true" signature="8810:9929" ph="{...}" />
+                <marker date="1549895595373" expanded="true" signature="8869:9058" ph="{...}" />
+                <marker date="1549895595373" expanded="true" signature="9101:9285" ph="{...}" />
+                <marker date="1549895595373" expanded="true" signature="9415:9583" ph="{...}" />
+                <marker date="1549895595373" expanded="true" signature="9747:9846" ph="{...}" />
+                <marker date="1549895595373" expanded="true" signature="9962:10159" ph="{...}" />
+                <marker date="1549895595373" expanded="true" signature="10222:11096" ph="{...}" />
+                <marker date="1549895595373" expanded="true" signature="10548:10819" ph="{...}" />
+                <marker date="1549895595373" expanded="true" signature="10668:10805" ph="{...}" />
+                <marker date="1549895595373" expanded="true" signature="11197:11904" ph="{...}" />
+                <marker date="1549895595373" expanded="true" signature="11223:11664" ph="{...}" />
+                <marker date="1549895595373" expanded="true" signature="11360:11528" ph="{...}" />
+                <marker date="1549895595373" expanded="true" signature="11697:11894" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Entities/Models/User.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="469">
+              <caret line="51" column="48" selection-start-line="51" selection-start-column="48" selection-end-line="51" selection-end-column="48" />
+              <folding>
+                <marker date="1549633917264" expanded="true" signature="0:463" ph="/* Name: User ... */" />
+                <marker date="1549633917264" expanded="false" signature="470:574" ph="..." />
+                <marker date="1549633917264" expanded="true" signature="601:2074" ph="{...}" />
+                <marker date="1549633917264" expanded="true" signature="645:2072" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Entities/Models/Enrollment.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="36" column="41" selection-start-line="36" selection-start-column="41" selection-end-line="36" selection-end-column="41" />
+              <folding>
+                <marker date="1549333480000" expanded="true" signature="0:475" ph="/* Name: Enrollment ... */" />
+                <marker date="1549333480000" expanded="true" signature="482:572" ph="..." />
+                <marker date="1549333480000" expanded="true" signature="599:1559" ph="{...}" />
+                <marker date="1549333480000" expanded="true" signature="655:1557" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GoldStarApi/Controllers/FacultyController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="119" column="26" selection-start-line="119" selection-start-column="26" selection-end-line="119" selection-end-column="26" />
+              <folding>
+                <marker date="1549598335204" expanded="false" signature="6:211" ph="..." />
+                <marker date="1549598335204" expanded="true" signature="246:6181" ph="{...}" />
+                <marker date="1549598335204" expanded="true" signature="323:6179" ph="{...}" />
+                <marker date="1549598335204" expanded="true" signature="520:608" ph="{...}" />
+                <marker date="1549598335204" expanded="true" signature="680:1199" ph="{...}" />
+                <marker date="1549598335204" expanded="true" signature="706:962" ph="{...}" />
+                <marker date="1549598335204" expanded="true" signature="995:1189" ph="{...}" />
+                <marker date="1549598335204" expanded="true" signature="1329:2337" ph="{...}" />
+                <marker date="1549598335204" expanded="true" signature="1368:2099" ph="{...}" />
+                <marker date="1549598335204" expanded="true" signature="1558:1732" ph="{...}" />
+                <marker date="1549598335204" expanded="true" signature="1623:1714" ph="{...}" />
+                <marker date="1549598335204" expanded="true" signature="1777:1912" ph="{...}" />
+                <marker date="1549598335204" expanded="true" signature="1933:2085" ph="{...}" />
+                <marker date="1549598335204" expanded="true" signature="2132:2327" ph="{...}" />
+                <marker date="1549598335204" expanded="true" signature="2463:3216" ph="{...}" />
+                <marker date="1549598335204" expanded="true" signature="2502:2978" ph="{...}" />
+                <marker date="1549598335204" expanded="true" signature="2630:2795" ph="{...}" />
+                <marker date="1549598335204" expanded="true" signature="2816:2964" ph="{...}" />
+                <marker date="1549598335204" expanded="true" signature="3011:3206" ph="{...}" />
+                <marker date="1549598335204" expanded="true" signature="3307:4159" ph="{...}" />
+                <marker date="1549598335204" expanded="true" signature="3333:3922" ph="{...}" />
+                <marker date="1549598335204" expanded="true" signature="3388:3571" ph="{...}" />
+                <marker date="1549598335204" expanded="true" signature="3613:3794" ph="{...}" />
+                <marker date="1549598335204" expanded="true" signature="3955:4149" ph="{...}" />
+                <marker date="1549598335204" expanded="true" signature="4272:5406" ph="{...}" />
+                <marker date="1549598335204" expanded="true" signature="4298:5169" ph="{...}" />
+                <marker date="1549598335204" expanded="true" signature="4354:4537" ph="{...}" />
+                <marker date="1549598335204" expanded="true" signature="4580:4761" ph="{...}" />
+                <marker date="1549598335204" expanded="true" signature="4879:5044" ph="{...}" />
+                <marker date="1549598335204" expanded="true" signature="5202:5396" ph="{...}" />
+                <marker date="1549598335204" expanded="true" signature="5486:6166" ph="{...}" />
+                <marker date="1549598335204" expanded="true" signature="5512:5929" ph="{...}" />
+                <marker date="1549598335204" expanded="true" signature="5637:5802" ph="{...}" />
+                <marker date="1549598335204" expanded="true" signature="5962:6156" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GoldStarApi/logs/2019-02-11_logfile.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1895">
+              <caret line="267" column="54" selection-start-line="267" selection-start-column="54" selection-end-line="267" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Repository/CourseRepository.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="123">
+              <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+              <folding>
+                <marker date="1549334579000" expanded="true" signature="0:384" ph="/* Name: CourseRepository ... */" />
+                <marker date="1549334579000" expanded="false" signature="391:520" ph="..." />
+                <marker date="1549334579000" expanded="true" signature="542:1539" ph="{...}" />
+                <marker date="1549334579000" expanded="true" signature="622:1537" ph="{...}" />
+                <marker date="1549334579000" expanded="true" signature="723:743" ph="{...}" />
+                <marker date="1549334579000" expanded="true" signature="795:892" ph="{...}" />
+                <marker date="1549334579000" expanded="true" signature="946:1127" ph="{...}" />
+                <marker date="1549334579000" expanded="true" signature="1176:1244" ph="{...}" />
+                <marker date="1549334579000" expanded="true" signature="1310:1414" ph="{...}" />
+                <marker date="1549334579000" expanded="true" signature="1463:1531" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -124,72 +269,72 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Contracts/IUserTypeCodeRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/GoldStarApi/Controllers/StudentController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Entities/Extensions/UserLoginExtensions.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts/IFacultyRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/GoldStarApi/Controllers/DepartmentController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Entities/Extensions/TransactionExtensions.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts/IRepositoryWrapper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/GoldStarApi/Controllers/UserLoginController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/GoldStarApi/Controllers/EnrollmentController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Entities/Extensions/StudentExtensions.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts/IDepartmentRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/GoldStarApi/Controllers/TransactionController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Entities/Extensions/EnrollmentExtensions.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts/IStudentRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Entities/Extensions/SectionExtensions.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Entities/Extensions/FacultyExtensions.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Entities/Extensions/CourseExtensions.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Entities/Extensions/UserExtensions.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/GoldStarApi/Extensions/ServiceExtensions.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Entities/Extensions/DepartmentExtensions.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Entities/Extensions/UserTypeCodeExtensions.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts/IRepositoryBase.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Entities/Models/StudentInfo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts/IEnrollmentRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts/IUserLoginRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts/ITransactionRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts/ISectionRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/GoldStarApi/Startup.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Entities/Models/UserLogin.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Entities/Models/CourseInformation.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts/ILoggerManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Entities/Models/Course.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts/IUserRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Repository/RepositoryBase.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts/ICourseRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Entities/Models/Enrollment.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Repository/FacultyRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Entities/RepositoryContext.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Entities/Models/Faculty.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Entities/Models/Section.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Repository/RepositoryWrapper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Entities/Models/Student.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Entities/Models/Transaction.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Repository/UserTypeCodeRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Entities/Models/User.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Entities/Models/UserTypeCode.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Entities/Models/Department.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Repository/DepartmentRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Entities/Models/FacultyInfo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Repository/CourseRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/GoldStarApi/Controllers/FacultyInfoController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Repository/SectionRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggerService/LoggerManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Repository/EnrollmentRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/GoldStarApi/Controllers/FacultyController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/GoldStarApi/Controllers/CourseController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/GoldStarApi/Controllers/UserController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Repository/StudentRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Repository/UserLoginRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/GoldStarApi/Controllers/SectionController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/GoldStarApi/nlog.config" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/GoldStarApi/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/GoldStarApi/Controllers/StudentInfoController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Repository/TransactionRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/GoldStarApi/Controllers/UserTypeCodeController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GoldStarApi/Controllers/SectionController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Entities/RepositoryContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Entities/Models/FacultyInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GoldStarApi/Startup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GoldStarApi/Controllers/FacultyInfoController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GoldStarApi/Controllers/TransactionController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GoldStarApi/Controllers/EnrollmentController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GoldStarApi/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GoldStarApi/nlog.config" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GoldStarApi/Controllers/StudentInfoController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Entities/Models/Department.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Entities/Models/User.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Entities/Models/Transaction.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Repository/TransactionRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Entities/Models/Course.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Repository/EnrollmentRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Entities/Models/Student.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Entities/Models/UserLogin.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Entities/Models/Faculty.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Entities/Extensions/DepartmentExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Entities/Extensions/UserExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Entities/Extensions/CourseExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Entities/Extensions/FacultyExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Entities/Extensions/StudentExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Entities/Extensions/TransactionExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Entities/Extensions/UserLoginExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts/ICourseRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts/IUserRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts/ILoggerManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Repository/UserTypeCodeRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts/ITransactionRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Repository/SectionRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts/IUserLoginRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Entities/Models/UserTypeCode.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts/IRepositoryBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts/IStudentRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts/IDepartmentRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts/IRepositoryWrapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts/IFacultyRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts/IUserTypeCodeRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Entities/Models/StudentInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Entities/Models/Section.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Entities/Models/Enrollment.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Entities/Extensions/SectionExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts/IEnrollmentRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts/ISectionRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Entities/Extensions/EnrollmentExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Entities/Extensions/UserTypeCodeExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GoldStarApi/Extensions/ServiceExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GoldStarApi/Controllers/UserLoginController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GoldStarApi/Controllers/DepartmentController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GoldStarApi/Controllers/StudentController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GoldStarApi/Controllers/UserController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GoldStarApi/Controllers/CourseController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GoldStarApi/Controllers/FacultyController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LoggerService/LoggerManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Repository/CourseRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Repository/UserRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Repository/DepartmentRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Repository/UserLoginRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Repository/RepositoryWrapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Repository/FacultyRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Repository/RepositoryBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Repository/StudentRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Entities/Models/CourseInformation.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -241,18 +386,17 @@
         <option value="$PROJECT_DIR$/Repository/UserRepository.cs" />
         <option value="$PROJECT_DIR$/Repository/FacultyRepository.cs" />
         <option value="$PROJECT_DIR$/GoldStarApi/Controllers/FacultyInfoController.cs" />
-        <option value="$PROJECT_DIR$/GoldStarApi/Controllers/EnrollmentController.cs" />
         <option value="$PROJECT_DIR$/GoldStarApi/logs/2019-02-08_logfile.txt" />
         <option value="$PROJECT_DIR$/GoldStarApi/logs/2019-02-10_logfile.txt" />
         <option value="$PROJECT_DIR$/GoldStarApi/Controllers/SectionController.cs" />
+        <option value="$PROJECT_DIR$/GoldStarApi/Controllers/EnrollmentController.cs" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-70" />
-    <option name="y" value="15" />
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1280" />
+    <option name="height" value="689" />
   </component>
   <component name="ProjectView">
     <navigator currentView="SolutionExplorer" proportions="" version="1">
@@ -266,6 +410,17 @@
             <path>
               <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
               <item name="GoldStarApi" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="GoldStarApi" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Entities" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="GoldStarApi" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Entities" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Models" type="24d0babc:SolutionExplorerModelNode" />
             </path>
             <path>
               <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
@@ -376,11 +531,12 @@
       <workItem from="1549723700534" duration="5394000" />
       <workItem from="1549771853265" duration="733000" />
       <workItem from="1549801340581" duration="3249000" />
+      <workItem from="1549892753143" duration="3024000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131322000" />
+    <option name="totallyTimeSpent" value="134346000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -392,16 +548,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="0" y="23" width="1280" height="689" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26012793" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2641357" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3294893" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4927302" visible="true" weight="0.2654388" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4927302" visible="true" weight="0.26298156" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4989339" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -415,7 +572,7 @@
       <window_info anchor="bottom" id="Unit Tests" order="13" weight="0.21746293" />
       <window_info anchor="bottom" id="Terminal" order="14" weight="0.32784185" />
       <window_info anchor="bottom" id="Event Log" order="15" sideWeight="0.5072698" side_tool="true" weight="0.5273973" />
-      <window_info anchor="bottom" id="Build" order="16" sideWeight="0.4927302" weight="0.31744313" />
+      <window_info anchor="bottom" id="Build" order="16" sideWeight="0.4927302" weight="0.31658292" />
       <window_info anchor="bottom" id="REST Client" order="17" weight="0.32784185" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -475,10 +632,10 @@
           <line>284</line>
           <properties documentPath="$PROJECT_DIR$/GoldStarApi/Controllers/SectionController.cs" initialLine="284">
             <startOffsets>
-              <option value="10825" />
+              <option value="10863" />
             </startOffsets>
             <endOffsets>
-              <option value="10826" />
+              <option value="10864" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="2" />
@@ -487,49 +644,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Repository/TransactionRepository.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
-          <folding>
-            <marker date="1549334895000" expanded="true" signature="0:394" ph="/* Name: CourseRepository ... */" />
-            <marker date="1549334895000" expanded="true" signature="401:530" ph="..." />
-            <marker date="1549334895000" expanded="true" signature="552:1673" ph="{...}" />
-            <marker date="1549334895000" expanded="true" signature="647:1671" ph="{...}" />
-            <marker date="1549334895000" expanded="true" signature="753:773" ph="{...}" />
-            <marker date="1549334895000" expanded="true" signature="835:929" ph="{...}" />
-            <marker date="1549334895000" expanded="true" signature="989:1183" ph="{...}" />
-            <marker date="1549334895000" expanded="true" signature="1247:1320" ph="{...}" />
-            <marker date="1549334895000" expanded="true" signature="1411:1528" ph="{...}" />
-            <marker date="1549334895000" expanded="true" signature="1592:1665" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Repository/UserLoginRepository.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="80" selection-start-line="2" selection-start-column="80" selection-end-line="2" selection-end-column="80" />
-          <folding>
-            <marker date="1549334923000" expanded="true" signature="0:390" ph="/* Name: CourseRepository ... */" />
-            <marker date="1549334923000" expanded="true" signature="397:526" ph="..." />
-            <marker date="1549334923000" expanded="true" signature="548:2495" ph="{...}" />
-            <marker date="1549334923000" expanded="true" signature="637:2493" ph="{...}" />
-            <marker date="1549334923000" expanded="true" signature="741:761" ph="{...}" />
-            <marker date="1549334923000" expanded="true" signature="819:913" ph="{...}" />
-            <marker date="1549334923000" expanded="true" signature="979:1168" ph="{...}" />
-            <marker date="1549334923000" expanded="true" signature="1227:1413" ph="{...}" />
-            <marker date="1549334923000" expanded="true" signature="1471:1542" ph="{...}" />
-            <marker date="1549334923000" expanded="true" signature="1623:1736" ph="{...}" />
-            <marker date="1549334923000" expanded="true" signature="1794:1865" ph="{...}" />
-            <marker date="1549334923000" expanded="true" signature="1913:2180" ph="{...}" />
-            <marker date="1549334923000" expanded="true" signature="2229:2286" ph="{...}" />
-            <marker date="1549334923000" expanded="true" signature="2329:2388" ph="{...}" />
-            <marker date="1549334923000" expanded="true" signature="2431:2487" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Repository/UserTypeCodeRepository.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -836,49 +950,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GoldStarApi/Controllers/FacultyController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1364">
-          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-          <folding>
-            <marker date="1549598335204" expanded="false" signature="6:211" ph="..." />
-            <marker date="1549598335204" expanded="true" signature="246:6181" ph="{...}" />
-            <marker date="1549598335204" expanded="true" signature="323:6179" ph="{...}" />
-            <marker date="1549598335204" expanded="true" signature="520:608" ph="{...}" />
-            <marker date="1549598335204" expanded="true" signature="680:1199" ph="{...}" />
-            <marker date="1549598335204" expanded="true" signature="706:962" ph="{...}" />
-            <marker date="1549598335204" expanded="true" signature="995:1189" ph="{...}" />
-            <marker date="1549598335204" expanded="true" signature="1329:2337" ph="{...}" />
-            <marker date="1549598335204" expanded="true" signature="1368:2099" ph="{...}" />
-            <marker date="1549598335204" expanded="true" signature="1558:1732" ph="{...}" />
-            <marker date="1549598335204" expanded="true" signature="1623:1714" ph="{...}" />
-            <marker date="1549598335204" expanded="true" signature="1777:1912" ph="{...}" />
-            <marker date="1549598335204" expanded="true" signature="1933:2085" ph="{...}" />
-            <marker date="1549598335204" expanded="true" signature="2132:2327" ph="{...}" />
-            <marker date="1549598335204" expanded="true" signature="2463:3216" ph="{...}" />
-            <marker date="1549598335204" expanded="true" signature="2502:2978" ph="{...}" />
-            <marker date="1549598335204" expanded="true" signature="2630:2795" ph="{...}" />
-            <marker date="1549598335204" expanded="true" signature="2816:2964" ph="{...}" />
-            <marker date="1549598335204" expanded="true" signature="3011:3206" ph="{...}" />
-            <marker date="1549598335204" expanded="true" signature="3307:4159" ph="{...}" />
-            <marker date="1549598335204" expanded="true" signature="3333:3922" ph="{...}" />
-            <marker date="1549598335204" expanded="true" signature="3388:3571" ph="{...}" />
-            <marker date="1549598335204" expanded="true" signature="3613:3794" ph="{...}" />
-            <marker date="1549598335204" expanded="true" signature="3955:4149" ph="{...}" />
-            <marker date="1549598335204" expanded="true" signature="4272:5406" ph="{...}" />
-            <marker date="1549598335204" expanded="true" signature="4298:5169" ph="{...}" />
-            <marker date="1549598335204" expanded="true" signature="4354:4537" ph="{...}" />
-            <marker date="1549598335204" expanded="true" signature="4580:4761" ph="{...}" />
-            <marker date="1549598335204" expanded="true" signature="4879:5044" ph="{...}" />
-            <marker date="1549598335204" expanded="true" signature="5202:5396" ph="{...}" />
-            <marker date="1549598335204" expanded="true" signature="5486:6166" ph="{...}" />
-            <marker date="1549598335204" expanded="true" signature="5512:5929" ph="{...}" />
-            <marker date="1549598335204" expanded="true" signature="5637:5802" ph="{...}" />
-            <marker date="1549598335204" expanded="true" signature="5962:6156" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Entities/Models/Faculty.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="213">
@@ -888,19 +959,6 @@
             <marker date="1549633906161" expanded="false" signature="477:581" ph="..." />
             <marker date="1549633906161" expanded="true" signature="608:1171" ph="{...}" />
             <marker date="1549633906161" expanded="true" signature="663:1169" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Entities/Models/User.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="51" column="48" selection-start-line="51" selection-start-column="48" selection-end-line="51" selection-end-column="48" />
-          <folding>
-            <marker date="1549633917264" expanded="true" signature="0:463" ph="/* Name: User ... */" />
-            <marker date="1549633917264" expanded="false" signature="470:574" ph="..." />
-            <marker date="1549633917264" expanded="true" signature="601:2074" ph="{...}" />
-            <marker date="1549633917264" expanded="true" signature="645:2072" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1277,76 +1335,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Entities/Models/Enrollment.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-          <folding>
-            <marker date="1549649314396" expanded="true" signature="0:475" ph="/* Name: Enrollment ... */" />
-            <marker date="1549649314396" expanded="true" signature="482:572" ph="..." />
-            <marker date="1549649314396" expanded="true" signature="599:1559" ph="{...}" />
-            <marker date="1549649314396" expanded="true" signature="655:1557" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GoldStarApi/Controllers/EnrollmentController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1860">
-          <caret line="138" column="1" selection-start-line="138" selection-start-column="1" selection-end-line="138" selection-end-column="1" />
-          <folding>
-            <marker date="1549649314420" expanded="false" signature="6:255" ph="..." />
-            <marker date="1549649314420" expanded="true" signature="290:11811" ph="{...}" />
-            <marker date="1549649314420" expanded="true" signature="373:11809" ph="{...}" />
-            <marker date="1549649314420" expanded="true" signature="676:764" ph="{...}" />
-            <marker date="1549649314420" expanded="true" signature="840:1382" ph="{...}" />
-            <marker date="1549649314420" expanded="true" signature="866:1141" ph="{...}" />
-            <marker date="1549649314420" expanded="true" signature="1174:1372" ph="{...}" />
-            <marker date="1549649314420" expanded="true" signature="1496:2288" ph="{...}" />
-            <marker date="1549649314420" expanded="true" signature="1535:2046" ph="{...}" />
-            <marker date="1549649314420" expanded="true" signature="1689:1857" ph="{...}" />
-            <marker date="1549649314420" expanded="true" signature="1878:2032" ph="{...}" />
-            <marker date="1549649314420" expanded="true" signature="2079:2278" ph="{...}" />
-            <marker date="1549649314420" expanded="true" signature="2424:4781" ph="{...}" />
-            <marker date="1549649314420" expanded="true" signature="2463:4539" ph="{...}" />
-            <marker date="1549649314420" expanded="true" signature="2775:4131" ph="{...}" />
-            <marker date="1549649314420" expanded="true" signature="4179:4347" ph="{...}" />
-            <marker date="1549649314420" expanded="true" signature="4368:4525" ph="{...}" />
-            <marker date="1549649314420" expanded="true" signature="4572:4771" ph="{...}" />
-            <marker date="1549649314420" expanded="true" signature="4935:6039" ph="{...}" />
-            <marker date="1549649314420" expanded="true" signature="4974:5797" ph="{...}" />
-            <marker date="1549649314420" expanded="true" signature="5210:5378" ph="{...}" />
-            <marker date="1549649314420" expanded="true" signature="5448:5638" ph="{...}" />
-            <marker date="1549649314420" expanded="true" signature="5516:5619" ph="{...}" />
-            <marker date="1549649314420" expanded="true" signature="5830:6029" ph="{...}" />
-            <marker date="1549649314420" expanded="true" signature="6238:7499" ph="{...}" />
-            <marker date="1549649314420" expanded="true" signature="6277:7257" ph="{...}" />
-            <marker date="1549649314420" expanded="true" signature="6499:6674" ph="{...}" />
-            <marker date="1549649314420" expanded="true" signature="6744:7115" ph="{...}" />
-            <marker date="1549649314420" expanded="true" signature="6936:7096" ph="{...}" />
-            <marker date="1549649314420" expanded="true" signature="7290:7489" ph="{...}" />
-            <marker date="1549649314420" expanded="true" signature="7600:8649" ph="{...}" />
-            <marker date="1549649314420" expanded="true" signature="7667:8409" ph="{...}" />
-            <marker date="1549649314420" expanded="true" signature="7725:7914" ph="{...}" />
-            <marker date="1549649314420" expanded="true" signature="7956:8140" ph="{...}" />
-            <marker date="1549649314420" expanded="true" signature="8442:8639" ph="{...}" />
-            <marker date="1549649314420" expanded="true" signature="8771:10061" ph="{...}" />
-            <marker date="1549649314420" expanded="true" signature="8810:9821" ph="{...}" />
-            <marker date="1549649314420" expanded="true" signature="8869:9058" ph="{...}" />
-            <marker date="1549649314420" expanded="true" signature="9101:9285" ph="{...}" />
-            <marker date="1549649314420" expanded="true" signature="9415:9583" ph="{...}" />
-            <marker date="1549649314420" expanded="true" signature="9854:10051" ph="{...}" />
-            <marker date="1549649314420" expanded="true" signature="10114:10988" ph="{...}" />
-            <marker date="1549649314420" expanded="true" signature="10440:10711" ph="{...}" />
-            <marker date="1549649314420" expanded="true" signature="10560:10697" ph="{...}" />
-            <marker date="1549649314420" expanded="true" signature="11089:11796" ph="{...}" />
-            <marker date="1549649314420" expanded="true" signature="11115:11556" ph="{...}" />
-            <marker date="1549649314420" expanded="true" signature="11252:11420" ph="{...}" />
-            <marker date="1549649314420" expanded="true" signature="11589:11786" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/GoldStarApi/Controllers/StudentInfoController.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2100">
@@ -1408,84 +1396,237 @@
     <entry file="file://$PROJECT_DIR$/GoldStarApi/logs/2019-02-10_logfile.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/Repository/CourseRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+          <folding>
+            <marker date="1549334579000" expanded="true" signature="0:384" ph="/* Name: CourseRepository ... */" />
+            <marker date="1549334579000" expanded="false" signature="391:520" ph="..." />
+            <marker date="1549334579000" expanded="true" signature="542:1539" ph="{...}" />
+            <marker date="1549334579000" expanded="true" signature="622:1537" ph="{...}" />
+            <marker date="1549334579000" expanded="true" signature="723:743" ph="{...}" />
+            <marker date="1549334579000" expanded="true" signature="795:892" ph="{...}" />
+            <marker date="1549334579000" expanded="true" signature="946:1127" ph="{...}" />
+            <marker date="1549334579000" expanded="true" signature="1176:1244" ph="{...}" />
+            <marker date="1549334579000" expanded="true" signature="1310:1414" ph="{...}" />
+            <marker date="1549334579000" expanded="true" signature="1463:1531" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GoldStarApi/Controllers/FacultyController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="119" column="26" selection-start-line="119" selection-start-column="26" selection-end-line="119" selection-end-column="26" />
+          <folding>
+            <marker date="1549598335204" expanded="false" signature="6:211" ph="..." />
+            <marker date="1549598335204" expanded="true" signature="246:6181" ph="{...}" />
+            <marker date="1549598335204" expanded="true" signature="323:6179" ph="{...}" />
+            <marker date="1549598335204" expanded="true" signature="520:608" ph="{...}" />
+            <marker date="1549598335204" expanded="true" signature="680:1199" ph="{...}" />
+            <marker date="1549598335204" expanded="true" signature="706:962" ph="{...}" />
+            <marker date="1549598335204" expanded="true" signature="995:1189" ph="{...}" />
+            <marker date="1549598335204" expanded="true" signature="1329:2337" ph="{...}" />
+            <marker date="1549598335204" expanded="true" signature="1368:2099" ph="{...}" />
+            <marker date="1549598335204" expanded="true" signature="1558:1732" ph="{...}" />
+            <marker date="1549598335204" expanded="true" signature="1623:1714" ph="{...}" />
+            <marker date="1549598335204" expanded="true" signature="1777:1912" ph="{...}" />
+            <marker date="1549598335204" expanded="true" signature="1933:2085" ph="{...}" />
+            <marker date="1549598335204" expanded="true" signature="2132:2327" ph="{...}" />
+            <marker date="1549598335204" expanded="true" signature="2463:3216" ph="{...}" />
+            <marker date="1549598335204" expanded="true" signature="2502:2978" ph="{...}" />
+            <marker date="1549598335204" expanded="true" signature="2630:2795" ph="{...}" />
+            <marker date="1549598335204" expanded="true" signature="2816:2964" ph="{...}" />
+            <marker date="1549598335204" expanded="true" signature="3011:3206" ph="{...}" />
+            <marker date="1549598335204" expanded="true" signature="3307:4159" ph="{...}" />
+            <marker date="1549598335204" expanded="true" signature="3333:3922" ph="{...}" />
+            <marker date="1549598335204" expanded="true" signature="3388:3571" ph="{...}" />
+            <marker date="1549598335204" expanded="true" signature="3613:3794" ph="{...}" />
+            <marker date="1549598335204" expanded="true" signature="3955:4149" ph="{...}" />
+            <marker date="1549598335204" expanded="true" signature="4272:5406" ph="{...}" />
+            <marker date="1549598335204" expanded="true" signature="4298:5169" ph="{...}" />
+            <marker date="1549598335204" expanded="true" signature="4354:4537" ph="{...}" />
+            <marker date="1549598335204" expanded="true" signature="4580:4761" ph="{...}" />
+            <marker date="1549598335204" expanded="true" signature="4879:5044" ph="{...}" />
+            <marker date="1549598335204" expanded="true" signature="5202:5396" ph="{...}" />
+            <marker date="1549598335204" expanded="true" signature="5486:6166" ph="{...}" />
+            <marker date="1549598335204" expanded="true" signature="5512:5929" ph="{...}" />
+            <marker date="1549598335204" expanded="true" signature="5637:5802" ph="{...}" />
+            <marker date="1549598335204" expanded="true" signature="5962:6156" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/GoldStarApi/Controllers/SectionController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="53">
-          <caret line="328" column="43" selection-start-line="328" selection-start-column="43" selection-end-line="328" selection-end-column="43" />
+        <state relative-caret-position="59">
+          <caret line="258" selection-start-line="258" selection-end-line="258" />
           <folding>
-            <marker date="1549805501229" expanded="false" signature="6:211" ph="..." />
-            <marker date="1549805501229" expanded="true" signature="246:20077" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="323:20075" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="584:672" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="745:1266" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="771:1028" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="1061:1256" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="1374:2127" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="1413:1889" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="1541:1706" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="1727:1875" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="1922:2117" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="2258:3289" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="2297:3051" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="2496:2677" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="2564:2659" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="2722:2863" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="2884:3037" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="3084:3279" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="3421:4456" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="3460:4218" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="3665:3844" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="3703:3826" ph="/* if (section. == id) ... */" />
-            <marker date="1549805501229" expanded="true" signature="3889:4030" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="4051:4204" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="4251:4446" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="4577:6798" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="4616:6556" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="4818:4958" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="5028:6391" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="6589:6788" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="6961:9329" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="6988:9087" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="7190:7330" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="7384:8945" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="7545:8905" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="9120:9319" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="9538:10099" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="9565:9857" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="9890:10089" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="10207:12487" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="10234:12281" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="10443:10577" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="10631:12218" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="10804:12200" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="12029:12153" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="12314:12477" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="12738:14052" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="12765:13810" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="13263:13427" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="13516:13727" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="13594:13709" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="13843:14042" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="14176:17111" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="14479:14643" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="14893:16294" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="15088:15360" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="16530:16991" ph="/* for (var i = 0; i &lt; studentsByEnrollment.Count; i++) ... */" />
-            <marker date="1549805501229" expanded="true" signature="17201:18055" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="17227:17818" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="17282:17465" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="17507:17688" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="17851:18045" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="18168:19302" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="18194:19065" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="18250:18433" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="18476:18657" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="18775:18940" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="19098:19292" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="19382:20062" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="19408:19825" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="19533:19698" ph="{...}" />
-            <marker date="1549805501229" expanded="true" signature="19858:20052" ph="{...}" />
+            <marker date="1549894352655" expanded="false" signature="6:211" ph="..." />
+            <marker date="1549894352655" expanded="true" signature="246:20115" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="323:20113" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="584:672" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="745:1266" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="771:1028" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="1061:1256" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="1374:2127" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="1413:1889" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="1541:1706" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="1727:1875" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="1922:2117" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="2258:3289" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="2297:3051" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="2496:2677" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="2564:2659" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="2722:2863" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="2884:3037" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="3084:3279" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="3421:4456" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="3460:4218" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="3665:3844" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="3703:3826" ph="/* if (section. == id) ... */" />
+            <marker date="1549894352655" expanded="true" signature="3889:4030" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="4051:4204" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="4251:4446" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="4577:6798" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="4616:6556" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="4818:4958" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="5028:6391" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="6589:6788" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="6961:9329" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="6988:9087" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="7190:7330" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="7384:8945" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="7545:8905" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="9120:9319" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="9538:10137" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="9565:9895" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="9928:10127" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="10245:12525" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="10272:12319" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="10481:10615" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="10669:12256" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="10842:12238" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="12067:12191" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="12352:12515" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="12776:14090" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="12803:13848" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="13301:13465" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="13554:13765" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="13632:13747" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="13881:14080" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="14214:17149" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="14517:14681" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="14931:16332" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="15126:15398" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="16568:17029" ph="/* for (var i = 0; i &lt; studentsByEnrollment.Count; i++) ... */" />
+            <marker date="1549894352655" expanded="true" signature="17239:18093" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="17265:17856" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="17320:17503" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="17545:17726" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="17889:18083" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="18206:19340" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="18232:19103" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="18288:18471" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="18514:18695" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="18813:18978" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="19136:19330" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="19420:20100" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="19446:19863" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="19571:19736" ph="{...}" />
+            <marker date="1549894352655" expanded="true" signature="19896:20090" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Entities/Models/Enrollment.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="36" column="41" selection-start-line="36" selection-start-column="41" selection-end-line="36" selection-end-column="41" />
+          <folding>
+            <marker date="1549333480000" expanded="true" signature="0:475" ph="/* Name: Enrollment ... */" />
+            <marker date="1549333480000" expanded="true" signature="482:572" ph="..." />
+            <marker date="1549333480000" expanded="true" signature="599:1559" ph="{...}" />
+            <marker date="1549333480000" expanded="true" signature="655:1557" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GoldStarApi/logs/2019-02-11_logfile.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1895">
+          <caret line="267" column="54" selection-start-line="267" selection-start-column="54" selection-end-line="267" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GoldStarApi/Controllers/EnrollmentController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="262" column="62" selection-start-line="262" selection-start-column="62" selection-end-line="262" selection-end-column="62" />
+          <folding>
+            <marker date="1549895595373" expanded="false" signature="6:255" ph="..." />
+            <marker date="1549895595373" expanded="true" signature="290:11919" ph="{...}" />
+            <marker date="1549895595373" expanded="true" signature="373:11917" ph="{...}" />
+            <marker date="1549895595373" expanded="true" signature="676:764" ph="{...}" />
+            <marker date="1549895595373" expanded="true" signature="840:1382" ph="{...}" />
+            <marker date="1549895595373" expanded="true" signature="866:1141" ph="{...}" />
+            <marker date="1549895595373" expanded="true" signature="1174:1372" ph="{...}" />
+            <marker date="1549895595373" expanded="true" signature="1496:2288" ph="{...}" />
+            <marker date="1549895595373" expanded="true" signature="1535:2046" ph="{...}" />
+            <marker date="1549895595373" expanded="true" signature="1689:1857" ph="{...}" />
+            <marker date="1549895595373" expanded="true" signature="1878:2032" ph="{...}" />
+            <marker date="1549895595373" expanded="true" signature="2079:2278" ph="{...}" />
+            <marker date="1549895595373" expanded="true" signature="2424:4781" ph="{...}" />
+            <marker date="1549895595373" expanded="true" signature="2463:4539" ph="{...}" />
+            <marker date="1549895595373" expanded="true" signature="2775:4131" ph="{...}" />
+            <marker date="1549895595373" expanded="true" signature="4179:4347" ph="{...}" />
+            <marker date="1549895595373" expanded="true" signature="4368:4525" ph="{...}" />
+            <marker date="1549895595373" expanded="true" signature="4572:4771" ph="{...}" />
+            <marker date="1549895595373" expanded="true" signature="4935:6039" ph="{...}" />
+            <marker date="1549895595373" expanded="true" signature="4974:5797" ph="{...}" />
+            <marker date="1549895595373" expanded="true" signature="5210:5378" ph="{...}" />
+            <marker date="1549895595373" expanded="true" signature="5448:5638" ph="{...}" />
+            <marker date="1549895595373" expanded="true" signature="5516:5619" ph="{...}" />
+            <marker date="1549895595373" expanded="true" signature="5830:6029" ph="{...}" />
+            <marker date="1549895595373" expanded="true" signature="6238:7499" ph="{...}" />
+            <marker date="1549895595373" expanded="true" signature="6277:7257" ph="{...}" />
+            <marker date="1549895595373" expanded="true" signature="6499:6674" ph="{...}" />
+            <marker date="1549895595373" expanded="true" signature="6744:7115" ph="{...}" />
+            <marker date="1549895595373" expanded="true" signature="6936:7096" ph="{...}" />
+            <marker date="1549895595373" expanded="true" signature="7290:7489" ph="{...}" />
+            <marker date="1549895595373" expanded="true" signature="7600:8649" ph="{...}" />
+            <marker date="1549895595373" expanded="true" signature="7667:8409" ph="{...}" />
+            <marker date="1549895595373" expanded="true" signature="7725:7914" ph="{...}" />
+            <marker date="1549895595373" expanded="true" signature="7956:8140" ph="{...}" />
+            <marker date="1549895595373" expanded="true" signature="8442:8639" ph="{...}" />
+            <marker date="1549895595373" expanded="true" signature="8771:10169" ph="{...}" />
+            <marker date="1549895595373" expanded="true" signature="8810:9929" ph="{...}" />
+            <marker date="1549895595373" expanded="true" signature="8869:9058" ph="{...}" />
+            <marker date="1549895595373" expanded="true" signature="9101:9285" ph="{...}" />
+            <marker date="1549895595373" expanded="true" signature="9415:9583" ph="{...}" />
+            <marker date="1549895595373" expanded="true" signature="9747:9846" ph="{...}" />
+            <marker date="1549895595373" expanded="true" signature="9962:10159" ph="{...}" />
+            <marker date="1549895595373" expanded="true" signature="10222:11096" ph="{...}" />
+            <marker date="1549895595373" expanded="true" signature="10548:10819" ph="{...}" />
+            <marker date="1549895595373" expanded="true" signature="10668:10805" ph="{...}" />
+            <marker date="1549895595373" expanded="true" signature="11197:11904" ph="{...}" />
+            <marker date="1549895595373" expanded="true" signature="11223:11664" ph="{...}" />
+            <marker date="1549895595373" expanded="true" signature="11360:11528" ph="{...}" />
+            <marker date="1549895595373" expanded="true" signature="11697:11894" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Entities/Models/User.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="51" column="48" selection-start-line="51" selection-start-column="48" selection-end-line="51" selection-end-column="48" />
+          <folding>
+            <marker date="1549633917264" expanded="true" signature="0:463" ph="/* Name: User ... */" />
+            <marker date="1549633917264" expanded="false" signature="470:574" ph="..." />
+            <marker date="1549633917264" expanded="true" signature="601:2074" ph="{...}" />
+            <marker date="1549633917264" expanded="true" signature="645:2072" ph="{...}" />
           </folding>
         </state>
       </provider>

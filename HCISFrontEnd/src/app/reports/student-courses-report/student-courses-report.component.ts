@@ -9,6 +9,7 @@ import { RepositoryService } from 'src/app/shared/services/repository.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { StudentInfo } from 'src/app/_interfaces/studentInfo.model';
 import { Enrollment } from 'src/app/_interfaces/enrollment.model';
+import { User } from 'src/app/_interfaces/user.model';
 
 @Component({
   selector: 'app-student-courses-report',
@@ -39,6 +40,7 @@ export class StudentCoursesReportComponent implements OnInit {
 
   // Array for all the subscriptions
   private subscriptions: Subscription[] = [];
+  loggedInUser: any;
 
 
   constructor(
@@ -57,9 +59,11 @@ export class StudentCoursesReportComponent implements OnInit {
     } else {
       // else load their transcript.
       this.transcriptDate = this.semesters.getTodaysDate();
-      this.id = parseInt(sessionStorage.getItem('id'), 0);
+      this.id = parseInt(sessionStorage.getItem('userId'), 0);
+      this.getUserInformation(this.id);
       this.semester = this.activeatedRoute.snapshot.params['semester'];
-      this.year = parseInt(this.activeatedRoute.snapshot.params['year']);
+      this.year = parseInt(this.activeatedRoute.snapshot.params['year'], 0);
+      // tslint:disable-next-line:radix
       this.dept = parseInt(this.activeatedRoute.snapshot.params['deptId']);
 
 
@@ -67,12 +71,24 @@ export class StudentCoursesReportComponent implements OnInit {
 
     }
   }
-  private getDepartmentById(deptId){
-    let apiAddress = "api/department/"+deptId;
+  private getUserInformation(id) {
+    let apiAddress = "api/user/" + id;
+    this.subscriptions.push(this.repository.getData(apiAddress)
+      .subscribe(res => {
+        this.loggedInUser = res as User;
+      })),
+      // tslint:disable-next-line: no-unused-expression
+      (error) => {
+        this.errorHandler.handleError(error);
+        this.errorMessage = this.errorHandler.errorMessage;
+      };
+  }
+  private getDepartmentById(deptId) {
+    let apiAddress = "api/department/" + deptId;
     this.subscriptions.push(this.repository.getData(apiAddress)
       .subscribe(res => {
         this.department = res as Department;
-        
+
         this.getStudentsBySemesterYear();
       })),
       // tslint:disable-next-line: no-unused-expression
@@ -81,11 +97,12 @@ export class StudentCoursesReportComponent implements OnInit {
         this.errorMessage = this.errorHandler.errorMessage;
       };
   }
-  private getAllSections(){
+  private getAllSections() {
     let apiAddress = "api/section/courseInfo";
     this.subscriptions.push(this.repository.getData(apiAddress)
       .subscribe(res => {
         this.allSections = res as SectionInfo[];
+
         this.getDepartmentById(this.dept);
       })),
       // tslint:disable-next-line: no-unused-expression
@@ -96,25 +113,25 @@ export class StudentCoursesReportComponent implements OnInit {
   }
 
   private getEnrollmentsByStudentId(id, i) {
-    let apiAddress = "api/section/semester/year/student/dept/" + this.semester+"/"+this.year+"/"+id+"/"+this.department.dept_Id;
+    let apiAddress = "api/section/semester/year/student/dept/" + this.semester + "/" + this.year + "/" + id + "/" + this.department.dept_Id;
     this.subscriptions.push(this.repository.getData(apiAddress)
       .subscribe(res => {
-        
+
         let enrollmentsByStudentId = res as Enrollment[];
         let tempSections: SectionInfo[] = [];
         this.studentInfos[i]['enrollments'] = [];
         this.studentInfos[i]['sections'] = [];
-        
-        
-        for(let j = 0; j < enrollmentsByStudentId.length; j++){
-          this.studentInfos[i]['enrollments'].push(enrollmentsByStudentId[j]); 
-          for(let x = 0; x< this.allSections.length; x++){
-            if(enrollmentsByStudentId[j].section_Id == this.allSections[x].section_Id){
+
+
+        for (let j = 0; j < enrollmentsByStudentId.length; j++) {
+          this.studentInfos[i]['enrollments'].push(enrollmentsByStudentId[j]);
+          for (let x = 0; x < this.allSections.length; x++) {
+            if (enrollmentsByStudentId[j].section_Id == this.allSections[x].section_Id) {
               this.studentInfos[i]['sections'].push(this.allSections[x]);
             }
           }
         }
-        
+
 
       },
         // tslint:disable-next-line: no-unused-expression
@@ -129,19 +146,19 @@ export class StudentCoursesReportComponent implements OnInit {
   }
 
   private getStudentsBySemesterYear() {
-    console.log(this.semester+this.year);
-    let apiAddress = "api/section/semester/year/dept/" + this.semester + "/" + this.year+ "/" + this.department.dept_Id;
+    console.log(this.semester + this.year);
+    let apiAddress = "api/section/semester/year/dept/" + this.semester + "/" + this.year + "/" + this.department.dept_Id;
     this.subscriptions.push(this.repository.getData(apiAddress)
       .subscribe(res => {
-        
+
         this.studentInfos = res as StudentInfo[];
         console.log(this.studentInfos);
 
-        for(let i = 0; i < this.studentInfos.length; i++){
+        for (let i = 0; i < this.studentInfos.length; i++) {
           this.getEnrollmentsByStudentId(this.studentInfos[i].student_Id, i);
           this.counter++;
         }
-      this.isLoaded = false;
+        this.isLoaded = false;
       },
         // tslint:disable-next-line: no-unused-expression
         (error) => {
@@ -150,10 +167,10 @@ export class StudentCoursesReportComponent implements OnInit {
 
         }).add(() => {
           console.log(this.studentInfos);
-          if(this.counter == this.studentInfos.length){
+          if (this.counter == this.studentInfos.length) {
             this.isLoaded = true;
           }
-          
+
         }));
   }
 
