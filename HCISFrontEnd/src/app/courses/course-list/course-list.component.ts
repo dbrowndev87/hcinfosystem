@@ -26,24 +26,24 @@ export class CourseListComponent implements OnInit, OnDestroy {
   dtTrigger: Subject<Course> = new Subject<Course>();
 
   public courses: Course[];
-  private depts: Department[];
-  private deptNames: string[];
+  public depts: Department[];
+  public deptNames: string[];
   public errorMessage: String = "";
-  private isLoaded = false;
+  public isLoaded = false;
 
   // Array for all the subscriptions
-  private subscriptions: Subscription[] = [];
+  public subscriptions: Subscription[] = [];
 
   constructor(
-    private repository: RepositoryService,
-    private errorHandler: ErrorHandlerService,
-    private router: Router
+    public repository: RepositoryService,
+    public errorHandler: ErrorHandlerService,
+    public router: Router
   ) { }
 
   ngOnInit() {
     this.dtOptions = {
       pagingType: 'full_numbers',
-      pageLength: 8
+      pageLength: 10
     };
 
     this.getAllCourses();
@@ -83,7 +83,7 @@ export class CourseListComponent implements OnInit, OnDestroy {
         }));
   }
 
-  private loaded() {
+  public loaded() {
     this.isLoaded = true;
   }
 

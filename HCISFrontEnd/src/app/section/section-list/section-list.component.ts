@@ -21,21 +21,21 @@ export class SectionListComponent implements OnInit, OnDestroy {
 
   public sections: Section[];
   public errorMessage: String = "";
-  private isLoaded = false;
-  private count;
-  private faculty: FacultyInfo[] = [];
+  public isLoaded = false;
+  public count;
+  public faculty: FacultyInfo[] = [];
 
   constructor(
-    private repository: RepositoryService,
-    private errorHandler: ErrorHandlerService,
-    private router: Router) {
+    public repository: RepositoryService,
+    public errorHandler: ErrorHandlerService,
+    public router: Router) {
 
     this.getAllFaculty();
 
   }
 
   // Array for all the subscriptions
-  private subscriptions: Subscription[] = [];
+  public subscriptions: Subscription[] = [];
 
   ngOnInit() {
 
@@ -43,7 +43,7 @@ export class SectionListComponent implements OnInit, OnDestroy {
 
     this.dtOptions = {
       pagingType: 'full_numbers',
-      pageLength: 8
+      pageLength: 10
     };
 
     this.getAllSections();
@@ -82,7 +82,7 @@ export class SectionListComponent implements OnInit, OnDestroy {
     }
   }
 
-  private getAllFaculty() {
+  public getAllFaculty() {
     let apiAddress = "api/facultyInfo";
     this.subscriptions.push(this.repository.getData(apiAddress)
       .subscribe(faculty => {

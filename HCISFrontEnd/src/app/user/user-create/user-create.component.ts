@@ -38,27 +38,27 @@ export class UserCreateComponent implements OnInit, OnDestroy {
   public errorMessage = "";
   public userForm: FormGroup;
   public userId: any;
-  private depts: Department[];
-  private userType;
-  private userTypeName = ['Admin', 'Faculty', 'Student'];
-  private isLoaded = false;
-  private param;
-  private successMessage = "";
-  private semesters = new Semesters();
+  public depts: Department[];
+  public userType;
+  public userTypeName = ['Admin', 'Faculty', 'Student'];
+  public isLoaded = false;
+  public param;
+  public successMessage = "";
+  public semesters = new Semesters();
 
 
   // Array for all the subscriptions
-  private subscriptions: Subscription[] = [];
+  public subscriptions: Subscription[] = [];
 
   constructor(
-    private repository: RepositoryService,
-    private errorHandler: ErrorHandlerService,
-    private router: Router,
-    private activeRoute: ActivatedRoute,
-    private rupg: RandomUserPassGen,
-    private sidg: StudentIdGenerator,
-    private globals: Globals,
-    private datePipe: DatePipe
+    public repository: RepositoryService,
+    public errorHandler: ErrorHandlerService,
+    public router: Router,
+    public activeRoute: ActivatedRoute,
+    public rupg: RandomUserPassGen,
+    public sidg: StudentIdGenerator,
+    public globals: Globals,
+    public datePipe: DatePipe
   ) { }
 
   ngOnInit() {
@@ -76,7 +76,7 @@ export class UserCreateComponent implements OnInit, OnDestroy {
   }
 
 
-  private initialiseState() {
+  public initialiseState() {
     // If the usertype is not any of the type codes go to 404
     if (this.userType > 3 || this.userType < 1) {
       this.router.navigate(['/404']);
@@ -173,7 +173,7 @@ export class UserCreateComponent implements OnInit, OnDestroy {
    * Date: January 24th
    * @param userFormValue 
    */
-  private executeUserCreation(userFormValue) {
+  public executeUserCreation(userFormValue) {
 
     // Increment the ID
     this.userId = (this.userId + 1);
@@ -246,7 +246,7 @@ export class UserCreateComponent implements OnInit, OnDestroy {
  * Author: Darcy Brown
  * Date: January 27th, 2019
  */
-  private getValidUsername(user: User) {
+  public getValidUsername(user: User) {
 
     // declare id and subsrciption
     let subscription: Subscription;
@@ -295,7 +295,7 @@ export class UserCreateComponent implements OnInit, OnDestroy {
   * Author: Darcy Brown
   * Date: January 27th, 2019
   */
-  private getValidStudentID(user: User) {
+  public getValidStudentID(user: User) {
 
     // declare id and subsrciption
     let subscription: Subscription;
@@ -380,7 +380,7 @@ export class UserCreateComponent implements OnInit, OnDestroy {
    * Date: January 24th
    * @param user 
    */
-  private generateUserLogin(username: string) {
+  public generateUserLogin(username: string) {
     let md5 = new Md5();
     let password = md5.appendStr('password').end();
     // this.rupg.generatePass(); Password Generator implementation.
@@ -416,7 +416,7 @@ export class UserCreateComponent implements OnInit, OnDestroy {
   * Date: January 24th
   * @param user 
   */
-  private generateStudent(user: User, studentId: number) {
+  public generateStudent(user: User, studentId: number) {
 
     // Generate Student login info
     let student: Student = {
@@ -451,7 +451,7 @@ export class UserCreateComponent implements OnInit, OnDestroy {
  * Date: January 24th
  * @param user 
  */
-  private generateFaculty(user: User) {
+  public generateFaculty(user: User) {
 
     // Generate Student login info
     let faculty: Faculty = {

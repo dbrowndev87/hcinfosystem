@@ -21,22 +21,22 @@ import { Semesters } from 'src/app/shared/tools/semesters';
 export class SectionCreateComponent implements OnInit, OnDestroy {
 
   public errorMessage = "";
-  private userType: number;
+  public userType: number;
   public sectionForm: FormGroup;
   public designations = new Array("A", "B", "C", "L");
   public faculty: FacultyInfo[];
   public courses: Course[];
-  private semesters = new Semesters();
-  private isLoaded = false;
+  public semesters = new Semesters();
+  public isLoaded = false;
 
   // Array for all the subscriptions
-  private subscriptions: Subscription[] = [];
+  public subscriptions: Subscription[] = [];
 
 
   constructor(
-    private repository: RepositoryService,
-    private errorHandler: ErrorHandlerService,
-    private router: Router,
+    public repository: RepositoryService,
+    public errorHandler: ErrorHandlerService,
+    public router: Router,
   ) { }
 
   ngOnInit() {
@@ -144,7 +144,7 @@ export class SectionCreateComponent implements OnInit, OnDestroy {
   }
 
 
-  private executeSectionCreation(sectionFormValue) {
+  public executeSectionCreation(sectionFormValue) {
 
     // Make a section interface.
     let section: Section = {

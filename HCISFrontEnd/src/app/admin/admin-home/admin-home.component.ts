@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminHomeComponent implements OnInit {
 
-  private isLoaded;
-  private typeCode;
+  public isLoaded;
+  public typeCode;
 
   constructor() { }
 

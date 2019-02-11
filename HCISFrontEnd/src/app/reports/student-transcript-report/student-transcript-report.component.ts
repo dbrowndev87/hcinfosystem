@@ -29,37 +29,37 @@ export class StudentTranscriptReportComponent implements OnInit {
 
   public courses: any[] = [];
   public errorMessage: String = "";
-  private sectionInfo: any;
-  private tempStorage: any[] = [];
-  private enrollments: Enrollment[];
-  private student: Student;
-  private id: number;
-  private gpa: number;
-  private isLoaded = false;
-  private typeCode;
-  private semesters = new Semesters();
-  private orderBy = new OrderBy();
+  public sectionInfo: any;
+  public tempStorage: any[] = [];
+  public enrollments: Enrollment[];
+  public student: Student;
+  public id: number;
+  public gpa: number;
+  public isLoaded = false;
+  public typeCode;
+  public semesters = new Semesters();
+  public orderBy = new OrderBy();
 
-  private byYear = false;
-  private type = "";
-  private semester = "";
-  private year = "";
+  public byYear = false;
+  public type = "";
+  public semester = "";
+  public year = "";
 
 
 
-  private counter = 0;
-  private transcriptDate;
+  public counter = 0;
+  public transcriptDate;
 
 
   // Array for all the subscriptions
-  private subscriptions: Subscription[] = [];
+  public subscriptions: Subscription[] = [];
 
 
   constructor(
-    private repository: RepositoryService,
-    private errorHandler: ErrorHandlerService,
-    private router: Router,
-    private activeatedRoute: ActivatedRoute,
+    public repository: RepositoryService,
+    public errorHandler: ErrorHandlerService,
+    public router: Router,
+    public activeatedRoute: ActivatedRoute,
   ) { }
 
   ngOnInit() {
@@ -127,7 +127,7 @@ export class StudentTranscriptReportComponent implements OnInit {
   /**
    * Get the Students Information
    */
-  private getStudent() {
+  public getStudent() {
     let apiAddress = "api/studentInfo/" + this.id;
     this.subscriptions.push(this.repository.getData(apiAddress)
       .subscribe(res => {
@@ -147,7 +147,7 @@ export class StudentTranscriptReportComponent implements OnInit {
   /**
    * Gets all the sections that the student is enrolled in.
    */
-  private getSectionsByStudentId() {
+  public getSectionsByStudentId() {
     let apiAddress = "api/enrollment/student/" + this.id;
     this.subscriptions.push(this.repository.getData(apiAddress)
       .subscribe(res => {
@@ -215,7 +215,7 @@ export class StudentTranscriptReportComponent implements OnInit {
    * section info object.
    * @param sectionInfo
    */
-  private getEnrollments(sectionInfo: SectionInfo, semester: string, index: number) {
+  public getEnrollments(sectionInfo: SectionInfo, semester: string, index: number) {
     let apiAddress = "api/enrollment";
     this.subscriptions.push(this.repository.getData(apiAddress)
       .subscribe(res => {
@@ -265,11 +265,11 @@ export class StudentTranscriptReportComponent implements OnInit {
   /**
    * Back button functions.
    */
-  private backToReportGenerator() {
+  public backToReportGenerator() {
     this.router.navigate(['/reports/studenttranscript']);
   }
 
-  private backToStudentHome() {
+  public backToStudentHome() {
     this.router.navigate(['/student/home']);
   }
 

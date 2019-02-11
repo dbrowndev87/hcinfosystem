@@ -24,20 +24,20 @@ export class FacultyGradesComponent implements OnInit {
   public students: StudentInfo[];
   public sections: Section[];
   public studentGradesForm: FormGroup;
-  private transId: number;
-  private isLoaded = false;
-  private studentId: number;
-  private studentEnrollment: Enrollment;
+  public transId: number;
+  public isLoaded = false;
+  public studentId: number;
+  public studentEnrollment: Enrollment;
 
   // Array for all the subscriptions
-  private subscriptions: Subscription[] = [];
+  public subscriptions: Subscription[] = [];
 
   constructor(
-    private repository: RepositoryService,
-    private router: Router,
-    private errorHandler: ErrorHandlerService,
-    private tidg: TransactionIdGenerator,
-    private activeRoute: ActivatedRoute
+    public repository: RepositoryService,
+    public router: Router,
+    public errorHandler: ErrorHandlerService,
+    public tidg: TransactionIdGenerator,
+    public activeRoute: ActivatedRoute
   ) { }
 
   ngOnInit() {
@@ -64,7 +64,7 @@ export class FacultyGradesComponent implements OnInit {
     this.router.navigate(['/faculty/home']);
   }
 
-  private getEnrollmentInfo(studentId, sectionId) {
+  public getEnrollmentInfo(studentId, sectionId) {
 
     let apiAddress = "api/enrollment/section/student/" + studentId + " /" + sectionId;
     this.subscriptions.push(this.repository.getData(apiAddress)
@@ -113,7 +113,7 @@ export class FacultyGradesComponent implements OnInit {
     }
 
   }
-  private executeUpdateGrade(enrollment: Enrollment) {
+  public executeUpdateGrade(enrollment: Enrollment) {
 
     console.log(enrollment.student_Id);
     let apiUrlEnrollment = `api/enrollment/` + enrollment.student_Id;

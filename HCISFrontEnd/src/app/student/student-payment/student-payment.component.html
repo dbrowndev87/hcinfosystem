@@ -95,7 +95,7 @@
   </div>
 
   <app-success-modal [modalHeaderText]="'Success message'" [modalBodyText]="'Payment completed successfully'"
-    [okButtonText]="'OK'" (redirectOnOK)="updateViewInformation(studentInfo.studentId)"></app-success-modal>
+    [okButtonText]="'OK'" (redirectOnOK)="updateViewInformation()"></app-success-modal>
 
   <app-error-modal [modalHeaderText]="'Error message'" [modalBodyText]="errorMessage" [okButtonText]="'OK'">
   </app-error-modal>

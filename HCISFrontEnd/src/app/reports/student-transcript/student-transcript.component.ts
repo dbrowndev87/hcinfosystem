@@ -26,23 +26,23 @@ export class StudentTranscriptComponent implements OnInit {
 
   public studentInfo: StudentInfo[];
   public errorMessage: String = "";
-  private studentTranscriptForm: FormGroup;
-  private depts: Department[];
-  private id: number;
-  private isLoaded = false;
-  private years: any[] = [];
-  private typeCode;
+  public studentTranscriptForm: FormGroup;
+  public depts: Department[];
+  public id: number;
+  public isLoaded = false;
+  public years: any[] = [];
+  public typeCode;
 
   // Array for all the subscriptions
-  private subscriptions: Subscription[] = [];
+  public subscriptions: Subscription[] = [];
 
-  private bySemester = false;
-  private byYear = true;
+  public bySemester = false;
+  public byYear = true;
 
   constructor(
-    private repository: RepositoryService,
-    private errorHandler: ErrorHandlerService,
-    private router: Router,
+    public repository: RepositoryService,
+    public errorHandler: ErrorHandlerService,
+    public router: Router,
 
   ) { }
 
@@ -58,7 +58,7 @@ export class StudentTranscriptComponent implements OnInit {
   }
 
 
-  private getAllSections(): any {
+  public getAllSections(): any {
     let apiAddress = "api/section/";
     this.subscriptions.push(this.repository.getData(apiAddress)
       .subscribe(res => {
@@ -82,7 +82,7 @@ export class StudentTranscriptComponent implements OnInit {
   }
 
 
-  private getAllStudentInfo() {
+  public getAllStudentInfo() {
 
     let apiAddress = "api/studentinfo/";
     this.subscriptions.push(this.repository.getData(apiAddress)
@@ -114,7 +114,7 @@ export class StudentTranscriptComponent implements OnInit {
     return false;
   }
 
-  private redirectToReport(formValue) {
+  public redirectToReport(formValue) {
     // If its a student
     if (sessionStorage.getItem('studentId')) {
       let studentId = sessionStorage.getItem('studentId');
@@ -135,23 +135,23 @@ export class StudentTranscriptComponent implements OnInit {
 
   }
 
-  private goHome() {
+  public goHome() {
     this.router.navigate(['/home']);
   }
 
-  private Semester() {
+  public Semester() {
     this.bySemester = true;
     this.byYear = false;
     this.formControlSetup();
   }
 
-  private Year() {
+  public Year() {
     this.byYear = true;
     this.bySemester = false;
     this.formControlSetup();
   }
 
-  private formControlSetup() {
+  public formControlSetup() {
     if (this.typeCode === 1) {
       if (this.byYear) {
         this.studentTranscriptForm = new FormGroup({

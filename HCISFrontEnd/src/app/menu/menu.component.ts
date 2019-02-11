@@ -21,19 +21,19 @@ import { Subscription } from 'rxjs';
 
 export class MenuComponent implements OnInit {
 
-  private typeCode = 0;
-  private student: Student;
-  private loggedIn = false;
-  private userId = 0;
-  private studentId;
-  private facultyId;
-  private errorMessage = "";
+  public typeCode = 0;
+  public student: Student;
+  public loggedIn = false;
+  public userId = 0;
+  public studentId;
+  public facultyId;
+  public errorMessage = "";
 
-  private subscriptions: Subscription[] = [];
+  public subscriptions: Subscription[] = [];
 
   constructor(
-    private repository: RepositoryService,
-    private errorHandler: ErrorHandlerService,
+    public repository: RepositoryService,
+    public errorHandler: ErrorHandlerService,
   ) {
     if (sessionStorage.getItem('userId')) {
       this.userId = parseInt(sessionStorage.getItem('userId'), 0);

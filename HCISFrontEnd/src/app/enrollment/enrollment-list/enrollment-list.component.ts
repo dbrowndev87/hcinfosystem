@@ -27,25 +27,25 @@ export class EnrollmentListComponent implements OnInit, OnDestroy {
   dtOptions: DataTables.Settings = {};
   dtTrigger: Subject<EnrollmentInfo> = new Subject();
 
-  private studentInfo: StudentInfo[];
-  private enrollments: Enrollment[];
-  private enrollmentInfo: EnrollmentInfo[];
+  public studentInfo: StudentInfo[];
+  public enrollments: Enrollment[];
+  public enrollmentInfo: EnrollmentInfo[];
   public errorMessage: String = "";
-  private isLoaded = false;
+  public isLoaded = false;
 
   // Array for all the subscriptions
-  private subscriptions: Subscription[] = [];
+  public subscriptions: Subscription[] = [];
 
   constructor(
-    private repository: RepositoryService,
-    private errorHandler: ErrorHandlerService,
-    private router: Router
+    public repository: RepositoryService,
+    public errorHandler: ErrorHandlerService,
+    public router: Router
   ) { }
 
   ngOnInit() {
     this.dtOptions = {
       pagingType: 'full_numbers',
-      pageLength: 8
+      pageLength: 10
     };
 
     this.getAllenrollments();

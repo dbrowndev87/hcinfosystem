@@ -28,19 +28,19 @@ export class UserloginUpdateComponent implements OnInit, OnDestroy {
   public userLogin: UserLogin;
   public userLoginForm: FormGroup;
   public isLoaded = false;
-  private changePassword = false;
-  private buttonText = "Change Password";
-  private md5 = new Md5();
-  private typeCode;
+  public changePassword = false;
+  public buttonText = "Change Password";
+  public md5 = new Md5();
+  public typeCode;
 
   // Array for all the subscriptions
-  private subscriptions: Subscription[] = [];
+  public subscriptions: Subscription[] = [];
 
   constructor(
-    private repository: RepositoryService,
-    private router: Router,
-    private errorHandler: ErrorHandlerService,
-    private activeRoute: ActivatedRoute
+    public repository: RepositoryService,
+    public router: Router,
+    public errorHandler: ErrorHandlerService,
+    public activeRoute: ActivatedRoute
   ) { }
 
   ngOnInit() {
@@ -66,7 +66,7 @@ export class UserloginUpdateComponent implements OnInit, OnDestroy {
   /**
    * This method gets the user information from the api.
    */
-  private getUserLoginByUsername() {
+  public getUserLoginByUsername() {
     let username: string = this.activeRoute.snapshot.params['username'];
     let userLoginByUsernameUrl = `api/userlogin/username/${username}`;
 
@@ -135,7 +135,7 @@ export class UserloginUpdateComponent implements OnInit, OnDestroy {
    * Update user login information.
    * @param userLoginFormValue
    */
-  private executeUserLoginUpdate(userLoginFormValue) {
+  public executeUserLoginUpdate(userLoginFormValue) {
 
     // If they selected change password use the new password
     if (this.changePassword === true) {

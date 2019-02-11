@@ -30,39 +30,39 @@ import { Student } from 'src/app/_interfaces/student.model';
 
 export class StudentRegisterComponent implements OnInit, OnDestroy {
 
-  private studentInfo: StudentInfo;
-  private enrolledSections: SectionInfo[] = [];
+  public studentInfo: StudentInfo;
+  public enrolledSections: SectionInfo[] = [];
 
   // Initial Storage of the Sections
-  private sections: SectionInfo[] = [];
+  public sections: SectionInfo[] = [];
   // The select table side
-  private sectionsSelect: SectionInfo[] = [];
+  public sectionsSelect: SectionInfo[] = [];
   // The register table side
-  private sectionsRegister = [] = [];
+  public sectionsRegister = [] = [];
 
-  private studentRegisterForm: FormGroup;
-  private errorHeader = "";
-  private errorMessage = "";
-  private isLoaded = false;
-  private droppedCourses = 0;
-  private enrollmentCount = 0;
-  private semesters = new Semesters();
-  private nextSemester: string;
-  private rotateButtons: boolean;
-  private studentStatus: string;
+  public studentRegisterForm: FormGroup;
+  public errorHeader = "";
+  public errorMessage = "";
+  public isLoaded = false;
+  public droppedCourses = 0;
+  public enrollmentCount = 0;
+  public semesters = new Semesters();
+  public nextSemester: string;
+  public rotateButtons: boolean;
+  public studentStatus: string;
 
   public innerWidth: any;
 
 
   // Array for all the subscriptions
-  private subscriptions: Subscription[] = [];
+  public subscriptions: Subscription[] = [];
 
 
   constructor(
-    private router: Router,
-    private repository: RepositoryService,
-    private errorHandler: ErrorHandlerService,
-    private activatedRoute: ActivatedRoute
+    public router: Router,
+    public repository: RepositoryService,
+    public errorHandler: ErrorHandlerService,
+    public activatedRoute: ActivatedRoute
   ) { }
 
   ngOnInit() {
@@ -88,7 +88,7 @@ export class StudentRegisterComponent implements OnInit, OnDestroy {
     this.rotateButt();
   }
 
-  private rotateButt() {
+  public rotateButt() {
     if (this.innerWidth < 990) {
       this.rotateButtons = true;
     } else if (this.innerWidth > 990) {
@@ -105,7 +105,7 @@ export class StudentRegisterComponent implements OnInit, OnDestroy {
    * Date: Feb 2nd, 2019
    * @param index
    */
-  private addToRegister(index: number) {
+  public addToRegister(index: number) {
     let tempSection: SectionInfo = this.sections[index];
     this.sectionsRegister.push(JSON.parse(JSON.stringify(tempSection)));
     this.sectionsSelect.splice(index, 1);
@@ -119,7 +119,7 @@ export class StudentRegisterComponent implements OnInit, OnDestroy {
    * Date: Feb 2nd, 2019
    * @param index
    */
-  private removeFromRegister(index: number) {
+  public removeFromRegister(index: number) {
     let tempSection: SectionInfo = this.sectionsRegister[index];
     this.sectionsRegister.splice(index, 1);
     this.sectionsSelect.push(JSON.parse(JSON.stringify(tempSection)));
@@ -132,7 +132,7 @@ export class StudentRegisterComponent implements OnInit, OnDestroy {
    * Author: Darcy Brown
    * Date: Feb 2nd, 2019
    */
-  private validateRegistration() {
+  public validateRegistration() {
 
 
     // Already registered for 8
@@ -189,7 +189,7 @@ export class StudentRegisterComponent implements OnInit, OnDestroy {
    * Date: Feb 2nd, 2019
    * @param index
    */
-  private registerCourses() {
+  public registerCourses() {
     let counter = 0;
 
     this.sectionsRegister.forEach(sectioninfo => {
@@ -285,7 +285,7 @@ export class StudentRegisterComponent implements OnInit, OnDestroy {
    * Author: Darcy Brown
    * Date: Feb 2nd, 2019
   */
-  private getRegisterInfo() {
+  public getRegisterInfo() {
 
     /************************
     * Get student Info
@@ -308,7 +308,7 @@ export class StudentRegisterComponent implements OnInit, OnDestroy {
   }
 
 
-  private getStudentSections() {
+  public getStudentSections() {
 
     /************************************
      * Get SectionInfo
@@ -367,7 +367,7 @@ export class StudentRegisterComponent implements OnInit, OnDestroy {
   }
 
 
-  private getAllSectionsInfo(studentSections: SectionInfo[]) {
+  public getAllSectionsInfo(studentSections: SectionInfo[]) {
     /************************************
     * Get Sections
     ***********************************/
@@ -380,14 +380,15 @@ export class StudentRegisterComponent implements OnInit, OnDestroy {
         // Grab the courses for the next semester.
         sectionsinfo.forEach(sections => {
 
-          // FIXME: Need to add vacancy check  here ( && sections.vacancy > 0) when
+          // FIXME: Need to add vacancy check  here ( ) when
           // done testing and have more courses.
 
 
           if (
             sections.semester === this.nextSemester &&
             sections.start_Date.toString().slice(0, 4) ===
-            this.semesters.getSemesters()[sections.semester + "Start"].toString().slice(0, 4)) {
+            this.semesters.getSemesters()[sections.semester + "Start"].toString().slice(0, 4) &&
+            sections.vacancy > 0) {
             this.sectionsSelect.push(sections);
           }
         });
@@ -413,7 +414,7 @@ export class StudentRegisterComponent implements OnInit, OnDestroy {
    * @param tempSections 
    * @param studentSections 
    */
-  private getCourses(tempSections: SectionInfo[], studentSections: SectionInfo[]) {
+  public getCourses(tempSections: SectionInfo[], studentSections: SectionInfo[]) {
     studentSections.forEach(sectionInfo => {
       for (let x = 0; x < tempSections.length; x++) {
         if (sectionInfo.section_Id === tempSections[x].section_Id) {

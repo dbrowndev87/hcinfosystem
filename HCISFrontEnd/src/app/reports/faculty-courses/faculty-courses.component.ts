@@ -16,19 +16,19 @@ export class FacultyCoursesComponent implements OnInit {
 
   public courses: Course[];
   public errorMessage: String = "";
-  private facultyReportForm: FormGroup;
-  private depts: Department[];
-  private id: number;
-  private isLoaded = false;
+  public facultyReportForm: FormGroup;
+  public depts: Department[];
+  public id: number;
+  public isLoaded = false;
 
   // Array for all the subscriptions
-  private subscriptions: Subscription[] = [];
+  public subscriptions: Subscription[] = [];
 
 
   constructor(
-    private repository: RepositoryService,
-    private errorHandler: ErrorHandlerService,
-    private router: Router,
+    public repository: RepositoryService,
+    public errorHandler: ErrorHandlerService,
+    public router: Router,
 
   ) { }
 
@@ -41,7 +41,7 @@ export class FacultyCoursesComponent implements OnInit {
     this.getAllDepartments();
     this.isLoaded = true;
   }
-  private getAllDepartments() {
+  public getAllDepartments() {
 
     let apiAddress = "api/department/";
     this.subscriptions.push(this.repository.getData(apiAddress)
@@ -80,11 +80,11 @@ export class FacultyCoursesComponent implements OnInit {
   }
 
 
-  private redirectToReport(formValue) {
+  public redirectToReport(formValue) {
     this.router.navigate(['/reports/facultycourses/report/' + formValue.dept_Id]);
   }
 
-  private redirectToAllReport(id) {
+  public redirectToAllReport(id) {
     this.router.navigate(['/reports/facultycourses/report/' + id]);
   }
 

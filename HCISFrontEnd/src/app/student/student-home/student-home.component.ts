@@ -30,30 +30,30 @@ export class StudentHomeComponent implements OnInit {
 
 
   public homeText: string;
-  private typeCode: number;
-  private isLoaded = false;
-  private errorMessage = "";
-  private enrollmentCount = 0;
-  private successHeader;
-  private successMessage;
-  private enrolled = false;
+  public typeCode: number;
+  public isLoaded = false;
+  public errorMessage = "";
+  public enrollmentCount = 0;
+  public successHeader;
+  public successMessage;
+  public enrolled = false;
 
   // Student Related Variables
-  private studentInfo: StudentInfo;
-  private enrollments: Enrollment[] = [];
-  private sectionToDrop: SectionInfo;
-  private sectionsById: Section[] = [];
-  private transactions: Transaction[] = [];
-  private sections: SectionInfo[] = [];
-  private department: Department;
+  public studentInfo: StudentInfo;
+  public enrollments: Enrollment[] = [];
+  public sectionToDrop: SectionInfo;
+  public sectionsById: Section[] = [];
+  public transactions: Transaction[] = [];
+  public sections: SectionInfo[] = [];
+  public department: Department;
 
   // Array for all the subscriptions
-  private subscriptions: Subscription[] = [];
+  public subscriptions: Subscription[] = [];
 
   constructor(
-    private router: Router,
-    private repository: RepositoryService,
-    private errorHandler: ErrorHandlerService,
+    public router: Router,
+    public repository: RepositoryService,
+    public errorHandler: ErrorHandlerService,
   ) { }
 
   ngOnInit() {
@@ -73,14 +73,14 @@ export class StudentHomeComponent implements OnInit {
    ************************************************/
 
   // This triggers the confirmation dialog
-  private studentConfirm(section: SectionInfo) {
+  public studentConfirm(section: SectionInfo) {
     this.sectionToDrop = section;
     $('#confirmModal').modal();
   }
 
 
   // if they pick yes on the dialog
-  private studentDropCourse(sectionToDrop: SectionInfo) {
+  public studentDropCourse(sectionToDrop: SectionInfo) {
 
     let apiAddressEnrollments = "api/enrollment/section/" + sectionToDrop.section_Id;
     this.subscriptions.push(this.repository.getData(apiAddressEnrollments).pipe(

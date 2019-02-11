@@ -28,22 +28,22 @@ export class AdminListComponent implements OnInit, OnDestroy {
   public users: User[] = [];
   public usersObservable: User[];
   public errorMessage: String = "";
-  private depts: Department[];
-  private isLoaded = false;
+  public depts: Department[];
+  public isLoaded = false;
 
   // Array for all the subscriptions
-  private subscriptions: Subscription[] = [];
+  public subscriptions: Subscription[] = [];
 
   constructor(
-    private repository: RepositoryService,
-    private errorHandler: ErrorHandlerService,
-    private router: Router
+    public repository: RepositoryService,
+    public errorHandler: ErrorHandlerService,
+    public router: Router
   ) { }
 
   ngOnInit() {
     this.dtOptions = {
       pagingType: 'full_numbers',
-      pageLength: 8
+      pageLength: 10
     };
 
     // Get all users and departments
@@ -68,6 +68,7 @@ export class AdminListComponent implements OnInit, OnDestroy {
         this.dtTrigger.next();
         // Pick out the administration
         for (let x = 0; x < users.length; x++) {
+
           if (users[x].type_Code === 1) {
             this.users.push(users[x]);
           }

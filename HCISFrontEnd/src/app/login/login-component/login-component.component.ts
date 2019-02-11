@@ -29,18 +29,18 @@ export class LoginComponent implements OnInit, OnDestroy {
 
   public errorMessage: String = "";
   public userForm: FormGroup;
-  private loading = false;
-  private userLogin: UserLogin;
-  private user: User;
+  public loading = false;
+  public userLogin: UserLogin;
+  public user: User;
 
   // Array for all the subscriptions
-  private subscriptions: Subscription[] = [];
+  public subscriptions: Subscription[] = [];
 
   constructor(
-    private repository: RepositoryService,
-    private errorHandler: ErrorHandlerService,
-    private router: Router,
-    private globals: Globals
+    public repository: RepositoryService,
+    public errorHandler: ErrorHandlerService,
+    public router: Router,
+    public globals: Globals
   ) { }
 
   ngOnInit() {
@@ -82,7 +82,7 @@ export class LoginComponent implements OnInit, OnDestroy {
     }
   }
 
-  private executeLogin(userFormValue) {
+  public executeLogin(userFormValue) {
     // Set loading and make MD5 object
     this.loading = true;
     let md5 = new Md5();
@@ -162,7 +162,7 @@ export class LoginComponent implements OnInit, OnDestroy {
     this.router.navigate(['/home']);
   }
 
-  private getStudentId() {
+  public getStudentId() {
     // Assign subscription
     let subscription: Subscription;
     let apiAddress = "api/student/user/";
@@ -181,7 +181,7 @@ export class LoginComponent implements OnInit, OnDestroy {
       };
   }
 
-  private getFacultyId() {
+  public getFacultyId() {
 
     // Assign subscription
     let subscription: Subscription;
@@ -201,7 +201,7 @@ export class LoginComponent implements OnInit, OnDestroy {
       };
   }
 
-  private reload() {
+  public reload() {
     this.globals.reloadPage();
   }
 

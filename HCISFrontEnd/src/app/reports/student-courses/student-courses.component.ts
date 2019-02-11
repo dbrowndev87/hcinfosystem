@@ -17,23 +17,23 @@ export class StudentCoursesComponent implements OnInit {
 
   public students: StudentInfo[];
   public errorMessage: String = "";
-  private studentCoursesForm: FormGroup;
-  private id: number;
-  private isLoaded = false;
-  private semesters = new Semesters();
-  private year = new Date().getFullYear();
-  private range: any[] = [];
-  private years: any[] = [];
-  private depts: Department[];
+  public studentCoursesForm: FormGroup;
+  public id: number;
+  public isLoaded = false;
+  public semesters = new Semesters();
+  public year = new Date().getFullYear();
+  public range: any[] = [];
+  public years: any[] = [];
+  public depts: Department[];
 
   // Array for all the subscriptions
-  private subscriptions: Subscription[] = [];
+  public subscriptions: Subscription[] = [];
 
 
   constructor(
-    private repository: RepositoryService,
-    private errorHandler: ErrorHandlerService,
-    private router: Router,
+    public repository: RepositoryService,
+    public errorHandler: ErrorHandlerService,
+    public router: Router,
 
   ) { }
 
@@ -72,7 +72,7 @@ export class StudentCoursesComponent implements OnInit {
 
     return false;
   }
-  private getAllDepartments() {
+  public getAllDepartments() {
 
     let apiAddress = "api/department/";
     this.subscriptions.push(this.repository.getData(apiAddress)
@@ -100,16 +100,16 @@ export class StudentCoursesComponent implements OnInit {
   }
 
 
-  private redirectToReport(formValue) {
+  public redirectToReport(formValue) {
 
     this.router.navigate(['/reports/studentcourses/report/' + formValue.semester + '/' + formValue.year + '/' + formValue.dept_Id]);
   }
 
-  // private redirectToAllReport(id) {
+  // public redirectToAllReport(id) {
   //   this.router.navigate(['/reports/studentcourses/report/' + id]);
   // }
 
-  private goHome() {
+  public goHome() {
     this.router.navigate(['/home']);
   }
 }

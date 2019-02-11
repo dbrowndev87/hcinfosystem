@@ -19,21 +19,21 @@ export class SectionUpdateComponent implements OnInit, OnDestroy {
 
   public errorMessage = "";
   public sectionForm: FormGroup;
-  private section: Section;
-  private userType: number;
-  private isLoaded = false;
+  public section: Section;
+  public userType: number;
+  public isLoaded = false;
   public designations = new Array("A", "B", "C", "L");
   public courses: Course[];
-  @ViewChild('dCode') private dCode: ElementRef;
+  @ViewChild('dCode') public dCode: ElementRef;
 
   // Array for all the subscriptions
-  private subscriptions: Subscription[] = [];
+  public subscriptions: Subscription[] = [];
 
   constructor(
-    private repository: RepositoryService,
-    private errorHandler: ErrorHandlerService,
-    private router: Router,
-    private activeRoute: ActivatedRoute
+    public repository: RepositoryService,
+    public errorHandler: ErrorHandlerService,
+    public router: Router,
+    public activeRoute: ActivatedRoute
   ) { }
 
   ngOnInit() {
@@ -74,7 +74,7 @@ export class SectionUpdateComponent implements OnInit, OnDestroy {
       };
   }
   // Patch section to form.
-  private getsectionById() {
+  public getsectionById() {
     let id: string = this.activeRoute.snapshot.params['id'];
     let sectionByIdUrl = `api/section/${id}`;
 
@@ -119,7 +119,7 @@ export class SectionUpdateComponent implements OnInit, OnDestroy {
     }
   }
 
-  private executeSectionUpdate(sectionFormValue) {
+  public executeSectionUpdate(sectionFormValue) {
 
     this.section.section_Id = this.section.section_Id;
     this.section.course_Id = sectionFormValue.course_Id;

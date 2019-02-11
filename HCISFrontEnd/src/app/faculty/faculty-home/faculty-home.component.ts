@@ -22,33 +22,33 @@ export class FacultyHomeComponent implements OnInit {
 
 
   public homeText: string;
-  private typeCode: number;
-  private sectionIdForGrades: number;
-  private previousUrl;
-  private isLoaded = false;
-  private errorMessage = "";
-  private successHeader;
-  private successMessage;
+  public typeCode: number;
+  public sectionIdForGrades: number;
+  public previousUrl;
+  public isLoaded = false;
+  public errorMessage = "";
+  public successHeader;
+  public successMessage;
 
-  private studentEnrollment: Enrollment;
-  private studentInfo: StudentInfo;
-  private facultyInfo: FacultyInfo;
-  private enrollments: Enrollment[] = [];
-  private sectionsById: Section[] = [];
-  private sections: SectionInfo[] = [];
-  private students: StudentInfo[] = [];
-  private faculty: FacultyInfo[] = [];
-  private enrollmentGrades: number[] = [];
-  private department: Department;
+  public studentEnrollment: Enrollment;
+  public studentInfo: StudentInfo;
+  public facultyInfo: FacultyInfo;
+  public enrollments: Enrollment[] = [];
+  public sectionsById: Section[] = [];
+  public sections: SectionInfo[] = [];
+  public students: StudentInfo[] = [];
+  public faculty: FacultyInfo[] = [];
+  public enrollmentGrades: number[] = [];
+  public department: Department;
   public buttonClicked = false;
 
-  private subscriptions: Subscription[] = [];
+  public subscriptions: Subscription[] = [];
 
 
   constructor(
-    private router: Router,
-    private repository: RepositoryService,
-    private errorHandler: ErrorHandlerService,
+    public router: Router,
+    public repository: RepositoryService,
+    public errorHandler: ErrorHandlerService,
   ) { }
 
   ngOnInit() {

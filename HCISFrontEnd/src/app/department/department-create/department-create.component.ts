@@ -16,19 +16,19 @@ import { Subscription } from 'rxjs';
 export class DepartmentCreateComponent implements OnInit, OnDestroy {
 
   public errorMessage = "";
-  private userType: number;
+  public userType: number;
   public departmentForm: FormGroup;
   public departments: Department[];
-  private isLoaded = false;
+  public isLoaded = false;
   @ViewChild('dCode') dCode: ElementRef;
 
   // Array for all the subscriptions
-  private subscriptions: Subscription[] = [];
+  public subscriptions: Subscription[] = [];
 
   constructor(
-    private repository: RepositoryService,
-    private errorHandler: ErrorHandlerService,
-    private router: Router,
+    public repository: RepositoryService,
+    public errorHandler: ErrorHandlerService,
+    public router: Router,
   ) { }
 
   ngOnInit() {
@@ -84,7 +84,7 @@ export class DepartmentCreateComponent implements OnInit, OnDestroy {
   }
 
 
-  private executeDepartmentCreation(departmentFormValue) {
+  public executeDepartmentCreation(departmentFormValue) {
 
     // Make a section interface.
     let dept: Department = {

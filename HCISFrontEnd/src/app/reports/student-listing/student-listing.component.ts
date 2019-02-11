@@ -26,19 +26,19 @@ export class StudentListingComponent implements OnInit {
 
   public courses: Course[];
   public errorMessage: String = "";
-  private studentListingForm: FormGroup;
-  private depts: Department[];
-  private id: number;
-  private isLoaded = false;
+  public studentListingForm: FormGroup;
+  public depts: Department[];
+  public id: number;
+  public isLoaded = false;
 
   // Array for all the subscriptions
-  private subscriptions: Subscription[] = [];
+  public subscriptions: Subscription[] = [];
 
 
   constructor(
-    private repository: RepositoryService,
-    private errorHandler: ErrorHandlerService,
-    private router: Router,
+    public repository: RepositoryService,
+    public errorHandler: ErrorHandlerService,
+    public router: Router,
 
   ) { }
 
@@ -52,7 +52,7 @@ export class StudentListingComponent implements OnInit {
   }
 
 
-  private getAllCourseInfo() {
+  public getAllCourseInfo() {
 
     let apiAddress = "api/course";
     this.subscriptions.push(this.repository.getData(apiAddress)
@@ -85,15 +85,15 @@ export class StudentListingComponent implements OnInit {
   }
 
 
-  private redirectToReport(formValue) {
+  public redirectToReport(formValue) {
     this.router.navigate(['/reports/studentlisting/report/' + formValue.course_Id]);
   }
 
-  private redirectToAllReport(id) {
+  public redirectToAllReport(id) {
     this.router.navigate(['/reports/studentlisting/report/' + id]);
   }
 
-  private goHome() {
+  public goHome() {
     this.router.navigate(['/home']);
   }
 }

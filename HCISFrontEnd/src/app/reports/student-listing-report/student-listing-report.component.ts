@@ -31,32 +31,32 @@ import { OrderBy } from 'src/app/shared/tools/orderBy';
 
 export class StudentListingReportComponent implements OnInit {
 
-  private courses: any[] = new Array();
+  public courses: any[] = new Array();
   public errorMessage: String = "";
-  private user: User;
-  private id: string;
-  private isLoaded = false;
-  private semesters = new Semesters();
-  private counter = 0;
-  private orderBy = new OrderBy();
+  public user: User;
+  public id: string;
+  public isLoaded = false;
+  public semesters = new Semesters();
+  public counter = 0;
+  public orderBy = new OrderBy();
 
-  private students: any[] = new Array();
-  private sections: any[] = [];
+  public students: any[] = new Array();
+  public sections: any[] = [];
 
-  private reportId = "";
-  private reportDate;
-  private reportFor = "";
+  public reportId = "";
+  public reportDate;
+  public reportFor = "";
 
 
   // Array for all the subscriptions
-  private subscriptions: Subscription[] = [];
+  public subscriptions: Subscription[] = [];
 
   constructor(
-    private repository: RepositoryService,
-    private errorHandler: ErrorHandlerService,
-    private router: Router,
-    private activeatedRoute: ActivatedRoute,
-    private reportIDGen: ReportIdGenerator
+    public repository: RepositoryService,
+    public errorHandler: ErrorHandlerService,
+    public router: Router,
+    public activeatedRoute: ActivatedRoute,
+    public reportIDGen: ReportIdGenerator
   ) { }
 
   ngOnInit() {
@@ -90,7 +90,7 @@ export class StudentListingReportComponent implements OnInit {
   }
 
 
-  private getAllCourses() {
+  public getAllCourses() {
     let apiAddress = "api/course";
     this.subscriptions.push(this.repository.getData(apiAddress)
       .subscribe(res => {
@@ -124,7 +124,7 @@ export class StudentListingReportComponent implements OnInit {
    * Gets all the sections as SectionInfo objects.
    * @param courses
    */
-  private getSections(courses: any[]) {
+  public getSections(courses: any[]) {
 
     let apiAddress = "api/section/courseInfo";
     this.subscriptions.push(this.repository.getData(apiAddress)
@@ -185,7 +185,7 @@ export class StudentListingReportComponent implements OnInit {
   /**
    * Get the user information.
    */
-  private getUser() {
+  public getUser() {
     let apiAddress = "api/user/" + sessionStorage.getItem('userId');
     this.subscriptions.push(this.repository.getData(apiAddress)
 
@@ -208,7 +208,7 @@ export class StudentListingReportComponent implements OnInit {
    * @param x 
    * @param y 
    */
-  private getStudentInfoBySection(section_Id, designation, x, y) {
+  public getStudentInfoBySection(section_Id, designation, x, y) {
     let apiAddress = "api/studentInfo/section/" + section_Id;
     this.subscriptions.push(this.repository.getData(apiAddress)
       .subscribe(res => {
@@ -242,7 +242,7 @@ export class StudentListingReportComponent implements OnInit {
       };
   }
 
-  private backToReportGenerator() {
+  public backToReportGenerator() {
     this.router.navigate(['/reports/studentlisting']);
   }
 

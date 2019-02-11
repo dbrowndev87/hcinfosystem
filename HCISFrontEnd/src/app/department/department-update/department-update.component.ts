@@ -24,17 +24,17 @@ export class DepartmentUpdateComponent implements OnInit {
 
   public errorMessage = "";
   public departmentForm: FormGroup;
-  private department: Department;
-  private userType: number;
-  private isLoaded = false;
-  @ViewChild('dCode') private dCode: ElementRef;
+  public department: Department;
+  public userType: number;
+  public isLoaded = false;
+  @ViewChild('dCode') public dCode: ElementRef;
 
 
   constructor(
-    private repository: RepositoryService,
-    private errorHandler: ErrorHandlerService,
-    private router: Router,
-    private activeRoute: ActivatedRoute
+    public repository: RepositoryService,
+    public errorHandler: ErrorHandlerService,
+    public router: Router,
+    public activeRoute: ActivatedRoute
   ) { }
 
   ngOnInit() {
@@ -49,7 +49,7 @@ export class DepartmentUpdateComponent implements OnInit {
   }
 
   // Patch department to form.
-  private getdepartmentById() {
+  public getdepartmentById() {
     let id: string = this.activeRoute.snapshot.params['id'];
     let departmentByIdUrl = `api/department/${id}`;
 
@@ -86,7 +86,7 @@ export class DepartmentUpdateComponent implements OnInit {
     }
   }
 
-  private executeDepartmentUpdate(departmentFormValue) {
+  public executeDepartmentUpdate(departmentFormValue) {
     let updateId = this.department.dept_Id;
 
     this.department.dept_Id = departmentFormValue.dept_Id;

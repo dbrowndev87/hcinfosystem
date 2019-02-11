@@ -25,20 +25,20 @@ export class AdminUpdateComponent implements OnInit, OnDestroy {
 
   public errorMessage = '';
   public user: User;
-  private deptIndex: number;
+  public deptIndex: number;
   public userForm: FormGroup;
   public depts: Department[];
-  private isLoaded = false;
+  public isLoaded = false;
   @ViewChild('dCode') dCode: ElementRef;
 
   // Array for all the subscriptions
-  private subscriptions: Subscription[] = [];
+  public subscriptions: Subscription[] = [];
 
   constructor(
-    private repository: RepositoryService,
-    private router: Router,
-    private errorHandler: ErrorHandlerService,
-    private activeRoute: ActivatedRoute
+    public repository: RepositoryService,
+    public router: Router,
+    public errorHandler: ErrorHandlerService,
+    public activeRoute: ActivatedRoute
   ) { }
 
   ngOnInit() {
@@ -69,7 +69,7 @@ export class AdminUpdateComponent implements OnInit, OnDestroy {
    * Author: Darcy Brown
    * Date: January 24th
    */
-  private getUserById() {
+  public getUserById() {
     let id: string = this.activeRoute.snapshot.params['id'];
 
     let userByIdUrl = `api/user/${id}`;
@@ -126,7 +126,7 @@ export class AdminUpdateComponent implements OnInit, OnDestroy {
    *
    * @param userFormValue 
    */
-  private executeUserUpdate(userFormValue) {
+  public executeUserUpdate(userFormValue) {
 
     this.user.first_Name = userFormValue.first_Name;
     this.user.last_Name = userFormValue.last_Name;

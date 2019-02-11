@@ -27,27 +27,27 @@ export class CourseCatalogueReportComponent implements OnInit {
 
   public courses: any[] = [];
   public errorMessage: String = "";
-  private depts: any = [];
-  private user: User;
-  private id: number;
-  private isLoaded = false;
-  private semesters = new Semesters();
-  private counter = 0;
+  public depts: any = [];
+  public user: User;
+  public id: number;
+  public isLoaded = false;
+  public semesters = new Semesters();
+  public counter = 0;
 
-  private reportId = "";
-  private reportDate;
-  private reportFor = "";
+  public reportId = "";
+  public reportDate;
+  public reportFor = "";
 
   // Array for all the subscriptions
-  private subscriptions: Subscription[] = [];
+  public subscriptions: Subscription[] = [];
 
 
   constructor(
-    private repository: RepositoryService,
-    private errorHandler: ErrorHandlerService,
-    private router: Router,
-    private activeatedRoute: ActivatedRoute,
-    private reportIDGen: ReportIdGenerator
+    public repository: RepositoryService,
+    public errorHandler: ErrorHandlerService,
+    public router: Router,
+    public activeatedRoute: ActivatedRoute,
+    public reportIDGen: ReportIdGenerator
   ) { }
 
   ngOnInit() {
@@ -74,7 +74,7 @@ export class CourseCatalogueReportComponent implements OnInit {
   /**
    * Get all the departments to geenrate the report with
    */
-  private getDepartment() {
+  public getDepartment() {
     let apiAddress = "api/department/" + this.id;
     this.subscriptions.push(this.repository.getData(apiAddress)
 
@@ -102,7 +102,7 @@ export class CourseCatalogueReportComponent implements OnInit {
   /**
    * Gets the user information from the API
    */
-  private getUser() {
+  public getUser() {
     let apiAddress = "api/user/" + sessionStorage.getItem('userId');
     this.subscriptions.push(this.repository.getData(apiAddress)
 
@@ -120,7 +120,7 @@ export class CourseCatalogueReportComponent implements OnInit {
    * This gets all the departments and splices out the Administration
    * department.
    */
-  private getAllDepartments() {
+  public getAllDepartments() {
     let apiAddress = "api/department";
     this.subscriptions.push(this.repository.getData(apiAddress)
       .subscribe(res => {
@@ -186,7 +186,7 @@ export class CourseCatalogueReportComponent implements OnInit {
       };
   }
 
-  private backToReportGenerator() {
+  public backToReportGenerator() {
     this.router.navigate(['/reports/coursecatalogue']);
   }
 

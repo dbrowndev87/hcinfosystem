@@ -27,21 +27,21 @@ export class CourseUpdateComponent implements OnInit, OnDestroy {
 
   public errorMessage = "";
   public courseForm: FormGroup;
-  private depts: Department[];
-  private course: Course;
-  private userType: number;
-  private isLoaded = false;
-  @ViewChild('dCode') private dCode: ElementRef;
+  public depts: Department[];
+  public course: Course;
+  public userType: number;
+  public isLoaded = false;
+  @ViewChild('dCode') public dCode: ElementRef;
 
   // Array for all the subscriptions
-  private subscriptions: Subscription[] = [];
+  public subscriptions: Subscription[] = [];
 
 
   constructor(
-    private repository: RepositoryService,
-    private errorHandler: ErrorHandlerService,
-    private router: Router,
-    private activeRoute: ActivatedRoute
+    public repository: RepositoryService,
+    public errorHandler: ErrorHandlerService,
+    public router: Router,
+    public activeRoute: ActivatedRoute
   ) { }
 
   ngOnInit() {
@@ -67,7 +67,7 @@ export class CourseUpdateComponent implements OnInit, OnDestroy {
   }
 
   // Patch course to form.
-  private getCourseById() {
+  public getCourseById() {
     let id: string = this.activeRoute.snapshot.params['id'];
     let courseByIdUrl = `api/course/${id}`;
 
@@ -130,7 +130,7 @@ export class CourseUpdateComponent implements OnInit, OnDestroy {
     }
   }
 
-  private executeCourseUpdate(courseFormValue) {
+  public executeCourseUpdate(courseFormValue) {
     let updateId = this.course.course_Id;
 
     this.course.course_Id = courseFormValue.course_Id;

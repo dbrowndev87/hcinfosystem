@@ -29,23 +29,23 @@ export class UserloginListComponent implements OnInit, OnDestroy {
   public userLogins: any[] = [];
   public errorMessage: String = "";
   public users: User[] = [];
-  private loadingMessage = "Loading";
-  private isLoaded = false;
-  private outputInfo: any[];
+  public loadingMessage = "Loading";
+  public isLoaded = false;
+  public outputInfo: any[];
   // Array for all the subscriptions
-  private subscriptions: Subscription[] = [];
+  public subscriptions: Subscription[] = [];
 
 
   constructor(
-    private repository: RepositoryService,
-    private errorHandler: ErrorHandlerService,
-    private router: Router
+    public repository: RepositoryService,
+    public errorHandler: ErrorHandlerService,
+    public router: Router
   ) { }
 
   ngOnInit() {
     this.dtOptions = {
       pagingType: 'full_numbers',
-      pageLength: 8
+      pageLength: 10
     };
 
     this.getAllUserLogins();

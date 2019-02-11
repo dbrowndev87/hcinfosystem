@@ -20,34 +20,34 @@ export class StudentCoursesReportComponent implements OnInit {
 
   public courses: any[] = [];
   public errorMessage: String = "";
-  private studentInfos: StudentInfo[] = [];
-  private enrollmentsByStudentId: Enrollment[] = [];
-  private student: Student;
-  private id: number;
-  private isLoaded = false;
-  private typeCode;
-  private semesters = new Semesters();
-  private students: any[] = [];
-  private department: Department;
-  private allSections: SectionInfo[] = [];
+  public studentInfos: StudentInfo[] = [];
+  public enrollmentsByStudentId: Enrollment[] = [];
+  public student: Student;
+  public id: number;
+  public isLoaded = false;
+  public typeCode;
+  public semesters = new Semesters();
+  public students: any[] = [];
+  public department: Department;
+  public allSections: SectionInfo[] = [];
 
-  private counter = 0;
-  private transcriptDate;
-  private semester: any;
-  private year: any;
-  private dept: number;
+  public counter = 0;
+  public transcriptDate;
+  public semester: any;
+  public year: any;
+  public dept: number;
 
 
   // Array for all the subscriptions
-  private subscriptions: Subscription[] = [];
+  public subscriptions: Subscription[] = [];
   loggedInUser: any;
 
 
   constructor(
-    private repository: RepositoryService,
-    private errorHandler: ErrorHandlerService,
-    private router: Router,
-    private activeatedRoute: ActivatedRoute,
+    public repository: RepositoryService,
+    public errorHandler: ErrorHandlerService,
+    public router: Router,
+    public activeatedRoute: ActivatedRoute,
   ) { }
 
   ngOnInit() {
@@ -71,7 +71,7 @@ export class StudentCoursesReportComponent implements OnInit {
 
     }
   }
-  private getUserInformation(id) {
+  public getUserInformation(id) {
     let apiAddress = "api/user/" + id;
     this.subscriptions.push(this.repository.getData(apiAddress)
       .subscribe(res => {
@@ -83,7 +83,7 @@ export class StudentCoursesReportComponent implements OnInit {
         this.errorMessage = this.errorHandler.errorMessage;
       };
   }
-  private getDepartmentById(deptId) {
+  public getDepartmentById(deptId) {
     let apiAddress = "api/department/" + deptId;
     this.subscriptions.push(this.repository.getData(apiAddress)
       .subscribe(res => {
@@ -97,7 +97,7 @@ export class StudentCoursesReportComponent implements OnInit {
         this.errorMessage = this.errorHandler.errorMessage;
       };
   }
-  private getAllSections() {
+  public getAllSections() {
     let apiAddress = "api/section/courseInfo";
     this.subscriptions.push(this.repository.getData(apiAddress)
       .subscribe(res => {
@@ -112,7 +112,7 @@ export class StudentCoursesReportComponent implements OnInit {
       };
   }
 
-  private getEnrollmentsByStudentId(id, i) {
+  public getEnrollmentsByStudentId(id, i) {
     let apiAddress = "api/section/semester/year/student/dept/" + this.semester + "/" + this.year + "/" + id + "/" + this.department.dept_Id;
     this.subscriptions.push(this.repository.getData(apiAddress)
       .subscribe(res => {
@@ -145,7 +145,7 @@ export class StudentCoursesReportComponent implements OnInit {
         }));
   }
 
-  private getStudentsBySemesterYear() {
+  public getStudentsBySemesterYear() {
     console.log(this.semester + this.year);
     let apiAddress = "api/section/semester/year/dept/" + this.semester + "/" + this.year + "/" + this.department.dept_Id;
     this.subscriptions.push(this.repository.getData(apiAddress)
@@ -174,7 +174,7 @@ export class StudentCoursesReportComponent implements OnInit {
         }));
   }
 
-  private backToReportGenerator() {
+  public backToReportGenerator() {
     this.router.navigate(['/reports/studentcourses']);
   }
 }

@@ -27,21 +27,21 @@ export class StudentUpdateComponent implements OnInit, OnDestroy {
 
   public errorMessage = "";
   public studentUpdateForm: FormGroup;
-  private studentInfo: StudentInfo;
-  private depts: Department[];
-  private student: Student;
-  private studentId: number;
-  private isLoaded = false;
-  @ViewChild('sStatus') private sStatus: ElementRef;
+  public studentInfo: StudentInfo;
+  public depts: Department[];
+  public student: Student;
+  public studentId: number;
+  public isLoaded = false;
+  @ViewChild('sStatus') public sStatus: ElementRef;
 
   // Array for all the subscriptions
-  private subscriptions: Subscription[] = [];
+  public subscriptions: Subscription[] = [];
 
   constructor(
-    private repository: RepositoryService,
-    private errorHandler: ErrorHandlerService,
-    private router: Router,
-    private activeRoute: ActivatedRoute
+    public repository: RepositoryService,
+    public errorHandler: ErrorHandlerService,
+    public router: Router,
+    public activeRoute: ActivatedRoute
   ) { }
 
   ngOnInit() {
@@ -194,7 +194,7 @@ export class StudentUpdateComponent implements OnInit, OnDestroy {
   * @param user
   * @param student
   */
-  private executeStudentUpdate(user: User, student: Student) {
+  public executeStudentUpdate(user: User, student: Student) {
 
     let apiUrlUser = `api/user/` + this.studentInfo.user_Id;
     this.subscriptions.push(this.repository.update(apiUrlUser, user)

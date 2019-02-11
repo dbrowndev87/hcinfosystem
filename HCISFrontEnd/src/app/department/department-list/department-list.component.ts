@@ -26,18 +26,18 @@ export class DepartmentListComponent implements OnInit, OnDestroy {
 
   public departments: Department[];
   public errorMessage: String = "";
-  private isLoaded = false;
+  public isLoaded = false;
 
   constructor(
-    private repository: RepositoryService,
-    private errorHandler: ErrorHandlerService,
-    private router: Router
+    public repository: RepositoryService,
+    public errorHandler: ErrorHandlerService,
+    public router: Router
   ) { }
 
   ngOnInit() {
     this.dtOptions = {
       pagingType: 'full_numbers',
-      pageLength: 8
+      pageLength: 10
     };
 
     this.getAllDepartments();

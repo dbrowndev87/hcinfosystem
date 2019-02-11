@@ -31,18 +31,18 @@ export class StudentPaymentComponent implements OnInit, OnDestroy {
   public studentInfo: StudentInfo;
   public student: Student;
   public studentPaymentForm: FormGroup;
-  private transactions: Transaction[] = [];
-  private transId: number;
-  private isLoaded = false;
+  public transactions: Transaction[] = [];
+  public transId: number;
+  public isLoaded = false;
 
   // Array for all the subscriptions
-  private subscriptions: Subscription[] = [];
+  public subscriptions: Subscription[] = [];
 
   constructor(
-    private repository: RepositoryService,
-    private router: Router,
-    private errorHandler: ErrorHandlerService,
-    private tidg: TransactionIdGenerator
+    public repository: RepositoryService,
+    public router: Router,
+    public errorHandler: ErrorHandlerService,
+    public tidg: TransactionIdGenerator
   ) { }
 
   ngOnInit() {
@@ -71,7 +71,7 @@ export class StudentPaymentComponent implements OnInit, OnDestroy {
      * Author: Darcy Brown
      * Date: January 25th, 2019
      */
-  private getStudent() {
+  public getStudent() {
     let apiAddress = "api/student/";
     this.subscriptions.push(this.repository.getData(apiAddress + parseInt(sessionStorage.getItem('studentId'), 0))
       .subscribe(student => {
@@ -89,7 +89,7 @@ export class StudentPaymentComponent implements OnInit, OnDestroy {
         }));
   }
 
-  private getTransactions() {
+  public getTransactions() {
     /************************************
          * Get Transactions
          ***********************************/
@@ -211,7 +211,7 @@ export class StudentPaymentComponent implements OnInit, OnDestroy {
    * Author: Darcy Brown
    * Date: January 27th, 2019
    */
-  private getValidTransID(studentPaymentFormValue) {
+  public getValidTransID(studentPaymentFormValue) {
 
     // Store
     let subscription: Subscription;
@@ -262,7 +262,7 @@ export class StudentPaymentComponent implements OnInit, OnDestroy {
      *
      * @param studentPaymentFormValue 
      */
-  private executeStudentUpdate(studentPaymentFormValue) {
+  public executeStudentUpdate(studentPaymentFormValue) {
 
     let apiUrl = `api/student/${this.student.student_Id}`;
     this.subscriptions.push(this.repository.update(apiUrl, this.student)

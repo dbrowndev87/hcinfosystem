@@ -24,19 +24,19 @@ export class BillStudentComponent implements OnInit {
 
   public studentInfo: StudentInfo[];
   public errorMessage: String = "";
-  private studentTranscriptForm: FormGroup;
-  private depts: Department[];
-  private id: number;
-  private isLoaded = false;
+  public studentTranscriptForm: FormGroup;
+  public depts: Department[];
+  public id: number;
+  public isLoaded = false;
 
   // Array for all the subscriptions
-  private subscriptions: Subscription[] = [];
+  public subscriptions: Subscription[] = [];
 
 
   constructor(
-    private repository: RepositoryService,
-    private errorHandler: ErrorHandlerService,
-    private router: Router,
+    public repository: RepositoryService,
+    public errorHandler: ErrorHandlerService,
+    public router: Router,
 
   ) { }
 
@@ -50,7 +50,7 @@ export class BillStudentComponent implements OnInit {
   }
 
 
-  private getAllStudentInfo() {
+  public getAllStudentInfo() {
 
     let apiAddress = "api/studentinfo/";
     this.subscriptions.push(this.repository.getData(apiAddress)
@@ -83,11 +83,11 @@ export class BillStudentComponent implements OnInit {
     return false;
   }
 
-  private redirectToReport(formValue) {
+  public redirectToReport(formValue) {
     this.router.navigate(['/reports/billstudent/report/' + formValue.student_Id]);
   }
 
-  private goHome() {
+  public goHome() {
     this.router.navigate(['/home']);
   }
 

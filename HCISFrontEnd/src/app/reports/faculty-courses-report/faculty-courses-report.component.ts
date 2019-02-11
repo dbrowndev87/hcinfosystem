@@ -21,31 +21,31 @@ import { SectionInfo } from 'src/app/_interfaces/sectionInfo.model';
 export class FacultyCoursesReportComponent implements OnInit {
 
   public errorMessage: String = "";
-  private depts: any[] = new Array();
-  private faculty: any[] = [];
+  public depts: any[] = new Array();
+  public faculty: any[] = [];
 
-  private user: User;
-  private id: string;
-  private isLoaded = false;
-  private semesters = new Semesters();
-  private counter = 0;
-  private theDepartment: Department;
-  private facultyByDepartment: FacultyInfo[] = [];
+  public user: User;
+  public id: string;
+  public isLoaded = false;
+  public semesters = new Semesters();
+  public counter = 0;
+  public theDepartment: Department;
+  public facultyByDepartment: FacultyInfo[] = [];
 
-  private reportId = "";
-  private reportDate;
-  private reportFor = "";
+  public reportId = "";
+  public reportDate;
+  public reportFor = "";
 
   // Array for all the subscriptions
-  private subscriptions: Subscription[] = [];
+  public subscriptions: Subscription[] = [];
   sectionsByFaculty: Section[] = [];
 
   constructor(
-    private repository: RepositoryService,
-    private errorHandler: ErrorHandlerService,
-    private router: Router,
-    private activeatedRoute: ActivatedRoute,
-    private reportIDGen: ReportIdGenerator
+    public repository: RepositoryService,
+    public errorHandler: ErrorHandlerService,
+    public router: Router,
+    public activeatedRoute: ActivatedRoute,
+    public reportIDGen: ReportIdGenerator
   ) { }
 
   ngOnInit() {
@@ -80,7 +80,7 @@ export class FacultyCoursesReportComponent implements OnInit {
         }));
   }
 
-  private getAllDepartments() {
+  public getAllDepartments() {
     let apiAddress = "api/department";
     this.subscriptions.push(this.repository.getData(apiAddress)
       .subscribe(res => {
@@ -110,7 +110,7 @@ export class FacultyCoursesReportComponent implements OnInit {
   }
 
 
-  private getUser() {
+  public getUser() {
     let apiAddress = "api/user/" + sessionStorage.getItem('userId');
     this.subscriptions.push(this.repository.getData(apiAddress)
 
@@ -123,7 +123,7 @@ export class FacultyCoursesReportComponent implements OnInit {
         this.errorMessage = this.errorHandler.errorMessage;
       };
   }
-  private getFaculty(depts: any[]) {
+  public getFaculty(depts: any[]) {
 
     let apiAddress = "api/facultyInfo";
     this.subscriptions.push(this.repository.getData(apiAddress)
@@ -211,7 +211,7 @@ export class FacultyCoursesReportComponent implements OnInit {
   }
 
 
-  private backToReportGenerator() {
+  public backToReportGenerator() {
     this.router.navigate(['/reports/facultycourses']);
   }
 

@@ -16,20 +16,20 @@ import { Subscription } from 'rxjs';
 export class EnrollmentUpdateComponent implements OnInit, OnDestroy {
 
   public errorMessage = "";
-  private enrollement: Enrollment;
-  private studentInfo: StudentInfo;
+  public enrollement: Enrollment;
+  public studentInfo: StudentInfo;
   public enrollmentUpdateForm: FormGroup;
-  private updateId: number;
-  private isLoaded = false;
+  public updateId: number;
+  public isLoaded = false;
 
   // Array for all the subscriptions
-  private subscriptions: Subscription[] = [];
+  public subscriptions: Subscription[] = [];
 
   constructor(
-    private repository: RepositoryService,
-    private errorHandler: ErrorHandlerService,
-    private router: Router,
-    private activeRoute: ActivatedRoute
+    public repository: RepositoryService,
+    public errorHandler: ErrorHandlerService,
+    public router: Router,
+    public activeRoute: ActivatedRoute
   ) { }
 
   ngOnInit() {
@@ -51,7 +51,7 @@ export class EnrollmentUpdateComponent implements OnInit, OnDestroy {
   }
 
   // Patch course to form.
-  private getEnrollment() {
+  public getEnrollment() {
 
     let enrollmentByIdUrl = `api/enrollment/` + this.updateId;
 
@@ -101,7 +101,7 @@ export class EnrollmentUpdateComponent implements OnInit, OnDestroy {
     }
   }
 
-  private executeEnrollmentUpdate(enrollmentUpdateFormValue) {
+  public executeEnrollmentUpdate(enrollmentUpdateFormValue) {
 
 
     this.enrollement.course_Status = enrollmentUpdateFormValue.course_Status;

@@ -27,19 +27,19 @@ export class FacultyUpdateComponent implements OnInit, OnDestroy {
 
   public errorMessage = "";
   public facultyUpdateForm: FormGroup;
-  private facultyInfo: FacultyInfo;
-  private depts: Department[];
-  private facultyId: number;
-  private isLoaded = false;
+  public facultyInfo: FacultyInfo;
+  public depts: Department[];
+  public facultyId: number;
+  public isLoaded = false;
 
   // Array for all the subscriptions
-  private subscriptions: Subscription[] = [];
+  public subscriptions: Subscription[] = [];
 
   constructor(
-    private repository: RepositoryService,
-    private errorHandler: ErrorHandlerService,
-    private router: Router,
-    private activeRoute: ActivatedRoute
+    public repository: RepositoryService,
+    public errorHandler: ErrorHandlerService,
+    public router: Router,
+    public activeRoute: ActivatedRoute
   ) {
 
   }
@@ -193,7 +193,7 @@ export class FacultyUpdateComponent implements OnInit, OnDestroy {
   * @param user
   * @param student
   */
-  private executeFacultyUpdate(user: User, student: Faculty) {
+  public executeFacultyUpdate(user: User, student: Faculty) {
 
     let apiUrlUser = `api/user/` + this.facultyInfo.user_Id;
     this.repository.update(apiUrlUser, user)
