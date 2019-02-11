@@ -21,6 +21,9 @@ SET time_zone = "+00:00";
 --
 -- Database: `goldstar`
 --
+DROP DATABASE IF EXISTS `golstar`;
+CREATE DATABASE `goldstar`;
+USE `goldstar`;
 
 DELIMITER $$
 --
@@ -163,24 +166,24 @@ CREATE TABLE `section` (
 INSERT INTO `section` (`section_id`, `faculty_id`, `start_date`, `end_date`, `designation`, `semester`, `vacancy`, `course_id`) VALUES
 (1, 1, '2019-01-07', '2019-04-18', 'A', 'Summer', 30, 'CIS-1111'),
 (2, 2, '2019-01-07', '2019-04-18', 'B', 'Summer', 30, 'CIS-1111'),
-(25, 1, '2019-01-07', '2019-04-18', 'A', 'Summer', 30, 'CIS-1112'),
-(26, 2, '2019-01-07', '2019-04-18', 'B', 'Summer', 30, 'CIS-1112'),
-(27, 1, '2019-01-07', '2019-04-18', 'A', 'Summer', 30, 'CIS-1113'),
-(28, 2, '2019-01-07', '2019-04-18', 'B', 'Summer', 30, 'CIS-1113'),
-(29, 1, '2019-01-07', '2019-04-18', 'A', 'Summer', 30, 'CIS-1114'),
-(30, 2, '2019-01-07', '2019-04-18', 'B', 'Summer', 30, 'CIS-1114'),
-(31, 1, '2019-01-07', '2019-04-18', 'A', 'Summer', 30, 'CIS-1115'),
-(32, 2, '2019-01-07', '2019-04-18', 'B', 'Summer', 30, 'CIS-1115'),
-(33, 3, '2019-01-07', '2019-04-18', 'A', 'Summer', 30, 'NET-1211'),
-(34, 4, '2019-01-07', '2019-04-18', 'B', 'Summer', 30, 'NET-1211'),
-(35, 3, '2019-01-07', '2019-04-18', 'A', 'Summer', 30, 'NET-1212'),
-(36, 4, '2019-01-07', '2019-04-18', 'B', 'Summer', 30, 'NET-1212'),
-(37, 3, '2019-01-07', '2019-04-18', 'A', 'Summer', 30, 'NET-1213'),
-(38, 4, '2019-01-07', '2019-04-18', 'B', 'Summer', 30, 'NET-1213'),
-(39, 3, '2019-01-07', '2019-04-18', 'A', 'Summer', 30, 'NET-1214'),
-(40, 4, '2019-01-07', '2019-04-18', 'B', 'Summer', 30, 'NET-1214'),
-(41, 3, '2019-01-07', '2019-04-18', 'A', 'Summer', 30, 'NET-1215'),
-(42, 4, '2019-01-07', '2019-04-18', 'B', 'Summer', 30, 'NET-1215');
+(3, 1, '2019-01-07', '2019-04-18', 'A', 'Summer', 30, 'CIS-1112'),
+(4, 2, '2019-01-07', '2019-04-18', 'B', 'Summer', 30, 'CIS-1112'),
+(5, 1, '2019-01-07', '2019-04-18', 'A', 'Summer', 30, 'CIS-1113'),
+(6, 2, '2019-01-07', '2019-04-18', 'B', 'Summer', 30, 'CIS-1113'),
+(7, 1, '2019-01-07', '2019-04-18', 'A', 'Summer', 30, 'CIS-1114'),
+(8, 2, '2019-01-07', '2019-04-18', 'B', 'Summer', 30, 'CIS-1114'),
+(9, 1, '2019-01-07', '2019-04-18', 'A', 'Summer', 30, 'CIS-1115'),
+(10, 2, '2019-01-07', '2019-04-18', 'B', 'Summer', 30, 'CIS-1115'),
+(11, 3, '2019-01-07', '2019-04-18', 'A', 'Summer', 30, 'NET-1211'),
+(12, 4, '2019-01-07', '2019-04-18', 'B', 'Summer', 30, 'NET-1211'),
+(13, 3, '2019-01-07', '2019-04-18', 'A', 'Summer', 30, 'NET-1212'),
+(14, 4, '2019-01-07', '2019-04-18', 'B', 'Summer', 30, 'NET-1212'),
+(15, 3, '2019-01-07', '2019-04-18', 'A', 'Summer', 30, 'NET-1213'),
+(16, 4, '2019-01-07', '2019-04-18', 'B', 'Summer', 30, 'NET-1213'),
+(17, 3, '2019-01-07', '2019-04-18', 'A', 'Summer', 30, 'NET-1214'),
+(18, 4, '2019-01-07', '2019-04-18', 'B', 'Summer', 30, 'NET-1214'),
+(19, 3, '2019-01-07', '2019-04-18', 'A', 'Summer', 30, 'NET-1215'),
+(20, 4, '2019-01-07', '2019-04-18', 'B', 'Summer', 30, 'NET-1215');
 
 -- --------------------------------------------------------
 
@@ -412,35 +415,32 @@ ALTER TABLE `user_type_code`
 -- AUTO_INCREMENT for table `department`
 --
 ALTER TABLE `department`
-  MODIFY `dept_id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `dept_id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `enrollment`
 --
 ALTER TABLE `enrollment`
-  MODIFY `enrollment_id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `enrollment_id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 
 --
 -- AUTO_INCREMENT for table `faculty`
 --
 ALTER TABLE `faculty`
-  MODIFY `faculty_id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `faculty_id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `section`
 --
 ALTER TABLE `section`
-  MODIFY `section_id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `section_id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `user_id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
---
--- Constraints for dumped tables
---
 
 --
 -- Constraints for table `course`
