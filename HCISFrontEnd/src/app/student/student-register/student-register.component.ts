@@ -383,7 +383,11 @@ export class StudentRegisterComponent implements OnInit, OnDestroy {
           // FIXME: Need to add vacancy check  here ( && sections.vacancy > 0) when
           // done testing and have more courses.
 
-          if (sections.semester === this.nextSemester) {
+
+          if (
+            sections.semester === this.nextSemester &&
+            sections.start_Date.toString().slice(0, 4) ===
+            this.semesters.getSemesters()[sections.semester + "Start"].toString().slice(0, 4)) {
             this.sectionsSelect.push(sections);
           }
         });

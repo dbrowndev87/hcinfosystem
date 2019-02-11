@@ -20,7 +20,7 @@ export class StudentCoursesComponent implements OnInit {
   private studentCoursesForm: FormGroup;
   private id: number;
   private isLoaded = false;
-  private semesters = new Semesters().getSemesters;
+  private semesters = new Semesters();
   private year = new Date().getFullYear();
   private range: any[] = [];
   private years: any[] = [];
@@ -51,10 +51,8 @@ export class StudentCoursesComponent implements OnInit {
       dept_Id: new FormControl('', [Validators.required]),
     });
 
-    // patched initial value. DB
-    this.studentCoursesForm.get('year').patchValue(this.year + 1);
     this.getAllDepartments();
-    this.isLoaded = true;
+
   }
 
 
@@ -87,6 +85,11 @@ export class StudentCoursesComponent implements OnInit {
           }
         }
 
+      }).add(() => {
+        this.isLoaded = true;
+        this.studentCoursesForm.get('year').setValue('2019');
+        this.studentCoursesForm.get('semester').setValue(this.semesters.getCurrentSemester().semester);
+        this.studentCoursesForm.get('dept_Id').setValue(2);
       })),
       // tslint:disable-next-line: no-unused-expression
       (error) => {

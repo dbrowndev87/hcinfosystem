@@ -53,7 +53,8 @@
               <td>{{userLogin[i][0].user_Id}} - {{userLogin[i][1].first_Name}} {{userLogin[i][1].last_Name}}</td>
               <td *ngIf="userLogin[i][0].active === true">Active</td>
               <td *ngIf="userLogin[i][0].active === false">Inactive</td>
-              <td><button type="button" id="update" class="btn btnHc" (click)='redirectToUpdatePage(userLogin.username)'>Update</button></td>
+              <td><button type="button" id="update" class="btn btnHc"
+                  (click)='redirectToUpdatePage(userLogin[i][0].username)'>Update</button></td>
             </tr>
           </tbody>
           <tbody *ngIf="userLogins=== undefined">

@@ -46,7 +46,7 @@
               <td>{{section.course_Id}} - {{section.course_Name}}</td>
               <td>{{section.designation}}</td>
               <td>{{section.semester}}</td>
-              <td>{{section.faculty_Id}} - {{faculty[(section.faculty_Id - 1)].first_Name}}
+              <td>{{section.faculty_Id}} - {{faculty[(section.faculty_Id) - 1].first_Name}}
                 {{faculty[(section.faculty_Id - 1)].last_Name}}</td>
               <td>{{section.start_Date | date:'yyyy-MM-dd'}}</td>
               <td>{{section.end_Date | date:'yyyy-MM-dd'}}</td>

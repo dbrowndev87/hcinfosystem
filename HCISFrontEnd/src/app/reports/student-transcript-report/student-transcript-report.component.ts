@@ -156,39 +156,47 @@ export class StudentTranscriptReportComponent implements OnInit {
 
         if (this.type === "Year") {
 
-          for (let x = 0; x < sectionInfo.length; x++) {
+          if (sectionInfo.length > 0) {
+            for (let x = 0; x < sectionInfo.length; x++) {
 
-            if (sectionInfo[x].start_Date.toString().slice(0, 4) === this.year) {
+              if (sectionInfo[x].start_Date.toString().slice(0, 4) === this.year) {
 
-              if (sectionInfo[x].semester === "Spring") {
-                this.getEnrollments(sectionInfo[x], 'spring', x);
-              } else if (sectionInfo[x].semester === "Summer") {
-                this.getEnrollments(sectionInfo[x], 'summer', x);
-              } else if (sectionInfo[x].semester === "Fall") {
-                this.getEnrollments(sectionInfo[x], 'fall', x);
+                if (sectionInfo[x].semester === "Spring") {
+                  this.getEnrollments(sectionInfo[x], 'spring', x);
+                } else if (sectionInfo[x].semester === "Summer") {
+                  this.getEnrollments(sectionInfo[x], 'summer', x);
+                } else if (sectionInfo[x].semester === "Fall") {
+                  this.getEnrollments(sectionInfo[x], 'fall', x);
+                }
+
+              } else {
+                this.isLoaded = true;
               }
-
-            } else {
-              this.isLoaded = true;
             }
+          } else {
+            this.isLoaded = true;
           }
         } else if (this.type === "Semester") {
 
-          for (let x = 0; x < sectionInfo.length; x++) {
+          if (sectionInfo.length > 0) {
+            for (let x = 0; x < sectionInfo.length; x++) {
 
-            if (sectionInfo[x].semester === this.semester) {
+              if (sectionInfo[x].semester === this.semester) {
 
-              if (sectionInfo[x].semester === "Spring") {
-                this.getEnrollments(sectionInfo[x], 'spring', x);
-              } else if (sectionInfo[x].semester === "Summer") {
-                this.getEnrollments(sectionInfo[x], 'summer', x);
-              } else if (sectionInfo[x].semester === "Fall") {
-                this.getEnrollments(sectionInfo[x], 'fall', x);
+                if (sectionInfo[x].semester === "Spring") {
+                  this.getEnrollments(sectionInfo[x], 'spring', x);
+                } else if (sectionInfo[x].semester === "Summer") {
+                  this.getEnrollments(sectionInfo[x], 'summer', x);
+                } else if (sectionInfo[x].semester === "Fall") {
+                  this.getEnrollments(sectionInfo[x], 'fall', x);
+                }
+
+              } else {
+                this.isLoaded = true;
               }
-
-            } else {
-              this.isLoaded = true;
             }
+          } else {
+            this.isLoaded = true;
           }
 
         }

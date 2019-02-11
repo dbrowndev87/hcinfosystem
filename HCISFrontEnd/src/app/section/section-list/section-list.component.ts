@@ -28,19 +28,24 @@ export class SectionListComponent implements OnInit, OnDestroy {
   constructor(
     private repository: RepositoryService,
     private errorHandler: ErrorHandlerService,
-    private router: Router) { }
+    private router: Router) {
+
+    this.getAllFaculty();
+
+  }
 
   // Array for all the subscriptions
   private subscriptions: Subscription[] = [];
 
   ngOnInit() {
 
+
+
     this.dtOptions = {
       pagingType: 'full_numbers',
       pageLength: 8
     };
 
-    this.getAllFaculty();
     this.getAllSections();
     this.isLoaded = true;
   }
@@ -80,12 +85,9 @@ export class SectionListComponent implements OnInit, OnDestroy {
   private getAllFaculty() {
     let apiAddress = "api/facultyInfo";
     this.subscriptions.push(this.repository.getData(apiAddress)
-
       .subscribe(faculty => {
 
         this.faculty = faculty as FacultyInfo[];
-
-
       },
         // tslint:disable-next-line: no-unused-expression
         (error) => {

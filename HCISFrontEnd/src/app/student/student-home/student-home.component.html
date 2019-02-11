@@ -165,7 +165,7 @@
                       <p class="text-center"><span class="bold">Current Enrollments:</span> 0</p>
                       <br>
                       <button class="btn btnHc center-block">
-                        <a [routerLink]="[ '/student/register']">Register</a>
+                        <a [routerLink]="[ '/student/register/' + studentInfo.student_Status]">Register</a>
                       </button>
                     </div>
                     <div class="col-md-6 centerDiv" *ngIf="!enrolled">

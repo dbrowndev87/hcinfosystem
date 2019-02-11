@@ -29,8 +29,9 @@
         </div>
         <div class="row">
           <div class="col-md-12">
-            
-            <form [formGroup]="studentCoursesForm" autocomplete="off" novalidate (ngSubmit)="redirectToReport(studentCoursesForm.value)">
+
+            <form [formGroup]="studentCoursesForm" autocomplete="off" novalidate
+              (ngSubmit)="redirectToReport(studentCoursesForm.value)">
               <h4 class="float-left">Select Semester: </h4>
               <select name="semester" class="form-control" id="semester" formControlName="semester">
                 <option value="Spring">Spring</option>
@@ -43,7 +44,7 @@
               <br>
               <h4 class="float-left">Select Year: </h4>
               <select name="year" class="form-control" id="year" formControlName="year">
-                <option *ngFor="let current of years">{{current}}</option>
+                <option *ngFor="let current of years" value="{{current}}">{{current}}</option>
               </select>
               <em *ngIf="validateControl('year') && hasError('year',
                 'required')">You must

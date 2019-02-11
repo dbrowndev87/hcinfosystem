@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Feb 08, 2019 at 07:18 PM
--- Server version: 10.1.35-MariaDB
--- PHP Version: 7.2.9
+-- Host: 127.0.0.1
+-- Generation Time: Feb 11, 2019 at 05:34 PM
+-- Server version: 10.1.37-MariaDB
+-- PHP Version: 7.2.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -21,10 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `goldstar`
 --
-
-DROP DATABASE IF EXISTS `goldstar`;
-CREATE DATABASE `goldstar`;
-USE `goldstar`;
 
 DELIMITER $$
 --
@@ -63,20 +59,18 @@ INSERT INTO `course` (`course_id`, `course_name`, `dept_id`, `credits`) VALUES
 ('CIS-1118', 'Intermediate Web Development', 2, 3),
 ('CIS-1119', 'Intermediate Programming Logic', 2, 3),
 ('CIS-1120', 'Intermediate Security Concepts', 2, 3),
-('CIS-2001', 'Advanced Java', 2, 3),
-('CIS-2002', 'Advanced C #', 2, 3),
-('CIS-2003', 'Advanced Security', 2, 3),
-('CIS-2004', 'Advanced Angular', 2, 3),
-('CIS-2005', 'Advanced Info-Systems', 2, 3),
-('CIS-2006', 'Android Development', 2, 3),
-('CIS-2007', 'IOS Developement', 2, 3),
-('CIS-2008', 'Advanced Web Developement', 2, 3),
-('NET-101', 'Intro to Networking ', 3, 3),
-('NET-1102', 'Intermediate Networking', 3, 3),
-('NET-1111', 'Advanced Networking', 3, 2),
-('NET-1200', 'Sysco 101', 3, 3),
-('NET-2000', 'Sysco Intermediate', 3, 3),
-('NET-2002', 'Advanced Sysco', 3, 3);
+('NET-1211', 'Intro to Networking ', 3, 3),
+('NET-1212', 'Intermediate Networking', 3, 3),
+('NET-1213', 'Advanced Networking', 3, 2),
+('NET-1214', 'Sysco 101', 3, 3),
+('NET-1215', 'Intro to Linux', 3, 3),
+('NET-1216', 'Intro to Programming', 3, 3),
+('NET-1217', 'Networking Concepts', 3, 3),
+('NET-1218', 'Network Analysis', 3, 3),
+('NET-1219', 'Intro to Network Security ', 3, 3),
+('NET-1220', 'Secure Network Concepts', 3, 3),
+('NET-1221', 'Intranet 101', 3, 3),
+('NET-1222', 'Sysco 202', 3, 3);
 
 -- --------------------------------------------------------
 
@@ -96,9 +90,7 @@ CREATE TABLE `department` (
 INSERT INTO `department` (`dept_id`, `dept_name`) VALUES
 (1, 'Administration'),
 (2, 'Computer Information and Systems'),
-(3, 'Computer Networking'),
-(4, 'Database Administration'),
-(5, 'Networking Administration');
+(3, 'Computer Networking');
 
 -- --------------------------------------------------------
 
@@ -113,24 +105,6 @@ CREATE TABLE `enrollment` (
   `course_status` varchar(20) NOT NULL,
   `grade` double(5,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `enrollment`
---
-
-INSERT INTO `enrollment` (`enrollment_id`, `student_id`, `section_id`, `course_status`, `grade`) VALUES
-(7, 190181, 6, 'Registered', 0.00),
-(8, 190181, 8, 'Completed', 67.00),
-(9, 190181, 12, 'Completed', 40.00),
-(10, 190181, 13, 'Completed', 89.00),
-(11, 190370, 12, 'Registered', 0.00),
-(12, 190370, 13, 'Registered', 0.00),
-(13, 190370, 8, 'Registered', 0.00),
-(14, 190370, 6, 'Registered', 0.00),
-(15, 193402, 12, 'Registered', 0.00),
-(16, 193402, 13, 'Registered', 0.00),
-(17, 193402, 8, 'Registered', 0.00),
-(18, 193402, 6, 'Registered', 0.00);
 
 --
 -- Triggers `enrollment`
@@ -159,15 +133,11 @@ CREATE TABLE `faculty` (
 --
 
 INSERT INTO `faculty` (`faculty_id`, `faculty_status`, `user_id`) VALUES
-(1, 'Full Time', 3),
-(2, 'Full Time', 12),
-(3, 'Full Time', 13),
-(4, 'Full Time', 14),
-(5, 'Full Time', 18),
-(6, 'Full Time', 19),
-(7, 'Full Time', 20),
-(8, 'Full Time', 21),
-(9, 'Full Time', 22);
+(1, 'Full Time', 10),
+(2, 'Full Time', 11),
+(3, 'Full Time', 12),
+(4, 'Full Time', 13),
+(5, 'Full Time', 16);
 
 -- --------------------------------------------------------
 
@@ -191,28 +161,26 @@ CREATE TABLE `section` (
 --
 
 INSERT INTO `section` (`section_id`, `faculty_id`, `start_date`, `end_date`, `designation`, `semester`, `vacancy`, `course_id`) VALUES
-(1, 1, '2019-01-01', '2019-04-11', 'A', 'Fall', 24, 'CIS-1111'),
-(2, 1, '2019-01-01', '2019-04-19', 'B', 'Fall', 11, 'CIS-1111'),
-(3, 1, '2019-01-03', '2019-04-18', 'C', 'Fall', 21, 'CIS-1111'),
-(4, 1, '2019-09-04', '2019-12-04', 'A', 'Fall', 30, 'CIS-1112'),
-(5, 1, '2019-09-04', '2019-12-07', 'B', 'Fall', 30, 'CIS-1112'),
-(6, 1, '2020-05-14', '2020-09-04', 'L', 'Summer', 16, 'CIS-1112'),
-(7, 1, '2020-01-04', '2020-04-29', 'A', 'Spring', 23, 'CIS-1113'),
-(8, 1, '2020-05-04', '2020-08-29', 'L', 'Summer', 19, 'CIS-1113'),
-(9, 1, '2019-02-21', '2019-02-13', 'A', 'Spring', 22, 'CIS-1114'),
-(10, 1, '2020-02-14', '2020-05-16', 'B', 'Spring', 23, 'CIS-1115'),
-(11, 2, '2020-09-18', '2019-12-30', 'C', 'Fall', 28, 'CIS-1116'),
-(12, 2, '2019-05-04', '2019-09-27', 'B', 'Summer', 25, 'CIS-1118'),
-(13, 1, '2019-05-04', '2019-09-27', 'C', 'Summer', 25, 'CIS-1120'),
-(14, 1, '2020-01-07', '2019-05-27', 'A', 'Spring', 35, 'CIS-2001'),
-(15, 1, '2019-01-07', '2019-05-27', 'A', 'Spring', 29, 'CIS-2002'),
-(16, 1, '2020-01-07', '2020-05-27', 'A', 'Spring', 25, 'CIS-2003'),
-(17, 1, '2019-01-07', '2019-05-29', 'A', 'Spring', 30, 'CIS-2004'),
-(18, 1, '2020-01-07', '2020-05-29', 'A', 'Spring', 30, 'CIS-2004'),
-(19, 1, '2020-09-04', '2020-01-07', 'A', 'Fall', 30, 'CIS-2005'),
-(20, 1, '2020-09-07', '2020-01-07', 'A', 'Fall', 25, 'CIS-2006'),
-(21, 1, '2020-09-04', '2020-01-07', 'A', 'Fall', 25, 'CIS-2007'),
-(22, 1, '2020-09-04', '2020-01-07', 'A', 'Fall', 30, 'CIS-2008');
+(1, 1, '2019-01-07', '2019-04-18', 'A', 'Summer', 30, 'CIS-1111'),
+(2, 2, '2019-01-07', '2019-04-18', 'B', 'Summer', 30, 'CIS-1111'),
+(25, 1, '2019-01-07', '2019-04-18', 'A', 'Summer', 30, 'CIS-1112'),
+(26, 2, '2019-01-07', '2019-04-18', 'B', 'Summer', 30, 'CIS-1112'),
+(27, 1, '2019-01-07', '2019-04-18', 'A', 'Summer', 30, 'CIS-1113'),
+(28, 2, '2019-01-07', '2019-04-18', 'B', 'Summer', 30, 'CIS-1113'),
+(29, 1, '2019-01-07', '2019-04-18', 'A', 'Summer', 30, 'CIS-1114'),
+(30, 2, '2019-01-07', '2019-04-18', 'B', 'Summer', 30, 'CIS-1114'),
+(31, 1, '2019-01-07', '2019-04-18', 'A', 'Summer', 30, 'CIS-1115'),
+(32, 2, '2019-01-07', '2019-04-18', 'B', 'Summer', 30, 'CIS-1115'),
+(33, 3, '2019-01-07', '2019-04-18', 'A', 'Summer', 30, 'NET-1211'),
+(34, 4, '2019-01-07', '2019-04-18', 'B', 'Summer', 30, 'NET-1211'),
+(35, 3, '2019-01-07', '2019-04-18', 'A', 'Summer', 30, 'NET-1212'),
+(36, 4, '2019-01-07', '2019-04-18', 'B', 'Summer', 30, 'NET-1212'),
+(37, 3, '2019-01-07', '2019-04-18', 'A', 'Summer', 30, 'NET-1213'),
+(38, 4, '2019-01-07', '2019-04-18', 'B', 'Summer', 30, 'NET-1213'),
+(39, 3, '2019-01-07', '2019-04-18', 'A', 'Summer', 30, 'NET-1214'),
+(40, 4, '2019-01-07', '2019-04-18', 'B', 'Summer', 30, 'NET-1214'),
+(41, 3, '2019-01-07', '2019-04-18', 'A', 'Summer', 30, 'NET-1215'),
+(42, 4, '2019-01-07', '2019-04-18', 'B', 'Summer', 30, 'NET-1215');
 
 -- --------------------------------------------------------
 
@@ -233,19 +201,15 @@ CREATE TABLE `student` (
 --
 
 INSERT INTO `student` (`student_id`, `student_status`, `gpa`, `user_id`, `amount_owing`) VALUES
-(190181, 'Enrolled', 65.33, 11, 4000.00),
-(190370, 'Enrolled', 0.00, 6, 4000.00),
-(192232, 'Enrolled', 0.00, 8, 0.00),
-(192564, 'Enrolled', 0.00, 26, 0.00),
-(193081, 'Enrolled', 0.00, 10, 0.00),
-(193402, 'Enrolled', 0.00, 7, 4000.00),
-(193820, 'Drop Out', 0.00, 2, 10000.00),
-(194644, 'Enrolled', 0.00, 25, 0.00),
-(195630, 'Enrolled', 0.00, 24, 0.00),
-(196595, 'Enrolled', 0.00, 23, 0.00),
-(198309, 'Enrolled', 0.00, 9, 0.00),
-(198441, 'Enrolled', 0.00, 16, 0.00),
-(199622, 'Enrolled', 0.00, 17, 0.00);
+(190572, 'Enrolled', 0.00, 8, 0.00),
+(191234, 'Enrolled', 0.00, 15, 0.00),
+(192389, 'Enrolled', 0.00, 3, 0.00),
+(192551, 'Enrolled', 0.00, 9, 0.00),
+(193778, 'Enrolled', 0.00, 6, 0.00),
+(194158, 'Enrolled', 0.00, 5, 0.00),
+(194773, 'Enrolled', 0.00, 4, 0.00),
+(196943, 'Enrolled', 0.00, 2, 0.00),
+(199289, 'Enrolled', 0.00, 7, 0.00);
 
 -- --------------------------------------------------------
 
@@ -293,32 +257,22 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`user_id`, `first_name`, `last_name`, `email`, `birth_date`, `start_date`, `type_code`, `address`, `dept_id`) VALUES
-(1, 'Darcy', 'Browns', 'dbrown32066@hollandcollege.com', '2019-03-18', '2019-01-01', 1, '8 Bonnie Blink dr.', 1),
-(2, 'Test', 'Student', 'teststudent@happycollege.com', '1995-03-09', '2019-01-01', 3, '123 Student Lane.', 2),
-(3, 'Tommy', 'Little', 'testfaculty@happycollege.com', '1970-03-17', '2019-01-01', 2, '145 Faculty Lane.', 3),
-(4, 'Nicholas', 'Peconi', 'npeconi@hollandcollege.com', '2019-03-18', '2019-01-01', 1, '123 Peconi Lane.', 1),
-(5, 'Kristen', 'Murchison', 'kmurchison@hollandcollege.com', '2019-03-18', '2019-01-01', 1, '876 Murchison Lane.', 1),
-(6, 'Paul', 'Walker', 'nicholaspeconi@gmail.com', '2006-02-15', '2019-01-01', 3, '265 Beau View Lane', 3),
-(7, 'Juanita', 'Smith', 'nicholaspeconi@gmail.com', '2019-02-06', '2019-01-01', 3, 'fgsdfgdfggdfg', 2),
-(8, 'Betty', 'Gonazalez', 'nicholaspeconi@gmail.com', '1999-02-17', '2019-01-01', 3, '265 Beau View Lane', 2),
-(9, 'veronica', 'smalls', 'nicholaspeconi@gmail.com', '2019-02-20', '2019-01-01', 3, '265 Beau View Lane', 2),
-(10, 'Carlos', 'smith', 'nicholaspeconi@gmail.com', '2019-02-13', '2019-01-01', 3, '265 Beau View Lane', 2),
-(11, 'steve', 'johanson', 'nicholaspeconi@gmail.com', '1999-02-17', '2019-01-01', 3, '265 Beau View Lane', 2),
-(12, 'David', 'Crinshaw', 'dcrinshaw@happycollege.com', '1974-02-13', '2019-01-01', 2, '123 Park View Lane.', 3),
-(13, 'Daphne', 'Gaudet', 'dgaudet@happycollege.com', '1982-06-18', '2019-01-01', 2, '45 Crescent St.', 4),
-(14, 'Jake', 'Chaisson', 'jchaisson@happycollege.com', '1987-10-14', '2019-01-01', 2, '254 Cedar ln', 5),
-(15, 'david', 'jeffree', 'djeffree@happycollege.com', '2019-02-15', '2019-01-01', 1, '123 Goldpark dr.', 1),
-(16, 'Jammie', 'Furgason', 'jfurgeson@happycollege.com', '1988-04-14', '2019-01-01', 3, '435 Cambrige Ave', 4),
-(17, 'Jimmi', 'Page', 'asdfsadf', '1996-02-16', '2019-02-08', 3, 'fsdfsf', 5),
-(18, 'Don', 'Bowers', 'nicholaspeconi@gmail.com', '1993-02-17', '2019-02-01', 2, '265 Beau View Lane', 2),
-(19, 'Bob ', 'Magowen', 'gsdgfddfhfg', '1984-02-14', '2009-05-13', 2, 'hgfhk', 2),
-(20, 'Steven', 'Tyler', 'nicholaspeconi@gmail.com', '1983-02-11', '2011-02-11', 2, '265 Beau View Lane', 2),
-(21, 'Rhonda', 'White', 'nicholaspeconi@gmail.com', '1972-02-09', '2010-02-04', 2, '265 Beau View Lane', 3),
-(22, 'Betsy', 'Blue', 'nicholaspeconi@gmail.com', '1976-09-16', '2011-02-16', 2, '265 Beau View Lane', 3),
-(23, 'sdfasdf', 'safsadf', 'nicholaspeconi@gmail.com', '2019-02-02', '2019-02-01', 3, '265 Beau View Lane', 2),
-(24, 'Darcy', 'Blue', 'dfgsdfgdsfgdg', '2019-02-01', '2019-02-01', 3, 'sdfgdfsgdfg', 3),
-(25, 'hello', 'goobye', 'sdfasdfasfd', '2019-02-21', '2019-02-01', 3, 'safsadfdf', 3),
-(26, 'blah', 'blah', 'asdfasdfasfasdfas', '2005-02-16', '2019-02-01', 3, 'sadfdsafsadfsadf', 5);
+(1, 'Darcy', 'Brown', 'dbrown32066@hollandcollege.com', '2019-03-18', '2019-01-01', 1, '8 Bonnie Blink dr.', 1),
+(2, 'David', 'Hawkings', 'dhawkings@happycollege.com', '1989-02-15', '2019-02-11', 3, '123 Main St. ', 2),
+(3, 'Carl', 'Johnston', 'cjohnston', '1991-02-13', '2019-02-11', 3, '236 Sparrow Ln.', 2),
+(4, 'Janette', 'Arsenault', 'jarsenault@happycollege.com', '1994-02-09', '2019-02-11', 3, '4214 Lake View Cres.', 2),
+(5, 'Leanne', 'Gaudet', 'lgaudet@happycollege.com', '1993-02-10', '1991-06-15', 3, '135 Park Side Ln.', 2),
+(6, 'Jason', 'Thomas', 'jthomas@happycollege.com', '1989-08-17', '2019-02-14', 3, '5332 Gibson St.', 3),
+(7, 'Kyle', 'Arthur', 'karthur@happycollege.com', '1992-02-12', '2019-02-23', 3, '199 Sicamore Cres.', 3),
+(8, 'Jane', 'Sweenie', 'jsweenie@happycollege.com', '1993-07-16', '2019-02-11', 3, '3544 Hallow ln.', 3),
+(9, 'Kaylee', 'Little', 'klittle@happycollege.com', '1992-10-15', '2019-02-11', 3, '424 Pine St.', 3),
+(10, 'Deloris', 'Perry', 'dperry@happycollege.com', '1971-06-10', '2017-11-15', 2, '2334 Sea Point.', 2),
+(11, 'Johnathan', 'Cambell', 'jcambell@happycollege.com', '1983-04-19', '2018-12-19', 2, '975 Tortoise Ln.', 2),
+(12, 'Trudy', 'Raymond', 'traymond@happycollege.com', '1984-05-25', '2018-09-19', 2, '143 Kissle Ave.', 3),
+(13, 'Justin', 'Tissle', 'jtissle@happycollege.com', '1987-10-23', '2019-01-16', 2, '265 Sparrow Ln.', 3),
+(14, 'Test', 'Admin', 'testadmin@happycollege.com', '2019-02-20', '2019-02-14', 1, '123 Test Admin Ln.', 1),
+(15, 'Test', 'Student', 'teststudent@happycollege.com', '2019-02-20', '2019-02-15', 3, '123 Test Student Ln.', 2),
+(16, 'Test', 'Faculty', 'testfaculty@happycollege.com', '2019-02-27', '2019-02-13', 2, '123 Text Faculty ln.', 3);
 
 -- --------------------------------------------------------
 
@@ -338,32 +292,22 @@ CREATE TABLE `user_login` (
 --
 
 INSERT INTO `user_login` (`username`, `password`, `active`, `user_id`) VALUES
-('bblah79237', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 26),
-('bblue97506', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 22),
-('BGonaz1479', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 8),
-('bmagow6311', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 19),
-('Csmith9348', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 10),
-('dblue95733', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 24),
-('dbowers851', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 18),
+('cjohns0333', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 3),
 ('dbrown32066', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 1),
-('DCrins4798', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 12),
-('DGaudet663', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 13),
-('djeffr0626', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 15),
-('hgoobye337', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 25),
-('JChais1156', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 14),
-('JFurga7296', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 16),
-('jpage91406', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 17),
-('JSmith7311', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 7),
-('kmerchison', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 5),
-('npeconi', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 4),
-('PWalker383', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 6),
-('rwhite2525', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 21),
-('sjohan4759', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 11),
-('ssafsa5525', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 23),
-('styler7029', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 20),
-('testfaculty', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 3),
-('teststudent', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 2),
-('vsmalls667', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 9);
+('dhawki9319', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 2),
+('dperry5384', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 10),
+('jarsen2278', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 4),
+('jcambe6778', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 11),
+('jsween9567', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 8),
+('jthomas475', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 6),
+('jtissle093', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 13),
+('karthur189', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 7),
+('klittle615', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 9),
+('lgaudet952', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 5),
+('testadmin', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 14),
+('testfaculty', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 16),
+('teststudent', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 15),
+('traymo8595', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 12);
 
 -- --------------------------------------------------------
 
@@ -480,13 +424,13 @@ ALTER TABLE `enrollment`
 -- AUTO_INCREMENT for table `faculty`
 --
 ALTER TABLE `faculty`
-  MODIFY `faculty_id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `faculty_id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `section`
 --
 ALTER TABLE `section`
-  MODIFY `section_id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `section_id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT for table `user`
@@ -503,12 +447,6 @@ ALTER TABLE `user`
 --
 ALTER TABLE `course`
   ADD CONSTRAINT `course_ibfk_1` FOREIGN KEY (`dept_id`) REFERENCES `department` (`dept_id`);
-
---
--- Constraints for table `department`
---
-ALTER TABLE `department`
-  ADD CONSTRAINT `department_ibfk_1` FOREIGN KEY (`dept_id`) REFERENCES `user` (`user_id`);
 
 --
 -- Constraints for table `enrollment`
@@ -541,12 +479,6 @@ ALTER TABLE `student`
 --
 ALTER TABLE `transaction`
   ADD CONSTRAINT `transaction_ibfk_1` FOREIGN KEY (`student_id`) REFERENCES `student` (`student_id`);
-
---
--- Constraints for table `user`
---
-ALTER TABLE `user`
-  ADD CONSTRAINT `user_ibfk_1` FOREIGN KEY (`type_code`) REFERENCES `user_type_code` (`type_code`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
