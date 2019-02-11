@@ -42,6 +42,14 @@
           <div class="col-md-12 headerDiv">
             <h3 class="text-center">{{department.dept_Name}}: {{semester}}
               {{year}}</h3>
+            <div *ngIf="studentInfos.length === 0">
+              <div class="desDiv">
+                <h3 class="text-center">No Students Registered for courses in
+                  {{department.dept_Name}}: {{semester}}
+                  {{year}}</h3>
+              </div>
+            </div>
+
             <div *ngFor="let student of studentInfos;let i= index">
 
               <div *ngIf="studentInfos.length> 0">
